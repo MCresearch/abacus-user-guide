@@ -12,23 +12,23 @@ description: 作者：陈涛
 
 ABACUS的软件包中提供了一个SDFT的算例，可以从Gitee上[下载](https://gitee.com/deepmodeling/abacus-develop/tree/develop/examples/stochastic)。算例中有二个文件夹，pw\_Si2和pw\_md\_Alpw\_Si2：这是一个电子温度为0.6 Ry（约8.16 eV） 2原子金刚石结构Si的SCF算例，KPT文件和STRU文件与平常的KSDFT计算并无区别，主要的不同在于INPUT，目前SDFT仅支持smearing\_method为fd。
 
-```Bash
+```bash
 INPUT_PARAMETERS
-#Parameters        (General)
+#Parameters     (General)
 calculation     scf
 esolver_type    sdft
-pseudo_dir              ../../../tests/PP_ORB
-nbands                        4
+pseudo_dir      ../../../tests/PP_ORB
+nbands          4
 nbands_sto      64
 nche_sto        100
-method_sto      1
+method_sto      1Ba
 #Parameters (Accuracy)
-ecutwfc                        50
-scf_nmax                20
-symmetry                1
+ecutwfc         50
+scf_nmax        20
+symmetry        1
 #Parameters (Smearing)
-smearing_method     fd
-smearing_sigma      0.6
+smearing_method fd
+smearing_sigma  0.6
 ```
 
 这些参数在ABACUS的[线上文档](https://abacus.deepmodeling.com/en/latest/advanced/input\_files/input-main.html#electronic-structure-sdft)中均有说明，在这里再进行简单概述：
@@ -41,28 +41,28 @@ smearing_sigma      0.6
 
 pw\_md\_Al：这是一个电子温度为7.35 Ry（约100 eV）16原子Al的MD算例
 
-```Bash
+```bash
 INPUT_PARAMETERS
-#Parameters        (General)
+#Parameters     (General)
 calculation     md
 esolver_type    sdft
 pseudo_dir      ../../../tests/PP_ORB
-nbands                        0
+nbands          0
 nbands_sto      64
 nche_sto        20
 method_sto      2
 #Parameters (Accuracy)
-ecutwfc                        50
-scf_nmax                20
+ecutwfc         50
+scf_nmax        20
 scf_thr         1e-6
-symmetry                1
+symmetry        1
 #Parameters (Smearing)
-smearing_method     fd
-smearing_sigma      7.34986072
+smearing_method fd
+smearing_sigma  7.34986072
 #Parameters (MD)
-md_tfirst      1160400
-md_dt          0.2
-md_nstep       10
+md_tfirst       1160400
+md_dt           0.2
+md_nstep        10
 ```
 
 注意calculation需设置为md，esolver\_type需设置为sdft，才能进行基于SDFT的MD模拟。同时这里，nbands设置为0，nbands\_sto设置为64，意味着进行仅使用随机轨道的SDFT计算，而不是MDFT。此外还有如下参数可能会用到：
