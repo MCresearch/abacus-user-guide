@@ -4,11 +4,11 @@ description: 作者：陈涛
 
 # ABACUS SDFT使用教程
 
-1. #### 介绍
+## 1. 介绍
 
 本教程旨在介绍ABACUS中SDFT功能。在进行高温的温稠密物质计算时（数十到上千eV），传统的KSDFT需要使用很多占据态电子波函数导致计算困难，而SDFT使用随机波函数轨道，可以有效地避开这个问题，应用于高温计算。关于SDFT有很多参考材料，其中ABACUS中SDFT算法细节和简单应用见：[Plane-wave-based stochastic-deterministic density functional theory for extended systems](https://doi.org/10.1103/PhysRevB.106.125132)本教程中将会展示如何在ABACUS计算中使用SDFT功能。
 
-2. #### 准备
+## 2.准备
 
 ABACUS的软件包中提供了一个SDFT的算例，可以从Gitee上[下载](https://gitee.com/deepmodeling/abacus-develop/tree/develop/examples/stochastic)。算例中有二个文件夹，pw\_Si2和pw\_md\_Alpw\_Si2：这是一个电子温度为0.6 Ry（约8.16 eV） 2原子金刚石结构Si的SCF算例，KPT文件和STRU文件与平常的KSDFT计算并无区别，主要的不同在于INPUT，目前SDFT仅支持smearing\_method为fd。
 
@@ -73,10 +73,10 @@ md_nstep        10
 
 ecut的测试：对于温稠密物质，一般使用Gamma点或2\*2\*2的K点即可，但是ecut的收敛性测试是必不可少的，由于随机误差的出现，SDFT的ecut的测试与传统的KSDFT稍有区别，但是原理是类似的在确定好nbands\_sto后，就可以测试ecut了。与测试nbands\_sto类似，在不同的ecut，需要采用10个左右不同的随机种子生成的相同数目的随机波函数轨道进行SDFT计算，然后取平均能量。由于温稠密物质能量一般都比较高，因此只要控制相邻二个ecut（相差为10 Ry）对应的平均能量差小于万分之一即可
 
-3. #### 流程
+## 3. 流程
 
 与KSDFT并无区别，直接运行ABACUS程序即可
 
-4. #### 结语
+## 4. 结尾
 
 在高温计算中，使用SDFT可以大大提高计算速度，使很多昂贵的计算变为可能。
