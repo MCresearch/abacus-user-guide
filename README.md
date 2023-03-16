@@ -22,7 +22,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    2. 带自旋的体系计算（缺，郑大也写）
    3. \+U计算：[<mark style="color:red;">ABACUS DFT+U使用教程</mark>](https://dptechnology.feishu.cn/wiki/wikcnLTpXB1be9s1Q896GrA7PBf)<mark style="color:red;"></mark>
    4. 结构优化（缺）
-   5. 分子动力学（缺，刘裕写）
+   5. [分子动力学](abacus-md-shi-yong-jiao-cheng.md)
 4. DeePKS方法（缺）
 5. 隐式溶剂计算等相关功能（缺，找许审镇老师）
 6. [Stochastic密度泛函理论](abacus-sdft-shi-yong-jiao-cheng.md)
