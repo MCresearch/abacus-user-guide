@@ -61,7 +61,7 @@ md_tfirst              300
 * **init\_vel**：是否读取STRU中的原子速度，若为1则读取，否则根据**md\_tfirst**来随机初始原子速度
 * **md\_restart**：控制MD续算的开关，若为1，且将最后输出的OUT.\*/STRU/STRU\_MD\_$num复制到工作目录，覆盖STRU，则可以进行MD续算
 
-更多MD参数的详细用法请参考[ABACUS线上文档](https://abacus.deepmodeling.com/en/latest/advanced/input\_files/input-main.html#molecular-dynamics)！
+更多MD参数的详细用法请参考[ABACUS线上文档](https://abacus.deepmodeling.com/en/latest/advanced/input\_files/input-main.html#molecular-dynamics)
 
 ### ABACUS + DeePMD-kit
 
