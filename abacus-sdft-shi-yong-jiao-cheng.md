@@ -1,5 +1,5 @@
 ---
-description: 作者：陈涛
+description: 作者：陈涛，邮箱：chentao@stu.pku.edu.cn
 ---
 
 # ABACUS SDFT使用教程
