@@ -21,7 +21,7 @@ pseudo_dir      ../../../tests/PP_ORB
 nbands          4
 nbands_sto      64
 nche_sto        100
-method_sto      1Ba
+method_sto      1
 #Parameters (Accuracy)
 ecutwfc         50
 scf_nmax        20
