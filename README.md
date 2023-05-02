@@ -2,11 +2,7 @@
 
 ## 一、介绍
 
-<<<<<<< HEAD
 ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新手用户入门了解ABACUS的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](ru-he-gong-xian-abacus-shi-yong-jiao-cheng.md)
-=======
-ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新手用户入门了解ABACUS的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[<mark style="color:blue;">如何贡献ABACUS使用教程</mark>](ru-he-gong-xian-abacus-shi-yong-jiao-cheng.md)<mark style="color:blue;"></mark>
->>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 ## 二、ABACUS基本操作教程
 
@@ -29,11 +25,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    5. 分子动力学：[ABACUS MD使用教程](abacus-md-shi-yong-jiao-cheng.md)
 4. DeePKS方法（缺）
 5. 隐式溶剂计算等相关功能（缺，找许审镇老师）
-<<<<<<< HEAD
 6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft-shi-yong-jiao-cheng.md)
-=======
-6. Stochastic密度泛函理论：[ABACUS SDFT使用教程](abacus-sdft-shi-yong-jiao-cheng.md)
->>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 7. 分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://dptechnology.feishu.cn/wiki/wikcnUTWmTj8sQYeSdwcInFRLwg)<mark style="color:red;"></mark>
