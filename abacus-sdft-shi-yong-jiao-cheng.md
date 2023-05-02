@@ -1,16 +1,31 @@
+<<<<<<< HEAD
 # ABACUS 随机波函数 DFT 方法使用教程
+=======
+---
+description: 作者：陈涛，邮箱：chentao@stu.pku.edu.cn
+---
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 <strong>作者：陈涛，邮箱：</strong><strong>chentao@stu.pku.edu.cn</strong><strong>，</strong><strong>最后更新</strong><strong>时间：2023/04/</strong><strong>29</strong>
 
+<<<<<<< HEAD
 # 1. 介绍
+=======
+## 1. 介绍
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 本教程旨在介绍 ABACUS 中随机波函数密度泛函理论（Stochastic Density Functional Theory，以下简称 SDFT）计算功能。目前 ABACUS 使用 SDFT 主要聚焦在高温高压物质的模拟，特别是温稠密物质（Warm Dense Matter，简称 WDM）。在进行温稠密物质计算时（温度高达数十到上千 eV， 1 eV=11604.5 K），传统的 Kohn-Sham 密度泛函理论（KSDFT）需要用到极大数量的占据态电子波函数导致计算困难，而 SDFT 使用随机波函数轨道，可以有效地避开对角化哈密顿矩阵这个问题，应用于高温计算。关于 ABACUS 中实现 SDFT 算法的细节可以参考 Qianrui Liu and Mohan Chen*, <em>"Plane-wave-based stochastic-deterministic density functional theory for extended systems,"</em>[ ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.125132) Phys. Rev. B, <strong>106</strong>, 125132 (2022)。本教程中将会展示如何在 ABACUS 计算中使用 SDFT 功能，此外还会介绍混合随机波函数密度泛函理论方法使用（mixed stochastic-deterministic DFT，简称 MDFT），即在 SDFT 计算中，混入一部分的低能 Kohn-Sham 轨道，从而加速结果收敛。
 
+<<<<<<< HEAD
 # 2. 软件和算例准备
+=======
+## 2.准备
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 ABACUS 的软件包（3.2.0 版本）中提供了一个 SDFT 的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/stochastic)。可以在网页右侧点击克隆/下载-> 下载 ZIP 得到算例，或者在 linux 终端执行如下命令得到算例：
 
 ```bash
+<<<<<<< HEAD
 git clone https://gitee.com/mcresearch/abacus-user-guide.git
 ```
 
@@ -21,11 +36,17 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 <strong>pw_Si2</strong><strong>文件夹</strong><strong>：</strong>这是一个电子温度为 0.6 Ry（约 8.16 eV）的 2 个原子的金刚石结构硅（Si）的电子自洽迭代（Self Consistent Field，简称 SCF）算例，包含布里渊区 k 点的 KPT 文件和包含原子位置的 STRU 文件与传统的 KSDFT 计算并无区别，主要的不同在于输入文件 INPUT，注意目前 SDFT 仅支持 smearing_method 为 fd。INPUT 文件如下：
 
 ```bash
+=======
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 INPUT_PARAMETERS
 #Parameters     (General)
 calculation     scf
 esolver_type    sdft
+<<<<<<< HEAD
 pseudo_dir      ../../PP_ORB
+=======
+pseudo_dir      ../../../tests/PP_ORB
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 nbands          4
 nbands_sto      64
 nche_sto        100
@@ -51,6 +72,7 @@ smearing_sigma  0.6
 - <strong>nche_sto</strong>是将电子体系的哈密顿量进行切比雪夫展开的阶数，这个数取得越大则用到的切比雪夫展开阶数越多，相应的计算精度也会越高但效率会降低。大致关系为与温度成反比，温度越高，阶数可以取得越小；ecut（正比关系）越大，阶数越大；推荐使用的 nche_sto 的大小是使得输出文件 running_scf.log 中的 Chebyshev Precision 小于 1e-8。
 - <strong>method_sto</strong>是进行 SDFT 计算使用的方法：1 代表消耗内存较少但稍慢的方法，2 代表更快但需要更大内存的方法，默认是 2。
 
+<<<<<<< HEAD
 注 1：在这个例子里我们提供的赝势是 Si.pz-vbc.UPF 文件，这个文件包含 4 个硅的价电子。事实上，当温度特别高的时候，一般的赝势可能会面临可移植性差的问题，例如高温会使得内壳层电离。这个时候，要选择合理的赝势进行计算，甚至可能需要自己造一个新的赝势，目前 ABACUS 3.2.0 支持的是模守恒的赝势。
 
 注 2：ABACUS 的 SDFT 和 MDFT 支持多个 k 点采样，因此可以在 KPT 文件里设置不同的 k 点个数，在某些性质的计算里，要注意计算性质随着 k 点的收敛。
@@ -59,12 +81,18 @@ smearing_sigma  0.6
 
 <strong>pw_md_Al 文件夹：</strong>这是一个电子温度为 7.35 Ry（约 100 eV）、包含 16 个铝（Al）原子的结构，我们对其进行分子动力学（Molecular Dynamics，简称 MD）的模拟。INPUT 文件如下：
 
+=======
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 ```bash
 INPUT_PARAMETERS
 #Parameters     (General)
 calculation     md
 esolver_type    sdft
+<<<<<<< HEAD
 pseudo_dir      ../../PP_ORB
+=======
+pseudo_dir      ../../../tests/PP_ORB
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 nbands          0
 nbands_sto      64
 nche_sto        20
@@ -140,15 +168,23 @@ npart_sto        2
 
 以上参数在 ABACUS 的[线上文档](http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#density-of-states)中均有说明，这里再进行简单概述：
 
+<<<<<<< HEAD
 - <strong>out_dos：</strong>需要设置为 1，才能输出能态密度。
 - <strong>dos_emin_ev：</strong>能态密度的能量最小范围，单位 eV。
 - <strong>dos_emax_ev：</strong>能态密度的能量最大范围，单位 eV。
 - <strong>dos_sigma：</strong>能态密度的高斯展宽的因子，单位 eV。
 - <strong>dos_nche：</strong>计算能态密度时切比雪夫展开阶数，默认为 100。
 - <strong>npart_sto：</strong>当使用 method_sto＝2 运行例如 DOS 的 SDFT 后处理时，将控制使用内存大小为正常的 1/npart_sto，防止内存不够导致无法计算，默认为 1。
+=======
+## 3. 流程
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 注：态密度的输出文件是 OUT 文件夹下的 DOS1_smearing.dat。
 
+<<<<<<< HEAD
 # 6. 小结
+=======
+## 4. 结尾
+>>>>>>> 4e9dfd9aa4d814844b441abbb8d1c2577c88f029
 
 总体来讲，随机波函数密度泛函理论方法（SDFT 或者 MDFT）的使用与 KSDFT 并无太大的区别，直接运行 ABACUS 程序即可，但是对一些关键参数的选取会影响精度和效率（例如 nbands, nbands_sto, nche_sto, method_sto, bnd_par）。对于极端高温计算（>10 eV），使用 SDFT 可以大大提高计算速度，是比普通的 KSDFT 更好的选择。如果大家使用有问题，欢迎写信联系（见上，或写信到 mohanchen@pku.edu.cn）。
