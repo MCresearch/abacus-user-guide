@@ -186,9 +186,9 @@ init_vel            1
 ```
 
 - esolver_type：指定为 lj 就可以做 Lennard-Jones 经典势函数。
-- lj_rcut：LJ 对势的参数，即截断半径$r_{cut}$。
-- lj_epsilon：LJ 对势的参数，即$\epsilon$。
-- lj_sigma：LJ 对势的参数，即$\sigma$。
+- lj_rcut：LJ 对势的参数，即截断半径$$r_{cut}$$。
+- lj_epsilon：LJ 对势的参数，即$$\epsilon$$。
+- lj_sigma：LJ 对势的参数，即$$\sigma$$。
 - init_vel：读取 `STRU` 中的原子速度信息，原子单位制。
 
 ## 2.3 深度势能（Deep Potential）
@@ -238,7 +238,7 @@ init_vel            1
 - esolver_type：设置为 dp
 - pot_file：DP 模型文件路径
 - md_dumpfreq：MD 输出文件 MD_dump 中原子以及晶胞信息的输出频率
-- md_restartfreq：结构文件 STRU_MD_$step 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
+- md\_restartfreq：结构文件 STRU\_MD\_\$step 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
 
 ### 2.3.4 STRU 文件的设置
 
@@ -299,7 +299,7 @@ ABACUS 的 MD 模拟会产生 3 类输出文件：结构文件 `STRU_MD_${istep}
 
 ### 3.1.1 结构文件 STRU_MD_$ {istep}
 
-参数 `md_restartfreq` 控制 OUT.\${suffix}/STRU/文件夹中结构文件STRU_MD_\${istep}的输出频率，该文件格式与输入结构文件 STRU 相同，主要用于 MD 续算。这里 istep 代表离子步，从 0 开始计数。
+参数 `md_restartfreq` 控制 OUT.\${suffix}/STRU/文件夹中结构文件STRU\_MD\_\${istep}的输出频率，该文件格式与输入结构文件 STRU 相同，主要用于 MD 续算。这里 istep 代表离子步，从 0 开始计数。
 
 ### 3.1.2 续算文件 Restart_md.dat
 
@@ -401,4 +401,4 @@ msst_vis            0.3
 init_vel            1
 ```
 
-- md_restart：控制续算的开关，在 MD 续算时将这个参数设为 1，其他参数不变。当 md_restart 设为 1，ABACUS 会读取\${read_file_dir}/Restart_md.dat文件，从中获取当前MD步数istep以及续算所需的其他参数如恒温器以及恒压器的信息，根据istep从OUT.\${suffix}/STRU/文件夹中读取相应的结构文件 STRU_MD_\${istep}，之后就可以进行 MD 续算了。
+- md\_restart：控制续算的开关，在 MD 续算时将这个参数设为 1，其他参数不变。当 md\_restart 设为 1，ABACUS 会读取`${read_file_dir}/Restart_md.dat`文件，从中获取当前MD步数istep以及续算所需的其他参数如恒温器以及恒压器的信息，根据istep从`OUT.${suffix}/STRU/` 文件夹中读取相应的结构文件 `STRU_MD_${istep}`，之后就可以进行 MD 续算了。
