@@ -1,0 +1,613 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS MD使用教程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-sdft-shi-yong-jiao-cheng.html" />
+    
+    
+    <link rel="prev" href="ru-he-gong-xian-abacus-shi-yong-jiao-cheng.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="ru-he-gong-xian-abacus-shi-yong-jiao-cheng.html">
+            
+                <a href="ru-he-gong-xian-abacus-shi-yong-jiao-cheng.html">
+            
+                    
+                    如何贡献ABACUS使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2" data-path="abacus-md-shi-yong-jiao-cheng.html">
+            
+                <a href="abacus-md-shi-yong-jiao-cheng.html">
+            
+                    
+                    ABACUS MD使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-sdft-shi-yong-jiao-cheng.html">
+            
+                <a href="abacus-sdft-shi-yong-jiao-cheng.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-shengbte-shi-yong-jiao-cheng.html">
+            
+                <a href="abacus-shengbte-shi-yong-jiao-cheng.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS MD使用教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;">ABACUS &#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x5218;&#x88D5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;liuyu</strong>&lt;strong&gt;@stu.pku.edu.cn&lt;/strong&gt;<strong>&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/05/19</strong></p>
+<h1 id="1-&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;">1. &#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;</h1>
+<p><strong>&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Molecular Dynamics&#xFF0C;&#x7B80;&#x79F0; MD&#xFF09;&#xFF1A;</strong>&#x4E00;&#x79CD;&#x6A21;&#x62DF;&#x539F;&#x5B50;&#x4F53;&#x7CFB;&#x968F;&#x65F6;&#x95F4;&#x8FD0;&#x52A8;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x88AB;&#x5E7F;&#x6CDB;&#x7684;&#x7528;&#x6765;&#x7814;&#x7A76;&#x4E0E;&#x539F;&#x5B50;&#x8FD0;&#x52A8;&#x8DEF;&#x5F84;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;&#xFF0C;&#x5982;&#x76F8;&#x53D8;&#x3001;&#x6269;&#x6563;&#x3001;&#x5316;&#x5B66;&#x53CD;&#x5E94;&#x7B49;&#x7B49;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x65E8;&#x5728;&#x4ECB;&#x7ECD; ABACUS &#x4E2D;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x662F;&#x5982;&#x4F55;&#x9009;&#x53D6;&#x7CBE;&#x5EA6;&#x548C;&#x6548;&#x7387;&#x7684;&#x5E73;&#x8861;&#xFF0C;&#x5176;&#x4E2D;&#x7CBE;&#x5EA6;&#x9AD8;&#x4F4E;&#x4E3B;&#x8981;&#x53D6;&#x51B3;&#x4E8E;&#x52BF;&#x51FD;&#x6570;&#x7684;&#x51C6;&#x786E;&#x7A0B;&#x5EA6;&#xFF0C;&#x800C;&#x6548;&#x7387;&#x4E3B;&#x8981;&#x53D7;&#x9650;&#x4E8E;&#x6C42;&#x51FA;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x80FD;&#x91CF;&#x548C;&#x53D7;&#x529B;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x3002;</p>
+<p><strong>&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Classical MD&#xFF0C;&#x52A0;&#x6210; CMD&#xFF09;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x6784;&#x5EFA;&#x63CF;&#x8FF0;&#x539F;&#x5B50;&#x95F4;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x7684;&#x52BF;&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x5F97;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x53D7;&#x529B;&#xFF08;&#x53D7;&#x529B;&#x7B49;&#x4E8E;&#x80FD;&#x91CF;&#x5BF9;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#x7684;&#x5BFC;&#x6570;&#xFF09;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x79EF;&#x5206;&#x8FD0;&#x52A8;&#x65B9;&#x7A0B;&#x6765;&#x83B7;&#x5F97;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x4E0B;&#x4E00;&#x65F6;&#x523B;&#x4F4D;&#x7F6E;&#xFF0C;&#x4ECE;&#x800C;&#x83B7;&#x5F97;&#x968F;&#x65F6;&#x95F4;&#x6F14;&#x5316;&#x7684;&#x7C92;&#x5B50;&#x4F4D;&#x7F6E;&#x548C;&#x901F;&#x5EA6;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x5904;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x5BC6;&#x5EA6;&#x3001;&#x6E29;&#x5EA6;&#x548C;&#x538B;&#x5F3A;&#x7B49;&#x7269;&#x7406;&#x6761;&#x4EF6;&#x9650;&#x5236;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x7EDF;&#x8BA1;&#x7269;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;&#x7269;&#x8D28;&#x7684;&#x6027;&#x8D28;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x91C7;&#x53D6;&#x67D0;&#x4E2A;&#x7CFB;&#x7EFC;&#x540E;&#xFF0C;&#x5BF9;&#x7C92;&#x5B50;&#x4F4D;&#x7F6E;&#x548C;&#x901F;&#x5EA6;&#x91C7;&#x6837;&#xFF0C;&#x4E4B;&#x540E;&#x7EDF;&#x8BA1;&#x51FA;&#x4F53;&#x7CFB;&#x7684;&#x70ED;&#x529B;&#x5B66;&#x5B8F;&#x89C2;&#x6027;&#x8D28;&#x3002;</p>
+<p><strong>&#x4ECE;&#x5934;&#x7B97;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;</strong><strong>ab initio</strong><strong> molecular dynamics&#xFF0C;&#x7B80;&#x79F0; AIMD&#xFF09;&#xFF1A;</strong>&#x4E5F;&#x6210;&#x4E3A;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#xFF08;first-principles molecular dynamics&#xFF0C;&#x7B80;&#x79F0; FPMD&#xFF09;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x91C7;&#x7528;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x65B9;&#x6CD5;&#xFF08;&#x4F8B;&#x5982;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF09;&#x6765;&#x8BA1;&#x7B97;&#x4F53;&#x7CFB;&#x7684;&#x52BF;&#x80FD;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x8BA1;&#x7B97;&#x91CF;&#x76F8;&#x6BD4;&#x4E8E;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x8981;&#x6602;&#x8D35;&#x5F88;&#x591A;&#x3002;</p>
+<p><strong>ABACUS &#x7684;</strong><strong>&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x529F;&#x80FD;&#xFF1A;</strong>&#x652F;&#x6301;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66; FPMD &#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x7ECF;&#x5178;&#x7684; Lennard-Jones&#xFF08;LJ &#x5BF9;&#x52BF;&#xFF09;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x3002;&#x6B64;&#x5916;&#xFF0C;ABACUS &#x8FD8;&#x652F;&#x6301;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Deep Potential Molecular Dynamics&#xFF0C;&#x7B80;&#x79F0; DPMD&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x7F16;&#x8BD1; <a href="https://github.com/deepmodeling/deepmd-kit" target="_blank">DeePMD-kit</a> &#x8F6F;&#x4EF6;&#x5305;&#x5E76;&#x5728;&#x7F16;&#x8BD1;&#x539F;&#x5B50;&#x7B97;&#x7B79;&#x8F6F;&#x4EF6;&#x65F6;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x5E93;&#x7684;&#x94FE;&#x63A5;&#x3002;</p>
+<h1 id="2-&#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;">2. &#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;</h1>
+<p>ABACUS &#x91CC;&#x5173;&#x4E8E;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7684;&#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x5730;&#x5740;&#x4E3A;&#xFF1A;<a href="http://abacus.deepmodeling.com/en/latest/advanced/md.html" target="_blank">http://abacus.deepmodeling.com/en/latest/advanced/md.html</a></p>
+<p>ABACUS &#x91CC;&#x5173;&#x4E8E;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x53C2;&#x6570;&#x7684;&#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x5730;&#x5740;&#x4E3A;&#xFF1A;</p>
+<p><a href="http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics" target="_blank">http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics</a></p>
+<p>ABACUS &#x7684; MD &#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x4E3A;&#xFF08;&#x56FD;&#x5185; gitee&#xFF09;&#xFF1A;</p>
+<p><a href="https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/md" target="_blank">https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/md</a></p>
+<p>&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x7684;&#x4E0B;&#x8F7D;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code>git clone https://gitee.com/mcresearch/abacus-user-guide.git
+</code></pre><p>&#x4E4B;&#x540E;&#x8FDB;&#x5165; <code>/abacus-user-guide/examples/md</code> &#x76EE;&#x5F55;</p>
+<p>&#x6216;&#x8005;&#x91C7;&#x7528; Github &#x4ED3;&#x5E93;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md" target="_blank">https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md</a></p>
+<p>&#x6CE8;&#xFF1A;&#x7B97;&#x4F8B;&#x4ED3;&#x5E93;&#x91CC;&#x9762;&#x5305;&#x542B; <code>1_AIMD</code>&#xFF0C;<code>2_LJMD</code>&#xFF08;&#x91C7;&#x7528; Lennard-Jones &#x7ECF;&#x5178;&#x52BF;&#x505A; MD&#xFF09;&#x548C; <code>3_DPMD</code>&#xFF08;&#x91C7;&#x7528;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x65B9;&#x6CD5;&#x505A; MD&#xFF09;&#x4E09;&#x4E2A;&#x76EE;&#x5F55;&#x3002;</p>
+<h2 id="21-&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;aimd&#xFF09;">2.1 &#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;AIMD&#xFF09;</h2>
+<p>&#x8FDB;&#x5165; <code>1_AIMD</code> &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x63D0;&#x4F9B;&#x4E86; 8 &#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C06; INPUT_<em>&#x590D;&#x5236;&#x4E3A; <code>INPUT</code> &#x5373;&#x53EF;&#xFF08;</em>&#x4EE3;&#x8868;&#x4ECE; <code>INPUT_0</code> &#x5230; <code>INPUT_7</code> &#x5171; 8 &#x4E2A;&#x4E0D;&#x540C;&#x7684; INPUT &#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x5E94; 8 &#x79CD;&#x4E0D;&#x540C;&#x7684; MD &#x7B97;&#x6CD5;&#xFF09;&#x3002;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; 8 &#x539F;&#x5B50;&#x7684;&#x91D1;&#x521A;&#x77F3;&#x7ED3;&#x6784; Si&#xFF0C;&#x6676;&#x683C;&#x7ED3;&#x6784;&#x653E;&#x5728; <code>STRU</code> &#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x5E03;&#x91CC;&#x6E0A;&#x533A;&#x7684; k &#x70B9;&#x91C7;&#x6837;&#x653E;&#x5728; <code>KPT</code> &#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
+<p>8 &#x4E2A; INPUT &#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684; MD &#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><code>INPUT_0</code>&#xFF1A;&#x91C7;&#x7528; NVE &#x5FAE;&#x6B63;&#x5219;&#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_1</code>&#xFF1A;&#x91C7;&#x7528; NVT &#x6B63;&#x5219;&#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_2</code>&#xFF1A;&#x91C7;&#x7528; Langevin &#x70ED;&#x5E93;</p>
+<p><code>INPUT_3</code>&#xFF1A;&#x91C7;&#x7528; Anderson &#x70ED;&#x5E93;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_4</code>&#xFF1A;&#x91C7;&#x7528; MSST &#x65B9;&#x6CD5;</p>
+<p><code>INPUT_5</code>&#xFF1A;&#x91C7;&#x7528; Berendsen &#x70ED;&#x5E93;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_6</code>&#xFF1A;&#x91C7;&#x7528; rescaling &#x65B9;&#x6CD5;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_7</code>&#xFF1A;&#x91C7;&#x7528; rescale_v &#x65B9;&#x6CD5;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p>&#x4EE5; <code>INPUT_0</code> &#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">INPUT_PARAMETERS
+#Parameters (1.General)
+suffix                 Si_nve
+calculation            md
+nbands                 20
+symmetry               0
+pseudo_dir             ../../../tests/PP_ORB
+orbital_dir            ../../../tests/PP_ORB
+
+#Parameters (2.Iteration)
+ecutwfc                30
+scf_thr                1e-5
+scf_nmax               100
+
+#Parameters (3.Basis)
+basis_type             lcao
+ks_solver              genelpa
+gamma_only             1
+
+#Parameters (4.Smearing)
+smearing_method        gaussian
+smearing_sigma         0.001
+
+#Parameters (5.Mixing)
+mixing_type            pulay
+mixing_beta            0.3
+chg_extrap             second-order
+
+#Parameters (6.MD)
+md_type                nve
+md_nstep               10
+md_dt                  1
+md_tfirst              300
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x5728; <a href="http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics" target="_blank">ABACUS &#x7EBF;&#x4E0A;&#x6587;&#x6863;</a>&#x4E2D;&#x5747;&#x6709;&#x8BF4;&#x660E;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x518D;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x6982;&#x8FF0;&#xFF1A;</p>
+<ul>
+<li>calculation&#xFF1A;&#x8BBE;&#x7F6E; ABACUS &#x8BA1;&#x7B97;&#x7C7B;&#x578B;&#xFF0C;&#x505A;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A; md&#x3002;</li>
+<li>esolver_type&#xFF1A;&#x7ED9;&#x5B9A;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x7CFB;&#x7EDF;&#x80FD;&#x91CF;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x9ED8;&#x8BA4; Kohn-Sham &#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF08;ksdft&#xFF09;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; LJ &#x52BF;&#xFF08;lj&#xFF09;&#x6216;&#x8005;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;dp&#xFF09;&#x3002;&#x7406;&#x8BBA;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x6240;&#x6709;&#x7684; esolver_type &#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; MD &#x8BA1;&#x7B97;&#x3002;</li>
+<li>chg_extrap&#xFF1A;&#x7535;&#x8377;&#x5916;&#x63D2;&#x6CD5;&#xFF0C;&#x5728; relax &#x548C; md &#x8BA1;&#x7B97;&#x4E2D;&#x53EF;&#x7528;&#x4E8E;&#x4F18;&#x5316;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x52A0;&#x901F;&#x7535;&#x5B50;&#x8FED;&#x4EE3;&#x6536;&#x655B;&#xFF0C;MD &#x4E2D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; second-order&#x3002;</li>
+<li>md_type&#xFF1A;MD &#x7B97;&#x6CD5;&#x79CD;&#x7C7B;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6B63;&#x5219;&#x7CFB;&#x7EDF; nvt&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x62E9;&#x7684;&#x662F; nve&#xFF0C;&#x5373; NVE &#x5FAE;&#x6B63;&#x5219;&#x7CFB;&#x7EFC;&#x3002;</li>
+<li>md_nstep&#xFF1A;MD &#x6A21;&#x62DF;&#x7684;&#x603B;&#x6B65;&#x6570;&#x3002;</li>
+<li>md_dt&#xFF1A;MD &#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x65F6;&#x95F4;&#x6B65;&#x957F;&#xFF08;&#x5355;&#x4F4D;&#x662F; fs&#xFF09;&#xFF0C;&#x4E0E; md_nstep &#x5171;&#x540C;&#x51B3;&#x5B9A; MD &#x603B;&#x65F6;&#x957F;&#x3002;</li>
+<li>md_tfirst&#xFF1A;MD &#x7CFB;&#x7EDF;&#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#x662F; K&#xFF09;&#x3002;</li>
+</ul>
+<h2 id="22-lennard-jones-&#x52BF;&#x51FD;&#x6570;">2.2 Lennard-Jones &#x52BF;&#x51FD;&#x6570;</h2>
+<p>&#x8FDB;&#x5165; <code>2_LJMD</code> &#x76EE;&#x5F55;&#xFF0C;ABACUS &#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x91C7;&#x7528; Lennard-Jones&#xFF08;LJ&#xFF09;&#x7ECF;&#x5178;&#x52BF;&#x51FD;&#x6570;&#x8FDB;&#x884C; MD &#x6A21;&#x62DF;&#x7684;&#x7B97;&#x4F8B;&#xFF0C;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; LJ &#x5BF9;&#x52BF;&#x4F5C;&#x4E3A;&#x80FD;&#x91CF;&#x6C42;&#x89E3;&#x5668;&#x6765;&#x505A;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x521D;&#x59CB;&#x7ED3;&#x6784;&#x662F;&#x8FB9;&#x957F; 20 &#x57C3;&#x7684;&#x6B63;&#x65B9;&#x4F53;&#x76D2;&#x5B50;&#x4E2D;&#x7684; 256 &#x4E2A;&#x65E0;&#x5E8F; He &#x539F;&#x5B50;&#x3002;</p>
+<h3 id="221-lj-&#x5BF9;&#x52BF;">2.2.1 LJ &#x5BF9;&#x52BF;</h3>
+<p>LJ &#x5BF9;&#x52BF;&#x7684;&#x89E3;&#x6790;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;$u^{ij}$&#x8868;&#x793A;&#x539F;&#x5B50; i &#x4E0E;&#x539F;&#x5B50; j &#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x80FD;&#xFF0C;$r^{ij}$&#x8868;&#x793A;&#x8FD9;&#x4E24;&#x4E2A;&#x539F;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;$\epsilon$&#xFF0C;$\sigma$&#x548C;$r<em>{cut}$&#x5219;&#x662F; LJ &#x52BF;&#x9700;&#x8981;&#x7684; 3 &#x4E2A;&#x53C2;&#x6570;&#x3002;LJ &#x52BF;&#x53EA;&#x8003;&#x8651;&#x622A;&#x65AD;&#x534A;&#x5F84;$r</em>{cut}$&#x5185;&#x7684;&#x8FD1;&#x90BB;&#x539F;&#x5B50; j &#x5BF9;&#x4E2D;&#x5FC3;&#x539F;&#x5B50; i &#x7684;&#x80FD;&#x91CF;&#x8D21;&#x732E;&#x3002;</p>
+<p>$$
+\begin{array}{c}
+u^{l j}=4 \varepsilon\left[\left(\frac{\sigma}{r<em>{i j}}\right)^{12}-\left(\frac{\sigma}{r</em>{i j}}\right)^{6}\right] \</p>
+<p>\boldsymbol{F}<em>{i}=-\nabla</em>{i} U=\sum<em>{j} 4 \varepsilon\left[12\left(\frac{\sigma}{r</em>{i j}}\right)^{12}-6\left(\frac{\sigma}{r<em>{i j}}\right)^{6}\right] \frac{\boldsymbol{r}</em>{i}-\boldsymbol{r}<em>{j}}{r</em>{i j}^{2}} H\left(r<em>{c u t}-r</em>{i j}\right)
+\end{array} \</p>
+<p>H(x)=\left{\begin{array}{l}
+0\ \ \ \ (x<0) \\="" 1\="" \="" (x="">0)
+\end{array}\right.\</0)></p>
+<p>$$</p>
+<h3 id="222-stru">2.2.2 STRU</h3>
+<p>LJMD &#x662F;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B; <code>KPT</code>&#xFF0C;&#x8D5D;&#x52BF;&#x548C;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#xFF0C;<code>STRU</code> &#x7684;&#x524D;&#x9762;&#x51E0;&#x90E8;&#x5206;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">ATOMIC_SPECIES
+He 4.0026
+
+LATTICE_CONSTANT
+1.889727
+
+LATTICE_VECTORS
+20 0 0
+0 20 0
+0 0 20
+
+ATOMIC_POSITIONS
+Cartesian
+
+He #label
+0 #magnetism
+256 #number of atoms
+</code></pre>
+<ul>
+<li>ATOMIC_SPECIES&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8D5D;&#x52BF;&#x4FE1;&#x606F;</li>
+<li>NUMERICAL_ORBITAL&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x8F68;&#x9053;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="223-input">2.2.3 INPUT</h3>
+<p><code>INPUT</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x9700;&#x8981;&#x505A;&#x5C11;&#x91CF;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">INPUT_PARAMETERS
+#Parameters (General)
+suffix              autotest
+
+calculation         md
+pseudo_dir          ../../PP_ORB
+
+#Parameters (esolver)
+esolver_type        lj
+lj_rcut             8.5
+lj_epsilon          0.01032
+lj_sigma            3.405
+
+cal_force           1
+cal_stress          1
+
+#Parameters (MD)
+md_nstep            5
+md_type             nve
+md_dt               1
+md_tfirst           300
+
+init_vel            1
+</code></pre>
+<ul>
+<li>esolver_type&#xFF1A;&#x6307;&#x5B9A;&#x4E3A; lj &#x5C31;&#x53EF;&#x4EE5;&#x505A; Lennard-Jones &#x7ECF;&#x5178;&#x52BF;&#x51FD;&#x6570;&#x3002;</li>
+<li>lj<em>rcut&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x622A;&#x65AD;&#x534A;&#x5F84;$r</em>{cut}$&#x3002;</li>
+<li>lj_epsilon&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;$\epsilon$&#x3002;</li>
+<li>lj_sigma&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;$\sigma$&#x3002;</li>
+<li>init_vel&#xFF1A;&#x8BFB;&#x53D6; <code>STRU</code> &#x4E2D;&#x7684;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x4FE1;&#x606F;&#xFF0C;&#x539F;&#x5B50;&#x5355;&#x4F4D;&#x5236;&#x3002;</li>
+</ul>
+<h2 id="23-&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;deep-potential&#xFF09;">2.3 &#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;Deep Potential&#xFF09;</h2>
+<p>ABACUS &#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; DPMD &#x7684;&#x7B97;&#x4F8B;&#xFF0C;&#x8FDB;&#x5165; <code>3_DPMD</code> &#x76EE;&#x5F55;&#x3002;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; DP &#x6A21;&#x578B;&#xFF08;DeePMD-kit &#x4EA7;&#x751F;&#x7684;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x6A21;&#x578B;&#xFF09;&#x4F5C;&#x4E3A;&#x80FD;&#x91CF;&#x6C42;&#x89E3;&#x5668;&#x6765;&#x505A;&#x57FA;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x521D;&#x59CB;&#x7ED3;&#x6784;&#x662F; 864 &#x4E2A;&#x65E0;&#x5E8F;&#x94DD;&#x539F;&#x5B50;&#x3002;</p>
+<h3 id="231-dp-&#x6A21;&#x578B;">2.3.1 DP &#x6A21;&#x578B;</h3>
+<p><a href="https://github.com/deepmodeling/deepmd-kit" target="_blank">DeePMD-kit</a> &#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x8BA1;&#x7B97;&#x6570;&#x636E;&#x5BF9;&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x901A;&#x7528;&#x7684;&#x591A;&#x4F53;&#x52BF;&#x80FD;&#x6A21;&#x578B;&#xFF08;DP &#x6A21;&#x578B;&#xFF09;&#x3002;</p>
+<h3 id="232-&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;">2.3.2 &#x7F16;&#x8BD1;&#x65B9;&#x5F0F;</h3>
+<p>ABACUS &#x91C7;&#x7528; DP &#x6A21;&#x578B;&#x505A; MD &#x8BA1;&#x7B97;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x4E0E; DeePMD-kit &#x7684;&#x63A5;&#x53E3;&#xFF0C;<a href="http://abacus.deepmodeling.com/en/latest/advanced/install.html#build-with-deepmd-kit" target="_blank">cmake</a> &#x4EE5;&#x53CA; <a href="http://abacus.deepmodeling.com/en/latest/advanced/install.html#add-deepmd-kit-support" target="_blank">makefile</a> &#x7F16;&#x8BD1;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003; ABACUS &#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x3002;</p>
+<h3 id="233-input-&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;">2.3.3 INPUT &#x6587;&#x4EF6;&#x8BBE;&#x7F6E;</h3>
+<p>DPMD &#x662F;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B; KPT&#xFF0C;&#x8D5D;&#x52BF;&#x548C;&#x8F68;&#x9053;&#x6587;&#x4EF6;</p>
+<p>INPUT &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x9700;&#x8981;&#x505A;&#x5C11;&#x91CF;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">INPUT_PARAMETERS
+#Parameters        (General)
+suffix              autotest
+calculation         md
+
+esolver_type        dp
+pot_file            ../../PP_ORB/Al-SCAN.pb
+
+cal_force           1
+cal_stress          1
+
+md_nstep            3
+md_type             msst
+md_dt               1
+md_tfirst           200
+md_dumpfreq         1
+md_restartfreq      1
+
+msst_qmass          200
+msst_vel            0.028
+msst_vis            0.3
+
+init_vel            1
+</code></pre>
+<ul>
+<li>esolver_type&#xFF1A;&#x8BBE;&#x7F6E;&#x4E3A; dp</li>
+<li>pot_file&#xFF1A;DP &#x6A21;&#x578B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</li>
+<li>md_dumpfreq&#xFF1A;MD &#x8F93;&#x51FA;&#x6587;&#x4EF6; MD_dump &#x4E2D;&#x539F;&#x5B50;&#x4EE5;&#x53CA;&#x6676;&#x80DE;&#x4FE1;&#x606F;&#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;</li>
+<li>md<em>restartfreq&#xFF1A;&#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU_MD</em>$step &#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;MD &#x7EED;&#x7B97;&#x6587;&#x4EF6; Restart_md.dat &#x7684;&#x66F4;&#x65B0;&#x9891;&#x7387;</li>
+</ul>
+<h3 id="234-stru-&#x6587;&#x4EF6;&#x7684;&#x8BBE;&#x7F6E;">2.3.4 STRU &#x6587;&#x4EF6;&#x7684;&#x8BBE;&#x7F6E;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x786E;&#x5B9A; DP &#x52BF;&#x6587;&#x4EF6;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x5173;&#x952E;&#x5B57;&#x201C;type_map&#x201D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ strings Al-SCAN.pb | grep type_map
+{&quot;model&quot;: {&quot;type_map&quot;: [&quot;Al&quot;], &quot;descriptor&quot;: {&quot;type&quot;: &quot;se_e2_a&quot;, &quot;sel&quot;: [150], &quot;rcut_smth&quot;: 0.5, &quot;rcut&quot;: 6.0, &quot;neuron&quot;: [25, 50, 100], &quot;resnet_dt&quot;: false, &quot;axis_neuron&quot;: 16, &quot;seed&quot;: 1, &quot;activation_function&quot;: &quot;tanh&quot;, &quot;type_one_side&quot;: false, &quot;precision&quot;: &quot;default&quot;, &quot;trainable&quot;: true, &quot;exclude_types&quot;: [], &quot;set_davg_zero&quot;: false}, &quot;fitting_net&quot;: {&quot;neuron&quot;: [240, 240, 240], &quot;resnet_dt&quot;: true, &quot;seed&quot;: 1, &quot;type&quot;: &quot;ener&quot;, &quot;numb_fparam&quot;: 0, &quot;numb_aparam&quot;: 0, &quot;activation_function&quot;: &quot;tanh&quot;, &quot;precision&quot;: &quot;default&quot;, &quot;trainable&quot;: true, &quot;rcond&quot;: 0.001, &quot;atom_ener&quot;: []}, &quot;data_stat_nbatch&quot;: 10, &quot;data_stat_protect&quot;: 0.01}, &quot;learning_rate&quot;: {&quot;type&quot;: &quot;exp&quot;, &quot;decay_steps&quot;: 5000, &quot;start_lr&quot;: 0.001, &quot;stop_lr&quot;: 3.51e-08, &quot;scale_by_worker&quot;: &quot;linear&quot;}, &quot;loss&quot;: {&quot;type&quot;: &quot;ener&quot;, &quot;start_pref_e&quot;: 0.02, &quot;limit_pref_e&quot;: 1, &quot;start_pref_f&quot;: 1000, &quot;limit_pref_f&quot;: 1, &quot;start_pref_v&quot;: 0, &quot;limit_pref_v&quot;: 0, &quot;start_pref_ae&quot;: 0.0, &quot;limit_pref_ae&quot;: 0.0, &quot;start_pref_pf&quot;: 0.0, &quot;limit_pref_pf&quot;: 0.0, &quot;enable_atom_ener_coeff&quot;: false}, &quot;training&quot;: {&quot;training_data&quot;: {&quot;systems&quot;: [&quot;../deepmd_data/&quot;], &quot;batch_size&quot;: &quot;auto&quot;, &quot;set_prefix&quot;: &quot;set&quot;, &quot;auto_prob&quot;: &quot;prob_sys_size&quot;, &quot;sys_probs&quot;: null}, &quot;validation_data&quot;: {&quot;systems&quot;: [&quot;../deepmd_validation&quot;], &quot;batch_size&quot;: 1, &quot;numb_btch&quot;: 3, &quot;set_prefix&quot;: &quot;set&quot;, &quot;auto_prob&quot;: &quot;prob_sys_size&quot;, &quot;sys_probs&quot;: null}, &quot;numb_steps&quot;: 1000000, &quot;seed&quot;: 10, &quot;disp_file&quot;: &quot;lcurve.out&quot;, &quot;disp_freq&quot;: 100, &quot;save_freq&quot;: 1000, &quot;save_ckpt&quot;: &quot;model.ckpt&quot;, &quot;disp_training&quot;: true, &quot;time_training&quot;: true, &quot;profiling&quot;: false, &quot;profiling_file&quot;: &quot;timeline.json&quot;, &quot;enable_profiler&quot;: false, &quot;tensorboard&quot;: false, &quot;tensorboard_log_dir&quot;: &quot;log&quot;, &quot;tensorboard_freq&quot;: 1}}
+</code></pre>
+<p>&#x5982;&#x679C;&#x5B58;&#x5728;&#x5173;&#x952E;&#x5B57; type_map&#xFF0C;&#x90A3;&#x4E48; ABACUS &#x4F1A;&#x81EA;&#x52A8;&#x5339;&#x914D; STRU &#x548C; DP &#x52BF;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x987A;&#x5E8F;&#x3002;</p>
+<p>&#x5426;&#x5219;&#xFF0C;STRU &#x4E2D;&#x7684;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x4EE5;&#x53CA;&#x987A;&#x5E8F;&#x5FC5;&#x987B;&#x4E0E; DP &#x52BF;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x4EE5;&#x53CA;&#x987A;&#x5E8F;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7528; Al-Cu-Mg &#x4E09;&#x5143;&#x5408;&#x91D1;&#x7684; DP &#x52BF;&#x6587;&#x4EF6;&#x6765;&#x8DD1; Al-Mg &#x4E8C;&#x5143;&#x5408;&#x91D1;&#x7684; MD&#xFF0C;&#x90A3;&#x4E48; STRU &#x5E94;&#x8BE5;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">ATOMIC_SPECIES
+Al  <span class="token number">26.982</span>
+Cu  <span class="token number">63.546</span>
+Mg  <span class="token number">24.305</span>
+
+LATTICE_CONSTANT
+<span class="token number">1.889727000000</span>
+
+LATTICE_VECTORS
+<span class="token number">4.0</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>
+<span class="token number">0.0</span>  <span class="token number">4.0</span>  <span class="token number">0.0</span>
+<span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">4.0</span>
+
+ATOMIC_POSITIONS
+Cartesian
+
+Al
+<span class="token number">0</span>
+<span class="token number">2</span>
+<span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>
+<span class="token number">0.5</span>  <span class="token number">0.5</span>  <span class="token number">0.0</span>
+
+Cu
+<span class="token number">0</span>
+<span class="token number">0</span>
+
+Mg
+<span class="token number">0</span>
+<span class="token number">2</span>
+<span class="token number">0.5</span>  <span class="token number">0.0</span>  <span class="token number">0.5</span>
+<span class="token number">0.0</span>  <span class="token number">0.5</span>  <span class="token number">0.5</span>
+</code></pre>
+<p>&#x6CE8;&#xFF1A;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5373;&#x4F7F; Cu &#x539F;&#x5B50;&#x7684;&#x6570;&#x91CF;&#x4E3A; 0&#xFF0C;&#x4E5F;&#x5FC5;&#x987B;&#x5728; STRU &#x4E2D;&#x7ED9;&#x51FA; Cu &#x539F;&#x5B50;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
+<h1 id="31-md-&#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;">3.1 MD &#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;</h1>
+<h2 id="31-md-&#x8F93;&#x51FA;&#x6587;&#x4EF6;">3.1 MD &#x8F93;&#x51FA;&#x6587;&#x4EF6;</h2>
+<p>ABACUS &#x7684; MD &#x6A21;&#x62DF;&#x4F1A;&#x4EA7;&#x751F; 3 &#x7C7B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF1A;&#x7ED3;&#x6784;&#x6587;&#x4EF6; <code>STRU_MD_${istep}</code>&#xFF0C;&#x7EED;&#x7B97;&#x6587;&#x4EF6; <code>Restart_md.dat</code>&#xFF0C;&#x4FE1;&#x606F;&#x6587;&#x4EF6; <code>MD_dump</code>&#x3002;</p>
+<h3 id="311-&#x7ED3;&#x6784;&#x6587;&#x4EF6;-strumd-istep">3.1.1 &#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU<em>MD</em>$ {istep}</h3>
+<p>&#x53C2;&#x6570; <code>md_restartfreq</code> &#x63A7;&#x5236; OUT.${suffix}/STRU/&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7ED3;&#x6784;&#x6587;&#x4EF6;STRU<em>MD</em>${istep}&#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E0E;&#x8F93;&#x5165;&#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU &#x76F8;&#x540C;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E; MD &#x7EED;&#x7B97;&#x3002;&#x8FD9;&#x91CC; istep &#x4EE3;&#x8868;&#x79BB;&#x5B50;&#x6B65;&#xFF0C;&#x4ECE; 0 &#x5F00;&#x59CB;&#x8BA1;&#x6570;&#x3002;</p>
+<h3 id="312-&#x7EED;&#x7B97;&#x6587;&#x4EF6;-restartmddat">3.1.2 &#x7EED;&#x7B97;&#x6587;&#x4EF6; Restart_md.dat</h3>
+<p>&#x53C2;&#x6570; <code>md_restartfreq</code> &#x63A7;&#x5236; OUT.${suffix}/Restart_md.dat &#x7684;&#x66F4;&#x65B0;&#x9891;&#x7387;&#xFF0C;&#x7528;&#x4E8E; MD &#x7EED;&#x7B97;&#x3002;</p>
+<h3 id="313-&#x4FE1;&#x606F;&#x6587;&#x4EF6;-mddump">3.1.3 &#x4FE1;&#x606F;&#x6587;&#x4EF6; MD_dump</h3>
+<p>&#x53C2;&#x6570; <code>md_dumpfreq</code> &#x63A7;&#x5236; OUT.${suffix}/MD_dump &#x6587;&#x4EF6;&#x7684;&#x8FFD;&#x52A0;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x6BCF; <code>md_dumpfreq</code> &#x6B65;&#x7684; MD &#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC; MD &#x6B65;&#x6570;&#xFF0C;&#x6676;&#x683C;&#x5E38;&#x6570;&#xFF0C;&#x6676;&#x683C;&#x77E2;&#x91CF;&#xFF0C;&#x6676;&#x683C;&#x7EF4;&#x91CC;&#xFF0C;&#x539F;&#x5B50;&#x7F16;&#x53F7;&#xFF0C;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#xFF0C;&#x539F;&#x5B50;&#x53D7;&#x529B;&#xFF0C;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x6676;&#x683C;&#x7EF4;&#x91CC;&#xFF0C;&#x539F;&#x5B50;&#x53D7;&#x529B;&#xFF0C;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x53C2;&#x6570; <code>dump_virial</code>&#xFF0C;<code>dump_force</code>&#xFF0C;<code>dump_vel</code> &#x63A7;&#x5236;&#x662F;&#x5426;&#x8F93;&#x51FA;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">MDSTEP:  <span class="token number">0</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">123.045275146001</span>  <span class="token parameter variable">-3.807535058112</span>  <span class="token parameter variable">-13.541439282961</span>
+  <span class="token parameter variable">-3.807535058112</span>  <span class="token number">124.421300186299</span>  <span class="token number">24.047959743672</span>
+  <span class="token parameter variable">-13.541439282961</span>  <span class="token number">24.047959743672</span>  <span class="token number">125.016024430342</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">0.000000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.000000000000</span>  <span class="token parameter variable">-0.885362725233</span>  <span class="token number">0.500467424348</span>  <span class="token number">0.150239620206</span>  <span class="token parameter variable">-0.003506076235</span>  <span class="token number">0.000412570794</span>  <span class="token number">0.000094403053</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.300822817264</span>  <span class="token number">1.376389287977</span>  <span class="token number">1.354798867769</span>  <span class="token number">0.885362725233</span>  <span class="token parameter variable">-0.500467424348</span>  <span class="token parameter variable">-0.150239620206</span>  <span class="token number">0.003506076235</span>  <span class="token parameter variable">-0.000412570794</span>  <span class="token parameter variable">-0.000094403053</span>
+
+MDSTEP:  <span class="token number">1</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">123.051574098220</span>  <span class="token parameter variable">-2.465332696362</span>  <span class="token parameter variable">-10.608474638302</span>
+  <span class="token parameter variable">-2.465332696362</span>  <span class="token number">123.587154919736</span>  <span class="token number">16.307187552709</span>
+  <span class="token parameter variable">-10.608474638302</span>  <span class="token number">16.307187552709</span>  <span class="token number">123.960669810770</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.389827754452</span>  <span class="token number">2.701629481339</span>  <span class="token number">2.699621723525</span>  <span class="token parameter variable">-0.602062173578</span>  <span class="token number">0.391990779819</span>  <span class="token number">0.096323485153</span>  <span class="token parameter variable">-0.010548689866</span>  <span class="token number">0.004659227844</span>  <span class="token number">0.001267888485</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.308600113700</span>  <span class="token number">1.373562332082</span>  <span class="token number">1.353979669688</span>  <span class="token number">0.602062173578</span>  <span class="token parameter variable">-0.391990779819</span>  <span class="token parameter variable">-0.096323485153</span>  <span class="token number">0.010548689866</span>  <span class="token parameter variable">-0.004659227844</span>  <span class="token parameter variable">-0.001267888485</span>
+
+MDSTEP:  <span class="token number">2</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">122.953007762375</span>  <span class="token parameter variable">-0.240072876170</span>  <span class="token parameter variable">-4.211946086929</span>
+  <span class="token parameter variable">-0.240072876170</span>  <span class="token number">122.930693852071</span>  <span class="token number">3.378536464243</span>
+  <span class="token parameter variable">-4.211946086929</span>  <span class="token number">3.378536464243</span>  <span class="token number">122.992607262385</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.376757913710</span>  <span class="token number">2.708010452044</span>  <span class="token number">2.701308224779</span>  <span class="token parameter variable">-0.124946902346</span>  <span class="token number">0.155367961328</span>  <span class="token number">0.009378252255</span>  <span class="token parameter variable">-0.012739769308</span>  <span class="token number">0.006644009927</span>  <span class="token number">0.001613591879</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.321669954442</span>  <span class="token number">1.367181361377</span>  <span class="token number">1.352293168434</span>  <span class="token number">0.124946902346</span>  <span class="token parameter variable">-0.155367961328</span>  <span class="token parameter variable">-0.009378252255</span>  <span class="token number">0.012739769308</span>  <span class="token parameter variable">-0.006644009927</span>  <span class="token parameter variable">-0.001613591879</span>
+
+MDSTEP:  <span class="token number">3</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">122.881221914392</span>  <span class="token number">1.206247195689</span>  <span class="token number">2.345023988024</span>
+  <span class="token number">1.206247195689</span>  <span class="token number">123.110079832453</span>  <span class="token parameter variable">-8.436042066928</span>
+  <span class="token number">2.345023988024</span>  <span class="token parameter variable">-8.436042066928</span>  <span class="token number">123.123976300784</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.364727401370</span>  <span class="token number">2.714719749381</span>  <span class="token number">2.702800880457</span>  <span class="token number">0.310711926370</span>  <span class="token parameter variable">-0.086233730382</span>  <span class="token parameter variable">-0.043760493686</span>  <span class="token parameter variable">-0.009222308089</span>  <span class="token number">0.005510922784</span>  <span class="token number">0.001122226311</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.333700466782</span>  <span class="token number">1.360472064040</span>  <span class="token number">1.350800512757</span>  <span class="token parameter variable">-0.310711926370</span>  <span class="token number">0.086233730382</span>  <span class="token number">0.043760493686</span>  <span class="token number">0.009222308089</span>  <span class="token parameter variable">-0.005510922784</span>  <span class="token parameter variable">-0.001122226311</span>
+</code></pre>
+<h2 id="md-&#x7EED;&#x7B97;&#x529F;&#x80FD;">MD &#x7EED;&#x7B97;&#x529F;&#x80FD;</h2>
+<p>&#x5982;&#x679C; ABACUS &#x8FD0;&#x884C;&#x8FBE;&#x5230;&#x6307;&#x5B9A;&#x7684; MD &#x6B65;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x8BA1;&#x7B97;&#x4E2D;&#x65AD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; MD &#x7EED;&#x7B97;&#x529F;&#x80FD;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;&#x7684; MD &#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4E00;&#x4E2A; <code>INPUT</code> &#x6587;&#x4EF6;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters        (General)</span>
+suffix              autotest
+calculation         md
+pseudo_dir          <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+
+esolver_type        dp
+pot_file            <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB/Al-SCAN.pb
+
+cal_force           <span class="token number">1</span>
+cal_stress          <span class="token number">1</span>
+
+md_nstep            <span class="token number">3</span>
+md_type             msst
+md_dt               <span class="token number">1</span>
+md_tfirst           <span class="token number">200</span>
+md_dumpfreq         <span class="token number">1</span>
+md_restartfreq      <span class="token number">1</span>
+md_restart          <span class="token number">1</span>
+
+msst_qmass          <span class="token number">200</span>
+msst_vel            <span class="token number">0.028</span>
+msst_vis            <span class="token number">0.3</span>
+
+init_vel            <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>md<em>restart&#xFF1A;&#x63A7;&#x5236;&#x7EED;&#x7B97;&#x7684;&#x5F00;&#x5173;&#xFF0C;&#x5728; MD &#x7EED;&#x7B97;&#x65F6;&#x5C06;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4E0D;&#x53D8;&#x3002;&#x5F53; md_restart &#x8BBE;&#x4E3A; 1&#xFF0C;ABACUS &#x4F1A;&#x8BFB;&#x53D6;${read_file_dir}/Restart_md.dat&#x6587;&#x4EF6;&#xFF0C;&#x4ECE;&#x4E2D;&#x83B7;&#x53D6;&#x5F53;&#x524D;MD&#x6B65;&#x6570;istep&#x4EE5;&#x53CA;&#x7EED;&#x7B97;&#x6240;&#x9700;&#x7684;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x5982;&#x6052;&#x6E29;&#x5668;&#x4EE5;&#x53CA;&#x6052;&#x538B;&#x5668;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6839;&#x636E;istep&#x4ECE;OUT.${suffix}/STRU/&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x8BFB;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU_MD</em>${istep}&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C; MD &#x7EED;&#x7B97;&#x4E86;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ru-he-gong-xian-abacus-shi-yong-jiao-cheng.html" class="navigation navigation-prev " aria-label="Previous page: 如何贡献ABACUS使用教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-sdft-shi-yong-jiao-cheng.html" class="navigation navigation-next " aria-label="Next page: ABACUS 随机波函数DFT方法使用教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS MD使用教程","level":"1.1.2","depth":2,"next":{"title":"ABACUS 随机波函数DFT方法使用教程","level":"1.1.3","depth":2,"path":"abacus-sdft-shi-yong-jiao-cheng.md","ref":"abacus-sdft-shi-yong-jiao-cheng.md","articles":[]},"previous":{"title":"如何贡献ABACUS使用教程","level":"1.1.1","depth":2,"path":"ru-he-gong-xian-abacus-shi-yong-jiao-cheng.md","ref":"ru-he-gong-xian-abacus-shi-yong-jiao-cheng.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","livereload"],"pluginsConfig":{"prism":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"abacus-md-shi-yong-jiao-cheng.md","mtime":"2023-05-19T07:32:23.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-19T07:42:00.220Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
