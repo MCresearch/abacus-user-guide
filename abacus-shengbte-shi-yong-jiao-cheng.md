@@ -134,7 +134,7 @@ python au2si.py
 thirdorder_vasp.py sow 2 2 2 -2
 ```
 
-执行 pos2stru.py 命令，将上述 POSCAR 转化为 STRU 文件，注意该脚本里调用了 ASE 软件包的函数（需提前安装好 ASE）：
+运行 pos2stru.py，将上述 POSCAR 转化为 STRU 文件，注意该脚本里调用了 ASE 软件包的函数（需提前安装好 ASE）：
 
 ```python
 python pos2stru.py
