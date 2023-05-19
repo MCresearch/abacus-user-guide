@@ -116,16 +116,17 @@ md_tfirst              300
 LJ 对势的解析形式如下：$u^{ij}$表示原子 i 与原子 j 之间的相互作用能，$r^{ij}$表示这两个原子之间的距离，$\epsilon$，$\sigma$和$r_{cut}$则是 LJ 势需要的 3 个参数。LJ 势只考虑截断半径$r_{cut}$内的近邻原子 j 对中心原子 i 的能量贡献。
 
 $$
-\begin{array}{c}
-u^{i j}=4 \varepsilon\left[\left(\frac{\sigma}{r_{i j}}\right)^{12}-\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \\
+u^{i j}=4 \varepsilon\left[\left(\frac{\sigma}{r_{i j}}\right)^{12}-\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] 
+$$
 
+$$
 \boldsymbol{F}_{i}=-\nabla_{i} U=\sum_{j} 4 \varepsilon\left[12\left(\frac{\sigma}{r_{i j}}\right)^{12}-6\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \frac{\boldsymbol{r}_{i}-\boldsymbol{r}_{j}}{r_{i j}^{2}} H\left(r_{c u t}-r_{i j}\right)
-\end{array} \\
+$$
 
+$$
 H(x)=\left\{\begin{array}{l}
 0\ \ \ \ (x<0) \\
 1\ \ \ \ (x>0)
-\end{array}\right.\\
 $$
 
 ### 2.2.2 STRU
