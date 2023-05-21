@@ -2,7 +2,7 @@
 
 ## 一、介绍
 
-ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新手用户入门了解ABACUS的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](ru-he-gong-xian-abacus-shi-yong-jiao-cheng.md)
+ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新手用户入门了解ABACUS的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](contribute.md)
 
 ## 二、ABACUS基本操作教程
 
@@ -22,10 +22,10 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    2. 带自旋的体系计算（缺，郑大也写）
    3. \+U计算：[<mark style="color:red;">ABACUS DFT+U使用教程</mark>](https://dptechnology.feishu.cn/wiki/wikcnLTpXB1be9s1Q896GrA7PBf)<mark style="color:red;"></mark>
    4. 结构优化（缺）
-   5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md-shi-yong-jiao-cheng.md)
+   5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)
 4. DeePKS方法（缺）
 5. 隐式溶剂计算等相关功能（缺，找许审镇老师）
-6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft-shi-yong-jiao-cheng.md)
+6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
 7. 分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://dptechnology.feishu.cn/wiki/wikcnUTWmTj8sQYeSdwcInFRLwg)<mark style="color:red;"></mark>
@@ -36,7 +36,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    1. ABACUS+Phonopy教程：[<mark style="color:red;">ABACUS+Phonopy计算声子谱</mark>](https://dptechnology.feishu.cn/wiki/wikcnroY9iFQWetjciH7Rxdad4c)<mark style="color:red;"></mark>
    2. ABACUS+CINEB教程（缺，找许审镇老师）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
-   3. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte-shi-yong-jiao-cheng.md)
+   3. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
 
 ## 三、使用经验
 

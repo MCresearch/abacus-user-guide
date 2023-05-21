@@ -143,6 +143,7 @@ npart_sto        2
 - <strong>out_dos：</strong>需要设置为 1，才能输出能态密度。
 - <strong>dos_emin_ev：</strong>能态密度的能量最小范围，单位 eV。
 - <strong>dos_emax_ev：</strong>能态密度的能量最大范围，单位 eV。
+- <strong>dos_edelta_ev：</strong>控制输出DOS时的能量间隔，单位 eV。
 - <strong>dos_sigma：</strong>能态密度的高斯展宽的因子，单位 eV。
 - <strong>dos_nche：</strong>计算能态密度时切比雪夫展开阶数，默认为 100。
 - <strong>npart_sto：</strong>当使用 method_sto＝2 运行例如 DOS 的 SDFT 后处理时，将控制使用内存大小为正常的 1/npart_sto，防止内存不够导致无法计算，默认为 1。
