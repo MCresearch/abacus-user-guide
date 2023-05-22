@@ -8,7 +8,7 @@
 
 <strong>经典分子动力学（Classical MD，简称 CMD）：</strong>通过构建描述原子间相互作用的势函数，获得每个原子的受力（受力等于能量对原子位置的导数），再通过积分运动方程来获得每个原子的下一时刻位置，从而获得随时间演化的粒子位置和速度。当系统处在一定的密度、温度和压强等物理条件限制下，可以结合统计物理的方法计算物质的性质。具体来说，采取某个系综后，对粒子位置和速度采样，之后统计出体系的热力学宏观性质。
 
-<strong>从头算分子动力学（</strong><strong>ab initio</strong><strong> molecular dynamics，简称 AIMD）：</strong>也成为第一性原理的分子动力学方法（first-principles molecular dynamics，简称 FPMD），该方法采用的是第一性原理方法（例如密度泛函理论）来计算体系的势能面，因此计算量相比于经典分子动力学方法要昂贵很多。
+<strong>从头算分子动力学（</strong><strong>ab initio</strong><strong> molecular dynamics，简称 AIMD）：</strong>也称为第一性原理的分子动力学方法（first-principles molecular dynamics，简称 FPMD），该方法采用的是第一性原理方法（例如密度泛函理论）来计算体系的势能面，因此计算量相比于经典分子动力学方法要昂贵很多。
 
 <strong>ABACUS 的</strong><strong>分子动力学功能：</strong>支持第一性原理分子动力学 FPMD 方法，也支持经典的 Lennard-Jones（LJ 对势）的分子动力学模拟。此外，ABACUS 还支持深度势能分子动力学（Deep Potential Molecular Dynamics，简称 DPMD）方法，此时需要编译 [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) 软件包并在编译原子算筹软件时进行动态库的链接。
 
@@ -39,7 +39,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 ## 2.1 第一性原理分子动力学（AIMD）
 
-进入 `1_AIMD` 目录，该目录提供了 8 个输入文件，使用的时候将 INPUT_*复制为 `INPUT` 即可（*代表从 `INPUT_0` 到 `INPUT_7` 共 8 个不同的 INPUT 文件，对应 8 种不同的 MD 算法）。该算例采用 8 原子的金刚石结构 Si，晶格结构放在 `STRU` 文件里，布里渊区的 k 点采样放在 `KPT` 文件里。
+进入 `1_AIMD` 目录，该目录提供了 8 个输入文件，使用的时候将 `INPUT_*` 复制为 `INPUT` 即可（`INPUT_*` 代表从 `INPUT_0` 到 `INPUT_7` 共 8 个不同的 INPUT 文件，对应 8 种不同的 MD 算法）。该算例采用 8 原子的金刚石结构 Si，晶格结构放在 `STRU` 文件里，布里渊区的 k 点采样放在 `KPT` 文件里。
 
 8 个 INPUT 文件对应的 MD 方法如下：
 
@@ -238,7 +238,7 @@ init_vel            1
 - esolver_type：设置为 dp
 - pot_file：DP 模型文件路径
 - md_dumpfreq：MD 输出文件 MD_dump 中原子以及晶胞信息的输出频率
-- md\_restartfreq：结构文件 STRU\_MD\_\$step 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
+- md\_restartfreq：结构文件 STRU\_MD\_\${istep} 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
 
 ### 2.3.4 STRU 文件的设置
 
@@ -297,7 +297,7 @@ Mg
 
 ABACUS 的 MD 模拟会产生 3 类输出文件：结构文件 `STRU_MD_${istep}`，续算文件 `Restart_md.dat`，信息文件 `MD_dump`。
 
-### 3.1.1 结构文件 STRU_MD_$ {istep}
+### 3.1.1 结构文件 STRU\_MD\_${istep}
 
 参数 `md_restartfreq` 控制 OUT.\${suffix}/STRU/文件夹中结构文件STRU\_MD\_\${istep}的输出频率，该文件格式与输入结构文件 STRU 相同，主要用于 MD 续算。这里 istep 代表离子步，从 0 开始计数。
 
