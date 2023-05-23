@@ -118,10 +118,8 @@ LJ 对势的解析形式如下：$$u^{ij}$$表示原子 i 与原子 j 之间的�
 $$
 \begin{array}{c}
 u^{i j}=4 \varepsilon\left[\left(\frac{\sigma}{r_{i j}}\right)^{12}-\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \\
-
 \boldsymbol{F}_{i}=-\nabla_{i} U=\sum_{j} 4 \varepsilon\left[12\left(\frac{\sigma}{r_{i j}}\right)^{12}-6\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \frac{\boldsymbol{r}_{i}-\boldsymbol{r}_{j}}{r_{i j}^{2}} H\left(r_{c u t}-r_{i j}\right)
 \end{array} \\
-
 H(x)=\left\{\begin{array}{l}
 0\ \ \ \ (x<0) \\
 1\ \ \ \ (x>0)
@@ -291,7 +289,7 @@ Mg
 
 注：在这个例子中，即使 Cu 原子的数量为 0，也必须在 STRU 中给出 Cu 原子相关信息。
 
-# 3.1 MD 输出和续算功能
+# 3 MD 输出和续算功能
 
 ## 3.1 MD 输出文件
 
@@ -367,7 +365,7 @@ INDEX    LABEL    POSITION (Angstrom)    FORCE (eV/Angstrom)    VELOCITY (Angstr
   1  Si  1.333700466782  1.360472064040  1.350800512757  -0.310711926370  0.086233730382  0.043760493686  0.009222308089  -0.005510922784  -0.001122226311
 ```
 
-## MD 续算功能
+## 3.2 MD 续算功能
 
 如果 ABACUS 运行达到指定的 MD 步数，或者计算中断，可以通过 MD 续算功能继续之前的 MD 计算。
 

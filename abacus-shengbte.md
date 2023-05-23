@@ -18,7 +18,7 @@ thirdorder: [https://bitbucket.org/sousaw/thirdorder/src/master/](https://bitbuc
 
 # <strong>2. 准备</strong>
 
-ABACUS 的软件包中提供了一个 ABACUS+ShengBTE 计算晶格热导率的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_ShengBTE)。算例中包含采用数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）和采用平面波基矢量的 PW（Plane wave，平面波）两个文件夹。每个文件夹下分别又包含了 2nd、3rd 和 shengbte 这三个文件夹，分别保存了使用 phonopy 计算二阶力常数（2nd）、thirdorder 计算三阶力常数（3rd）和 ShengBTE 计算晶格热导率（shengbte）的相关文件。
+ABACUS 的软件包中提供了一个 ABACUS+ShengBTE 计算晶格热导率的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_ShengBTE)。算例中包含采用数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）和采用平面波基矢量的 PW（Plane Wave，平面波）两个文件夹。每个文件夹下分别又包含了 2nd、3rd 和 shengbte 这三个文件夹，分别保存了使用 phonopy 计算二阶力常数（2nd）、thirdorder 计算三阶力常数（3rd）和 ShengBTE 计算晶格热导率（shengbte）的相关文件。
 
 # <strong>3. 流程</strong>
 

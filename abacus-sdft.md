@@ -4,7 +4,7 @@
 
 # 1. 介绍
 
-本教程旨在介绍 ABACUS 中随机波函数密度泛函理论（Stochastic Density Functional Theory，以下简称 SDFT）计算功能。目前 ABACUS 使用 SDFT 主要聚焦在高温高压物质的模拟，特别是温稠密物质（Warm Dense Matter，简称 WDM）。在进行温稠密物质计算时（温度高达数十到上千 eV， 1 eV=11604.5 K），传统的 Kohn-Sham 密度泛函理论（KSDFT）需要用到极大数量的占据态电子波函数导致计算困难，而 SDFT 使用随机波函数轨道，可以有效地避开对角化哈密顿矩阵这个问题，应用于高温计算。关于 ABACUS 中实现 SDFT 算法的细节可以参考 Qianrui Liu and Mohan Chen*, <em>"Plane-wave-based stochastic-deterministic density functional theory for extended systems,"</em>[ ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.125132) Phys. Rev. B, <strong>106</strong>, 125132 (2022)。本教程中将会展示如何在 ABACUS 计算中使用 SDFT 功能，此外还会介绍混合随机波函数密度泛函理论方法使用（mixed stochastic-deterministic DFT，简称 MDFT），即在 SDFT 计算中，混入一部分的低能 Kohn-Sham 轨道，从而加速结果收敛。
+本教程旨在介绍 ABACUS 中随机波函数密度泛函理论（Stochastic Density Functional Theory，以下简称 SDFT）计算功能。目前 ABACUS 使用 SDFT 主要聚焦在高温高压物质的模拟，特别是温稠密物质（Warm Dense Matter，简称 WDM）。在进行温稠密物质计算时（温度高达数十到上千 eV， 1 eV=11604.5 K），传统的 Kohn-Sham 密度泛函理论（KSDFT）需要用到极大数量的占据态电子波函数导致计算困难，而 SDFT 使用随机波函数轨道，可以有效地避开对角化哈密顿矩阵这个问题，应用于高温计算。关于 ABACUS 中实现 SDFT 算法的细节可以参考 Qianrui Liu and Mohan Chen*, [<em>"Plane-wave-based stochastic-deterministic density functional theory for extended systems,"</em>](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.125132) Phys. Rev. B, <strong>106</strong>, 125132 (2022)。本教程中将会展示如何在 ABACUS 计算中使用 SDFT 功能，此外还会介绍混合随机波函数密度泛函理论方法使用（mixed stochastic-deterministic DFT，简称 MDFT），即在 SDFT 计算中，混入一部分的低能 Kohn-Sham 轨道，从而加速结果收敛。
 
 # 2. 软件和算例准备
 
