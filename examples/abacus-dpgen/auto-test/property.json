@@ -1,0 +1,24 @@
+{
+    "structures":    ["conf"],
+    "interaction": {
+        "type":         "abacus",
+        "incar":        "./INPUT",
+        "potcar_prefix":"./",
+        "potcars": {"Si": "Si_ONCV_PBE-1.0.upf","C": "C_ONCV_PBE-1.0.upf"},
+	"orb_files": {"Si":"Si_gga_9au_100Ry_3s3p2d.orb","C":"C_gga_9au_100Ry_3s3p2d.orb"}
+    },
+    "properties": [
+        {
+         "type":         "eos",
+         "vol_start":    0.9,
+         "vol_end":      1.1,
+         "vol_step":     0.02
+        },
+        {
+         "type":         "elastic",
+         "norm_deform":   1e-2,
+         "shear_deform":  1e-2
+        }
+        ]
+}
+
