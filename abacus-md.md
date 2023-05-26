@@ -61,7 +61,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 以 `INPUT_0` 为例：
 
-```shell
+```bash
 INPUT_PARAMETERS
 #Parameters (1.General)
 suffix                 Si_nve
@@ -130,7 +130,7 @@ $$
 
 LJMD 是经典分子动力学，不需要提供 `KPT`，赝势和轨道文件，`STRU` 的前面几部分如下：
 
-```shell
+```bash
 ATOMIC_SPECIES
 He 4.0026
 
@@ -157,7 +157,7 @@ He #label
 
 `INPUT` 文件中的参数也需要做少量修改：
 
-```shell
+```bash
 INPUT_PARAMETERS
 #Parameters (General)
 suffix              autotest
@@ -207,7 +207,7 @@ DPMD 是经典分子动力学，不需要提供 KPT，赝势和轨道文件
 
 INPUT 文件中的参数需要做少量修改：
 
-```shell
+```bash
 INPUT_PARAMETERS
 #Parameters        (General)
 suffix              autotest
@@ -242,7 +242,7 @@ init_vel            1
 
 首先，我们可以通过如下命令确定 DP 势文件中是否存在关键字“type_map”：
 
-```shell
+```bash
 $ strings Al-SCAN.pb | grep type_map
 {"model": {"type_map": ["Al"], "descriptor": {"type": "se_e2_a", "sel": [150], "rcut_smth": 0.5, "rcut": 6.0, "neuron": [25, 50, 100], "resnet_dt": false, "axis_neuron": 16, "seed": 1, "activation_function": "tanh", "type_one_side": false, "precision": "default", "trainable": true, "exclude_types": [], "set_davg_zero": false}, "fitting_net": {"neuron": [240, 240, 240], "resnet_dt": true, "seed": 1, "type": "ener", "numb_fparam": 0, "numb_aparam": 0, "activation_function": "tanh", "precision": "default", "trainable": true, "rcond": 0.001, "atom_ener": []}, "data_stat_nbatch": 10, "data_stat_protect": 0.01}, "learning_rate": {"type": "exp", "decay_steps": 5000, "start_lr": 0.001, "stop_lr": 3.51e-08, "scale_by_worker": "linear"}, "loss": {"type": "ener", "start_pref_e": 0.02, "limit_pref_e": 1, "start_pref_f": 1000, "limit_pref_f": 1, "start_pref_v": 0, "limit_pref_v": 0, "start_pref_ae": 0.0, "limit_pref_ae": 0.0, "start_pref_pf": 0.0, "limit_pref_pf": 0.0, "enable_atom_ener_coeff": false}, "training": {"training_data": {"systems": ["../deepmd_data/"], "batch_size": "auto", "set_prefix": "set", "auto_prob": "prob_sys_size", "sys_probs": null}, "validation_data": {"systems": ["../deepmd_validation"], "batch_size": 1, "numb_btch": 3, "set_prefix": "set", "auto_prob": "prob_sys_size", "sys_probs": null}, "numb_steps": 1000000, "seed": 10, "disp_file": "lcurve.out", "disp_freq": 100, "save_freq": 1000, "save_ckpt": "model.ckpt", "disp_training": true, "time_training": true, "profiling": false, "profiling_file": "timeline.json", "enable_profiler": false, "tensorboard": false, "tensorboard_log_dir": "log", "tensorboard_freq": 1}}
 ```
@@ -307,7 +307,7 @@ ABACUS 的 MD 模拟会产生 3 类输出文件：结构文件 `STRU_MD_${istep}
 
 参数 `md_dumpfreq` 控制 OUT.${suffix}/MD_dump 文件的追加输出频率，该文件输出每 `md_dumpfreq` 步的 MD 信息，包括 MD 步数，晶格常数，晶格矢量，晶格维里，原子编号，原子位置，原子受力，原子速度。其中，晶格维里，原子受力，原子速度可以通过输入参数 `dump_virial`，`dump_force`，`dump_vel` 控制是否输出。
 
-```shell
+```bash
 MDSTEP:  0
 LATTICE_CONSTANT: 5.397605400000 Angstrom
 LATTICE_VECTORS
