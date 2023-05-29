@@ -100,7 +100,7 @@ DPGEN 使用流程如下，接下来我们将一一展开介绍：
 
 得到了 cif 之后，可以使用下列方法把 cif 转换成 STRU 文件：
 
-1. 安装 ASE-ABACUS 接口：
+1\. 安装 ASE-ABACUS 接口：
 
 ```bash
 git clone https://gitlab.com/1041176461/ase-abacus.git
@@ -108,7 +108,7 @@ cd ase-abacus
 python3 setup.py install
 ```
 
-1. 设置环境变量（可选）
+2\. 设置环境变量（可选）
 
 ABACUS 支持两种基组：平面波（PW）和数值原子轨道（LCAO）。赝势和轨道文件的存放路径可以通过环境变量设置，分别为：`ABACUS_PP_PATH` 和 `ABACUS_ORBITAL_PATH`,设置方法如下：
 
@@ -121,7 +121,7 @@ export ABACUS_ORBITAL_PATH=${ORB}
 
 PW 计算只需要设置 `ABACUS_PP_PATH` 。 LCAO 需要两个都设置：`ABACUS_PP_PATH` and `ABACUS_ORBITAL_PATH` 。
 
-1. CIF 转 STRU
+3\. CIF 转 STRU
 
 ```python
 from ase.io import read, write
@@ -300,10 +300,13 @@ run 执行后，相关文件即存储在` ....../iter.*(迭代序号)/步骤`文
 
 <strong>主要步骤如下：</strong>
 
-1. 新建一个文件夹，命名为：`run`，并进入此目录里
-2. 在 `run` 文件夹里面新建 `init_conf` 和 `init_data` 文件夹，用于存放 `dpgen init bulk` 产生的构型和初始训练数据
-3. 为了区分不同构型和初始训练数据，在 `init_conf` 和 `init_data` 文件夹里新建名为 `3C` 和 `2H` 的两个文件夹
-4. 拷贝 `dpgen init bulk` 产生的构型和初始训练数据至 `init_conf` 和 `init_data` 文件夹里，如：
+1\. 新建一个文件夹，命名为：`run`，并进入此目录里
+
+2\. 在 `run` 文件夹里面新建 `init_conf` 和 `init_data` 文件夹，用于存放 `dpgen init bulk` 产生的构型和初始训练数据
+
+3\. 为了区分不同构型和初始训练数据，在 `init_conf` 和 `init_data` 文件夹里新建名为 `3C` 和 `2H` 的两个文件夹
+
+4\. 拷贝 `dpgen init bulk` 产生的构型和初始训练数据至 `init_conf` 和 `init_data` 文件夹里，如：
 
 ```bash
 cp -rf yourPath/init/3C/STRU.01x01x01/02.md/sys-0032-0032 yourPath/run/init_conf/3C
@@ -313,8 +316,9 @@ cp -rf yourPath/init/3C/STRU.01x01x01/02.md/sys-0032-0032/deepmd/* yourPath/run/
 cp -rf yourPath/init/2H/STRU.01x01x01/02.md/sys-0036-0036/deepmd/* yourPath/run/init_data/2H
 ```
 
-5. 拷贝 `machine.json`、`*.orb` 和 `*.upf` 文件到 `run` 文件夹
-6. 新建一个 `param.json` 文件，如下案例：
+5\. 拷贝 `machine.json`、`*.orb` 和 `*.upf` 文件到 `run` 文件夹
+
+6\. 新建一个 `param.json` 文件，如下案例：
 
 ```json
 {
@@ -444,33 +448,33 @@ print(f_trust_lo,f_trust_hi)
 - `user_fp_params` 里面记录 ABACUS 做 SCF 所需的参数
 - 其他参数含义见：[https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html](https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html)
 
-1. 准备好所有输入文件之后，运行命令：
+1\. 准备好所有输入文件之后，运行命令：
 
 `nohup dpgen run param.json machine.json 1>log 2>err&`
 
 为后台提交，等待迭代计算完成即可。
 
-2. 实时监测每轮的 accurate 数据，在 `dpgen.log` 文件里有记录
+2\. 实时监测每轮的 accurate 数据，在 `dpgen.log` 文件里有记录
 
-1）模型精度是判断每个迭代中的训练是否收敛的重要指标。
+- 1）模型精度是判断每个迭代中的训练是否收敛的重要指标。
 
-2）掌握训练策略有利于快速迭代和收敛。
+- 2）掌握训练策略有利于快速迭代和收敛。
 
-3）经验性：一般体系在 5-8 轮迭代内会上升到 80% 以上，若没有提升，如下方法排查：
-
-
- a. 检查是否是探索步已经崩溃了，收集了许多不合理的结构
-
- b. 检查train的loss是否是收敛
-
- c. `dp test`查看fp数据是否偏差很大，或者有不合理的情况
-
- d. 检查是否是温度设置过高而导致的结构变形严重
-
- e. 及时调整trust level，体系温度升高后力的幅度变大，trust level也要增大设置
+- 3）经验性：一般体系在 5-8 轮迭代内会上升到 80% 以上，若没有提升，如下方法排查：
 
 
-3. 一些经验
+  - a. 检查是否是探索步已经崩溃了，收集了许多不合理的结构
+
+  - b. 检查train的loss是否是收敛
+
+  - c. `dp test`查看fp数据是否偏差很大，或者有不合理的情况
+
+  - d. 检查是否是温度设置过高而导致的结构变形严重
+
+  - e. 及时调整trust level，体系温度升高后力的幅度变大，trust level也要增大设置
+
+
+3\. 一些经验
 
 - 探索步已经崩溃的解决方案
 
