@@ -331,16 +331,12 @@
 <li>6H-SiC: <a href="https://materialsproject.org/materials/mp-7631?formula=SiC" target="_blank">https://materialsproject.org/materials/mp-7631?formula=SiC</a></li>
 </ul>
 <p>&#x5F97;&#x5230;&#x4E86; cif &#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x5217;&#x65B9;&#x6CD5;&#x628A; cif &#x8F6C;&#x6362;&#x6210; STRU &#x6587;&#x4EF6;&#xFF1A;</p>
-<ol>
-<li>&#x5B89;&#x88C5; ASE-ABACUS &#x63A5;&#x53E3;&#xFF1A;</li>
-</ol>
+<p>1. &#x5B89;&#x88C5; ASE-ABACUS &#x63A5;&#x53E3;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://gitlab.com/1041176461/ase-abacus.git
 <span class="token builtin class-name">cd</span> ase-abacus
 python3 setup.py <span class="token function">install</span>
 </code></pre>
-<ol>
-<li>&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF08;&#x53EF;&#x9009;&#xFF09;</li>
-</ol>
+<p>2. &#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF08;&#x53EF;&#x9009;&#xFF09;</p>
 <p>ABACUS &#x652F;&#x6301;&#x4E24;&#x79CD;&#x57FA;&#x7EC4;&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#xFF08;PW&#xFF09;&#x548C;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF08;LCAO&#xFF09;&#x3002;&#x8D5D;&#x52BF;&#x548C;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF1A;<code>ABACUS_PP_PATH</code> &#x548C; <code>ABACUS_ORBITAL_PATH</code>,&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token assign-left variable">PP</span><span class="token operator">=</span><span class="token variable">${<span class="token environment constant">HOME</span>}</span>/pseudopotentials
 <span class="token assign-left variable">ORB</span><span class="token operator">=</span><span class="token variable">${<span class="token environment constant">HOME</span>}</span>/orbitals
@@ -348,9 +344,7 @@ python3 setup.py <span class="token function">install</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">ABACUS_ORBITAL_PATH</span><span class="token operator">=</span><span class="token variable">${ORB}</span>
 </code></pre>
 <p>PW &#x8BA1;&#x7B97;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E; <code>ABACUS_PP_PATH</code> &#x3002; LCAO &#x9700;&#x8981;&#x4E24;&#x4E2A;&#x90FD;&#x8BBE;&#x7F6E;&#xFF1A;<code>ABACUS_PP_PATH</code> and <code>ABACUS_ORBITAL_PATH</code> &#x3002;</p>
-<ol>
-<li>CIF &#x8F6C; STRU</li>
-</ol>
+<p>3. CIF &#x8F6C; STRU</p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">from</span> ase<span class="token punctuation">.</span>io <span class="token keyword">import</span> read<span class="token punctuation">,</span> write
 <span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
 
@@ -502,22 +496,18 @@ Gamma
 <li><code>dpgen init bulk</code> &#x4EA7;&#x751F;&#x7684;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</li>
 </ul>
 <p><strong>&#x4E3B;&#x8981;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
-<ol>
-<li>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x547D;&#x540D;&#x4E3A;&#xFF1A;<code>run</code>&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x6B64;&#x76EE;&#x5F55;&#x91CC;</li>
-<li>&#x5728; <code>run</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x9762;&#x65B0;&#x5EFA; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E; <code>dpgen init bulk</code> &#x4EA7;&#x751F;&#x7684;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</li>
-<li>&#x4E3A;&#x4E86;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#xFF0C;&#x5728; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x65B0;&#x5EFA;&#x540D;&#x4E3A; <code>3C</code> &#x548C; <code>2H</code> &#x7684;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</li>
-<li>&#x62F7;&#x8D1D; <code>dpgen init bulk</code> &#x4EA7;&#x751F;&#x7684;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x81F3; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF0C;&#x5982;&#xFF1A;</li>
-</ol>
+<p>1. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x547D;&#x540D;&#x4E3A;&#xFF1A;<code>run</code>&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x6B64;&#x76EE;&#x5F55;&#x91CC;</p>
+<p>2. &#x5728; <code>run</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x9762;&#x65B0;&#x5EFA; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E; <code>dpgen init bulk</code> &#x4EA7;&#x751F;&#x7684;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</p>
+<p>3. &#x4E3A;&#x4E86;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#xFF0C;&#x5728; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x65B0;&#x5EFA;&#x540D;&#x4E3A; <code>3C</code> &#x548C; <code>2H</code> &#x7684;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
+<p>4. &#x62F7;&#x8D1D; <code>dpgen init bulk</code> &#x4EA7;&#x751F;&#x7684;&#x6784;&#x578B;&#x548C;&#x521D;&#x59CB;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x81F3; <code>init_conf</code> &#x548C; <code>init_data</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF0C;&#x5982;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token function">cp</span> <span class="token parameter variable">-rf</span> yourPath/init/3C/STRU.01x01x01/02.md/sys-0032-0032 yourPath/run/init_conf/3C
 <span class="token function">cp</span> <span class="token parameter variable">-rf</span> yourPath/init/2H/STRU.01x01x01/02.md/sys-0036-0036 yourPath/run/init_conf/2H
 
 <span class="token function">cp</span> <span class="token parameter variable">-rf</span> yourPath/init/3C/STRU.01x01x01/02.md/sys-0032-0032/deepmd/* yourPath/run/init_data/3C
 <span class="token function">cp</span> <span class="token parameter variable">-rf</span> yourPath/init/2H/STRU.01x01x01/02.md/sys-0036-0036/deepmd/* yourPath/run/init_data/2H
 </code></pre>
-<ol>
-<li>&#x62F7;&#x8D1D; <code>machine.json</code>&#x3001;<code>*.orb</code> &#x548C; <code>*.upf</code> &#x6587;&#x4EF6;&#x5230; <code>run</code> &#x6587;&#x4EF6;&#x5939;</li>
-<li>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; <code>param.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6848;&#x4F8B;&#xFF1A;</li>
-</ol>
+<p>5. &#x62F7;&#x8D1D; <code>machine.json</code>&#x3001;<code>*.orb</code> &#x548C; <code>*.upf</code> &#x6587;&#x4EF6;&#x5230; <code>run</code> &#x6587;&#x4EF6;&#x5939;</p>
+<p>6. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A; <code>param.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6848;&#x4F8B;&#xFF1A;</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
     <span class="token property">&quot;type_map&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;Si&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;C&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token property">&quot;mass_map&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">28.085</span><span class="token punctuation">,</span><span class="token number">12.011</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
@@ -641,30 +631,36 @@ f_trust_hi <span class="token operator">=</span> af<span class="token operator">
 <li><code>model_devi_jobs</code> &#x91CC;&#x9762;&#x6BCF;&#x4E00;&#x884C;&#x4EE3;&#x8868;&#x4E00;&#x8F6E;&#xFF0C;&#x6BCF;&#x8F6E;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x4E3A; LAMMPS &#x8FDB;&#x884C; MD &#x6A21;&#x62DF;&#x7684;&#x53C2;&#x6570;</li>
 <li><code>fp_style</code> &#x6307;&#x5B9A;&#xFF0C;&#x4F7F;&#x7528; ABACUS &#x8FDB;&#x884C; SCF &#x8BA1;&#x7B97;</li>
 <li><code>user_fp_params</code> &#x91CC;&#x9762;&#x8BB0;&#x5F55; ABACUS &#x505A; SCF &#x6240;&#x9700;&#x7684;&#x53C2;&#x6570;</li>
-<li><p>&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x542B;&#x4E49;&#x89C1;&#xFF1A;<a href="https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html" target="_blank">https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html</a></p>
-</li>
-<li><p>&#x51C6;&#x5907;&#x597D;&#x6240;&#x6709;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
-</li>
+<li>&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x542B;&#x4E49;&#x89C1;&#xFF1A;<a href="https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html" target="_blank">https://docs.deepmodeling.com/projects/dpgen/en/latest/run/index.html</a></li>
 </ul>
+<p>1. &#x51C6;&#x5907;&#x597D;&#x6240;&#x6709;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
 <p><code>nohup dpgen run param.json machine.json 1&gt;log 2&gt;err&amp;</code></p>
 <p>&#x4E3A;&#x540E;&#x53F0;&#x63D0;&#x4EA4;&#xFF0C;&#x7B49;&#x5F85;&#x8FED;&#x4EE3;&#x8BA1;&#x7B97;&#x5B8C;&#x6210;&#x5373;&#x53EF;&#x3002;</p>
-<ol>
-<li>&#x5B9E;&#x65F6;&#x76D1;&#x6D4B;&#x6BCF;&#x8F6E;&#x7684; accurate &#x6570;&#x636E;&#xFF0C;&#x5728; <code>dpgen.log</code> &#x6587;&#x4EF6;&#x91CC;&#x6709;&#x8BB0;&#x5F55;</li>
-</ol>
-<p>1&#xFF09;&#x6A21;&#x578B;&#x7CBE;&#x5EA6;&#x662F;&#x5224;&#x65AD;&#x6BCF;&#x4E2A;&#x8FED;&#x4EE3;&#x4E2D;&#x7684;&#x8BAD;&#x7EC3;&#x662F;&#x5426;&#x6536;&#x655B;&#x7684;&#x91CD;&#x8981;&#x6307;&#x6807;&#x3002;</p>
-<p>2&#xFF09;&#x638C;&#x63E1;&#x8BAD;&#x7EC3;&#x7B56;&#x7565;&#x6709;&#x5229;&#x4E8E;&#x5FEB;&#x901F;&#x8FED;&#x4EE3;&#x548C;&#x6536;&#x655B;&#x3002;</p>
-<p>3&#xFF09;&#x7ECF;&#x9A8C;&#x6027;&#xFF1A;&#x4E00;&#x822C;&#x4F53;&#x7CFB;&#x5728; 5-8 &#x8F6E;&#x8FED;&#x4EE3;&#x5185;&#x4F1A;&#x4E0A;&#x5347;&#x5230; 80% &#x4EE5;&#x4E0A;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x63D0;&#x5347;&#xFF0C;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x6392;&#x67E5;&#xFF1A;</p>
-<p> a. &#x68C0;&#x67E5;&#x662F;&#x5426;&#x662F;&#x63A2;&#x7D22;&#x6B65;&#x5DF2;&#x7ECF;&#x5D29;&#x6E83;&#x4E86;&#xFF0C;&#x6536;&#x96C6;&#x4E86;&#x8BB8;&#x591A;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x7ED3;&#x6784;</p>
-<p> b. &#x68C0;&#x67E5;train&#x7684;loss&#x662F;&#x5426;&#x662F;&#x6536;&#x655B;</p>
-<p> c. <code>dp test</code>&#x67E5;&#x770B;fp&#x6570;&#x636E;&#x662F;&#x5426;&#x504F;&#x5DEE;&#x5F88;&#x5927;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x60C5;&#x51B5;</p>
-<p> d. &#x68C0;&#x67E5;&#x662F;&#x5426;&#x662F;&#x6E29;&#x5EA6;&#x8BBE;&#x7F6E;&#x8FC7;&#x9AD8;&#x800C;&#x5BFC;&#x81F4;&#x7684;&#x7ED3;&#x6784;&#x53D8;&#x5F62;&#x4E25;&#x91CD;</p>
-<p> e. &#x53CA;&#x65F6;&#x8C03;&#x6574;trust level&#xFF0C;&#x4F53;&#x7CFB;&#x6E29;&#x5EA6;&#x5347;&#x9AD8;&#x540E;&#x529B;&#x7684;&#x5E45;&#x5EA6;&#x53D8;&#x5927;&#xFF0C;trust level&#x4E5F;&#x8981;&#x589E;&#x5927;&#x8BBE;&#x7F6E;</p>
-<ol>
-<li><p>&#x4E00;&#x4E9B;&#x7ECF;&#x9A8C;</p>
+<p>2. &#x5B9E;&#x65F6;&#x76D1;&#x6D4B;&#x6BCF;&#x8F6E;&#x7684; accurate &#x6570;&#x636E;&#xFF0C;&#x5728; <code>dpgen.log</code> &#x6587;&#x4EF6;&#x91CC;&#x6709;&#x8BB0;&#x5F55;</p>
+<ul>
+<li><p>1&#xFF09;&#x6A21;&#x578B;&#x7CBE;&#x5EA6;&#x662F;&#x5224;&#x65AD;&#x6BCF;&#x4E2A;&#x8FED;&#x4EE3;&#x4E2D;&#x7684;&#x8BAD;&#x7EC3;&#x662F;&#x5426;&#x6536;&#x655B;&#x7684;&#x91CD;&#x8981;&#x6307;&#x6807;&#x3002;</p>
 </li>
-<li><p>&#x63A2;&#x7D22;&#x6B65;&#x5DF2;&#x7ECF;&#x5D29;&#x6E83;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</p>
+<li><p>2&#xFF09;&#x638C;&#x63E1;&#x8BAD;&#x7EC3;&#x7B56;&#x7565;&#x6709;&#x5229;&#x4E8E;&#x5FEB;&#x901F;&#x8FED;&#x4EE3;&#x548C;&#x6536;&#x655B;&#x3002;</p>
 </li>
-</ol>
+<li><p>3&#xFF09;&#x7ECF;&#x9A8C;&#x6027;&#xFF1A;&#x4E00;&#x822C;&#x4F53;&#x7CFB;&#x5728; 5-8 &#x8F6E;&#x8FED;&#x4EE3;&#x5185;&#x4F1A;&#x4E0A;&#x5347;&#x5230; 80% &#x4EE5;&#x4E0A;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x63D0;&#x5347;&#xFF0C;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x6392;&#x67E5;&#xFF1A;</p>
+</li>
+</ul>
+<ul>
+<li><p>a. &#x68C0;&#x67E5;&#x662F;&#x5426;&#x662F;&#x63A2;&#x7D22;&#x6B65;&#x5DF2;&#x7ECF;&#x5D29;&#x6E83;&#x4E86;&#xFF0C;&#x6536;&#x96C6;&#x4E86;&#x8BB8;&#x591A;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x7ED3;&#x6784;</p>
+</li>
+<li><p>b. &#x68C0;&#x67E5;train&#x7684;loss&#x662F;&#x5426;&#x662F;&#x6536;&#x655B;</p>
+</li>
+<li><p>c. <code>dp test</code>&#x67E5;&#x770B;fp&#x6570;&#x636E;&#x662F;&#x5426;&#x504F;&#x5DEE;&#x5F88;&#x5927;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x60C5;&#x51B5;</p>
+</li>
+<li><p>d. &#x68C0;&#x67E5;&#x662F;&#x5426;&#x662F;&#x6E29;&#x5EA6;&#x8BBE;&#x7F6E;&#x8FC7;&#x9AD8;&#x800C;&#x5BFC;&#x81F4;&#x7684;&#x7ED3;&#x6784;&#x53D8;&#x5F62;&#x4E25;&#x91CD;</p>
+</li>
+<li><p>e. &#x53CA;&#x65F6;&#x8C03;&#x6574;trust level&#xFF0C;&#x4F53;&#x7CFB;&#x6E29;&#x5EA6;&#x5347;&#x9AD8;&#x540E;&#x529B;&#x7684;&#x5E45;&#x5EA6;&#x53D8;&#x5927;&#xFF0C;trust level&#x4E5F;&#x8981;&#x589E;&#x5927;&#x8BBE;&#x7F6E;</p>
+</li>
+</ul>
+<p>3. &#x4E00;&#x4E9B;&#x7ECF;&#x9A8C;</p>
+<ul>
+<li>&#x63A2;&#x7D22;&#x6B65;&#x5DF2;&#x7ECF;&#x5D29;&#x6E83;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</li>
+</ul>
 <p><strong>&#x539F;&#x56E0;&#xFF1A;</strong>DPMD &#x8DD1;&#x5D29;&#x7684;&#x60C5;&#x51B5;&#x4E00;&#x822C;&#x53D1;&#x751F;&#x5728; &#x8BAD;&#x7EC3;&#x6E29;&#x5EA6; &#x9AD8;&#x4E8E; &#x7194;&#x70B9;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x6E29;&#x533A;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x4ECE;&#x201C;&#x6709;&#x5E8F;&#x201D;&#x5230;&#x201C;&#x65E0;&#x5E8F;&#x6001;&#x201D;&#x7684; &#xFF0C;&#x5176;&#x6784;&#x578B;&#x6613;&#x53D8;&#xFF0C;&#x91C7;&#x6837;&#x7A7A;&#x95F4;&#x589E;&#x5927;&#xFF0C;&#x5BFC;&#x81F4;&#x8BAD;&#x7EC3;&#x96BE;&#x5EA6;&#x589E;&#x52A0;&#x3002;DPMD &#x8DD1;&#x5D29;&#x8868;&#x660E;&#x5F53;&#x524D;&#x52BF;&#x51FD;&#x6570;&#x5BF9;&#x8FD9;&#x7C7B;&#x6784;&#x578B;&#x63CF;&#x8FF0;&#x8F83;&#x5DEE;&#xFF0C;&#x5927;&#x6982;&#x7387;&#x662F;&#x56E0;&#x4E3A;&#x524D;&#x671F;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x8FD9;&#x7C7B;&#x6784;&#x578B;&#x91C7;&#x96C6;&#x7684;&#x8F83;&#x5C11;&#xFF1B;&#x7279;&#x522B;&#x662F;&#x65E0;&#x5E8F;&#x6001;&#x7ED3;&#x6784;&#x7684;&#x539F;&#x5B50;&#x8DDD;&#x79BB;&#x53D8;&#x5C0F;&#x3002;</p>
 <p><strong>&#x7B56;&#x7565;&#xFF1A;</strong>&#x5728;&#x7194;&#x70B9;&#x9644;&#x8FD1;&#x7684; &#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x5E73;&#x6ED1;&#x7F13;&#x6162;&#x5BF9;&#x5F85;&#xFF0C;&#x589E;&#x52A0;&#x201C;MD &#x8F68;&#x8FF9;&#x4FDD;&#x5B58;&#x9891;&#x7387;&#x201D;&#xFF1B;&#x7F29;&#x77ED;&#x201C;MD &#x6A21;&#x62DF;&#x6B65;&#x6570;&#x201D;&#x6216;&#x964D;&#x4F4E;&#x201C;MD &#x6B65;&#x957F;&#x201D;&#xFF0C;&#x589E;&#x52A0;&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#xFF0C;&#x5176; DP &#x8BAD;&#x7EC3;&#x52BF;&#x51FD;&#x6570;&#x7A33;&#x5B9A;&#x540E;&#x518D;&#x5EF6;&#x957F; MD &#x6A21;&#x62DF;&#x6B65;&#x6570;&#x3002;</p>
 <ul>
@@ -797,7 +793,7 @@ dpgen autotest post property.json
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ABACUS+DPGEN 使用教程","level":"1.1.4","depth":2,"next":{"title":"如何贡献ABACUS使用教程","level":"1.2","depth":1,"path":"contribute.md","ref":"contribute.md","articles":[]},"previous":{"title":"ABACUS+ShengBTE 计算晶格热导率","level":"1.1.3","depth":2,"path":"abacus-shengbte.md","ref":"abacus-shengbte.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"abacus-dpgen.md","mtime":"2023-05-29T02:02:40.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-29T02:06:14.800Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ABACUS+DPGEN 使用教程","level":"1.1.4","depth":2,"next":{"title":"如何贡献ABACUS使用教程","level":"1.2","depth":1,"path":"contribute.md","ref":"contribute.md","articles":[]},"previous":{"title":"ABACUS+ShengBTE 计算晶格热导率","level":"1.1.3","depth":2,"path":"abacus-shengbte.md","ref":"abacus-shengbte.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"abacus-dpgen.md","mtime":"2023-05-29T07:59:39.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-29T08:00:00.946Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
