@@ -37,6 +37,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    2. ABACUS+CINEB教程（缺，找许审镇老师）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
    3. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
+   4. ABACUS+DPGEN教程：[ABACUS+DPGEN 使用教程](abacus-dpgen.md)
 
 ## 三、使用经验
 

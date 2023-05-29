@@ -1,6 +1,6 @@
 # ABACUS 分子动力学使用教程
 
-<strong>作者：刘裕，邮箱：liuyu@stu.pku.edu.cn，最后更新时间：2023/05/19</strong>
+<strong>作者：刘裕，邮箱：liuyu@stu.pku.edu.cn，最后更新时间：2023/05/28</strong>
 
 # 1. 分子动力学方法简介
 
@@ -36,6 +36,8 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 [https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md)
 
 注：算例仓库里面包含 `1_AIMD`，`2_LJMD`（采用 Lennard-Jones 经典势做 MD）和 `3_DPMD`（采用深度势能方法做 MD）三个目录。
+
+注：以上算例要在ABACUS v3.2.1版本及以上可以运行成功。
 
 ## 2.1 第一性原理分子动力学（AIMD）
 
