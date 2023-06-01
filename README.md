@@ -10,7 +10,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
    2. [知乎上用户提供的ABACUS 3.0安装教程](https://zhuanlan.zhihu.com/p/574031713)
    3. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://dptechnology.feishu.cn/wiki/wikcnuC1vwoPzEugtZNAyTd7ZWg)<mark style="color:red;"></mark>
-   4. 曙光DCU平台编译教程：[<mark style="color:red;">ABACUS DCU版本编译指南</mark>](https://xmywuqhxb0.feishu.cn/docx/XxxcdeKOZoERDexkGlecZkP6neb)<mark style="color:red;"></mark>
+   4. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[<mark style="color:red;">如何转换STRU的格式</mark>](https://dptechnology.feishu.cn/wiki/wikcn6fjwNR77kxbyKDdFZASkOg)<mark style="color:red;"></mark>
    2. 数值原子轨道基组生成教程：[<mark style="color:red;">如何产生ABACUS中的数值原子轨道文件</mark>](https://dptechnology.feishu.cn/wiki/wikcnbOETPFjYPqlb5SzWPGlcHh)<mark style="color:red;"></mark>
@@ -33,7 +33,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    2. PDOS计算
       1. [<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnM7MsN60p43DsZ1uSjkIyxg)<mark style="color:red;"></mark>
 8. 和其他软件对接
-   1. ABACUS+Phonopy教程：[<mark style="color:red;">ABACUS+Phonopy计算声子谱</mark>](https://dptechnology.feishu.cn/wiki/wikcnroY9iFQWetjciH7Rxdad4c)<mark style="color:red;"></mark>
+   1. ABACUS+Phonopy教程：[ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
    2. ABACUS+CINEB教程（缺，找许审镇老师）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
    3. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)

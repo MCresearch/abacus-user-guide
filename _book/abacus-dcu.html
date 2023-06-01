@@ -1,0 +1,581 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS 在曙光 DCU 集群上的编译与使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-md.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献ABACUS使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS 在曙光 DCU 集群上的编译与使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x5728;&#x66D9;&#x5149;-dcu-&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x7F16;&#x8BD1;&#x4E0E;&#x4F7F;&#x7528;"><a name="abacus-&#x5728;&#x66D9;&#x5149;-dcu-&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x7F16;&#x8BD1;&#x4E0E;&#x4F7F;&#x7528;" class="plugin-anchor" href="#abacus-&#x5728;&#x66D9;&#x5149;-dcu-&#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x7F16;&#x8BD1;&#x4E0E;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x5728;&#x66D9;&#x5149; DCU &#x96C6;&#x7FA4;&#x4E0A;&#x7684;&#x7F16;&#x8BD1;&#x4E0E;&#x4F7F;&#x7528;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x8D3E;&#x5FD7;&#x709C;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;</strong><strong>jiazhiwei@stu.pku.edu.cn</strong><strong>&#xFF0C;&#x5BA1;&#x9605;&#xFF1A;&#x97E9;&#x660A;&#x77E5;&#xFF0C;&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/06/01</strong></p>
+<h1 id="1-&#x4ECB;&#x7ECD;"><a name="1-&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#1-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4ECB;&#x7ECD;</h1>
+<p>&#x672C;&#x6559;&#x7A0B;&#x65E8;&#x5728;&#x4ECB;&#x7ECD; ABACUS &#x5728; <a href="https://ac.sugon.com/" target="_blank">&#x66D9;&#x5149; DCU &#x8BA1;&#x7B97;&#x5E73;&#x53F0;</a> &#x4E0A;&#x7684;&#x7F16;&#x8BD1;&#x4E0E;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="dcu"><a name="dcu" class="plugin-anchor" href="#dcu"><i class="fa fa-link" aria-hidden="true"></i></a>DCU</h2>
+<ul>
+<li>DCU (Deep Computing Unit) &#x662F;&#x4E00;&#x6B3E;&#x9762;&#x5411;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x3001;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x5168;&#x529F;&#x80FD; GPGPU (General-Purpose computing on Graphics Processing Units) &#x52A0;&#x901F;&#x5361;&#x3002;</li>
+<li>&#x4E2D;&#x79D1;&#x6D77;&#x5149;&#x57FA;&#x4E8E; DCU &#x786C;&#x4EF6;&#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x7684;&#x8F6F;&#x4EF6;&#x5DE5;&#x5177;&#x94FE;&#xFF0C;&#x4EE5; DTK(DCU toolkit)&#x4E3A;&#x57FA;&#x7840;&#x8F6F;&#x4EF6;&#x5C42;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x8FD0;&#x884C;&#x3001;&#x7F16;&#x8BD1;&#x3001;&#x8C03;&#x8BD5;&#x548C;&#x6027;&#x80FD;&#x5206;&#x6790;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x591A;&#x79CD;&#x6DF1;&#x5EA6;&#x4F18;&#x5316;&#x7684;&#x8BA1;&#x7B97;&#x52A0;&#x901F;&#x5E93;&#x3002;DCU &#x52A0;&#x901F;&#x5361;&#x652F;&#x6301; ROCm/Hip &#x5E76;&#x884C;&#x67B6;&#x6784;&#x3002;</li>
+<li>&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x96C6;&#x7FA4;&#x91C7;&#x7528; CPU &#x548C; DCU &#x52A0;&#x901F;&#x5361;&#xFF08;Deep Computing Unit&#xFF09;&#x76F8;&#x7ED3;&#x5408;&#x7684;&#x5F02;&#x6784;&#x878D;&#x5408;&#x8BA1;&#x7B97;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x3002;</li>
+</ul>
+<h2 id="abacus-&#x7684;&#x5F02;&#x6784;&#x5E76;&#x884C;&#x8BA1;&#x7B97;"><a name="abacus-&#x7684;&#x5F02;&#x6784;&#x5E76;&#x884C;&#x8BA1;&#x7B97;" class="plugin-anchor" href="#abacus-&#x7684;&#x5F02;&#x6784;&#x5E76;&#x884C;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x7684;&#x5F02;&#x6784;&#x5E76;&#x884C;&#x8BA1;&#x7B97;</h2>
+<p>INPUT &#x6587;&#x4EF6;&#x4E2D; device &#x53C2;&#x6570;&#x9700;&#x8BBE;&#x7F6E;&#x4E3A; <code>gpu</code>&#x3002;</p>
+<p>&#x76EE;&#x524D; GPU/DCU &#x7248;&#x672C;&#x7684; ABACUS &#x4EC5;&#x652F;&#x6301; PW &#x57FA;&#x7EC4;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x56E0;&#x6B64; INPUT &#x6587;&#x4EF6;&#x4E2D; <code>basis_type</code> &#x53C2;&#x6570;&#x4EC5;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A; <code>pw</code>&#x3002;</p>
+<h1 id="2-&#x51C6;&#x5907;"><a name="2-&#x51C6;&#x5907;" class="plugin-anchor" href="#2-&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x51C6;&#x5907;</h1>
+<h2 id="&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;"><a name="&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;" class="plugin-anchor" href="#&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;</h2>
+<p>&#x7528;&#x6237;&#x9700;&#x8981;&#x5728;&#x5E73;&#x53F0;&#x4E0A;&#x7533;&#x8BF7;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#xFF1A;</p>
+<p><a href="https://ac.sugon.com/doc/1.0.6/30000/general-handbook/platform/source.html" target="_blank">https://ac.sugon.com/doc/1.0.6/30000/general-handbook/platform/source.html</a></p>
+<h2 id="e-shell"><a name="e-shell" class="plugin-anchor" href="#e-shell"><i class="fa fa-link" aria-hidden="true"></i></a>E-shell</h2>
+<p>&#x66D9;&#x5149;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;&#x91C7;&#x7528; E-shell &#x6765;&#x5BF9;&#x7BA1;&#x7406;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<ul>
+<li>&#x53EF;&#x4F7F;&#x7528;&#x7F51;&#x9875;&#x7248;&#x6216; <a href="https://ac.sugon.com/doc/1.0.6/30000/general-handbook/User-Guide/E-Shell-Client.html" target="_blank">E-Shell Client</a>&#x3002;</li>
+<li>&#x4E0D;&#x53EF;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528; Slurm &#x8C03;&#x5EA6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>&#x91C7;&#x7528; <a href="https://modules.readthedocs.io/en/latest/index.html" target="_blank">modules &#x5DE5;&#x5177;</a> &#x6765;&#x7BA1;&#x7406;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E0E;&#x7CFB;&#x7EDF;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x8BB8;&#x591A;&#x4F9D;&#x8D56;&#x5982;&#x7F16;&#x8BD1;&#x5668;&#x7248;&#x672C;&#x7B49;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; modules &#x6765;&#x5904;&#x7406;&#x3002;</li>
+</ul>
+<h2 id="slurm"><a name="slurm" class="plugin-anchor" href="#slurm"><i class="fa fa-link" aria-hidden="true"></i></a>slurm</h2>
+<p>Slurm &#x5DE5;&#x4F5C;&#x8C03;&#x5EA6;&#x5DE5;&#x5177;&#x662F;&#x9762;&#x5411; Linux &#x548C; Unix &#x53CA;&#x7C7B;&#x4F3C;&#x5185;&#x6838;&#x7684;&#x514D;&#x8D39;&#x548C;&#x5F00;&#x6E90;&#x5DE5;&#x4F5C;&#x8C03;&#x5EA6;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x4F5C;&#x4E1A;&#x7684;&#x63D0;&#x4EA4;&#x3001;&#x7BA1;&#x7406;&#x3001;&#x76D1;&#x6D4B;&#x3002;</p>
+<ul>
+<li><code>sinfo</code>: &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x3002;</li>
+<li><code>squeue</code>: &#x67E5;&#x770B;&#x5F53;&#x524D;&#x4F5C;&#x4E1A;&#x72B6;&#x6001;&#x3002;</li>
+<li><strong>s</strong><strong>alloc</strong>: &#x5206;&#x914D;&#x8282;&#x70B9;&#x7684;&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#xFF0C;&#x7528; salloc &#x7533;&#x8BF7;&#x7684;&#x8282;&#x70B9;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7EC8;&#x7AEF;&#x9000;&#x51FA;&#x65F6;&#x91CA;&#x653E;&#x6389;&#x3002;&#x7528;&#x4E8E;&#x7A0B;&#x5E8F;&#x6D4B;&#x8BD5;&#x4EE5;&#x53CA;&#x4E2D;&#x5C0F;&#x578B;&#x4EFB;&#x52A1;&#x7684;&#x63D0;&#x4EA4;&#x3002;</li>
+<li><strong>s</strong><strong>batch</strong>: &#x6279;&#x5904;&#x7406;&#x6A21;&#x5F0F;&#x7684;&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#xFF0C;&#x9700;&#x8981;&#x7F16;&#x5199; slurm &#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#x811A;&#x672C;&#x3002;&#x5728; E-shell &#x7684;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#x5B58;&#x6709; slurm &#x811A;&#x672C;&#x6A21;&#x677F;&#x3002;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x6D41;&#x7A0B;&#x4E2D;&#x4E5F;&#x4F1A;&#x4ECB;&#x7ECD;&#x63D0;&#x4EA4; ABACUS &#x4EFB;&#x52A1;&#x7684;&#x811A;&#x672C;&#x6848;&#x4F8B;&#x3002;</li>
+<li><code>srun</code>: &#x4EA4;&#x4E92;&#x5F0F;&#x63D0;&#x4EA4;&#x4F5C;&#x4E1A;&#x547D;&#x4EE4;&#xFF0C;&#x6709;&#x5C4F;&#x5E55;&#x8F93;&#x51FA;&#xFF0C;&#x4F46;&#x5BB9;&#x6613;&#x53D7;&#x7F51;&#x7EDC;&#x6CE2;&#x52A8;&#x5F71;&#x54CD;&#xFF0C;&#x65AD;&#x7F51;&#x6216;&#x5173;&#x95ED;&#x7A97;&#x53E3;&#x4F1A;&#x5BFC;&#x81F4;&#x4F5C;&#x4E1A;&#x4E2D;&#x65AD;&#x3002;</li>
+</ul>
+<h1 id="3-&#x6D41;&#x7A0B;"><a name="3-&#x6D41;&#x7A0B;" class="plugin-anchor" href="#3-&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x6D41;&#x7A0B;</h1>
+<h2 id="&#x914D;&#x7F6E;&#x8D85;&#x7B97;&#x73AF;&#x5883;"><a name="&#x914D;&#x7F6E;&#x8D85;&#x7B97;&#x73AF;&#x5883;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x8D85;&#x7B97;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x8D85;&#x7B97;&#x73AF;&#x5883;</h2>
+<pre class="language-"><code class="lang-bash">module avail    <span class="token comment"># &#x5217;&#x51FA;&#x5DF2;&#x6709;&#x73AF;&#x5883;</span>
+module list <span class="token operator">&lt;</span>strong<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span>/strong<span class="token operator">&gt;</span><span class="token operator">&lt;</span>strong<span class="token operator">&gt;</span><span class="token comment">#&lt;/strong&gt; &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5DF2;&#x52A0;&#x8F7D;&#x73AF;&#x5883;</span>
+module load     <span class="token comment"># &#x52A0;&#x8F7D;&#x73AF;&#x5883;</span>
+module unload   <span class="token comment"># &#x5378;&#x8F7D;&#x73AF;&#x5883;</span>
+</code></pre>
+<ul>
+<li>&#x6606;&#x5C71;&#x8282;&#x70B9;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">module purge
+<span class="token number">1</span><span class="token punctuation">)</span> compiler/devtoolset/7.3.1
+<span class="token number">2</span><span class="token punctuation">)</span> compiler/rocm/dtk-22.10 
+<span class="token number">3</span><span class="token punctuation">)</span> compiler/cmake/3.17.2 
+<span class="token number">4</span><span class="token punctuation">)</span> mpi/hpcx/2.6.0/gcc-7.3.1
+</code></pre>
+<ul>
+<li>&#x4E4C;&#x9547;&#x8282;&#x70B9;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">1</span><span class="token punctuation">)</span> compiler/devtoolset/7.3.1
+<span class="token number">2</span><span class="token punctuation">)</span> compiler/dtk/21.10          
+<span class="token number">3</span><span class="token punctuation">)</span> compiler/cmake/3.23.1
+<span class="token number">4</span><span class="token punctuation">)</span> mpi/hpcx/gcc-7.3.1
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4F7F;&#x7528;&#x5176;&#x4ED6; DCU &#x8282;&#x70B9;&#xFF08;&#x5408;&#x80A5;&#x3001;&#x54C8;&#x5C14;&#x6EE8;&#x3001;&#x897F;&#x5B89;&#xFF09;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5982;&#x679C; module &#x4E2D;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x6B22;&#x8FCE;&#x5728; <a href="https://github.com/deepmodeling/abacus-develop" target="_blank">ABACUS &#x4ED3;&#x5E93;</a> &#x63D0;&#x51FA; issue&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5C3D;&#x529B;&#x534F;&#x52A9;&#x89E3;&#x51B3;&#x3002;</p>
+<h2 id="&#x7F16;&#x8BD1;-abacus-&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#x5305;"><a name="&#x7F16;&#x8BD1;-abacus-&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#x5305;" class="plugin-anchor" href="#&#x7F16;&#x8BD1;-abacus-&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1; ABACUS &#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;&#x5305;</h2>
+<p>&#x76EE;&#x524D;&#x6309;&#x7167; DCU &#x7248;&#x672C;&#x5DF2;&#x9A8C;&#x8BC1;&#x7684;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x6570;&#x5B66;&#x5E93;&#x9700;&#x8981;&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x82E5;&#x66D9;&#x5149;&#x5E73;&#x53F0;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x4E0D;&#x7545;&#xFF0C;&#x8BF7;&#x5728;&#x8F6F;&#x4EF6;&#x5B98;&#x7F51;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x518D;&#x7528;&#x66D9;&#x5149;&#x5E73;&#x53F0;&#x7684; E-File &#x4F20;&#x9001;&#x81F3;&#x8282;&#x70B9;&#x3002;</p>
+<ul>
+<li>FFTW: <a href="https://fftw.org/pub/fftw/fftw-3.3.10.tar.gz" target="_blank">https://fftw.org/pub/fftw/fftw-3.3.10.tar.gz</a></li>
+<li>OpenBLAS: <a href="https://github.com/xianyi/OpenBLAS/releases/download/v0.3.21/OpenBLAS-0.3.21.tar.gz" target="_blank">https://github.com/xianyi/OpenBLAS/releases/download/v0.3.21/OpenBLAS-0.3.21.tar.gz</a></li>
+<li>ScaLAPACK: <a href="https://github.com/Reference-ScaLAPACK/scalapack/archive/refs/tags/v2.2.0.tar.gz" target="_blank">https://github.com/Reference-ScaLAPACK/scalapack/archive/refs/tags/v2.2.0.tar.gz</a></li>
+</ul>
+<h3 id="31-&#x7F16;&#x8BD1;-fftw"><a name="31-&#x7F16;&#x8BD1;-fftw" class="plugin-anchor" href="#31-&#x7F16;&#x8BD1;-fftw"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x7F16;&#x8BD1; FFTW</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> fftw-3.3.10.tar.gz
+
+<span class="token function">mkdir</span> build
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/work/home/your_username/fftw-3.3.10/build
+<span class="token builtin class-name">cd</span> ~/fftw-3.3.10/build
+<span class="token function">make</span> 
+<span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<p>FFTW &#x9700;&#x8981;&#x7F16;&#x8BD1;&#x5355;&#x7CBE;&#x5EA6;&#x7248;&#x672C;&#x548C;&#x53CC;&#x7CBE;&#x5EA6;&#x7248;&#x672C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> ~/fftw-3.3.10/build
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/work/home/your_username/fftw-3.3.10/build <span class="token operator">&lt;</span>strong<span class="token operator">&gt;</span>--enable-float<span class="token operator">&lt;</span>/strong<span class="token operator">&gt;</span>
+<span class="token function">make</span> 
+<span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<h3 id="32-&#x7F16;&#x8BD1;-openblas"><a name="32-&#x7F16;&#x8BD1;-openblas" class="plugin-anchor" href="#32-&#x7F16;&#x8BD1;-openblas"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x7F16;&#x8BD1; OpenBLAS</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">tar</span> <span class="token parameter variable">-zxvf</span> OpenBLAS-0.3.23.tar.gz
+<span class="token builtin class-name">cd</span> OpenBLAS-0.3.23
+
+<span class="token function">make</span> <span class="token assign-left variable">USE_OPENMP</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">NO_AVX512</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">FC</span><span class="token operator">=</span><span class="token string">&quot;gfortran -fPIC&quot;</span> <span class="token assign-left variable">CC</span><span class="token operator">=</span><span class="token string">&quot;gcc -fPIC&quot;</span> <span class="token parameter variable">-j8</span>
+<span class="token function">mkdir</span> build 
+<span class="token function">make</span> <span class="token assign-left variable">PREFIX</span><span class="token operator">=</span>/work/home/your_username/OpenBLAS-0.3.21/build <span class="token function">install</span>
+</code></pre>
+<h3 id="33-&#x7F16;&#x8BD1;-scalapack"><a name="33-&#x7F16;&#x8BD1;-scalapack" class="plugin-anchor" href="#33-&#x7F16;&#x8BD1;-scalapack"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x7F16;&#x8BD1; ScaLAPACK</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">cp</span> SLmake.inc.example SLmake.inc
+</code></pre>
+<p>&#x590D;&#x5236;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x7684; SLmake.inc.example &#x4F5C;&#x4E3A;&#x57FA;&#x51C6;&#xFF0C;&#x5E76;&#x5BF9; SLmake.inc &#x7684;&#x5185;&#x5BB9;&#x4F5C;&#x51FA;&#x4E00;&#x90E8;&#x5206;&#x4FEE;&#x6539;:</p>
+<pre class="language-"><code class="lang-bash">FC            <span class="token operator">=</span> mpif90 <span class="token parameter variable">-fPIC</span>
+CC            <span class="token operator">=</span> mpicc <span class="token parameter variable">-fPIC</span>
+BLASLIB       <span class="token operator">=</span>
+LAPACKLIB     <span class="token operator">=</span> -L/work/home/your_username/OpenBLAS-0.3.21/build/lib <span class="token parameter variable">-lopenblas</span>
+</code></pre>
+<pre class="language-"><code class="lang-bash"><span class="token function">make</span>
+</code></pre>
+<h2 id="&#x7F16;&#x8BD1;-dcu-&#x7248;&#x672C;&#x7684;-abacus"><a name="&#x7F16;&#x8BD1;-dcu-&#x7248;&#x672C;&#x7684;-abacus" class="plugin-anchor" href="#&#x7F16;&#x8BD1;-dcu-&#x7248;&#x672C;&#x7684;-abacus"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1; DCU &#x7248;&#x672C;&#x7684; ABACUS</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://gitee.com/deepmodeling/abacus-develop  <span class="token comment"># main&#x5206;&#x652F;</span>
+<span class="token builtin class-name">cd</span> abacus-develop
+<span class="token function">mkdir</span> build
+<span class="token builtin class-name">cd</span> build
+</code></pre>
+<ul>
+<li>CMake &#x914D;&#x7F6E;&#xFF1A;</li>
+</ul>
+<p>&#x6307;&#x5B9A;&#x7F16;&#x8BD1;&#x5668;&#x4E3A; clang&#xFF0C;&#x5173;&#x95ED; OpenMP&#x3001;LCAO &#x8BA1;&#x7B97;&#x6A21;&#x5757;&#xFF0C;&#x8BBE;&#x5B9A;&#x4E09;&#x4E2A;&#x6570;&#x5B66;&#x5E93;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8BBE;&#x5B9A; USE_ROCM=ON&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">CC</span><span class="token operator">=</span>clang <span class="token assign-left variable">CXX</span><span class="token operator">=</span>clang++ cmake <span class="token parameter variable">-B</span> build <span class="token parameter variable">-DUSE_OPENMP</span><span class="token operator">=</span>OFF <span class="token parameter variable">-DENABLE_LCAO</span><span class="token operator">=</span>OFF <span class="token punctuation">\</span>
+<span class="token parameter variable">-DFFTW3_DIR</span><span class="token operator">=</span>/work/home/your_username/fftw-3.3.10/build/ <span class="token punctuation">\</span>
+<span class="token parameter variable">-DLAPACK_DIR</span><span class="token operator">=</span>/work/home/your_username/OpenBLAS-0.3.21/build/lib <span class="token punctuation">\</span>
+<span class="token parameter variable">-DSCALAPACK_DIR</span><span class="token operator">=</span>/work/home/your_username/scalapack-2.2.0/ <span class="token punctuation">\</span>
+<span class="token parameter variable">-DUSE_ROCM</span><span class="token operator">=</span>ON
+</code></pre>
+<ul>
+<li>Make &#x7F16;&#x8BD1;&#xFF1A;make &#x90E8;&#x5206;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x5E76;&#x884C;&#x7F16;&#x8BD1;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">make</span>
+</code></pre>
+<h2 id="&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;"><a name="&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;" class="plugin-anchor" href="#&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;</h2>
+<ul>
+<li>salloc&#xFF08;&#x4E2D;&#x5C0F;&#x578B;&#x4EFB;&#x52A1;&#x4E0E;&#x4EA4;&#x4E92;&#x6027;&#x7A0B;&#x5E8F;&#x6D4B;&#x8BD5;&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">salloc <span class="token parameter variable">-p</span> <span class="token punctuation">[</span>&#x961F;&#x5217;&#x540D;<span class="token punctuation">]</span> <span class="token parameter variable">-N</span> <span class="token number">1</span> <span class="token parameter variable">-n</span> <span class="token number">32</span> <span class="token parameter variable">--gres</span><span class="token operator">=</span>dcu:4
+
+<span class="token punctuation">..</span>. load text <span class="token punctuation">..</span>.
+
+salloc: Waiting <span class="token keyword">for</span> resource configuration
+salloc: Nodes node_num are ready <span class="token keyword">for</span> job  <span class="token comment"># &#x5206;&#x914D;&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x7528;ssh&#x76F4;&#x63A5;&#x8FDE;&#x63A5;</span>
+
+<span class="token function">ssh</span> node_num
+
+<span class="token punctuation">..</span>.&#x4EA4;&#x4E92;&#x5F0F;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x4EFB;&#x52A1;
+</code></pre>
+<ul>
+<li><p>sbatch&#xFF08;&#x5927;&#x578B;&#x4EFB;&#x52A1;&#x4E0E;&#x6279;&#x91CF;&#x63D0;&#x4EA4;&#xFF09;</p>
+<ul>
+<li>&#x5199;&#x4E00;&#x4E2A;&#x4F5C;&#x4E1A;&#x63D0;&#x4EA4;&#x811A;&#x672C;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x7ED3;&#x6784;&#xFF1A;</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#SBATCH --job-name=ABACUS_GPU </span>
+<span class="token comment">#SBATCH --partition=kshdnormal</span>
+<span class="token comment">#SBATCH --nodes=1 </span>
+<span class="token comment">#SBATCH --output=output.log    </span>
+<span class="token comment">#SBATCH --ntasks-per-node=32  </span>
+<span class="token comment">#SBATCH --mail-user=username@email  </span>
+<span class="token operator">&lt;</span>strong<span class="token operator">&gt;</span><span class="token comment">#SBATCH --gres=dcu:4  #dcu&#x4E2A;&#x6570;&lt;/strong&gt;</span>
+<span class="token comment">#SBATCH --time=01:00:00  </span>
+<span class="token comment">#SBATCH --error=error.log   </span>
+
+<span class="token comment">#&#x4EE5;&#x4E0A;&#x7684;SBATCH&#x4FE1;&#x606F;&#x4F1A;&#x7531;slurm&#x8BC6;&#x522B;</span>
+<span class="token assign-left variable">abacus</span><span class="token operator">=</span>/work/home/your_username/abacus-develop/build/abacus_pw
+<span class="token comment">#&#x8BBE;&#x7F6E;&#x73AF;&#x5883;</span>
+module purge
+module load compiler/devtoolset/7.3.1
+module load compiler/rocm/dtk-22.10 
+module load compiler/cmake/3.17.2 
+module load mpi/hpcx/2.11.0/gcc-7.3.1
+<span class="token comment">#&#x8FD0;&#x884C;&#x811A;&#x672C;</span>
+<span class="token builtin class-name">cd</span> your_task_path 
+mpirun <span class="token parameter variable">-np</span> <span class="token number">4</span> <span class="token variable">$abacus</span>
+</code></pre>
+<pre class="language-"><code class="lang-bash">sbatch abacus_dcu.slurm
+</code></pre>
+<p>&#x4F5C;&#x4E1A;&#x5DF2;&#x63D0;&#x4EA4;&#xFF0C;&#x53EF;&#x5728;&#x201C;&#x4F5C;&#x4E1A;&#x7BA1;&#x7406;&#x201D;&#x4E2D;&#x67E5;&#x770B;&#x3002;</p>
+<h1 id="4-&#x7ED3;&#x8BED;"><a name="4-&#x7ED3;&#x8BED;" class="plugin-anchor" href="#4-&#x7ED3;&#x8BED;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x7ED3;&#x8BED;</h1>
+<p>DCU &#x53EF;&#x4EE5;&#x63D0;&#x9AD8; ABACUS &#x8BA1;&#x7B97;&#x6027;&#x80FD;&#xFF0C;&#x4E5F;&#x5145;&#x5206;&#x5229;&#x7528;&#x4E86; ROCm &#x5E76;&#x884C;&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x5F97; ABACUS &#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x80FD;&#x5E94;&#x7528;&#x5728;&#x66F4;&#x591A;&#x7684;&#x5E73;&#x53F0;&#x4E0A;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: ABACUS使用教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-md.html" class="navigation navigation-next " aria-label="Next page: ABACUS 分子动力学使用教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS 在曙光 DCU 集群上的编译与使用","level":"1.1.1","depth":2,"next":{"title":"ABACUS 分子动力学使用教程","level":"1.1.2","depth":2,"path":"abacus-md.md","ref":"abacus-md.md","articles":[]},"previous":{"title":"ABACUS使用教程","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"ABACUS 在曙光 DCU 集群上的编译与使用","level":"1.1.1","depth":2,"path":"abacus-dcu.md","ref":"abacus-dcu.md","articles":[]},{"title":"ABACUS 分子动力学使用教程","level":"1.1.2","depth":2,"path":"abacus-md.md","ref":"abacus-md.md","articles":[]},{"title":"ABACUS 随机波函数DFT方法使用教程","level":"1.1.3","depth":2,"path":"abacus-sdft.md","ref":"abacus-sdft.md","articles":[]},{"title":"ABACUS+Phonopy 计算声子谱","level":"1.1.4","depth":2,"path":"abacus-phonopy.md","ref":"abacus-phonopy.md","articles":[]},{"title":"ABACUS+ShengBTE 计算晶格热导率","level":"1.1.5","depth":2,"path":"abacus-shengbte.md","ref":"abacus-shengbte.md","articles":[]},{"title":"ABACUS+DPGEN 使用教程","level":"1.1.6","depth":2,"path":"abacus-dpgen.md","ref":"abacus-dpgen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"abacus-dcu.md","mtime":"2023-06-01T14:15:48.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-01T14:18:22.470Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
