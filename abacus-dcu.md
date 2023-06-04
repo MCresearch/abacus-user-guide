@@ -40,8 +40,8 @@ Slurm 工作调度工具是面向 Linux 和 Unix 及类似内核的免费和开�
 
 - `sinfo`: 查看系统资源。
 - `squeue`: 查看当前作业状态。
-- <strong>s</strong><strong>alloc</strong>: 分配节点的作业提交，用 salloc 申请的节点会在当前终端退出时释放掉。用于程序测试以及中小型任务的提交。
-- <strong>s</strong><strong>batch</strong>: 批处理模式的作业提交，需要编写 slurm 作业提交脚本。在 E-shell 的默认目录存有 slurm 脚本模板。在下面的流程中也会介绍提交 ABACUS 任务的脚本案例。
+- <strong>salloc</strong>: 分配节点的作业提交，用 salloc 申请的节点会在当前终端退出时释放掉。用于程序测试以及中小型任务的提交。
+- <strong>sbatch</strong>: 批处理模式的作业提交，需要编写 slurm 作业提交脚本。在 E-shell 的默认目录存有 slurm 脚本模板。在下面的流程中也会介绍提交 ABACUS 任务的脚本案例。
 - `srun`: 交互式提交作业命令，有屏幕输出，但容易受网络波动影响，断网或关闭窗口会导致作业中断。
 
 # 3. 流程
@@ -50,7 +50,7 @@ Slurm 工作调度工具是面向 Linux 和 Unix 及类似内核的免费和开�
 
 ```bash
 module avail    # 列出已有环境
-module list <strong>    </strong><strong>#</strong> 查看当前已加载环境
+module list     # 查看当前已加载环境
 module load     # 加载环境
 module unload   # 卸载环境
 ```
@@ -102,7 +102,7 @@ FFTW 需要编译单精度版本和双精度版本：
 
 ```bash
 cd ~/fftw-3.3.10/build
-./configure --prefix=/work/home/your_username/fftw-3.3.10/build <strong>--enable-float</strong>
+./configure --prefix=/work/home/your_username/fftw-3.3.10/build --enable-float
 make 
 make install
 ```
@@ -193,7 +193,7 @@ ssh node_num
 #SBATCH --output=output.log    
 #SBATCH --ntasks-per-node=32  
 #SBATCH --mail-user=username@email  
-<strong>#SBATCH --gres=dcu:4  #dcu个数</strong>
+#SBATCH --gres=dcu:4  #dcu个数
 #SBATCH --time=01:00:00  
 #SBATCH --error=error.log   
 
