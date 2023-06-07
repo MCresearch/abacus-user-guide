@@ -1,5 +1,9 @@
 {
+    "name": "abacus-user-guide",
+    "description": "国产DFT开源软件ABACUS中文使用教程",
     "plugins": [
+        "3-ba",
+
         "theme-comscore", 
         "insert-logo",
         "custom-favicon",
@@ -26,6 +30,9 @@
     ],
 
     "pluginsConfig": {
+        "3-ba": {
+            "token": "fbe3fe59e11c1ca12a323ee63971350d"
+        },
         "hide-element": {
             "elements": [".gitbook-link"]
         },
