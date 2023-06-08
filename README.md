@@ -19,7 +19,7 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
    1. 电子自洽迭代
       1. 平面波PW（缺）
       2. 数值原子轨道LCAO（缺）
-   2. 带自旋的体系计算（缺，郑大也写）
+   2. 带自旋的体系计算：[<mark style="color:red;">ABACUS磁性材料计算使用教程</mark>](https://xmywuqhxb0.feishu.cn/docx/E4ZvdMJzGonWJhxanBacS6dWnsP)<mark style="color:red;"></mark>
    3. \+U计算：[<mark style="color:red;">ABACUS DFT+U使用教程</mark>](https://dptechnology.feishu.cn/wiki/wikcnLTpXB1be9s1Q896GrA7PBf)<mark style="color:red;"></mark>
    4. 结构优化（缺）
    5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)
@@ -34,21 +34,13 @@ ABACUS是国产开源密度泛函理论软件。本教程系列旨在帮助新�
       1. [<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnM7MsN60p43DsZ1uSjkIyxg)<mark style="color:red;"></mark>
 8. 和其他软件对接
    1. ABACUS+Phonopy教程：[ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
-   2. ABACUS+CINEB教程（缺，找许审镇老师）
+   2. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
+   3. ABACUS+DPGEN教程：[ABACUS+DPGEN 使用教程](abacus-dpgen.md)
+   4. ABACUS+CINEB教程（缺，找许审镇老师）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
-   3. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
-   4. ABACUS+DPGEN教程：[ABACUS+DPGEN 使用教程](abacus-dpgen.md)
 
 ## 三、使用经验
 
 1. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://dptechnology.feishu.cn/wiki/wikcnffgspo43uB4jPQZditWlXf)<mark style="color:red;"></mark>
 2. ABACUS进行LCAO计算前轨道基组测试教程：[<mark style="color:red;">LCAO具体计算前的基本参数测试教程文档</mark>](https://dptechnology.feishu.cn/wiki/wikcneQF9WVQS4KAS6fyC6lGBEe?create\_from=copy\_within\_wiki\&from=create\_suite\_copy)<mark style="color:red;"></mark>
 3. 对比测试ABACUS中解析计算的晶格应力与能量差分方法计算的晶格应力的教程：[<mark style="color:red;">差分测试规范</mark>](https://dptechnology.feishu.cn/wiki/wikcnFDqUKlmjjBlTHe9zhLNkce)<mark style="color:red;"></mark>
-
-## 四、ABACUS+DFLOW使用教程
-
-1. 案例1：轨道基组对所有元素的计算准确性的delta测试：[<mark style="color:red;">ABACUS+dflow做delta测试</mark>](https://dptechnology.feishu.cn/wiki/wikcneaFdVKeudfmynOMXQx8DHI)<mark style="color:red;"></mark>
-2. 案例2：[<mark style="color:red;">ABACUS+dflow做应力差分测试</mark>](https://dptechnology.feishu.cn/wiki/wikcn6qDQUocADJE8Oni7N5d5Wf)<mark style="color:red;"></mark>
-3. 案例3：[<mark style="color:red;">ABACUS+dflow跑Examples里的算例</mark>](https://dptechnology.feishu.cn/wiki/wikcn2kCmhz7FBk779wIMe6phcp)<mark style="color:red;"></mark>
-4. 案例4：[<mark style="color:red;">ABACUS+dflow+Phonopy声子谱计算</mark>](https://dptechnology.feishu.cn/wiki/wikcn90ByLyQtJyDcsZw8hDAqnh)<mark style="color:red;"></mark>
-5. 案例5：[<mark style="color:red;">ABACUS+dflow做弹性常数计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnAxb5kFMtx0AeJ00JPHNdQe)<mark style="color:red;"></mark>
