@@ -1,0 +1,10 @@
+INPUT_PARAMETERS
+calculation scf
+basis_type lcao
+ntype 1
+nbands 8
+ecutwfc 60.000000
+scf_nmax 100
+
+dft_functional hse
+scf_thr 1e-7
