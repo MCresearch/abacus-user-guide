@@ -1,6 +1,10 @@
 # ABACUS+Phonopy 计算声子谱
 
-<strong>作者：陈涛，赵天琦，邮箱：</strong><strong>chentao@stu.pku.edu.cn</strong><strong>，</strong><strong>审阅：刘建川，</strong><strong>最后更新时间：2023/06/01</strong>
+<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn；赵天琦</strong>
+
+<strong>审核：刘建川，邮箱：liujianchuan2013@163.com</strong>
+
+<strong>最后更新时间：2023/06/15</strong>
 
 # 1. 介绍
 

@@ -1,0 +1,827 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-md.html" />
+    
+    
+    <link rel="prev" href="abacus-dcu.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="abacus-news.html">
+            
+                <a href="abacus-news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献ABACUS使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF08;&#x4E8C;&#xFF09;&#xFF1A;&#x751F;&#x6210;&#x7ED9;&#x5B9A;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;"><a name="&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF08;&#x4E8C;&#xFF09;&#xFF1A;&#x751F;&#x6210;&#x7ED9;&#x5B9A;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;" class="plugin-anchor" href="#&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF08;&#x4E8C;&#xFF09;&#xFF1A;&#x751F;&#x6210;&#x7ED9;&#x5B9A;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF08;&#x4E8C;&#xFF09;&#xFF1A;&#x751F;&#x6210;&#x7ED9;&#x5B9A;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x5218;&#x88D5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;liuyu@stu.pku.edu.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/06/15</strong></p>
+<h1 id="&#x4E00;&#x3001;abacus-&#x4E2D;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x80CC;&#x666F;&#x77E5;&#x8BC6;"><a name="&#x4E00;&#x3001;abacus-&#x4E2D;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x80CC;&#x666F;&#x77E5;&#x8BC6;" class="plugin-anchor" href="#&#x4E00;&#x3001;abacus-&#x4E2D;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x80CC;&#x666F;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;ABACUS &#x4E2D;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x80CC;&#x666F;&#x77E5;&#x8BC6;</h1>
+<h2 id="11-&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;"><a name="11-&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;" class="plugin-anchor" href="#11-&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;</h2>
+<ul>
+<li><strong>ABACUS &#x4E2D;&#x7684;&#x4E09;&#x7EF4;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;[1]&#xFF1A;</strong>&#x53EF;&#x4EE5;&#x5206;&#x89E3;&#x4E3A;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x4E0E;&#x89D2;&#x5411;&#x7403;&#x8C10;&#x51FD;&#x6570;&#x7684;&#x4E58;&#x79EF;&#xFF0C;&#x5373;</li>
+</ul>
+<p><script type="math/tex; mode=display">
+\phi_\mu(\mathbf{r})=f_{\mu, l}(\mathbf{r}) Y_{l m}(\hat{r}),</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">\mu=\{\alpha,i,\xi,l,m\}</script>&#xFF0C;<script type="math/tex; ">\alpha</script>&#x662F;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x7684;&#x6307;&#x6807;&#xFF0C;<script type="math/tex; ">i</script>&#x662F;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x539F;&#x5B50;&#x4E2A;&#x6570;&#x7684;&#x6307;&#x6807;&#xFF0C;<script type="math/tex; ">\xi</script>&#x662F;&#x89D2;&#x52A8;&#x91CF;<script type="math/tex; ">l</script>&#x5BF9;&#x5E94;&#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF0C;<script type="math/tex; ">m</script>&#x662F;&#x78C1;&#x91CF;&#x5B50;&#x6570;&#x3002;</p>
+<ul>
+<li><strong>&#x5F84;&#x5411;&#x90E8;&#x5206;&#x51FD;&#x6570;&#xFF1A;</strong>&#x7B2C; <script type="math/tex; ">\mu</script>&#x4E2A;&#x8F68;&#x9053;&#x7684;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5199;&#x4E3A;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;(&#x53EF;&#x53C2;&#x8003;&#x6587;&#x732E;[1])</li>
+</ul>
+<p><script type="math/tex; mode=display">
+f_{\mu l}(\mathbf{r})= \begin{cases}\sum_q c_{\mu q} j_l(q r), & r<r_c \\
+0 & r \geqslant r_{\mathrm{c}} \end{cases},
+</script></p>
+<p>&#x5176;&#x4E2D; <script type="math/tex; ">j_l(q r)</script>&#x662F;&#x6CE2;&#x77E2;&#x4E3A;<script type="math/tex; ">q</script>&#x7684;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#xFF0C;<script type="math/tex; ">r_c</script>&#x662F;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;&#xFF0C;&#x6EE1;&#x8DB3;&#x5173;&#x7CFB;<script type="math/tex; ">j_l(q r_c)=0</script>&#x3002;<script type="math/tex; ">q</script>&#x7684;&#x4E2A;&#x6570;&#x7531;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#x51B3;&#x5B9A;&#xFF08;&#x4EE5;&#x4E0B;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x8BA1;&#x7B97;&#x91CC;&#xFF0C;&#x901A;&#x8FC7;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x6BCF;&#x79CD;&#x5143;&#x7D20;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x548C;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#x6765;&#x786E;&#x5B9A;&#x9700;&#x8981;&#x7528;&#x5230;&#x591A;&#x5C11;&#x4E2A;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x3002;&#x7EC4;&#x5408;&#x7CFB;&#x6570; <script type="math/tex; ">c_{\mu q}</script>&#x662F;&#x53EF;&#x4F18;&#x5316;&#x7684;&#x91CF;&#xFF0C;&#x51B3;&#x5B9A;&#x4E86;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5F62;&#x72B6;&#x3002;</p>
+<h2 id="12-&#x53C2;&#x8003;&#x4F53;&#x7CFB;"><a name="12-&#x53C2;&#x8003;&#x4F53;&#x7CFB;" class="plugin-anchor" href="#12-&#x53C2;&#x8003;&#x4F53;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x53C2;&#x8003;&#x4F53;&#x7CFB;</h2>
+<p><strong>&#x53C2;&#x8003;&#x7CFB;&#x7EDF;&#xFF1A;</strong>&#x5728;ABACUS&#x4E2D;&#x6784;&#x9020;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6700;&#x666E;&#x904D;&#x65B9;&#x5F0F;&#x662F;&#x4E3A;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x9009;&#x53D6;&#x4E00;&#x7EC4;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x505A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x5355;k&#x70B9;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;k&#x70B9;&#xFF09;&#xFF0C;&#x5F97;&#x5230;&#x8FD9;&#x4E9B;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x7684;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x6700;&#x5C0F;&#x5316;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#xFF08;&#x4E0B;&#x9762;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#x6765;&#x4F18;&#x5316;<script type="math/tex; ">c_{\mu q}</script>&#x7CFB;&#x6570;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9009;&#x5B9A;&#x4E00;&#x7EC4;&#x53C2;&#x8003;&#x7CFB;&#x7EDF;&#xFF0C;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x57FA;&#x7EC4;&#xFF0C;&#x5E76;&#x671F;&#x671B;&#x5B83;&#x4EEC;&#x6709;&#x826F;&#x597D;&#x7684;&#x8FC1;&#x79FB;&#x6027;&#xFF0C;&#x4EE5;&#x4FBF;&#x53EF;&#x4EE5;&#x5728;&#x66F4;&#x4E00;&#x822C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x3002;</p>
+<p><strong>Dimer&#xFF08;&#x4E8C;&#x805A;&#x4F53;&#xFF09;&#xFF1A;</strong>&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x4E8C;&#x805A;&#x4F53;&#x662F;&#x8F83;&#x4E3A;&#x5408;&#x9002;&#x7684;&#x53C2;&#x8003;&#x7CFB;&#x7EDF;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x63A8;&#x8350;&#x9009;&#x62E9;&#x7684;&#x662F;&#x82E5;&#x5E72;&#x4E2A;&#x4E0D;&#x540C;&#x952E;&#x957F;&#x7684;&#x4E8C;&#x805A;&#x4F53;&#xFF08;dimer&#xFF09;&#xFF0C;&#x6709;&#x65F6;&#x4E5F;&#x53EF;&#x9009;&#x62E9;&#x4E09;&#x805A;&#x4F53;&#xFF08;trimer&#xFF09;&#x6216;&#x56DB;&#x805A;&#x4F53;&#x3002;&#x5BF9;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x9009;&#x62E9;&#x51E0;&#x4E2A;&#x952E;&#x957F;&#x4E0D;&#x540C;&#x7684;&#x4E8C;&#x805A;&#x4F53;&#xFF08;&#x4F8B;&#x5982;5-6&#x4E2A;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x952E;&#x957F;&#x8986;&#x76D6;&#x4E8C;&#x805A;&#x4F53;&#x7A33;&#x5B9A;&#x952E;&#x957F;&#x9644;&#x8FD1;&#x80FD;&#x91CF;&#x533A;&#x95F4;&#xFF0C;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x53D6;&#x4E0E;&#x6700;&#x7A33;&#x5B9A;&#x80FD;&#x91CF;&#x5DEE;&#x522B;&#x4E3A;1-2&#x4E2A;eV&#x7684;&#x80FD;&#x91CF;&#x66F2;&#x7EBF;&#x4E0A;&#x7684;&#x70B9;&#x3002;</p>
+<p><strong>&#x5468;&#x671F;&#x6027;&#x4F53;&#x7CFB;&#xFF1A;</strong>&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7528;&#x9014;&#xFF0C;&#x4F8B;&#x5982;&#x80FD;&#x5E26;&#x63D2;&#x503C;&#x3002;&#x9762;&#x5BF9;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4E00;&#x7CFB;&#x5217;&#x5E26;&#x591A;&#x4E2A;k&#x70B9;&#x7684;&#x5468;&#x671F;&#x6027;&#x4F53;&#x7CFB;&#xFF0C;&#x6B64;&#x65F6;&#x53C2;&#x8003;&#x6001;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x6784;&#x578B;&#x5C31;&#x5BF9;&#x5E94;&#x4E86;&#x4E0D;&#x540C;k&#x70B9;&#x6307;&#x6807;&#x548C;&#x4E0D;&#x540C;&#x80FD;&#x5E26;&#x6307;&#x6807;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x6CE2;&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x7528;&#x4E8E;&#x6700;&#x5C0F;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x732E;[2]&#x3002;</p>
+<h2 id="13-&#x6EA2;&#x51FA;&#x51FD;&#x6570;"><a name="13-&#x6EA2;&#x51FA;&#x51FD;&#x6570;" class="plugin-anchor" href="#13-&#x6EA2;&#x51FA;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x6EA2;&#x51FA;&#x51FD;&#x6570;</h2>
+<p><strong>&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#xFF08;&#x82F1;&#x6587;&#x4E3A;spillage&#xFF09;&#xFF1A;</strong>&#x7531;&#x7ED9;&#x5B9A;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x7684;&#x591A;&#x4E2A;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;&#x4E0E;&#x751F;&#x6210;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x522B;&#x6765;&#x5B9A;&#x4E49;&#x3002;&#x6362;&#x4E2A;&#x89D2;&#x5EA6;&#x7406;&#x89E3;&#xFF0C;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x53CD;&#x6620;&#x7684;&#x662F;&#x7531;&#x4E00;&#x7EC4;&#x201C;&#x7CBE;&#x786E;&#x201D;&#x6CE2;&#x51FD;&#x6570;&#x6240;&#x5F20;&#x6210;&#x7684;&#x5E0C;&#x5C14;&#x4F2F;&#x7279;&#x7A7A;&#x95F4;&#x4E0E;&#x5C40;&#x57DF;&#x8F68;&#x9053;&#x6240;&#x5F20;&#x6210;&#x7684;&#x7A7A;&#x95F4;&#x7684;&#x5DEE;&#x522B;&#x3002;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\mathcal{S}=\frac{1}{N_n} \sum_{n=1}^{N_n}\left\langle\Psi_n|1-\hat{P}| \Psi_n\right\rangle,
+</script></p>
+<p>&#x5176;&#x4E2D;<script type="math/tex; ">\Psi_n</script>&#x8868;&#x793A;&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x4E0B;&#x7684;&#x672C;&#x5F81;&#x6001;&#xFF0C;<script type="math/tex; ">N_n</script>&#x662F;&#x9009;&#x5B9A;&#x7684;&#x53C2;&#x8003;&#x7535;&#x5B50;&#x6001;&#x7684;&#x4E2A;&#x6570;&#xFF0C;<script type="math/tex; ">\hat{P}</script>&#x662F;&#x7531;&#x6240;&#x6709;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x5F20;&#x6210;&#x7684;&#x6295;&#x5F71;&#x5B50;</p>
+<p><script type="math/tex; mode=display">
+\hat{P}=\sum_{\mu v}\left|\phi_\mu\right\rangle S_{\mu v}^{-1}\left\langle\phi_v\right| \text,
+</script></p>
+<p>&#x5176;&#x4E2D;<script type="math/tex; ">S_{\mu v}=\left\langle\phi_\mu \mid \phi_v\right\rangle</script>&#x662F;&#x5C40;&#x57DF;&#x8F68;&#x9053;<script type="math/tex; ">\phi_\mu</script>&#x4E0E;<script type="math/tex; ">\phi_v</script>&#x4E4B;&#x95F4;&#x7684;&#x91CD;&#x53E0;&#x77E9;&#x9635;&#xFF0C;&#x6295;&#x5F71;&#x5B50;&#x7528;&#x5230;&#x4E86;&#x91CD;&#x53E0;&#x77E9;&#x9635;&#x7684;&#x9006;&#x3002;</p>
+<p><strong>&#x8F68;&#x9053;&#x6B63;&#x4EA4;&#xFF1A;</strong>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6709;&#x4E86;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x518D;&#x6B21;&#x5B9A;&#x4E49;&#x65B0;&#x7684;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x6765;&#x5F97;&#x5230;&#x4E00;&#x7EC4;&#x65B0;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x8BE5;&#x7B97;&#x6CD5;&#x53EF;&#x4EE5;&#x7CFB;&#x7EDF;&#x6027;&#x7684;&#x589E;&#x52A0;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x539F;&#x56E0;&#x3002;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x5F0F;&#x4E5F;&#x6BD4;&#x8F83;&#x76F4;&#x63A5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;<script type="math/tex; ">|\Psi_n\rangle</script>&#x548C;&#x5DF2;&#x6709;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x5F62;&#x6210;&#x7684;&#x6295;&#x5F71;&#x5B50;<script type="math/tex; ">\hat{P}</script>&#x6B63;&#x4EA4;&#xFF0C;&#x516C;&#x5F0F;&#x4E3A;</p>
+<p><script type="math/tex; mode=display">
+|\Psi_n^{new}\rangle=（1-\hat{P}）|\Psi_n\rangle,
+</script></p>
+<p>&#x8FD9;&#x4E2A;&#x516C;&#x5F0F;&#x91CC;&#xFF0C;&#x5DE6;&#x8FB9;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#x7ECF;&#x8FC7;&#x6B63;&#x4EA4;&#x5DF2;&#x7ECF;&#x4E0D;&#x5305;&#x542B;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6210;&#x5206;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x4F5C;&#x4E3A;&#x65B0;&#x7684;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x6CE2;&#x51FD;&#x6570;&#x751F;&#x6210;&#x65B0;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x4EE5;&#x4E0A;&#x7B97;&#x6CD5;&#x5DF2;&#x7ECF;&#x88AB;&#x5B9E;&#x73B0;&#x5728;SIAB&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x91CC;&#x3002;</p>
+<p><strong>&#x6700;&#x5C0F;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#xFF1A;</strong>&#x4F18;&#x5316;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x65F6;&#xFF0C;&#x6700;&#x7EC8;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x503C;&#x5B9A;&#x4E49;&#x4E3A;&#x9009;&#x5B9A;&#x7684;&#x51E0;&#x4E2A;&#x4E8C;&#x805A;&#x4F53;&#x7684;&#x5E73;&#x5747;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x503C;&#x3002;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8BC4;&#x4F30;&#x83B7;&#x5F97;&#x7684;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x57FA;&#x7EC4;&#x7684;&#x8D28;&#x91CF;&#xFF0C;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x8D8A;&#x5C0F;&#xFF0C;&#x5219;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6240;&#x5F20;&#x6210;&#x7684;&#x7A7A;&#x95F4;&#x8D8A;&#x63A5;&#x8FD1;&#x4E8E;&#x53C2;&#x8003;&#x6001;&#x6CE2;&#x51FD;&#x6570;&#x3002;&#x5728;ABACUS&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x6700;&#x5C0F;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4F18;&#x5316;<script type="math/tex; ">c_{\mu q}</script>&#xFF0C;&#x8BE5;&#x7CFB;&#x6570;&#x51B3;&#x5B9A;&#x4E86;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x72B6;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;</p>
+<ul>
+<li><p><strong>&#x8F68;&#x9053;&#x5F62;&#x72B6;&#x53EF;&#x8C03;&#xFF1A;</strong>&#x53EF;&#x4EE5;&#x7531;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x57FA;&#x7EC4;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#x81EA;&#x52A8;&#x751F;&#x6210;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x539F;&#x5219;&#x4E0A;&#x53EF;&#x83B7;&#x5F97;&#x5B8C;&#x5168;&#x4F18;&#x5316;&#x7684;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x3002;</p>
+</li>
+<li><p><strong>&#x57FA;&#x7EC4;&#x6570;&#x91CF;&#x53EF;&#x8C03;&#xFF1A;</strong>&#x53EF;&#x4EE5;&#x7528;&#x7EDF;&#x4E00;&#x7684;&#x65B9;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x589E;&#x52A0;&#x8F68;&#x9053;&#x6570;&#x91CF;&#xFF0C;&#x5305;&#x62EC;&#x589E;&#x52A0;&#x5F84;&#x5411;&#x8F68;&#x9053;&#x7684;&#x6570;&#x91CF;&#xFF08;multi-&#x3B6;&#xFF09;&#x548C;&#x589E;&#x52A0;&#x66F4;&#x9AD8;&#x89D2;&#x52A8;&#x91CF;&#x7684;&#x8F68;&#x9053;&#xFF08;&#x6781;&#x5316;&#x8F68;&#x9053;&#xFF09;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9996;&#x5148;&#x751F;&#x6210;&#x5177;&#x6709;&#x7ED9;&#x5B9A;&#x89D2;&#x52A8;&#x91CF;&#x7684;&#x8F68;&#x9053;&#xFF0C;&#x7136;&#x540E;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x8F68;&#x9053;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7A0B;&#x5E8F;&#x751F;&#x6210;&#xFF0C;&#x4F46;&#x662F;&#x6B64;&#x65F6;&#x53EA;&#x9700;&#x6700;&#x5C0F;&#x5316;&#x5269;&#x4F59;&#x7684;&#x5E0C;&#x5C14;&#x4F2F;&#x7279;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x7A7A;&#x95F4;&#x4E0E;&#x6240;&#x6709;&#x5148;&#x524D;&#x751F;&#x6210;&#x7684;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6240;&#x5F20;&#x6210;&#x7684;&#x7A7A;&#x95F4;&#x6B63;&#x4EA4;&#x3002;</p>
+</li>
+<li><p><strong>&#x53C2;&#x8003;&#x7CFB;&#x7EDF;&#x53EF;&#x8C03;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x9009;&#x62E9;&#x53C2;&#x8003;&#x7CFB;&#x7EDF;&#x53CA;&#x5BF9;&#x5E94;&#x80FD;&#x7EA7;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x57FA;&#x7EC4;&#x5728;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x7684;&#x53EF;&#x8FC1;&#x79FB;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x6D89;&#x53CA;&#x5230;&#x6FC0;&#x53D1;&#x6001;&#x80FD;&#x7EA7;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x5728;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8003;&#x8651;&#x8FD9;&#x7EC4;&#x8F68;&#x9053;&#x5BF9;&#x4E8E;&#x975E;&#x5360;&#x636E;&#x6001;&#x80FD;&#x7EA7;&#x7684;&#x62DF;&#x5408;&#x80FD;&#x529B;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5728;&#x751F;&#x6210;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x5165;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x975E;&#x5360;&#x636E;&#x80FD;&#x7EA7;&#x3002;</p>
+</li>
+</ul>
+<h2 id="14-&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;sa&#xFF08;simulated-annealing&#xFF09;"><a name="14-&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;sa&#xFF08;simulated-annealing&#xFF09;" class="plugin-anchor" href="#14-&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;sa&#xFF08;simulated-annealing&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 &#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;SA&#xFF08;Simulated Annealing&#xFF09;</h2>
+<p>&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4ECB;&#x7ECD;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x6CD5;Simulated Annealing&#xFF08;SA&#xFF09;&#x6765;&#x6700;&#x5C0F;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;[1]&#xFF0C;&#x4ECE;&#x800C;&#x4F18;&#x5316;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x7CFB;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x3002;&#x5728;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#x4E2D;&#x6211;&#x4EEC;&#x7528;&#x7684;&#x662F;Metropolis&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x6307;&#x5B9A;&#x6E29;&#x5EA6;&#x4E0B;&#x964D;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x4EE3;&#x7801;&#x90E8;&#x5206;&#x6211;&#x4EEC;&#x4E4B;&#x540E;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF0C;&#x8FD9;&#x91CC;&#x5148;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x7B97;&#x6CD5;&#x3002;</p>
+<p><strong>&#x521D;&#x59CB;&#x7CFB;&#x6570;&#xFF1A;</strong>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7279;&#x522B;&#x6307;&#x5B9A;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x7CFB;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x662F;&#x968F;&#x673A;&#x4EA7;&#x751F;&#x7684;&#xFF0C; &#x6BCF;&#x4E00;&#x6B65;SA&#x4F1A;&#x66F4;&#x65B0;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x7CFB;&#x6570;&#xFF0C;&#x5F53;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x88AB;&#x6539;&#x53D8;&#x7684;&#x6570;&#x503C;&#x5728;&#x5141;&#x8BB8;&#x63A5;&#x6536;&#x7684;&#x8303;&#x56F4;&#x5185;&#x65F6;&#xFF0C;&#x53C2;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x3002;</p>
+<p><strong>&#x4F18;&#x5316;&#x8FC7;&#x7A0B;&#xFF1A;</strong>&#x5F53;&#x8981;&#x4F18;&#x5316;&#x7684;&#x6240;&#x6709;&#x8F68;&#x9053;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x90FD;&#x88AB;&#x66F4;&#x65B0;&#x8FC7;&#x4E00;&#x6B21;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x79F0;&#x4E3A;&#x4E00;&#x6B65;&#x4F18;&#x5316;&#x3002; &#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5927;&#x7EA6;&#x5728;&#x6BCF;&#x4E2A;&#x6E29;&#x5EA6;&#x884C;&#x8D70;500 ~ 1000&#x6B65;&#x5C31;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x4EA7;&#x751F;&#x597D;&#x7684;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x3002;&#x6700;&#x5F00;&#x59CB;&#x7684;&#x6E29;&#x5EA6;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x53D6;&#x4E3A;1.0e-5&#xFF0C;&#x4E8B;&#x5B9E;&#x4E0A;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5373;&#x4FBF;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#x53D6;&#x5F97;&#x66F4;&#x5C0F;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x4E5F;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x3002; &#x5728;&#x6BCF;&#x4E00;&#x6B65;&#x4F18;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6E29;&#x5EA6;&#x4E58;&#x4E0A;&#x4E00;&#x4E2A;&#x6BD4;&#x7387;&#xFF0C;&#x6765;&#x8FBE;&#x5230;&#x964D;&#x6E29;&#x7684;&#x76EE;&#x7684;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x65B0;&#x7684;&#x6E29;&#x5EA6;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x53D6;&#x4E3A;0.5~0.8&#xFF0C;&#x6700;&#x540E;&#x7684;&#x6E29;&#x5EA6;&#x4E00;&#x822C;&#x964D;&#x5230;1.0e-9~1.0e-12&#x3002;&#x63A5;&#x6536;&#x7684;&#x6982;&#x7387;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5728;0.2~0.4&#x8303;&#x56F4;&#x5185;&#x3002;</p>
+<p><strong>&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#xFF1A;</strong>&#x8FD9;&#x91CC;&#x7684;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x5E73;&#x9762;&#x6CE2; <script type="math/tex; ">e^{i\mathbf{q}\cdot\mathbf{r}}</script>&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x4E8C;&#x9636;&#x6C42;&#x5BFC;&#x540E;&#x7684;&#x52A8;&#x80FD;<script type="math/tex; ">q^2/2</script>&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570; <script type="math/tex; ">j_l(q r)</script>&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x52A8;&#x80FD;&#x662F; <script type="math/tex; ">q^2/2</script>&#x3002;&#x5728;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x91CC;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#x6765;&#x63A7;&#x5236;&#x5E73;&#x9762;&#x6CE2;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x4ECE;&#x800C;&#x63A7;&#x5236;&#x8BA1;&#x7B97;&#x7CBE;&#x5EA6;&#x3002;&#x5728;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x901A;&#x8FC7;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#x6765;&#x63A7;&#x5236;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4ECE;&#x800C;&#x63A7;&#x5236;&#x751F;&#x6210;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x7CBE;&#x5EA6;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;ABACUS&#x7684;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x548C;&#x4EA7;&#x751F;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570; <script type="math/tex; ">j_l(q r)</script>&#x4E2A;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x91C7;&#x7528;&#x540C;&#x6837;&#x7684;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;&#xFF0C;&#x8BE5;&#x622A;&#x65AD;&#x503C;&#x53D6;&#x5F97;&#x8D8A;&#x9AD8;&#xFF0C;&#x57FA;&#x77E2;&#x91CF;&#x4E2A;&#x6570;&#x8D8A;&#x591A;&#x540C;&#x65F6;&#x57FA;&#x7EC4;&#x4E5F;&#x8D8A;&#x5B8C;&#x5907;&#x3002;&#x5BF9;&#x4E8E;&#x91C7;&#x7528;&#x8D5D;&#x52BF;&#x7684;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#xFF0C;15~30&#x4E2A;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x8DB3;&#x591F;&#x5F97;&#x5230;&#x8D28;&#x91CF;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x3002;</p>
+<p><strong>&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x4E8C;&#x9636;&#x53EF;&#x5BFC;&#xFF1A;</strong>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x64CD;&#x4F5C;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5230;&#x7684;&#x5730;&#x65B9;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x52A8;&#x80FD;&#x79EF;&#x5206;&#x662F;&#x826F;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x4E8C;&#x9636;&#x5BFC;&#x6570;&#x8FDE;&#x7EED;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x4E58;&#x4EE5;&#x4E00;&#x4E2A;&#x5E73;&#x6ED1;&#x51FD;&#x6570;<script type="math/tex; ">g(r)</script>&#x6765;&#x5B9E;&#x73B0;</p>
+<p><script type="math/tex; mode=display">
+g(r)=1-\exp \left[-\frac{\left(r-r_{\mathrm{c}}\right)^2}{2 \sigma^2}\right],
+</script></p>
+<p>&#x8BE5;&#x5F84;&#x5411;&#x8F68;&#x9053;&#x4F1A;&#x5728;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x622A;&#x65AD;&#x503C;&#x4EE5;&#x5185;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x4F7F;&#x5176;&#x5728;&#x622A;&#x65AD;&#x503C;&#x5904;2&#x9636;&#x8FDE;&#x7EED;&#xFF0C;&#x8D85;&#x8FC7;&#x9636;&#x6BB5;&#x534A;&#x5F84;&#x4E4B;&#x540E;&#x5C31;&#x4E25;&#x683C;&#x622A;&#x65AD;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x6D4B;&#x8BD5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x53C2;&#x6570;<script type="math/tex; ">\sigma</script>&#x5BF9;&#x8F68;&#x9053;&#x7684;&#x8D28;&#x91CF;&#x5F71;&#x54CD;&#x4E0D;&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x56FA;&#x5B9A;<script type="math/tex; ">\sigma</script>&#x4E3A;&#x5E38;&#x6570;0.1&#x3002;</p>
+<p><strong>&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x52A8;&#x80FD;&#x548C;&#x518D;&#x6B21;&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#xFF1A;</strong>&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x6700;&#x5C0F;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x503C;&#xFF0C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x7ECF;&#x5E38;&#x4F1A;&#x51FA;&#x73B0;&#x9707;&#x8361;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x9707;&#x8361;&#x6709;&#x65F6;&#x5019;&#x6709;&#x5229;&#x4E8E;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x503C;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x4F4E;&#xFF0C;&#x4F46;&#x9707;&#x8361;&#x5389;&#x5BB3;&#x7684;&#x51FD;&#x6570;&#x5F80;&#x5F80;&#x52A8;&#x80FD;&#x9AD8;&#xFF0C;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x8F83;&#x5DEE;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E3A;&#x4E86;&#x53BB;&#x9664;&#x8FD9;&#x4E9B;&#x5B9E;&#x9645;&#x4E0A;&#x975E;&#x7269;&#x7406;&#x7684;&#x9707;&#x8361;&#xFF0C;&#x5728;&#x7B97;&#x6CD5;&#x4E2D;&#x6211;&#x4EEC;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x52A8;&#x80FD;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+T_{\mu}=\sum_{q} c_{\mu q}^{2} q^{2} / 2+\kappa,
+</script></p>
+<p>&#x5E76;&#x518D;&#x6B21;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#x6700;&#x5C0F;&#x5316;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x52A8;&#x80FD;&#xFF0C;&#x5176;&#x4E2D;<script type="math/tex; ">\kappa</script>&#x5219;&#x662F;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7684;&#x4E00;&#x4E2A;&#x60E9;&#x7F5A;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><script type="math/tex; mode=display">
+\kappa=\left\{\begin{array}{ll}
+0, & \mathcal{S} / \mathcal{S}_{0}-1<\Delta \\
+\infty, & \mathcal{S} / \mathcal{S}_{0}-1>\Delta
+\end{array}\right.,
+</script></p>
+<p>&#x8FD9;&#x91CC;<script type="math/tex; ">\mathcal{S}\_{0}</script>&#x662F;&#x5728;&#x4F18;&#x5316;&#x52A8;&#x80FD;&#x4E4B;&#x524D;&#x6240;&#x5F97;&#x5230;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x800C;<script type="math/tex; ">\mathcal{S}</script>&#x5219;&#x662F;&#x5F53;&#x524D;&#x5728;&#x53C2;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x4E0B;&#x9762;&#x7684;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x503C;&#x3002;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x53C2;&#x6570;&#x53D6;<script type="math/tex; ">\Delta</script>=0.002~0.005&#x8DB3;&#x591F;&#x4F7F;&#x5F97;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x5E73;&#x6ED1;&#x4E86;&#x3002;&#x8F68;&#x9053;&#x52A8;&#x80FD;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x540C;&#x6837;&#x7684;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#x5F97;&#x5230;&#xFF0C;&#x7ECF;&#x8FC7;&#x52A8;&#x80FD;&#x4F18;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x8F68;&#x9053;&#x7684;&#x5F62;&#x72B6;&#x4F1A;&#x53D8;&#x5E73;&#x6ED1;&#xFF0C;&#x540C;&#x65F6;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x503C;&#x4E5F;&#x4F1A;&#x76F8;&#x6BD4;&#x6CA1;&#x6709;&#x52A8;&#x80FD;&#x4F18;&#x5316;&#x7684;&#x8F68;&#x9053;&#x4F1A;&#x6709;&#x4E00;&#x70B9;&#x70B9;&#x589E;&#x52A0;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x7CBE;&#x5EA6;&#x7684;&#x5F71;&#x54CD;&#x662F;&#x5F88;&#x5C0F;&#x7684;&#x3002;</p>
+<p>&#x4F18;&#x5316;&#x52A8;&#x80FD;&#x7528;&#x7684;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;&#x51E0;&#x4E4E;&#x548C;&#x4F18;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x9664;&#x4E86;&#x4E00;&#x70B9;&#x70B9;&#x53C2;&#x6570;&#x7684;&#x533A;&#x522B;&#x3002; &#x76EE;&#x6807;&#x51FD;&#x6570;&#x9009;&#x62E9;&#x7684;&#x662F;&#x6240;&#x6709;&#x8F68;&#x9053;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x52A8;&#x80FD;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x50CF;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x4E00;&#x6837;&#x53D6;&#x5E73;&#x5747;&#x503C;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8F68;&#x9053;&#x6765;&#x8BF4;&#xFF0C;&#x6E29;&#x5EA6;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x8F68;&#x9053;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x52A8;&#x80FD;&#xFF0C;&#x5728;&#x8FD9;&#x6B65;&#x52A8;&#x80FD;&#x4F18;&#x5316;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x7ED3;&#x679C;&#x5BF9;&#x521D;&#x59CB;&#x7684;&#x6E29;&#x5EA6;&#x4E0D;&#x654F;&#x611F;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x8FBE;&#x5230;&#x7684;&#x6E29;&#x5EA6;&#x5FC5;&#x987B;&#x53D6;&#x5F97;&#x8DB3;&#x591F;&#x5C0F;&#x3002;&#x5B9E;&#x9645;&#x4E2D;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x53EA;&#x9700;&#x8981;100~200&#x6B65;&#xFF0C;&#x52A8;&#x80FD;&#x5C31;&#x53EF;&#x4EE5;&#x4E0B;&#x964D;&#x5F97;&#x5F88;&#x5FEB;&#x3002; &#x6240;&#x4EE5;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x4F18;&#x5316;&#x52A8;&#x80FD;&#x7684;&#x6B65;&#x6570;&#x5C31;&#x53D6;&#x5F97;&#x6BD4;&#x4F18;&#x5316;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x8981;&#x5C11;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;abacus&#x4E2D;&#x4EA7;&#x751F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5177;&#x4F53;&#x6D41;&#x7A0B;"><a name="&#x4E8C;&#x3001;abacus&#x4E2D;&#x4EA7;&#x751F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5177;&#x4F53;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x4E8C;&#x3001;abacus&#x4E2D;&#x4EA7;&#x751F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5177;&#x4F53;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;ABACUS&#x4E2D;&#x4EA7;&#x751F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5177;&#x4F53;&#x6D41;&#x7A0B;</h1>
+<p>&#x6CE8;&#xFF1A;&#x672C;&#x6587;&#x6863;&#x4ECB;&#x7ECD;&#x7684;&#x662F;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7B97;&#x6CD5;SA&#xFF0C;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x57FA;&#x4E8E;Pytorch&#x7684;PyTorch-Gradient&#x65B9;&#x6CD5;&#xFF0C;&#x5173;&#x4E8E;&#x8FD9;&#x4E24;&#x4E2A;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x672C;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x4E2D;&#x6587;&#x6587;&#x6863;&#x7CFB;&#x5217;&#x7684;&#x7B2C;&#x4E09;&#x7BC7;&#x6587;&#x6863;&#x3002;</p>
+<h2 id="21-&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;"><a name="21-&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;" class="plugin-anchor" href="#21-&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;</h2>
+<p><strong>&#x7B80;&#x5316;&#x8BA1;&#x7B97;&#x91CF;&#xFF1A;</strong>&#x524D;&#x6587;&#x6211;&#x4EEC;&#x63D0;&#x5230;&#x7684;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x516C;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x628A;&#x6295;&#x5F71;&#x5B50;<script type="math/tex; ">\hat{P}</script>&#x5E26;&#x8FDB;&#x516C;&#x5F0F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x8BA1;&#x7B97;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x663E;&#x793A;&#x7684;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x57FA;&#x77E2;&#x91CF;&#xFF08;&#x4F8B;&#x5982;&#x5E73;&#x9762;&#x6CE2;&#xFF09;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5148;&#x7B97;&#x597D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;<script type="math/tex; ">|\phi_\mu\rangle</script>&#x548C;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;<script type="math/tex; ">|\Psi_i\rangle</script>&#x7684;&#x91CD;&#x53E0;&#x77E9;&#x9635;&#xFF08;Overlap Matrix&#xFF09;<script type="math/tex; ">\langle \Psi_i|\phi_\mu\rangle</script>&#x5E76;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x4EE5;&#x53CA;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x4E4B;&#x95F4;&#x7684;&#x91CD;&#x53E0;&#x77E9;&#x9635;<script type="math/tex; ">\langle \phi_\mu|\phi_\nu\rangle</script>&#x5B58;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x7B97;&#x6EA2;&#x51FA;&#x51FD;&#x6570;&#x4E86;&#x3002;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#xFF0C;&#x6211;&#x4EEC;&#x610F;&#x8BC6;&#x5230;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;<script type="math/tex; ">|\phi_\mu\rangle</script>&#x7684;&#x5F84;&#x5411;&#x90E8;&#x5206;&#x5728;&#x7A0B;&#x5E8F;&#x91CC;&#x662F;&#x5199;&#x6210;&#x4E86;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x7EBF;&#x6027;&#x7EC4;&#x5408;&#xFF0C;&#x6839;&#x636E;&#x7EBF;&#x6027;&#x53E0;&#x52A0;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x548C;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;&#x7684;&#x5185;&#x79EF;&#xFF0C;&#x4EE5;&#x53CA;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x5185;&#x79EF;&#xFF0C;&#x5E76;&#x628A;&#x8FD9;&#x4E9B;&#x7ED3;&#x679C;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x7CFB;&#x6570;<script type="math/tex; ">c_{\mu q}</script>&#x4E86;&#xFF01;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6307;&#x6807;<script type="math/tex; ">i</script>&#x904D;&#x5386;&#x4F53;&#x7CFB;&#x7684;&#x6240;&#x6709;&#x7535;&#x5B50;&#x6001;&#xFF0C;&#x5305;&#x62EC;&#x6240;&#x6709;&#x7684;<script type="math/tex; ">k</script>&#x70B9;&#x4EE5;&#x53CA;&#x80FD;&#x5E26;&#x5BF9;&#x5E94;&#x7684;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x91CC;&#x7684;&#x5185;&#x79EF;&#x7ED3;&#x679C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x6CE2;&#x51FD;&#x6570;&#x5728;&#x57FA;&#x77E2;&#x91CF;&#x4E0B;&#x7684;&#x5C55;&#x5F00;&#x7CFB;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7CFB;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x4F18;&#x5316;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x63D0;&#x901F;&#xFF01;</p>
+<p><strong>&#x91C7;&#x7528;ABACUS&#x505A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#xFF1A;</strong></p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x7B2C;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x5148;&#x8C03;&#x7528;ABACUS&#x4E3B;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BA1;&#x7B97;&#x51FA;&#x4EE5;&#x4E0A;overlap&#x77E9;&#x9635;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x51C6;&#x5907;INPUT&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">INPUT_PARAMETERS
+suffix              H
+pseudo_dir          /home/liuyu/github/abacus-develop/tests/PP_ORB
+wannier_card        INPUTw
+calculation         scf
+ks_solver           dav
+nspin               <span class="token number">1</span>
+lmaxmax             <span class="token number">1</span>
+
+symmetry            <span class="token number">0</span>
+nbands              <span class="token number">10</span>
+
+ecutwfc             <span class="token number">100</span>
+scf_thr             <span class="token number">1</span>.0e-7
+scf_nmax            <span class="token number">1000</span>
+
+smearing_method     gauss
+smearing_sigma      <span class="token number">0.01</span>
+
+mixing_type         pulay
+mixing_beta         <span class="token number">0.4</span>
+mixing_ndim         <span class="token number">8</span>
+printe              <span class="token number">1</span>
+
+bessel_nao_ecut     <span class="token number">100</span>    // same as ecutwfc
+bessel_nao_rcut     <span class="token number">6</span>      // rcut
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x8BE5;INPUT&#x4E0E;&#x5E73;&#x5E38;&#x7684;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x76F8;&#x6BD4;&#xFF0C;&#x53EA;&#x6709;3&#x4E2A;&#x53C2;&#x6570;&#xFF08;&#x5DF2;&#x6807;&#x7EA2;&#xFF09;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li><p>wannier_card&#xFF1A;&#x6307;&#x5B9A;wannier&#x76F8;&#x5173;&#x53C2;&#x6570;&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540D;INPUTw</p>
+</li>
+<li><p>bessel_nao_ecut&#xFF1A;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x622A;&#x65AD;&#x80FD;&#xFF0C;&#x6839;&#x636E;&#x516C;&#x5F0F;<script type="math/tex; ">\sqrt{E_{cut}} \times r_{cut} / \pi</script>&#x6765;&#x51B3;&#x5B9A;&#x6C42;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x6570;&#x91CF;</p>
+</li>
+<li><p>bessel_nao_rcut&#xFF1A;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;<script type="math/tex; ">r_{cut}</script></p>
+</li>
+</ul>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x51C6;&#x5907;&#x8F93;&#x5165;&#x6587;&#x4EF6; INPUTw &#x5982;&#x4E0B;&#xFF08;&#x5C06;&#x6765;&#x8BA1;&#x5212;&#x4F1A;&#x628A; INPUTw &#x6587;&#x4EF6;&#x53BB;&#x6389;&#xFF0C;&#x628A;&#x53C2;&#x6570;&#x52A0;&#x5165; INPUT &#x91CC;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">WANNIER_PARAMETERS
+out_spillage <span class="token number">2</span>           // output overlap
+spillage_outdir OUT.H    // could be the same as OUT.<span class="token variable">${suffix}</span>
+</code></pre>
+<p>&#x901A;&#x8FC7; ABACUS &#x505A;&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x77E2;&#x91CF;&#x8BA1;&#x7B97;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#xFF1A;</p>
+<p>1&#xFF09;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;<script type="math/tex; ">|\Psi_i\rangle</script>&#x548C;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570; <script type="math/tex; ">j_l(q r)</script>&#x4E4B;&#x95F4;&#x7684; overlap<script type="math/tex; ">\langle \Psi_i|j_l(q r)\rangle</script>&#xFF1B;</p>
+<p>2&#xFF09;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x4E4B;&#x95F4;&#x7684; overlap<script type="math/tex; ">\langle j_{l_2}(q_2 r)|j_{l_1}(q_1 r)\rangle</script>&#xFF1B;</p>
+<p>3&#xFF09;&#x7535;&#x5B50;&#x6CE2;&#x51FD;&#x6570;<script type="math/tex; ">|\Psi_i\rangle</script>&#x4E4B;&#x95F4;&#x7684; overlap<script type="math/tex; ">\langle \Psi_i|\Psi_i\rangle</script>&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x8F93;&#x51FA;&#x5C06;&#x5B58;&#x5728;&#x6587;&#x4EF6; <code>OUT.${suffix}/orb_matrix.0.dat</code> &#x4E2D;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5C06;&#x88AB;&#x8BFB;&#x5165;&#x8FDB;&#x884C;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x3002;</p>
+<h2 id="22-&#x7F16;&#x8BD1;-siab"><a name="22-&#x7F16;&#x8BD1;-siab" class="plugin-anchor" href="#22-&#x7F16;&#x8BD1;-siab"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x7F16;&#x8BD1; SIAB</h2>
+<p>SIAB &#x7684;&#x5168;&#x79F0;&#x662F; Systematically Improvable Atomic orbital Basis generator based on spillage formula&#xFF0C;&#x76EE;&#x524D;&#x662F;&#x5305;&#x542B;&#x5728; ABACUS &#x8F6F;&#x4EF6;&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x8BFB;&#x5165;&#x4EE5;&#x4E0A; ABACUS &#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5E76;&#x4E14;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x5177;&#x4F53;&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x62C9;&#x53D6; deepmodeling/abacus-develop &#x4ED3;&#x5E93;&#xFF08;github &#x548C; gitee &#x4E8C;&#x9009;&#x4E00;&#x5373;&#x53EF;&#xFF0C;&#x56FD;&#x5185;&#x5EFA;&#x8BAE;&#x7528; gitee&#xFF09;</li>
+</ol>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># github&#x4ED3;&#x5E93;</span>
+$ <span class="token function">git</span> clone <span class="token parameter variable">-b</span> develop https://github.com/deepmodeling/abacus-develop.git
+
+<span class="token comment"># gitee&#x4ED3;&#x5E93;</span>
+$ <span class="token function">git</span> clone <span class="token parameter variable">-b</span> develop https://gitee.com/deepmodeling/abacus-develop.git
+</code></pre>
+<ol>
+<li>&#x7F16;&#x8BD1; SIAB</li>
+</ol>
+<p>&#x6A21;&#x62DF;&#x9000;&#x706B;&#xFF08;SA&#xFF09;&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x4EE3;&#x7801;&#x5728; SIAB &#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF0C;&#x91C7;&#x7528; C++ &#x7F16;&#x5199;&#xFF0C;&#x76EE;&#x524D; Makefile &#x4EC5;&#x652F;&#x6301; intel &#x7F16;&#x8BD1;&#x5668;&#x3002;</p>
+<p>SIAB &#x7A0B;&#x5E8F;&#x6709;&#x4E32;&#x884C;&#xFF08;make s&#xFF09;&#x548C;&#x5E76;&#x884C;&#xFF08;make p&#xFF09;&#x4E24;&#x79CD;&#x7248;&#x672C;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4E32;&#x884C;&#x7248;&#x672C;&#x5373;&#x53EF;&#x6EE1;&#x8DB3;&#x4F7F;&#x7528;&#x9700;&#x6C42;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token builtin class-name">cd</span> abacus-develop/tools/SIAB/SimulatedAnnealing/source
+$ <span class="token function">make</span> clean
+$ <span class="token function">make</span> s
+</code></pre>
+<p>&#x7F16;&#x8BD1;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5728;&#x76EE;&#x5F55; <code>abacus-develop/tools/SIAB/SimulatedAnnealing/source</code> &#x4E0B;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F; <code>SIA_s.exe</code>&#xFF0C;&#x8FD9;&#x91CC; s &#x4EE3;&#x8868;&#x7F16;&#x8BD1;&#x4E32;&#x884C;&#x7248;(serial)&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5BF9;&#x4E8E;&#x5E76;&#x884C;&#x7248;&#x672C;&#xFF0C;SIAB &#x8FD8;&#x53EF;&#x4EE5;&#x7ED3;&#x5408; MPI &#x7F16;&#x8BD1;&#x5E76;&#x884C;&#x7248;&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4; <code>make p</code> &#x6307;&#x4EE4;&#x5F97;&#x5230; <code>SIA_p.exe</code> &#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x91CC; p &#x4EE3;&#x8868; parallel&#xFF0C;&#x4F46;&#x6CE8;&#x610F;&#x5E76;&#x884C;&#x7248;&#x53EA;&#x5BF9;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x5E76;&#x884C;&#xFF0C;&#x4E4B;&#x540E;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x6574;&#x7406;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x4F1A;&#x7ED9;&#x51FA;&#x5E76;&#x884C;&#x7248;&#x7684;&#x6559;&#x7A0B;&#x3002;</p>
+<h2 id="23-&#x8FD0;&#x884C;&#x4F8B;&#x5B50;"><a name="23-&#x8FD0;&#x884C;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#23-&#x8FD0;&#x884C;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x8FD0;&#x884C;&#x4F8B;&#x5B50;</h2>
+<p>&#x8FDB;&#x5165; <code>tests_s</code> &#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>H-6-0.6.15.dat</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x662F;&#x7528;&#x6765;&#x751F;&#x6210;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6240;&#x9700;&#x8981;&#x51C6;&#x5907;&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x4ECE; ABACUS &#x7684;&#x5E73;&#x9762;&#x6CE2;&#x81EA;&#x6D3D;&#x8FED;&#x4EE3;&#x8BA1;&#x7B97;&#x540E;&#x83B7;&#x5F97;&#xFF0C;&#x73B0;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x6539;&#x540D;&#x4E3A; <code>OUT.${suffix}/orb_matrix.0.dat</code>&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>INPUT</code> &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PW_QS</span><span class="token punctuation">&gt;</span></span>
+1               // bool: calculate the spillage. 1/0
+0               // bool: restart or not. 1/0
+1               // bool: output the file. 1/0
+1               // integer: number of structures.
+H-6-0.6.15.dat  // Each structure&apos;s file name occupies one line
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PW_QS</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PARALLEL</span><span class="token punctuation">&gt;</span></span>
+1               // integer: number of k points (for parallel version)
+1               // integer: number of pools (for parallel version)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PARALLEL</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BLOCK_NE</span><span class="token punctuation">&gt;</span></span>
+15              // can be ignored now
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>BLOCK_NE</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SCHEME_VALUE</span><span class="token punctuation">&gt;</span></span>
+2               // The way to calculate spillage, 2 means averaged spillage 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SCHEME_VALUE</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>METROPOLIS</span><span class="token punctuation">&gt;</span></span>
+1.0e-8          // real: start temperature for minimizing spillage
+0.5             // real: cooling rate for the temperature in minimizing spillage
+2               // integer: number of temperatures (spillage)
+500             // integer: number of steps per temperature (spillage)
+
+1.0e-2          // real: starting temperature for the kinetic energy
+0.8             // real: cooling rate for temperature in minimizing kinetic energy
+1               // integer: number of temperatures (kinetic)
+100             // integer: number of steps per temperature (kinetic)
+
+0.05            // real: delta kappa for kinetic energy
+49              // integer: selectly output information every n steps
+
+100             // integer: change accept rate every n steps, can be ignored now
+0.4             // real: acceptance rate (high), can be ignored now
+0.2             // real: acceptance rate (low), can be ignored now
+
+50              // real: max allowed kinetic energy (Rydberg)
+0.01            // real: &apos;dr&apos; for the 1d r grid to compute kinetic energy
+1               // integer: 1: Kin 2: Ecut, can be ignored now
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>METROPOLIS</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>BANDS</span><span class="token punctuation">&gt;</span></span>
+1               // bool: to control the number of bands
+1               // int, the start band index(&gt;0).
+1               // int, the end band index(<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>provied</span> <span class="token attr-name">bands).</span>
+<span class="token attr-name">&lt;BANDS</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>OPTIMIZE</span><span class="token punctuation">&gt;</span></span>
+2               // Number of levels.
+# label / na / skip / lmax / each L /
+01 2 new 1 1 1
+01 2 new 1 1 1
+01 2 new 1 1 1
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>OPTIMIZE</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PLOT</span><span class="token punctuation">&gt;</span></span>
+0.01    //dr(a.u.) of uniform mesh. Attention!!dr will affect kinetic energy minmized largely.
+-6      //xmin
+1       //zed, chosen as valence charge.
+0.01    //dx
+6.0     //xmax
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PLOT</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CAL_C4</span><span class="token punctuation">&gt;</span></span>
+0       // print out the C4, this section can be ignored now
+2
+./FILE/Si-S.ORBITAL
+0
+./FILE/Si-P.ORBITAL
+1
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>CAL_C4</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TEST</span><span class="token punctuation">&gt;</span></span>
+0                       // for tests, can be ignored now
+14.0                    // rcut, only useful for test program
+0.01                    // dr, for simpson integral
+2                       // test eigenvalue index
+2                       // lmax
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>TEST</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><code>C4</code>&#xFF1A;&#x4EE3;&#x8868; 4 &#x4E2A;&#x91CD;&#x8981;&#x53C2;&#x6570;&#xFF1A;<script type="math/tex; ">\alpha,\xi,l,nq</script>&#xFF0C;<script type="math/tex; ">\alpha</script>&#x662F;&#x539F;&#x5B50;&#x79CD;&#x7C7B;&#x7684;&#x6307;&#x6807;&#xFF0C;<script type="math/tex; ">\xi</script>&#x662F;&#x89D2;&#x52A8;&#x91CF;<script type="math/tex; ">l</script>&#x5BF9;&#x5E94;&#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF0C;<script type="math/tex; ">nq</script> &#x662F;&#x5BF9;&#x5E94;&#x7684;&#x7403;&#x8D1D;&#x585E;&#x5C14;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
+<p>&#x8BE5;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x5305;&#x542B; SIAB &#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x53C2;&#x6570;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x91CD;&#x8981;&#x53C2;&#x6570;&#x7684;&#x8BF4;&#x660E;&#x90FD;&#x6709;&#x5217;&#x4E0A;&#x53BB;&#xFF0C;&#x4E00;&#x4E9B;&#x53EF;&#x5FFD;&#x7565;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5148;&#x4E0D;&#x7528;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x4F1A;&#x63A8;&#x51FA;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x5173;&#x4E8E;&#x6B64;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x8BF4;&#x660E;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x51C6;&#x5907;&#x597D;&#x8BE5;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x6267;&#x884C; SIAB &#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ ~/abacus-develop/tools/SIAB/SimulatedAnnealing/source/SIA_s.exe
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x7CFB;&#x5217;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D; <code>ORBITAL_1U.dat</code> &#x5219;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x7684;&#x524D;&#x51E0;&#x884C;&#x83B7;&#x53D6;&#x5173;&#x952E;&#x4FE1;&#x606F;&#xFF1A;&#x8FD9;&#x662F; H &#x539F;&#x5B50;&#x7684;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#xFF0C;&#x5E73;&#x9762;&#x6CE2;&#x622A;&#x65AD;&#x80FD;&#x4E3A; 100 Ry&#xFF0C;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x4E3A; 6 Bohr&#xFF0C;&#x6700;&#x5927;&#x89D2;&#x52A8;&#x91CF;&#x4E3A; 1&#xFF0C;&#x89D2;&#x52A8;&#x91CF; s &#x548C; p &#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x90FD;&#x4E3A; 2&#xFF0C;&#x5373; 2 &#x6761; s &#x8F68;&#x9053;&#x548C; 6 &#x6761; p &#x8F68;&#x9053;&#xFF0C;&#x5171; 8 &#x6761;&#x8F68;&#x9053;&#x3002;&#x4E3A;&#x4E86;&#x4F53;&#x73B0;&#x8FD9;&#x4E9B;&#x5173;&#x952E;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x8F68;&#x9053;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x91CD;&#x547D;&#x540D;&#x8BE5;&#x6587;&#x4EF6;&#x4E3A; <code>H_gga_100Ry_6au_2s2p.orb</code>&#x3002;</p>
+<pre class="language-"><code class="lang-bash">---------------------------------------------------------------------------
+Element                     H
+Energy Cutoff<span class="token punctuation">(</span>Ry<span class="token punctuation">)</span>          <span class="token number">100</span>
+Radius Cutoff<span class="token punctuation">(</span>a.u.<span class="token punctuation">)</span>         <span class="token number">6</span>
+Lmax                        <span class="token number">1</span>
+Number of Sorbital--<span class="token operator">&gt;</span>       <span class="token number">2</span>
+Number of Porbital--<span class="token operator">&gt;</span>       <span class="token number">2</span>
+---------------------------------------------------------------------------
+SUMMARY  END
+</code></pre>
+<h1 id="&#x4E09;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x811A;&#x672C;"><a name="&#x4E09;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x811A;&#x672C;" class="plugin-anchor" href="#&#x4E09;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;ABACUS &#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x811A;&#x672C;</h1>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x91C7;&#x7528;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x4E0D;&#x540C;&#x952E;&#x957F;&#x7684;&#x4E8C;&#x805A;&#x4F53;&#xFF0C;&#x5E76;&#x4E14;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684;&#x8F68;&#x9053;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x6765;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x5316;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#xFF1A;<code>abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh</code>&#x3002;&#x8BE5;&#x811A;&#x672C;&#x9700;&#x8981;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>ORBITAL_INPUT</code> &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment">#1.exe_dir</span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+EXE_mpi       mpirun <span class="token parameter variable">-np</span> <span class="token number">4</span>
+
+EXE_pw        /home/liuyu/github/abacus-develop/build/abacus
+
+EXE_orbital   /home/liuyu/github/abacus-develop/tools/SIAB/SimulatedAnnealing/source/SIA_s.exe
+
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+<span class="token comment">#( In this part, the direction of the two used exe is provided )</span>
+
+<span class="token comment">#2.electronic calculatation</span>
+<span class="token comment">#-------------------------------------------------------------------------------- </span>
+
+targets     14_Si_60   <span class="token comment"># element</span>
+ref_bands   <span class="token number">4</span>   <span class="token number">6</span>      <span class="token comment"># reference bands</span>
+nbands      <span class="token number">8</span>   <span class="token number">12</span>     <span class="token comment"># num of bands for calculate</span>
+Ecut        <span class="token number">60</span>         <span class="token comment"># cutoff energy (in Ry)</span>
+Rcut        <span class="token number">6</span>   <span class="token number">7</span>      <span class="token comment"># cutoff radius (in a.u.)</span>
+Pseudo_dir  /home/liuyu/github/abacus-develop/tests/PP_ORB
+Pseudo      Si_ONCV_PBE-1.0.upf
+smearing_sigma       <span class="token number">0.01</span>          <span class="token comment"># energy range for gauss smearing (in Ry) </span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+<span class="token comment">#( In this part , some parameters of calculating are given )</span>
+
+<span class="token comment">#3.structure information</span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+<span class="token comment">#the Bond Length list for each STRU</span>
+BLSTRU1    <span class="token number">1.8</span> <span class="token number">2.0</span>
+BLSTRU2    <span class="token number">2.4</span>
+<span class="token comment"># if skip the orbital optimization for each STRU (1:skip, 0:not skip).</span>
+SkipSTRU   <span class="token number">0</span>   <span class="token number">0</span>
+<span class="token comment"># set the objective structure list to fit for orbital optimization</span>
+ListSTRU   dimer    trimer
+<span class="token comment">#-------------------------------------------------------------------------------- </span>
+<span class="token comment">#(In this part, it gives us the bond length of the reference system(in angstrom) )</span>
+
+<span class="token comment">#4.orbital calculatation </span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+
+maxL       <span class="token number">2</span>     <span class="token comment"># the max angular momentum</span>
+Level      <span class="token number">2</span>  <span class="token number">3</span>  <span class="token comment"># num of levels to generate orbitals(&lt;=5)</span>
+<span class="token comment">#(num)  (the max ang) (num of S) (num of P) (num of D) (num of F) (num of G)</span>
+level1     <span class="token number">1</span>    <span class="token number">1</span>    <span class="token number">1</span>
+level2     <span class="token number">2</span>    <span class="token number">1</span>    <span class="token number">1</span>    <span class="token number">1</span>  
+level3     <span class="token number">2</span>    <span class="token number">1</span>    <span class="token number">1</span>    <span class="token number">1</span>  
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+<span class="token comment">#( In this part, some information of orbital is given )</span>
+
+<span class="token comment">#5.Metropolis parameters (in most cases do not need to change)</span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+Start_tem_S  <span class="token number">1</span>.0e-3  <span class="token comment"># start temperature for optimize Spillage (default 1.0e-4)</span>
+Start_tem_K  <span class="token number">1</span>.0e-1  <span class="token comment"># start temperature for optimize Kinetic  (default 1.0e-2)</span>
+Step_S       <span class="token number">20</span>      <span class="token comment"># num of steps for optimize Spillage (default 20) </span>
+Step_K       <span class="token number">10</span>     <span class="token comment"># num of steps for optimize Kinetic  (default 15)</span>
+Delta_kappa  <span class="token number">0.01</span>    <span class="token comment"># delta kappa (default 0.01)</span>
+<span class="token comment">#--------------------------------------------------------------------------------</span>
+<span class="token comment">#( In this part , some parameters of Metropolis is given. In most cases , they</span>
+<span class="token comment">#do not need to be changed , only when you run into a situation , that the</span>
+<span class="token comment">#Kinnetic energy is larger than the  maximum value allowed , you can enlarge </span>
+<span class="token comment">#the start temperature appropritely , or you can enlarge the delta_kappa, e.g. </span>
+<span class="token comment">#start_tem_k 1.0e-2 to 5.0e-1, delta_kappa 0.01 to 0.02. more steps can make </span>
+<span class="token comment">#the orbitals better , too)</span>
+</code></pre>
+<p>&#x8BE5;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x5206;&#x4E3A; 5 &#x4E2A;&#x90E8;&#x5206;&#xFF1A;</p>
+<h2 id="1-exedir"><a name="1-exedir" class="plugin-anchor" href="#1-exedir"><i class="fa fa-link" aria-hidden="true"></i></a>1. exe_dir</h2>
+<ul>
+<li>EXE_mpi&#xFF1A;MPI &#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x7684;&#x662F; 4 &#x6838; MPI &#x5E76;&#x884C;&#x8FDB;&#x884C; dimer&#xFF08;&#x6216;&#x8005; trimer&#xFF09;&#x7684;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x3002;</li>
+<li>EXE_pw&#xFF1A;ABACUS &#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>EXE_orbital&#xFF1A;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x751F;&#x6210;&#x7A0B;&#x5E8F; SIA_s.exe &#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+</ul>
+<h2 id="2-electronic-calculatation"><a name="2-electronic-calculatation" class="plugin-anchor" href="#2-electronic-calculatation"><i class="fa fa-link" aria-hidden="true"></i></a>2. electronic calculatation</h2>
+<ul>
+<li>targets&#xFF1A;&#x53EF;&#x4EE5;&#x4EFB;&#x53D6;&#xFF0C;&#x4E00;&#x822C;&#x683C;&#x5F0F;&#x662F;${&#x539F;&#x5B50;&#x5E8F;&#x6570;}_${&#x5143;&#x7D20;&#x540D;}_${&#x622A;&#x65AD;&#x80FD;}&#x3002;</li>
+<li>ref_bands&#xFF1A;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x7684;&#x80FD;&#x5E26;&#x6570;&#xFF0C;&#x53D6;&#x503C;&#x4E3A;&#x7535;&#x5B50;&#x603B;&#x6570;&#x7684;&#x4E00;&#x534A;&#x3002;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6709;&#x591A;&#x4E2A;&#x53D6;&#x503C;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4E86;&#x591A;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#xFF0C;&#x65E2;&#x6709; dimer&#xFF0C;&#x4E5F;&#x6709; trimer&#x3002;</li>
+<li>nbands&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x80FD;&#x5E26;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x5927;&#x4E8E; ref_bands&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x5305;&#x542B;&#x975E;&#x5360;&#x636E;&#x6001;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x7531;&#x4E8E;&#x591A;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#xFF0C;nbands &#x4E5F;&#x6709;&#x591A;&#x4E2A;&#x53D6;&#x503C;&#x3002;</li>
+<li>Ecut&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#x622A;&#x65AD;&#x80FD;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A; Ry&#x3002;</li>
+<li>Rcut&#xFF1A;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A; Bohr&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x591A;&#x4E2A;&#x53D6;&#x503C;&#x8868;&#x660E;&#xFF0C;&#x91C7;&#x7528;&#x76F8;&#x540C;&#x7684;&#x4E00;&#x5957;&#x53C2;&#x6570;&#xFF0C;&#x751F;&#x6210;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#xFF0C;&#x6839;&#x636E;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x4F1A;&#x6781;&#x5927;&#x5730;&#x5F71;&#x54CD;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x8D28;&#x91CF;&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x4E00;&#x6B21;&#x6027;&#x751F;&#x6210;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#x3002;</li>
+<li>Pseudo_dir&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x91C7;&#x7528;&#x7684;&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>Pseudo&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x91C7;&#x7528;&#x7684;&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#x540D;&#x3002;</li>
+<li>smearing_sigma&#xFF1A;&#x5E73;&#x9762;&#x6CE2;&#x8BA1;&#x7B97;&#x91C7;&#x7528; Gaussian smearing &#x7684;&#x5C55;&#x5BBD;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A; Ry&#xFF0C;&#x4E00;&#x822C;&#x53D6; 0.01 &#x5373;&#x53EF;&#x3002;</li>
+</ul>
+<h2 id="3-structure-information"><a name="3-structure-information" class="plugin-anchor" href="#3-structure-information"><i class="fa fa-link" aria-hidden="true"></i></a>3. structure information</h2>
+<ul>
+<li>BLSTRU1&#xFF1A;&#x7B2C;&#x4E00;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#x7684;&#x952E;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x57C3;&#x3002;&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x7B2C;&#x4E00;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x6784;&#x578B;&#xFF0C;&#x952E;&#x957F;&#x5206;&#x522B;&#x4E3A; 1.8 &#x548C; 2.0 &#x57C3;&#x3002;</li>
+<li>BLSTRU2&#xFF1A;&#x7B2C;&#x4E8C;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#x7684;&#x952E;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x57C3;&#x3002;&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x7B2C;&#x4E8C;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6784;&#x578B;&#xFF0C;&#x952E;&#x957F;&#x4E3A; 2.4 &#x57C3;&#x3002;</li>
+<li>&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x5728; BLSTRU3&#x3001;BLSTRU4 &#x7B49;&#x7B49;&#x3002;</li>
+<li>SkipSTRU&#xFF1A;&#x662F;&#x5426;&#x8DF3;&#x8FC7;&#x8BE5;&#x7EC4;&#x53C2;&#x8003;&#x6784;&#x578B;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x90FD;&#x53D6;&#x4E3A; 0 &#x5373;&#x53EF;&#x3002;</li>
+<li>ListSTRU&#xFF1A;&#x6307;&#x5B9A; BLSTRU1&#x3001;BLSTRU2 &#x7B49;&#x7B49;&#x53C2;&#x8003;&#x4F53;&#x7CFB;&#x7684;&#x5177;&#x4F53;&#x6784;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x8BF4;&#x660E; BLSTRU1 &#x662F; dimer&#xFF0C;BLSTRU2 &#x662F; trimer&#x3002;&#x5982;&#x679C;&#x53D6;&#x503C;&#x7F3A;&#x7701;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x7F3A;&#x7701;&#xFF09;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A; dimer&#x3002;</li>
+</ul>
+<h2 id="4-orbital-calculatation"><a name="4-orbital-calculatation" class="plugin-anchor" href="#4-orbital-calculatation"><i class="fa fa-link" aria-hidden="true"></i></a>4. orbital calculatation</h2>
+<ul>
+<li>maxL&#xFF1A;&#x6700;&#x5927;&#x89D2;&#x52A8;&#x91CF;&#x3002;</li>
+<li>Level1&#xFF1A;&#x6839;&#x636E;&#x4E0A;&#x6587;&#x53EF;&#x77E5;&#xFF0C;&#x8F68;&#x9053;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x5C42;&#x7EA7;&#xFF0C;&#x8FD9;&#x91CC; level1 &#x662F; SZ &#x5C42;&#x7EA7;&#xFF0C;&#x6700;&#x5927;&#x89D2;&#x52A8;&#x91CF;&#x4E3A; 1&#xFF0C;&#x89D2;&#x52A8;&#x91CF; s &#x548C; p &#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x4E3A; 1 &#x548C; 1&#xFF0C;&#x5373; 1 &#x6761; s &#x8F68;&#x9053;&#x548C; 3 &#x6761; p &#x8F68;&#x9053;&#x3002;</li>
+<li>Level2&#xFF1A;&#x540C;&#x4E0A;&#xFF0C;&#x8FD9;&#x91CC; level2 &#x7684;&#x6700;&#x5927;&#x89D2;&#x52A8;&#x91CF;&#x4E3A; 2&#xFF0C;&#x89D2;&#x52A8;&#x91CF; s&#xFF0C;p &#x548C; d &#x7684;&#x5F84;&#x5411;&#x51FD;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x4E3A; 1&#xFF0C;1 &#x548C; 1&#xFF0C;&#x5373; 1 &#x6761; s &#x8F68;&#x9053;&#xFF0C;3 &#x6761; p &#x8F68;&#x9053;&#x548C; 5 &#x6761; d &#x8F68;&#x9053;&#x3002;level1 &#x548C; level2 &#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x662F; DZP &#x5C42;&#x7EA7;&#x3002;</li>
+<li>Level3&#xFF1A;&#x540C; Level2&#x3002;</li>
+<li>Level&#xFF1A;BLSTRU1 &#x548C; BLSTRU2 &#x5206;&#x522B;&#x8D1F;&#x8D23;&#x4E00;&#x90E8;&#x5206;&#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#xFF0C;Level &#x7684; 2 &#x4E2A;&#x53D6;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x662F; BLSTRU1 &#x548C; BLSTRU2 &#x7684; endlevel&#xFF0C;&#x5373; BLSTRU1 &#x7528;&#x4E8E; level1 &#x548C; level2 &#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#xFF0C;BLSTRU2 &#x7528;&#x4E8E; level3 &#x8F68;&#x9053;&#x7684;&#x751F;&#x6210;&#x3002;</li>
+</ul>
+<h2 id="5-metropolis-parameters"><a name="5-metropolis-parameters" class="plugin-anchor" href="#5-metropolis-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>5. Metropolis parameters</h2>
+<p>&#x5982;&#x6CE8;&#x91CA;&#x6240;&#x8BF4;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x53C2;&#x6570;&#x5B9E;&#x9645;&#x4E0A;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x53D8;&#x3002;</p>
+<ul>
+<li>Start_tem_S&#xFF1A;&#x4F18;&#x5316; Spillage &#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#xFF0C;&#x66F4;&#x9AD8;&#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x66F4;&#x5927;&#x7684;&#x6E29;&#x5EA6;&#x8303;&#x56F4;&#x3002;</li>
+<li>Start_tem_K&#xFF1A;&#x4F18;&#x5316;&#x52A8;&#x80FD;&#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#xFF0C;&#x66F4;&#x9AD8;&#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x66F4;&#x5927;&#x7684;&#x6E29;&#x5EA6;&#x8303;&#x56F4;&#x3002;</li>
+<li>Step_S&#xFF1A;&#x4F18;&#x5316; Spillage &#x7684;&#x6B65;&#x6570;&#x3002;</li>
+<li>Step_K&#xFF1A;&#x4F18;&#x5316;&#x52A8;&#x80FD;&#x7684;&#x6B65;&#x6570;&#x3002;</li>
+<li>Delta_kappa&#xFF1A;&#x6A21;&#x62DF;&#x9000;&#x706B;&#x7684;&#x60E9;&#x7F5A;&#x51FD;&#x6570;<script type="math/tex; ">\kappa</script>&#x6240;&#x7528;&#x7684;&#x53C2;&#x6570;<script type="math/tex; ">\Delta</script>&#x3002;</li>
+</ul>
+<p>&#x51C6;&#x5907;&#x597D;&#x4EE5;&#x4E0A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x5F00;&#x59CB;&#x751F;&#x6210;&#x8F68;&#x9053;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ ~/abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh ORBITAL_INPUT
+</code></pre>
+<h1 id="&#x56DB;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;"><a name="&#x56DB;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x56DB;&#x3001;abacus-&#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;ABACUS &#x4E2D;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;</h1>
+<p>&#x5728;&#x751F;&#x6210;&#x8F68;&#x9053;&#x4E4B;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x57FA;&#x4E8E;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x57FA;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x8BA1;&#x7B97;&#x62E5;&#x6709;&#x4E0E;&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x76F8;&#x5F53;&#x7684;&#x7CBE;&#x5EA6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x6676;&#x4F53;&#x7ED3;&#x6784;&#x505A;&#x4E00;&#x4E9B;&#x9A8C;&#x8BC1;&#x6027;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4EE5; Al &#x5143;&#x7D20;&#x4E3A;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9; simple cubic&#xFF08;sc&#xFF09;&#xFF0C;body center cubic&#xFF08;bcc&#xFF09;&#xFF0C;face center cubic&#xFF08;fcc&#xFF09;&#x548C; hexagonal close-packed&#xFF08;hcp&#xFF09;&#x8FD9; 4 &#x79CD;&#x5E38;&#x89C1;&#x7684;&#x6676;&#x4F53;&#x7ED3;&#x6784;&#xFF0C;&#x91C7;&#x7528;&#x5E73;&#x9762;&#x6CE2;&#xFF08;Plane wave&#xFF09;&#x57FA;&#x7EC4;&#x548C;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x57FA;&#x7EC4;&#x8BA1;&#x7B97;&#x8FD9;&#x4E9B;&#x6676;&#x4F53;&#x7ED3;&#x6784;&#x7684;&#x5E73;&#x8861;&#x6676;&#x683C;&#x5E38;&#x6570;&#x3001;&#x4F53;&#x5F39;&#x6027;&#x6A21;&#x91CF;&#x7B49;&#x57FA;&#x6001;&#x6027;&#x8D28;&#xFF0C;&#x8BC4;&#x4F30;&#x4E24;&#x79CD;&#x57FA;&#x7EC4;&#x4E4B;&#x95F4;&#x7684;&#x8BEF;&#x5DEE;&#x968F;&#x7740;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x3001;&#x6700;&#x5927;&#x89D2;&#x52A8;&#x91CF;&#x4EE5;&#x53CA;&#x8F68;&#x9053;&#x6570;&#x91CF;&#x7684;&#x6536;&#x655B;&#x8D8B;&#x52BF;&#xFF0C;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x5C31;&#x662F;&#x7528; ABACUS &#x7684;&#x5E73;&#x9762;&#x6CE2;&#x548C;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053; DZP &#x8BA1;&#x7B97;&#x7684;&#x94DD;&#x7684;&#x56DB;&#x79CD;&#x4F53;&#x76F8;&#x6750;&#x6599;&#x7684;&#x4F53;&#x79EF;-&#x80FD;&#x91CF;&#x66F2;&#x7EBF;&#xFF0C;&#x6765;&#x81EA;&#x6587;&#x732E;[1]&#x3002;&#x4ECE;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;DZP &#x8F68;&#x9053;&#x63CF;&#x8FF0;&#x4E0D;&#x540C;&#x4F53;&#x76F8;&#x7684;&#x94DD;&#x7684;&#x76F8;&#x5BF9;&#x80FD;&#x91CF;&#x8FD8;&#x662F;&#x7CBE;&#x5EA6;&#x8F83;&#x9AD8;&#x7684;&#x3002;&#x7EC6;&#x5FC3;&#x7684;&#x8BFB;&#x8005;&#x4F1A;&#x53D1;&#x73B0;&#x7EB5;&#x5750;&#x6807;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x7EDD;&#x5BF9;&#x80FD;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x4E24;&#x79CD;&#x57FA;&#x77E2;&#x91CF;&#x91C7;&#x7528;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x4F46;&#x5DE6;&#x56FE;&#x7ED9;&#x51FA;&#x7684;&#x80FD;&#x91CF;&#x66F4;&#x4F4E;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5E73;&#x9762;&#x6CE2;&#x66F4;&#x52A0;&#x5B8C;&#x5907;&#xFF0C;&#x6240;&#x4EE5;&#x6839;&#x636E; Honhenberg-Kohn &#x5B9A;&#x7406;&#xFF0C;&#x4F53;&#x7CFB;&#x603B;&#x80FD;&#x91CF;&#x7684;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x53EF;&#x4EE5;&#x5728;&#x66F4;&#x5B8C;&#x5907;&#x7684;&#x57FA;&#x77E2;&#x91CF;&#x4E0B;&#x5F97;&#x5230;&#x66F4;&#x597D;&#x7684;&#x6536;&#x655B;&#xFF0C;&#x5373;&#x603B;&#x80FD;&#x91CF;&#x66F4;&#x4F4E;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5E73;&#x9762;&#x6CE2;&#x5F97;&#x5230;&#x7684;&#x603B;&#x80FD;&#x91CF;&#x6BD4; DZP &#x8F68;&#x9053;&#x5C0F;&#x4E00;&#x4E9B;&#xFF0C;&#x5927;&#x6982;&#x5728; 0.1-0.2 eV/atom&#xFF0C;&#x662F;&#x6BD4;&#x8F83;&#x5408;&#x7406;&#x7684;&#x3002;&#x5982;&#x679C;&#x91C7;&#x7528;&#x4E86;&#x540C;&#x6837;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x4F46;&#x4E24;&#x79CD;&#x57FA;&#x77E2;&#x91CF;&#x7ED9;&#x51FA;&#x7684;&#x80FD;&#x91CF;&#x5DEE;&#x522B;&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x5219;&#x8981;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x662F;&#x4E0D;&#x662F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x4EA7;&#x751F;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x5927;&#x5BB6;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x6B22;&#x8FCE;&#x5199;&#x90AE;&#x4EF6;&#x5230;&#x6587;&#x6863;&#x5F00;&#x5934;&#x90AE;&#x7BB1;&#x3002;</p>
+<p><img src="picture/fig_NAC.png" alt=""></p>
+<h1 id="&#x4E94;&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;"><a name="&#x4E94;&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;" class="plugin-anchor" href="#&#x4E94;&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x53C2;&#x8003;&#x6587;&#x732E;</h1>
+<p>[1]   M. Chen, G.-C. Guo, and L. He, <em>Systematically Improvable Optimized Atomic Basis Sets for </em><em>Ab Initio</em><em> Calculations</em>, J. Phys.: Condens. Matter <strong>22</strong>, 445501 (2010).</p>
+<p>[2]   M. Chen, G.-C. Guo, and L. He, <em>Electronic Structure </em><em>Interpolation</em><em> via Atomic Orbitals</em>, J. Phys.: Condens. Matter <strong>23</strong>, 325501 (2011).</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="abacus-dcu.html" class="navigation navigation-prev " aria-label="Previous page: ABACUS 在曙光 DCU 集群上的编译与使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-md.html" class="navigation navigation-next " aria-label="Next page: ABACUS 分子动力学使用教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道","level":"1.1.2","depth":2,"next":{"title":"ABACUS 分子动力学使用教程","level":"1.1.3","depth":2,"path":"abacus-md.md","ref":"abacus-md.md","articles":[]},"previous":{"title":"ABACUS 在曙光 DCU 集群上的编译与使用","level":"1.1.1","depth":2,"path":"abacus-dcu.md","ref":"abacus-dcu.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","3-ba","pageview-count","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"abacus-nac2.md","mtime":"2023-06-15T11:52:12.612Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-15T11:55:03.465Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

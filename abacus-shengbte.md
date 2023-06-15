@@ -1,8 +1,12 @@
 # ABACUS+ShengBTE 计算晶格热导率
 
-<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn，最后更新时间：2023/04/29</strong>
+<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn</strong>
 
-# <strong>1. 介绍</strong>
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+
+<strong>最后更新时间：2023/06/15</strong>
+
+# 1. 介绍
 
 本教程旨在介绍采用 ABACUS（基于 ABACUS 3.2.0 版本）做密度泛函理论计算，并且结合 ShengBTE 软件计算晶格的热导率的流程。其中，整个计算过程中还用到了：1）采用 Phonopy 程序来计算二阶力常数，2）采用 ASE 程序进行原子结构的转换，3）采用 ShengBTE 的 thirdorder 程序计算三阶力常数，4）最后使用 ShengBTE 来计算材料的晶格热导率。
 
@@ -16,11 +20,11 @@ ASE：[http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html](htt
 
 thirdorder: [https://bitbucket.org/sousaw/thirdorder/src/master/](https://bitbucket.org/sousaw/thirdorder/src/master/)
 
-# <strong>2. 准备</strong>
+# 2. 准备
 
 ABACUS 的软件包中提供了一个 ABACUS+ShengBTE 计算晶格热导率的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_ShengBTE)。算例中包含采用数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）和采用平面波基矢量的 PW（Plane Wave，平面波）两个文件夹。每个文件夹下分别又包含了 2nd、3rd 和 shengbte 这三个文件夹，分别保存了使用 phonopy 计算二阶力常数（2nd）、thirdorder 计算三阶力常数（3rd）和 ShengBTE 计算晶格热导率（shengbte）的相关文件。
 
-# <strong>3. 流程</strong>
+# 3. 流程
 
 以 LCAO 文件夹为例，我们这里提供的测试案例是包含 2 个原子的金刚石结构 Si 结构，采用的模守恒赝势是 Si_ONCV_PBE-1.0.upf，以及原子轨道文件采用的是 Si_gga_7au_100Ry_2s2p1d.orb（GGA 泛函，7 au 截断半径，100 Ry 能量截断，以及包含 2s2p1d 的 DZP 轨道）。
 
@@ -211,6 +215,6 @@ find SCF-* -name vasprun.xml|sort -n|thirdorder_vasp.py reap 2 2 2 -2
 mpirun -n 10 ShengBTE
 ```
 
-# <strong>4. 结尾</strong>
+# 4. 结尾
 
-对于 ABACUS 中使用平面波（PW）来做 ShengBTE 的计算也是采用以上类似的流程，但要注意使用平面波时，计算三阶力常数的 INPUT 中<strong>scf_thr 需要至少</strong><strong>小到</strong><strong>1e-12</strong>。通过计算结果可以发现，PW 和 LCAO 基组计算出的 Si 的晶格热导率是接近的，300 K 下均在 100 W/(m K) 左右，而实验中 Si 在 300 K 的热导率在 150 W/(m K) 附近。这是因为作为教学例子，这里使用的是 2\*2\*2 的扩胞以及 2\*2\*2 的 K 点，导致计算结果偏小，实际科研中需要测试扩胞的大小以及 K 点的采样方案来达到收敛的结果。以上就是 ABACUS(3.2.0)+ShengBTE 计算晶格热导率的全部流程，如果有什么问题，欢迎通过邮件联系（<strong>chentao@stu.pku.edu.cn</strong><strong> 或 </strong><strong>mohanchen@pku.edu.cn</strong>）。
+对于 ABACUS 中使用平面波（PW）来做 ShengBTE 的计算也是采用以上类似的流程，但要注意使用平面波时，计算三阶力常数的 INPUT 中<strong>scf_thr 需要至少</strong><strong>小到</strong><strong>1e-12</strong>。通过计算结果可以发现，PW 和 LCAO 基组计算出的 Si 的晶格热导率是接近的，300 K 下均在 100 W/(m K) 左右，而实验中 Si 在 300 K 的热导率在 150 W/(m K) 附近。这是因为作为教学例子，这里使用的是 2\*2\*2 的扩胞以及 2\*2\*2 的 K 点，导致计算结果偏小，实际科研中需要测试扩胞的大小以及 K 点的采样方案来达到收敛的结果。以上就是 ABACUS(3.2.0)+ShengBTE 计算晶格热导率的全部流程，如果有什么问题，欢迎通过邮件联系。

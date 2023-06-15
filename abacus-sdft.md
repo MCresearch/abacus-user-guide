@@ -1,6 +1,10 @@
 # ABACUS 随机波函数 DFT 方法使用教程
 
-<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn，最后更新时间：2023/04/29</strong>
+<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn</strong>
+
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+
+<strong>最后更新时间：2023/06/15</strong>
 
 # 1. 介绍
 
@@ -152,4 +156,4 @@ npart_sto        2
 
 # 6. 小结
 
-总体来讲，随机波函数密度泛函理论方法（SDFT 或者 MDFT）的使用与 KSDFT 并无太大的区别，直接运行 ABACUS 程序即可，但是对一些关键参数的选取会影响精度和效率（例如 nbands, nbands_sto, nche_sto, method_sto, bnd_par）。对于极端高温计算（>10 eV），使用 SDFT 可以大大提高计算速度，是比普通的 KSDFT 更好的选择。如果大家使用有问题，欢迎写信联系（见上，或写信到 mohanchen@pku.edu.cn）。
+总体来讲，随机波函数密度泛函理论方法（SDFT 或者 MDFT）的使用与 KSDFT 并无太大的区别，直接运行 ABACUS 程序即可，但是对一些关键参数的选取会影响精度和效率（例如 nbands, nbands_sto, nche_sto, method_sto, bnd_par）。对于极端高温计算（>10 eV），使用 SDFT 可以大大提高计算速度，是比普通的 KSDFT 更好的选择。如果大家使用有问题，欢迎写信联系（见上）。

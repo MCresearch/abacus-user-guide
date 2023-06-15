@@ -1,6 +1,10 @@
 # ABACUS 分子动力学使用教程
 
-<strong>作者：刘裕，邮箱：liuyu@stu.pku.edu.cn，最后更新时间：2023/05/28</strong>
+<strong>作者：刘裕，邮箱：liuyu@stu.pku.edu.cn</strong>
+
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+
+<strong>最后更新时间：2023/06/15</strong>
 
 # 1. 分子动力学方法简介
 

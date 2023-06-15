@@ -13,7 +13,7 @@ ABACUS（中文名量子算筹）是国产开源密度泛函理论软件，相�
    4. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[<mark style="color:red;">如何转换STRU的格式</mark>](https://dptechnology.feishu.cn/wiki/wikcn6fjwNR77kxbyKDdFZASkOg)<mark style="color:red;"></mark>
-   2. 数值原子轨道基组生成教程：[<mark style="color:red;">如何产生ABACUS中的数值原子轨道文件</mark>](https://dptechnology.feishu.cn/wiki/wikcnbOETPFjYPqlb5SzWPGlcHh)<mark style="color:red;"></mark>
+   2. 数值原子轨道基组生成教程：[数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)
    3. 准备赝势（缺）
 3. Kohn-Sham密度泛函理论
    1. 电子自洽迭代
@@ -24,7 +24,7 @@ ABACUS（中文名量子算筹）是国产开源密度泛函理论软件，相�
    4. 结构优化（缺）
    5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)
 4. DeePKS方法（缺）
-5. 隐式溶剂计算等相关功能（缺，找许审镇老师）
+5. 隐式溶剂计算等相关功能（缺）
 6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
 7. 分析结果
    1. 能带计算
@@ -36,7 +36,7 @@ ABACUS（中文名量子算筹）是国产开源密度泛函理论软件，相�
    1. ABACUS+Phonopy教程：[ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
    2. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
    3. ABACUS+DPGEN教程：[ABACUS+DPGEN 使用教程](abacus-dpgen.md)
-   4. ABACUS+CINEB教程（缺，找许审镇老师）
+   4. ABACUS+CINEB教程（缺）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
 ## 三、使用经验
