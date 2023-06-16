@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
-# 一、ABACUS 中的数值原子轨道背景知识
+# 1. ABACUS 中的数值原子轨道背景知识
 
 ## 1.1 数值原子轨道
 
@@ -105,7 +105,7 @@ $$
 
 优化动能用的模拟退火算法几乎和优化溢出函数一样，除了一点点参数的区别。 目标函数选择的是所有轨道中最大的动能，而不是像溢出函数一样取平均值。对于每个轨道来说，温度是不一样的，因为每个轨道会有一个不同的动能，在这步动能优化中，我们发现结果对初始的温度不敏感，但最终达到的温度必须取得足够小。实际中我们发现只需要100~200步，动能就可以下降得很快。 所以一般来说优化动能的步数就取得比优化溢出函数要少。
 
-# 二、ABACUS中产生数值原子轨道的具体流程
+# 2. ABACUS中产生数值原子轨道的具体流程
 
 注：本文档介绍的是模拟退火算法SA，不适用于基于Pytorch的PyTorch-Gradient方法，关于这两个算法，可以参考本数值原子轨道中文文档系列的第三篇文档。
 
@@ -316,7 +316,7 @@ Number of Porbital-->       2
 SUMMARY  END
 ```
 
-# 三、ABACUS 中数值原子轨道的生成脚本
+# 3. ABACUS 中数值原子轨道的生成脚本
 
 我们需要采用平面波计算不同键长的二聚体，并且存在不同层级的轨道，因此也可以通过一个脚本来实现自动化整个流程：`abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh`。该脚本需要读入一个输入文件 `ORBITAL_INPUT` 如下：
 
@@ -437,7 +437,7 @@ Delta_kappa  0.01    # delta kappa (default 0.01)
 $ ~/abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh ORBITAL_INPUT
 ```
 
-# 四、ABACUS 中数值原子轨道的测试流程
+# 4. ABACUS 中数值原子轨道的测试流程
 
 在生成轨道之后，为了保证基于数值原子轨道基组的第一性原理计算拥有与平面波基组相当的精度，我们需要针对该元素的一些常见的晶体结构做一些验证性计算。
 
@@ -445,7 +445,7 @@ $ ~/abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh ORBITAL_INPUT
 
 ![](picture/fig_NAC.png)
 
-# 五、参考文献
+# 5. 参考文献
 
 [1]   M. Chen, G.-C. Guo, and L. He, <em>Systematically Improvable Optimized Atomic Basis Sets for </em><em>Ab Initio</em><em> Calculations</em>, J. Phys.: Condens. Matter <strong>22</strong>, 445501 (2010).
 

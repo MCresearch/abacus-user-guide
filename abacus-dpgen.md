@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
-## 1. 介绍
+# 1. 介绍
 
 本教程旨在介绍结合 ABACUS（中文名原子算筹，这里基于 ABACUS 3.2.0 版本）和 DPGEN 软件结合生成机器学习 DP 势，这里 ABACUS 扮演了提供第一性原理训练数据的作用<strong>。</strong>本教程以碳化硅（SiC）材料为案例，并且教大家使用 DPGEN autotest 功能，计算 SiC 的 Equation of State (EOS)和弹性常数等性质。先介绍主要软件和计算平台：
 
@@ -22,9 +22,9 @@
 
 - [https://docs.deepmodeling.com/projects/dpgen/en/latest/run/example-of-machine.html](https://docs.deepmodeling.com/projects/dpgen/en/latest/run/example-of-machine.html)
 
-## 2. 准备
+# 2. 准备
 
-### 2.1 案例下载地址
+## 2.1 案例下载地址
 
 本教程用到的所有输入文件，均可[点击这里](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/abacus-dpgen)下载。
 
@@ -50,7 +50,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 - `run` 文件夹：包含用于 dpgen run 步骤所需的输入文件，用户可参考其设置自己的体系参数。
 - `auto-test` 文件夹：包含用于计算弹性常数等性质的输入文件，用户可参考其设置自己的体系参数。
 
-### 2.2 安装相关软件
+## 2.2 安装相关软件
 
 这里默认读者已经安装好了 ABACUS 软件，本算例中 ABACUS 计算采用的是数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）方法，因为一般来说 LCAO 会比平面波效率更高，此外读者也可以把密度泛函理论计算部分改成平面波基矢量（后续会讲到）。
 
@@ -62,12 +62,12 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 <strong>2. 安装/更新 dpgen</strong>
 `pip install --user git+``https://gitee.com/deepmodeling/dpgen.git@devel`
 
-## 3. 结合 DPGEN 生成 DP 数据的流程
+# 3. 结合 DPGEN 生成 DP 数据的流程
 
 DPGEN 使用流程如下，接下来我们将一一展开介绍：
 ![](picture/fig_dpgen-workflow.jpg)
 
-### 3.1 准备赝势和数值原子轨道文件
+## 3.1 准备赝势和数值原子轨道文件
 
 本例子所需文件有：
 
@@ -89,7 +89,7 @@ DPGEN 使用流程如下，接下来我们将一一展开介绍：
 
 注：这里 C_gga_9au_100Ry_3s3p2d.orb 的意思是 C 元素、采用 GGA 泛函、轨道截断半径是 9 a.u.（轨道截断半径越大，则 ABACUS 所需求解 Kohn-Sham 方程的时间会越长，而且这个时间对于轨道半径极其敏感，推荐可以测试不同轨道半径，选取合适的、截断半径小的轨道可以加速计算），100 Ry 是推荐的平面波截断值（哪怕用了数值原子轨道，程序里还是会用平面波来做某些物理量的计算，比如模守恒赝势的局域赝势部分），3s3p2d 表示 3 个 s 径向轨道、3 个 p 轨道、2 个 d 轨道。
 
-### 3.2 准备原子体系的结构文件
+## 3.2 准备原子体系的结构文件
 
 本步骤所需的描述原子结构的文件有：
 
@@ -142,7 +142,7 @@ write(cs_stru, cs_atoms, format='abacus', pp=pp, basis=basis)
 
 运行上述 python 脚本，把 cif 转成 ABACUS 所需的 STRU 文件。
 
-### 3.3 产生初始训练数据
+## 3.3 产生初始训练数据
 
 本步骤所需文件有：
 
@@ -278,7 +278,7 @@ Gamma
 
 上述命令采用后台提交 `dpgen`，等所有计算完成之后，`dpgen` 会自动收集训练 DP 势所需的数据，且转换为 DeePMD-kit 的数据格式，保存在 `./STRU.01x01x01/02.md/sys-0036-0036/deepmd` 目录里。
 
-### 3.4 进行数据采样的迭代
+## 3.4 进行数据采样的迭代
 
 run主流程包含一系列迭代，各迭代会根据所选系综在给定的温度、压力或体积等条件下进行 DPMD 采样与筛选，实现同步学习，所有迭代希望能够有效覆盖训练可靠模型所需的势能面上样本空间。每个迭代依次：基于init 准备的初始训练数据与之前迭代积累的训练数据|训练多个新的模型->使用当前的模型进行DPMD采样，根据模型间预测偏差(model-deviation)|挑选候选 snapshot 构象->将本轮候选 snapshot 构象进行第一性原理标定并加入数据集|扩展数据集 。
 
@@ -504,7 +504,7 @@ frozen_model.pb 为生成的 4 个模型中的某一个，2000 为 collect_data 
 
 经验性的，力的精度在 1e-2 量级，能量精度在 5e-3 量级，说明模型比较好。
 
-## 4. 计算材料 EOS 和弹性常数的流程
+# 4. 计算材料 EOS 和弹性常数的流程
 
 本例子里提供了一个 `auto-test` 文件夹，进入之后可以结合 DPGEN 的 `auto-test` 命令计算材料 EOS、弹性常数的流程
 
