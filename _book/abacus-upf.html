@@ -1,0 +1,905 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>模守恒赝势生成方法简介 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-nac2.html" />
+    
+    
+    <link rel="prev" href="abacus-dcu.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="abacus-news.html">
+            
+                <a href="abacus-news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献ABACUS使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >模守恒赝势生成方法简介</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;"><a name="&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x751F;&#x6210;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x9648;&#x6D9B;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;chentao@stu.pku.edu.cn&#xFF1B;&#x5218;&#x5343;&#x9510;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;terry_liu@pku.edu.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/06/21</strong></p>
+<h1 id="1-&#x4ECB;&#x7ECD;"><a name="1-&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#1-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4ECB;&#x7ECD;</h1>
+<p>UPF&#xFF08;<strong>unified PP format</strong>&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x4F3C; XML &#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8D5D;&#x52BF;&#x53CA;&#x5176;&#x76F8;&#x5173;&#x53C2;&#x6570;&#x3002;&#x8BE5;&#x683C;&#x5F0F;&#x7531; <a href="https://www.quantum-espresso.org/" target="_blank">Quantum ESPRESSO</a>&#xFF08;QE&#xFF09;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#xFF0C;&#x5E76;&#x5DF2;&#x6210;&#x4E3A;&#x8BB8;&#x591A;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x4E4B;&#x4E00;&#x3002;</p>
+<p>ABACUS&#xFF08;&#x622A;&#x81F3; v3.2.3&#xFF09;&#x7684; Kohn-Sham &#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#x8BA1;&#x7B97;&#x4E3B;&#x8981;&#x652F;&#x6301; UPF &#x683C;&#x5F0F;&#x7684;<u>&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;</u>&#xFF0C;&#x5728;&#x4F7F;&#x7528; ABACUS &#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F51;&#x4E0A;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x597D;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x4E0B;&#x8F7D;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<ul>
+<li><a href="http://abacus.ustc.edu.cn/pseudo/list.htm" target="_blank">ABACUS &#x5B98;&#x7F51;</a></li>
+<li><a href="http://www.quantum-simulation.org/potentials/sg15_oncv/index.htm" target="_blank">SG15-ONCV</a>&#xFF0C;&#x53C2;&#x8003;&#x6587;&#x732E;&#xFF1A;<a href="https://www.sciencedirect.com/science/article/pii/S0010465515001897?via%3Dihub" target="_blank">Optimization algorithm for the generation of ONCV pseudopotentials</a></li>
+<li><a href="https://www.quantum-espresso.org/pseudopotentials/" target="_blank">Quantum ESPRESSO &#x5B98;&#x7F51;</a>&#x4E2D;&#x7684;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;</li>
+<li><a href="http://www.pseudo-dojo.org/" target="_blank">pseudo-dojo &#x5B98;&#x7F51;</a>&#xFF08;psp8 &#x683C;&#x5F0F;&#xFF0C;&#x9700;&#x8981;&#x8F6C;&#x6362;&#xFF09;</li>
+<li><a href="http://www.pwmat.com/potential-download" target="_blank">PWmat &#x5B98;&#x7F51;</a></li>
+</ul>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x8BA1;&#x7B97;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x8FD9;&#x4E9B;&#x8D5D;&#x52BF;&#x5E76;&#x4E0D;&#x7B26;&#x5408;&#x5F53;&#x524D;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x751F;&#x6210;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x8D5D;&#x52BF;&#x8F6C;&#x6362;&#x6216;&#x8005;&#x5229;&#x7528;&#x8D5D;&#x52BF;&#x8F6F;&#x4EF6;&#x751F;&#x6210;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x83B7;&#x5F97;&#x8D5D;&#x52BF;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;ABACUS &#x7684;&#x65E0;&#x8F68;&#x9053;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#x8BA1;&#x7B97;&#xFF08;Orbital-Free Density Functional Theory&#xFF0C;&#x7B80;&#x79F0; OFDFT&#xFF09;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x5C40;&#x57DF;&#x52BF;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x975E;&#x5C40;&#x57DF;&#x52BF;&#xFF09;&#xFF0C;&#x4E00;&#x822C;&#x91C7;&#x7528; BLPS &#x5C40;&#x57DF;&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#x800C;&#x975E;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684; UPF &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x505A; OFDFT &#x8BA1;&#x7B97;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;&#x4ECB;&#x7ECD; OFDFT &#x8BA1;&#x7B97;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x6216;&#x8005;&#x767B;&#x5F55; Emily A. Carter &#x6559;&#x6388;&#x4E3B;&#x9875;&#x5BFB;&#x627E;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h1 id="2-&#x4ECE;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x8D5D;&#x52BF;&#x8F6C;&#x6362;"><a name="2-&#x4ECE;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x8D5D;&#x52BF;&#x8F6C;&#x6362;" class="plugin-anchor" href="#2-&#x4ECE;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x8D5D;&#x52BF;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4ECE;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x8D5D;&#x52BF;&#x8F6C;&#x6362;</h1>
+<h2 id="21-&#x4F7F;&#x7528;-qe-upflib-&#x4E2D;&#x7684;-upfconv-&#x8FDB;&#x884C;&#x8F6C;&#x6362;"><a name="21-&#x4F7F;&#x7528;-qe-upflib-&#x4E2D;&#x7684;-upfconv-&#x8FDB;&#x884C;&#x8F6C;&#x6362;" class="plugin-anchor" href="#21-&#x4F7F;&#x7528;-qe-upflib-&#x4E2D;&#x7684;-upfconv-&#x8FDB;&#x884C;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x4F7F;&#x7528; QE upflib &#x4E2D;&#x7684; upfconv &#x8FDB;&#x884C;&#x8F6C;&#x6362;</h2>
+<p>&#x5176;&#x652F;&#x6301;&#x5C06; UPF v.1 &#x683C;&#x5F0F;&#x3001;vdb/van &#x683C;&#x5F0F;&#xFF08;Vanderbilt US pseudopotential&#xFF09;&#x3001;cpi/fhi &#x683C;&#x5F0F;&#xFF08;FHI/abinit&#xFF09;&#x8F6C;&#x5316;&#x6210; UPF v.2 &#x683C;&#x5F0F;</p>
+<pre class="language-"><code class="lang-bash">path_to_QE/upflib/upfconv.x <span class="token parameter variable">-u</span>  *.upf/UPF/vdb/van/cpi/fhi
+</code></pre>
+<p>&#x6CE8;&#xFF1A;&#x8FD9;&#x91CC;&#x7684; <code>path_to_QE</code> &#x4EE3;&#x8868;&#x4E0B;&#x8F7D;&#x7684; Quantum Espresso &#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x6587;&#x4EF6;&#x5939; upflib &#x5728; QE5 &#x548C; 6 &#x53EB; upftools,QE7 &#x53EB; upflib&#x3002;</p>
+<h2 id="22-psp8-&#x683C;&#x5F0F;&#x8F6C;&#x6362;"><a name="22-psp8-&#x683C;&#x5F0F;&#x8F6C;&#x6362;" class="plugin-anchor" href="#22-psp8-&#x683C;&#x5F0F;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 psp8 &#x683C;&#x5F0F;&#x8F6C;&#x6362;</h2>
+<p>psp8 &#x683C;&#x5F0F;&#x662F; ONCVPSP &#x8F6F;&#x4EF6;&#x751F;&#x6210;&#x7684;&#x4E00;&#x79CD;&#x8D5D;&#x52BF;&#x683C;&#x5F0F;&#xFF0C;&#x5728; Abinit &#x5B98;&#x7F51;&#xFF08;<a href="http://www.pseudo-dojo.org/" target="_blank">pseudo-dojo</a>&#xFF09;&#x4E2D;&#xFF0C;&#x5176;&#x4F7F;&#x7528;&#x7684;&#x5C31;&#x662F; psp8 &#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x76EE;&#x524D;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x5C06; psp8 &#x683C;&#x5F0F;&#x7684;&#x8D5D;&#x52BF;&#x76F4;&#x63A5;&#x8F6C;&#x6362;&#x6210; UPF &#x683C;&#x5F0F;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x5C06; psp8 &#x4E2D;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x90E8;&#x5206;&#x6458;&#x6284;&#x4E0B;&#x6765;&#xFF0C;&#x7528; ONCVPSP &#x8F6F;&#x4EF6;&#x91CD;&#x65B0;&#x751F;&#x6210; UPF &#x683C;&#x5F0F;&#x7684;&#x8D5D;&#x52BF;&#xFF08;&#x5177;&#x4F53;&#x751F;&#x6210;&#x89C1;&#x4E0B;&#x9762; ONCVPSP &#x7684;&#x8BB2;&#x89E3;&#xFF09;&#x3002;</p>
+<p>&#x53EF;&#x4F9B;&#x53C2;&#x8003;&#x7684;&#x6279;&#x91CF;&#x5904;&#x7406;&#x811A;&#x672C;&#xFF1A;<a href="https://github.com/pipidog/ONCVPSP" target="_blank">https://github.com/pipidog/ONCVPSP</a></p>
+<h1 id="3-&#x8D5D;&#x52BF;&#x7684;&#x751F;&#x6210;"><a name="3-&#x8D5D;&#x52BF;&#x7684;&#x751F;&#x6210;" class="plugin-anchor" href="#3-&#x8D5D;&#x52BF;&#x7684;&#x751F;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x8D5D;&#x52BF;&#x7684;&#x751F;&#x6210;</h1>
+<p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E09;&#x4E2A;&#x53EF;&#x4EE5;&#x751F;&#x6210; UPF &#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x5206;&#x522B;&#x662F; ONCVPSP&#xFF0C;Opium&#xFF0C;&#x548C; ld1.x</p>
+<h2 id="31-oncvpsp"><a name="31-oncvpsp" class="plugin-anchor" href="#31-oncvpsp"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 ONCVPSP</h2>
+<h3 id="311-&#x4ECB;&#x7ECD;"><a name="311-&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#311-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.1 &#x4ECB;&#x7ECD;</h3>
+<p><a href="http://www.mat-simresearch.com/" target="_blank">ONCVPSP</a>&#xFF08;Optimized Norm-Conservinng Vanderbilt PSeudoPotential&#xFF09;&#x662F;&#x7531; D.R. Hamann &#x7B49;&#x4EBA;&#x63D0;&#x51FA;&#x7684;&#x4F18;&#x5316;&#x7248;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#xFF0C;&#x5176;&#x6709;&#x66F4;&#x9AD8;&#x7684;&#x7CBE;&#x5EA6;&#x4E0E;&#x6548;&#x7387;&#x3002;ONCVPSP &#x4F9D;&#x8D56; Libxc&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x4EA4;&#x6362;&#x5173;&#x8054;&#x6CDB;&#x51FD;&#x3002;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x732E;&#xFF1A;<a href="http://dx.doi.org/10.1103/PhysRevB.88.085117" target="_blank">Optimized norm-conserving Vanderbilt pseudopotentials</a>&#x3002;</p>
+<h3 id="312-&#x5B89;&#x88C5;"><a name="312-&#x5B89;&#x88C5;" class="plugin-anchor" href="#312-&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.2 &#x5B89;&#x88C5;</h3>
+<p><strong>I. &#x9996;&#x5148;&#x5B89;&#x88C5; Libxc</strong></p>
+<p>Libxc &#x7F51;&#x5740;&#xFF1A;<a href="https://www.tddft.org/programs/libxc/" target="_blank">Libxc - a library of exchange-correlation functionals for density-functional theory</a></p>
+<p>&#x63A8;&#x8350;&#x4E0B;&#x8F7D; <a href="http://www.tddft.org/programs/libxc/down.php?file=4.3.4/libxc-4.3.4.tar.gz" target="_blank">libxc-4.3.4</a></p>
+<p>&#x7136;&#x540E;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> libxc-4.3.4
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span><span class="token string">&apos;PATH/TO/LIBXC&apos;</span> <span class="token assign-left variable">CC</span><span class="token operator">=</span>icc <span class="token assign-left variable">F77</span><span class="token operator">=</span>ifort <span class="token assign-left variable">F90</span><span class="token operator">=</span>ifort
+<span class="token function">make</span>
+<span class="token function">make</span> <span class="token function">install</span>
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#x5373;&#x53EF;&#x5728; <code>PATH/TO/LIBXC</code> &#x76EE;&#x5F55;&#x4E0B;&#x770B;&#x5230; <code>bin</code>,<code>include</code> &#x548C; <code>lib</code> &#x4E09;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x4EE3;&#x8868;&#x5B89;&#x88C5;&#x6210;&#x529F;</p>
+<p><strong>II. &#x5B89;&#x88C5; oncvpsp</strong></p>
+<p>&#x63A8;&#x8350;&#x4E0B;&#x8F7D; <a href="http://www.mat-simresearch.com/oncvpsp-4.0.1.tar.gz" target="_blank">oncvpsp-4.0.1</a></p>
+<p>&#x7136;&#x540E;&#x6267;&#x884C; <code>cd oncvpsp-4.0.1</code>&#xFF0C;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x5939;</p>
+<p>&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x4FEE;&#x6539; <code>make.inc</code> &#x6587;&#x4EF6;</p>
+<ul>
+<li>&#x4FEE;&#x6539; <code>F77 = ifort, F90 = ifort, CC = icc</code></li>
+<li><code>FFLAGS</code> &#x5220;&#x53BB; <code>-ffast-math</code></li>
+<li><code>LIBS</code> &#x6539;&#x4E3A; <code>-qmkl=&quot;sequential&quot;</code></li>
+<li><code>LIBS+</code> &#x548C; <code>FFLAGS</code> &#x4E2D;&#x7684;&#x5730;&#x5740;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684; <code>PATH/TO/LIBXC</code></li>
+</ul>
+<p>&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># System-dependent makefile options for ONCVPSP</span>
+<span class="token comment"># This must be carefully edited before executing &quot;make&quot; in src</span>
+<span class="token comment">#</span>
+<span class="token comment"># Copyright &#xFF08;c&#xFF09; 1989-2019 by D. R. Hamann, Mat-Sim Research LLC and Rutgers</span>
+<span class="token comment"># University</span>
+
+<span class="token comment">##### Edit the following lines to correspond to your compilers ####</span>
+
+F77        <span class="token operator">=</span> ifort
+F90        <span class="token operator">=</span> ifort
+CC         <span class="token operator">=</span> icc
+FCCPP      <span class="token operator">=</span> cpp
+
+FLINKER     <span class="token operator">=</span> $&#xFF08;F90&#xFF09;
+
+<span class="token comment">#FCCPPFLAGS = -ansi -DLIBXC_VERSION=301  #Use this for versions &lt;301</span>
+FCCPPFLAGS <span class="token operator">=</span> <span class="token parameter variable">-ansi</span> <span class="token parameter variable">-DLIBXC_VERSION</span><span class="token operator">=</span><span class="token number">400</span>  <span class="token comment">#Use this for versions &gt;400</span>
+
+<span class="token comment">##### Edit the following optimization flags for your system ####</span>
+
+FFLAGS     <span class="token operator">=</span> <span class="token parameter variable">-O3</span> -funroll-loops
+CFLAGS     <span class="token operator">=</span> <span class="token parameter variable">-O3</span>                
+
+<span class="token comment">##### Edit the following LAPACK and BLAS library paths for your system ####</span>
+
+LIBS <span class="token operator">=</span> <span class="token parameter variable">-qmkl</span><span class="token operator">=</span><span class="token string">&quot;sequential&quot;</span>
+
+<span class="token comment">##### Edit the following for to use libxc if available #####</span>
+
+OBJS_LIBXC <span class="token operator">=</span>        exc_libxc_stub.o
+
+<span class="token comment"># oncvpsp is compatible with libxc</span>
+<span class="token comment"># To build oncvpsp with libxc, uncomment the e following lines and edit</span>
+<span class="token comment"># the paths to point to your libxc library and include directories</span>
+<span class="token comment"># make clean in src before rebuilding after changing this</span>
+
+LIBS <span class="token operator">+=</span> -L/<span class="token environment constant">PATH</span>/TO/LIBXC/lib <span class="token parameter variable">-lxcf90</span> <span class="token parameter variable">-lxc</span>
+FFLAGS <span class="token operator">+=</span> -I/<span class="token environment constant">PATH</span>/TO/LIBXC/include
+
+<span class="token comment">#LIBS += -L/home/drh/abinit/fallbacks/exports/lib -lxcf90 -lxc</span>
+<span class="token comment">#FFLAGS += -I/home/drh/abinit/fallbacks/exports/include</span>
+
+OBJS_LIBXC <span class="token operator">=</span>        functionals.o exc_libxc.o
+</code></pre>
+<p>&#x7136;&#x540E;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">make</span>
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x6D4B;&#x8BD5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x5728; src &#x76EE;&#x5F55;&#x4E0B;&#x770B;&#x5230; <code>oncvpsp.x</code></p>
+<p>&#x53EF;&#x4EE5;&#x5728; <code>~/.bashrc</code> &#x4E2D;&#x589E;&#x52A0;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5C06; <code>oncvpsp.x</code> &#x52A0;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x65B9;&#x4FBF;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/<span class="token environment constant">PATH</span>/TO/ONCVPSP/src
+</code></pre>
+<h3 id="313-&#x8F93;&#x5165;&#x6587;&#x4EF6;"><a name="313-&#x8F93;&#x5165;&#x6587;&#x4EF6;" class="plugin-anchor" href="#313-&#x8F93;&#x5165;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.3 &#x8F93;&#x5165;&#x6587;&#x4EF6;</h3>
+<p>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x51C6;&#x5907;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <code>PATH_TO_ONCVPSP/doc/32_Ge_annotated.dat</code>&#xFF0C;&#x6216;&#x8005;&#x53C2;&#x8003;&#x5DF2;&#x77E5; ONCV &#x7684;&#x8D5D;&#x52BF;&#x91CC;&#x9762;&#x7684; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PP_INPUTFILE</span><span class="token punctuation">&gt;</span></span></code> &#x90E8;&#x5206;&#x6765;&#x5199;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4EE5;&#x94DD;&#xFF08;Al&#xFF09;&#x4E3A;&#x4F8B;&#xFF0C;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>Al.dat</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># ATOM AND REFERENCE CONFIGURATION</span>
+<span class="token comment"># atsym, z, nc, nv, iexc   psfile</span>
+Al   <span class="token number">13</span>   <span class="token number">1</span>   <span class="token number">4</span>   <span class="token number">4</span>   upf
+<span class="token comment">#</span>
+<span class="token comment"># n, l, f  &#xFF08;nc+nv lines&#xFF09;</span>
+<span class="token number">1</span> <span class="token number">0</span> <span class="token number">2</span>
+<span class="token number">2</span> <span class="token number">0</span> <span class="token number">2</span>
+<span class="token number">2</span> <span class="token number">1</span> <span class="token number">6</span>
+<span class="token number">3</span> <span class="token number">0</span> <span class="token number">2</span>
+<span class="token number">3</span> <span class="token number">1</span> <span class="token number">1</span>
+<span class="token comment">#</span>
+<span class="token comment"># PSEUDOPOTENTIAL AND OPTIMIZATION</span>
+<span class="token comment"># lmax</span>
+<span class="token number">1</span>
+<span class="token comment">#</span>
+<span class="token comment"># l, rc, ep, ncon, nbas, qcut  &#xFF08;lmax+1 lines, l&apos;s must be in order&#xFF09;</span>
+<span class="token number">0</span> <span class="token number">1.29163</span> <span class="token number">0</span> <span class="token number">5</span> <span class="token number">8</span> <span class="token number">10.3003</span>
+<span class="token number">1</span> <span class="token number">2.40653</span> <span class="token number">0</span> <span class="token number">5</span> <span class="token number">8</span> <span class="token number">7.02214</span>
+<span class="token comment">#</span>
+<span class="token comment"># LOCAL POTENTIAL</span>
+<span class="token comment"># lloc, lpopt, rc&#xFF08;5&#xFF09;, dvloc0</span>
+<span class="token number">4</span> <span class="token number">5</span> <span class="token number">0.932267</span> <span class="token number">0</span>
+<span class="token comment">#</span>
+<span class="token comment"># VANDERBILT-KLEINMAN-BYLANDER PROJECTORs</span>
+<span class="token comment"># l, nproj, debl  &#xFF08;lmax+1 lines, l&apos;s in order&#xFF09;</span>
+<span class="token number">0</span> <span class="token number">2</span> <span class="token number">0</span>
+<span class="token number">1</span> <span class="token number">2</span> <span class="token number">0</span>
+<span class="token comment">#</span>
+<span class="token comment"># MODEL CORE CHARGE</span>
+<span class="token comment"># icmod, fcfact</span>
+<span class="token number">0</span> <span class="token number">0</span>
+<span class="token comment">#</span>
+<span class="token comment"># LOG DERIVATIVE ANALYSIS</span>
+<span class="token comment"># epsh1, epsh2, depsh</span>
+<span class="token parameter variable">-5.0</span>  <span class="token number">3.0</span>  <span class="token number">0.02</span>
+<span class="token comment">#</span>
+<span class="token comment"># OUTPUT GRID</span>
+<span class="token comment"># rlmax, drl</span>
+<span class="token number">6.0</span>  <span class="token number">0.01</span>
+<span class="token comment">#</span>
+<span class="token comment"># TEST CONFIGURATIONS</span>
+<span class="token comment"># ncnf</span>
+<span class="token number">0</span>
+<span class="token comment"># nvcnf</span>
+<span class="token comment">#   n    l    f</span>
+</code></pre>
+<p>&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x7684;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><code>nc</code>&#xFF1A;c = core&#xFF0C;&#x82AF;&#x7535;&#x5B50;&#x5C42;&#x6570;</li>
+<li><code>nv</code>&#xFF1A;v = valence&#xFF0C;&#x4EF7;&#x7535;&#x5B50;&#x5C42;&#x6570;&#xFF0C;&#x8C03;&#x6574; <code>nc</code> &#x548C; <code>nv</code> &#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x8D5D;&#x52BF;&#x7684;&#x4EF7;&#x7535;&#x5B50;&#x6570;</li>
+<li><code>iexc</code>&#xFF1A;&#x751F;&#x6210;&#x8D5D;&#x52BF;&#x6240;&#x7528;&#x7684;&#x4EA4;&#x6362;&#x5173;&#x8054;&#x6CDB;&#x51FD;&#xFF0C;&#x8BE6;&#x60C5;&#x53EF;&#x53C2;&#x8003; ONCVPSP-4.0.1 &#x76EE;&#x5F55;&#x4E0B; doc &#x5185;&#x7684; <code>pwscf_exc.txt</code> &#x6587;&#x4EF6;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x5982;&#x4E0B;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">iexc</span><span class="token operator">==</span><span class="token number">3</span> .or. <span class="token assign-left variable">iexc</span><span class="token operator">==</span>-001009, <span class="token string">&apos;functional=&quot;PZ&quot;&apos;</span>
+<span class="token assign-left variable">iexc</span><span class="token operator">==</span><span class="token number">4</span> .or. <span class="token assign-left variable">iexc</span><span class="token operator">==</span>-101130, <span class="token string">&apos;functional=&quot;PBE&quot;&apos;</span>
+</code></pre>
+<ul>
+<li><code>psfile</code>&#xFF1A;&#x8D5D;&#x52BF;&#x683C;&#x5F0F;&#xFF0C;&#x6709; <code>upf</code> &#x548C; <code>psp8</code> &#x4E24;&#x79CD;&#x3002;ABACUS &#x652F;&#x6301; <code>upf</code> &#x7684;&#x683C;&#x5F0F;</li>
+<li><code>rc</code>:  rc &#x4E2D;&#x8F83;&#x5C0F;&#x7684;&#x4E3A;&#x8D5D;&#x52BF;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x3002;&#x5728;&#x6E29;&#x5EA6;&#x8F83;&#x9AD8;&#x6216;&#x5BC6;&#x5EA6;&#x8F83;&#x5927;&#x7684;&#x6E29;&#x7A20;&#x5BC6;&#x4F53;&#x7CFB;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x8C03;&#x6574;&#x8D5D;&#x52BF;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;&#xFF0C;&#x63A8;&#x8350;&#x5C0F;&#x4E8E; 0.7 &#x500D;&#x7EF4;&#x683C;&#x7EB3;&#x534A;&#x5F84;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A; Bohr&#xFF1B;&#x6BCF;&#x4E2A; <code>l</code> &#x5BF9;&#x5E94;&#x4E00;&#x4E2A; <code>rc</code>&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x4E3A;&#x8D5D;&#x52BF;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;</li>
+<li><code>rc&#xFF08;5&#xFF09;</code>&#xFF1A;<code>rc</code> &#x90FD;&#x8981;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; <code>rc&#xFF08;5&#xFF09;</code>&#x3002;&#x4F8B;&#x5982; Al &#x7684; <code>l=0</code> &#x7684; <code>rc</code> &#x4E3A; 1.29163 Bohr&#xFF0C;<code>l=1</code> &#x7684; <code>rc</code> &#x4E3A; 2.40653 Bohr&#xFF0C;<code>rc&#xFF08;5&#xFF09;</code> &#x4E3A; 0.932267 Bohr&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;&#x8D5D;&#x52BF;&#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84;&#x4E3A; 1.29163 Bohr&#x3002;</li>
+<li><code>qcut</code>&#xFF1A;&#x901A;&#x8FC7;&#x8C03;&#x6574;&#xFF08;+-0.1&#xFF09;&#xFF0C;&#x76F4;&#x5230;&#x63A8;&#x8350; ECUT &#x8FBE;&#x5230;&#x6700;&#x5C0F;</li>
+<li><code>dvloc0</code>&#xFF1A;&#x901A;&#x8FC7;&#x8C03;&#x6574;&#xFF08;+-0.5&#xFF09;&#xFF0C;&#x76F4;&#x5230;&#x6D88;&#x9664;&#x8D5D;&#x52BF;&#x7684; GHOST &#x6001;&#xFF08;&#x53EF;&#x53C2;&#x8003;&#x6587;&#x732E; <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.12264" target="_blank">Phys. Rev. B <strong>41</strong>, 12264 (1990)</a>&#xFF09;</li>
+</ul>
+<h3 id="314-&#x751F;&#x6210;&#x8D5D;&#x52BF;"><a name="314-&#x751F;&#x6210;&#x8D5D;&#x52BF;" class="plugin-anchor" href="#314-&#x751F;&#x6210;&#x8D5D;&#x52BF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.4 &#x751F;&#x6210;&#x8D5D;&#x52BF;</h3>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">oncvpsp.x <span class="token operator">&lt;</span> Al.dat <span class="token operator">&gt;</span> Al.out
+<span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">&apos;/&lt;UPF version=&quot;2.0.1&quot;&gt;/,/&lt;\/UPF&gt;/p&apos;</span> Al.out <span class="token operator">&gt;</span> Al.UPF
+</code></pre>
+<ul>
+<li>&#x751F;&#x6210;&#x5B8C;&#x8D5D;&#x52BF;&#x9700;&#x8981;&#x67E5;&#x770B; <code>Al.out</code> &#x6587;&#x4EF6;&#xFF0C;&#x786E;&#x5B9A;&#x6CA1;&#x6709; GHOST &#x6001;&#xFF08;&#x53EF;&#x53C2;&#x8003;&#x6587;&#x732E; <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.12264" target="_blank">Phys. Rev. B <strong>41</strong>, 12264 (1990)</a>&#xFF09;&#xFF1A;</li>
+</ul>
+<blockquote>
+<p>Testing for highly-localized positive-energy ghosts<br> l \<radius>/rc E Basis Diag. E Cutoff<br><br> 1 0.974041 120.256772 338.98 WARNING - GHOST&#xFF08;+&#xFF09;</radius></p>
+</blockquote>
+<p>&#x5982;&#x4E0A;&#xFF0C;&#x51FA;&#x73B0; WARNING - GHOST &#x8BF4;&#x660E;&#x6709; GHOST&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x6574; dvloc0 &#xFF08;+-0.5&#xFF09;&#x76F4;&#x5230;&#x6D88;&#x9664; GHOST &#x6001;</p>
+<ul>
+<li><code>sed</code> &#x547D;&#x4EE4;&#x662F;&#x4E3A;&#x4E86;&#x4ECE; Al.out &#x6587;&#x4EF6;&#x4E2D;&#x622A;&#x53D6;&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#x5230; Al.UPF &#x4E2D;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x540C;&#x65F6;&#x8981;&#x753B;&#x51FA;&#x7C7B;&#x4F3C; <a href="http://dx.doi.org/10.1103/PhysRevB.88.085117" target="_blank">Phys. Rev. B <strong>88</strong>, 085117 (2013)</a> &#x7684;&#x56FE;&#xFF0C;&#x9700;&#x8981;&#x51C6;&#x5907;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>Al.dat</code> &#x5E76;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sh</span> PATH_TO_ONCVPSP/scripts/run.sh Al
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x753B;&#x51FA;&#x5982;&#x4E0B;&#x7684;&#x56FE;&#xFF1A;</p>
+<p><img src="picture/fig_upf-1.png" alt=""></p>
+<p><img src="picture/fig_upf-2.png" alt=""></p>
+<p><img src="picture/fig_upf-3.png" alt=""></p>
+<p><img src="picture/fig_upf-4.png" alt=""></p>
+<p><img src="picture/fig_upf-1.png" alt=""></p>
+<h3 id="315-&#x4F18;&#x5316;&#x8D5D;&#x52BF;"><a name="315-&#x4F18;&#x5316;&#x8D5D;&#x52BF;" class="plugin-anchor" href="#315-&#x4F18;&#x5316;&#x8D5D;&#x52BF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.5 &#x4F18;&#x5316;&#x8D5D;&#x52BF;</h3>
+<ul>
+<li><p>&#x4F9D;&#x6B21;&#x8C03;&#x8282;&#x4E0D;&#x540C; <code>l</code> &#x5BF9;&#x5E94;&#x7684; <code>qcut</code>&#xFF08;+-0.1&#xFF09;&#xFF0C;&#x68C0;&#x67E5;&#x5BF9;&#x5E94; <code>ECUT&#xFF08;l&#xFF09;</code> &#x53D8;&#x5316;&#x60C5;&#x51B5;&#xFF0C;&#x76F4;&#x5230; <code>ECUT&#xFF08;l&#xFF09;</code> &#x8FBE;&#x5230;&#x6700;&#x5C0F;</p>
+<ul>
+<li>&#x53C2;&#x8003;&#x7684;&#x811A;&#x672C;&#xFF1A;</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token operator">!</span>/bin/bash
+
+<span class="token assign-left variable">qcut</span><span class="token operator">=</span><span class="token number">17</span>
+<span class="token assign-left variable">dq</span><span class="token operator">=</span><span class="token number">0.1</span>
+<span class="token comment">#&#x904D;&#x5386;l=0&#x7684;qcut&#x4ECE;17&#x5230;25&#xFF0C;&#x95F4;&#x9694;&#x4E3A;0.1&#xFF0C;&#x8F93;&#x51FA;&#x5176;&#x5BF9;&#x5E94;&#x7684;ECUT</span>
+<span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$qcut</span> &lt;= 25&quot;</span> <span class="token operator">|</span> <span class="token function">bc</span><span class="token variable">`</span></span> <span class="token operator">==</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> test.dat <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+# ATOM AND REFERENCE CONFIGURATION
+# atsym  z    nc    nv    iexc   psfile
+  Al 13.00     1     4     4      upf
+#
+#   n    l    f        energy &#xFF08;Ha&#xFF09;
+    1    0    2.00
+    2    0    2.00
+    2    1    6.00
+    3    0    2.00
+    3    1    1.00
+#
+# PSEUDOPOTENTIAL AND OPTIMIZATION
+# lmax
+    1
+#
+#   l,   rc,     ep,   ncon, nbas, qcut
+    0   0.68  -3.97500    5    8   <span class="token variable">$qcut</span>
+    1   0.75  -2.55934    5    8   19.4
+#
+# LOCAL POTENTIAL
+# lloc, lpopt,  rc&#xFF08;5&#xFF09;,   dvloc0
+    4    5       0.60     0.00000
+#
+# VANDERBILT-KLEINMAN-BYLANDER PROJECTORs
+# l, nproj, debl
+    0    2   3.69008
+    1    2   2.45967
+#
+# MODEL CORE CHARGE
+# icmod, fcfact
+    0   0.00000
+#
+# LOG DERIVATIVE ANALYSIS
+# epsh1, epsh2, depsh
+   -5.00    3.00    0.02
+#
+# OUTPUT GRID
+# rlmax, drl
+    6.00    0.01
+#
+# TEST CONFIGURATIONS
+# ncnf
+    0
+# nvcnf
+#   n    l    f
+EOF</span>
+
+<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/src/oncvpsp.x <span class="token operator">&lt;</span> test.dat <span class="token operator">&gt;</span> qcut<span class="token variable">$qcut</span>.out
+<span class="token function">grep</span> <span class="token parameter variable">-A</span> <span class="token number">5</span> <span class="token string">&quot;Energy error&quot;</span> qcut<span class="token variable">$qcut</span>.out <span class="token operator">&gt;</span> _tmp.txt
+<span class="token assign-left variable">E1</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;6p&quot;</span> _tmp.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print $3}&apos;</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">E2</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;13p&quot;</span> _tmp.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print $3}&apos;</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">E3</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;20p&quot;</span> _tmp.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print $3}&apos;</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">E4</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">sed</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;27p&quot;</span> _tmp.txt <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print $3}&apos;</span><span class="token variable">`</span></span>
+
+<span class="token comment"># echo $qcut $E1 $E2 $E3 $E4</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$E1</span>&gt;<span class="token variable">$E2</span>&quot;</span> <span class="token operator">|</span> <span class="token function">bc</span><span class="token variable">`</span></span> <span class="token operator">==</span> <span class="token string">&apos;1&apos;</span> <span class="token punctuation">]</span> <span class="token punctuation">;</span><span class="token keyword">then</span>
+<span class="token assign-left variable">Emax1</span><span class="token operator">=</span><span class="token variable">$E1</span>
+<span class="token keyword">else</span>
+<span class="token assign-left variable">Emax1</span><span class="token operator">=</span><span class="token variable">$E2</span>
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$E3</span>&gt;<span class="token variable">$E4</span>&quot;</span> <span class="token operator">|</span> <span class="token function">bc</span><span class="token variable">`</span></span> <span class="token operator">==</span> <span class="token string">&apos;1&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+<span class="token assign-left variable">Emax2</span><span class="token operator">=</span><span class="token variable">$E3</span>
+<span class="token keyword">else</span>
+<span class="token assign-left variable">Emax2</span><span class="token operator">=</span><span class="token variable">$E4</span>
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token variable">$qcut</span> <span class="token variable">$Emax1</span> <span class="token variable">$Emax2</span>
+
+<span class="token assign-left variable">qcut</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$qcut</span>+<span class="token variable">$dq</span>&quot;</span> <span class="token operator">|</span> <span class="token function">bc</span><span class="token variable">`</span></span>
+<span class="token keyword">done</span>
+</code></pre>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7684; <code>l</code> &#x90FD;&#x4F1A;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C; <code>ECUT(l)</code>&#x3002;&#x4E00;&#x822C; <code>rc(l)</code> &#x8D8A;&#x5C0F;&#xFF0C;&#x5BF9;&#x5E94;&#x7684; <code>ECUT(l)</code> &#x8D8A;&#x5927;&#xFF0C;&#x8D5D;&#x52BF;&#x4E5F;&#x5C31;&#x8D8A;&#x7CBE;&#x786E;&#x3002;&#x7531;&#x4E8E; DFT &#x8BA1;&#x7B97;&#x4E2D;&#x7684;&#x622A;&#x65AD;&#x80FD; <code>ECUT</code> &#x662F;&#x7531;&#x8D5D;&#x52BF;&#x4E2D;&#x8F83;&#x5927;&#x7684;&#x90A3;&#x4E2A; <code>ECUT(l)</code> &#x51B3;&#x5B9A;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x540C; <code>l</code> &#x7684; <code>ECUT(l)</code> &#x76F8;&#x5DEE;&#x5F88;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x51CF;&#x5C0F;&#x8F83;&#x5C0F;&#x7684; <code>ECUT&#xFF08;l&#xFF09;</code> &#x5BF9;&#x5E94; <code>l</code> &#x7684;&#x622A;&#x65AD;&#x534A;&#x5F84; <code>rc</code>&#xFF0C;&#x4F7F;&#x5F97;&#x4E0D;&#x540C; <code>l</code> &#x5BF9;&#x5E94;&#x7684; <code>ECUT(l)</code> &#x66F4;&#x63A5;&#x8FD1;&#xFF0C;&#x8FD9;&#x6837;&#x5E76;&#x4E0D;&#x4F1A;&#x589E;&#x52A0;&#x8D5D;&#x52BF;&#x8BA1;&#x7B97;&#x7684; <code>ECUT</code>&#xFF0C;&#x5374;&#x53EF;&#x4EE5;&#x63D0;&#x5347;&#x7CBE;&#x5EA6;&#x3002;</li>
+<li>&#x8FD9;&#x6837;&#x8C03;&#x5B8C;&#x4E4B;&#x540E;&#x5982;&#x679C;&#x6709; GHOST &#x6001;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x6574; <code>dvloc0</code> &#xFF08;+-0.5&#xFF09;&#x76F4;&#x5230;&#x6D88;&#x9664; GHOST &#x6001;&#xFF0C;&#x8FD9;&#x4E2A;&#x8D5D;&#x52BF;&#x624D;&#x53EF;&#x4F7F;&#x7528;</li>
+</ul>
+<h2 id="32-opium"><a name="32-opium" class="plugin-anchor" href="#32-opium"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 Opium</h2>
+<p><a href="https://opium.sourceforge.net/" target="_blank">Opium</a> &#x8F6F;&#x4EF6;&#x5305;&#x53EF;&#x4EE5;&#x751F;&#x6210; <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227" target="_blank">RRKJ</a>&#x3001;<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993" target="_blank">TM</a> &#x6216; <a href="https://iopscience.iop.org/article/10.1088/0022-3719/13/9/004/meta" target="_blank">Kerker</a> &#x5F84;&#x5411;&#x6CE2;&#x51FD;&#x6570;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x5B98;&#x7F51;&#x6709; <a href="https://www.sas.upenn.edu/rappegroup/research/pseudo-potential-lda.html" target="_blank">LDA</a>&#x3001;<a href="https://www.sas.upenn.edu/rappegroup/research/pseudo-potential-gga.html" target="_blank">GGA</a> &#x8D5D;&#x52BF;&#x5E93;&#xFF08;&#x4F46;&#x662F;&#x67D0;&#x4E9B;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x4E0D;&#x5339;&#x914D;&#x6700;&#x65B0;&#x7684; 4.1 &#x7248;&#x672C;&#xFF0C;&#x9700;&#x8981;&#x7A0D;&#x4F5C;&#x4FEE;&#x6539;&#xFF09;</p>
+<p>&#x4E0B;&#x8F7D; Opium &#x4E4B;&#x540E;&#x5229;&#x7528; configure &#x5B89;&#x88C5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">./configure
+<span class="token function">make</span>
+</code></pre>
+<p>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x7F51; LDA&#x3001;GGA &#x8D5D;&#x52BF;&#x5E93;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53C2;&#x8003; PATH_TO_OPIUM/tests&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5;&#x94DD;&#xFF08;Al&#xFF09;&#x4E3A;&#x4F8B;&#xFF0C;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>al.param</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>Atom<span class="token punctuation">]</span>
+Al
+<span class="token number">6</span>
+<span class="token number">100</span> <span class="token number">2.00</span>  <span class="token parameter variable">-13.0</span>   <span class="token comment"># reference configuration</span>
+<span class="token number">200</span> <span class="token number">2.00</span>   <span class="token parameter variable">-1.4</span>   <span class="token comment"># reference configuration</span>
+<span class="token number">210</span> <span class="token number">6.00</span>   <span class="token parameter variable">-0.4</span>   <span class="token comment"># reference configuration</span>
+<span class="token number">300</span> <span class="token number">2.00</span>   <span class="token parameter variable">-0.1</span>   <span class="token comment"># reference configuration</span>
+<span class="token number">310</span> <span class="token number">0.95</span>  <span class="token parameter variable">-13.0</span>   <span class="token comment"># reference configuration</span>
+<span class="token number">320</span> <span class="token parameter variable">-1.0</span>   <span class="token parameter variable">-0.0</span>   <span class="token comment"># &#x8FD9;&#x6761;&#x80FD;&#x5E26;&#x662F;&#x975E;&#x675F;&#x7F1A;&#x6001;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5360;&#x636E;&#x6570;&#x8C03;&#x6210;&#x8D1F;&#x6570;&#xFF0C;&#x5B98;&#x7F51;&#x7ED9;&#x9519;&#x4E86;</span>
+<span class="token punctuation">[</span>Pseudo<span class="token punctuation">]</span>
+<span class="token number">3</span> <span class="token number">1.85</span> <span class="token number">1.85</span> <span class="token number">1.97</span>
+opt
+
+<span class="token punctuation">[</span>Optinfo<span class="token punctuation">]</span>
+<span class="token number">7.07</span> <span class="token number">10</span>    <span class="token comment"># rc[a.u.] qc[sqrt&#xFF08;Ry&#xFF09;] Nb</span>
+<span class="token number">7.07</span> <span class="token number">10</span>
+<span class="token number">7.07</span> <span class="token number">10</span>
+
+<span class="token punctuation">[</span>Configs<span class="token punctuation">]</span>
+<span class="token number">3</span>                 <span class="token comment"># number of valence configurations</span>
+<span class="token comment">#</span>
+<span class="token number">300</span>  <span class="token number">2.00</span>  <span class="token parameter variable">-13.0</span>   <span class="token comment"># nlm occ eigen&#xFF08;- means auto-generate&#xFF09;</span>
+<span class="token number">310</span>  <span class="token number">1.00</span>   <span class="token parameter variable">-6.0</span> 
+<span class="token number">320</span>  <span class="token number">0.00</span>   <span class="token parameter variable">-6.0</span>
+<span class="token comment">#</span>
+<span class="token number">300</span>  <span class="token number">1.00</span>  <span class="token parameter variable">-13.0</span> 
+<span class="token number">310</span>  <span class="token number">2.00</span>   <span class="token parameter variable">-6.0</span> 
+<span class="token number">320</span>  <span class="token number">0.00</span>   <span class="token parameter variable">-6.0</span>
+<span class="token comment">#</span>
+<span class="token number">300</span>  <span class="token number">2.00</span>  <span class="token parameter variable">-13.0</span> 
+<span class="token number">310</span>  <span class="token number">0.00</span>   <span class="token parameter variable">-6.0</span> 
+<span class="token number">320</span>  <span class="token number">0.00</span>   <span class="token parameter variable">-6.0</span>
+
+<span class="token punctuation">[</span>XC<span class="token punctuation">]</span>
+gga
+
+<span class="token punctuation">[</span>Relativity<span class="token punctuation">]</span>
+srl
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://opium.sourceforge.net/guide.html#relativity" target="_blank">&#x5B98;&#x7F51;&#x624B;&#x518C;</a></p>
+<p>&#x4E4B;&#x540E;&#x6267;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">opium al log all  <span class="token comment">#&#x8F93;&#x51FA;&#x5728;log&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x5168;&#x7535;&#x5B50;&#x8BA1;&#x7B97;&#x3001;&#x8D5D;&#x52BF;&#x751F;&#x6210;&#x3001;&#x975E;&#x5C40;&#x57DF;&#x52BF;&#x6D4B;&#x8BD5;&#x3001;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x6D4B;&#x8BD5;</span>
+opium al log upf  <span class="token comment">#&#x751F;&#x6210;al.upf&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</span>
+upfconv.x <span class="token parameter variable">-u</span>  al.upf <span class="token comment">#&#x5229;&#x7528;QE&#x7684;upflib&#x5C06;UPFv.1&#x8F6C;&#x5316;&#x6210;UPFv.2&#x683C;&#x5F0F;</span>
+</code></pre>
+<h2 id="33-ld1x"><a name="33-ld1x" class="plugin-anchor" href="#33-ld1x"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 ld1.x</h2>
+<p>QE &#x7684; atomic &#x6A21;&#x5757;&#x4E2D;&#x7684; <code>ld1.x</code> &#x652F;&#x6301;&#x751F;&#x6210;&#x8D5D;&#x52BF;&#x3002;&#x5176;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x3001;&#x8FD8;&#x652F;&#x6301;&#x8D85;&#x8F6F;&#x8D5D;&#x52BF;&#x3001;PAW &#x65B9;&#x6CD5;&#xFF0C;&#x652F;&#x6301;&#x5168;&#x76F8;&#x5BF9;&#x8BBA;&#x3001;&#x6807;&#x91CF;&#xFF08;&#x975E;&#xFF09;&#x76F8;&#x5BF9;&#x8BBA;&#x8D5D;&#x52BF;&#xFF08;rel, non-rel/sca-rel&#xFF09;&#xFF0C;&#x5176;&#x5F84;&#x5411;&#x6CE2;&#x51FD;&#x6570;&#x652F;&#x6301; <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993" target="_blank">TM</a>&#xFF08;&#x66F4;&#x7A33;&#x5B9A;&#xFF09;&#x4E0E; <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227" target="_blank">RRKJ</a> &#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x652F;&#x6301;&#x4EA4;&#x6362;&#x5173;&#x8054;&#x8FD1;&#x4F3C; 7 &#x7C7B; LDA&#xFF08; pz&#xFF09;,GGA&#xFF08;pbe, pbesol, revpbe, bp, wc, pw91&#x3002;</p>
+<p>&#x4E0B;&#x8F7D;&#x597D; QE &#x8F6F;&#x4EF6;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">./configure
+<span class="token function">make</span> ld1
+</code></pre>
+<h3 id="331-pslibrary-&#x8D5D;&#x52BF;&#x5E93;"><a name="331-pslibrary-&#x8D5D;&#x52BF;&#x5E93;" class="plugin-anchor" href="#331-pslibrary-&#x8D5D;&#x52BF;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.1 pslibrary &#x8D5D;&#x52BF;&#x5E93;</h3>
+<p>&#x63A8;&#x8350; ld1.x &#x751F;&#x6210;&#x5176;&#x81EA;&#x5E26;&#x7684; <a href="https://dalcorso.github.io/pslibrary/" target="_blank">pslibrary</a> &#x8D5D;&#x52BF;&#x5E93;&#xFF0C;&#x4E0B;&#x8F7D;&#x597D; <a href="https://people.sissa.it/dalcorso/pslibrary/pslibrary.1.0.0.tar.gz" target="_blank">pslibrary.1.0.0.tar.gz</a>&#xFF0C;&#x89E3;&#x538B;&#xFF0C;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4FEE;&#x6539; QE_path &#x6587;&#x4EF6;&#xFF0C;&#x6307;&#x5B9A; QE &#x7684;&#x8DEF;&#x5F84;&#x3002;&#x7136;&#x540E;&#x6253;&#x5F00; <code>make_ps</code> &#x6587;&#x4EF6;&#xFF0C;&#x89E3;&#x9501;&#x76F8;&#x5E94;&#x8D5D;&#x52BF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment">#   These two files generate PAW and US PPs for all elements. These are</span>
+<span class="token comment">#   high accuracy - high kinetic energy cut-off PPs.</span>
+<span class="token comment">#</span>
+<span class="token builtin class-name">.</span> <span class="token punctuation">..</span>/paw_ps_high.job <span class="token comment">#&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x7684;</span>
+<span class="token builtin class-name">.</span> <span class="token punctuation">..</span>/us_ps_high.job
+<span class="token comment">#</span>
+<span class="token comment">#   These two files generate additional PAW and US PPs for some elements. </span>
+<span class="token comment">#   These are less accurate PP than the previous one but require</span>
+<span class="token comment">#   lower kinetic energy cut-off or have less projectors or less semicore</span>
+<span class="token comment">#   states.</span>
+<span class="token comment">#</span>
+<span class="token builtin class-name">.</span> <span class="token punctuation">..</span>/paw_ps_low.job
+<span class="token builtin class-name">.</span> <span class="token punctuation">..</span>/us_ps_low.job
+
+<span class="token comment">#  Uncomment the following line to generate the old pslibrary 0.3.1 PPs. </span>
+<span class="token comment">#  &#x6253;&#x5F00;&#x4E0B;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x9501;&#x5176;&#x4F59;&#x8D5D;&#x52BF;</span>
+<span class="token comment">#</span>
+<span class="token comment">#. ../paw_ps_collection.job    #&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x6CE8;&#x91CA;</span>
+<span class="token comment">#. ../us_ps_collection.job     #&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x6CE8;&#x91CA;</span>
+
+<span class="token comment">#  Uncomment the following line to generate the NC-PPs. Be very careful</span>
+<span class="token comment">#  these PPs are completely untested.</span>
+<span class="token comment">#  &#x867D;&#x7136;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#xFF0C;&#x4F46;&#x5176;&#x4E5F;&#x63D0;&#x793A;&#x8BE5;&#x8D5D;&#x52BF;&#x7684;&#x51C6;&#x786E;&#x6027;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;</span>
+<span class="token comment">#</span>
+<span class="token comment">#. ../nc_ps_collection.job     #&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x6CE8;&#x91CA;</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x8FD0;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">./make_all_ps
+</code></pre>
+<p>&#x5C31;&#x80FD;&#x770B;&#x5230;&#x5728;&#x4E00;&#x4E2A;&#x4E2A;&#x751F;&#x6210;&#x8D5D;&#x52BF;&#x5E93;&#x91CC;&#x7684;&#x8D5D;&#x52BF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">Making   Ac.pz-spfn-kjpaw_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Ac.pz-spfn-rrkjus_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Ag.pz-n-kjpaw_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Ag.pz-n-rrkjus_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Ag.pz-spn-kjpaw_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Ag.pz-spn-rrkjus_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Al.pz-n-kjpaw_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Al.pz-n-rrkjus_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Al.pz-nl-kjpaw_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+Making   Al.pz-nl-rrkjus_psl.1.0.0.in  <span class="token punctuation">..</span>.  Done
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x751F;&#x6210;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; <code>make_ps</code> &#x7684; <code>element</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">element</span><span class="token operator">=</span><span class="token string">&apos;C Si Ge&apos;</span>
+</code></pre>
+<h3 id="332-&#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x8D5D;&#x52BF;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;"><a name="332-&#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x8D5D;&#x52BF;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;" class="plugin-anchor" href="#332-&#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x8D5D;&#x52BF;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3.2 &#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x8D5D;&#x52BF;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</h3>
+<p>&#x53C2;&#x6570;&#x7684;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#x89C1; <code>PATH_TO_QE/atomic/Doc/INPUT_LD1.html</code> &#x6216;<a href="https://www.quantum-espresso.org/Doc/INPUT_LD1.html#idm377" target="_blank">&#x7EBF;&#x4E0A;&#x7684;&#x6587;&#x6863;</a>&#xFF08;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7684;&#xFF0C;&#x5EFA;&#x8BAE;&#x524D;&#x8005;&#xFF09;</p>
+<p>&#x7531;&#x4E8E; <code>ld1.x</code> &#x4E0D;&#x6613;&#x8C03;&#x8BD5;&#xFF0C;&#x6240;&#x4EE5;&#x5E76;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <code>ld1.x</code> &#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x8D5D;&#x52BF;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x7B80;&#x5355;&#x7ED9;&#x4E2A; Al&#xFF08;&#x94DD;&#xFF09;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x51C6;&#x5907;&#x8F93;&#x5165;&#x6587;&#x4EF6; <code>al.in</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&amp;</span>input
+   <span class="token assign-left variable">title</span><span class="token operator">=</span><span class="token string">&apos;Al&apos;</span>,
+   <span class="token assign-left variable">zed</span><span class="token operator">=</span><span class="token number">13.0</span>,
+   <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token number">1</span>,
+   <span class="token assign-left variable">config</span><span class="token operator">=</span><span class="token string">&apos;[Ne] 3s2 3p1 3d-2.0 4f-2.0&apos;</span>,
+   <span class="token assign-left variable">iswitch</span><span class="token operator">=</span><span class="token number">3</span>,
+   <span class="token assign-left variable">dft</span><span class="token operator">=</span><span class="token string">&apos;PBE&apos;</span>
+/
+<span class="token operator">&amp;</span>inputp
+   <span class="token assign-left variable">pseudotype</span><span class="token operator">=</span><span class="token number">2</span>,
+   <span class="token assign-left variable">file_pseudopw</span><span class="token operator">=</span><span class="token string">&apos;Al.pbe-n-nc.UPF&apos;</span>, <span class="token comment">#&#x8F93;&#x5165;&#x8D5D;&#x52BF;</span>
+   <span class="token assign-left variable">lloc</span><span class="token operator">=</span><span class="token number">2</span>,
+   <span class="token assign-left variable">nlcc</span><span class="token operator">=</span>.true.,
+   <span class="token assign-left variable">tm</span><span class="token operator">=</span>.true.
+/
+<span class="token number">3</span>
+3S  <span class="token number">1</span>  <span class="token number">0</span>  <span class="token number">2.00</span>  <span class="token number">0.00</span>  <span class="token number">2.60</span>  <span class="token number">2.60</span>  <span class="token number">0.0</span>
+3P  <span class="token number">2</span>  <span class="token number">1</span>  <span class="token number">1.00</span>  <span class="token number">0.00</span>  <span class="token number">2.60</span>  <span class="token number">2.60</span>  <span class="token number">0.0</span>
+3D  <span class="token number">3</span>  <span class="token number">2</span>  <span class="token number">0.00</span>  <span class="token number">0.10</span>  <span class="token number">2.60</span>  <span class="token number">2.60</span>  <span class="token number">0.0</span>
+</code></pre>
+<p>&#x8FD0;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">ld1.x <span class="token operator">&lt;</span> al.in
+</code></pre>
+<p>&#x5373;&#x53EF;&#x751F;&#x6210; <code>Al.pbe-n-nc.UPF</code> &#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x3002;</p>
+<h1 id="4-&#x5C0F;&#x7ED3;"><a name="4-&#x5C0F;&#x7ED3;" class="plugin-anchor" href="#4-&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5C0F;&#x7ED3;</h1>
+<p>ABACUS &#x4F7F;&#x7528;&#x7684;&#x662F;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#xFF0C;&#x57FA;&#x4E8E;&#x6A21;&#x5B88;&#x6052;&#x8D5D;&#x52BF;&#x8FD8;&#x53EF;&#x4EE5;&#x4EA7;&#x751F;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#xFF0C;&#x8FDB;&#x884C;&#x57FA;&#x4E8E;&#x6570;&#x503C;&#x539F;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x9AD8;&#x6548;&#x7387;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#x8BA1;&#x7B97;&#x3002;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7F51;&#x4E0A;&#x63D0;&#x4F9B;&#x7684;&#x8D5D;&#x52BF;&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x9700;&#x6C42;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x8D5D;&#x52BF;&#x7684;&#x751F;&#x6210;&#x9700;&#x8981;&#x5BF9;&#x8D5D;&#x52BF;&#x7406;&#x8BBA;&#x6709;&#x6BD4;&#x8F83;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8C03;&#x6574;&#x597D;&#x76F8;&#x5173;&#x53C2;&#x6570;&#xFF0C;&#x751F;&#x6210;&#x8D28;&#x91CF;&#x8F83;&#x597D;&#x7684;&#x8D5D;&#x52BF;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x751F;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x5E94;&#x8BE5;&#x7ECF;&#x8FC7;&#x8F83;&#x4E3A;&#x5145;&#x5206;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x624D;&#x80FD;&#x4FDD;&#x8BC1;&#x8D5D;&#x52BF;&#x7684;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x548C;&#x6B63;&#x786E;&#x6027;&#x3002;&#x5982;&#x679C;&#x5927;&#x5BB6;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x6B22;&#x8FCE;&#x53D1; email &#x81F3;&#x6587;&#x6863;&#x5F00;&#x5934;&#x7684;&#x90AE;&#x7BB1;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="abacus-dcu.html" class="navigation navigation-prev " aria-label="Previous page: ABACUS 在曙光 DCU 集群上的编译与使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-nac2.html" class="navigation navigation-next " aria-label="Next page: 数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"模守恒赝势生成方法简介","level":"1.1.2","depth":2,"next":{"title":"数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道","level":"1.1.3","depth":2,"path":"abacus-nac2.md","ref":"abacus-nac2.md","articles":[]},"previous":{"title":"ABACUS 在曙光 DCU 集群上的编译与使用","level":"1.1.1","depth":2,"path":"abacus-dcu.md","ref":"abacus-dcu.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","3-ba","pageview-count","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"abacus-upf.md","mtime":"2023-06-21T07:58:39.284Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-21T08:00:45.840Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

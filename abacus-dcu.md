@@ -2,7 +2,7 @@
 
 <strong>作者：贾志炜，邮箱：jiazhiwei@stu.pku.edu.cn</strong>
 
-<strong>审阅：韩昊知，邮箱：haozhi.han@stu.pku.edu.cn</strong>
+<strong>审核：韩昊知，邮箱：haozhi.han@stu.pku.edu.cn</strong>
 
 <strong>最后更新时间：2023/06/15</strong>
 

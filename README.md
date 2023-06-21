@@ -13,10 +13,11 @@ ABACUS（中文名量子算筹）是国产开源密度泛函理论软件，相�
    4. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[<mark style="color:red;">如何转换STRU的格式</mark>](https://dptechnology.feishu.cn/wiki/wikcn6fjwNR77kxbyKDdFZASkOg)<mark style="color:red;"></mark>
-   2. 数值原子轨道基组生成教程：
+   2. 准备赝势：
+   [模守恒赝势生成方法简介](abacus-upf.md)
+   3. 数值原子轨道基组生成教程：
    [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md);
    [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)
-   3. 准备赝势（缺）
 3. Kohn-Sham密度泛函理论
    1. 电子自洽迭代
       1. 平面波PW（缺）
