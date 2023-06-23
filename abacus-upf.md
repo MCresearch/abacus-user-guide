@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/21</strong>
+<strong>最后更新时间：2023/06/23</strong>
 
 # 1. 介绍
 
@@ -424,7 +424,7 @@ srl
 之后执行
 
 ```bash
-opium al log all  #输出在log文件里，依次执行全电子计算、赝势生成、非局域势测试、可移植性测试
+opium al log all  #输出在log文件里，依次执行全电子计算、计算赝势、计算非局域势、可移植性测试
 opium al log upf  #生成al.upf的输出文件
 upfconv.x -u  al.upf #利用QE的upflib将UPFv.1转化成UPFv.2格式
 ```
@@ -499,11 +499,11 @@ Making   Al.pz-nl-rrkjus_psl.1.0.0.in  ...  Done
 element='C Si Ge'
 ```
 
-### 3.3.2 生成自己的赝势（不推荐）
+### 3.3.2 生成自己的赝势
 
-参数的详细解释见 `PATH_TO_QE/atomic/Doc/INPUT_LD1.html` 或[线上的文档](https://www.quantum-espresso.org/Doc/INPUT_LD1.html#idm377)（不是最新的，建议前者）
+参数的详细解释见 `PATH_TO_QE/atomic/Doc/INPUT_LD1.html` 或[线上的文档](https://www.quantum-espresso.org/Doc/INPUT_LD1.html#idm377)（不是最新的，建议前者），输入文件可以参考 [pslibrary](https://dalcorso.github.io/pslibrary/) 赝势库的例子。
 
-由于 `ld1.x` 不易调试，所以并不建议使用 `ld1.x` 生成自己的赝势，这里就简单给个 Al（铝）的例子，准备输入文件 `al.in`：
+这里就简单给个 Al（铝）的例子，准备输入文件 `al.in`：
 
 ```bash
 &input
