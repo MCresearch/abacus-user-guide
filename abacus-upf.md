@@ -20,7 +20,7 @@ ABACUS（截至 v3.2.3）的 Kohn-Sham 密度泛函理论计算主要支持 UPF 
 
 但是，在实际计算中，可能这些赝势并不符合当前的需求，这时候就需要自己生成模守恒赝势。可以通过其他格式赝势转换或者利用赝势软件生成两种方式来获得赝势。
 
-注：ABACUS 的无轨道密度泛函理论计算（Orbital-Free Density Functional Theory，简称 OFDFT）需要用到一种特殊的局域势（不包含非局域势），一般采用 BLPS 局域赝势文件而非上文提到的 UPF 文件，如果做 OFDFT 计算的，可以阅读介绍 OFDFT 计算的文档，或者登录 Emily A. Carter 教授主页寻找相关的信息。
+注：ABACUS 的无轨道密度泛函理论计算（Orbital-Free Density Functional Theory，简称 OFDFT）需要用到一种特殊的局域势（不包含非局域势），一般采用 [BLPS 局域赝势文件](https://github.com/PrincetonUniversity/BLPSLibrary)而非上文提到的 UPF 文件，如果做 OFDFT 计算的，可以阅读介绍 OFDFT 计算的文档，或者登录 Emily A. Carter 教授主页寻找相关的信息。
 
 # 2. 从其他格式赝势转换
 
@@ -34,7 +34,7 @@ path_to_QE/upflib/upfconv.x -u  *.upf/UPF/vdb/van/cpi/fhi
 
 注：这里的 `path_to_QE` 代表下载的 Quantum Espresso 的软件包地址。
 
-注：文件夹 upflib 在 QE5 和 6 叫 upftools,QE7 叫 upflib。
+注：文件夹 `upflib` 在 QE 5.x 和 6.x 版本名称为 `upftools`，在QE 7.x 版本为 `upflib`。
 
 ## 2.2 psp8 格式转换
 
@@ -246,13 +246,33 @@ sh PATH_TO_ONCVPSP/scripts/run.sh Al
 
 ![](picture/fig_upf-1.png)
 
+```
+图1. 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数
+```
+
 ![](picture/fig_upf-2.png)
+
+```
+图2. S赝波函数与全电子波函数对比
+```
 
 ![](picture/fig_upf-3.png)
 
+```
+图3. S的双投影波函数
+```
+
 ![](picture/fig_upf-4.png)
 
-![](picture/fig_upf-1.png)
+```
+图4. 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算
+```
+
+![](picture/fig_upf-5.png)
+
+```
+图5. 不同轨道角动量对应的截断能
+```
 
 ### 3.1.5 优化赝势
 
