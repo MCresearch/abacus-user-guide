@@ -1,0 +1,2609 @@
+                                                                                     
+                              ABACUS v3.1                                            
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+
+    Start Time is Fri Feb  3 19:28:16 2023
+                                                                                     
+ ------------------------------------------------------------------------------------
+
+ READING GENERAL INFORMATION
+                           global_out_dir = OUT.ABACUS/
+                           global_in_card = INPUT
+                               pseudo_dir = 
+                              orbital_dir = 
+                                    DRANK = 1
+                                    DSIZE = 16
+                                   DCOLOR = 1
+                                    GRANK = 1
+                                    GSIZE = 1
+ The esolver type has been set to : ksdft_lcao
+
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Reading atom information in unitcell:                              |
+ | From the input file and the structure file we know the number of   |
+ | different elments in this unitcell, then we list the detail        |
+ | information for each element, especially the zeta and polar atomic |
+ | orbital number for each element. The total atom number is counted. |
+ | We calculate the nearest atom distance for each atom and show the  |
+ | Cartesian and Direct coordinates for each atom. We list the file   |
+ | address for atomic orbitals. The volume and the lattice vectors    |
+ | in real and reciprocal space is also shown.                        |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+ READING UNITCELL INFORMATION
+                                    ntype = 2
+                 atom label for species 1 = Si
+                 atom label for species 2 = C
+                  lattice constant (Bohr) = 1.88973
+              lattice constant (Angstrom) = 1
+
+ READING ATOM TYPE 1
+                               atom label = Si
+                      L=0, number of zeta = 3
+                      L=1, number of zeta = 3
+                      L=2, number of zeta = 2
+             number of atom for this type = 32
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+
+ READING ATOM TYPE 2
+                               atom label = C
+                      L=0, number of zeta = 3
+                      L=1, number of zeta = 3
+                      L=2, number of zeta = 2
+             number of atom for this type = 32
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+                      start magnetization = FALSE
+
+                        TOTAL ATOM NUMBER = 64
+
+ CARTESIAN COORDINATES ( UNIT = 1.88973 Bohr ).
+         atom                   x                   y                   z                 mag                  vx                  vy                  vz
+     tauc_Si1       3.30066932959        1.0859095992       3.28206045592                   0                   0                   0                   0
+     tauc_Si2       3.29126756629       1.15035421539       7.67609758299                   0                   0                   0                   0
+     tauc_Si3       3.35293285588       5.47270900473       3.24296277012                   0                   0                   0                   0
+     tauc_Si4       3.35111536676       5.52481737438       7.64389216022                   0                   0                   0                   0
+     tauc_Si5       7.69336584138       1.02687975669       3.30265747532                   0                   0                   0                   0
+     tauc_Si6       7.68604469474        1.0873009589       7.69703224173                   0                   0                   0                   0
+     tauc_Si7       7.74183702691       5.42006563674       3.25799399135                   0                   0                   0                   0
+     tauc_Si8       7.74564369232       5.45822353559       7.62556259177                   0                   0                   0                   0
+     tauc_Si9       3.33946996279       3.26303716123       1.07465830605                   0                   0                   0                   0
+    tauc_Si10       3.31664128793        3.3161174073        5.4695623264                   0                   0                   0                   0
+    tauc_Si11       3.40446362529       7.65499693629       1.01826065387                   0                   0                   0                   0
+    tauc_Si12       3.39616325212        7.7030949557        5.3991525947                   0                   0                   0                   0
+    tauc_Si13        7.7274278756       3.20779996126       1.06126995662                   0                   0                   0                   0
+    tauc_Si14       7.71630634785       3.24213898861       5.47567018049                   0                   0                   0                   0
+    tauc_Si15       7.77767245521       7.60997432823       1.04186436308                   0                   0                   0                   0
+    tauc_Si16       7.78954335276       7.65022655582       5.43288413171                   0                   0                   0                   0
+    tauc_Si17       1.11843785164       1.09743126747       1.08362266499                   0                   0                   0                   0
+    tauc_Si18       1.10591731942       1.14684412938       5.48638025503                   0                   0                   0                   0
+    tauc_Si19       1.18362991429       5.49120106489       1.03548008955                   0                   0                   0                   0
+    tauc_Si20        1.1669394938       5.52324293559       5.43218167946                   0                   0                   0                   0
+    tauc_Si21       5.49389375251       1.03125209308       1.09617306553                   0                   0                   0                   0
+    tauc_Si22       5.49382658886       1.08911876154       5.49248313929                   0                   0                   0                   0
+    tauc_Si23       5.55399627899       5.43121884785       1.04159941591                   0                   0                   0                   0
+    tauc_Si24       5.57381812198         5.494394229       5.44329439434                   0                   0                   0                   0
+    tauc_Si25       1.12948845137        3.3181115261       3.26079232208                   0                   0                   0                   0
+    tauc_Si26       1.12554362219       3.37881655492       7.64954028514                   0                   0                   0                   0
+    tauc_Si27       1.19935222912       7.71388936125       3.19852705017                   0                   0                   0                   0
+    tauc_Si28       1.19729217409       7.75796791668       7.61531447924                   0                   0                   0                   0
+    tauc_Si29       5.52897045174       3.25187044979       3.27201239469                   0                   0                   0                   0
+    tauc_Si30       5.51577943903       3.29926724658       7.66216200227                   0                   0                   0                   0
+    tauc_Si31       5.58431224298       7.64983847472       3.21113012537                   0                   0                   0                   0
+    tauc_Si32       5.57712906891       7.69238071864       7.60367701234                   0                   0                   0                   0
+      tauc_C1      0.403453336171       8.82046584422     0.0205592138045                   0                   0                   0                   0
+      tauc_C2      0.381227763462       8.85884725317        4.4169969397                   0                   0                   0                   0
+      tauc_C3      0.185272549075       4.46776469798       8.92280361988                   0                   0                   0                   0
+      tauc_C4      0.204500519417       4.32425038408       4.36593487335                   0                   0                   0                   0
+      tauc_C5       4.64188017518        8.8647241271    0.00313450843215                   0                   0                   0                   0
+      tauc_C6       4.63426675511       8.92201599473       4.40294068222                   0                   0                   0                   0
+      tauc_C7       4.41909368015       4.53436543358       8.89754450726                   0                   0                   0                   0
+      tauc_C8       4.44375621996       4.36216187852       4.36257456705                   0                   0                   0                   0
+      tauc_C9      0.178785676848       2.10016726357       2.19433359242                   0                   0                   0                   0
+     tauc_C10       0.17290836423       2.15804771488       6.57396913495                   0                   0                   0                   0
+     tauc_C11      0.230977517745       6.49035865598       2.14568402844                   0                   0                   0                   0
+     tauc_C12      0.237201837939       6.54106210787       6.52703811403                   0                   0                   0                   0
+     tauc_C13          4.40592395       2.14767003731       2.17857819189                   0                   0                   0                   0
+     tauc_C14       4.41147909824       2.21409303194       6.56541393524                   0                   0                   0                   0
+     tauc_C15       4.49013596438       6.54648637927        2.1499117662                   0                   0                   0                   0
+     tauc_C16       4.45463200846       6.60486503488       6.53383591233                   0                   0                   0                   0
+     tauc_C17       2.43057357184       8.92424882477       2.21486036329                   0                   0                   0                   0
+     tauc_C18       2.41178807997       8.97741456314       6.59999842336                   0                   0                   0                   0
+     tauc_C19       2.24335033108       4.38340000646       2.15867947976                   0                   0                   0                   0
+     tauc_C20       2.24607242085       4.44003494767       6.54289067884                   0                   0                   0                   0
+     tauc_C21       6.82286954195       8.87253711903       2.20773566306                   0                   0                   0                   0
+     tauc_C22       6.80683759718       8.90794518523        6.6036353905                   0                   0                   0                   0
+     tauc_C23       6.64022456659        4.3204020254       2.15645569052                   0                   0                   0                   0
+     tauc_C24       6.63092840948       4.36625219909       6.54971343619                   0                   0                   0                   0
+     tauc_C25       2.17353147587       2.36212802923       8.92408954643                   0                   0                   0                   0
+     tauc_C26       2.21516414942       2.22712784642       4.36817730188                   0                   0                   0                   0
+     tauc_C27       2.25067531094       6.75340526017       8.88179081453                   0                   0                   0                   0
+     tauc_C28       2.27842443868       6.59246501369       4.31594928062                   0                   0                   0                   0
+     tauc_C29       6.58102717539       2.29836596533       8.93428024531                   0                   0                   0                   0
+     tauc_C30       6.60471396744       2.14070164504       4.38357195918                   0                   0                   0                   0
+     tauc_C31       6.63962289092       6.69116016807       8.89049701816                   0                   0                   0                   0
+     tauc_C32        6.6585659794       6.55564822023       4.33971463104                   0                   0                   0                   0
+
+
+ READING ORBITAL FILE NAMES FOR LCAO
+ orbital file: Si_gga_9au_100Ry_3s3p2d.orb
+ orbital file: C_gga_9au_100Ry_3s3p2d.orb
+
+                          Volume (Bohr^3) = 4648.11134458
+                             Volume (A^3) = 688.778214951
+
+ Lattice vectors: (Cartesian coordinate: in unit of a_0)
+       +8.62662183104                  +0                  +0
+      +0.238767848833      +8.92663979417                  +0
+     -0.0403890979807     +0.201450271947      +8.94439871575
+ Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
+      +0.115920231533   -0.00310060951909  +0.000593279927336
+                   +0     +0.112024235665   -0.00252306649744
+                   +0                  -0     +0.111801813826
+
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Reading pseudopotentials files:                                    |
+ | The pseudopotential file is in UPF format. The 'NC' indicates that |
+ | the type of pseudopotential is 'norm conserving'. Functional of    |
+ | exchange and correlation is decided by 4 given parameters in UPF   |
+ | file.  We also read in the 'core correction' if there exists.      |
+ | Also we can read the valence electrons number and the maximal      |
+ | angular momentum used in this pseudopotential. We also read in the |
+ | trail wave function, trail atomic density and local-pseudopotential|
+ | on logrithmic grid. The non-local pseudopotential projector is also|
+ | read in if there is any.                                           |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+                PAO radial cut off (Bohr) = 15
+
+ Read in pseudopotential file is Si_ONCV_PBE-1.0.upf
+                     pseudopotential type = NC
+          exchange-correlation functional = PBE
+                 nonlocal core correction = 0
+                        valence electrons = 4
+                                     lmax = 1
+                           number of zeta = 0
+                     number of projectors = 4
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                PAO radial cut off (Bohr) = 15
+
+ Read in pseudopotential file is C_ONCV_PBE-1.0.upf
+                     pseudopotential type = NC
+          exchange-correlation functional = PBE
+                 nonlocal core correction = 0
+                        valence electrons = 4
+                                     lmax = 1
+                           number of zeta = 0
+                     number of projectors = 4
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+     initial pseudo atomic orbital number = 0
+                                   NLOCAL = 1408
+
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Setup plane waves of charge/potential:                             |
+ | Use the energy cutoff and the lattice vectors to generate the      |
+ | dimensions of FFT grid. The number of FFT grid on each processor   |
+ | is 'nrxx'. The number of plane wave basis in reciprocal space is   |
+ | different for charege/potential and wave functions. We also set    |
+ | the 'sticks' for the parallel of FFT. The number of plane waves    |
+ | is 'npw' in each processor.                                        |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+ SETUP THE PLANE WAVE BASIS
+ energy cutoff for charge/potential (unit:Ry) = 400
+          [fft grid for charge/potential] = 108, 108, 108
+                      [fft grid division] = 2, 2, 2
+      [big fft grid for charge/potential] = 54, 54, 54
+                                     nbxx = 11664
+                                     nrxx = 93312
+
+ SETUP PLANE WAVES FOR CHARGE/POTENTIAL
+                    number of plane waves = 627951
+                         number of sticks = 8745
+
+ PARALLEL PW FOR CHARGE/POTENTIAL
+     PROC   COLUMNS(POT)             PW
+        1            546          39246
+        2            546          39246
+        3            546          39246
+        4            546          39246
+        5            546          39246
+        6            547          39248
+        7            547          39248
+        8            547          39248
+        9            546          39246
+       10            546          39246
+       11            547          39248
+       12            547          39247
+       13            547          39249
+       14            547          39247
+       15            547          39247
+       16            547          39247
+ --------------- sum -------------------
+       16           8745         627951
+                            number of |g| = 38760
+                                  max |g| = 36.1815044782
+                                  min |g| = 0.313547749298
+
+ SETUP THE ELECTRONS NUMBER
+            electron number of element Si = 4
+      total electron number of element Si = 128
+             electron number of element C = 4
+       total electron number of element C = 128
+            AUTOSET number of electrons:  = 256
+ DONE : SETUP UNITCELL Time : 0.0981831809167 (SEC)
+
+
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Setup K-points                                                     |
+ | We setup the k-points according to input parameters.               |
+ | The reduced k-points are set according to symmetry operations.     |
+ | We treat the spin as another set of k-points.                      |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+ SETUP K-POINTS
+                                    nspin = 1
+                   Input type of k points = Monkhorst-Pack(Gamma)
+                                   nkstot = 64
+                               nkstot_ibz = 36
+      IBZ             DirectX             DirectY             DirectZ              Weight    ibz2bz
+        1                   0                   0                   0            0.015625         0
+        2                0.75                   0                   0             0.03125         1
+        3                 0.5                   0                   0            0.015625         2
+        4                   0                0.75                   0             0.03125         4
+        5                0.75                0.75                   0             0.03125         5
+        6                 0.5                0.75                   0             0.03125         6
+        7                0.25                0.75                   0             0.03125         7
+        8                   0                 0.5                   0            0.015625         8
+        9                0.75                 0.5                   0             0.03125         9
+       10                 0.5                 0.5                   0            0.015625        10
+       11                   0                   0                0.75             0.03125        16
+       12                0.75                   0                0.75             0.03125        17
+       13                 0.5                   0                0.75             0.03125        18
+       14                0.25                   0                0.75             0.03125        19
+       15                   0                0.75                0.75             0.03125        20
+       16                0.75                0.75                0.75             0.03125        21
+       17                 0.5                0.75                0.75             0.03125        22
+       18                0.25                0.75                0.75             0.03125        23
+       19                   0                 0.5                0.75             0.03125        24
+       20                0.75                 0.5                0.75             0.03125        25
+       21                 0.5                 0.5                0.75             0.03125        26
+       22                0.25                 0.5                0.75             0.03125        27
+       23                   0                0.25                0.75             0.03125        28
+       24                0.75                0.25                0.75             0.03125        29
+       25                 0.5                0.25                0.75             0.03125        30
+       26                0.25                0.25                0.75             0.03125        31
+       27                   0                   0                 0.5            0.015625        32
+       28                0.75                   0                 0.5             0.03125        33
+       29                 0.5                   0                 0.5            0.015625        34
+       30                   0                0.75                 0.5             0.03125        36
+       31                0.75                0.75                 0.5             0.03125        37
+       32                 0.5                0.75                 0.5             0.03125        38
+       33                0.25                0.75                 0.5             0.03125        39
+       34                   0                 0.5                 0.5            0.015625        40
+       35                0.75                 0.5                 0.5             0.03125        41
+       36                 0.5                 0.5                 0.5            0.015625        42
+                               nkstot now = 36
+
+  KPOINTS            DIRECT_X            DIRECT_Y            DIRECT_Z              WEIGHT
+        1                   0                   0                   0            0.015625
+        2                0.75                   0                   0             0.03125
+        3                 0.5                   0                   0            0.015625
+        4                   0                0.75                   0             0.03125
+        5                0.75                0.75                   0             0.03125
+        6                 0.5                0.75                   0             0.03125
+        7                0.25                0.75                   0             0.03125
+        8                   0                 0.5                   0            0.015625
+        9                0.75                 0.5                   0             0.03125
+       10                 0.5                 0.5                   0            0.015625
+       11                   0                   0                0.75             0.03125
+       12                0.75                   0                0.75             0.03125
+       13                 0.5                   0                0.75             0.03125
+       14                0.25                   0                0.75             0.03125
+       15                   0                0.75                0.75             0.03125
+       16                0.75                0.75                0.75             0.03125
+       17                 0.5                0.75                0.75             0.03125
+       18                0.25                0.75                0.75             0.03125
+       19                   0                 0.5                0.75             0.03125
+       20                0.75                 0.5                0.75             0.03125
+       21                 0.5                 0.5                0.75             0.03125
+       22                0.25                 0.5                0.75             0.03125
+       23                   0                0.25                0.75             0.03125
+       24                0.75                0.25                0.75             0.03125
+       25                 0.5                0.25                0.75             0.03125
+       26                0.25                0.25                0.75             0.03125
+       27                   0                   0                 0.5            0.015625
+       28                0.75                   0                 0.5             0.03125
+       29                 0.5                   0                 0.5            0.015625
+       30                   0                0.75                 0.5             0.03125
+       31                0.75                0.75                 0.5             0.03125
+       32                 0.5                0.75                 0.5             0.03125
+       33                0.25                0.75                 0.5             0.03125
+       34                   0                 0.5                 0.5            0.015625
+       35                0.75                 0.5                 0.5             0.03125
+       36                 0.5                 0.5                 0.5            0.015625
+
+           k-point number in this process = 36
+       minimum distributed K point number = 36
+
+  KPOINTS         CARTESIAN_X         CARTESIAN_Y         CARTESIAN_Z              WEIGHT
+        1                   0                   0                   0             0.03125
+        2     0.0869401736496   -0.00232545713932   0.000444959945502              0.0625
+        3     0.0579601157664   -0.00155030475955   0.000296639963668             0.03125
+        4                   0     0.0840181767489   -0.00189229987308              0.0625
+        5     0.0869401736496     0.0816927196096   -0.00144733992758              0.0625
+        6     0.0579601157664     0.0824678719893   -0.00159565990941              0.0625
+        7     0.0289800578832     0.0832430243691   -0.00174397989124              0.0625
+        8                   0     0.0560121178326   -0.00126153324872             0.03125
+        9     0.0869401736496     0.0536866606933  -0.000816573303217              0.0625
+       10     0.0579601157664      0.054461813073  -0.000964893285051             0.03125
+       11                   0                   0     0.0838513603692              0.0625
+       12     0.0869401736496   -0.00232545713932     0.0842963203147              0.0625
+       13     0.0579601157664   -0.00155030475955     0.0841480003328              0.0625
+       14     0.0289800578832  -0.000775152379774      0.083999680351              0.0625
+       15                   0     0.0840181767489     0.0819590604961              0.0625
+       16     0.0869401736496     0.0816927196096     0.0824040204416              0.0625
+       17     0.0579601157664     0.0824678719893     0.0822557004597              0.0625
+       18     0.0289800578832     0.0832430243691     0.0821073804779              0.0625
+       19                   0     0.0560121178326     0.0825898271204              0.0625
+       20     0.0869401736496     0.0536866606933     0.0830347870659              0.0625
+       21     0.0579601157664      0.054461813073     0.0828864670841              0.0625
+       22     0.0289800578832     0.0552369654528     0.0827381471023              0.0625
+       23                   0     0.0280060589163     0.0832205937448              0.0625
+       24     0.0869401736496      0.025680601777     0.0836655536903              0.0625
+       25     0.0579601157664     0.0264557541567     0.0835172337085              0.0625
+       26     0.0289800578832     0.0272309065365     0.0833689137266              0.0625
+       27                   0                   0     0.0559009069128             0.03125
+       28     0.0869401736496   -0.00232545713932     0.0563458668583              0.0625
+       29     0.0579601157664   -0.00155030475955     0.0561975468764             0.03125
+       30                   0     0.0840181767489     0.0540086070397              0.0625
+       31     0.0869401736496     0.0816927196096     0.0544535669852              0.0625
+       32     0.0579601157664     0.0824678719893     0.0543052470034              0.0625
+       33     0.0289800578832     0.0832430243691     0.0541569270215              0.0625
+       34                   0     0.0560121178326     0.0546393736641             0.03125
+       35     0.0869401736496     0.0536866606933     0.0550843336096              0.0625
+       36     0.0579601157664      0.054461813073     0.0549360136277             0.03125
+
+  KPOINTS            DIRECT_X            DIRECT_Y            DIRECT_Z              WEIGHT
+        1                   0                   0                   0             0.03125
+        2                0.75                   0                   0              0.0625
+        3                 0.5                   0                   0             0.03125
+        4                   0                0.75                   0              0.0625
+        5                0.75                0.75                   0              0.0625
+        6                 0.5                0.75                   0              0.0625
+        7                0.25                0.75                   0              0.0625
+        8                   0                 0.5                   0             0.03125
+        9                0.75                 0.5                   0              0.0625
+       10                 0.5                 0.5                   0             0.03125
+       11                   0                   0                0.75              0.0625
+       12                0.75                   0                0.75              0.0625
+       13                 0.5                   0                0.75              0.0625
+       14                0.25                   0                0.75              0.0625
+       15                   0                0.75                0.75              0.0625
+       16                0.75                0.75                0.75              0.0625
+       17                 0.5                0.75                0.75              0.0625
+       18                0.25                0.75                0.75              0.0625
+       19                   0                 0.5                0.75              0.0625
+       20                0.75                 0.5                0.75              0.0625
+       21                 0.5                 0.5                0.75              0.0625
+       22                0.25                 0.5                0.75              0.0625
+       23                   0                0.25                0.75              0.0625
+       24                0.75                0.25                0.75              0.0625
+       25                 0.5                0.25                0.75              0.0625
+       26                0.25                0.25                0.75              0.0625
+       27                   0                   0                 0.5             0.03125
+       28                0.75                   0                 0.5              0.0625
+       29                 0.5                   0                 0.5             0.03125
+       30                   0                0.75                 0.5              0.0625
+       31                0.75                0.75                 0.5              0.0625
+       32                 0.5                0.75                 0.5              0.0625
+       33                0.25                0.75                 0.5              0.0625
+       34                   0                 0.5                 0.5             0.03125
+       35                0.75                 0.5                 0.5              0.0625
+       36                 0.5                 0.5                 0.5             0.03125
+ DONE : INIT K-POINTS Time : 0.109855997329 (SEC)
+
+                           occupied bands = 128
+                                   NLOCAL = 1408
+                                   NBANDS = 154
+                                   NBANDS = 154
+
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Setup numerical orbitals:                                          |
+ | This part setup: numerical atomic orbitals, non-local projectors   |
+ | and neutral potential (1D). The atomic orbitals information        |
+ | including the radius, angular momentum and zeta number.            |
+ | The neutral potential is the sum of local part of pseudopotential  |
+ | and potential given by atomic charge, they will cancel out beyond  |
+ | a certain radius cutoff, because the Z/r character.                |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+
+ SETUP ONE DIMENSIONAL ORBITALS/POTENTIAL
+                        delta k  (1/Bohr) = 0.01
+                        delta r    (Bohr) = 0.01
+                        dr_uniform (Bohr) = 0.001
+                        rmax       (Bohr) = 30
+                                    kmesh = 1005
+      ORBITAL  L  N      nr      dr    RCUT  CHECK_UNIT    NEW_UNIT
+            1  0  0     901    0.01       9           1           1
+            2  0  1     901    0.01       9           1           1
+            3  0  2     901    0.01       9           1           1
+            4  1  0     901    0.01       9           1           1
+            5  1  1     901    0.01       9           1           1
+            6  1  2     901    0.01       9           1           1
+            7  2  0     901    0.01       9           1           1
+            8  2  1     901    0.01       9           1           1
+      ORBITAL  L  N      nr      dr    RCUT  CHECK_UNIT    NEW_UNIT
+            1  0  0     901    0.01       9           1           1
+            2  0  1     901    0.01       9           1           1
+            3  0  2     901    0.01       9           1           1
+            4  1  0     901    0.01       9           1           1
+            5  1  1     901    0.01       9           1           1
+            6  1  2     901    0.01       9           1           1
+            7  2  0     901    0.01       9           1           1
+            8  2  1     901    0.01       9           1           1
+ SET NONLOCAL PSEUDOPOTENTIAL PROJECTORS
+ SET NONLOCAL PSEUDOPOTENTIAL PROJECTORS
+ max number of nonlocal projetors among all species is 4
+
+ SETUP THE TWO-CENTER INTEGRATION TABLES
+
+ Warning_Memory_Consuming allocated:  ORB::Jl(x) 138 MB
+
+ Warning_Memory_Consuming allocated:  ORB::Table_SR&TR 52.9 MB
+
+ Warning_Memory_Consuming allocated:  ORB::Table_NR 11 MB
+
+ SETUP THE DIVISION OF H/S MATRIX
+ divide the H&S matrix using 2D block algorithms.
+                                     nb2d = 64
+ parameter nb2d is too large: nb2d = 64
+ reset nb2d to value 1, this set would make the program keep working but maybe get slower during diagonalization.
+                  trace_loc_row dimension = 1408
+                  trace_loc_col dimension = 1408
+                                     nloc = 123904
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 0
+ -------------------------------------------
+              searching radius is (Bohr)) = 25.3
+         searching radius unit is (Bohr)) = 1.89
+
+ Warning_Memory_Consuming allocated:  GT::index2normal 5.6 MB
+
+ Warning_Memory_Consuming allocated:  GT::index2ucell 5.6 MB
+1373660
+
+ Warning_Memory_Consuming allocated:  pvpR_reduced 79.6 MB
+
+ Warning_Memory_Consuming allocated:  LOC::DM_R 79.6 MB
+                                 init_chg = atomic
+ DONE : INIT SCF Time : 8.41826 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   1--------------------------------
+
+ Warning_Memory_Consuming allocated:  ChgMix::Rrho 5.69531 MB
+
+ Density error is 0.271080189818
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   2--------------------------------
+
+ Density error is 0.164378089873
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   3--------------------------------
+
+ Density error is 0.0538675858533
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   4--------------------------------
+
+ Density error is 0.0549879480195
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   5--------------------------------
+
+ Density error is 0.0119233918446
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   6--------------------------------
+
+ Density error is 0.00608053488798
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   7--------------------------------
+
+ Density error is 0.00300335749726
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   8--------------------------------
+
+ Density error is 0.00192562039623
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=   9--------------------------------
+
+ Density error is 0.000958542805364
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  10--------------------------------
+
+ Density error is 0.000223731418176
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  11--------------------------------
+
+ Density error is 0.000179515997523
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  12--------------------------------
+
+ Density error is 8.60063435909e-05
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  13--------------------------------
+
+ Density error is 2.16046469231e-05
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  14--------------------------------
+
+ Density error is 1.63605545832e-05
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  15--------------------------------
+
+ Density error is 8.24282829496e-06
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  16--------------------------------
+
+ Density error is 2.59142343249e-06
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  17--------------------------------
+
+ Density error is 1.32664160964e-06
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  18--------------------------------
+
+ Density error is 1.14432223971e-06
+
+ LCAO ALGORITHM --------------- ION=   1  ELEC=  19--------------------------------
+
+ Density error is 2.95280915634e-07
+
+ charge density convergence is achieved
+ final etot is -8399.98733442 eV
+
+ Warning_Memory_Consuming allocated:  Force::dS_K 31.4405822754 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dHr 31.4405822754 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dSR 62.8811645508 MB
+
+ Warning_Memory_Consuming allocated:  Force::dTVNL 31.4405822754 MB
+
+ Warning_Memory_Consuming allocated:  Force::edm2d 10.4801940918 MB
+
+ Warning_Memory_Consuming allocated:  Force::dm2d_K 10.4801940918 MB
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+     atom              x              y              z
+      Si1         -0.15012495         -0.43821408           +0.336181
+      Si2         -0.30165397        -0.096316703          +2.3013836
+      Si3         +0.22653466         -0.26889907        +0.061123975
+      Si4           -0.268484         +0.64519569          +1.9810133
+      Si5         -0.54573016         -0.36271483         -0.12733515
+      Si6         -0.78547595        +0.094850229          +2.0341624
+      Si7         -0.49308875       -0.0086514988         -0.20985669
+      Si8          -0.7023874         +0.82183402           +2.521787
+      Si9         -0.26895857         -0.29130103         -0.71982239
+     Si10         +0.15949102          -0.3255686         -0.33446249
+     Si11         +0.70226313          +1.9516369         +0.10294513
+     Si12          +0.3476422          +1.9808125         +0.54918366
+     Si13           -0.512921         -0.29388055         -0.22921247
+     Si14         -0.61594388        +0.041634975          -0.4208465
+     Si15         +0.31522438          +1.8375197         -0.40452781
+     Si16          -0.1221758          +2.1155691         +0.13973105
+     Si17          +2.5163537          -1.9604787          -1.1186723
+     Si18          +2.7238154          -2.0998372          -1.2799824
+     Si19           +2.334901          -1.6726855          -1.1832146
+     Si20          +2.7105693          -1.3285441           -1.125316
+     Si21         +0.07773029         -0.47135053         -0.57622366
+     Si22        -0.082723035         -0.71623702         -0.13492246
+     Si23         +0.25721417         -0.31347339         -0.38863924
+     Si24         -0.76678148         -0.57549696        -0.054509737
+     Si25          +2.6875925          -1.7541478          -1.0614843
+     Si26          +1.7114617         -0.47077727          +2.1893284
+     Si27          +2.6845658         +0.84536097         +0.39257685
+     Si28          +2.1878392          +1.8742161          +2.2493929
+     Si29         -0.22035972         -0.26657213         -0.16346131
+     Si30         -0.27996442          +0.5768843          +2.1082708
+     Si31         +0.72828757          +2.1294798         +0.67472068
+     Si32         +0.68218829          +2.3601681          +2.4571057
+       C1            -2.24033          -1.7838481          -2.1007177
+       C2            -2.25212         -0.67308696         -0.14803484
+       C3          -1.3390897         +0.42706436          -1.9959289
+       C4          -2.4689519          +1.6459164          +1.1200516
+       C5         -0.95662198          -1.9881576          -1.8818254
+       C6         -0.84100858          -1.7087336         -0.54894523
+       C7         +0.16707682         -0.71585503          -1.4943943
+       C8            +0.22335         +0.62692195        +0.081215477
+       C9          -2.3762795          +1.7167425         +0.81509339
+      C10          -2.4537635          +1.8146532          +1.4166784
+      C11          -2.1348758          +1.7569509         +0.93309011
+      C12          -2.1532688          +1.7319727          +1.3657121
+      C13         +0.29961371         +0.33673845         +0.04372393
+      C14         -0.12045918         +0.16846659         +0.30165492
+      C15         -0.21742282         +0.15613458         -0.23428942
+      C16         +0.41606945        +0.029279667         -0.01882607
+      C17         -0.52007449          -1.9527146         -0.87417322
+      C18         -0.27728366          -1.8600186         -0.51045466
+      C19         +0.40578838        +0.028787646         -0.09148802
+      C20         +0.14927998          +0.0148845         +0.40842247
+      C21         -0.75586987          -1.7635527         -0.39819941
+      C22          -0.4600399          -1.3986561         -0.29121928
+      C23        +0.034205172         +0.26169879         +0.13114467
+      C24         +0.15237936         +0.37024147         +0.21749916
+      C25         +0.73188441         -0.43744759          -1.8850828
+      C26         +0.20165727         -0.27343697         +0.16738584
+      C27         +0.51883781         -0.60964792          -1.7137919
+      C28         +0.20948824         +0.32143883         +0.24886146
+      C29         +0.11995718         -0.34192117          -1.8676957
+      C30         +0.15956319         +0.46717159        +0.020070447
+      C31         +0.32077885         -0.25630116          -1.8204265
+      C32          +0.5206287         +0.32829853        +0.038472748
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+              +29.201670             -60.485000              -0.966240
+              -60.485000             -43.140432             -27.984218
+               -0.966240             -27.984218             -50.245519
+ TOTAL-PRESSURE: -21.394760 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.69074          -308.69373          +0.0029926406       +10                 -21.268477          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -21.268477 Kbar 
+Virial Term is -21.39476 Kbar 
+Kenetic Term is +0.126283 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++29.319622     -60.503671     -0.96642868    
+-60.503671     -43.022085     -28.010417     
+-0.96642868    -28.010417     -50.102969     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 1
+ -------------------------------------------
+ NEW-OLD atomic charge density approx. for the potential !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1373660
+ DONE : INIT SCF Time : +1482.05 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+1  --------------------------------
+
+ Density error is +0.000455351628254
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+2  --------------------------------
+
+ Density error is +0.000357009849003
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+3  --------------------------------
+
+ Density error is +0.000332208819933
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+4  --------------------------------
+
+ Density error is +8.09010194824e-05
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+5  --------------------------------
+
+ Density error is +3.61476652705e-05
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+6  --------------------------------
+
+ Density error is +1.66594915537e-05
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+7  --------------------------------
+
+ Density error is +8.34983260056e-06
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+8  --------------------------------
+
+ Density error is +2.30471189007e-06
+
+ LCAO ALGORITHM --------------- ION=+2    ELEC=+9  --------------------------------
+
+ Density error is +8.60280743327e-07
+
+ charge density convergence is achieved
+ final etot is -8400.04828875 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.16400978         -0.44424595         +0.31303394         
+ Si2     -0.30372158         -0.1018058          +2.266121           
+ Si3     +0.23350365         -0.2676823          +0.06138154         
+ Si4     -0.26397718         +0.66949077         +1.9514498          
+ Si5     -0.58238225         -0.36385276         -0.10710593         
+ Si6     -0.78728382         +0.08993283         +2.0143881          
+ Si7     -0.498112           +0.022202615        -0.22487548         
+ Si8     -0.70990373         +0.82054751         +2.5231155          
+ Si9     -0.28721363         -0.27630016         -0.7265696          
+ Si10    +0.15541222         -0.30468986         -0.33249151         
+ Si11    +0.67978958         +1.915319           +0.09732568         
+ Si12    +0.34402707         +1.9812266          +0.54291885         
+ Si13    -0.51799429         -0.30499058         -0.24292409         
+ Si14    -0.63075444         +0.034995033        -0.38216419         
+ Si15    +0.30806661         +1.82513            -0.40106124         
+ Si16    -0.14658225         +2.0979512          +0.11404963         
+ Si17    +2.4920611          -1.954239           -1.0962314          
+ Si18    +2.7063612          -2.0953127          -1.2783086          
+ Si19    +2.3166075          -1.6812628          -1.179902           
+ Si20    +2.6869733          -1.2881144          -1.1026246          
+ Si21    +0.065538218        -0.46556617         -0.59906554         
+ Si22    -0.082678637        -0.73680263         -0.13108886         
+ Si23    +0.27478251         -0.29835415         -0.38341259         
+ Si24    -0.75989625         -0.55881681         -0.043277331        
+ Si25    +2.6689938          -1.758113           -1.0537031          
+ Si26    +1.6885522          -0.47718411         +2.1546183          
+ Si27    +2.6655585          +0.8457724          +0.39363584         
+ Si28    +2.1854439          +1.8497071          +2.2469721          
+ Si29    -0.22018025         -0.23903337         -0.13953303         
+ Si30    -0.27314607         +0.58349422         +2.1074691          
+ Si31    +0.73386647         +2.1235986          +0.66473981         
+ Si32    +0.67875445         +2.3490054          +2.436143           
+ C1      -2.2319961          -1.7627962          -2.0939096          
+ C2      -2.2081679          -0.67883789         -0.14649868         
+ C3      -1.3290477          +0.45434822         -1.9633578          
+ C4      -2.4327031          +1.6112384          +1.0976612          
+ C5      -0.92713089         -1.9647729          -1.8648384          
+ C6      -0.82815314         -1.7041608          -0.52845602         
+ C7      +0.14913398         -0.72079975         -1.478199           
+ C8      +0.2368887          +0.5899513          +0.049837626        
+ C9      -2.3266265          +1.7200486          +0.77643059         
+ C10     -2.4393513          +1.8165953          +1.392224           
+ C11     -2.1413078          +1.739211           +0.94259315         
+ C12     -2.1057505          +1.7119294          +1.3498812          
+ C13     +0.30178913         +0.33218599         +0.048346107        
+ C14     -0.12525004         +0.14379213         +0.31036161         
+ C15     -0.19756682         +0.16237897         -0.24816593         
+ C16     +0.39268468         +0.014726862        -0.0024780996       
+ C17     -0.50838076         -1.9238439          -0.86640011         
+ C18     -0.2709875          -1.8506385          -0.49325094         
+ C19     +0.41011057         +0.011720813        -0.1101786          
+ C20     +0.17162019         +0.0090954517       +0.41776366         
+ C21     -0.74512369         -1.7609093          -0.38055267         
+ C22     -0.47603444         -1.3600259          -0.27059758         
+ C23     +0.022582601        +0.26608131         +0.12600023         
+ C24     +0.16862272         +0.35779484         +0.19675631         
+ C25     +0.74223968         -0.44823542         -1.8485067          
+ C26     +0.17713938         -0.26294907         +0.17373403         
+ C27     +0.5308896          -0.6006512          -1.721354           
+ C28     +0.19382561         +0.33174705         +0.27776328         
+ C29     +0.12385774         -0.34671648         -1.8356858          
+ C30     +0.16272773         +0.456587           -0.013578242        
+ C31     +0.3199185          -0.26302567         -1.7890885          
+ C32     +0.53309114         +0.32692355         +0.032720686        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +29.087618             -60.494377             -0.770400              
+ -60.494377             -43.357094             -28.340059             
+ -0.770400              -28.340059             -50.428181             
+ TOTAL-PRESSURE: -21.565886 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.68865          -308.69597          +0.0073198581       +24.45953           -21.257004          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -21.257004 Kbar 
+Virial Term is -21.565886 Kbar 
+Kenetic Term is +0.30888227 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++29.429283     -60.476432     -0.71580841    
+-60.476432     -43.019499     -28.255551     
+-0.71580841    -28.255551     -50.180795     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 2
+ -------------------------------------------
+ first order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1373708
+ DONE : INIT SCF Time : +2224.79 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+1  --------------------------------
+
+ Density error is +0.00158013523548
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+2  --------------------------------
+
+ Density error is +0.00102504396884
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+3  --------------------------------
+
+ Density error is +0.0010363681407
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+4  --------------------------------
+
+ Density error is +0.000226353836645
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+5  --------------------------------
+
+ Density error is +0.000128339333185
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+6  --------------------------------
+
+ Density error is +5.57398166905e-05
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+7  --------------------------------
+
+ Density error is +2.6522946165e-05
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+8  --------------------------------
+
+ Density error is +6.51333932974e-06
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+9  --------------------------------
+
+ Density error is +2.27586031744e-06
+
+ LCAO ALGORITHM --------------- ION=+3    ELEC=+10 --------------------------------
+
+ Density error is +9.33374064514e-07
+
+ charge density convergence is achieved
+ final etot is -8400.218964 eV
+
+ Warning_Memory_Consuming allocated:  Force::dS_K +31.4416809082 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dHr +31.4416809082 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dSR +62.8833618164 MB
+
+ Warning_Memory_Consuming allocated:  Force::dTVNL +31.4416809082 MB
+
+ Warning_Memory_Consuming allocated:  Force::edm2d +10.4805603027 MB
+
+ Warning_Memory_Consuming allocated:  Force::dm2d_K +10.4805603027 MB
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.14117033         -0.39026335         +0.30543196         
+ Si2     -0.21036994         -0.043837931        +2.2472012          
+ Si3     +0.31146009         -0.29319379         +0.085902841        
+ Si4     -0.26698291         +0.68580742         +1.8544607          
+ Si5     -0.60183684         -0.32698072         -0.14962083         
+ Si6     -0.79912568         +0.036614429        +2.0509866          
+ Si7     -0.54089642         +0.014114365        -0.22959013         
+ Si8     -0.72217229         +0.86006395         +2.4865593          
+ Si9     -0.26026292         -0.32669424         -0.75085414         
+ Si10    +0.22267588         -0.23730727         -0.26110758         
+ Si11    +0.73486566         +1.8771166          +0.086795656        
+ Si12    +0.31143297         +1.9214264          +0.52094915         
+ Si13    -0.49056614         -0.19498381         -0.22760236         
+ Si14    -0.61005867         +0.091917362        -0.41225895         
+ Si15    +0.3111756          +1.7786003          -0.41764506         
+ Si16    -0.16342117         +2.0830427          +0.1518905          
+ Si17    +2.3272838          -1.8680259          -1.0217147          
+ Si18    +2.6109702          -2.0310421          -1.2003447          
+ Si19    +2.159051           -1.6248433          -1.0751344          
+ Si20    +2.6083653          -1.3327565          -1.0498457          
+ Si21    -0.017169961        -0.51418501         -0.55752036         
+ Si22    -0.15315786         -0.71594794         -0.17825777         
+ Si23    +0.24419566         -0.298355           -0.4518463          
+ Si24    -0.79189227         -0.54240018         -0.049874056        
+ Si25    +2.5558537          -1.7273715          -1.0386892          
+ Si26    +1.6840851          -0.4984573          +2.1208527          
+ Si27    +2.5984434          +0.79546481         +0.33712747         
+ Si28    +2.1122719          +1.8637768          +2.2203715          
+ Si29    -0.16067435         -0.13492805         -0.16237933         
+ Si30    -0.3182075          +0.62584845         +2.0456214          
+ Si31    +0.73926987         +2.0560081          +0.65213827         
+ Si32    +0.65165692         +2.3351588          +2.44856            
+ C1      -2.2161466          -1.6587914          -2.0915144          
+ C2      -2.1321739          -0.68139975         -0.13993188         
+ C3      -1.2466273          +0.44351288         -1.9278842          
+ C4      -2.2776471          +1.5115006          +1.0925822          
+ C5      -0.91278471         -1.9161384          -1.8037304          
+ C6      -0.7941925          -1.6082235          -0.48034445         
+ C7      +0.22605712         -0.72492647         -1.4174521          
+ C8      +0.18483383         +0.59592002         +0.048634412        
+ C9      -2.213462           +1.5590821          +0.7701192          
+ C10     -2.2879162          +1.7385689          +1.312107           
+ C11     -1.9773713          +1.7316392          +0.85823865         
+ C12     -2.0831518          +1.6618701          +1.3246083          
+ C13     +0.31401348         +0.24734098         -0.020972742        
+ C14     -0.19303903         +0.063706596        +0.27028109         
+ C15     -0.18934709         +0.19968918         -0.19125172         
+ C16     +0.37871942         -0.048067872        +0.024110194        
+ C17     -0.54745888         -1.9632847          -0.8074311          
+ C18     -0.28187905         -1.8506986          -0.53037467         
+ C19     +0.33251774         +0.061386158        -0.15111845         
+ C20     +0.10699481         +0.034826855        +0.41803716         
+ C21     -0.74903938         -1.6945744          -0.38669092         
+ C22     -0.3959302          -1.3388066          -0.24082245         
+ C23     -0.021426616        +0.17449768         +0.19201542         
+ C24     +0.14839461         +0.32606877         +0.29211087         
+ C25     +0.75954117         -0.39153515         -1.8494951          
+ C26     +0.15170199         -0.31548346         +0.15424316         
+ C27     +0.60161033         -0.60184395         -1.6864377          
+ C28     +0.25203446         +0.44980463         +0.29888332         
+ C29     +0.18080116         -0.39595838         -1.8291703          
+ C30     +0.11921218         +0.36464787         -0.066379707        
+ C31     +0.350227           -0.24254349         -1.7645543          
+ C32     +0.47784248         +0.34482729         -0.05097811         
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.969042             -60.384912             -0.038393              
+ -60.384912             -43.875115             -29.306002             
+ -0.038393              -29.306002             -51.055111             
+ TOTAL-PRESSURE: -21.987061 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.68415          -308.70224          +0.018097249        +60.472511          -21.223396          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -21.223396 Kbar 
+Virial Term is -21.987061 Kbar 
+Kenetic Term is +0.76366499 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++29.873541     -60.444432     -0.060093521   
+-60.444432     -43.162756     -29.329175     
+-0.060093521   -29.329175     -50.380975     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 3
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1373954
+ DONE : INIT SCF Time : +3041.4 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+1  --------------------------------
+
+ Density error is +0.00198528817708
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+2  --------------------------------
+
+ Density error is +0.00121523333157
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+3  --------------------------------
+
+ Density error is +0.00103226200886
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+4  --------------------------------
+
+ Density error is +0.000310159730961
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+5  --------------------------------
+
+ Density error is +0.000185530316656
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+6  --------------------------------
+
+ Density error is +5.8375172222e-05
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+7  --------------------------------
+
+ Density error is +2.75012783164e-05
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+8  --------------------------------
+
+ Density error is +1.01274483482e-05
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+9  --------------------------------
+
+ Density error is +2.99074366167e-06
+
+ LCAO ALGORITHM --------------- ION=+4    ELEC=+10 --------------------------------
+
+ Density error is +9.7324139367e-07
+
+ charge density convergence is achieved
+ final etot is -8400.35769053 eV
+
+ Warning_Memory_Consuming allocated:  Force::dS_K +31.4473114014 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dHr +31.4473114014 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dSR +62.8946228027 MB
+
+ Warning_Memory_Consuming allocated:  Force::dTVNL +31.4473114014 MB
+
+ Warning_Memory_Consuming allocated:  Force::edm2d +10.4824371338 MB
+
+ Warning_Memory_Consuming allocated:  Force::dm2d_K +10.4824371338 MB
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.079359661        -0.39149254         +0.19651599         
+ Si2     -0.18675727         -0.091046327        +2.1457511          
+ Si3     +0.35605042         -0.29609628         -0.021420896        
+ Si4     -0.17487449         +0.72234222         +1.7748753          
+ Si5     -0.68536056         -0.42121468         -0.059949305        
+ Si6     -0.79418559         +0.065475056        +2.0708385          
+ Si7     -0.50040654         +0.072777059        -0.18806968         
+ Si8     -0.73572249         +0.78664203         +2.4852847          
+ Si9     -0.17476432         -0.2902427          -0.78318961         
+ Si10    +0.27207512         -0.27907434         -0.21741044         
+ Si11    +0.73015917         +1.9087186          +0.075559607        
+ Si12    +0.32611511         +1.9465058          +0.5529448          
+ Si13    -0.45296548         -0.31755705         -0.27423516         
+ Si14    -0.62100939         +0.14446313         -0.3672111          
+ Si15    +0.22997907         +1.7314834          -0.4335349          
+ Si16    -0.2496499          +2.127182           +0.11535405         
+ Si17    +2.2489169          -1.8679133          -1.0121785          
+ Si18    +2.6293806          -2.0684601          -1.1472021          
+ Si19    +2.2337265          -1.5245268          -1.1273566          
+ Si20    +2.5327691          -1.3925293          -1.1120763          
+ Si21    -0.12374854         -0.49186816         -0.61854701         
+ Si22    -0.077662688        -0.80093341         -0.047421894        
+ Si23    +0.25163404         -0.25663568         -0.4387462          
+ Si24    -0.70791292         -0.41190255         -0.064246849        
+ Si25    +2.4694647          -1.5801809          -1.0322655          
+ Si26    +1.6265234          -0.38359803         +2.0062225          
+ Si27    +2.5588383          +0.85479386         +0.3725022          
+ Si28    +2.1052448          +1.7941034          +2.1839782          
+ Si29    -0.21139993         -0.26425581         -0.24048639         
+ Si30    -0.30269063         +0.63108853         +2.0685458          
+ Si31    +0.78379234         +1.9872969          +0.62125418         
+ Si32    +0.66020305         +2.303944           +2.400097           
+ C1      -2.1180829          -1.6032812          -2.0120575          
+ C2      -2.0273602          -0.6982916          -0.17475229         
+ C3      -1.1989614          +0.49265028         -1.9545566          
+ C4      -2.1344284          +1.4872438          +0.97268228         
+ C5      -0.81307884         -1.8985444          -1.6524607          
+ C6      -0.89614919         -1.6521078          -0.50846588         
+ C7      +0.2185945          -0.77710422         -1.4136189          
+ C8      +0.12233787         +0.65967202         +0.070032129        
+ C9      -2.0231906          +1.5215985          +0.59483512         
+ C10     -2.2534743          +1.6799528          +1.2168502          
+ C11     -2.0175497          +1.616096           +0.84147743         
+ C12     -1.9738454          +1.7436427          +1.4388874          
+ C13     +0.41802523         +0.21561775         +0.031718586        
+ C14     -0.26916778         +0.012896843        +0.24515623         
+ C15     -0.15661576         +0.26631183         -0.10122625         
+ C16     +0.36866391         -0.15338918         +0.09495822         
+ C17     -0.4670358          -1.8872774          -0.80898063         
+ C18     -0.33237349         -1.6873515          -0.63868995         
+ C19     +0.20619628         +0.089073833        -0.1097178          
+ C20     +0.067671636        -0.034079586        +0.54147807         
+ C21     -0.74008734         -1.7199112          -0.43445367         
+ C22     -0.50880089         -1.2269678          -0.34997372         
+ C23     -0.12958193         +0.28239636         +0.2094894          
+ C24     +0.18170739         +0.24378852         +0.34964583         
+ C25     +0.69408035         -0.39666672         -1.7252324          
+ C26     +0.064353157        -0.38557457         +0.29311383         
+ C27     +0.43178368         -0.73150974         -1.6248377          
+ C28     +0.21151645         +0.44870161         +0.30460691         
+ C29     +0.15763257         -0.34675449         -1.8311627          
+ C30     +0.19553615         +0.45635521         -0.069110132        
+ C31     +0.41551192         -0.25553399         -1.6504769          
+ C32     +0.36977069         +0.2910593          -0.029333406        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.755361             -60.778129             +0.382065              
+ -60.778129             -44.486859             -29.507447             
+ +0.382065              -29.507447             -51.673993             
+ TOTAL-PRESSURE: -22.468497 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.68132          -308.70734          +0.026017587        +86.938563          -21.370611          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -21.370611 Kbar 
+Virial Term is -22.468497 Kbar 
+Kenetic Term is +1.0978862 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++29.826632     -60.863222     +0.57252156    
+-60.863222     -43.401015     -29.428306     
++0.57252156    -29.428306     -50.537449     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 4
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1375538
+ DONE : INIT SCF Time : +3855.34 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+1  --------------------------------
+
+ Density error is +0.00211871881438
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+2  --------------------------------
+
+ Density error is +0.00130089191912
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+3  --------------------------------
+
+ Density error is +0.00129118913675
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+4  --------------------------------
+
+ Density error is +0.000326966426092
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+5  --------------------------------
+
+ Density error is +0.000167727128765
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+6  --------------------------------
+
+ Density error is +7.43654153765e-05
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+7  --------------------------------
+
+ Density error is +3.39579871996e-05
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+8  --------------------------------
+
+ Density error is +9.94710981404e-06
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+9  --------------------------------
+
+ Density error is +2.93617267472e-06
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+10 --------------------------------
+
+ Density error is +1.21467691945e-06
+
+ LCAO ALGORITHM --------------- ION=+5    ELEC=+11 --------------------------------
+
+ Density error is +6.63125524873e-07
+
+ charge density convergence is achieved
+ final etot is -8400.39807889 eV
+
+ Warning_Memory_Consuming allocated:  Force::dS_K +31.4835662842 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dHr +31.4835662842 MB
+
+ Warning_Memory_Consuming allocated:  Stress::dSR +62.9671325684 MB
+
+ Warning_Memory_Consuming allocated:  Force::dTVNL +31.4835662842 MB
+
+ Warning_Memory_Consuming allocated:  Force::edm2d +10.4945220947 MB
+
+ Warning_Memory_Consuming allocated:  Force::dm2d_K +10.4945220947 MB
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.091540936        -0.36878957         +0.16895566         
+ Si2     -0.28831546         -0.069324527        +2.1494057          
+ Si3     +0.38311499         -0.28745533         -0.090022711        
+ Si4     -0.081103015        +0.69821183         +1.8611745          
+ Si5     -0.67056297         -0.34743            -0.00042370547      
+ Si6     -0.8001892          +0.14056088         +2.0310449          
+ Si7     -0.41400758         -0.00458296         -0.2935353          
+ Si8     -0.84625308         +0.70535856         +2.3767159          
+ Si9     -0.077086746        -0.18084457         -0.76767412         
+ Si10    +0.2870764          -0.32563429         -0.23674418         
+ Si11    +0.68974014         +1.854362           +0.017469714        
+ Si12    +0.29971978         +1.9095576          +0.61492069         
+ Si13    -0.53502597         -0.40884246         -0.33458723         
+ Si14    -0.56873973         +0.090701325        -0.3627994          
+ Si15    +0.23055821         +1.8246168          -0.46618132         
+ Si16    -0.22633648         +2.0898198          +0.0079559938       
+ Si17    +2.1402444          -1.9003874          -1.0614269          
+ Si18    +2.5014109          -1.9817414          -1.2064547          
+ Si19    +2.1144109          -1.5593763          -1.1832659          
+ Si20    +2.619806           -1.560952           -1.1625711          
+ Si21    -0.041163538        -0.40251198         -0.54969678         
+ Si22    -0.13819068         -0.80336771         -0.11680329         
+ Si23    +0.29223072         -0.4035436          -0.40619416         
+ Si24    -0.58059063         -0.48910319         -0.021506354        
+ Si25    +2.4001537          -1.411321           -0.92766118         
+ Si26    +1.6445686          -0.40986164         +1.8918532          
+ Si27    +2.5241685          +0.82404887         +0.30299233         
+ Si28    +2.0114272          +1.8220513          +2.1982171          
+ Si29    -0.20901718         -0.29146661         -0.35409762         
+ Si30    -0.30426372         +0.61982457         +2.0327074          
+ Si31    +0.67812579         +1.8997446          +0.5452232          
+ Si32    +0.73727496         +2.3035616          +2.3915495          
+ C1      -2.1082857          -1.6475228          -1.8936032          
+ C2      -1.8858054          -0.76137328         -0.069173693        
+ C3      -1.0972758          +0.57850561         -1.8702073          
+ C4      -2.030275           +1.4033196          +1.0254818          
+ C5      -0.8145258          -1.9644416          -1.6963459          
+ C6      -0.78345333         -1.6920612          -0.50459346         
+ C7      +0.20557684         -0.75407549         -1.3686913          
+ C8      +0.13477029         +0.6747645          +0.13979224         
+ C9      -2.0627324          +1.4506018          +0.42611942         
+ C10     -2.2453401          +1.6903777          +1.1698194          
+ C11     -1.9356302          +1.6724491          +0.92550422         
+ C12     -1.9954707          +1.8489534          +1.5889565          
+ C13     +0.33232854         +0.2175307          +0.035448473        
+ C14     -0.17552882         -0.038115361        +0.29399157         
+ C15     -0.099376783        +0.40438615         +0.080064517        
+ C16     +0.21934647         -0.042365499        -0.0053819417       
+ C17     -0.45798613         -1.9223163          -0.70165694         
+ C18     -0.17850568         -1.792161           -0.6655328          
+ C19     +0.28521125         -0.046648791        -0.043535599        
+ C20     -0.14917877         -0.017048282        +0.46503091         
+ C21     -0.77361681         -1.785217           -0.56965599         
+ C22     -0.57097144         -1.1889272          -0.25026936         
+ C23     -0.25325486         +0.41203696         +0.17403896         
+ C24     +0.17735852         +0.35400647         +0.328038           
+ C25     +0.6888003          -0.41161833         -1.7423722          
+ C26     +0.08870594         -0.37796581         +0.40173966         
+ C27     +0.50573801         -0.62800594         -1.6668726          
+ C28     +0.20946066         +0.54803452         +0.28064857         
+ C29     +0.22643274         -0.33083943         -1.776589           
+ C30     +0.19945055         +0.49229566         +0.060092759        
+ C31     +0.46977422         -0.26281762         -1.6930484          
+ C32     +0.19261499         +0.34037572         +0.074222756        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +29.187594             -61.545144             +0.154535              
+ -61.545144             -44.556222             -29.725536             
+ +0.154535              -29.725536             -51.445781             
+ TOTAL-PRESSURE: -22.271470 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.6736           -308.70882          +0.035222118        +117.69578          -20.785172          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -20.785172 Kbar 
+Virial Term is -22.27147 Kbar 
+Kenetic Term is +1.4862976 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++30.87669      -61.675809     +0.14557259    
+-61.675809     -43.160615     -29.485314     
++0.14557259    -29.485314     -50.071592     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 5
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1372752
+ DONE : INIT SCF Time : +4743.55 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+1  --------------------------------
+
+ Density error is +0.00247834168525
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+2  --------------------------------
+
+ Density error is +0.00153824935685
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+3  --------------------------------
+
+ Density error is +0.00142914912386
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+4  --------------------------------
+
+ Density error is +0.000395797354432
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+5  --------------------------------
+
+ Density error is +0.000250887485255
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+6  --------------------------------
+
+ Density error is +7.85017508717e-05
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+7  --------------------------------
+
+ Density error is +3.47338371275e-05
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+8  --------------------------------
+
+ Density error is +1.20464877676e-05
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+9  --------------------------------
+
+ Density error is +4.04691881342e-06
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+10 --------------------------------
+
+ Density error is +1.24138744166e-06
+
+ LCAO ALGORITHM --------------- ION=+6    ELEC=+11 --------------------------------
+
+ Density error is +6.94262770933e-07
+
+ charge density convergence is achieved
+ final etot is -8400.44098284 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.042715333        -0.43191758         +0.22804017         
+ Si2     -0.35863596         -0.12794114         +2.0368548          
+ Si3     +0.30962083         -0.17638481         -0.0011016463       
+ Si4     -0.036421058        +0.63880258         +1.7269844          
+ Si5     -0.58602553         -0.4668763          +0.11308518         
+ Si6     -0.88353935         +0.17308212         +2.0273806          
+ Si7     -0.46535089         -0.010580032        -0.34705687         
+ Si8     -0.95885309         +0.64917576         +2.4766891          
+ Si9     -0.028416026        -0.11571594         -0.866575           
+ Si10    +0.17122185         -0.15407059         -0.27395786         
+ Si11    +0.72607046         +1.8539257          +0.0065261864       
+ Si12    +0.27996945         +2.013085           +0.59961198         
+ Si13    -0.46089291         -0.31801437         -0.42880495         
+ Si14    -0.74993577         +0.12082799         -0.19548883         
+ Si15    +0.13494402         +1.850502           -0.3835097          
+ Si16    -0.27420824         +2.0556454          -0.010818668        
+ Si17    +2.0950641          -1.9408595          -1.1948702          
+ Si18    +2.4930429          -2.0328816          -1.2709841          
+ Si19    +2.0028565          -1.6300786          -1.1837021          
+ Si20    +2.698283           -1.5635404          -1.2394293          
+ Si21    -0.038378909        -0.23880826         -0.4508608          
+ Si22    -0.038702833        -0.85374047         -0.044449245        
+ Si23    +0.19781351         -0.33818209         -0.51208423         
+ Si24    -0.52246348         -0.52013609         -0.0065966263       
+ Si25    +2.2255431          -1.3932278          -0.87452413         
+ Si26    +1.5929339          -0.3734383          +1.8735186          
+ Si27    +2.5772621          +0.6984327          +0.31496704         
+ Si28    +1.9435783          +1.9573343          +2.2338347          
+ Si29    -0.30836055         -0.14696101         -0.29522888         
+ Si30    -0.32061752         +0.68931755         +2.1030238          
+ Si31    +0.63303134         +1.8100041          +0.63666349         
+ Si32    +0.64846367         +2.2489637          +2.2853814          
+ C1      -1.9623065          -1.6992275          -1.8567874          
+ C2      -2.0164946          -0.54820632         -0.081011429        
+ C3      -0.95414142         +0.51096367         -1.7341667          
+ C4      -1.8268161          +1.4046888          +0.86561317         
+ C5      -0.82957106         -1.9548843          -1.7676257          
+ C6      -0.93786915         -1.6394435          -0.67912874         
+ C7      +0.26747256         -0.68068343         -1.2113299          
+ C8      +0.22911632         +0.47156329         +0.042018139        
+ C9      -1.9855794          +1.4565988          +0.44841303         
+ C10     -2.1837874          +1.6817776          +1.0953717          
+ C11     -1.747233           +1.6174999          +0.88072352         
+ C12     -1.9812335          +1.8546423          +1.4488914          
+ C13     +0.38601286         +0.092853737        -0.035313981        
+ C14     -0.097430642        -0.17534678         +0.39345576         
+ C15     -0.052834403        +0.41197626         +0.024812102        
+ C16     +0.30047775         +0.048084667        +0.23971612         
+ C17     -0.36178887         -1.8518363          -0.60477378         
+ C18     -0.073726619        -1.8162474          -0.50114947         
+ C19     +0.35223276         +0.071011236        -0.10785954         
+ C20     -0.15601657         -0.043837507        +0.51674015         
+ C21     -0.71305796         -1.7494316          -0.71130595         
+ C22     -0.64116644         -1.0635935          -0.24517877         
+ C23     -0.29658694         +0.39053955         +0.33039893         
+ C24     +0.21857842         +0.26929195         +0.13713236         
+ C25     +0.63070428         -0.37605141         -1.6107978          
+ C26     +0.13482844         -0.37723098         +0.43711338         
+ C27     +0.54503916         -0.6221498          -1.6884932          
+ C28     +0.13712343         +0.37717417         +0.16258931         
+ C29     +0.11902991         -0.50641652         -1.8374095          
+ C30     +0.23287382         +0.50380556         +0.11522184         
+ C31     +0.42074822         -0.32640132         -1.7338699          
+ C32     +0.18722105         +0.34277269         +0.18547271         
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +29.100346             -61.577120             +0.521568              
+ -61.577120             -44.687741             -30.541010             
+ +0.521568              -30.541010             -51.586598             
+ TOTAL-PRESSURE: -22.391331 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.67347          -308.7104           +0.03692883         +123.39882          -20.833014          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -20.833014 Kbar 
+Virial Term is -22.391331 Kbar 
+Kenetic Term is +1.5583172 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++30.402975     -61.352524     +0.49473637    
+-61.352524     -42.912793     -30.258253     
++0.49473637    -30.258253     -49.989222     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 6
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1372422
+ DONE : INIT SCF Time : +5631.49 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+1  --------------------------------
+
+ Density error is +0.00282845471331
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+2  --------------------------------
+
+ Density error is +0.00192455309915
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+3  --------------------------------
+
+ Density error is +0.00189560591343
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+4  --------------------------------
+
+ Density error is +0.000428650707715
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+5  --------------------------------
+
+ Density error is +0.000256556454155
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+6  --------------------------------
+
+ Density error is +0.000100197141496
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+7  --------------------------------
+
+ Density error is +5.03047314187e-05
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+8  --------------------------------
+
+ Density error is +1.35706888132e-05
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+9  --------------------------------
+
+ Density error is +4.49345501423e-06
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+10 --------------------------------
+
+ Density error is +1.65127811731e-06
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+11 --------------------------------
+
+ Density error is +1.0307790375e-06
+
+ LCAO ALGORITHM --------------- ION=+7    ELEC=+12 --------------------------------
+
+ Density error is +3.81554220477e-07
+
+ charge density convergence is achieved
+ final etot is -8400.52269046 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.18133148         -0.47739145         +0.22400102         
+ Si2     -0.29993842         -0.18959872         +1.9688769          
+ Si3     +0.20946954         -0.16963648         -0.0098393473       
+ Si4     -0.080503529        +0.62653476         +1.6801568          
+ Si5     -0.54842728         -0.37306835         -0.05799813         
+ Si6     -0.88585585         +0.16391584         +1.9555462          
+ Si7     -0.3527558          +0.11688056         -0.30518431         
+ Si8     -1.0123114          +0.66104919         +2.4835486          
+ Si9     +0.069544411        -0.11049261         -0.71649148         
+ Si10    +0.16735395         -0.20966768         -0.25361534         
+ Si11    +0.79231042         +1.7305387          -0.071965457        
+ Si12    +0.16038948         +1.9268404          +0.5197096          
+ Si13    -0.44225096         -0.41658838         -0.36256194         
+ Si14    -0.68007265         +0.08089178         -0.28965611         
+ Si15    +0.12903684         +1.8022554          -0.47903299         
+ Si16    -0.15362332         +2.0139535          +0.089945707        
+ Si17    +1.9988347          -2.0541794          -1.1788395          
+ Si18    +2.3975115          -2.0706808          -1.0953118          
+ Si19    +2.1284871          -1.5316549          -1.1296218          
+ Si20    +2.7401479          -1.342059           -1.081963           
+ Si21    -0.16634079         -0.33238187         -0.52308406         
+ Si22    -0.16711388         -0.846745           -0.12297951         
+ Si23    +0.18037308         -0.35517209         -0.49021198         
+ Si24    -0.55924912         -0.51525748         -0.071810081        
+ Si25    +2.3065205          -1.6411042          -0.81532038         
+ Si26    +1.6592511          -0.25928247         +1.9088981          
+ Si27    +2.6284481          +0.80264661         +0.49510885         
+ Si28    +1.9663922          +1.9136969          +2.0461812          
+ Si29    -0.23786565         -0.20240146         -0.1095892          
+ Si30    -0.44986147         +0.52574845         +2.0055488          
+ Si31    +0.58286278         +1.7396497          +0.55915586         
+ Si32    +0.57834434         +2.3156281          +2.2350909          
+ C1      -1.9751755          -1.5877536          -1.8532597          
+ C2      -2.0354057          -0.72030966         -0.1025788          
+ C3      -1.049848           +0.56402261         -1.7008224          
+ C4      -2.0649198          +1.4097711          +0.85799277         
+ C5      -0.73902887         -2.0115663          -1.680725           
+ C6      -0.72890099         -1.5131483          -0.57943495         
+ C7      +0.36582938         -0.62385171         -1.0983567          
+ C8      +0.35433117         +0.28525417         -0.055928871        
+ C9      -2.0454474          +1.4489092          +0.48212532         
+ C10     -2.1831669          +1.4676002          +1.0798276          
+ C11     -1.8314832          +1.4472313          +0.74746494         
+ C12     -1.9129529          +1.9113917          +1.3171139          
+ C13     +0.25499411         +0.2712796          -0.13735351         
+ C14     -0.010847835        +0.054029248        +0.53171698         
+ C15     -0.091321036        +0.54585594         -0.15291703         
+ C16     +0.34574444         +0.14718222         +0.40860342         
+ C17     -0.36971328         -1.7227             -0.54765944         
+ C18     -0.18697678         -1.7588958          -0.41290878         
+ C19     +0.35192951         +0.18702446         -0.23047611         
+ C20     -0.058615156        -0.15153882         +0.49054303         
+ C21     -0.63254878         -1.7602809          -0.51470137         
+ C22     -0.52863773         -1.1732268          -0.19742287         
+ C23     -0.38671872         +0.30693459         +0.24259461         
+ C24     +0.24874185         +0.11880182         +0.16223232         
+ C25     +0.60938001         -0.43624047         -1.6789123          
+ C26     +0.17376566         -0.13727993         +0.23759816         
+ C27     +0.54482401         -0.70485595         -1.4423613          
+ C28     +0.033054225        +0.41852476         +0.1405212          
+ C29     +0.26419034         -0.28960926         -1.8968225          
+ C30     +0.0891028          +0.69415404         +0.078832614        
+ C31     +0.49663535         -0.32454398         -1.5658481          
+ C32     +0.22140927         +0.31496689         +0.064630769        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.655267             -61.191880             +0.336855              
+ -61.191880             -44.920476             -30.834362             
+ +0.336855              -30.834362             -51.669028             
+ TOTAL-PRESSURE: -22.644746 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.662            -308.7134           +0.051404033        +171.76815          -20.475606          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -20.475606 Kbar 
+Virial Term is -22.644746 Kbar 
+Kenetic Term is +2.1691396 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++31.063478     -61.080617     +0.66051283    
+-61.080617     -43.402621     -30.757603     
++0.66051283    -30.757603     -49.087674     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 7
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1374424
+ DONE : INIT SCF Time : +6592.79 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+1  --------------------------------
+
+ Density error is +0.00299148291581
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+2  --------------------------------
+
+ Density error is +0.00183109283834
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+3  --------------------------------
+
+ Density error is +0.00155684768238
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+4  --------------------------------
+
+ Density error is +0.000424430680287
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+5  --------------------------------
+
+ Density error is +0.00029543967741
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+6  --------------------------------
+
+ Density error is +0.00010320896533
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+7  --------------------------------
+
+ Density error is +3.99611593553e-05
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+8  --------------------------------
+
+ Density error is +1.50027815127e-05
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+9  --------------------------------
+
+ Density error is +4.85266297024e-06
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+10 --------------------------------
+
+ Density error is +1.47013624709e-06
+
+ LCAO ALGORITHM --------------- ION=+8    ELEC=+11 --------------------------------
+
+ Density error is +7.59506369546e-07
+
+ charge density convergence is achieved
+ final etot is -8400.45721296 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.2653278          -0.36126281         +0.22458404         
+ Si2     -0.27450775         -0.19300214         +1.9217562          
+ Si3     +0.10183463         -0.034062847        +0.0032724588       
+ Si4     -0.13953871         +0.5895311          +1.6104259          
+ Si5     -0.56702959         -0.3822255          +0.088520272        
+ Si6     -0.82366888         +0.081203315        +2.0100694          
+ Si7     -0.41429421         -0.0086935711       -0.26491073         
+ Si8     -1.0629667          +0.70508635         +2.4536005          
+ Si9     +0.074844935        -0.18402638         -0.73331087         
+ Si10    +0.2743648          -0.21111147         -0.33219755         
+ Si11    +0.84934202         +1.6865797          -0.16635652         
+ Si12    +0.021482663        +1.8443531          +0.43509368         
+ Si13    -0.43885203         -0.46634049         -0.39599234         
+ Si14    -0.78143504         +0.13036162         -0.046133244        
+ Si15    +0.11990422         +1.8131027          -0.62887001         
+ Si16    -0.13862617         +1.9774068          +0.021105679        
+ Si17    +1.937838           -2.0635944          -1.1904434          
+ Si18    +2.3293162          -1.8091523          -0.89123116         
+ Si19    +2.2715073          -1.4046421          -1.0456136          
+ Si20    +2.8147167          -1.25619            -0.97872252         
+ Si21    -0.30786474         -0.35419943         -0.53002634         
+ Si22    -0.17100771         -0.80779483         -0.045219857        
+ Si23    +0.093464554        -0.31286623         -0.52626537         
+ Si24    -0.48272637         -0.52508947         -0.13226673         
+ Si25    +2.3593358          -1.6125152          -0.58709622         
+ Si26    +1.6687153          -0.33652176         +1.7949856          
+ Si27    +2.7230009          +0.61747344         +0.48515617         
+ Si28    +2.0113391          +2.0433642          +2.0433158          
+ Si29    -0.33640832         -0.2260106          -0.11118484         
+ Si30    -0.64303445         +0.36021938         +2.0679726          
+ Si31    +0.67175004         +1.8452951          +0.50191443         
+ Si32    +0.51616837         +2.2935622          +2.2549731          
+ C1      -2.0329828          -1.4733131          -1.7391146          
+ C2      -2.1721931          -0.67287875         -0.10954815         
+ C3      -1.1281488          +0.36713444         -1.7955678          
+ C4      -2.106774           +1.4024305          +0.67157998         
+ C5      -0.74964062         -1.9013055          -1.7265898          
+ C6      -0.69784874         -1.6954099          -0.51609988         
+ C7      +0.50142543         -0.61684738         -1.1199882          
+ C8      +0.29677661         +0.28521747         +0.015199299        
+ C9      -2.0474022          +1.3783744          +0.38969909         
+ C10     -2.0292883          +1.4458879          +0.80890497         
+ C11     -1.8905836          +1.5720736          +0.83925548         
+ C12     -2.01424            +1.6584293          +1.1227225          
+ C13     +0.34417917         +0.30002882         -0.22183672         
+ C14     +0.16714262         +0.1489622          +0.70981936         
+ C15     -0.21267269         +0.40421473         -0.095162859        
+ C16     +0.31597949         +0.21288434         +0.47208342         
+ C17     -0.50106947         -1.6289898          -0.66771725         
+ C18     -0.20978449         -1.9103947          -0.33447669         
+ C19     +0.45684009         +0.15481548         -0.35644612         
+ C20     -0.14482314         +0.031661835        +0.67723965         
+ C21     -0.61835882         -1.8420053          -0.37949561         
+ C22     -0.6266145          -1.2136726          -0.12094996         
+ C23     -0.36010522         +0.44999847         +0.22588863         
+ C24     +0.39399542         +0.26063208         +0.011517217        
+ C25     +0.60371243         -0.5189692          -1.5664804          
+ C26     -0.010183649        -0.19352543         +0.042498664        
+ C27     +0.6677482          -0.72269618         -1.2672002          
+ C28     +0.20568396         +0.53439597         +0.25826218         
+ C29     +0.34674849         -0.18725249         -1.9480835          
+ C30     +0.30246313         +0.50248754         -0.12154202         
+ C31     +0.63772473         -0.31235572         -1.5867094          
+ C32     +0.32065713         +0.34174936         +0.11743429         
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.340499             -60.348520             +0.422758              
+ -60.348520             -44.472649             -31.285585             
+ +0.422758              -31.285585             -51.386549             
+ TOTAL-PRESSURE: -22.506233 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.64599          -308.711            +0.065006156        +217.22006          -19.763113          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -19.763113 Kbar 
+Virial Term is -22.506233 Kbar 
+Kenetic Term is +2.74312 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++31.326442     -60.133132     +0.35680511    
+-60.133132     -41.835446     -31.062206     
++0.35680511    -31.062206     -48.780335     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 8
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1374100
+ DONE : INIT SCF Time : +7480.66 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+1  --------------------------------
+
+ Density error is +0.00359095686546
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+2  --------------------------------
+
+ Density error is +0.00218143173052
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+3  --------------------------------
+
+ Density error is +0.00200592857417
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+4  --------------------------------
+
+ Density error is +0.000600068405706
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+5  --------------------------------
+
+ Density error is +0.00029205583995
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+6  --------------------------------
+
+ Density error is +0.000125964162358
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+7  --------------------------------
+
+ Density error is +4.51947733475e-05
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+8  --------------------------------
+
+ Density error is +1.80379249057e-05
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+9  --------------------------------
+
+ Density error is +6.10220265561e-06
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+10 --------------------------------
+
+ Density error is +1.67501727938e-06
+
+ LCAO ALGORITHM --------------- ION=+9    ELEC=+11 --------------------------------
+
+ Density error is +7.63498264766e-07
+
+ charge density convergence is achieved
+ final etot is -8400.50502215 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.3580682          -0.5432643          +0.24014092         
+ Si2     -0.093832756        -0.12740088         +1.8574457          
+ Si3     -0.0076530495       -0.16574871         +0.023701247        
+ Si4     -0.0961545          +0.58896243         +1.7325457          
+ Si5     -0.39931988         -0.54133813         +0.10063167         
+ Si6     -0.69322865         +0.083046159        +1.9057014          
+ Si7     -0.17711577         +0.10806347         -0.067619805        
+ Si8     -0.82448085         +0.87103109         +2.5589367          
+ Si9     -0.061103345        +0.11787828         -0.78755934         
+ Si10    +0.27499409         -0.24546441         -0.41634244         
+ Si11    +0.78861725         +1.5162449          -0.33022866         
+ Si12    -0.035149428        +1.718953           +0.47568455         
+ Si13    -0.51691738         -0.51740175         -0.30193358         
+ Si14    -0.73684757         +0.34698541         -0.19689157         
+ Si15    +0.23090369         +1.8252623          -0.65880505         
+ Si16    -0.12104048         +1.8713408          +0.05481605         
+ Si17    +1.8435785          -2.0918311          -1.2674462          
+ Si18    +2.3828027          -1.9550139          -0.90209072         
+ Si19    +2.2206028          -1.4186462          -1.1446525          
+ Si20    +2.6745509          -1.1878658          -0.79819518         
+ Si21    -0.37067384         -0.46927816         -0.53986798         
+ Si22    -0.23832023         -0.89633907         +0.012681091        
+ Si23    +0.1283329          -0.39280297         -0.61400032         
+ Si24    -0.38398091         -0.61878371         +0.0065938566       
+ Si25    +2.4314214          -1.588587           -0.70960313         
+ Si26    +1.5214349          -0.1883218          +1.7959012          
+ Si27    +2.8059605          +0.45898695         +0.4913534          
+ Si28    +1.9532669          +2.0498405          +2.126418           
+ Si29    -0.41868467         -0.090491238        -0.33160134         
+ Si30    -0.67216014         +0.5282681          +1.9639813          
+ Si31    +0.66746986         +1.6553972          +0.5923723          
+ Si32    +0.42931182         +2.2596355          +2.2840494          
+ C1      -2.1307932          -1.427304           -1.6942682          
+ C2      -2.3378086          -0.33034249         +0.070564668        
+ C3      -0.96721397         +0.49450955         -1.7418669          
+ C4      -2.3460153          +1.5559432          +0.75538388         
+ C5      -0.60940645         -1.7936942          -1.6205572          
+ C6      -0.62670876         -1.5291497          -0.55076189         
+ C7      +0.44383336         -0.7315865          -1.0945799          
+ C8      +0.2577354          +0.33380506         +0.0087731042       
+ C9      -1.8628891          +1.5706377          +0.34967322         
+ C10     -1.9394543          +1.2131463          +1.0035956          
+ C11     -1.9659317          +1.3764276          +0.68073633         
+ C12     -2.0525877          +1.3512381          +0.85483862         
+ C13     +0.49975163         +0.40410961         -0.046230871        
+ C14     +0.11418138         +0.22055144         +0.8420012          
+ C15     -0.10248077         +0.60931661         -0.03785862         
+ C16     +0.24752586         +0.20999634         +0.33740808         
+ C17     -0.32669979         -1.4235853          -0.61079994         
+ C18     -0.34790858         -1.9286137          -0.50978201         
+ C19     +0.52708819         -0.10586125         -0.48127121         
+ C20     -0.21675038         +0.19770489         +0.54742122         
+ C21     -0.80008492         -1.8295234          -0.52412193         
+ C22     -0.65021546         -1.227289           -0.19701392         
+ C23     -0.47226606         +0.17857089         +0.08426806         
+ C24     +0.16202382         +0.1596176          -0.19907211         
+ C25     +0.51723069         -0.6845396          -1.3606982          
+ C26     +0.093567297        -0.21840664         -0.075197201        
+ C27     +0.82866343         -0.73255079         -1.0771206          
+ C28     +0.24662551         +0.65109762         +0.41821512         
+ C29     +0.35803781         -0.27795961         -1.7350245          
+ C30     +0.37516339         +0.44373359         +0.0527192          
+ C31     +0.73738504         -0.21861575         -1.6360635          
+ C32     +0.19788556         +0.52729878         +0.030573759        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.148864             -60.346961             +0.084587              
+ -60.346961             -44.611190             -30.974213             
+ +0.084587              -30.974213             -51.441861             
+ TOTAL-PRESSURE: -22.634729 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.63246          -308.71275          +0.080295414        +268.30958          -19.246435          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -19.246435 Kbar 
+Virial Term is -22.634729 Kbar 
+Kenetic Term is +3.3882938 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++31.722053     -60.111771     -0.55146391    
+-60.111771     -41.363904     -30.826824     
+-0.55146391    -30.826824     -48.097454     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 9
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1375414
+ DONE : INIT SCF Time : +8370.59 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+1  --------------------------------
+
+ Density error is +0.00382699152102
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+2  --------------------------------
+
+ Density error is +0.00285421487801
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+3  --------------------------------
+
+ Density error is +0.00248214375012
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+4  --------------------------------
+
+ Density error is +0.000631054592907
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+5  --------------------------------
+
+ Density error is +0.000338783179982
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+6  --------------------------------
+
+ Density error is +0.00013316007957
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+7  --------------------------------
+
+ Density error is +6.35194742175e-05
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+8  --------------------------------
+
+ Density error is +2.16878771981e-05
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+9  --------------------------------
+
+ Density error is +6.65743902323e-06
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+10 --------------------------------
+
+ Density error is +2.02172662543e-06
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+11 --------------------------------
+
+ Density error is +1.14473724873e-06
+
+ LCAO ALGORITHM --------------- ION=+10   ELEC=+12 --------------------------------
+
+ Density error is +6.50564231455e-07
+
+ charge density convergence is achieved
+ final etot is -8400.55062494 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.40615252         -0.70777992         +0.17641329         
+ Si2     -0.12045695         -0.10416727         +1.7530096          
+ Si3     +0.20847115         -0.030833629        +0.19791485         
+ Si4     -0.12930551         +0.63842766         +1.6067444          
+ Si5     -0.16205122         -0.51746186         +0.11034548         
+ Si6     -0.68843888         +0.14990458         +1.6762636          
+ Si7     -0.20858795         +0.051958223        +0.030366648        
+ Si8     -0.75311686         +0.78054866         +2.5798707          
+ Si9     -0.093491382        +0.014428853        -0.76782168         
+ Si10    +0.31600365         -0.36712139         -0.62347516         
+ Si11    +0.87028485         +1.5282628          -0.30582384         
+ Si12    -0.12575885         +1.7295744          +0.31761453         
+ Si13    -0.49158735         -0.47641138         -0.18753568         
+ Si14    -0.63675846         +0.21730458         -0.42212638         
+ Si15    +0.48734086         +1.8762733          -0.55590633         
+ Si16    -0.081629211        +1.8800146          +0.013884231        
+ Si17    +1.7419556          -2.1179952          -0.98801222         
+ Si18    +2.5585884          -1.790475           -1.1201988          
+ Si19    +2.3923804          -1.512101           -1.2640038          
+ Si20    +2.5978727          -0.97025755         -0.82677261         
+ Si21    -0.38476046         -0.45642629         -0.65402308         
+ Si22    -0.31837708         -0.8401167          -0.10360395         
+ Si23    +0.080565318        -0.31864241         -0.4615955          
+ Si24    -0.78431543         -0.74443015         -0.11925632         
+ Si25    +2.3340356          -1.8444285          -0.54173002         
+ Si26    +1.6146494          -0.23391965         +1.7443216          
+ Si27    +2.7777157          +0.35672435         +0.79298641         
+ Si28    +2.0247114          +1.9697188          +2.1378962          
+ Si29    -0.34414504         +0.080409383        -0.18445596         
+ Si30    -0.61299861         +0.37842806         +1.9092207          
+ Si31    +0.58894926         +1.6849718          +0.70588515         
+ Si32    +0.41085667         +2.1546253          +2.2728624          
+ C1      -2.1427698          -1.5575828          -1.5375202          
+ C2      -2.5095005          -0.46794636         -0.21567845         
+ C3      -1.0719808          +0.56631171         -1.8842418          
+ C4      -2.391812           +1.5655813          +0.85819494         
+ C5      -0.44803798         -1.8953832          -1.4390351          
+ C6      -0.3688532          -1.5449555          -0.41839865         
+ C7      +0.49219122         -0.91146701         -0.98359214         
+ C8      +0.27051129         +0.51233414         +0.21686682         
+ C9      -1.6241858          +1.4007574          +0.34118895         
+ C10     -1.8903796          +1.3445107          +1.2115135          
+ C11     -2.0946461          +1.6544824          +0.57862852         
+ C12     -2.0428695          +1.1259966          +0.74555086         
+ C13     +0.43955126         +0.34700194         -0.33455972         
+ C14     +0.1490667          +0.26856368         +0.88888845         
+ C15     -0.20834283         +0.5647053          -0.12453567         
+ C16     +0.50503769         +0.1721996          +0.26360475         
+ C17     -0.26103063         -1.1459402          -0.8681693          
+ C18     -0.26679494         -1.9156721          -0.30189596         
+ C19     +0.5390502          -0.096685049        -0.78774823         
+ C20     -0.28845803         +0.031357098        +0.76740494         
+ C21     -0.88508393         -1.8787467          -0.44775279         
+ C22     -0.70096971         -1.1191044          -0.01373736         
+ C23     -0.40674828         +0.014172585        -0.090916609        
+ C24     +0.28323117         +0.31406025         +0.1042134          
+ C25     +0.55112869         -0.43329961         -1.3930891          
+ C26     -0.22312625         +0.018125507        +0.13204054         
+ C27     +0.58059064         -0.66197629         -0.94445578         
+ C28     +0.12272331         +0.59941852         +0.30316675         
+ C29     +0.11438464         -0.15679591         -1.7177933          
+ C30     +0.19918723         +0.3537486          +0.16923049         
+ C31     +0.52306046         -0.22413989         -1.8105395          
+ C32     +0.39342615         +0.6973601          -0.16609168         
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.026797             -60.163139             +0.074891              
+ -60.163139             -44.928345             -31.078165             
+ +0.074891              -31.078165             -51.823278             
+ TOTAL-PRESSURE: -22.908275 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.64172          -308.71443          +0.07271514         +242.97986          -19.839853          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -19.839853 Kbar 
+Virial Term is -22.908275 Kbar 
+Kenetic Term is +3.0684225 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++30.682915     -60.192236     -0.04163652    
+-60.192236     -41.830717     -30.807842     
+-0.04163652    -30.807842     -48.371756     
+
+
+
+ -------------------------------------------
+ STEP OF MOLECULAR DYNAMICS : 10
+ -------------------------------------------
+ second order charge density extrapolation !
+ searching radius is (Bohr))              = +25.29
+ searching radius unit is (Bohr))         = +1.8897261
++1374558
+ DONE : INIT SCF Time : +9333.01 (SEC)
+
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+1  --------------------------------
+
+ Density error is +0.00348039634156
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+2  --------------------------------
+
+ Density error is +0.00207304895449
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+3  --------------------------------
+
+ Density error is +0.00195654533232
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+4  --------------------------------
+
+ Density error is +0.00050228292377
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+5  --------------------------------
+
+ Density error is +0.000322870451101
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+6  --------------------------------
+
+ Density error is +0.000110058142021
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+7  --------------------------------
+
+ Density error is +4.46726490678e-05
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+8  --------------------------------
+
+ Density error is +1.91008719619e-05
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+9  --------------------------------
+
+ Density error is +5.16339279986e-06
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+10 --------------------------------
+
+ Density error is +1.55805959512e-06
+
+ LCAO ALGORITHM --------------- ION=+11   ELEC=+11 --------------------------------
+
+ Density error is +7.06556600753e-07
+
+ charge density convergence is achieved
+ final etot is -8400.40121106 eV
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+    TOTAL-FORCE (eV/Angstrom)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ atom    x              y              z              
+ Si1     -0.25308974         -0.69959523         +0.22598867         
+ Si2     -0.29925873         -0.18239813         +1.764309           
+ Si3     -0.02576092         +0.017865797        +0.37753672         
+ Si4     -0.068087126        +0.67596934         +1.6035218          
+ Si5     -0.2125796          -0.36003265         +0.15197419         
+ Si6     -0.73548668         +0.18412111         +1.763191           
+ Si7     -0.13040964         +0.19401544         +0.086973905        
+ Si8     -0.97434952         +0.59846803         +2.6796952          
+ Si9     -0.011468579        -0.13750216         -0.76173217         
+ Si10    +0.19424607         -0.19442654         -0.74451266         
+ Si11    +0.76627285         +1.5875429          -0.20728974         
+ Si12    -0.15018781         +1.8051369          +0.20155903         
+ Si13    -0.59059702         -0.40050682         -0.094394338        
+ Si14    -0.8443433          +0.27253299         -0.32503848         
+ Si15    +0.4875604          +1.9596739          -0.62106918         
+ Si16    +0.0067306773       +1.7530674          +0.016746762        
+ Si17    +1.6010109          -1.8297917          -0.83810352         
+ Si18    +2.7591448          -1.9180861          -1.3990992          
+ Si19    +2.5033403          -1.4165549          -1.2661961          
+ Si20    +2.5045712          -0.96422879         -0.91670572         
+ Si21    -0.45045265         -0.49228899         -0.6447013          
+ Si22    -0.26086394         -0.79141905         +0.083539877        
+ Si23    -0.022266013        -0.50177259         -0.31262303         
+ Si24    -0.79035216         -0.79421907         -0.30368955         
+ Si25    +2.5432017          -1.9365738          -0.53474247         
+ Si26    +1.4598452          -0.10754444         +1.6010935          
+ Si27    +2.7803346          +0.54629602         +0.73488058         
+ Si28    +1.8228395          +2.0851336          +2.0539551          
+ Si29    -0.5027893          +0.073305391        -0.23805944         
+ Si30    -0.50987999         +0.41270994         +1.8978481          
+ Si31    +0.54100531         +1.7061545          +0.59755148         
+ Si32    +0.46700023         +2.1721025          +2.3309546          
+ C1      -2.063178           -1.7601395          -1.6460314          
+ C2      -2.468215           -0.55042685         -0.25143949         
+ C3      -0.97402672         +0.39670745         -1.85775            
+ C4      -2.5468019          +1.6663558          +0.8759629          
+ C5      -0.40483023         -1.9444492          -1.521055           
+ C6      -0.58008808         -1.6875566          -0.60244382         
+ C7      +0.43043048         -0.85244879         -0.88877381         
+ C8      +0.5020173          +0.59625823         +0.31673384         
+ C9      -1.5067864          +1.1224192          +0.061899033        
+ C10     -1.9845895          +1.6031181          +1.441325           
+ C11     -2.1744704          +1.5482311          +0.69670761         
+ C12     -1.9709794          +1.4093273          +0.57303981         
+ C13     +0.54130386         +0.49642643         -0.37973769         
+ C14     +0.26189785         +0.34703684         +1.0576954          
+ C15     +0.063617898        +0.62422118         -0.28857216         
+ C16     +0.28403654         +0.22730877         +0.25106283         
+ C17     -0.39752849         -1.3339676          -0.9491617          
+ C18     -0.075453683        -2.0623994          -0.076644913        
+ C19     +0.45274715         -0.036309866        -0.98022631         
+ C20     -0.15886446         -0.2433394          +0.92689441         
+ C21     -0.95265899         -1.942322           -0.45961343         
+ C22     -0.77787234         -0.98925427         -0.039733785        
+ C23     -0.43585399         +0.062164275        -0.28757903         
+ C24     +0.49191339         +0.15211826         -0.019688631        
+ C25     +0.67682149         -0.53221021         -1.2298454          
+ C26     -0.47771357         -0.040043995        +0.18471193         
+ C27     +0.67228275         -0.74298645         -0.80791179         
+ C28     +0.31997558         +0.48807            +0.38809604         
+ C29     +0.19199332         -0.059423062        -1.8046217          
+ C30     +0.43019127         +0.28853577         +0.11779054         
+ C31     +0.67077506         -0.034459084        -1.7129277          
+ C32     +0.3550262          +0.46628275         -0.051524072        
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ TOTAL-STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ +28.736139             -60.175042             +0.623472              
+ -60.175042             -44.352202             -31.749206             
+ +0.623472              -31.749206             -51.118075             
+ TOTAL-PRESSURE: -22.244713 KBAR
+
+
+ ------------------------------------------------------------------------------------------------
+ Energy              Potential           Kinetic             Temperature         Pressure (KBAR)     
+ -308.62682          -308.70894          +0.082115167        +274.39034          -18.779629          
+ ------------------------------------------------------------------------------------------------
+
+output Pressure for check!
+Virtual Pressure is -18.779629 Kbar 
+Virial Term is -22.244713 Kbar 
+Kenetic Term is +3.4650835 Kbar 
+
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
+ MD STRESS (KBAR)
+
+ ><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><
+
++32.167168     -60.48105      -0.116932      
+-60.48105      -41.443261     -32.037699     
+-0.116932      -32.037699     -47.062795     
+
+
+
+
+ --------------------------------------------
+ !FINAL_ETOT_IS -8400.401211060787 eV
+ --------------------------------------------
+
+
+
+
+
+
+  |CLASS_NAME---------|NAME---------------|TIME(Sec)-----|CALLS----|AVG------|PER%-------
+                       total               +10219         27        +3.8e+02  +1e+02    %
+   Driver              driver_line         +10219         1         +1e+04    +1e+02    %
+   PW_Basis            setup_struc_factor  +0.91093       11        +0.083    +0.0089   %
+   ORB_control         read_orb_first      +0.14795       1         +0.15     +0.0014   %
+   LCAO_Orbitals       Read_Orbitals       +0.14795       1         +0.15     +0.0014   %
+   ORB_control         set_orb_tables      +6.4001        1         +6.4      +0.063    %
+   ORB_gen_tables      gen_tables          +6.4001        1         +6.4      +0.063    %
+   ORB_table_phi       init_Table          +5.0157        1         +5        +0.049    %
+   ORB_table_phi       cal_ST_Phi12_R      +4.9883        558       +0.0089   +0.049    %
+   ORB_table_beta      init_Table_Beta     +1.1958        1         +1.2      +0.012    %
+   ORB_table_beta      VNL_PhiBeta_R       +1.1899        168       +0.0071   +0.012    %
+   ppcell_vl           init_vloc           +0.23673       1         +0.24     +0.0023   %
+   Run_MD              md_line             +10212         1         +1e+04    +1e+02    %
+   Langevin            setup               +1472.7        1         +1.5e+03  +14       %
+   MD_func             force_virial        +10212         11        +9.3e+02  +1e+02    %
+   ESolver_KS_LCAO     Run                 +9362.5        11        +8.5e+02  +92       %
+   ESolver_KS_LCAO     beforescf           +23.526        11        +2.1      +0.23     %
+   ESolver_KS_LCAO     beforesolver        +5.474         11        +0.5      +0.054    %
+   ESolver_KS_LCAO     set_matrix_grid     +4.164         11        +0.38     +0.041    %
+   Grid_Technique      init                +1.8337        11        +0.17     +0.018    %
+   Grid_BigCell        grid_expansion_index+0.55866       22        +0.025    +0.0055   %
+   Record_adj          for_2d              +2.0776        11        +0.19     +0.02     %
+   Grid_Driver         Find_atom           +16.625        612032    +2.7e-05  +0.16     %
+   Charge              atomic_rho          +15.171        21        +0.72     +0.15     %
+   PW_Basis            recip2real          +4.1559        755       +0.0055   +0.041    %
+   PW_Basis            gathers_scatterp    +3.3143        755       +0.0044   +0.032    %
+   Potential           init_pot            +0.6684        11        +0.061    +0.0065   %
+   Potential           update_from_charge  +7.9449        138       +0.058    +0.078    %
+   Potential           cal_v_eff           +7.9024        138       +0.057    +0.077    %
+   H_Hartree_pw        v_hartree           +0.80855       138       +0.0059   +0.0079   %
+   PW_Basis            real2recip          +2.5145        1148      +0.0022   +0.025    %
+   PW_Basis            gatherp_scatters    +1.2085        1148      +0.0011   +0.012    %
+   PotXC               cal_v_eff           +7.0325        138       +0.051    +0.069    %
+   XC_Functional       v_xc                +6.9941        138       +0.051    +0.068    %
+   HSolverLCAO         solve               +9325.5        127       +73       +91       %
+   HamiltLCAO          updateHk            +3445.3        4572      +0.75     +34       %
+   OperatorLCAO        init                +2821          9144      +0.31     +28       %
+   Veff                contributeHk        +2819.1        4572      +0.62     +28       %
+   Gint_interface      cal_gint            +3751.9        265       +14       +37       %
+   Gint_interface      cal_gint_vlocal     +1788.9        127       +14       +18       %
+   Gint_k              folding_vl_k        +1030.2        4572      +0.23     +10       %
+   Gint_k              Distri              +789.1         4572      +0.17     +7.7      %
+   Overlap             contributeHR        +4.2251        11        +0.38     +0.041    %
+   LCAO_gen_fixedH     calculate_S_no      +4.225         11        +0.38     +0.041    %
+   Ekin<LCAO>          contributeHR        +4.3092        11        +0.39     +0.042    %
+   Nonlocal<LCAO>      contributeHR        +43.315        11        +3.9      +0.42     %
+   LCAO_gen_fixedH     build_Nonlocal_mu_new+139.28        22        +6.3      +1.4      %
+   ORB_gen_tables      snap_psibeta_half   +3.106         1092468   +2.8e-06  +0.03     %
+   OperatorLCAO        folding_fixed       +572.46        4572      +0.13     +5.6      %
+   LCAO_nnr            folding_fixedH      +566.58        4572      +0.12     +5.5      %
+   HSolverLCAO         hamiltSolvePsiK     +1465.4        4572      +0.32     +14       %
+   DiagoElpa           elpa_solve          +1453.2        4572      +0.32     +14       %
+   ElecStateLCAO       psiToRho            +4414.8        127       +35       +43       %
+   elecstate           cal_dm              +112.74        138       +0.82     +1.1      %
+   psiMulPsiMpi        pdgemm              +109.27        4968      +0.022    +1.1      %
+    Local_Orbital_wfc  wfc_2d_to_grid      +23.021        4572      +0.005    +0.23     %
+   LCAO_Charge         cal_dk_k            +2364.5        127       +19       +23       %
+   Record_adj          for_grid            +0.65603       127       +0.0052   +0.0064   %
+   Gint_interface      cal_gint_rho        +1563.9        127       +12       +15       %
+   Charge              mix_rho             +1.0555        116       +0.0091   +0.01     %
+   Force_Stress_LCAO   getForceStress      +849.1         11        +77       +8.3      %
+   Forces              cal_force_loc       +0.74037       11        +0.067    +0.0072   %
+   Forces              cal_force_ew        +0.72941       11        +0.066    +0.0071   %
+   Forces              cal_force_scc       +7.0522        11        +0.64     +0.069    %
+   Stress_Func         stress_loc          +5.8275        11        +0.53     +0.057    %
+   Stress_Func         stress_ewa          +0.35834       11        +0.033    +0.0035   %
+   Stress_Func         stress_gga          +0.33678       11        +0.031    +0.0033   %
+   Force_LCAO_k        ftable_k            +834           11        +76       +8.2      %
+   Force_LCAO_k        allocate_k          +123.58        11        +11       +1.2      %
+   Force_LCAO_k        cal_foverlap_k      +24.273        11        +2.2      +0.24     %
+   Force_LCAO_k        cal_edm_2d          +23.45         11        +2.1      +0.23     %
+   Local_Orbital_Chargecal_dm_R            +11.113        22        +0.51     +0.11     %
+   Force_LCAO_k        cal_ftvnl_dphi_k    +0.24675       11        +0.022    +0.0024   %
+   Force_LCAO_k        cal_fvl_dphi_k      +399.08        11        +36       +3.9      %
+   Gint_interface      cal_gint_force      +399.08        11        +36       +3.9      %
+   Force_LCAO_k        cal_fvnl_dbeta_k_new+256.82        11        +23       +2.5      %
+ ----------------------------------------------------------------------------------------
+
+ NAME---------------|MEMORY(MB)--------
+total               +9365          
+ORB::Jl(x)          +2212          
+pvpR_reduced        +1273          
+LOC::DM_R           +1273          
+Stress::dSR         +1007          
+ORB::Table_SR&TR    +846.1         
+Force::dS_K         +503.6         
+Stress::dHr         +503.6         
+Force::dTVNL        +503.6         
+ORB::Table_NR       +175.9         
+Force::edm2d        +167.9         
+Force::dm2d_K       +167.9         
+ChgMix::Rrho        +90.19         
+GT::index2normal    +89.63         
+GT::index2ucell     +76.32         
+ChgMix::dRrho       +67.28         
+ChgMix::drho        +67.28         
+LOWF::wfc_k_grid    +52.94         
+FFT::grid           +44.58         
+meshball_pos        +37.85         
+GT::which_atom      +29.35         
+GT::which_bigcell   +29.35         
+GT::which_unitcell  +29.35         
+SF::strucFac        +19.16         
+Chg::rho            +10.6          
+Chg::rho_save       +9.611         
+Chg::rho_core       +9.611         
+Pot::veff_fix       +9.611         
+Pot::veff           +9.611         
+ChgMix::rho_save2   +9.611         
+SF::eigts123        +9.137         
+Grid::AtomLink      +6.837         
+Chg::rhog           +4.791         
+Chg::rhog_save      +4.791         
+Chg::rhog_core      +4.791         
+SLTK::Epd_Atom      +2.93          
+SLTK::Epd_atom_info +2.441         
+ -------------   < 1.0 MB has been ignored ----------------
+ ----------------------------------------------------------
+
+ Start  Time  : Fri Feb  3 19:28:16 2023
+ Finish Time  : Fri Feb  3 22:18:35 2023
+ Total  Time  : 2 h 50 mins 19 secs 

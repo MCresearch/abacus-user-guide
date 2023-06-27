@@ -68,8 +68,8 @@
     "model_devi_clean_traj": true,
     "model_devi_merge_traj": true,
     "model_devi_jobs": [
-      {"sys_idx": [0,1], "temps":[50, 250, 450, 650], "press": [0, 100, 1000, 5000, 10000, 20000, 50000], "trj_freq": 10, "nsteps": 3000, "ensemble": "npt-tri", "_idx": "01"},
-      {"sys_idx": [0,1], "temps":[50, 250, 450, 650], "press": [0, 100, 1000, 5000, 10000, 20000, 50000], "trj_freq": 10, "nsteps": 3000, "ensemble": "npt-tri", "_idx": "02"}
+      {"sys_idx": [0,1], "temps":[50, 250, 450, 650], "press": [0, 100, 1000, 5000, 10000, 20000, 50000], "trj_freq": 10, "nsteps": 500, "ensemble": "npt-tri", "_idx": "01"},
+      {"sys_idx": [0,1], "temps":[50, 250, 450, 650], "press": [0, 100, 1000, 5000, 10000, 20000, 50000], "trj_freq": 10, "nsteps": 500, "ensemble": "npt-tri", "_idx": "02"}
      ],
     "fp_style": "abacus",
     "shuffle_poscar": false,
