@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/23</strong>
+<strong>最后更新时间：2023/06/30</strong>
 
 # 1. 介绍
 
@@ -66,7 +66,7 @@ Libxc 网址：[Libxc - a library of exchange-correlation functionals for densit
 
 ```bash
 cd libxc-4.3.4
-./configure --prefix='PATH/TO/LIBXC' CC=icc F77=ifort F90=ifort
+./configure --prefix='PATH/TO/LIBXC' CC=icc FC=ifort
 make
 make install
 ```
@@ -138,6 +138,7 @@ OBJS_LIBXC =        functionals.o exc_libxc.o
 
 ```bash
 make
+# 如果make -j报错，可以忽略再make，即可编译成功
 ```
 
 安装测试完成后，即可在 src 目录下看到 `oncvpsp.x`
