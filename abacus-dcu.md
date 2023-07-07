@@ -4,7 +4,7 @@
 
 <strong>审核：韩昊知，邮箱：haozhi.han@stu.pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/15</strong>
+<strong>最后更新时间：2023/07/07</strong>
 
 # 1. 介绍
 
@@ -44,8 +44,8 @@ Slurm 工作调度工具是面向 Linux 和 Unix 及类似内核的免费和开�
 
 - `sinfo`: 查看系统资源。
 - `squeue`: 查看当前作业状态。
-- <strong>salloc</strong>: 分配节点的作业提交，用 salloc 申请的节点会在当前终端退出时释放掉。用于程序测试以及中小型任务的提交。
-- <strong>sbatch</strong>: 批处理模式的作业提交，需要编写 slurm 作业提交脚本。在 E-shell 的默认目录存有 slurm 脚本模板。在下面的流程中也会介绍提交 ABACUS 任务的脚本案例。
+- `salloc`: 分配节点的作业提交，用 salloc 申请的节点会在当前终端退出时释放掉。用于程序测试以及中小型任务的提交。
+- `sbatch`: 批处理模式的作业提交，需要编写 slurm 作业提交脚本。在 E-shell 的默认目录存有 slurm 脚本模板。在下面的流程中也会介绍提交 ABACUS 任务的脚本案例。
 - `srun`: 交互式提交作业命令，有屏幕输出，但容易受网络波动影响，断网或关闭窗口会导致作业中断。
 
 # 3. 流程
@@ -73,7 +73,7 @@ module purge
 
 ```bash
 1) compiler/devtoolset/7.3.1
-2) compiler/dtk/21.10          
+2) compiler/dtk/23.04          
 3) compiler/cmake/3.23.1
 4) mpi/hpcx/gcc-7.3.1
 ```
