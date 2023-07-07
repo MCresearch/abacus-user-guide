@@ -73,7 +73,7 @@ module purge
 
 ```bash
 1) compiler/devtoolset/7.3.1
-2) compiler/dtk/21.10          
+2) compiler/dtk/23.04          
 3) compiler/cmake/3.23.1
 4) mpi/hpcx/gcc-7.3.1
 ```
