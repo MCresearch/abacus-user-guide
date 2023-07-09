@@ -1,0 +1,21 @@
+calculation     isf2
+geo_in_type     ABACUS
+geo_directory   ../MD_dump
+geo_1           50
+geo_2           100
+geo_interval    1
+
+isf_outfile     isf.txt
+ntype           1
+natom           32
+isf_nt1         10
+isf_nt2         40
+dt_snapshots    0.00006
+
+isf_target_q    2.51
+isf_dgx         2.5133
+isf_dgy         2.5133
+isf_dgz         2.5133
+isf_ngx         6
+isf_ngy         6
+isf_ngz         6
