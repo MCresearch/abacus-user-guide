@@ -1,0 +1,15 @@
+calculation   ssf           
+geo_in_type   ABACUS
+geo_directory ../MD_dump
+geo_1         0
+geo_2         100
+geo_interval  2
+geo_ignore    50
+
+ssf_out       Al_ssf.txt
+ntype         1
+natom         32
+struf_dgx     2.5133
+struf_dgy     2.5133
+struf_dgz     2.5133
+struf_ng      6
