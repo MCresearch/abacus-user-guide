@@ -4,10 +4,11 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/12</strong>
+<strong>最后更新时间：2023/07/15</strong>
 
 | 标题                                                                     | 链接                                                                                                   | 日期       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---------- |
+| ABACUS 3.3发布：自动化测试工作流赋能高效研发，为代码质量保驾护航          | [https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA](https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA) | 2023/07/13 |
 | ABACUS 3.2 发布：支持 Hefei-NAMD 接口，全面提升代码稳定性和易用性        | [https://mp.weixin.qq.com/s/lB9Q3JiSuMmipkhd2-_ylA](https://mp.weixin.qq.com/s/lB9Q3JiSuMmipkhd2-_ylA) | 2023/04/01 |
 | ABACUS 还能干这个？探索准一维材料碳纳米管中的无序超均匀性                | [https://mp.weixin.qq.com/s/VTf67VFAW0pVBMMnAKjBUg](https://mp.weixin.qq.com/s/VTf67VFAW0pVBMMnAKjBUg) | 2023/03/07 |
 | ABACUS 3.1 发布，支持平面波基组下的 GPU 高效计算，发布固液界面计算新功能 | [https://mp.weixin.qq.com/s/D8gcQb0bikMdgizLsbvCfQ](https://mp.weixin.qq.com/s/D8gcQb0bikMdgizLsbvCfQ) | 2023/01/01 |
