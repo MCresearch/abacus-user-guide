@@ -73,7 +73,7 @@ Number of Dorbital-->       1
 SUMMARY  END
 ```
 
-这里包括元素种类（`Element`），生成轨道时指定的截断能量值（`Energy Cutoff`）、截断半径（`Radius Cutoff`），最大角量子数（`L``max`）及各角量子数轨道的个数（`Number of *`` ``orbital`，*为 S、P、D 等轨道角动量）。根据这些信息可以知道该轨道的类别，比如该举例文件即包含 O 的 DZP 轨道。
+这里包括元素种类（`Element`），生成轨道时指定的截断能量值（`Energy Cutoff`）、截断半径（`Radius Cutoff`），最大角量子数（`Lmax`）及各角量子数轨道的个数（`Number of * orbital`，*为 S、P、D 等轨道角动量）。根据这些信息可以知道该轨道的类别，比如该举例文件即包含 O 的 DZP 轨道。
 
 上述 ABACUS 提供的数值原子轨道文件中，在取名中即包含文件开头的重要信息，包括各角量子数的轨道个数。由这些轨道的文件名即可判断轨道类型。
 
@@ -89,7 +89,7 @@ SUMMARY  END
 
 如果已有一份数值原子轨道文件，但希望直接用此文件进行低精度计算，比如希望使用 DZP 轨道文件进行 SZ 计算。可以修改文件开头的信息实现，具体是 `Lmax` 及各角量子数轨道个数，将这些参数调整到低精度计算对应的数值。文件的后续内容不需要做更改。
 
-比如对于 O 元素而言，DZP 轨道文件参数如 3.1 所示，若要进行 `SZ` 基矢量的计算，则将 `L``max` 设置为 1，`Number of Sorbital/Porbital/Dorbital=1/1/0` 即可。
+比如对于 O 元素而言，DZP 轨道文件参数如 3.1 所示，若要进行 `SZ` 基矢量的计算，则将 `Lmax` 设置为 1，`Number of Sorbital/Porbital/Dorbital=1/1/0` 即可。
 
 # 4. 参考文献
 
