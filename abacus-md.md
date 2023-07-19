@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/15</strong>
+<strong>最后更新时间：2023/07/20</strong>
 
 # 1. 分子动力学方法简介
 
@@ -12,9 +12,9 @@
 
 <strong>经典分子动力学（Classical MD，简称 CMD）：</strong>通过构建描述原子间相互作用的势函数，获得每个原子的受力（受力等于能量对原子位置的导数），再通过积分运动方程来获得每个原子的下一时刻位置，从而获得随时间演化的粒子位置和速度。当系统处在一定的密度、温度和压强等物理条件限制下，可以结合统计物理的方法计算物质的性质。具体来说，采取某个系综后，对粒子位置和速度采样，之后统计出体系的热力学宏观性质。
 
-<strong>从头算分子动力学（</strong><strong>ab initio</strong><strong> molecular dynamics，简称 AIMD）：</strong>也称为第一性原理的分子动力学方法（first-principles molecular dynamics，简称 FPMD），该方法采用的是第一性原理方法（例如密度泛函理论）来计算体系的势能面，因此计算量相比于经典分子动力学方法要昂贵很多。
+<strong>从头算分子动力学（ab initio molecular dynamics，简称 AIMD）：</strong>也称为第一性原理的分子动力学方法（first-principles molecular dynamics，简称 FPMD），该方法采用的是第一性原理方法（例如密度泛函理论）来计算体系的势能面，因此计算量相比于经典分子动力学方法要昂贵很多。
 
-<strong>ABACUS 的</strong><strong>分子动力学功能：</strong>支持第一性原理分子动力学 FPMD 方法，也支持经典的 Lennard-Jones（LJ 对势）的分子动力学模拟。此外，ABACUS 还支持深度势能分子动力学（Deep Potential Molecular Dynamics，简称 DPMD）方法，此时需要编译 [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) 软件包并在编译原子算筹软件时进行动态库的链接。
+<strong>ABACUS 的分子动力学功能：</strong>支持第一性原理分子动力学 FPMD 方法，也支持经典的 Lennard-Jones（LJ 对势）的分子动力学模拟。此外，ABACUS 还支持深度势能分子动力学（Deep Potential Molecular Dynamics，简称 DPMD）方法，此时需要编译 [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) 软件包并在编译原子算筹软件时进行动态库的链接。
 
 # 2. 文档和算例下载地址
 
@@ -41,7 +41,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 注：算例仓库里面包含 `1_AIMD`，`2_LJMD`（采用 Lennard-Jones 经典势做 MD）和 `3_DPMD`（采用深度势能方法做 MD）三个目录。
 
-注：以上算例要在ABACUS v3.2.1版本及以上可以运行成功。
+注：以上算例要在 ABACUS v3.2.1 版本及以上可以运行成功，并且我们强烈建议下载使用 ABACUS 最新版本！
 
 ## 2.1 第一性原理分子动力学（AIMD）
 
@@ -406,3 +406,102 @@ init_vel            1
 ```
 
 - md\_restart：控制续算的开关，在 MD 续算时将这个参数设为 1，其他参数不变。当 md\_restart 设为 1，ABACUS 会读取`${read_file_dir}/Restart_md.dat`文件，从中获取当前MD步数istep以及续算所需的其他参数如恒温器以及恒压器的信息，根据istep从`OUT.${suffix}/STRU/` 文件夹中读取相应的结构文件 `STRU_MD_${istep}`，之后就可以进行 MD 续算了。
+
+# 4. MD 后处理
+
+目前主流的可视化软件如 [VESTA](https://jp-minerals.org/vesta/en/)、[VMD](https://www.ks.uiuc.edu/Research/vmd/)、[OVITO](https://www.ovito.org/) 并不支持 ABACUS 的文件格式，因此我们需要通过一些后处理软件实现 ABACUS 的 STRU、MD_dump 文件与常用文件格式的转化。我们比较推荐的后处理软件有：
+
+## 4.1 ASE
+
+- 官网：https://wiki.fysik.dtu.dk/ase/
+- 用法参考 ABACUS 线上文档：[http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html](http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html)
+
+## 4.2 dpdata
+
+- github 网址：[https://github.com/deepmodeling/dpdata](https://github.com/deepmodeling/dpdata)
+- gitee 网址：[https://gitee.com/deepmodeling/dpdata](https://gitee.com/deepmodeling/dpdata)
+
+## 4.3 案例
+
+现在我们用 LJMD 算例来演示如何采用<strong>dpdata+OVITO</strong>的方式在 MD 计算完成后制作分子动力学轨迹动画。
+
+### 4.3.1 MD 计算
+
+下载案例文件
+
+```bash
+$ git clone https://gitee.com/mcresearch/abacus-user-guide
+```
+
+进入 LJMD 文件夹
+
+```bash
+$ cd abacus-user-guide/examples/md/2_LJMD
+```
+
+修改 INPUT 参数，把 md_nstep 改为 100
+
+```bash
+INPUT_PARAMETERS
+#Parameters (General)
+suffix              autotest
+
+calculation         md
+pseudo_dir          ../../PP_ORB
+
+#Parameters (esolver)
+esolver_type        lj
+lj_rcut             8.5
+lj_epsilon          0.01032
+lj_sigma            3.405
+
+cal_force           1
+cal_stress          1
+
+#Parameters (MD)
+md_nstep            100
+md_type             nve
+md_dt               1
+md_tfirst           300
+
+init_vel            1
+```
+
+运行 abacus
+
+```bash
+$ abacus
+```
+
+### 4.3.2 dpdata 转化格式
+
+安装 dpdata
+
+```bash
+$ git clone https://github.com/deepmodeling/dpdata.git dpdata
+$ cd dpdata
+$ pip install .
+```
+
+运行 dpdata，将 MD_dump 文件转化为 GROMACS 的 gro 格式的文件 data.gro
+
+```bash
+$ python3
+>>> import dpdata
+>>> data = dpdata.LabeledSystem("./", fmt="abacus/md")
+>>> data.to_gro("data.gro")
+```
+
+### 4.3.3 OVITO 制作动画
+
+打开 OVITO，点击左上角 load file，选择上一步的 data.gro 文件
+
+![](picture/fig_md-1.png)
+
+右上角 rendering settings
+
+![](picture/fig_md-2.png)
+
+点击 Render active viewport 即可保存动画文件
+
+![](picture/fig_md-3.png)
