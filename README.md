@@ -30,13 +30,14 @@ ABACUS（中文名量子算筹）是国产开源密度泛函理论软件，相�
 4. DeePKS方法（缺）
 5. 隐式溶剂计算等相关功能（缺）
 6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
-7. 分析结果
+7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
+8. 分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://dptechnology.feishu.cn/wiki/wikcnUTWmTj8sQYeSdwcInFRLwg)<mark style="color:red;"></mark>
       2. [<mark style="color:red;">用ABACUS-ASE自动产生能带路径</mark>](https://dptechnology.feishu.cn/wiki/wikcnxzVKuGZ9lSAoKOM1lpD6Pf)<mark style="color:red;"></mark>
    2. PDOS计算
       1. [<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnM7MsN60p43DsZ1uSjkIyxg)<mark style="color:red;"></mark>
-8. 和其他软件对接
+9. 和其他软件对接
    1. ABACUS+Phonopy教程：[ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
    2. ABACUS+ShengBTE教程：[ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
    3. ABACUS+DPGEN教程：[ABACUS+DPGEN 使用教程](abacus-dpgen.md)
