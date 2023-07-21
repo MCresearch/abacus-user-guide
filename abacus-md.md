@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/07/20</strong>
 
-# 1. 分子动力学方法简介
+# 一、分子动力学方法简介
 
 <strong>分子动力学（Molecular Dynamics，简称 MD）：</strong>一种模拟原子体系随时间运动的方法，被广泛的用来研究与原子运动路径相关的一些基本过程，如相变、扩散、化学反应等等。本教程旨在介绍 ABACUS 中的分子动力学功能，分子动力学模拟重要的一件事情是如何选取精度和效率的平衡，其中精度高低主要取决于势函数的准确程度，而效率主要受限于求出每个原子的能量和受力的计算量。
 
@@ -16,7 +16,7 @@
 
 <strong>ABACUS 的分子动力学功能：</strong>支持第一性原理分子动力学 FPMD 方法，也支持经典的 Lennard-Jones（LJ 对势）的分子动力学模拟。此外，ABACUS 还支持深度势能分子动力学（Deep Potential Molecular Dynamics，简称 DPMD）方法，此时需要编译 [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) 软件包并在编译原子算筹软件时进行动态库的链接。
 
-# 2. 文档和算例下载地址
+# 二、文档和算例下载地址
 
 ABACUS 里关于分子动力学方法的线上文档地址为：[http://abacus.deepmodeling.com/en/latest/advanced/md.html](http://abacus.deepmodeling.com/en/latest/advanced/md.html)
 
@@ -43,7 +43,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 注：以上算例要在 ABACUS v3.2.1 版本及以上可以运行成功，并且我们强烈建议下载使用 ABACUS 最新版本！
 
-## 2.1 第一性原理分子动力学（AIMD）
+## 1. 第一性原理分子动力学（AIMD）
 
 进入 `1_AIMD` 目录，该目录提供了 8 个输入文件，使用的时候将 `INPUT_*` 复制为 `INPUT` 即可（`INPUT_*` 代表从 `INPUT_0` 到 `INPUT_7` 共 8 个不同的 INPUT 文件，对应 8 种不同的 MD 算法）。该算例采用 8 原子的金刚石结构 Si，晶格结构放在 `STRU` 文件里，布里渊区的 k 点采样放在 `KPT` 文件里。
 
@@ -113,11 +113,11 @@ md_tfirst              300
 - md_dt：MD 计算每一步的时间步长（单位是 fs），与 md_nstep 共同决定 MD 总时长。
 - md_tfirst：MD 系统的初始温度（单位是 K）。
 
-## 2.2 Lennard-Jones 势函数
+## 2. Lennard-Jones 势函数
 
 进入 `2_LJMD` 目录，ABACUS 软件包中提供了一个采用 Lennard-Jones（LJ）经典势函数进行 MD 模拟的算例，该算例采用 LJ 对势作为能量求解器来做经典分子动力学，初始结构是边长 20 埃的正方体盒子中的 256 个无序 He 原子。
 
-### 2.2.1 LJ 对势
+### 2.1 LJ 对势
 
 LJ 对势的解析形式如下：$$u^{ij}$$表示原子 i 与原子 j 之间的相互作用能，$$r^{ij}$$表示这两个原子之间的距离，$$\epsilon$$，$$\sigma$$和$$r_{cut}$$则是 LJ 势需要的 3 个参数。LJ 势只考虑截断半径$$r_{cut}$$内的近邻原子 j 对中心原子 i 的能量贡献。
 
@@ -132,7 +132,7 @@ H(x)=\left\{\begin{array}{l}
 \end{array}\right.\\
 $$
 
-### 2.2.2 STRU
+### 2.2 STRU
 
 LJMD 是经典分子动力学，不需要提供 `KPT`，赝势和轨道文件，`STRU` 的前面几部分如下：
 
@@ -159,7 +159,7 @@ He #label
 - ATOMIC_SPECIES：不需要提供赝势信息
 - NUMERICAL_ORBITAL：不需要添加轨道信息
 
-### 2.2.3 INPUT
+### 2.3 INPUT
 
 `INPUT` 文件中的参数也需要做少量修改：
 
@@ -195,19 +195,19 @@ init_vel            1
 - lj_sigma：LJ 对势的参数，即$$\sigma$$。
 - init_vel：读取 `STRU` 中的原子速度信息，原子单位制。
 
-## 2.3 深度势能（Deep Potential）
+## 3. 深度势能（Deep Potential）
 
 ABACUS 软件包中提供了一个 DPMD 的算例，进入 `3_DPMD` 目录。该算例采用 DP 模型（DeePMD-kit 产生的深度势能模型）作为能量求解器来做基于机器学习的分子动力学，初始结构是 864 个无序铝原子。
 
-### 2.3.1 DP 模型
+### 3.1 DP 模型
 
 [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) 是一种基于机器学习的分子动力学模拟方法，该方法是通过使用第一性原理计算数据对深度神经网络模型进行训练，从而得到通用的多体势能模型（DP 模型）。
 
-### 2.3.2 编译方式
+### 3.2 编译方式
 
 ABACUS 采用 DP 模型做 MD 计算需要编译与 DeePMD-kit 的接口，[cmake](http://abacus.deepmodeling.com/en/latest/advanced/install.html#build-with-deepmd-kit) 以及 [makefile](http://abacus.deepmodeling.com/en/latest/advanced/install.html#add-deepmd-kit-support) 编译方式可以参考 ABACUS 线上文档。
 
-### 2.3.3 INPUT 文件设置
+### 3.3 INPUT 文件设置
 
 DPMD 是经典分子动力学，不需要提供 KPT，赝势和轨道文件
 
@@ -244,7 +244,7 @@ init_vel            1
 - md_dumpfreq：MD 输出文件 MD_dump 中原子以及晶胞信息的输出频率
 - md\_restartfreq：结构文件 STRU\_MD\_\${istep} 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
 
-### 2.3.4 STRU 文件的设置
+### 3.4 STRU 文件的设置
 
 首先，我们可以通过如下命令确定 DP 势文件中是否存在关键字“type_map”：
 
@@ -295,21 +295,21 @@ Mg
 
 注：在这个例子中，即使 Cu 原子的数量为 0，也必须在 STRU 中给出 Cu 原子相关信息。
 
-# 3 MD 输出和续算功能
+# 三、MD 输出和续算功能
 
-## 3.1 MD 输出文件
+## 1. MD 输出文件
 
 ABACUS 的 MD 模拟会产生 3 类输出文件：结构文件 `STRU_MD_${istep}`，续算文件 `Restart_md.dat`，信息文件 `MD_dump`。
 
-### 3.1.1 结构文件 STRU\_MD\_${istep}
+### 1.1 结构文件 STRU\_MD\_${istep}
 
 参数 `md_restartfreq` 控制 OUT.\${suffix}/STRU/文件夹中结构文件STRU\_MD\_\${istep}的输出频率，该文件格式与输入结构文件 STRU 相同，主要用于 MD 续算。这里 istep 代表离子步，从 0 开始计数。
 
-### 3.1.2 续算文件 Restart_md.dat
+### 1.2 续算文件 Restart_md.dat
 
 参数 `md_restartfreq` 控制 OUT.${suffix}/Restart_md.dat 的更新频率，用于 MD 续算。
 
-### 3.1.3 信息文件 MD_dump
+### 1.3 信息文件 MD_dump
 
 参数 `md_dumpfreq` 控制 OUT.${suffix}/MD_dump 文件的追加输出频率，该文件输出每 `md_dumpfreq` 步的 MD 信息，包括 MD 步数，晶格常数，晶格矢量，晶格维里，原子编号，原子位置，原子受力，原子速度。其中，晶格维里，原子受力，原子速度可以通过输入参数 `dump_virial`，`dump_force`，`dump_vel` 控制是否输出。
 
@@ -371,7 +371,7 @@ INDEX    LABEL    POSITION (Angstrom)    FORCE (eV/Angstrom)    VELOCITY (Angstr
   1  Si  1.333700466782  1.360472064040  1.350800512757  -0.310711926370  0.086233730382  0.043760493686  0.009222308089  -0.005510922784  -0.001122226311
 ```
 
-## 3.2 MD 续算功能
+## 2 MD 续算功能
 
 如果 ABACUS 运行达到指定的 MD 步数，或者计算中断，可以通过 MD 续算功能继续之前的 MD 计算。
 
@@ -407,25 +407,25 @@ init_vel            1
 
 - md\_restart：控制续算的开关，在 MD 续算时将这个参数设为 1，其他参数不变。当 md\_restart 设为 1，ABACUS 会读取`${read_file_dir}/Restart_md.dat`文件，从中获取当前MD步数istep以及续算所需的其他参数如恒温器以及恒压器的信息，根据istep从`OUT.${suffix}/STRU/` 文件夹中读取相应的结构文件 `STRU_MD_${istep}`，之后就可以进行 MD 续算了。
 
-# 4. MD 后处理
+# 四、MD 后处理
 
 目前主流的可视化软件如 [VESTA](https://jp-minerals.org/vesta/en/)、[VMD](https://www.ks.uiuc.edu/Research/vmd/)、[OVITO](https://www.ovito.org/) 并不支持 ABACUS 的文件格式，因此我们需要通过一些后处理软件实现 ABACUS 的 STRU、MD_dump 文件与常用文件格式的转化。我们比较推荐的后处理软件有：
 
-## 4.1 ASE
+## 1 ASE
 
 - 官网：https://wiki.fysik.dtu.dk/ase/
 - 用法参考 ABACUS 线上文档：[http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html](http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html)
 
-## 4.2 dpdata
+## 2 dpdata
 
 - github 网址：[https://github.com/deepmodeling/dpdata](https://github.com/deepmodeling/dpdata)
 - gitee 网址：[https://gitee.com/deepmodeling/dpdata](https://gitee.com/deepmodeling/dpdata)
 
-## 4.3 案例
+## 3 案例
 
 现在我们用 LJMD 算例来演示如何采用<strong>dpdata+OVITO</strong>的方式在 MD 计算完成后制作分子动力学轨迹动画。
 
-### 4.3.1 MD 计算
+### 3.1 MD 计算
 
 下载案例文件
 
@@ -473,7 +473,7 @@ init_vel            1
 $ abacus
 ```
 
-### 4.3.2 dpdata 转化格式
+### 3.2 dpdata 转化格式
 
 安装 dpdata
 
@@ -492,7 +492,7 @@ $ python3
 >>> data.to_gro("data.gro")
 ```
 
-### 4.3.3 OVITO 制作动画
+### 3.3 OVITO 制作动画
 
 打开 OVITO，点击左上角 load file，选择上一步的 data.gro 文件
 

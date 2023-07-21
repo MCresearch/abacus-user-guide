@@ -6,11 +6,11 @@
 
 <strong>最后更新时间：2023/07/11</strong>
 
-# 1. 介绍
+# 一、介绍
 
 本教程旨在介绍 ABACUS 中随机波函数密度泛函理论（Stochastic Density Functional Theory，以下简称 SDFT）计算功能。目前 ABACUS 使用 SDFT 主要聚焦在高温高压物质的模拟，特别是温稠密物质（Warm Dense Matter，简称 WDM）。在进行温稠密物质计算时（温度高达数十到上千 eV， 1 eV=11604.5 K），传统的 Kohn-Sham 密度泛函理论（KSDFT）需要用到极大数量的占据态电子波函数导致计算困难，而 SDFT 使用随机波函数轨道，可以有效地避开对角化哈密顿矩阵这个问题，应用于高温计算。关于 ABACUS 中实现 SDFT 算法的细节可以参考 Qianrui Liu and Mohan Chen*, [<em>"Plane-wave-based stochastic-deterministic density functional theory for extended systems,"</em>](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.125132) Phys. Rev. B, <strong>106</strong>, 125132 (2022)。本教程中将会展示如何在 ABACUS 计算中使用 SDFT 功能，此外还会介绍混合随机波函数密度泛函理论方法使用（mixed stochastic-deterministic DFT，简称 MDFT），即在 SDFT 计算中，混入一部分的低能 Kohn-Sham 轨道，从而加速结果收敛。
 
-# 2. 软件和算例准备
+# 二、软件和算例准备
 
 ABACUS 的软件包（3.2.0 版本）中提供了一个 SDFT 的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/stochastic)。可以在网页右侧点击克隆/下载-> 下载 ZIP 得到算例，或者在 linux 终端执行如下命令得到算例：
 
@@ -20,7 +20,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 下载后解压，之后进入`/abacus-user-guide/examples/stochastic` 文件夹。算例中有三个文件夹，`pw_Si2`、`pw_md_Al` 和 `186_PW_SDOS_10D10S`。
 
-# 3. 采用 SDFT 进行电子自洽迭代计算
+# 三、采用 SDFT 进行电子自洽迭代计算
 
 `pw_Si2`文件夹：这是一个电子温度为 0.6 Ry（约 8.16 eV）的 2 个原子的金刚石结构硅（Si）的电子自洽迭代（Self Consistent Field，简称 SCF）算例，包含布里渊区 K 点的 KPT 文件和包含原子位置的 STRU 文件与传统的 KSDFT 计算并无区别，主要的不同在于输入文件 INPUT，注意目前 SDFT 仅支持 smearing_method 为 fd。INPUT 文件如下：
 
@@ -65,7 +65,7 @@ smearing_sigma  0.6
 
 注 2：ABACUS 的 SDFT 和 MDFT 支持多个 k 点采样，因此可以在 KPT 文件里设置不同的 k 点个数，在某些性质的计算里，要注意计算性质随着 k 点的收敛。
 
-# 4. 采用 SDFT 进行分子动力学模拟
+# 四、采用 SDFT 进行分子动力学模拟
 
 `pw_md_Al` 文件夹：这是一个电子温度为 7.35 Ry（约 100 eV）、包含 16 个铝（Al）原子的结构，我们对其进行分子动力学（Molecular Dynamics，简称 MD）的模拟。INPUT 文件如下：
 
@@ -95,7 +95,7 @@ md_nstep        10
 
 注意要进行分子动力学模拟，calculation 参数需设置为 md。esolver_type 需设置为 sdft，才能进行 SDFT 的计算。这里 nbands 设置为 0，nbands_sto 设置为 64，代表仅仅使用随机轨道而没有 KS 轨道的 SDFT 计算。
 
-# 5. 采用 SDFT 计算态密度
+# 五、采用 SDFT 计算态密度
 
 `186_PW_SDOS_10D10S` 文件夹：采用 SDFT 还可以计算给定体系的态密度（Density of States，简称 DOS）。例如，186_PW_SDOS_10D10S 是一个 1 个 Si 原子的算例，电子温度约为0.6 Ry（约 8.16 eV）。如下所示：
 
@@ -155,6 +155,6 @@ npart_sto        2
 
 注：态密度的输出文件是 OUT 文件夹下的 DOS1_smearing.dat。
 
-# 6. 小结
+# 六、结尾
 
 总体来讲，随机波函数密度泛函理论方法（SDFT 或者 MDFT）的使用与 KSDFT 并无太大的区别，直接运行 ABACUS 程序即可，但是对一些关键参数的选取会影响精度和效率（例如 nbands, nbands_sto, nche_sto, method_sto, kpar, bnd_par）。对于极端高温计算（>10 eV），使用 SDFT 可以大大提高计算速度，是比普通的 KSDFT 更好的选择。如果大家使用有问题，欢迎写信联系（见上）。

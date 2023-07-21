@@ -1,6 +1,6 @@
 # ABACUS使用教程
 
-## 一、介绍
+# 一、介绍
 
 ABACUS（Atomic-orbtial Based Ab-initio Computation at UStc，中文名原子算筹）是国产开源密度泛函理论软件，相关介绍 ABACUS 的新闻可在[ABACUS 新闻稿整理](abacus-news.md)查看，以下是一些常用地址：
 
@@ -22,7 +22,7 @@ ABACUS 网站访问：
 
 本教程系列旨在帮助新手用户入门了解 ABACUS 的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](contribute.md)
 
-## 二、ABACUS基本操作教程
+# 二、ABACUS基本操作教程
 
 1. ABACUS的编译介绍
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
@@ -59,9 +59,10 @@ ABACUS 网站访问：
    1. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
    2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
    3. [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
-   4. ABACUS+CINEB教程（缺）
+   4. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
+   5. ABACUS+CINEB教程（缺）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
-## 三、使用经验
+# 三、使用经验
 
 1. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>

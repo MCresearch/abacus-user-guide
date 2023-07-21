@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/06/30</strong>
 
-# 1. 介绍
+# 一、介绍
 
 UPF（<strong>unified PP format</strong>）是一种类似 XML 格式的文件格式，用于存储赝势及其相关参数。该格式由 [Quantum ESPRESSO](https://www.quantum-espresso.org/)（QE）团队开发，并已成为许多量子计算软件包的标准格式之一。
 
@@ -22,9 +22,9 @@ ABACUS（截至 v3.2.3）的 Kohn-Sham 密度泛函理论计算主要支持 UPF 
 
 注：ABACUS 的无轨道密度泛函理论计算（Orbital-Free Density Functional Theory，简称 OFDFT）需要用到一种特殊的局域势（不包含非局域势），一般采用 [BLPS 局域赝势文件](https://github.com/PrincetonUniversity/BLPSLibrary)而非上文提到的 UPF 文件，如果做 OFDFT 计算的，可以阅读介绍 OFDFT 计算的文档，或者登录 Emily A. Carter 教授主页寻找相关的信息。
 
-# 2. 从其他格式赝势转换
+# 二、从其他格式赝势转换
 
-## 2.1 使用 QE upflib 中的 upfconv 进行转换
+## 1. 使用 QE upflib 中的 upfconv 进行转换
 
 其支持将 UPF v.1 格式、vdb/van 格式（Vanderbilt US pseudopotential）、cpi/fhi 格式（FHI/abinit）转化成 UPF v.2 格式
 
@@ -36,27 +36,27 @@ path_to_QE/upflib/upfconv.x -u  *.upf/UPF/vdb/van/cpi/fhi
 
 注：文件夹 `upflib` 在 QE 5.x 和 6.x 版本名称为 `upftools`，在QE 7.x 版本为 `upflib`。
 
-## 2.2 psp8 格式转换
+## 2. psp8 格式转换
 
 psp8 格式是 ONCVPSP 软件生成的一种赝势格式，在 Abinit 官网（[pseudo-dojo](http://www.pseudo-dojo.org/)）中，其使用的就是 psp8 的格式，目前没有直接将 psp8 格式的赝势直接转换成 UPF 格式的脚本，但可以将 psp8 中输入文件部分摘抄下来，用 ONCVPSP 软件重新生成 UPF 格式的赝势（具体生成见下面 ONCVPSP 的讲解）。
 
 可供参考的批量处理脚本：[https://github.com/pipidog/ONCVPSP](https://github.com/pipidog/ONCVPSP)
 
-# 3. 赝势的生成
+# 三、赝势的生成
 
 下面介绍三个可以生成 UPF 模守恒赝势的软件，分别是 ONCVPSP，Opium，和 ld1.x
 
-## 3.1 ONCVPSP
+## 1 ONCVPSP
 
-### 3.1.1 介绍
+### 1.1 介绍
 
 [ONCVPSP](http://www.mat-simresearch.com/)（Optimized Norm-Conservinng Vanderbilt PSeudoPotential）是由 D.R. Hamann 等人提出的优化版模守恒赝势，其有更高的精度与效率。ONCVPSP 依赖 Libxc，支持多种交换关联泛函。
 
 参考文献：[Optimized norm-conserving Vanderbilt pseudopotentials](http://dx.doi.org/10.1103/PhysRevB.88.085117)。
 
-### 3.1.2 安装
+### 1.2 安装
 
-<strong>I. 首先安装 Libxc</strong>
+#### 1.2.1 安装 Libxc
 
 Libxc 网址：[Libxc - a library of exchange-correlation functionals for density-functional theory](https://www.tddft.org/programs/libxc/)
 
@@ -73,7 +73,7 @@ make install
 
 命令执行完毕后即可在 `PATH/TO/LIBXC` 目录下看到 `bin`,`include` 和 `lib` 三个目录，代表安装成功
 
-<strong>II. 安装 oncvpsp</strong>
+#### 1.2.2 安装 oncvpsp
 
 推荐下载 [oncvpsp-4.0.1](http://www.mat-simresearch.com/oncvpsp-4.0.1.tar.gz)
 
@@ -149,7 +149,7 @@ make
 export PATH=$PATH:/PATH/TO/ONCVPSP/src
 ```
 
-### 3.1.3 输入文件
+### 1.3 输入文件
 
 输入文件的准备可以参考 `PATH_TO_ONCVPSP/doc/32_Ge_annotated.dat`，或者参考已知 ONCV 的赝势里面的 `<PP_INPUTFILE>` 部分来写。
 
@@ -220,7 +220,7 @@ iexc==4 .or. iexc==-101130, 'functional="PBE"'
 - `qcut`：通过调整（+-0.1），直到推荐 ECUT 达到最小
 - `dvloc0`：通过调整（+-0.5），直到消除赝势的 GHOST 态（可参考文献 [Phys. Rev. B <strong>41</strong>, 12264 (1990)](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.12264)）
 
-### 3.1.4 生成赝势
+### 1.4 生成赝势
 
 执行命令：
 
@@ -275,7 +275,7 @@ sh PATH_TO_ONCVPSP/scripts/run.sh Al
 图5. 不同轨道角动量对应的截断能
 ```
 
-### 3.1.5 优化赝势
+### 1.5 优化赝势
 
 - 依次调节不同 `l` 对应的 `qcut`（+-0.1），检查对应 `ECUT（l）` 变化情况，直到 `ECUT（l）` 达到最小
 
@@ -366,7 +366,7 @@ done
 - 不同的 `l` 都会有对应的能量截断值 `ECUT(l)`。一般 `rc(l)` 越小，对应的 `ECUT(l)` 越大，赝势也就越精确。由于 DFT 计算中的截断能 `ECUT` 是由赝势中较大的那个 `ECUT(l)` 决定，如果不同 `l` 的 `ECUT(l)` 相差很大，可以适当减小较小的 `ECUT（l）` 对应 `l` 的截断半径 `rc`，使得不同 `l` 对应的 `ECUT(l)` 更接近，这样并不会增加赝势计算的 `ECUT`，却可以提升精度。
 - 这样调完之后如果有 GHOST 态，需要调整 `dvloc0` （+-0.5）直到消除 GHOST 态，这个赝势才可使用
 
-## 3.2 Opium
+## 2. Opium
 
 [Opium](https://opium.sourceforge.net/) 软件包可以生成 [RRKJ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227)、[TM](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993) 或 [Kerker](https://iopscience.iop.org/article/10.1088/0022-3719/13/9/004/meta) 径向波函数的赝势，官网有 [LDA](https://www.sas.upenn.edu/rappegroup/research/pseudo-potential-lda.html)、[GGA](https://www.sas.upenn.edu/rappegroup/research/pseudo-potential-gga.html) 赝势库（但是某些输入文件已经不匹配最新的 4.1 版本，需要稍作修改）
 
@@ -430,7 +430,7 @@ opium al log upf  #生成al.upf的输出文件
 upfconv.x -u  al.upf #利用QE的upflib将UPFv.1转化成UPFv.2格式
 ```
 
-## 3.3 ld1.x
+## 3. ld1.x
 
 QE 的 atomic 模块中的 `ld1.x` 支持生成赝势。其不仅可以生成模守恒赝势、还支持超软赝势、PAW 方法，支持全相对论、标量（非）相对论赝势（rel, non-rel/sca-rel），其径向波函数支持 [TM](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993)（更稳定）与 [RRKJ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227) 两种方法，支持交换关联近似 7 类 LDA（ pz）,GGA（pbe, pbesol, revpbe, bp, wc, pw91。
 
@@ -441,7 +441,7 @@ QE 的 atomic 模块中的 `ld1.x` 支持生成赝势。其不仅可以生成模
 make ld1
 ```
 
-### 3.3.1 pslibrary 赝势库
+### 3.1 pslibrary 赝势库
 
 推荐 ld1.x 生成其自带的 [pslibrary](https://dalcorso.github.io/pslibrary/) 赝势库，下载好 [pslibrary.1.0.0.tar.gz](https://people.sissa.it/dalcorso/pslibrary/pslibrary.1.0.0.tar.gz)，解压，进入文件夹，修改 QE_path 文件，指定 QE 的路径。然后打开 `make_ps` 文件，解锁相应赝势：
 
@@ -500,7 +500,7 @@ Making   Al.pz-nl-rrkjus_psl.1.0.0.in  ...  Done
 element='C Si Ge'
 ```
 
-### 3.3.2 生成自己的赝势
+### 3.2 生成自己的赝势
 
 参数的详细解释见 `PATH_TO_QE/atomic/Doc/INPUT_LD1.html` 或[线上的文档](https://www.quantum-espresso.org/Doc/INPUT_LD1.html#idm377)（不是最新的，建议前者），输入文件可以参考 [pslibrary](https://dalcorso.github.io/pslibrary/) 赝势库的例子。
 
@@ -536,6 +536,6 @@ ld1.x < al.in
 
 即可生成 `Al.pbe-n-nc.UPF` 模守恒赝势。
 
-# 4. 小结
+# 四、结尾
 
 ABACUS 使用的是模守恒赝势，基于模守恒赝势还可以产生数值原子轨道，进行基于数值原子轨道的高效率密度泛函理论计算。有些情况下，网上提供的赝势不能满足需求，这个时候赝势的生成需要对赝势理论有比较深入的了解之后，才能调整好相关参数，生成质量较好的赝势。此外，生成之后，应该经过较为充分的测试，才能保证赝势的可移植性和正确性。如果大家有任何问题，欢迎发 email 至文档开头的邮箱。

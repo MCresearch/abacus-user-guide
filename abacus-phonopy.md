@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
-# 1. 介绍
+# 一、介绍
 
 本教程旨在介绍采用 ABACUS（基于 ABACUS 3.2.2 版本）做密度泛函理论计算，并且结合 Phonopy 软件计算声子谱的流程。此外，本教程还用到 gnuplot 来绘图。
 
@@ -18,11 +18,11 @@ Phonopy 相关文档：[ABACUS & phonopy calculation — Phonopy v.2.19.1](http:
 
 Gnuplot 主页：[gnuplot homepage](http://www.gnuplot.info/)
 
-# 2. 准备
+# 二、准备
 
 我们以 FCC Al 这个简单例子来演示使用 <strong>有限位移方法 </strong>来结合 ABACUS 和 Phonopy 计算声子谱。
 
-## 2.1. 下载并安装 Phonopy
+## 1. 下载并安装 Phonopy
 
 ```bash
 git clone https://github.com/phonopy/phonopy.git
@@ -30,7 +30,7 @@ cd phonopy
 python3 setup.py install
 ```
 
-## 2.2 下载 FCC Al 例子
+## 2. 下载 FCC Al 例子
 
 可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_Phonopy)。可以在网页右侧点击克隆/下载-> 下载 ZIP 得到算例，或者在 linux 终端执行如下命令得到算例：
 
@@ -40,9 +40,9 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 下载后解压，之后进入 `abacus-user-guide/examples/interface_Phonopy` 文件夹
 
-# 3. 流程
+# 三、流程
 
-## 3.1 使用 ABACUS 优化结构
+## 1. 使用 ABACUS 优化结构
 
 这里我们已经给出一个已经优化好的 FCC Al 结构
 
@@ -75,7 +75,7 @@ Al #label
 0  0.5  0.5  m  0  0  0
 ```
 
-## 3.2 用 Phonopy 产生需要计算的超胞及相应微扰构型
+## 2. 用 Phonopy 产生需要计算的超胞及相应微扰构型
 
 这里我们使用 <strong>有限位移方法</strong><strong> </strong>计算声子谱，因此需要对晶格进行扩胞并对原子位置进行微扰。执行如下命令即可生成 2*2*2 的扩胞并产生微扰结构：
 
@@ -87,7 +87,7 @@ phonopy -d --dim="2 2 2" --abacus
 
 经验性设置：1）括胞越大，计算结果越精确，但是计算量也会上升，一般来说扩的胞三个方向的 cell 长度均在 10-20 Å 是比较合适的；2）对于优化后的胞（复杂体系），原子位置可能不处于高对称点上，phonopy 可能计算存在一定的误差，可以使用 Matertial Studio 等软件把对称性加回去之后，再做上述步骤，这样能够得到准确的声子谱数据（保证计算出来的声子谱满足体系的对称性特征）。
 
-## 3.3 产生 FORCE_SET 文件
+## 3. 产生 FORCE_SET 文件
 
 接着用 ABACUS 计算原子受力，其中需要注意的是 `calculation` 需要设置为 `scf`，并且设置 `cal_force` 为 1，因为这一步目的是输出原子受力。
 
@@ -135,7 +135,7 @@ phonopy -f ./disp-001/OUT/running.log ./disp-002/OUT/running.log ...
 
 即要指定所有微扰构型算完之后的 `running_scf.log` 文件位置。如果运行有错，需要首先检查是否所有构型都已正常结束，且其中有力输出（可以找“FORCE”来确认）。
 
-## 3.4 设置 band.conf 文件计算得到声子谱
+## 4. 设置 band.conf 文件计算得到声子谱
 
 执行如下命令：
 
@@ -167,7 +167,7 @@ BAND_CONNECTION = .TRUE.
 - BAND_POINTS：给出了包括能带路径末端的采样点的数量。
 - BAND_CONNECTION：在能带交叉处辅助连接能带。
 
-## 3.5 绘制声子谱
+## 5. 绘制声子谱
 
 本教程使用 gnuplot 绘制声子谱，在 Ubuntu 上 gnuplot 的安装如下：
 

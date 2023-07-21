@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/06/20</strong>
 
-# 1. PTG（PyTorch Gradient）方法
+# 一、PTG（PyTorch Gradient）方法
 
 这篇文档是数值原子轨道系列的第三篇文档，除了第二篇文档提到的模拟退火算法之外，还可以使用 Pytorch 中的自动微分算法来最小化溢出函数。首先定义损失函数如下，并可以证明它与溢出函数是等价的：
 
@@ -22,7 +22,7 @@ $$
 
 且$$\hat{P}$$是由所有原子轨道张成的投影子，即$$\hat{P}=\sum_{\mu v}\left|\phi_\mu\right\rangle S_{\mu v}^{-1}\left\langle\phi_v\right| \text {}$$。由 $$\hat{P}^2=\hat{P}$$及 $$\left\langle\Psi_n|\Psi_n\right\rangle=\delta_{mn}$$可知，此处的损失函数$$\Delta \mathrm{PSI}$$与溢出函数是等价的。
 
-# 2. PTG_dpsi（PyTorch Gradient with dpsi）方法
+# 二、PTG_dpsi（PyTorch Gradient with dpsi）方法
 
 为了增加局域轨道做电子结构计算时的精度，损失函数的定义还可以被拓展，即在其中加入波函数的梯度，将总的损失函数定义为：
 
@@ -68,7 +68,7 @@ $$
 
 3）电子波函数梯度$$|\nabla \Psi_i\rangle$$之间的 overlap$$\langle \nabla \Psi_i|\nabla \Psi_i\rangle$$。
 
-# 3. 安装 Pytorch
+# 三、安装 Pytorch
 
 PTG 和 PTG_dpsi 方法采用 python 语言，无需编译，但是依赖 pytorch 包，下面介绍利用 conda 安装 pytorch 的方法：
 
@@ -98,16 +98,16 @@ $ pip3 install --user torch_optimizer
 $ source deactivate
 ```
 
-# 4. 产生高精度数值原子轨道流程
+# 四、产生高精度数值原子轨道流程
 
-1\. 下载 PTG_dpsi 仓库
+首先下载 PTG_dpsi 仓库
 
 ```bash
 # github仓库
 git clone -b main https://github.com/abacusmodeling/ABACUS-orbitals
 ```
 
-2\. 准备输入文件 `SIAB_INPUT`
+接着准备输入文件 `SIAB_INPUT`
 
 ```bash
 #--------------------------------------------------------------------------------
@@ -150,13 +150,13 @@ EXE_opt    /home/liuyu/github/ABACUS-orbitals/SIAB/opt_orb_pytorch_dpsi/main.py
 
 该输入文件同样包含 5 个部分：
 
-## 4.1 CMD & ENV
+## 1. CMD & ENV
 
 - EXE_mpi：MPI 并行计算命令，这里我们采用的是 4 核 MPI 并行进行 dimer（或者 trimer）的平面波计算。
 - EXE_pw：ABACUS 可执行程序的绝对路径。
 - EXE_opt：数值原子轨道生成程序 PTG_dpsi 的绝对路径。
 
-## 4.2 Electronic calculatation
+## 2. Electronic calculatation
 
 - element：元素名。
 - Ecut：平面波截断能，单位为 Ry。
@@ -165,7 +165,7 @@ EXE_opt    /home/liuyu/github/ABACUS-orbitals/SIAB/opt_orb_pytorch_dpsi/main.py
 - Pseudo：平面波计算采用的赝势文件名。
 - sigma：平面波计算采用 Gaussian smearing 的展宽，单位为 Ry，一般取 0.01 即可。
 
-## 4.3 Reference structure related parameters for PW calculation
+## 3. Reference structure related parameters for PW calculation
 
 - STRU Name：参考构型组别 STRU1、STRU2、STRU3......
 - STRU Type：参考体系构型，一般可取 dimer，trimer，tetramer。
@@ -174,7 +174,7 @@ EXE_opt    /home/liuyu/github/ABACUS-orbitals/SIAB/opt_orb_pytorch_dpsi/main.py
 - nspin：自旋量子数。
 - Bond Length list：键长取值列表，单位为埃。以 STRU1 为例，这一组共有 5 个不同键长的 dimer 作为生成轨道的参考构型。
 
-## 4.4 SIAB calculatation
+## 4. SIAB calculatation
 
 - max_steps：优化步数
 - LevelIndex：轨道分层的 index，取 Level1、Level2、Level3......
@@ -183,7 +183,7 @@ EXE_opt    /home/liuyu/github/ABACUS-orbitals/SIAB/opt_orb_pytorch_dpsi/main.py
 - InputOrb：是否在已有的轨道基础上生成新轨道，一般 Level1 设为 none，即没有旧轨道；Level2 一般以 Level1 生成的轨道为基础继续生成轨道，Level3 往后同理。
 - OrbitalConf：轨道的具体配置，这里 Level1 是 SZ 层级，Level2 是 DZP 层级，Level3 是 TZDP 层级，实际上还可以继续设置更高层级的轨道。
 
-## 4.5 Save Orbitals
+## 5. Save Orbitals
 
 - Index：取值 Save1、Save2、Save3......
 - LevelNum：将特定 Level 的轨道保存到一个轨道文件中。以上面的输入参数为例，分别将 Level1、Level2、Level3 对应的轨道保存到单独的轨道文件中。
@@ -197,6 +197,6 @@ $ python3 ~/github/ABACUS-orbitals/SIAB/SIAB.py SIAB_INPUT
 
 程序正常结束后，轨道会分别保存在 `Orbital_Si_SZ`、`Orbital_Si_DZP`、`Orbital_Si_TZDP` 中，并自动命名成标准格式（如 Si_gga_6au_100Ry_2s2p1d.orb）。
 
-# 5. 参考文献
+# 五、参考文献
 
 [1]   Peize Lin, Xinguo Ren and Lixin He, <em>Strategy for constructing compact numerical atomic orbital basis sets by incorporating the gradients of reference wavefunctions, </em>Phys. Rev. B <strong>103, </strong>235131 (2021).

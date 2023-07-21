@@ -6,9 +6,9 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
-# 1. ABACUS 中的数值原子轨道背景知识
+# 一、ABACUS 中的数值原子轨道背景知识
 
-## 1.1 数值原子轨道
+## 1. 数值原子轨道
 
 - <strong>ABACUS 中的三维数值原子轨道[1]：</strong>可以分解为径向部分与角向球谐函数的乘积，即
 
@@ -26,7 +26,7 @@ $$
 
 其中 $$j_l(q r)$$是波矢为$$q$$的球贝塞尔函数，$$r_c$$是径向部分的截断半径，满足关系$$j_l(q r_c)=0$$。$$q$$的个数由能量截断值决定（以下会介绍）。在实际计算里，通过用户指定每种元素的数值原子轨道截断半径和能量截断值来确定需要用到多少个球贝塞尔函数。组合系数 $$c_{\mu q}$$是可优化的量，决定了数值原子轨道的形状。
 
-## 1.2 参考体系
+## 2. 参考体系
 
 <strong>参考系统：</strong>在ABACUS中构造某个元素对应的数值原子轨道的最普遍方式是为每个元素选取一组参考体系做平面波计算（可以是单k点也可以是多k点），得到这些参考体系的电子波函数，然后通过最小化自定义的一个溢出函数（下面会介绍）来优化$$c_{\mu q}$$系数。换句话说，我们需要选定一组参考系统，生成数值原子轨道基组，并期望它们有良好的迁移性，以便可以在更一般的情况下使用。
 
@@ -34,7 +34,7 @@ $$
 
 <strong>周期性体系：</strong>数值原子轨道还有一些特殊用途，例如能带插值。面对这种场景，可以选择一系列带多个k点的周期性体系，此时参考态中的每个原子构型就对应了不同k点指标和不同能带指标的波函数，这些波函数会被用于最小化溢出函数来生成数值原子轨道，可以参考文献[2]。
 
-## 1.3 溢出函数
+## 3. 溢出函数
 
 <strong>溢出函数（英文为spillage）：</strong>由给定参考体系的多个电子波函数与生成的数值原子轨道之间的差别来定义。换个角度理解，溢出函数的大小反映的是由一组“精确”波函数所张成的希尔伯特空间与局域轨道所张成的空间的差别。溢出函数定义如下：
 
@@ -66,7 +66,7 @@ $$
 
 - <strong>参考系统可调：</strong>通过选择参考系统及对应能级，可以提高原子轨道基组在不同环境的可迁移性。例如，对于涉及到激发态能级的计算，往往需要在生成数值原子轨道的时候，考虑这组轨道对于非占据态能级的拟合能力，这个时候可以在生成参考体系的时候加入一定数量的非占据能级。
 
-## 1.4 模拟退火算法SA（Simulated Annealing）
+## 4. 模拟退火算法SA（Simulated Annealing）
 
 我们首先介绍模拟退火法Simulated Annealing（SA）来最小化溢出函数[1]，从而优化球贝塞尔函数的系数$$c_{\mu q}$$。在模拟退火算法中我们用的是Metropolis的算法，需要设置一个初始温度，并且指定温度下降的方式。代码部分我们之后会介绍，这里先简要介绍一下算法。
 
@@ -105,11 +105,11 @@ $$
 
 优化动能用的模拟退火算法几乎和优化溢出函数一样，除了一点点参数的区别。 目标函数选择的是所有轨道中最大的动能，而不是像溢出函数一样取平均值。对于每个轨道来说，温度是不一样的，因为每个轨道会有一个不同的动能，在这步动能优化中，我们发现结果对初始的温度不敏感，但最终达到的温度必须取得足够小。实际中我们发现只需要100~200步，动能就可以下降得很快。 所以一般来说优化动能的步数就取得比优化溢出函数要少。
 
-# 2. ABACUS中产生数值原子轨道的具体流程
+# 二、ABACUS中产生数值原子轨道的具体流程
 
 注：本文档介绍的是模拟退火算法SA，不适用于基于Pytorch的PyTorch-Gradient方法，关于这两个算法，可以参考本数值原子轨道中文文档系列的第三篇文档。
 
-## 2.1 平面波计算
+## 1. 平面波计算
 
 <strong>简化计算量：</strong>前文我们提到的溢出函数公式，如果把投影子$$\hat{P}$$带进公式，则可以发现我们不需要在计算溢出函数的时候显示的包含任何基矢量（例如平面波）的操作。实际上，我们只需要先算好数值原子轨道$$|\phi_\mu\rangle$$和电子波函数$$|\Psi_i\rangle$$的重叠矩阵（Overlap Matrix）$$\langle \Psi_i|\phi_\mu\rangle$$并存下来，以及数值原子轨道之间的重叠矩阵$$\langle \phi_\mu|\phi_\nu\rangle$$存下来就可以算溢出函数了。更进一步，我们意识到数值原子轨道$$|\phi_\mu\rangle$$的径向部分在程序里是写成了球贝塞尔函数的线性组合，根据线性叠加的原理，我们只需要计算球贝塞尔函数和电子波函数的内积，以及球贝塞尔函数之间的内积，并把这些结果存下来，就可以优化系数$$c_{\mu q}$$了！注意这里指标$$i$$遍历体系的所有电子态，包括所有的$$k$$点以及能带对应的电子波函数。
 
@@ -119,7 +119,7 @@ $$
 
 因此，第一步我们先调用ABACUS主程序，计算出以上overlap矩阵，首先需要准备INPUT文件如下：
 
-```shell
+```bash
 INPUT_PARAMETERS
 suffix              H
 pseudo_dir          /home/liuyu/github/abacus-develop/tests/PP_ORB
@@ -173,7 +173,7 @@ spillage_outdir OUT.H    // could be the same as OUT.${suffix}
 
 这些输出将存在文件 `OUT.${suffix}/orb_matrix.0.dat` 中，而这个文件将被读入进行数值原子轨道的生成。
 
-## 2.2 编译 SIAB
+## 2. 编译 SIAB
 
 SIAB 的全称是 Systematically Improvable Atomic orbital Basis generator based on spillage formula，目前是包含在 ABACUS 软件里的一个独立程序，可用来读入以上 ABACUS 产生的数据文件并且生成数值原子轨道，具体编译方法如下：
 
@@ -201,7 +201,7 @@ $ make s
 
 编译成功后，在目录 `abacus-develop/tools/SIAB/SimulatedAnnealing/source` 下可以看到生成数值原子轨道的可执行程序 `SIA_s.exe`，这里 s 代表编译串行版(serial)。此外，对于并行版本，SIAB 还可以结合 MPI 编译并行版，通过命令 `make p` 指令得到 `SIA_p.exe` 可执行程序，这里 p 代表 parallel，但注意并行版只对某些特定算法进行并行，之后对代码进行一个更好整理之后我们会给出并行版的教程。
 
-## 2.3 运行例子
+## 3. 运行例子
 
 进入 `tests_s` 目录，可以看到 `H-6-0.6.15.dat` 文件，这是用来生成数值原子轨道所需要准备的输入文件，从 ABACUS 的平面波自洽迭代计算后获得，现在该文件已经改名为 `OUT.${suffix}/orb_matrix.0.dat`。
 
@@ -316,7 +316,7 @@ Number of Porbital-->       2
 SUMMARY  END
 ```
 
-# 3. ABACUS 中数值原子轨道的生成脚本
+# 三、ABACUS 中数值原子轨道的生成脚本
 
 我们需要采用平面波计算不同键长的二聚体，并且存在不同层级的轨道，因此也可以通过一个脚本来实现自动化整个流程：`abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh`。该脚本需要读入一个输入文件 `ORBITAL_INPUT` 如下：
 
@@ -437,7 +437,7 @@ Delta_kappa  0.01    # delta kappa (default 0.01)
 $ ~/abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh ORBITAL_INPUT
 ```
 
-# 4. ABACUS 中数值原子轨道的测试流程
+# 四、ABACUS 中数值原子轨道的测试流程
 
 在生成轨道之后，为了保证基于数值原子轨道基组的第一性原理计算拥有与平面波基组相当的精度，我们需要针对该元素的一些常见的晶体结构做一些验证性计算。
 
@@ -445,7 +445,7 @@ $ ~/abacus-develop/tools/SIAB/Generate_Orbital_AllInOne.sh ORBITAL_INPUT
 
 ![](picture/fig_NAC.png)
 
-# 5. 参考文献
+# 五、参考文献
 
 [1]   M. Chen, G.-C. Guo, and L. He, <em>Systematically Improvable Optimized Atomic Basis Sets for </em><em>Ab Initio</em><em> Calculations</em>, J. Phys.: Condens. Matter <strong>22</strong>, 445501 (2010).
 

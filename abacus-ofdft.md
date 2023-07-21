@@ -6,13 +6,13 @@
 
 <strong>最后更新时间：2023/07/19</strong>
 
-# 1. 无轨道密度泛函理论背景知识
+# 一、无轨道密度泛函理论背景知识
 
 无轨道密度泛函理论(Orbital free density functional theory, OFDFT)是一种第一性原理模拟方法，相比于 Kohn Sham DFT (KSDFT)，它的优势之一在于$$O(N\ln N)$$的算法复杂度，这使得 OFDFT 可以用于上万原子甚至更大体系的电子基态计算，或者大体系、长时间的第一性原理分子动力学等。
 
 目前，OFDFT 已被应用于简单金属、合金、半导体、小分子、温稠密物质等体系。
 
-## 1.1 无轨道密度泛函理论
+## 1. 无轨道密度泛函理论
 
 在 OFDFT 的框架下，体系的总能量泛函可以写为
 
@@ -37,13 +37,13 @@ $$
 
 ABACUS 基于平面波基矢量，实现了上述流程，可以进行基于 OFDFT 的自洽计算，分子动力学计算，以及结构弛豫。
 
-## 1.2 动能泛函
+## 2. 动能泛函
 
 OFDFT 的精度高度依赖于动能泛函（kinetic energy density functional, 简称 KEDF）的精度，目前 ABACUS 中实现了 Thomas-Fermi (TF) [1], von Weizsäcker (vW) [2], TFλvW [3], Wang-Teter (WT) [4], Luo-Karasiev-Trickey (LKT) [5]共五种动能泛函。
 
 下面我们对这些泛函做简单介绍，并且介绍在 ABACUS 的 `INPUT` 文件中如何设置相关的参数。
 
-### 1.2.1 Thomas-Fermi KEDF
+### 2.1 Thomas-Fermi KEDF
 
 设置 `INPUT` 文件中的 `of_kinetic tf` 参数
 
@@ -55,7 +55,7 @@ $$
 
 可通过 `of_tf_weight` 调整其权重，默认为 1。
 
-### 1.2.2 von Weizsäcker KEDF
+### 2.2 von Weizsäcker KEDF
 
 设置 `of_kinetic vw`
 
@@ -67,7 +67,7 @@ $$
 
 可通过 `of_vw_weight` 调整其权重，默认为 1。
 
-### 1.2.3 TFλvW KEDF
+### 2.3 TFλvW KEDF
 
 设置 `of_kinetic tf+`
 
@@ -79,7 +79,7 @@ $$
 
 参数$$\lambda$$可通过`of_vw_weight`设置，默认为1。
 
-### 1.2.4 Wang-Teter KEDF
+### 2.4 Wang-Teter KEDF
 
 设置`of_kinetic wt`
 
@@ -90,7 +90,7 @@ $$
 
 参数$$\alpha,\beta$$可通过 `of_wt_alpha` 和 `of_wt_beta` 设置，默认值均为$$\frac{5}{6}$$。
 
-### 1.2.5 Luo-Karasiev-Trickey KEDF
+### 2.5 Luo-Karasiev-Trickey KEDF
 
 设置 `of_kinetic lkt`
 
@@ -102,7 +102,7 @@ $$
 
 参数 $$a$$ 可通过 `of_lkt_a` 设置，默认值为 1.3。
 
-## 1.3 局域赝势
+## 3. 局域赝势
 
 由于 OFDFT 中舍弃了单电子轨道，无法采用常用的非局域赝势，如模守恒赝势，而必须采用局域赝势。
 
@@ -116,11 +116,11 @@ INPUT 中：`pseudo_rcut 16`
 
 STRU 中：赝势种类设置为 `blps`，比如 `Al 26.98 al.lda.lps blps`
 
-# 2. ABACUS 中进行 OFDFT 计算的具体流程
+# 二、ABACUS 中进行 OFDFT 计算的具体流程
 
-## 2.1 自洽计算
+## 1. 自洽计算
 
-### 2.1.1 示例
+### 1.1 示例
 
 下面是输入文件的示例：
 
@@ -200,7 +200,7 @@ Gamma
 - `of_full_pw`：做快速傅里叶变换（FFT）时，是否使用全部的平面波，默认为 `True`。建议打开，可以保证计算的稳定性和精度；
 - `of_full_pw_dim`：控制 FFT 维数的奇偶性，可选项有 `0, 1, 2`，分别表示可奇可偶，保证为奇数，保证为偶数，默认为 `0`。FFT 维数为偶数时，可能导致微小的误差，但一般来说可以忽略。需要注意的是，如果打开了 `nbspline`，则需要设置 `of_full_pw_dim 1`，否则会导致计算不稳定。
 
-### 2.1.2 注意事项
+### 1.2 注意事项
 
 目前 ABACUS 的 OFDFT 模块并不是十分完善，使用时请注意以下几个注意事项：
 
@@ -208,7 +208,7 @@ Gamma
 - 目前 OFDFT 只支持自旋简并，即 `nspin 1` 的计算；
 - 如果使用 PBE 泛函，建议用 `dft_functional  XC_GGA_X_PBE+XC_GGA_C_PBE` 调用 Libxc 中的 PBE，否则可能导致计算不稳定。
 
-## 2.2 分子动力学与结构弛豫
+## 2. 分子动力学与结构弛豫
 
 ABACUS 中支持使用 OFDFT 作为能量、力和应力的求解器，进行分子动力学模拟与结构弛豫。
 
@@ -216,7 +216,7 @@ ABACUS 中支持使用 OFDFT 作为能量、力和应力的求解器，进行分
 
 下面是几个实际的 INPUT 例子：
 
-### 2.2.1 分子动力学（MD）
+### 2.1 分子动力学（MD）
 
 ```bash
 INPUT_PARAMETERS
@@ -250,7 +250,7 @@ md_tchain   1
 nbspline    10
 ```
 
-### 2.2.2 原子结构弛豫（relax）
+### 2.2 原子结构弛豫（relax）
 
 ```bash
 INPUT_PARAMETERS
@@ -275,7 +275,7 @@ basis_type  pw
 relax_nmax  50
 ```
 
-### 2.2.3 晶格弛豫（cell-relax）
+### 2.3 晶格弛豫（cell-relax）
 
 ```bash
 INPUT_PARAMETERS
@@ -300,7 +300,7 @@ basis_type  pw
 relax_nmax  50
 ```
 
-# 3. 参考文献
+# 三、参考文献
 
 [1] Fermi E. Statistical method to determine some properties of atoms[J]. Rend. Accad. Naz. Lincei, 1927, 6(602-607): 5.
 
