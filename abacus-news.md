@@ -4,10 +4,11 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/07/19</strong>
+<strong>最后更新时间：2023/08/01</strong>
 
 | 标题                                                                     | 链接                                                                                                   | 日期       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---------- |
+| ABACUS开发者大会 \ 聚焦国产密度泛函理论开源软件的进步与挑战              | [https://mp.weixin.qq.com/s/7Xy2HqJkYUj2iVj7Yb7q5g](https://mp.weixin.qq.com/s/7Xy2HqJkYUj2iVj7Yb7q5g) | 2023/08/01 |
 | ABACUS 3.3 发布：自动化测试工作流赋能高效研发，为代码质量保驾护航        | [https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA](https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA) | 2023/07/13 |
 | 国产开源软件专题研讨会——第三届 ABACUS 开发者会议第三轮通知             | [https://mp.weixin.qq.com/s/z9_NrGlciHwKSHwLPZrGvA](https://mp.weixin.qq.com/s/z9_NrGlciHwKSHwLPZrGvA) | 2023/07/11 |
 | LibRI：携手 DeepModeling 社区，助力超越常规 DFT 方法的高阶方法计算       | [https://mp.weixin.qq.com/s/xblxgWlGMdy7OcI1qMZ4Uw](https://mp.weixin.qq.com/s/xblxgWlGMdy7OcI1qMZ4Uw) | 2023/05/26 |
