@@ -60,7 +60,8 @@ ABACUS 网站访问：
    2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
    3. [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
    4. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
-   5. ABACUS+CINEB教程（缺）
+   5. [ABACUS+Candela 使用教程](abacus-candela.md)
+   6. ABACUS+CINEB教程（缺）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
 # 三、使用经验
