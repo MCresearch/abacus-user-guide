@@ -11,14 +11,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
 
       - name: Commit and push changes
         run: |
-          mkdir -p deploy
-          cp -r _book/* deploy/
-          git checkout gh-pages
-          cp -r deploy/* .
-          rm -rf deploy
+          cp -r _book/* gh-pages/
+          cd gh-pages
           git add .
           git commit -m "Auto-deploy to gh_pages"
-          git push origin gh-pages
+          git push
