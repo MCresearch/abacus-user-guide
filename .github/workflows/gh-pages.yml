@@ -14,7 +14,11 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          cp -r master/_book/* gh-pages/
+          mkdir -p deploy
+          cp -r _book/* deploy/
+          git checkout gh-pages
+          cp -r deploy/* .
+          rm -rf deploy
           git add .
           git commit -m "Auto-deploy to gh_pages"
-          git push
+          git push origin gh-pages
