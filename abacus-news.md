@@ -1,4 +1,4 @@
-# ABACUS 新闻稿整理-test
+# ABACUS 新闻稿整理
 
 <strong>整理人：陈涛，邮箱：chentao@stu.pku.edu.cn</strong>
 
