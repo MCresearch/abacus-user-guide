@@ -1,12 +1,16 @@
 {
+    "name": "abacus-user-guide",
+    "description": "国产DFT开源软件ABACUS中文使用教程",
     "plugins": [
+        "disqus",
+        "3-ba",
+        "pageview-count",
+
         "theme-comscore", 
         "insert-logo",
         "custom-favicon",
 
-        "page-treeview-simple",
-        "page-toc-button",
-        "back-to-top-button",
+        "intopic-toc",
         "anchors",
 
         "chapter-fold",
@@ -28,6 +32,12 @@
     ],
 
     "pluginsConfig": {
+        "disqus": {
+            "shortName": "abacus-user-guide"
+        },
+        "3-ba": {
+            "token": "25153cb8bd9a872cfec60b4b23ac0176"
+        },
         "hide-element": {
             "elements": [".gitbook-link"]
         },

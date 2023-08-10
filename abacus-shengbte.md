@@ -1,8 +1,12 @@
 # ABACUS+ShengBTE 计算晶格热导率
 
-<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn，最后更新时间：2023/04/29</strong>
+<strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn</strong>
 
-# <strong>1. 介绍</strong>
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+
+<strong>最后更新时间：2023/06/15</strong>
+
+# 一、介绍
 
 本教程旨在介绍采用 ABACUS（基于 ABACUS 3.2.0 版本）做密度泛函理论计算，并且结合 ShengBTE 软件计算晶格的热导率的流程。其中，整个计算过程中还用到了：1）采用 Phonopy 程序来计算二阶力常数，2）采用 ASE 程序进行原子结构的转换，3）采用 ShengBTE 的 thirdorder 程序计算三阶力常数，4）最后使用 ShengBTE 来计算材料的晶格热导率。
 
@@ -16,19 +20,19 @@ ASE：[http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html](htt
 
 thirdorder: [https://bitbucket.org/sousaw/thirdorder/src/master/](https://bitbucket.org/sousaw/thirdorder/src/master/)
 
-# <strong>2. 准备</strong>
+# 二、准备
 
-ABACUS 的软件包中提供了一个 ABACUS+ShengBTE 计算晶格热导率的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_ShengBTE)。算例中包含采用数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）和采用平面波基矢量的 PW（Plane wave，平面波）两个文件夹。每个文件夹下分别又包含了 2nd、3rd 和 shengbte 这三个文件夹，分别保存了使用 phonopy 计算二阶力常数（2nd）、thirdorder 计算三阶力常数（3rd）和 ShengBTE 计算晶格热导率（shengbte）的相关文件。
+ABACUS 的软件包中提供了一个 ABACUS+ShengBTE 计算晶格热导率的算例，可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_ShengBTE)。算例中包含采用数值原子轨道的 LCAO（Linear Combination of Atomic Orbitals）和采用平面波基矢量的 PW（Plane Wave，平面波）两个文件夹。每个文件夹下分别又包含了 2nd、3rd 和 shengbte 这三个文件夹，分别保存了使用 phonopy 计算二阶力常数（2nd）、thirdorder 计算三阶力常数（3rd）和 ShengBTE 计算晶格热导率（shengbte）的相关文件。
 
-# <strong>3. 流程</strong>
+# 三、流程
 
 以 LCAO 文件夹为例，我们这里提供的测试案例是包含 2 个原子的金刚石结构 Si 结构，采用的模守恒赝势是 Si_ONCV_PBE-1.0.upf，以及原子轨道文件采用的是 Si_gga_7au_100Ry_2s2p1d.orb（GGA 泛函，7 au 截断半径，100 Ry 能量截断，以及包含 2s2p1d 的 DZP 轨道）。
 
-## 3.1 计算二阶力常数
+## 1. 计算二阶力常数
 
 要计算二阶力常数，除了 ABACUS 之外，还需要结合 Phonopy 和 ASE。首先，进入 2nd 文件夹。
 
-### 3.1.1 结构优化
+### 1.1 结构优化
 
 做晶格热导率计算之前要先对模拟的材料体系的进行原子构型的优化。下面是采用 ABACUS 做结构优化（relax）后得到的原子构型文件 STRU。在这个例子里，为了简单起见，结构优化过程采用的是 2\*2\*2 的布里渊区 k 点采样，平面波的能量截断值 ecut（LCAO 里面也用到了平面波基矢量）为 100 Ry，注意实际计算中应该要采用更收敛的 k 点采样。
 
@@ -59,7 +63,7 @@ Si #label
 
 注意：第一行 Si 的质量 28.0855 在计算中不起作用。
 
-### 3.1.2 计算二阶力常数
+### 1.2 计算二阶力常数
 
 调用 Phonopy 软件产生需要计算的超胞及相应微扰的多个原子构型，命令如下：
 
@@ -110,7 +114,7 @@ FULL_FORCE_CONSTANTS = .TRUE.
 phonopy-bandplot --gnuplot > pho.dat
 ```
 
-### 3.1.3 后处理
+### 1.3 后处理
 
 注意 ShengBTE 软件要求 FORCE_CONSTANTS_2ND 文件里数据的单位为 eV/Å^2，但是 ABACUS 结合 phonopy 计算的 FORCE_CONSTANTS 单位为 eV/(Å\*au)，其中 au 是原子单位制，1 au=0.52918 Å。可以使用 2nd 目录下提供的 au2si.py 脚本进行单位转换，生成 FORCE_CONSTANTS_2ND 文件，命令如下：
 
@@ -120,11 +124,11 @@ python au2si.py
 
 在 shengbte 文件夹中提供了 FORCE_CONSTANTS_2ND 文件供参考计算结果。
 
-## 3.2 计算三阶力常数
+## 2. 计算三阶力常数
 
 要计算三阶力常数，需要结合 thirdorder 程序，计算后输出三阶力常数文件 FORCE_CONSTANTS_3RD。但是，thirdorder 目前只支持读取 VASP 和 QE 的输入输出文件。因此，这里我们是通过将 ABACUS 的结构文件和输出受力分别转换为 POSCAR 和 vasprun.xml 来使用 thirdorder，请先进入 3rd 文件夹，具体步骤将在以下叙述。
 
-### 3.2.1 获得微扰构型
+### 2.1 获得微扰构型
 
 首先将 ABACUS 软件进行结构优化（relax）后的 STRU 文件转化为 POSCAR（目录下已给出转化过的 POSCAR，或者需要自己动手进行这个转换）。
 
@@ -142,7 +146,7 @@ python pos2stru.py
 
 注意：这里不能调用 dpdata 软件进行转化。因为 dpdata 会强制将晶格改为下三角矩阵，相当于旋转了晶格，会导致原子间受力方向也相应旋转，从而发生错误。
 
-### 3.2.2 计算微扰构型的原子受力
+### 2.2 计算微扰构型的原子受力
 
 可以参考目录下 run_stru.sh 使用脚本批量产生 SCF-\* 文件夹并提交计算，这里需要采用 ABACUS 对 40 个原子构型分别进行 SCF 计算，会有些耗时。建议每个 SCF 单独在 SCF-\* 文件夹内运行，这里的 INPUT 中的<strong>scf_thr 需要至少</strong><strong>小到</strong><strong>1e-8</strong>才能得到收敛的结果。
 
@@ -203,7 +207,7 @@ find SCF-* -name vasprun.xml|sort -n|thirdorder_vasp.py reap 2 2 2 -2
 
 即可得到三阶力常数文件 FORCE_CONSTANTS_3RD。在 shengbte 文件夹中提供了 FORCE_CONSTANTS_3rd 文件供参考计算结果。
 
-## 3.3 运行 ShengBTE 得到晶格热导率
+## 3. 运行 ShengBTE 得到晶格热导率
 
 进入 shengbte 文件夹，里面已经准备好 CONTROL（ShengBTE 的参数文件）、FORCE_CONSTANTS_2ND（二阶力常数文件）、FORCE_CONSTANTS_3RD（三阶力常数文件）这三个文件，使用如下命令运行 ShengBTE 即可得到晶格热导率，其中 Ref 文件夹中给出了计算结果供参考：
 
@@ -211,6 +215,6 @@ find SCF-* -name vasprun.xml|sort -n|thirdorder_vasp.py reap 2 2 2 -2
 mpirun -n 10 ShengBTE
 ```
 
-# <strong>4. 结尾</strong>
+# 四、结尾
 
-对于 ABACUS 中使用平面波（PW）来做 ShengBTE 的计算也是采用以上类似的流程，但要注意使用平面波时，计算三阶力常数的 INPUT 中<strong>scf_thr 需要至少</strong><strong>小到</strong><strong>1e-12</strong>。通过计算结果可以发现，PW 和 LCAO 基组计算出的 Si 的晶格热导率是接近的，300 K 下均在 100 W/(m K) 左右，而实验中 Si 在 300 K 的热导率在 150 W/(m K) 附近。这是因为作为教学例子，这里使用的是 2\*2\*2 的扩胞以及 2\*2\*2 的 K 点，导致计算结果偏小，实际科研中需要测试扩胞的大小以及 K 点的采样方案来达到收敛的结果。以上就是 ABACUS(3.2.0)+ShengBTE 计算晶格热导率的全部流程，如果有什么问题，欢迎通过邮件联系（<strong>chentao@stu.pku.edu.cn</strong><strong> 或 </strong><strong>mohanchen@pku.edu.cn</strong>）。
+对于 ABACUS 中使用平面波（PW）来做 ShengBTE 的计算也是采用以上类似的流程，但要注意使用平面波时，计算三阶力常数的 INPUT 中<strong>scf_thr 需要至少</strong><strong>小到</strong><strong>1e-12</strong>。通过计算结果可以发现，PW 和 LCAO 基组计算出的 Si 的晶格热导率是接近的，300 K 下均在 100 W/(m K) 左右，而实验中 Si 在 300 K 的热导率在 150 W/(m K) 附近。这是因为作为教学例子，这里使用的是 2\*2\*2 的扩胞以及 2\*2\*2 的 K 点，导致计算结果偏小，实际科研中需要测试扩胞的大小以及 K 点的采样方案来达到收敛的结果。以上就是 ABACUS(3.2.0)+ShengBTE 计算晶格热导率的全部流程，如果有什么问题，欢迎通过邮件联系。

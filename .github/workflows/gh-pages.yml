@@ -1,0 +1,31 @@
+name: Deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "chentao@stu.pku.edu.cn"
+          git config --global user.name "Chentao168"
+          cp -r _book/* gh-pages/
+          cd gh-pages
+          git add .
+          git commit -m "Auto-deploy to gh_pages"
+          git push
