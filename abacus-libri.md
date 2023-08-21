@@ -18,7 +18,13 @@
 
 ## 1. ABACUS 编译准备
 
-如果要在 ABACUS 中使用杂化泛函进行计算，需要在编译 ABACUS 的时候也编译 `Libxc`、`LibRI` 和 `LibComm` 三个软件包，具体请见线上文档 [Advanced Installation Options ‒ ABACUS documentation](https://abacus.deepmodeling.com/en/latest/advanced/install.html)。注意在链接 `LibRI`、`LibComm` 时如果报错未定义的引用等，可以先注意检查 ABACUS 源代码下 `deps` 文件夹下是否包含 `LibRI`、`LibComm` 两个文件夹。
+如果要在 ABACUS 中使用杂化泛函进行计算，需要在编译 ABACUS 的时候也编译 `Libxc`、`LibRI` 和 `LibComm` 三个软件包，具体请见线上文档 [Advanced Installation Options ‒ ABACUS documentation](https://abacus.deepmodeling.com/en/latest/advanced/install.html)。
+
+注意在链接 `LibRI`、`LibComm` 时如果报错未定义的引用等，可以先注意检查 ABACUS 源代码下 `deps` 文件夹下是否包含 `LibRI`、`LibComm` 两个文件夹。如果未包含这两个文件夹，或文件夹中无内容，在本地Github仓库中可以尝试如下两条语句，以获取这两个子仓库内容：
+```bash
+git submodule init
+git submodule update --remote --recursive
+```
 
 ## 2. 采用杂化泛函进行电子自洽迭代计算
 
