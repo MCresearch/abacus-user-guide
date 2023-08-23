@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/08/02</strong>
+<strong>最后更新时间：2023/08/23</strong>
 
 # 一、介绍
 
@@ -58,7 +58,7 @@ geo_out      Al_rdf.txt
 
 ntype        1
 natom        32
-rcut         1.2
+rcut         2.3
 dr           0.01
 ```
 
@@ -175,13 +175,13 @@ mpirun -n 2 candela
 
 即可得到 ISF，输出到 `isf.txt`，其中第一列为时间，单位为 ps，第二列即为对应的 ISF。
 
-接着执行如下命令得到离子-离子动态结构因子：
+接着执行如下命令得到离子-离子动态结构因子，其中`PathtoCandela`指的是Candela的下载目录：
 
 ```bash
 python PathtoCandela/examples/e3_dsf/onedsf.py 0.00006 0.0006
 ```
 
-其中第一个参数 0.00006=dt_snapshots*geo_interval，为 ISF 的时间步长，单位为 ps；第二个参数 0.0006，为对 ISF 做傅里叶变换的总时长，单位为 ps。这里 `onedsf.py` 默认读取 `isf.txt`，并输出到 `dsf.txt`，其中第一列为$$\hbar \omega$$，单位为 meV，第二列即为对应的 DSF。
+其中第一个参数 0.00006 = dt_snapshots * geo_interval，为 ISF 的时间步长，单位为 ps；第二个参数 0.0006，为对 ISF 做傅里叶变换的总时长，单位为 ps。这里 `onedsf.py` 默认读取 `isf.txt`，并输出到 `dsf.txt`，其中第一列为$$\hbar \omega$$，单位为 meV，第二列即为对应的 DSF。
 
 ## 4 均方差位移
 
@@ -213,7 +213,7 @@ msd_natom     32
 - msd_t0：计算均方差位移的起始时间，单位为 ps
 - msd_t：每段均方差位移的时长，单位为 ps
 - msd_dt0：两段均方差位移起始位置的间隔，单位为 ps。若设置等于 msd_t，则每段均方差位移之间的时间距离为 0
-- msd_dt：获取的 MD 轨迹每一帧之间的时间步长（=geo_interval*dt，其中 dt 为 MD 轨迹每一帧之间的时间步长），单位为 ps
+- msd_dt：获取的 MD 轨迹每一帧之间的时间步长（等于geo_interval * dt，其中 dt 为 MD 轨迹每一帧之间的时间步长），单位为 ps
 - msd_natom：需要设置为计算的原子数
 
 执行如下命令：
