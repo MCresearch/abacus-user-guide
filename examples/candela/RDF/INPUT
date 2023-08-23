@@ -5,9 +5,9 @@ geo_1        0
 geo_2        100
 geo_interval 2
 geo_ignore   50
-#geo_out      Al_rdf.txt
+geo_out      Al_rdf.txt
 
 ntype        1
 natom        32
-rcut         1.2
+rcut         2.3
 dr           0.01
