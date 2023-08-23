@@ -30,7 +30,7 @@ make -j4 #使用intel oneapi编译器
 
 ## 2 下载例子
 
-可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/interface_Phonopy)。在网页右侧点击克隆/下载-> 下载 ZIP 得到算例，或者在 linux 终端执行如下命令得到算例：
+可以从 Gitee 上[下载](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/candela)。在网页右侧点击克隆/下载-> 下载 ZIP 得到算例，或者在 linux 终端执行如下命令得到算例：
 
 ```
 git clone https://gitee.com/mcresearch/abacus-user-guide.git
@@ -101,9 +101,9 @@ geo_ignore    50
 ssf_out       Al_ssf.txt
 ntype         1
 natom         32
-struf_dgx     2.5133
-struf_dgy     2.5133
-struf_dgz     2.5133
+struf_dgx     1.32656
+struf_dgy     1.32656
+struf_dgz     1.32656
 struf_ng      6
 ```
 
@@ -143,10 +143,10 @@ isf_nt1         11
 isf_nt2         40
 dt_snapshots    0.00006
 
-isf_target_q    2.51
-isf_dgx         2.5133
-isf_dgy         2.5133
-isf_dgz         2.5133
+isf_target_q    2.65
+isf_dgx         1.32656
+isf_dgy         1.32656
+isf_dgz         1.32656
 isf_ngx         6
 isf_ngy         6
 isf_ngz         6
