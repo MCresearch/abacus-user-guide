@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/6116401077" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、介绍
 
 本教程旨在介绍结合 ABACUS（中文名原子算筹，这里基于 ABACUS 3.2.0 版本）和 DPGEN 软件结合生成机器学习 DP 势，这里 ABACUS 扮演了提供第一性原理训练数据的作用。本教程以碳化硅（SiC）材料为案例，并且教大家使用 DPGEN autotest 功能，计算 SiC 的 Equation of State (EOS)和弹性常数等性质。先介绍主要软件和计算平台：

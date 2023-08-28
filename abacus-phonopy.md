@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/08/14</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、介绍
 
 本教程旨在介绍采用 ABACUS（基于 ABACUS 3.2.2 版本）做密度泛函理论计算，并且结合 Phonopy 软件计算声子谱的流程。此外，本教程还用到 gnuplot 来绘图。

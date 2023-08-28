@@ -22,7 +22,9 @@ ABACUS 网站访问：
 
 本教程系列旨在帮助新手用户入门了解 ABACUS 的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](abacus-contribute.md)
 
-其中标有<a href="" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a> Logo的部分可以直接在[Bohrium Notebook](nb.bohrium.dp.tech)上打开。在Bohrium Notebook上快速学习，见[快速开始 ABACUS｜自洽 能带 态密度 结构优化](https://nb.bohrium.dp.tech/detail/4641406377)；在Bohrium平台上运行大任务，见[教程](https://bohrium-doc.dp.tech/docs/software/ABACUS/)
+本教程中标有<a href="" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a> Logo的部分可以直接在[Bohrium Notebook](https://nb.bohrium.dp.tech)上打开。
+
+在Bohrium Notebook上快速学习，见[快速开始 ABACUS｜自洽 能带 态密度 结构优化](https://nb.bohrium.dp.tech/detail/4641406377)；在Bohrium平台上运行大任务，见[教程](https://bohrium-doc.dp.tech/docs/software/ABACUS/)。
 
 # 二、ABACUS基本操作教程
 
@@ -36,21 +38,21 @@ ABACUS 网站访问：
    2. 准备赝势：
    [模守恒赝势生成方法简介](abacus-upf.md)
    3. 数值原子轨道基组生成教程：
-      1. [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](https://nb.bohrium.dp.tech/detail/9319634192)<a href="https://nb.bohrium.dp.tech/detail/9319634192" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-      2. [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](https://nb.bohrium.dp.tech/detail/5215642163)<a href="https://nb.bohrium.dp.tech/detail/5215642163" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-      3. [数值原子轨道（三）：产生高精度数值原子轨道](https://nb.bohrium.dp.tech/detail/8841868194)<a href="https://nb.bohrium.dp.tech/detail/8841868194" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+      1. [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)<a href="https://nb.bohrium.dp.tech/detail/9319634192" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+      2. [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)<a href="https://nb.bohrium.dp.tech/detail/5215642163" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+      3. [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)<a href="https://nb.bohrium.dp.tech/detail/8841868194" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
 3. Kohn-Sham密度泛函理论
    1. [电子自洽迭代](https://nb.bohrium.dp.tech/detail/7417640496)<a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
       1. 平面波PW（缺）
       2. 数值原子轨道LCAO（缺）
    2. 带自旋的体系计算：[<mark style="color:red;">ABACUS磁性材料计算使用教程</mark>](https://nb.bohrium.dp.tech/detail/7141761751)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
    3. \+U计算：[<mark style="color:red;">ABACUS DFT+U使用教程</mark>](https://nb.bohrium.dp.tech/detail/2112617648)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/2112617648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   4. 结构优化[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   5. 分子动力学：[ABACUS 分子动力学使用教程](https://nb.bohrium.dp.tech/detail/2241262724)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
 4. DeePKS方法（缺）
 5. 隐式溶剂计算等相关功能（缺）
-6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](https://nb.bohrium.dp.tech/detail/5915692245)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](https://nb.bohrium.dp.tech/detail/6416644691)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
 8. 分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://xmywuqhxb0.feishu.cn/docx/K8GRdTst4oXQNoxnQVbcFZTmntb)<mark style="color:red;"></mark>
@@ -58,11 +60,11 @@ ABACUS 网站访问：
    2. PDOS计算
       1. [<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://xmywuqhxb0.feishu.cn/docx/ONSldj82VoNGKSxaoDQcoKBtnGh)<mark style="color:red;"></mark>
 9.  和其他软件对接
-   1. [ABACUS+Phonopy 计算声子谱](https://nb.bohrium.dp.tech/detail/8741867512)<a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   2. [ABACUS+ShengBTE 计算晶格热导率](https://nb.bohrium.dp.tech/detail/2712467526)<a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   3. [ABACUS+DPGEN 使用教程](https://nb.bohrium.dp.tech/detail/6116401077)<a href="https://nb.bohrium.dp.tech/detail/6116401077" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   4. [ABACUS+LibRI 做杂化泛函计算教程](https://nb.bohrium.dp.tech/detail/8041860882)<a href="https://nb.bohrium.dp.tech/detail/8041860882" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-   5. [ABACUS+Candela 使用教程](https://nb.bohrium.dp.tech/detail/2912697542)<a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   1. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)<a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)<a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   3. [ABACUS+DPGEN 使用教程](abacus-dpgen.md)<a href="https://nb.bohrium.dp.tech/detail/6116401077" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   4. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)<a href="https://nb.bohrium.dp.tech/detail/8041860882" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   5. [ABACUS+Candela 使用教程](abacus-candela.md)<a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
    6. ABACUS+CINEB教程（缺）
       1. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
