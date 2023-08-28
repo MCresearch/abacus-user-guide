@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/06/15</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、介绍
 
 本教程旨在介绍采用 ABACUS（基于 ABACUS 3.2.0 版本）做密度泛函理论计算，并且结合 ShengBTE 软件计算晶格的热导率的流程。其中，整个计算过程中还用到了：1）采用 Phonopy 程序来计算二阶力常数，2）采用 ASE 程序进行原子结构的转换，3）采用 ShengBTE 的 thirdorder 程序计算三阶力常数，4）最后使用 ShengBTE 来计算材料的晶格热导率。

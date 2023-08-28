@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/06/20</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/8841868194" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、PTG（PyTorch Gradient）方法
 
 这篇文档是数值原子轨道系列的第三篇文档，除了第二篇文档提到的模拟退火算法之外，还可以使用 Pytorch 中的自动微分算法来最小化溢出函数。首先定义损失函数如下，并可以证明它与溢出函数是等价的：

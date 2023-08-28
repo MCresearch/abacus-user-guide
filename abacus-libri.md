@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/08/21</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/8041860882" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、介绍
 
 杂化泛函（Hybrid Functional）是指在密度泛函理论框架中的交换关联项里面加入一部分的 Hartree Fock (简称 HF)的精确交换能。开源密度泛函理论软件 ABACUS 可以结合另一款国产开源软件 [LibRI 软件](https://github.com/deepmodeling/LibRI)进行杂化密度泛函计算，目前仅支持在数值原子轨道基组下使用该功能。可以通过 `dft_functional` 参数指定所使用的杂化泛函类型，如可以选择 `hf` (Hartree-Fock), `pbe0`(PBE0), `hse`(HSE06)以及 `scan0` 杂化泛函。本教程以 HSE 杂化泛函为例，介绍如何<strong>在 ABACUS 里调用 LibRI 做杂化泛函自洽迭代、求力和应力以及结构优化。</strong>

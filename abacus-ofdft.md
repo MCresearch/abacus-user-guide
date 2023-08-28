@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/07/19</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、无轨道密度泛函理论背景知识
 
 无轨道密度泛函理论(Orbital free density functional theory, OFDFT)是一种第一性原理模拟方法，相比于 Kohn Sham DFT (KSDFT)，它的优势之一在于$$O(N\ln N)$$的算法复杂度，这使得 OFDFT 可以用于上万原子甚至更大体系的电子基态计算，或者大体系、长时间的第一性原理分子动力学等。

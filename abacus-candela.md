@@ -6,6 +6,8 @@
 
 <strong>最后更新时间：2023/08/23</strong>
 
+<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+
 # 一、介绍
 
 本教程旨在介绍采用 Candela 分析 ABACUS（基于 3.2.4 版本）分子动力学轨迹，计算径向分布函数（Radial Distribution Function，简称 RDF），静态结构因子（Static Structure Factor，简称 SSF），离子-离子动态结构因子（Ion-ion Dynamic Structure Factor，简称 DSF）以及均方差位移（Mean Square Displacement，简称 MSD）流程。
