@@ -6,8 +6,6 @@
 
 <strong>最后更新时间：2023/07/18</strong>
 
-<strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/9319634192" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
-
 # 一、数值原子轨道的背景知识
 
 ## 1. 数值原子轨道
