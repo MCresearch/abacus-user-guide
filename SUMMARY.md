@@ -10,6 +10,7 @@
     * [ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
     * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
     * [采用ABACUS进行表面计算（二）：偶极修正](abacus-surface2.md)
+    * [采用ABACUS进行表面计算（五）：外加电场](abacus-surface5.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
     * [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
     * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
