@@ -3,8 +3,8 @@ INPUT_PARAMETERS
 suffix                nanoribbon
 calculation           scf
 nbands                70
-nspin                 2
-pseudo_dir	          ../../PP_ORB
+nspin                 1
+pseudo_dir	      ../../PP_ORB
 orbital_dir           ../../PP_ORB
 
 #Parameters (Basis)
@@ -25,9 +25,5 @@ mixing_beta           0.1
 mixing_ndim           20
 mixing_gg0            1.5
 
-#Parameters (Efield)
-efield_flag           1
-efield_dir            2
-efield_amp            0.0019440124
-efield_pos_max        0.95
-efield_pos_dec        0.10
+#Parameters (Output)
+out_chg               1
