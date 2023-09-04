@@ -1,6 +1,6 @@
 # Table of contents
 
-* [ABACUS使用教程](README.md)
+* [ABACUS 使用教程](README.md)
     * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
     * [模守恒赝势生成方法简介](abacus-upf.md)
     * [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
@@ -9,12 +9,14 @@
     * [ABACUS 分子动力学使用教程](abacus-md.md)
     * [ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
     * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
-    * [采用ABACUS进行表面计算（二）：偶极修正](abacus-surface2.md)
-    * [采用ABACUS进行表面计算（五）：外加电场](abacus-surface5.md)
+    * [采用 ABACUS 进行表面计算（二）：偶极修正](abacus-surface2.md)
+    * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
     * [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
     * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
     * [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
     * [ABACUS+Candela 使用教程](abacus-candela.md)
+* ABACUS 开发者文档
+  * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
 * [ABACUS 新闻稿整理](abacus-news.md)
-* [如何贡献ABACUS使用教程](abacus-contribute.md)
+* [如何贡献 ABACUS 使用教程](abacus-contribute.md)

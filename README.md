@@ -73,3 +73,7 @@ ABACUS 网站访问：
 # 三、使用经验
 
 1. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
+
+# 四、开发者文档
+
+1. [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
