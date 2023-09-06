@@ -4,10 +4,11 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/08/01</strong>
+<strong>最后更新时间：2023/09/06</strong>
 
 | 标题                                                                     | 链接                                                                                                   | 日期       |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---------- |
+| ABACUS新进展：基于数值原子轨道基的meta-GGA密度泛函的实现                | [https://mp.weixin.qq.com/s/HnUmeDosiT74u055DNFfZw](https://mp.weixin.qq.com/s/HnUmeDosiT74u055DNFfZw) | 2023/09/06 |
 | ABACUS开发者大会 \ 聚焦国产密度泛函理论开源软件的进步与挑战              | [https://mp.weixin.qq.com/s/EX5WcKtVucRbY8DIvj3PyQ](https://mp.weixin.qq.com/s/EX5WcKtVucRbY8DIvj3PyQ) | 2023/08/01 |
 | ABACUS 3.3 发布：自动化测试工作流赋能高效研发，为代码质量保驾护航        | [https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA](https://mp.weixin.qq.com/s/IelmHC-Ck4-Stsagu_7HUA) | 2023/07/13 |
 | 国产开源软件专题研讨会——第三届 ABACUS 开发者会议第三轮通知             | [https://mp.weixin.qq.com/s/z9_NrGlciHwKSHwLPZrGvA](https://mp.weixin.qq.com/s/z9_NrGlciHwKSHwLPZrGvA) | 2023/07/11 |
