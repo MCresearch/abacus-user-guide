@@ -483,35 +483,35 @@ constexpr double kGravity = 9.8;
 
 ## 1. 两个字符
 
-- `pw`，代表plane wave平面波
-- `op`，代表具有multi-device和multi-precision支持的算子（operator），和Operator模块含义不同
+- `pw`：代表plane wave平面波
+- `op`：代表具有multi-device和multi-precision支持的算子（operator），和Operator模块含义不同
   
 ## 2. 三个字符
 
 - `fft`：快速傅里叶变换
 - `kpt`：布里渊区kpoint的缩写
-- `nao`，代表numerical atomic orbitals  （nao经常用来表示number of atomic orbitals，不知道会不会混）
+- `nao`：代表numerical atomic orbitals  （nao经常用来表示number of atomic orbitals，不知道会不会混）
 - `orb`：orbital，轨道
-- `hmt`，代表hamilt或者hamiltonian
-- `pot`，代表potential
-- `chg`，代表charge
-- `den`，代表density（电荷密度尽量都用chg）
-- `scf`，代表自洽迭代self consistent field
-- `thr`，代表threshold
-- `tab`，代表table
-- `kin`，代表kinetic，动能的
-- `cal`，代表calculate
-- `opt`，代表optimize
-- `gen`，代表generate
+- `hmt`：代表hamilt或者hamiltonian
+- `pot`：代表potential
+- `chg`：代表charge
+- `den`：代表density（电荷密度尽量都用chg）
+- `scf`：代表自洽迭代self consistent field
+- `thr`：代表threshold
+- `tab`：代表table
+- `kin`：代表kinetic，动能的
+- `cal`：代表calculate
+- `opt`：代表optimize
+- `gen`：代表generate
 
 ## 3. 四个字符
 
-- `iter`，代表iteration
-- `init`，代表初始化initializaiton
-- `read`，读入
-- `stru`，代表structure
-- `veff`，代表有效势
-- `vloc`，代表局域势
+- `iter`：代表iteration
+- `init`：代表初始化initializaiton
+- `read`：读入
+- `stru`：代表structure
+- `veff`：代表有效势
+- `vloc`：代表局域势
 
 # Reference
 

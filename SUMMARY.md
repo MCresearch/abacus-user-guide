@@ -16,6 +16,7 @@
     * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
     * [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
     * [ABACUS+Candela 使用教程](abacus-candela.md)
+    * [ABACUS+USPEX 接口教程](abacus-uspex.md)
 * ABACUS 开发者文档
   * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
 * [ABACUS 新闻稿整理](abacus-news.md)
