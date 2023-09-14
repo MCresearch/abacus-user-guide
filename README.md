@@ -79,3 +79,4 @@ ABACUS 网站访问：
 # 四、开发者文档
 
 1. [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
+2. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
