@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/07/20</strong>
+<strong>最后更新时间：2023/09/14</strong>
 
 <strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
 
@@ -41,7 +41,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 [https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md)
 
-注：算例仓库里面包含 `1_AIMD`，`2_LJMD`（采用 Lennard-Jones 经典势做 MD）和 `3_DPMD`（采用深度势能方法做 MD）三个目录。
+注：算例仓库里面包含 `1_AIMD`，`2_LJMD`（采用 Lennard-Jones 经典势做 MD），`3_DPMD`（采用深度势能方法做 MD）和 `4_FIRE`（采用 FIRE 算法做结构优化）四个目录。
 
 注：以上算例要在 ABACUS v3.2.1 版本及以上可以运行成功，并且我们强烈建议下载使用 ABACUS 最新版本！
 
@@ -507,3 +507,52 @@ $ python3
 点击 Render active viewport 即可保存动画文件
 
 ![](picture/fig_md-3.png)
+
+# 五、特殊的 MD 方法
+
+## 1. Fast Inertial Relaxation Engine
+
+ABACUS 中实现了一种特殊的基于 MD 的 [Fast Inertial Relaxation Engine](https://doi.org/10.1103/PhysRevLett.97.170201) (FIRE)结构优化方法，该算法比共轭梯度法的标准实现快得多，具有额外的速度修改和自适应时间步长，具有优异的优化效率。
+
+以上面提供的 `4_FIRE` 算例为例，我们可以介绍一下所需的参数如下：
+
+```shell
+INPUT_PARAMETERS
+#Parameters (1.General)
+suffix                 Si_fire
+calculation            md
+nbands                 6
+symmetry               0
+pseudo_dir             ../../PP_ORB
+orbital_dir            ../../PP_ORB
+
+#Parameters (2.Iteration)
+ecutwfc                30
+scf_thr                1e-8
+scf_nmax               100
+
+#Parameters (3.Basis)
+basis_type             pw
+
+#Parameters (4.Smearing)
+smearing_method        gaussian
+smearing_sigma         0.001
+
+#Parameters (5.Mixing)
+mixing_type            pulay
+mixing_beta            0.3
+chg_extrap             second-order
+
+#Parameters (6.MD)
+md_type                fire
+md_nstep               100
+md_dt                  1
+md_tfirst              300
+
+force_thr_ev           0.001
+```
+
+- calculation：FIRE 算法是基于 MD 方法的，因此需要将 calculation 设为 md
+- md_type：采用 FIRE 算法，需要设为 fire
+- md_tfirst：MD 需要离子速度，因此需要通过设置初始温度来随机生成离子速度，或者在 `STRU` 文件中手动设置初始速度
+- force_thr_ev：离子受力的收敛阈值，当离子受力的每个分量均小于该阈值或者 MD 运行至最大步数时，MD 终止
