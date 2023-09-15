@@ -970,4 +970,4 @@ Bohrium 网站：
 
 上篇：[从 SIAB 到 ABACUS（一）：准备工作](https://ucoyxk075n.feishu.cn/docx/NIWLdeaceoiqKFxZrT3czXAJnOg)（施工中 🚧）
 
-下篇：[Introduction to ABACUS: Path to PW calculation - Part 2](https://ucoyxk075n.feishu.cn/docx/JruadAi9FoipBAxkxWaczZoxnwg)
+下篇：[Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)

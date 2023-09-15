@@ -1,0 +1,960 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS 注释规范：Doxygen 入门 (c++) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-news.html" />
+    
+    
+    <link rel="prev" href="develop-path3.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS 使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="abacus-news.html">
+            
+                <a href="abacus-news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="abacus-contribute.html">
+            
+                <a href="abacus-contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS 注释规范：Doxygen 入门 (c++)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x6CE8;&#x91CA;&#x89C4;&#x8303;&#xFF1A;doxygen-&#x5165;&#x95E8;-c"><a name="abacus-&#x6CE8;&#x91CA;&#x89C4;&#x8303;&#xFF1A;doxygen-&#x5165;&#x95E8;-c" class="plugin-anchor" href="#abacus-&#x6CE8;&#x91CA;&#x89C4;&#x8303;&#xFF1A;doxygen-&#x5165;&#x95E8;-c"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x6CE8;&#x91CA;&#x89C4;&#x8303;&#xFF1A;Doxygen &#x5165;&#x95E8; (c++)</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x91D1;&#x7956;&#x946B;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;jinzx@aisi.ac.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/09/15</strong></p>
+<h1 id="&#x4E00;&#x3001;&#x7B80;&#x4ECB;"><a name="&#x4E00;&#x3001;&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x7B80;&#x4ECB;</h1>
+<p>&#x5F00;&#x6E90;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#x8F6F;&#x4EF6; ABACUS &#x76EE;&#x524D;&#x7531;&#x4F17;&#x591A;&#x793E;&#x533A;&#x5F00;&#x53D1;&#x8005;&#x5171;&#x540C;&#x5F00;&#x53D1;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x89C4;&#x8303;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x63A8;&#x8350;&#x4EE5; Doxygen &#x5DE5;&#x5177;&#x4E3A;&#x8F85;&#x52A9;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#x3002;</p>
+<h2 id="1-&#x4EC0;&#x4E48;&#x662F;-doxygen"><a name="1-&#x4EC0;&#x4E48;&#x662F;-doxygen" class="plugin-anchor" href="#1-&#x4EC0;&#x4E48;&#x662F;-doxygen"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4EC0;&#x4E48;&#x662F; Doxygen</h2>
+<p>Doxygen &#x662F;&#x4E00;&#x6B3E;&#x652F;&#x6301;&#x5305;&#x62EC; C/C++, Python, Fortran &#x7B49;&#x591A;&#x79CD;&#x8BED;&#x8A00;&#x7684;&#x9759;&#x6001;&#x7A0B;&#x5E8F;&#x5206;&#x6790;&#x4E0E;&#x6587;&#x6863;&#x751F;&#x6210;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x8FC7;&#x641C;&#x96C6;&#x5E76;&#x6574;&#x7406;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E;</p>
+<ul>
+<li>&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;/&#x88AB;&#x8C03;&#x7528;</li>
+<li>&#x7C7B;&#x7684;&#x6210;&#x5458;&#x4EE5;&#x53CA;&#x7EE7;&#x627F;&#x3001;&#x534F;&#x4F5C;&#x5173;&#x7CFB;</li>
+<li>&#x6587;&#x4EF6;&#x5939;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</li>
+<li>&#x5934;&#x6587;&#x4EF6; include &#x5173;&#x7CFB;</li>
+</ul>
+<p>Doxygen &#x4E0D;&#x4EC5;&#x80FD;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5305;&#x542B;&#x4EE5;&#x4E0A;&#x4FE1;&#x606F;&#x7684;&#x56FE;&#x8868;&#x4E0E;&#x5217;&#x8868;&#xFF0C;&#x4E5F;&#x80FD;&#x5C06;&#x4EE3;&#x7801;&#x4E2D;<strong>&#x91C7;&#x7528;&#x7279;&#x5B9A;&#x683C;&#x5F0F;</strong>&#x7684;&#x6CE8;&#x91CA;&#x9644;&#x5230;&#x76F8;&#x5E94;&#x4F4D;&#x7F6E;&#xFF0C;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x5185;&#x5BB9;&#x7FD4;&#x5B9E;&#x7684;&#x6587;&#x6863;&#x3002;&#x5728;&#x9002;&#x5F53;&#x7684; Doxygen &#x914D;&#x7F6E;&#x4E0E;&#x826F;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x4E0B;&#xFF0C;Doxygen &#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6587;&#x6863;&#x80FD;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x8BF8;&#x591A;&#x4FBF;&#x5229;&#xFF0C;&#x964D;&#x4F4E;&#x9605;&#x8BFB;&#x4EE3;&#x7801;&#x7684;&#x96BE;&#x5EA6;&#xFF0C;&#x4ECE;&#x800C;&#x4FC3;&#x8FDB;&#x5F00;&#x53D1;&#x8005;&#x793E;&#x533A;&#x7684;&#x5EFA;&#x8BBE;&#x3002;</p>
+<h2 id="2-&#x529F;&#x80FD;&#x4E0E;&#x6587;&#x6863;&#x8303;&#x4F8B;"><a name="2-&#x529F;&#x80FD;&#x4E0E;&#x6587;&#x6863;&#x8303;&#x4F8B;" class="plugin-anchor" href="#2-&#x529F;&#x80FD;&#x4E0E;&#x6587;&#x6863;&#x8303;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x529F;&#x80FD;&#x4E0E;&#x6587;&#x6863;&#x8303;&#x4F8B;</h2>
+<p>Doxygen &#x53EF;&#x4EE5;&#x751F;&#x6210;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x4E0E;&#x88AB;&#x8C03;&#x7528;&#x56FE;(call &amp; caller graph)&#x3002;&#x4EE5;&#x5F00;&#x6E90;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#x8F6F;&#x4EF6; ABACUS &#x4EE3;&#x7801;&#x4E3A;&#x4F8B;&#xFF0C;&#x5176;&#x4E2D;&#x8D1F;&#x8D23;&#x8BA1;&#x7B97;&#x4E09;&#x6B21;&#x6837;&#x6761;&#x63D2;&#x503C;&#x7684;&#x51FD;&#x6570; <code>ModuleBase::CubicSpline::eval</code>&#xFF0C;doxygen &#x53EF;&#x5C06;&#x5176;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x81EA;&#x52A8;&#x53EF;&#x89C6;&#x5316;&#x4E3A;&#x5982;&#x4E0B;&#x56FE;&#x8868;&#xFF1A;</p>
+<p><img src="picture/fig_dox-1.png" alt=""></p>
+<p>Doxygen &#x53EF;&#x4EE5;&#x5C06;&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x751F;&#x6210;&#x56FE;&#x8868;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86; <code>ModuleESolver::ESolver</code> &#x7684;&#x4E00;&#x7CFB;&#x5217;&#x7EE7;&#x627F;</p>
+<p><img src="picture/fig_dox-2.png" alt=""></p>
+<p>Doxygen &#x53EF;&#x4EE5;&#x751F;&#x6210;&#x7C7B;&#x7684;&#x534F;&#x4F5C;&#x56FE;&#xFF08;collaboration diagram&#xFF09;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86; <code>container::Tensor</code> &#x7684;&#x6210;&#x5458;&#x4EE5;&#x53CA;&#x6210;&#x5458;&#x7684;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="picture/fig_dox-3.png" alt=""></p>
+<p>Doxygen &#x53EF;&#x4EE5;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x5939;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x56FE;&#x3002;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86; <code>source/module_basis</code> &#x53CA;&#x5176;&#x5185;&#x90E8;&#x6210;&#x5458;&#x6587;&#x4EF6;&#x5939;&#x4E0E;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x8026;&#x5408;&#x3002;</p>
+<p><img src="picture/fig_dox-4.png" alt=""></p>
+<p>Doxygen &#x53EF;&#x4EE5;&#x5C06;&#x5934;&#x6587;&#x4EF6;&#x7684; include &#x5173;&#x7CFB;&#x53EF;&#x89C6;&#x5316;&#x6210;&#x56FE;&#x8868; (include dependency graph)&#x3002;&#x4E0B;&#x56FE;&#xFF08;&#x90E8;&#x5206;&#x5730;&#xFF09;&#x5C55;&#x793A;&#x4E86; <code>module_basis/module_nao/numerical_radial.h</code> &#x5305;&#x542B;&#x4E0E;&#x88AB;&#x5305;&#x542B;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<p><img src="picture/fig_dox-5.png" alt=""></p>
+<p>&#x5927;&#x91CF;&#x9879;&#x76EE;&#x4F7F;&#x7528; Doxygen &#x751F;&#x6210;&#x6587;&#x6863; (<a href="https://www.doxygen.nl/projects.html)&#x3002;&#x5BF9;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#x4E00;&#x4E2A;&#x8457;&#x540D;&#x7684;&#x4F8B;&#x5B50;&#x662F;" target="_blank">https://www.doxygen.nl/projects.html)&#x3002;&#x5BF9;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#x4E00;&#x4E2A;&#x8457;&#x540D;&#x7684;&#x4F8B;&#x5B50;&#x662F;</a> LAPACK &#x7684;&#x5728;&#x7EBF;&#x6587;&#x6863; <a href="https://www.netlib.org/lapack/explore-html/" target="_blank">https://www.netlib.org/lapack/explore-html/</a></p>
+<p><img src="picture/fig_dox-6.png" alt=""></p>
+<h1 id="&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-doxygen"><a name="&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-doxygen" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;-doxygen"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528; Doxygen</h1>
+<p>Doxygen &#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8BC6;&#x522B;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x5E76;&#x751F;&#x6210;&#x4EE5;&#x4E0A;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x3001;&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x4E0E;&#x534F;&#x4F5C;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x4F9D;&#x8D56;&#x4EE5;&#x53CA;&#x5934;&#x6587;&#x4EF6;&#x4F9D;&#x8D56;&#x7B49;&#x56FE;&#x8868;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5BF9;&#x7406;&#x60F3;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;&#x800C;&#x8A00;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x4EA6;&#x4E0D;&#x53EF;&#x6216;&#x7F3A;&#x3002;&#x5728;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;&#x6587;&#x6863;&#x4E2D;&#xFF0C;&#x9664;&#x4EE5;&#x4E0A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x56FE;&#x8868;&#x5916;&#xFF0C;Doxygen &#x4F1A;&#x5C06;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x4E0E;&#x51FD;&#x6570;&#x4E00;&#x4E00;&#x5217;&#x4E3E;&#xFF0C;&#x5E76;&#x8BC6;&#x522B;&#x4EE3;&#x7801;&#x4E2D;&#x7279;&#x5B9A;&#x683C;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#x540E;&#x5C06;&#x5176;&#x9644;&#x5728;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x3002;</p>
+<h2 id="1-&#x5982;&#x4F55;&#x5199;&#x80FD;&#x88AB;-doxygen-&#x8BC6;&#x522B;&#x7684;&#x6CE8;&#x91CA;"><a name="1-&#x5982;&#x4F55;&#x5199;&#x80FD;&#x88AB;-doxygen-&#x8BC6;&#x522B;&#x7684;&#x6CE8;&#x91CA;" class="plugin-anchor" href="#1-&#x5982;&#x4F55;&#x5199;&#x80FD;&#x88AB;-doxygen-&#x8BC6;&#x522B;&#x7684;&#x6CE8;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5982;&#x4F55;&#x5199;&#x80FD;&#x88AB; Doxygen &#x8BC6;&#x522B;&#x7684;&#x6CE8;&#x91CA;</h2>
+<p>&#x901A;&#x5E38;&#x5F00;&#x53D1;&#x8005;&#x4F1A;&#x5E0C;&#x671B;&#x4E00;&#x90E8;&#x5206;&#x7CBE;&#x5FC3;&#x64B0;&#x5199;&#x7684;&#x6CE8;&#x91CA;&#x2014;&#x2014;&#x6BD4;&#x5982;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x4ECB;&#x7ECD;&#x6216;&#x8005;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7684;&#x542B;&#x4E49;&#x2014;&#x2014;&#x51FA;&#x73B0;&#x5728;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;&#x91CC;&#xFF0C;&#x800C;&#x4E0D;&#x5E0C;&#x671B;&#x6587;&#x6863;&#x5145;&#x65A5;&#x7740;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x7684;&#x63CF;&#x8FF0;&#x6216;&#x67D0;&#x4E00;&#x884C;&#x610F;&#x4E49;&#x7684;&#x89E3;&#x91CA;&#x3002;Doxygen &#x5145;&#x5206;&#x8003;&#x8651;&#x4E86;&#x8FD9;&#x4E00;&#x70B9;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x666E;&#x901A;&#x7684;&#x6CE8;&#x91CA;&#x5747;&#x4F1A;&#x88AB; Doxygen &#x5FFD;&#x7565;&#xFF1B;&#x53EA;&#x6709;&#x7279;&#x5B9A;&#x683C;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#x4F1A;&#x88AB; Doxygen &#x8BC6;&#x522B;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x5C3D;&#x7BA1;&#x5176;&#x4E2D;&#x5404;&#x5904;&#x90FD;&#x9644;&#x4E0A;&#x4E86;&#x6CE8;&#x91CA;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x5747;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;&#x6587;&#x6863;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// A class that represents a circle.</span>
+<span class="token comment">// This toy class will be used to demonstrate the usage of Doxygen.</span>
+<span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// Initializes a Circle object with a given radius.</span>
+    <span class="token comment">// A unit circle is assumed by default.</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Rescales a Circle object.</span>
+    <span class="token comment">// The radius of the given Circle object is multiplied by the given factor.</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rescale</span><span class="token punctuation">(</span>Circle<span class="token operator">*</span> circ<span class="token punctuation">,</span> <span class="token comment">// pointer to the Circle object</span>
+                        <span class="token keyword">double</span> factor <span class="token comment">// radius rescaling factor</span>
+                       <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> r_<span class="token punctuation">;</span> <span class="token comment">// radius of the Circle object</span>
+    <span class="token keyword">static</span> <span class="token keyword">constexpr</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14159265358979324</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x7684;&#x6587;&#x6863;&#x5982;&#x4E0B;&#x3002;Doxygen &#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x4E00;&#x4E00;&#x5217;&#x4E3E;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x6CE8;&#x91CA;&#x4E0D;&#x7B26;&#x5408;&#x7279;&#x5B9A;&#x683C;&#x5F0F;&#xFF0C;&#x56E0;&#x800C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x6587;&#x6863;&#x76F8;&#x5E94;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><img src="picture/fig_dox-7.png" alt=""></p>
+<p>&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5199;&#x80FD;&#x88AB; Doxygen &#x8BC6;&#x522B;&#x7684;&#x6CE8;&#x91CA;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x3002;</p>
+<h3 id="11-&#x57FA;&#x672C;&#x683C;&#x5F0F;"><a name="11-&#x57FA;&#x672C;&#x683C;&#x5F0F;" class="plugin-anchor" href="#11-&#x57FA;&#x672C;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x57FA;&#x672C;&#x683C;&#x5F0F;</h3>
+<p>&#x5728; c++ &#x4E2D; Doxygen &#x4F1A;&#x8BC6;&#x522B;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>Javadoc-style</li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/**
+ *  This is a Javadoc-style comment
+ */</span>
+</code></pre>
+<ul>
+<li>Qt-style</li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*!
+ * This is a Qt-style comment
+ */</span>
+</code></pre>
+<ul>
+<li>Extended c++ style</li>
+</ul>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/// This is the so-called extended c++-style comment</span>
+<span class="token comment">//! This also works!</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x683C;&#x5F0F;&#x672C;&#x8EAB;&#x5747;&#x662F;&#x5408;&#x6CD5;&#x7684; C++ &#x6CE8;&#x91CA;&#xFF0C;&#x53EA;&#x662F;&#x5728; // &#x548C; /<em>  </em>/ &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x4E86;&#x989D;&#x5916;&#x7684; &apos;*&apos; &#xFF0C;&apos;!&apos; &#x6216; &apos;/&apos; &#x3002;&#x4E00;&#x65E6;&#x6587;&#x6863;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x4EE5;&#x4E0A;&#x4E09;&#x8005;&#x4E4B;&#x4E00;&#xFF0C;Doxygen &#x4FBF;&#x4F1A;&#x5C06;&#x4E4B;&#x540E;&#x7684;&#x6CE8;&#x91CA;&#x5185;&#x5BB9;&#x586B;&#x5165;&#x6587;&#x6863;&#x7684;&#x76F8;&#x5E94;&#x4F4D;&#x7F6E;&#x3002;&#x8FD9;&#x4E09;&#x79CD;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x662F;&#x6240;&#x6709; Doxygen &#x7528;&#x6CD5;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x9636;&#x529F;&#x80FD;&#xFF08;&#x5982; group&#xFF0C;module&#xFF0C;equation &#x7B49;&#xFF09;&#x5747;&#x9700;&#x5728;&#x8FD9;&#x4E09;&#x8005;&#x4E4B;&#x4E00;&#x5F00;&#x542F;&#x7684;&#x6CE8;&#x91CA;&#x884C;/&#x5757;&#x5185;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x4E09;&#x79CD;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x53EF;&#x4EE5;&#x6DF7;&#x7528;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x6309;&#x81EA;&#x5DF1;&#x7684;&#x4E60;&#x60EF;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x6216;&#x591A;&#x79CD;&#x4F7F;&#x7528;&#x3002;</p>
+<p>Doxygen &#x9ED8;&#x8BA4;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;&#x4E8E;&#x4E4B;&#x540E;&#x7684;&#x7C7B;&#x3001;&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#xFF08;&#x5141;&#x8BB8;&#x6709;&#x7A7A;&#x884C;&#xFF09;&#x3002;&#x5982;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5219;&#x53EF;&#x5728;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x540E;&#x7ACB;&#x523B;&#x6DFB;&#x52A0; &apos;&lt;&apos; &#x7B26;&#x53F7;&#xFF0C;&#x4F8B;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">//&#xFF01; this comment line applies to print(), even though there&apos;s an empty line below</span>
+
+<span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">///&lt;  this comment line also applies to print(), not get(); note the &apos;&lt;&apos; character!</span>
+<span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="12-&#x8BE6;&#x7EC6;&#x4E0E;&#x7B80;&#x7565;&#x63CF;&#x8FF0;"><a name="12-&#x8BE6;&#x7EC6;&#x4E0E;&#x7B80;&#x7565;&#x63CF;&#x8FF0;" class="plugin-anchor" href="#12-&#x8BE6;&#x7EC6;&#x4E0E;&#x7B80;&#x7565;&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x8BE6;&#x7EC6;&#x4E0E;&#x7B80;&#x7565;&#x63CF;&#x8FF0;</h3>
+<p>&#x5982;&#x4E4B;&#x524D;&#x4F8B;&#x5B50;&#x6240;&#x793A;&#xFF0C;Doxygen &#x81EA;&#x52A8;&#x751F;&#x6210;&#x7C7B;&#x7684;&#x6587;&#x6863;&#x65F6;&#x4F1A;&#x5148;&#x628A;&#x6210;&#x5458;&#x51FD;&#x6570;&#x4E0E;&#x53D8;&#x91CF;&#x7F57;&#x5217;&#x5728;&#x5F00;&#x5934;&#xFF0C;&#x968F;&#x540E;&#x624D;&#x662F;&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x7684;&#x4ECB;&#x7ECD;&#xFF08;&#x5F53;&#x7136;&#xFF0C;&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x4F8B;&#x5B50;&#x91CC;&#x6CA1;&#x6709;&#x91C7;&#x7528; doxygen &#x683C;&#x5F0F;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x4E3A;&#x7A7A;&#xFF09;&#x3002;&#x53EA;&#x8981;&#x4F7F;&#x7528;&#x4E86;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#xFF0C;Doxygen &#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6CE8;&#x91CA;&#x9644;&#x5728;&#x5BF9;&#x5E94;&#x6210;&#x5458;&#x5904;&#x3002;&#x6BD4;&#x5982;&#x82E5;&#x5C06;&#x4E4B;&#x524D;&#x6784;&#x9020;&#x51FD;&#x6570;&#x524D;&#x7684; // &#x6CE8;&#x91CA;&#x66FF;&#x6362;&#x4E3A; /// :</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/// Initializes a Circle object with a given radius.</span>
+<span class="token comment">/// A unit circle is assumed by default.</span>
+<span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x5373;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x539F;&#x5148;&#x4E3A;&#x7A7A;&#x7684; Constructor &amp; Destructor Documentation &#x4E0B; Circle()&#x7684;&#x63CF;&#x8FF0;&#x91CC;:</p>
+<p><img src="picture/fig_dox-8.png" alt=""></p>
+<p>Doxygen &#x8FD8;&#x5141;&#x8BB8;&#x8BA9;&#x4E00;&#x4E9B;&#x7B80;&#x7565;&#x63CF;&#x8FF0;&#x51FA;&#x73B0;&#x5728;&#x7C7B;&#x6587;&#x6863;&#x7684;&#x5F00;&#x5934;&#x90E8;&#x5206;&#x3002;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x76EE;&#x7684;&#x3002;&#x8F83;&#x4E3A;&#x6B63;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x6CE8;&#x91CA;&#x5757;&#x91CC;&#x6DFB;&#x52A0; <code>@brief</code> &#x6216;&#x8005; <code>\brief</code>&#x3002;&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6307;&#x5B9A;&#x7684;&#x7B80;&#x7565;&#x63CF;&#x8FF0;&#x53EF;&#x4EE5;&#x8DE8;&#x591A;&#x884C;&#xFF08;&#x5982;&#x4E0B;&#x9762;&#x5F00;&#x5934; Circle &#x7C7B;&#x7684;&#x6CE8;&#x91CA;&#xFF09;&#x3002;&#x53E6;&#x4E00;&#x79CD;&#x8F83;&#x4E3A;&#x8F7B;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;<strong>&#x5355;&#x884C;</strong>&#x7684; extended C++ style &#x6CE8;&#x91CA;&#xFF0C;&#x5982;&#x4E0B;&#x9762; Circle &#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3002;&#x3010;&#x591A;&#x884C;&#x7684; extended c++ style &#x6CE8;&#x91CA;&#x53EA;&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x3011;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/**
+ * @brief A class that represents
+ *        a circle.
+ *
+ * This toy class will be used to demonstrate the usage of Doxygen
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">/// Initializes a Circle object with a given radius.</span>
+    <span class="token comment">/*!
+     * A unit circle is assumed by default.
+     */</span>
+    <span class="token function">Circle</span><span class="token punctuation">(</span><span class="token keyword">double</span> r <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*!
+     * \brief Rescales a Circle object.
+     *
+     * The radius of the given Circle object is multiplied by the given factor.
+     *
+     */</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rescale</span><span class="token punctuation">(</span>Circle<span class="token operator">*</span> circ<span class="token punctuation">,</span>
+                        <span class="token keyword">double</span> factor
+                       <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">double</span> r_<span class="token punctuation">;</span> <span class="token comment">///&lt; radius of the Circle object</span>
+    <span class="token keyword">static</span> <span class="token keyword">constexpr</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14159265358979324</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x7684; Doxygen &#x6587;&#x6863;&#x5728;&#x5F00;&#x5934;&#x7F57;&#x5217;&#x90E8;&#x5206;&#x4F1A;&#x51FA;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x7B80;&#x7565;&#x63CF;&#x8FF0;&#xFF1B;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x90E8;&#x5206;&#x5219;&#x4F1A;&#x5305;&#x62EC;&#x6240;&#x6709;&#x7684;&#x6CE8;&#x91CA;&#xFF08;&#x5305;&#x62EC; brief&#xFF09;&#x3002;</p>
+<p><img src="picture/fig_dox-9.png" alt=""></p>
+<h3 id="13-&#x51FD;&#x6570;&#x53C2;&#x6570;"><a name="13-&#x51FD;&#x6570;&#x53C2;&#x6570;" class="plugin-anchor" href="#13-&#x51FD;&#x6570;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x51FD;&#x6570;&#x53C2;&#x6570;</h3>
+<p>&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x5199;&#x7684;&#x51FD;&#x6570;&#x7ECF;&#x5E38;&#x4F1A;&#x88AB;&#x5F88;&#x591A;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x8005;&#x4F7F;&#x7528;&#x3002;&#x9664;&#x5BF9;&#x51FD;&#x6570;&#x6574;&#x4F53;&#x529F;&#x80FD;&#x7684;&#x63CF;&#x8FF0;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x542B;&#x4E49;&#x7684;&#x6CE8;&#x91CA;&#x4E5F;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002;Doxygen &#x652F;&#x6301;&#x4E24;&#x79CD;&#x7ED9;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x8F83;&#x4E3A;&#x6B63;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x6CE8;&#x91CA;&#x5757;&#x5185;&#x6DFB;&#x52A0; <code>@param</code> &#x6216; <code>\param</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*!
+ * \brief Rescales a Circle object.
+ *
+ * The radius of the given Circle object is multiplied by the given factor.
+ *
+ * @param [in,out] circ     Pointer to the Circle object to be rescaled.
+ * @param [in]     factor   Radius rescaling factor.
+ */</span>
+<span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rescale</span><span class="token punctuation">(</span>Circle<span class="token operator">*</span> circ<span class="token punctuation">,</span>
+                    <span class="token keyword">double</span> factor
+                   <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8F83;&#x4E3A;&#x8F7B;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x5728;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x91CC;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;&#xFF08;&#x52A0;&#x5728;&#x53C2;&#x6570;&#x540E;&#x6CE8;&#x610F;&#x8981;&#x4F7F;&#x7528; &apos;&lt;&apos; &#xFF09;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*!
+ * \brief Rescales a Circle object.
+ *
+ * The radius of the given Circle object is multiplied by the given factor.
+ */</span>
+<span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rescale</span><span class="token punctuation">(</span>Circle<span class="token operator">*</span> circ<span class="token punctuation">,</span> <span class="token comment">///&lt;[in,out] Pointer to the Circle object to be rescaled.</span>
+                    <span class="token keyword">double</span> factor <span class="token comment">///&lt;[in] Radius rescaling factor.</span>
+                   <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><code>[in]</code>, <code>[out]</code> &#x6216; <code>[in, out]</code> &#x53EF;&#x4EE5;&#x63D0;&#x793A;&#x8BE5;&#x53C2;&#x6570;&#x662F;&#x8F93;&#x5165;&#x8FD8;&#x662F;&#x8F93;&#x51FA;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x5E76;&#x975E; Doxygen &#x7684;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#xFF0C;&#x4F46;&#x5341;&#x5206;&#x63A8;&#x8350;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x53C2;&#x6570;&#x6CE8;&#x91CA;&#x65B9;&#x5F0F;&#x5BF9; Doxygen &#x800C;&#x8A00;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x6309;&#x4E60;&#x60EF;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x4F7F;&#x7528;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x51FD;&#x6570;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="picture/fig_dox-10.png" alt=""></p>
+<h3 id="14-&#x6570;&#x5B66;&#x516C;&#x5F0F;"><a name="14-&#x6570;&#x5B66;&#x516C;&#x5F0F;" class="plugin-anchor" href="#14-&#x6570;&#x5B66;&#x516C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 &#x6570;&#x5B66;&#x516C;&#x5F0F;</h3>
+<p>&#x6709;&#x65F6;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x4E25;&#x683C;&#x5BF9;&#x5E94;&#x4E86;&#x67D0;&#x4E2A;&#x516C;&#x5F0F;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x76F4;&#x63A5;&#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x4F5C;&#x4E3A;&#x6CE8;&#x91CA;&#x7684;&#x6548;&#x679C;&#x53EF;&#x80FD;&#x80DC;&#x8FC7;&#x5927;&#x6BB5;&#x7684;&#x6587;&#x5B57;&#x63CF;&#x8FF0;&#x3002;Doxygen &#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x8005;&#x4EE5; Latex &#x7684;&#x8BED;&#x6CD5;&#x5B9E;&#x73B0;&#x516C;&#x5F0F;&#x6CE8;&#x91CA;&#x3002;&#x5982;&#x6709;&#x5728;&#x6587;&#x5B57;&#x4E2D;&#x5D4C;&#x5165;&#x516C;&#x5F0F;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528; <code>\f$ ... \f$</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/// A constant that represents the value of \f$ \pi \f$.</span>
+    <span class="token keyword">static</span> <span class="token keyword">constexpr</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14159265358979324</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="picture/fig_dox-11.png" alt=""></p>
+<p><strong>&#x5355;&#x884C;</strong>&#x516C;&#x5F0F;&#x7531; <code>\f[ ... \f]</code> &#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*!
+ * @brief Returns the area of the current Circle object.
+ *
+ * The area of the a circle is given by
+ *
+ * \f[ S = \pi r^2 \f]
+ */</span>
+ <span class="token keyword">double</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="picture/fig_dox-12.png" alt=""></p>
+<p>&#x5982;&#x6709;&#x591A;&#x884C;&#x516C;&#x5F0F;&#x7684;&#x9700;&#x6C42;&#xFF0C;Doxygen &#x652F;&#x6301;&#x8C03;&#x7528; eqnarray &#x7B49; latex &#x6570;&#x5B66;&#x73AF;&#x5883;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*!
+ * @brief Returns the circumference of the current Circle object.
+ *
+ * The circumference of the a circle is given by
+ *
+ * \f{eqnarray*}{
+ *      L &amp;= \pi d \\
+ *        &amp;= 2 \pi r
+ * \f}
+ *
+ */</span>
+<span class="token keyword">double</span> <span class="token function">circumference</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+</code></pre>
+<p><img src="picture/fig_dox-13.png" alt=""></p>
+<p>&#x3010;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x91C7;&#x7528; &#x201C;USE_MATHJAX = YES&#x201D; &#x53EF;&#x4EE5;&#x8C03;&#x7528; mathjax &#x6E32;&#x67D3;&#x516C;&#x5F0F;&#x5F97;&#x5230;&#x66F4;&#x597D;&#x7684;&#x89C6;&#x89C9;&#x6548;&#x679C;&#x3011;</p>
+<h3 id="15-&#x5217;&#x8868;"><a name="15-&#x5217;&#x8868;" class="plugin-anchor" href="#15-&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 &#x5217;&#x8868;</h3>
+<p>Doxygen &#x8FD8;&#x6709;&#x5927;&#x91CF;&#x7528;&#x6CD5;&#x53EF;&#x4F9B;&#x7528;&#x6237;&#x751F;&#x6210;&#x7406;&#x60F3;&#x7684;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x5BF9;&#x9F50;&#x7684; &apos;-&apos;, &apos;+&apos; &#x6216; &apos;*&apos; &#x53EF;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5217;&#x8868; (bullet list)&#xFF1B;&apos;-#&apos;&#x5219;&#x53EF;&#x7528;&#x6765;&#x751F;&#x6210;&#x5E26;&#x5E8F;&#x53F7;&#x7684;&#x5217;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/**
+ * @brief A class that represents
+ *        a circle.
+ *
+ * This toy class will be used to demonstrate the usage of Doxygen
+ *
+ * List of functionalities:
+ * -# initialize a Circle object with a given radius
+ *   - a unit circle is assumed by default
+ * -# get the radius of the current Circle object
+ * -# get the area of the current Circle object
+ * -# get the circumference of the current Circle object
+ * -# rescale a Circle object by a factor
+ *
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Circle</span>                              <span class="token operator">*</span><span class="token operator">/</span>                                                <span class="token operator">*</span><span class="token operator">/</span>
+</code></pre>
+<p><img src="picture/fig_dox-14.png" alt=""></p>
+<h3 id="16-member-group--module"><a name="16-member-group--module" class="plugin-anchor" href="#16-member-group--module"><i class="fa fa-link" aria-hidden="true"></i></a>1.6 Member Group &amp; Module</h3>
+<p>&#x53D8;&#x91CF;&#x6216;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7531; <code>@{ ... ``@}</code> &#x5F52;&#x7C7B;&#x4E3A; member group &#x5E76;&#x9644;&#x4E0A;&#x76F8;&#x5E94;&#x6CE8;&#x91CA;&#xFF0C;&#x8FD9;&#x80FD;&#x4F7F;&#x6587;&#x6863;&#x66F4;&#x6709;&#x5C42;&#x6B21;&#x611F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">///@{ @name Properties</span>
+<span class="token comment">/// Functions that return the properties of the current Circle object.</span>
+
+<span class="token comment">/// Gets the radius of the current Circle object.</span>
+<span class="token keyword">double</span> <span class="token function">radius</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> r_<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/*!
+ * @brief Returns the area of the current Circle object.
+ *
+ * The area of the a circle is given by
+ *
+ * \f[ S = \pi r^2 \f]
+ */</span>
+<span class="token keyword">double</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*!
+ * @brief Returns the circumference of the current Circle object.
+ *
+ * The circumference of the a circle is given by
+ *
+ * \f{eqnarray*}{
+ *      L &amp;= \pi d \\
+ *        &amp;= 2 \pi r
+ * \f}
+ *
+ */</span>
+<span class="token keyword">double</span> <span class="token function">circumference</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+<span class="token comment">///@}</span>
+</code></pre>
+<p><img src="picture/fig_dox-15.png" alt=""></p>
+<p>&#x6709;&#x5171;&#x6027;&#x7684;&#x7C7B;&#x4E4B;&#x95F4;&#x4EA6;&#x53EF;&#x5F52;&#x7C7B;&#x7EC4;&#x6210; Modules:</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/// @defgroup shape Shape Module</span>
+<span class="token comment">/// @brief A module that contains various shape classes.</span>
+<span class="token comment">///</span>
+<span class="token comment">/// This module contains the following classes:</span>
+<span class="token comment">/// - Circle</span>
+<span class="token comment">/// - Rectangle</span>
+<span class="token comment">/// - Triangle</span>
+
+<span class="token comment">/// @addtogroup shape</span>
+<span class="token comment">/// @{</span>
+<span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token punctuation">{</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">///@}</span>
+
+<span class="token comment">/// @addtogroup shape</span>
+<span class="token comment">/// @{</span>
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">{</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">///@}</span>
+
+<span class="token comment">/// @addtogroup shape</span>
+<span class="token comment">/// @{</span>
+<span class="token keyword">class</span> <span class="token class-name">Triangle</span> <span class="token punctuation">{</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">///@}</span>
+</code></pre>
+<p><img src="picture/fig_dox-16.png" alt=""></p>
+<p>&#x66F4;&#x591A;&#x7528;&#x6CD5;&#x53EF;&#x53C2;&#x8003;&#x5B98;&#x65B9;&#x6587;&#x6863; <a href="https://www.doxygen.nl/manual/index.html" target="_blank">Doxygen Manual: Overview</a></p>
+<h2 id="2-&#x5982;&#x4F55;&#x751F;&#x6210;&#x6587;&#x6863;"><a name="2-&#x5982;&#x4F55;&#x751F;&#x6210;&#x6587;&#x6863;" class="plugin-anchor" href="#2-&#x5982;&#x4F55;&#x751F;&#x6210;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5982;&#x4F55;&#x751F;&#x6210;&#x6587;&#x6863;</h2>
+<p>&#x4E0A;&#x4E00;&#x8282;&#x4ECB;&#x7ECD;&#x4E86; Doxygen &#x652F;&#x6301;&#x7684;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x3002;&#x4EE5;&#x4E0B;&#x4EE5; Ubuntu &#x7528;&#x6237;&#x4E3A;&#x4F8B;&#x4ECB;&#x7ECD;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x672C;&#x5730;&#x751F;&#x6210; html &#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>1. &#x5B89;&#x88C5; doxygen &#x4E0E; graphviz</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> doxygen graphviz
+</code></pre>
+<p>2. &#x751F;&#x6210; Doxygen &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-bash">doxygen <span class="token parameter variable">-g</span>  <span class="token operator">&lt;</span>your_preferred_doxyfile_name<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x4E3A; Doxyfile&#x3002;</p>
+<p>3. &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x4ECB;&#x7ECD;&#x5404;&#x9009;&#x9879;&#x7684;&#x6CE8;&#x91CA;&#x3002;&#x5E38;&#x7528;&#x7684;&#x9009;&#x9879;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><code>INPUT</code>&#xFF1A;&#x7528;&#x4EE5;&#x751F;&#x6210;&#x6587;&#x6863;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x6216;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</li>
+<li><code>RECURSIVE</code>&#xFF1A;&#x662F;&#x5426;&#x904D;&#x5386;&#x7ED9;&#x5B9A;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x6587;&#x4EF6;&#x5939;</li>
+<li><code>EXCLUDE</code>&#xFF1A;&#x662F;&#x5426;&#x8981;&#x6392;&#x9664;&#x4E00;&#x4E9B;&#x5B50;&#x6587;&#x4EF6;&#x5939;&#x6216;&#x5B50;&#x6587;&#x4EF6;</li>
+<li><code>EXTRACT_PRIVATE</code>, <code>EXTRACT_STATIC</code>, <code>EXTRACT_PRIV_VIRTUAL</code>&#xFF1A;&#x6587;&#x6863;&#x662F;&#x5426;&#x8981;&#x5305;&#x62EC;&#x79C1;&#x6709;&#x6210;&#x5458;/&#x9759;&#x6001;&#x6210;&#x5458;/&#x79C1;&#x6709;&#x865A;&#x51FD;&#x6570;</li>
+<li><code>CALL_GRAPH</code>, <code>CALLER_GRAPH</code>: &#x6587;&#x6863;&#x662F;&#x5426;&#x8981;&#x5305;&#x542B;&#x51FD;&#x6570;&#x8C03;&#x7528;/&#x88AB;&#x8C03;&#x56FE;</li>
+<li><code>PREDEFINED</code>&#xFF1A;&#x9884;&#x7F16;&#x8BD1;&#x5B8F;</li>
+<li><code>MACRO_EXPANSION</code>&#xFF1A;&#x662F;&#x5426;&#x8981;&#x5C55;&#x5F00;&#x5B8F;&#x5B9A;&#x4E49;</li>
+<li><code>EXPAND_ONLY_PREDEF</code>&#xFF1A;&#x662F;&#x5426;&#x53EA;&#x5C55;&#x5F00; PREDEFINED &#x7684;&#x5B8F;&#x5B9A;&#x4E49;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x53EF;&#x4F9B;&#x53C2;&#x8003;&#x7684; Doxyfile &#x53EF;&#x89C1;&#x4E8E; <a href="https://dptechnology.feishu.cn/docs/doccnz21EL13dyZnJPug3v8N2pc" target="_blank">Doxygen &#x4F7F;&#x7528;</a> &#xFF08;&#x8D75;&#x5929;&#x7426;&#xFF09;</p>
+<p>&#x5B8C;&#x6574;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x53EF;&#x53C2;&#x8003;&#x5B98;&#x7F51; <a href="https://www.doxygen.nl/manual/config.html" target="_blank">Doxygen Manual: Configuration</a></p>
+<p>4. &#x8FD0;&#x884C; doxygen</p>
+<p>&#x5047;&#x8BBE;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EB; <code>my_doxyfile</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">doxygen my_doxyfile
+</code></pre>
+<h1 id="&#x9644;&#x5F55;&#xFF1A;doxygen-&#x4E0E;-vs-code"><a name="&#x9644;&#x5F55;&#xFF1A;doxygen-&#x4E0E;-vs-code" class="plugin-anchor" href="#&#x9644;&#x5F55;&#xFF1A;doxygen-&#x4E0E;-vs-code"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9644;&#x5F55;&#xFF1A;Doxygen &#x4E0E; VS Code</h1>
+<p>Visual Studio Code &#x4E0A;&#x6709; doxygen &#x63D2;&#x4EF6; <a href="https://marketplace.visualstudio.com/items?itemName=cschlosser.doxdocgen#generate-doxygen-comments-in-vs-code" target="_blank">Doxygen Documentation Generator - Visual Studio Marketplace</a> &#x53EF;&#x4F9B; VS Code &#x7528;&#x6237;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x3010;&#x6CE8;&#xFF1A;&#x524D;&#x6587;&#x4E2D;&#x6709;&#x63D0;&#x5230;&#x5BF9; doxygen &#x800C;&#x8A00;&#x4E09;&#x79CD;&#x57FA;&#x672C;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#x53EF;&#x4EE5;&#x6DF7;&#x7528;&#xFF1B;&#x6DF7;&#x7528;&#x7684;&#x6CE8;&#x91CA;&#x4F1A;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x8D77;&#x4F5C;&#x7528;&#x4E8E;&#x6CE8;&#x91CA;&#x540E;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x4E0E; VS Code &#x4E2D;&#x9F20;&#x6807;&#x60AC;&#x505C;&#x4E8E;&#x7C7B;&#x6216;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#x51FA;&#x73B0;&#x7684;&#x9884;&#x89C8;&#x7A97;&#x53E3;&#x4E0D;&#x517C;&#x5BB9;&#xFF1B;&#x5982;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#x6DF7;&#x7528;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x524D;&#x4E00;&#x79CD;&#x683C;&#x5F0F;&#x7684;&#x6CE8;&#x91CA;&#x88AB;&#x5FFD;&#x7565;&#x3011;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-path3.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to ABACUS: Path to PW calculation - Part 3">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-news.html" class="navigation navigation-next " aria-label="Next page: ABACUS 新闻稿整理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS 注释规范：Doxygen 入门 (c++)","level":"1.2.5","depth":2,"next":{"title":"ABACUS 新闻稿整理","level":"1.3","depth":1,"path":"abacus-news.md","ref":"abacus-news.md","articles":[]},"previous":{"title":"Introduction to ABACUS: Path to PW calculation - Part 3","level":"1.2.4","depth":2,"path":"develop-path3.md","ref":"develop-path3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","3-ba","pageview-count","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"pageview-count":{},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-dox.md","mtime":"2023-09-15T11:30:43.169Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-15T11:30:53.425Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
