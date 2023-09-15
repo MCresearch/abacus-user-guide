@@ -2,6 +2,7 @@
     "name": "abacus-user-guide",
     "description": "国产DFT开源软件ABACUS中文使用教程",
     "plugins": [
+        "splitter",
         "disqus",
         "3-ba",
         "pageview-count",

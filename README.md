@@ -79,7 +79,7 @@ ABACUS 网站访问：
 # 四、开发者文档
 
 1. [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
-2. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
-3. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
-4. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
-5. [ABACUS 注释规范：Doxygen 入门 (c++)](develop-dox.md)
+2. [ABACUS 注释规范：Doxygen 入门 (c++)](develop-dox.md)
+3. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
+4. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
+5. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
