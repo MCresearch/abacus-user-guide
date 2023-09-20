@@ -245,35 +245,15 @@ sh PATH_TO_ONCVPSP/scripts/run.sh Al
 
 可以画出如下的图：
 
-![](picture/fig_upf-1.png)
+![局域势函数与非局域势不同轨道角动量对应的半局域径向势函数](picture/fig_upf-1.png)
 
-```
-图1. 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数
-```
+![S赝波函数与全电子波函数对比](picture/fig_upf-2.png)
 
-![](picture/fig_upf-2.png)
+![S的双投影波函数](picture/fig_upf-3.png)
 
-```
-图2. S赝波函数与全电子波函数对比
-```
+![不同能级波函数在截断半径处log导数对比，其影响散射性质的计算](picture/fig_upf-4.png)
 
-![](picture/fig_upf-3.png)
-
-```
-图3. S的双投影波函数
-```
-
-![](picture/fig_upf-4.png)
-
-```
-图4. 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算
-```
-
-![](picture/fig_upf-5.png)
-
-```
-图5. 不同轨道角动量对应的截断能
-```
+![不同轨道角动量对应的截断能](picture/fig_upf-5.png)
 
 ### 1.5 优化赝势
 

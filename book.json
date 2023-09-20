@@ -2,6 +2,7 @@
     "name": "abacus-user-guide",
     "description": "国产DFT开源软件ABACUS中文使用教程",
     "plugins": [
+        "image-captions",
         "splitter",
         "disqus",
         "3-ba",
@@ -33,6 +34,9 @@
     ],
 
     "pluginsConfig": {
+        "image-captions": {
+          "caption": "图 _PAGE_IMAGE_NUMBER_. _CAPTION_"
+        },
         "disqus": {
             "shortName": "abacus-user-guide"
         },
