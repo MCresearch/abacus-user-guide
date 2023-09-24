@@ -30,11 +30,15 @@ ABACUS 网站访问：
 
 1. ABACUS的编译介绍
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
-   2. [知乎上用户提供的ABACUS 3.0安装教程](https://zhuanlan.zhihu.com/p/574031713)
-   3. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://xmywuqhxb0.feishu.cn/docx/JCv0dHPP6o69JdxtG33cIcTnnke)<mark style="color:red;"></mark>
-   4. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+   2. [GCC 编译 ABACUS 教程](abacus-gcc.md)
+   3. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
+   4. [知乎上用户提供的ABACUS 3.0安装教程](https://zhuanlan.zhihu.com/p/574031713)
+   5. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://xmywuqhxb0.feishu.cn/docx/JCv0dHPP6o69JdxtG33cIcTnnke)<mark style="color:red;"></mark>
+   6. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
 2. ABACUS建模介绍
-   1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
+   1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
+   
+   <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
    2. 准备赝势：
    [模守恒赝势生成方法简介](abacus-upf.md)
    3. 数值原子轨道基组生成教程：
@@ -54,7 +58,7 @@ ABACUS 网站访问：
 8. 采用ABACUS进行表面计算
    1. [偶极修正](abacus-surface2.md)
    2. [外加电场](abacus-surface5.md)
-9. 分析结果
+9.  分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://xmywuqhxb0.feishu.cn/docx/K8GRdTst4oXQNoxnQVbcFZTmntb)<mark style="color:red;"></mark>
       2. [用ABACUS-ASE自动产生能带路径](https://nb.bohrium.dp.tech/detail/1211642609)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/1211642609" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" alt="Open In Bohrium"/></a>
