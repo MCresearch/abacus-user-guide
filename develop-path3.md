@@ -637,3 +637,5 @@ GlobalV::NLOCAL = 0;
 # 系列链接
 
 上篇：[Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
+
+下篇：[Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)

@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------- | ---------- |
+| 当Hackathon遇上ABACUS \ ABACUS@Hackathon作品合集大揭秘                | [网页链接](https://mp.weixin.qq.com/s/3NfQWkQ3PIjT9H4tZKU1-w) | 2023/09/24 |
 | DP+ABACUS还能干这个：钙钛矿氧化物通用力场UniPero                       | [网页链接](https://mp.weixin.qq.com/s/ua0e4zO2t3kjTjVbNPee2Q) | 2023/09/16 |
 | ABACUS新进展：基于数值原子轨道基的meta-GGA密度泛函的实现                | [网页链接](https://mp.weixin.qq.com/s/HnUmeDosiT74u055DNFfZw) | 2023/09/06 |
 | ABACUS开发者大会 \ 聚焦国产密度泛函理论开源软件的进步与挑战              | [网页链接](https://mp.weixin.qq.com/s/EX5WcKtVucRbY8DIvj3PyQ) | 2023/08/01 |
