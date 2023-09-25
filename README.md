@@ -30,10 +30,12 @@ ABACUS 网站访问：
 
 1. ABACUS的编译介绍
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
-   2. [GCC 编译 ABACUS 教程](abacus-gcc.md)
-   3. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
-   4. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://xmywuqhxb0.feishu.cn/docx/JCv0dHPP6o69JdxtG33cIcTnnke)<mark style="color:red;"></mark>
-   5. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+   2. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
+   3. [GCC 编译 ABACUS 教程](abacus-gcc.md)
+   4. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
+   5. [知乎上用户提供的ABACUS 3.0安装教程](https://zhuanlan.zhihu.com/p/574031713)
+   6. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://xmywuqhxb0.feishu.cn/docx/JCv0dHPP6o69JdxtG33cIcTnnke)<mark style="color:red;"></mark>
+   7. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
    <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
@@ -73,7 +75,8 @@ ABACUS 网站访问：
     8. [ABACUS+USPEX 接口教程](abacus-uspex.md)
     9. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
     10. ABACUS+CINEB教程（缺）
-        1.  [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
+        1. [ASE-NEB-ABACUS工作流与算例（持续完善中）](https://github.com/QuantumMisaka/ase-neb-abacus)
+        2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
 # 三、使用经验
 
