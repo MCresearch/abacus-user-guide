@@ -3,6 +3,7 @@
 * [ABACUS 使用教程](README.md)
     * [GCC 编译 ABACUS 教程](abacus-gcc.md)
     * [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
+    * [在超算环境编译 ABACUS 的建议](abacus-hcp.md)
     * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
     * [模守恒赝势生成方法简介](abacus-upf.md)
     * [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
