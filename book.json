@@ -26,7 +26,8 @@
       "mathjax-pro",
 
       "hide-element",
-      "mygitalk",
+      "tbfed-pagefooter",
+      "disqus",
 
       "github-buttons",
       "sharing-plus",
@@ -39,15 +40,9 @@
         "modify_label": "该文章修订时间：",
         "modify_format": "YYYY-MM-DD HH:mm:ss"
       },
-      "mygitalk": { 
-        "clientID": "Iv1.3cd06cb6e43b5a6e", 
-        "clientSecret": "f5bcf6c93b7b0ab04be4932d98f43ff360f44e84", 
-        "repo": "abacus-user-guide", 
-        "owner": "mcresearch", 
-        "admin": ["haozhihan", "Chentao168"], 
-        "distractionFreeMode": false 
+      "disqus": {
+        "shortName": "abacus-user-guide"
       },
-
       "image-captions": {
         "caption": "图 _PAGE_IMAGE_NUMBER_. _CAPTION_"
       },

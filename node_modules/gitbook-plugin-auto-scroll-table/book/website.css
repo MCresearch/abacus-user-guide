@@ -16,11 +16,11 @@ table td {
 table th {
     font-weight: bold; /*加粗*/
     text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
-    background: rgba(33, 22, 184, 0.886); /*背景色*/
+    background: rgba(158,188,226,0.2); /*背景色*/
 }
 
 table tbody tr:nth-child(2n) {
-    background: rgba(19, 54, 168, 0.831); 
+    background: rgba(158,188,226,0.12); 
 }
 
 table tr:hover {
