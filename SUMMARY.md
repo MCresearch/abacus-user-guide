@@ -29,6 +29,8 @@
   * [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
   * [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
   * [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
-
+  * [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
+  * [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
+  * [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
 * [ABACUS 新闻稿整理](abacus-news.md)
 * [如何贡献 ABACUS 使用教程](abacus-contribute.md)

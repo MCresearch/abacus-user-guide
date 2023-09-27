@@ -92,3 +92,6 @@ ABACUS 网站访问：
 6. [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
 7. [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
 8. [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
+9. [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
+10. [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
+11. [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
