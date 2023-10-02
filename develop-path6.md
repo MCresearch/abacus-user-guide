@@ -4,6 +4,8 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
+<strong>飞书链接：[Introduction to ABACUS: Path to PW calculation - Part 6](https://xmywuqhxb0.feishu.cn/docx/X1GJdEPFPosd90xJhLuc26kYnid)</strong>
+
 > 📃<strong>写在前面</strong>
 >
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
@@ -175,8 +177,8 @@ template<typename FPTYPE, typename Device>
 | `this->nks`                                                                   | `ESolver_FP::K_Vectors::nks`                                                               | 当前 processor 所分得 k 点数量 |
 | `this->kvec_c`                                                                | `ESolver_FP::K_Vectors::kvec_c`                                                            | 采样的 k 点的 Cartesian 坐标   |
 | `this->kvec_d`                                                                | `ESolver_FP::K_Vectors::kvec_d`                                                            | 采样的 k 点的 Direct 坐标      |
-| `this->gk_ecut`                                                               | $$(\sqrt{\text{this->ggecut}}-                                                             | \mathbf{k}                     |
-| `this->ggecut`                                                                | $$\min(\text{Input::ecutrho},(\sqrt{\text{Input::ecutwfc}}+                                | \mathbf{k}                     |
+| `this->gk_ecut`                                                               | $$(\sqrt{\text{this->ggecut}}-|\mathbf{k}|)^2$$                                                                | min((sqrt(Input::ecutrho)-\k\max)^2, Input::ecutwfc) |
+| `this->ggecut`                                                                | $$\min(\text{Input::ecutrho},(\sqrt{\text{Input::ecutwfc}}+|\mathbf{k}|)^2)$$ | 由Input::ecutrho决定nx/ny/nz决定this->gridecut_lat，以及直接的Input::ecutwfc叠加k点后的最大平面波能量，两者其中小值         |
 | `this->gamma_only`                                                            | `false`                                                                                    | 仅 gamma 点                    |
 | `this->xprime`                                                                | `true`                                                                                     | 是否 x 优先 FFT 变换           |
 | `this->fftnx`, `this->fftny`, `this->fftnz`, `this->fftnxy`, `this->fftnxyz`, | `this->nx`, `this->ny`, `this->nz`, `this->fftnx*this->fftny`, `this->fftnz*this->fftnxy`, | 倒空间格点数量                 |
@@ -697,6 +699,71 @@ template<typename FPTYPE, typename Device>
         CE.Init_CE(GlobalC::ucell.nat);
     }
 ```
+###### 基本原理
+
+在分子动力学（Molecular dynamics, MD）模拟，或 Born-Oppenheimer MD（BOMD）过程中，由于每步进行完整 SCF 成本较高，使用一定的电荷外推方法，用于构造 Hamiltonian 算符可以节约大部分时间。原本的电荷外推方法原理为：
+
+$$
+\rho \left( t+\Delta t \right) =\rho \left( t \right) +\alpha \left[ \rho \left( t \right) -\rho \left( t-\Delta t \right) \right] +\beta \left[ \rho \left( t-\Delta t \right) -\rho \left( t-2\Delta t \right) \right] 
+$$
+
+波函数其实也按照此方法进行外推，但需要注意波函数能级在 MD 过程中两步间可能发生交换，因此需要额外保证最小化$$\min\sum_{\text{n}\mathbf{k}}||\Psi _{\mathrm{n}\mathbf{k}}\left( t \right) -\Psi _{\mathrm{n}\mathbf{k}}\left( t-\Delta t \right) ||$$。
+
+$$\alpha$$和$$\beta$$的确定方法为使得$$\sum_i^N{||\mathbf{r}_{i}^{\prime}-\mathbf{r}_i\left( t+dt \right) ||^2}$$最小化，其中
+
+$$
+\mathbf{r}_{i}^{\prime}\equiv \mathbf{r}_i\left( t \right) +\alpha \left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t-\Delta t \right) \right] +\beta \left[ \mathbf{r}_i\left( t-\Delta t \right) -\mathbf{r}_i\left( t-2\Delta t \right) \right] 
+$$
+
+。由此可有：
+
+$$
+\alpha =\frac{b_1a_{22}-b_2a_{12}}{\det A}, \beta =\frac{b_2a_{11}-b_2a_{21}}{\det A}
+$$
+
+A 矩阵的矩阵元$$a_{ij}$$定义为：
+
+$$
+\begin{cases}
+        a_{11}=\sum_i^N{|\mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t-\Delta t \right) |^2}\\
+        a_{12}=a_{21}=\sum_i^N{\left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t-\Delta t \right) \right] \cdot \left[ \mathbf{r}_i\left( t-\Delta t \right) -\mathbf{r}_i\left( t-2\Delta t \right) \right]}\\
+        a_{22}=\sum_i^N{|\mathbf{r}_i\left( t-\Delta t \right) -\mathbf{r}_i\left( t-2\Delta t \right) |^2}\\
+\end{cases}
+$$
+
+B 矢量的定义为：
+
+$$
+\begin{cases}
+        b_1=-\sum_i^N{\left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t+\Delta t \right) \right] \cdot \left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t-\Delta t \right) \right]}\\
+        b_2=-\sum_i^N{\left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t+\Delta t \right) \right] \cdot \left[ \mathbf{r}_i\left( t \right) -\mathbf{r}_i\left( t-2\Delta t \right) \right]}\\
+\end{cases}
+$$
+
+。1999 年，Dario Alfe 提出了新的电荷外推方式，将电荷分割为原子贡献部分和 delta 项：
+
+$$
+\rho \left( t \right) =\rho _{\mathrm{at}}\left( t \right) +\delta \rho \left( t \right) 
+$$
+
+。采用相同的外推模式，但只外推$$\delta\rho(t)$$，$$\rho_\text{at}(t+\Delta t)$$的值可以迅速在实空间求得：
+
+$$
+\delta \rho \left( t+\Delta t \right) =\delta \rho \left( t \right) +\alpha \left[ \delta \rho \left( t \right) -\delta \rho \left( t-\Delta t \right) \right] +\beta \left[ \delta \rho \left( t-\Delta t \right) -\delta \rho \left( t-2\Delta t \right) \right] 
+$$
+
+，
+
+$$
+\rho \left( t+\Delta t \right) =\rho _{\mathrm{at}}\left( t+\Delta t \right) +\delta \rho \left( t+\Delta t \right) 
+$$
+
+。另一种实现 BOMD 的方法为 CPMD，即通过给予电子相较于离子极小的质量，导致电子和离子的振动耦合尽可能小，从而使用经典的 MD 方法可以进行 BOMD。但由于计算机算力的更新迭代与应用场景更高的精度要求，目前 CPMD 已经逐渐退出历史舞台。
+
+> 🤔<strong>思考时间</strong>
+> 电荷外推的“旧”方法和 D. Alfe 提出的新方法根本区别在哪里？从物理图像层面考虑看看！
+
+###### 代码细节
 
 ```cpp
 void Charge_Extra::Init_CE(const int& natom)
@@ -720,7 +787,7 @@ void Charge_Extra::Init_CE(const int& natom)
 }
 ```
 
-关于 `GlobalV::chg_extrap`：
+关于该类的其他函数请自行阅读。关于 `GlobalV::chg_extrap`：
 
 ```cpp
 //input_conv.cpp

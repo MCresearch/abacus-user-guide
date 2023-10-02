@@ -1,8 +1,10 @@
 # Introduction to ABACUS: Path to PW calculation - Summary 1
 
-<strong>作者：黄一珂，金祖鑫，邮箱：huangyk@aisi.ac.cn，jinzx@aisi.ac.cn</strong>
+<strong>作者：黄一珂，邮箱：huangyk@aisi.ac.cn；金祖鑫，邮箱：jinzx@aisi.ac.cn</strong>
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+
+<strong>飞书链接：[Introduction to ABACUS: Path to PW calculation - Summary 1](https://xmywuqhxb0.feishu.cn/docx/HIEudrn2foKcCOxagiKcev6Dnmb)</strong>
 
 > 🏮<strong>写在前面</strong>
 > 经过 Introduction to ABACUS: Path to PW calculation 的 Part1 到 5，我们已经阅读过上百行程序。在继续之前，有必要将已经解读过的内容再次就重点进行回顾，并凝练和一定程度的抽象。牢记本系列内容组织的两原则：

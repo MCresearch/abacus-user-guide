@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/09/14</strong>
+<strong>飞书链接：[Introduction to ABACUS: Path to PW calculation - Part 1](https://xmywuqhxb0.feishu.cn/docx/XBX6dMphfozMCWx7u8ucUEFOnze)</strong>
 
 > 💡<strong>写在前面</strong>
 > 作为 SIAB（Systematically Improvable Atomic orbital Basis, [link](https://mcresearch.gitee.io/abacus-user-guide/abacus-nac2.html)）数值原子轨道生成程序的数据上游，本系列文档将首先从平面波基组/SCF（Self-Consistent Field，即自洽场迭代）讲起，将《从 SIAB 到 ABACUS》的讲述延续下去，之后再探索 SIAB 的下游，即涉及 NAOs 的 LCAO method（basis_type = 'lcao'）。

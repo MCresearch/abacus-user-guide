@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/09/15</strong>
+<strong>飞书链接：[Introduction to ABACUS: Path to PW calculation - Part 3](https://xmywuqhxb0.feishu.cn/docx/LUFZdHVQxoWhsRxytfhcWWDYnib)</strong>
 
 > 📃<strong>写在前面</strong>
 >

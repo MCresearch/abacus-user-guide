@@ -4,6 +4,8 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
+<strong>飞书链接：[Introduction to ABACUS: Path to PW calculation - Part 4](https://xmywuqhxb0.feishu.cn/docx/MqlKdaEPdoiShZxrs7ncsIuznMP)</strong>
+
 > 📃<strong>写在前面</strong>
 >
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
