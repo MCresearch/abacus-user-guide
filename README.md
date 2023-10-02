@@ -52,7 +52,7 @@ ABACUS 网站访问：
    4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    5. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 4. DeePKS方法（缺）
-5. 隐式溶剂计算等相关功能（缺）
+5. [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
 6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 8. 采用ABACUS进行表面计算
@@ -75,8 +75,9 @@ ABACUS 网站访问：
     6. [ABACUS+Candela 使用教程](abacus-candela.md)<a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     7. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     8. [ABACUS+USPEX 接口教程](abacus-uspex.md)
-    9. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
-    10. ABACUS+CINEB教程（缺）
+    9. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
+    10. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+    11. ABACUS+CINEB教程（缺）
         1. [ASE-NEB-ABACUS工作流与算例（持续完善中）](https://github.com/QuantumMisaka/ase-neb-abacus)
         2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
@@ -88,12 +89,13 @@ ABACUS 网站访问：
 
 1. [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
 2. [ABACUS 注释规范：Doxygen 入门 (c++)](develop-dox.md)
-3. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
-4. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
-5. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
-6. [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
-7. [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
-8. [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
-9. [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
-10. [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
-11. [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
+3. [ABACUS 的 Github 仓库 Issues 处理流程](develop-issue.md)
+4. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
+5. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
+6. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
+7. [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
+8. [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
+9. [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
+10. [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
+11. [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
+12. [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
