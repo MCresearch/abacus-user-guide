@@ -1,0 +1,961 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS 的 Github 仓库 Issues 处理流程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="develop-path1.html" />
+    
+    
+    <link rel="prev" href="develop-dox.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS 使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-hcp.html">
+            
+                <a href="abacus-hcp.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="abacus-news.html">
+            
+                <a href="abacus-news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="abacus-contribute.html">
+            
+                <a href="abacus-contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS 的 Github 仓库 Issues 处理流程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x7684;-github-&#x4ED3;&#x5E93;-issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;"><a name="abacus-&#x7684;-github-&#x4ED3;&#x5E93;-issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#abacus-&#x7684;-github-&#x4ED3;&#x5E93;-issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x7684; Github &#x4ED3;&#x5E93; Issues &#x5904;&#x7406;&#x6D41;&#x7A0B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x8D75;&#x5929;&#x7426;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;zhaotq@aisi.ac.cnmailto:zhaotq@aisi.ac.cn&#xFF1B;</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cnmailto:mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2023/10/01</strong></p>
+<h1 id="&#x4E00;&#x3001;github-&#x7684;-issues-&#x673A;&#x5236;"><a name="&#x4E00;&#x3001;github-&#x7684;-issues-&#x673A;&#x5236;" class="plugin-anchor" href="#&#x4E00;&#x3001;github-&#x7684;-issues-&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;Github &#x7684; Issues &#x673A;&#x5236;</h1>
+<h2 id="1-&#x7B80;&#x4ECB;-github-&#x7684;-issues"><a name="1-&#x7B80;&#x4ECB;-github-&#x7684;-issues" class="plugin-anchor" href="#1-&#x7B80;&#x4ECB;-github-&#x7684;-issues"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B80;&#x4ECB; Github &#x7684; Issues</h2>
+<p>GitHub &#x4E0A;&#x7684; Issues &#x673A;&#x5236;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8DDF;&#x8E2A;&#x548C;&#x8BA8;&#x8BBA;&#x9879;&#x76EE;&#x76F8;&#x5173;&#x95EE;&#x9898;&#x3001;&#x9700;&#x6C42;&#x3001;&#x4EFB;&#x52A1;&#x548C;&#x6539;&#x8FDB;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5B83;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x96C6;&#x4E2D;&#x5F0F;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x4F7F;&#x5F97;&#x9879;&#x76EE;&#x7684;&#x53C2;&#x4E0E;&#x8005;&#x4EEC;&#x80FD;&#x591F;&#x8DDF;&#x8E2A;&#x9879;&#x76EE;&#x8FDB;&#x5C55;&#x3001;&#x62A5;&#x544A;&#x9519;&#x8BEF;&#x3001;&#x63D0;&#x51FA;&#x65B0;&#x529F;&#x80FD;&#x3001;&#x8BA8;&#x8BBA;&#x6539;&#x8FDB;&#x65B9;&#x5411;&#x7B49;&#x3002;</p>
+<h2 id="2-issues-&#x5BF9;-abacus-&#x8F6F;&#x4EF6;&#x7684;&#x4F5C;&#x7528;"><a name="2-issues-&#x5BF9;-abacus-&#x8F6F;&#x4EF6;&#x7684;&#x4F5C;&#x7528;" class="plugin-anchor" href="#2-issues-&#x5BF9;-abacus-&#x8F6F;&#x4EF6;&#x7684;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>2. Issues &#x5BF9; ABACUS &#x8F6F;&#x4EF6;&#x7684;&#x4F5C;&#x7528;</h2>
+<p>ABACUS&#xFF08;&#x539F;&#x5B50;&#x7B97;&#x7B79;&#xFF09;&#x662F;&#x4E00;&#x6B3E;&#x56FD;&#x4EA7;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF08;Density Functional Theory&#xFF0C;&#x7B80;&#x79F0; DFT&#xFF09;&#x8F6F;&#x4EF6;&#xFF0C;&#x5176;&#x6D89;&#x53CA;&#x5230;&#x7684;&#x529F;&#x80FD;&#x7E41;&#x591A;&#xFF0C;&#x4EC5; 2023 &#x5E74;&#x4E0A;&#x534A;&#x5E74;&#x7EDF;&#x8BA1;&#x5230;&#x7684;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x5C31;&#x6709;&#x4E09;&#x767E;&#x591A;&#x4E2A;&#xFF0C;&#x5E94;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x4E5F;&#x5F88;&#x5E7F;&#xFF0C;&#x5728;&#x6750;&#x6599;&#x3001;&#x7269;&#x7406;&#x3001;&#x5316;&#x5B66;&#x3001;&#x80FD;&#x6E90;&#x548C;&#x5DE5;&#x7A0B;&#x7B49;&#x591A;&#x4E2A;&#x9886;&#x57DF;&#x90FD;&#x6709;&#x5E94;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898;&#x662F;&#x5F00;&#x53D1;&#x8005;&#x5F00;&#x53D1;&#x51FA;&#x7684;&#x529F;&#x80FD;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x5E94;&#x7528;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x6B64;&#x8F6F;&#x4EF6;&#x5728;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x573A;&#x5408;&#x51FA;&#x73B0;&#x6548;&#x7387;&#x4E0D;&#x9AD8;&#x751A;&#x81F3;&#x67D0;&#x4E2A;&#x529F;&#x80FD;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#x7684;&#x60C5;&#x51B5;&#x662F;&#x65F6;&#x6709;&#x53D1;&#x751F;&#x7684;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x65B9;&#x9762;&#xFF0C;ABACUS &#x9879;&#x76EE;&#x53C2;&#x4E0E;&#x7684;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5E7F;&#x6CDB;&#xFF0C;&#x4E0D;&#x540C;&#x5F00;&#x53D1;&#x8005;&#x5BF9;&#x540C;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5BB9;&#x6613;&#x5F15;&#x53D1;&#x65B0;&#x7684; bug&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x826F;&#x597D;&#x7684;&#x7528;&#x6237;&#x548C;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4E43;&#x81F3;&#x5F00;&#x53D1;&#x8005;&#x4E4B;&#x95F4;&#x4E92;&#x52A8;&#x4EA4;&#x6D41;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x5BF9;&#x4E8E;&#x53D1;&#x73B0;&#x8F6F;&#x4EF6;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x65AD;&#x6539;&#x5584;&#x8F6F;&#x4EF6;&#x8D28;&#x91CF;&#x548C;&#x63D0;&#x9AD8;&#x7A33;&#x5B9A;&#x6027;&#x6613;&#x7528;&#x6027;&#x65B9;&#x9762;&#x5177;&#x6709;&#x91CD;&#x8981;&#x4F5C;&#x7528;&#x3002;Github &#x4E0A;&#x7684; Issues &#x673A;&#x5236;&#x5219;&#x627F;&#x62C5;&#x8D77;&#x4E86;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5C06; Issues &#x673A;&#x5236;&#x5EFA;&#x7ACB;&#x597D;&#x662F;&#x4E0D;&#x65AD;&#x63D0;&#x5347; ABACUS &#x8F6F;&#x4EF6;&#xFF0C;&#x4F7F;&#x5176;&#x5FEB;&#x901F;&#x8FED;&#x4EE3;&#x7684;&#x91CD;&#x8981;&#x63AA;&#x65BD;&#x3002;</p>
+<h2 id="3-issues-&#x529F;&#x80FD;&#x4ECB;&#x7ECD;"><a name="3-issues-&#x529F;&#x80FD;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#3-issues-&#x529F;&#x80FD;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>3. Issues &#x529F;&#x80FD;&#x4ECB;&#x7ECD;</h2>
+<ul>
+<li><strong>&#x521B;&#x5EFA; Issue&#xFF1A;</strong>&#x9879;&#x76EE;&#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x4E0E;&#x8005;&#x90FD;&#x53EF;&#x4EE5;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; Issue&#x3002;&#x521B;&#x5EFA; Issue &#x65F6;&#xFF0C;&#x9700;&#x8981;&#x586B;&#x5199;&#x6807;&#x9898;&#x3001;&#x63CF;&#x8FF0;&#xFF08;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Markdown &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5316;&#x63CF;&#x8FF0;&#x5185;&#x5BB9;&#xFF09;&#x3001;&#x5206;&#x914D;&#x5904;&#x7406;&#x4EBA;&#xFF08;Assignees&#xFF0C;&#x53EF;&#x9009;&#xFF09;&#x3001;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#x6807;&#x7B7E;&#xFF08;Labels&#xFF0C;&#x53EF;&#x9009;&#xFF09;&#x3001;&#x5173;&#x8054;&#x9879;&#x76EE;&#x770B;&#x677F;&#xFF08;Projects&#xFF0C;&#x53EF;&#x9009;&#xFF09;&#x548C;&#x8BBE;&#x7F6E;&#x91CC;&#x7A0B;&#x7891;&#xFF08;Milestones&#xFF0C;&#x53EF;&#x9009;&#xFF09;&#x3002;</li>
+<li><strong>&#x6807;&#x7B7E;&#xFF08;Labels&#xFF09;&#xFF1A;</strong>&#x6807;&#x7B7E;&#x662F;&#x7528;&#x6765;&#x5BF9; Issues &#x8FDB;&#x884C;&#x5206;&#x7C7B;&#x548C;&#x8FC7;&#x6EE4;&#x7684;&#x3002;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x8005;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;bug&#x3001;feature&#x3001;documentation&#x3001;enhancement &#x7B49;&#x3002;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x7EC4;&#x7EC7;&#x548C;&#x4F18;&#x5148;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+<li><strong>&#x91CC;&#x7A0B;&#x7891;&#xFF08;Milestones&#xFF09;&#xFF1A;</strong>&#x91CC;&#x7A0B;&#x7891;&#x7528;&#x4E8E;&#x5BF9; Issues &#x8FDB;&#x884C;&#x5206;&#x9636;&#x6BB5;&#x7BA1;&#x7406;&#x548C;&#x89C4;&#x5212;&#x3002;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x8005;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x91CC;&#x7A0B;&#x7891;&#x5E76;&#x4E3A;&#x5176;&#x5206;&#x914D;&#x622A;&#x6B62;&#x65E5;&#x671F;&#xFF0C;&#x8FD9;&#x6837;&#x6709;&#x52A9;&#x4E8E;&#x6309;&#x7167;&#x8BA1;&#x5212;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x3002;</li>
+<li><strong>&#x6307;&#x6D3E;&#xFF08;Assignees&#xFF09;&#xFF1A;</strong>&#x5728; Issue &#x4E0A;&#x6307;&#x6D3E;&#x5904;&#x7406;&#x4EBA;&#x610F;&#x5473;&#x7740;&#x5C06;&#x8BE5; Issue &#x7684;&#x8D1F;&#x8D23;&#x4EBA;&#x5206;&#x914D;&#x7ED9;&#x7279;&#x5B9A;&#x7684;&#x9879;&#x76EE;&#x53C2;&#x4E0E;&#x8005;&#x3002;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x6E05;&#x695A;&#x5730;&#x4E86;&#x89E3;&#x8C01;&#x8D1F;&#x8D23;&#x89E3;&#x51B3;&#x67D0;&#x4E2A;&#x95EE;&#x9898;&#x3002;</li>
+<li><strong>&#x8BC4;&#x8BBA;&#x548C;&#x8BA8;&#x8BBA;&#xFF1A;</strong>&#x9879;&#x76EE;&#x7684;&#x53C2;&#x4E0E;&#x8005;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; Issue &#x4E0B;&#x9762;&#x53D1;&#x8868;&#x8BC4;&#x8BBA;&#xFF0C;&#x8FDB;&#x884C;&#x8BA8;&#x8BBA;&#x3002;&#x8BC4;&#x8BBA;&#x652F;&#x6301; Markdown &#x8BED;&#x6CD5;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x63D2;&#x5165;&#x4EE3;&#x7801;&#x3001;&#x56FE;&#x7247;&#x548C;&#x94FE;&#x63A5;&#x7B49;&#x3002;</li>
+<li><strong>&#x5F15;&#x7528;&#x548C;&#x5173;&#x8054; Issue&#xFF1A;</strong>&#x5728;&#x8BC4;&#x8BBA;&#x548C;&#x63D0;&#x4EA4;&#xFF08;Commit&#xFF09;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x7C7B;&#x4F3C; <code>#issue&#x7F16;&#x53F7;</code> &#x7684;&#x683C;&#x5F0F;&#x5F15;&#x7528;&#x5176;&#x4ED6; Issue&#xFF0C;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x5C06;&#x8BA8;&#x8BBA;&#x4E32;&#x8054;&#x8D77;&#x6765;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;&#xFF08;&#x5982;&#xFF1A;close&#x3001;fix&#x3001;resolve &#x7B49;&#xFF09;&#x5728;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x4E2D;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x76F8;&#x5173; Issue&#x3002;</li>
+<li><strong>&#x901A;&#x77E5;&#x548C;&#x8BA2;&#x9605;&#xFF1A;</strong>&#x5F53;&#x60A8;&#x53C2;&#x4E0E;&#x67D0;&#x4E2A; Issue &#x65F6;&#xFF08;&#x5982;&#x521B;&#x5EFA;&#x3001;&#x8BC4;&#x8BBA;&#x6216;&#x88AB;&#x6307;&#x6D3E;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x53CA;&#x65F6;&#x6536;&#x5230;&#x56DE;&#x590D;&#xFF0C;&#x5EFA;&#x8BAE;&#x60A8;&#x5173;&#x6CE8;&#x662F;&#x5426;&#x4F1A;&#x6536;&#x5230;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#xFF08;&#x5173;&#x6CE8;&#x4E00;&#x4E0B; Github &#x7684;&#x529F;&#x80FD;&#xFF09;</li>
+<li><strong>&#x5173;&#x95ED;&#x548C;&#x91CD;&#x5F00; Issue&#xFF1A;</strong>&#x5F53;&#x67D0;&#x4E2A;&#x95EE;&#x9898;&#x88AB;&#x89E3;&#x51B3;&#x6216;&#x8005;&#x4E0D;&#x518D;&#x9002;&#x7528;&#x65F6;&#xFF0C;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x8005;&#x6216; Issue &#x521B;&#x5EFA;&#x8005;&#x53EF;&#x4EE5;&#x5173;&#x95ED; Issue&#x3002;&#x5982;&#x679C;&#x540E;&#x7EED;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x6216;&#x8005;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BA8;&#x8BBA;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x6253;&#x5F00; Issue&#x3002;</li>
+</ul>
+<h1 id="&#x4E8C;&#x3001;abacus-&#x9879;&#x76EE;&#x7684;-issues-&#x6807;&#x7B7E;&#x5206;&#x7C7B;"><a name="&#x4E8C;&#x3001;abacus-&#x9879;&#x76EE;&#x7684;-issues-&#x6807;&#x7B7E;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x4E8C;&#x3001;abacus-&#x9879;&#x76EE;&#x7684;-issues-&#x6807;&#x7B7E;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;ABACUS &#x9879;&#x76EE;&#x7684; Issues &#x6807;&#x7B7E;&#x5206;&#x7C7B;</h1>
+<p>&#x63D0;&#x4EA4; Issues &#x4F1A;&#x8BA9;&#x63D0;&#x4EA4;&#x8005;&#xFF08;&#x63D0;&#x4EA4;&#x8005;&#x53EF;&#x4EE5;&#x662F;&#x7528;&#x6237;&#x6216;&#x8005;&#x5F00;&#x53D1;&#x8005;&#xFF09;&#x9009;&#x62E9;&#x6807;&#x7B7E;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F; ABACUS &#x5F00;&#x53D1;&#x8005;&#x56E2;&#x961F;&#x63A8;&#x8350;&#x7684;&#x6807;&#x7B7E;&#x53CA;&#x5176;&#x4F7F;&#x7528;&#x573A;&#x666F;</p>
+<ul>
+<li><p>&#x5206;&#x7C7B; &#xFF1A;</p>
+<ol>
+<li>Bug Report&#xFF08;&#x5F00;&#x53D1;&#x8005;/&#x7528;&#x6237;&#xFF09;: &#x7528;&#x4E8E;&#x62A5;&#x544A;&#x4EE3;&#x7801;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x5D29;&#x6E83;&#x3001;&#x9519;&#x8BEF;&#x6216;&#x610F;&#x5916;&#x884C;&#x4E3A;&#x3002;</li>
+<li>Code Quality&#xFF08;&#x5F00;&#x53D1;&#x8005;&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x62A5;&#x544A;&#x4E0E;&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x4EE3;&#x7801;&#x4E0D;&#x89C4;&#x8303;&#x3001;&#x8BBE;&#x8BA1;&#x4E0D;&#x826F;&#x3001;&#x5168;&#x5C40;&#x7C7B;&#x6216;&#x53BB;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F7F;&#x7528;&#x4E0D;&#x5F53;&#x3001;&#x6216;&#x8005;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4F1A;&#x7528;&#x91CD;&#x6784;&#x6765;&#x89E3;&#x51B3;&#x76F8;&#x5173;&#x95EE;&#x9898;&#x3002;</li>
+<li>Docs&#xFF08;&#x5F00;&#x53D1;&#x8005;/&#x7528;&#x6237;&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x62A5;&#x544A;&#x4E0E;&#x8F6F;&#x4EF6;&#x6587;&#x6863;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x7F3A;&#x5C11;&#x6216;&#x4E0D;&#x5B8C;&#x6574;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x6216;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#x7684;&#x6587;&#x6863;&#x3002;</li>
+<li>Feature Request&#xFF08;&#x5F00;&#x53D1;&#x8005;/&#x7528;&#x6237;&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x8BF7;&#x6C42;&#x65B0;&#x529F;&#x80FD;&#x6216;&#x5BF9;&#x73B0;&#x6709;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x589E;&#x5F3A;&#x3002;</li>
+<li>Performance&#xFF08;&#x5F00;&#x53D1;&#x8005;/&#x7528;&#x6237;&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x62A5;&#x544A;&#x4E0E;&#x7528;&#x6237;&#x89D2;&#x5EA6;&#x4E0B;&#x8F6F;&#x4EF6;&#x6027;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6162;&#x3001;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x7387;&#x9AD8;&#x6216;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x95EE;&#x9898;&#x3002;</li>
+<li>Questions&#xFF08;&#x5F00;&#x53D1;&#x8005;/&#x7528;&#x6237;&#xFF09;&#xFF1A;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x3001;&#x8F6F;&#x4EF6;&#x6613;&#x7528;&#x6027;&#x7B49;&#x7528;&#x6237;&#x6216;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x5E2E;&#x52A9;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+<li>Tests &#xFF08;&#x5F00;&#x53D1;&#x8005;&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x62A5;&#x544A;&#x4E0E;&#x6D4B;&#x8BD5;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F8B;&#x5982;&#x6D4B;&#x8BD5;&#x5931;&#x8D25;&#x3001;&#x7F3A;&#x5C11;&#x6216;&#x4E0D;&#x5B8C;&#x6574;&#x7684;&#x6D4B;&#x8BD5;&#x6216;&#x6D4B;&#x8BD5;&#x81EA;&#x52A8;&#x5316;&#x95EE;&#x9898;</li>
+</ol>
+</li>
+<li><p>&#x4F18;&#x5148;&#x7EA7;&#xFF1A;</p>
+<ol>
+<li>Priority High: &#x901A;&#x5E38;&#x6307;&#x7684;&#x662F;&#x9700;&#x8981;&#x5C3D;&#x5FEB;&#x89E3;&#x51B3;&#x7684;&#x7D27;&#x6025;&#x95EE;&#x9898;&#xFF0C;&#x5982; CI &#x4E0D;&#x901A;&#x8FC7;&#xFF0C;&#x65B0; PR &#x5168;&#x90E8;&#x62A5;&#x9519;</li>
+<li>Priority Medium: &#x91CD;&#x8981;&#x4E14;&#x9700;&#x8981;&#x8FD1;&#x671F;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;...</li>
+<li>Priority Low&#xFF1A;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E9B;&#x4E0D;&#x7D27;&#x6025;&#x4F46;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x9700;&#x6C42;&#x8C03;&#x6574;&#x3001;&#x6027;&#x80FD;&#x4F18;&#x5316;</li>
+</ol>
+</li>
+<li><p>&#x4E13;&#x9898;</p>
+<ol>
+<li>DFTU, EXX, big system &#x7B49;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x4E00;&#x4E9B;&#x4E13;&#x9898;&#x7C7B; Issues&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x7CFB;&#x7EDF;&#x89E3;&#x51B3;&#x540C;&#x4E00;&#x4E2A;&#x4E3B;&#x9898;&#x7684; Issues</li>
+</ol>
+</li>
+</ul>
+<h1 id="&#x4E09;&#x3001;issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;"><a name="&#x4E09;&#x3001;issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x4E09;&#x3001;issues-&#x5904;&#x7406;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;Issues &#x5904;&#x7406;&#x6D41;&#x7A0B;</h1>
+<h2 id="1-&#x4ECB;&#x7ECD;"><a name="1-&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#1-&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4ECB;&#x7ECD;</h2>
+<p>&#x63D0;&#x4EA4;&#x7684;Issues&#x4F1A;&#x5728;24&#x5C0F;&#x65F6;&#x5185;&#x5F97;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x56E2;&#x961F;&#x7684;&#x56DE;&#x590D;&#x3002;&#x5F53;&#x524D;Issues&#x5904;&#x7406;&#x7684;&#x95ED;&#x73AF;&#x65B9;&#x5F0F;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x63D0;&#x4EA4;PR&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF0C;&#x89E3;&#x51B3;&#x5BF9;&#x5E94;Issues&#xFF0C;&#x4E4B;&#x540E;&#x5173;&#x95ED;&#x76F8;&#x5E94;&#x7684;Issue&#x3002;</li>
+<li>ISSUE&#x5386;&#x53F2;&#x5927;&#x4E8E;&#x4E24;&#x5468;&#x4EE5;&#x4E0A;&#xFF0C;&#x4E14;ISSUE&#x63D0;&#x51FA;&#x8005;&#x4E0D;&#x5BF9;&#x6709;&#x6548;&#x56DE;&#x5E94;&#x505A;&#x56DE;&#x5E94;&#xFF0C;&#x5219;&#x63D0;&#x9192;&#x7528;&#x6237;&#x540E;&#x5173;&#x95ED;</li>
+<li>&#x5C5E;&#x4E8E;Discussion&#x673A;&#x5236;&#x800C;&#x4E0D;&#x5C5E;&#x4E8E;Issues&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4F1A;&#x8F6C;&#x79FB;&#x5230;Github&#x7684;Discussion&#x6A21;&#x5757;&#xFF1A;&#x4F8B;&#x5982;&#x7528;&#x6237;&#x7684;&#x60F3;&#x6CD5;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x5EFA;&#x8BAE;&#xFF0C;&#x7528;&#x6237;&#x5BF9;&#x793E;&#x533A;&#x7684;&#x95EE;&#x9898;&#x7B49;&#x4EE5;&#x7528;&#x6237;&#x7684;&#x6EE1;&#x610F;&#x7A0B;&#x5EA6;&#x4E3A;&#x6307;&#x6807;&#x7684;&#x95EE;&#x9898;</li>
+</ul>
+<h2 id="2-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-issue"><a name="2-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-issue" class="plugin-anchor" href="#2-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-issue"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x521B;&#x5EFA;&#x4E00;&#x4E2A; ISSUE</h2>
+<p>&#x6709;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x521B;&#x5EFA; ISSUE&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6700;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x3002;&#x672C;&#x4F8B;&#x5C06;&#x4F7F;&#x7528; GitHub UI&#x3002;&#x6709;&#x5173;&#x5176;&#x4ED6;&#x521B;&#x5EFA; ISSUE &#x7684;&#x65B9;&#x6CD5;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; Github &#x6587;&#x6863;&#x201C;<a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue" target="_blank">&#x521B;&#x5EFA; ISSUE</a>&#x201D;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x5728; GitHub &#x4E0A;&#xFF0C;&#x5BFC;&#x822A;&#x5230; ABACUS &#x4ED3;&#x5E93;&#x7684;&#x4E3B;&#x9875;&#x3002;
+<a href="https://github.com/deepmodeling/abacus-develop.git" target="_blank">https://github.com/deepmodeling/abacus-develop.git</a></li>
+<li>&#x5728; ABACUS &#x4ED3;&#x5E93;&#x540D;&#x79F0;&#x4E0B;&#x9762;&#xFF0C;&#x5355;&#x51FB;&#x201C;Issues&#x201D;&#x3002;
+<img src="picture/fig_issue1.png" alt=""></li>
+<li>&#x5355;&#x51FB;&#x201C;New issue&#x201D;&#x3002;
+<img src="picture/fig_issue2.png" alt=""></li>
+<li>&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6700;&#x9002;&#x5408;&#x60A8;&#x7684; ISSUE &#x7684;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x6A21;&#x7248;&#xFF0C;&#x70B9;&#x51FB;&#x201C;Get started&#x201D;&#x3002;&#x5982;&#x679C; ABACUS &#x63D0;&#x4F9B;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x7248;&#x4E0D;&#x7B26;&#x5408;&#x60A8;&#x7684; ISSUE &#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x201C;Open a blank issue&#x201D;&#x3002;
+<img src="picture/fig_issue3.png" alt=""></li>
+</ol>
+<h2 id="3-&#x586B;&#x5165;-issue-&#x4FE1;&#x606F;"><a name="3-&#x586B;&#x5165;-issue-&#x4FE1;&#x606F;" class="plugin-anchor" href="#3-&#x586B;&#x5165;-issue-&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x586B;&#x5165; ISSUE &#x4FE1;&#x606F;</h2>
+<p>&#x7ED9;&#x60A8;&#x7684; ISSUE &#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x6027;&#x7684;&#x6807;&#x9898;&#x3002;&#x6807;&#x9898;&#x5E94;&#x8BE5;&#x4E00;&#x773C;&#x5C31;&#x80FD;&#x4F20;&#x8FBE;&#x95EE;&#x9898;&#x7684;&#x5185;&#x5BB9;&#x3002; &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x89E3;&#x91CA; ISSUE &#x76EE;&#x7684;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x53EF;&#x80FD;&#x6709;&#x52A9;&#x4E8E;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x7EC6;&#x8282;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A; bug &#x62A5;&#x544A;&#xFF0C;&#x63CF;&#x8FF0;&#x91CD;&#x73B0; bug &#x7684;&#x6B65;&#x9AA4;&#x3001;&#x9884;&#x671F;&#x7ED3;&#x679C;&#x548C;&#x5B9E;&#x9645;&#x7ED3;&#x679C;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Markdown &#x6DFB;&#x52A0;&#x683C;&#x5F0F;&#x3001;&#x94FE;&#x63A5;&#x3001;&#x8868;&#x60C5;&#x7B49;&#x3002;&#x6709;&#x5173;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x53C2;&#x9605;&#x201C;<a href="https://docs.github.com/en/get-started/writing-on-github" target="_blank">&#x5728; GitHub &#x4E0A;&#x64B0;&#x5199;</a>&#x201D;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F; ABACUS &#x7684; Bug report &#x7C7B;&#x578B; ISSUE &#x7684;&#x6A21;&#x7248;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x6839;&#x636E; ISSUE &#x6A21;&#x7248;&#x793A;&#x4F8B;&#x6765;&#x586B;&#x5165; ISSUE &#x4FE1;&#x606F;&#x3002;&#x5176;&#x4E2D;&#x5E26;&#x201C;*&#x201D;&#x7684;&#x9879;&#x662F;&#x5FC5;&#x586B;&#x9879;&#x3002;</p>
+<p><img src="picture/fig_issue4.png" alt=""></p>
+<h2 id="4-issue-&#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;"><a name="4-issue-&#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;" class="plugin-anchor" href="#4-issue-&#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>4. ISSUE &#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;</h2>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#x201C;Task list for Issue attackers&#x201D;&#x662F;&#x4E3A;&#x4E86;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x68C0;&#x67E5; ISSUE &#x89E3;&#x51B3;&#x7684;&#x8FDB;&#x5EA6;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x8981;&#x6C42;&#x60A8;&#x9009;&#x62E9;&#x89E3;&#x51B3; ISSUE &#x9700;&#x8981;&#x5B8C;&#x6210;&#x54EA;&#x4E9B;&#x5DE5;&#x4F5C;&#x3002;&#x6240;&#x4EE5;&#x60A8;&#x53EA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8DB3;&#x591F;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#x4EE5;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x89E3;&#x51B3; ISSUE&#x3002;&#x5982;&#x679C;&#x60A8;&#x63D0;&#x4F9B;&#x7684;&#x4FE1;&#x606F;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x4EFB;&#x52A1;&#x524D;&#x6253;&#x5BF9;&#x52FE;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5173;&#x5FC3;&#x201C;Task list for Issue attackers&#x201D;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E86;&#x89E3;&#x89E3;&#x51B3;&#x4E00;&#x4E2A; ISSUE &#x6240;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x7684;&#x4E00;&#x822C;&#x6B65;&#x9AA4;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x60A8;&#x4E86;&#x89E3; ABACUS &#x4EE3;&#x7801;&#x7684;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#x7ED9;&#x5F00;&#x53D1;&#x8005;&#x4E00;&#x4E9B;&#x63D0;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003; Github &#x6587;&#x6863;&#x201C;<a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists" target="_blank">About task lists</a>&#x201D;&#x3002;</p>
+<p><img src="picture/fig_issue5.png" alt=""></p>
+<h2 id="5-&#x6DFB;&#x52A0;-issue-&#x6807;&#x7B7E;"><a name="5-&#x6DFB;&#x52A0;-issue-&#x6807;&#x7B7E;" class="plugin-anchor" href="#5-&#x6DFB;&#x52A0;-issue-&#x6807;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6DFB;&#x52A0; ISSUE &#x6807;&#x7B7E;</h2>
+<p>&#x5982;&#x679C;&#x60A8;&#x9009;&#x62E9; ISSUE &#x6A21;&#x7248;&#xFF0C;&#x521B;&#x5EFA;&#x5B8C; ISSUE &#x4E4B;&#x540E;&#x4F1A;&#x81EA;&#x7136;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#x51FA;&#x73B0;&#xFF0C;&#x5982;&#xFF1A;</p>
+<p><img src="picture/fig_issue6.png" alt=""></p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x53C2;&#x8003; ABACUS &#x7684;&#x4E13;&#x9898;&#x6807;&#x7B7E;&#xFF08;&#x4F8B;&#x5982; DFTU, EXX &#x7B49;&#xFF09;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x6216;&#x8005;&#x901A;&#x8FC7;&#x201C;Edit labels&#x201D;&#x521B;&#x5EFA;&#x65B0;&#x6807;&#x7B7E;&#xFF1A;</p>
+<p><img src="picture/fig_issue7.png" alt=""></p>
+<h2 id="6-&#x63D0;&#x4EA4;-issue"><a name="6-&#x63D0;&#x4EA4;-issue" class="plugin-anchor" href="#6-&#x63D0;&#x4EA4;-issue"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x63D0;&#x4EA4; ISSUE</h2>
+<p>&#x70B9;&#x51FB;&#x201C;Submit new issue&#x201D;&#x4EE5;&#x521B;&#x5EFA;&#x60A8;&#x7684; ISSUE&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x95EE;&#x9898;&#x540E;&#x7F16;&#x8F91;&#x4E0A;&#x8FF0;&#x4EFB;&#x4F55;&#x5B57;&#x6BB5;&#x3002;&#x60A8;&#x7684; ISSUE &#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684; URL&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4E0E;&#x56E2;&#x961F;&#x6210;&#x5458;&#x5206;&#x4EAB;&#xFF0C;&#x6216;&#x5728;&#x5176;&#x4ED6; ISSUE &#x6216; Pull Requat &#x4E2D;&#x5F15;&#x7528;&#x3002;</p>
+<p><img src="picture/fig_issue8.png" alt=""></p>
+<h2 id="7-&#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x4EA4;&#x6D41;"><a name="7-&#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x4EA4;&#x6D41;" class="plugin-anchor" href="#7-&#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x4EA4;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x4EA4;&#x6D41;</h2>
+<p>&#x521B;&#x5EFA; ISSUE &#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x8BC4;&#x8BBA;&#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x6216;&#x5176;&#x4ED6;&#x534F;&#x4F5C;&#x8005;&#x4EA4;&#x6D41;&#x5BF9;&#x8BDD;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x952E;&#x5165; @ &#x9080;&#x8BF7;&#x534F;&#x4F5C;&#x8005;&#x6216;&#x56E2;&#x961F;&#x5173;&#x6CE8;&#x8BC4;&#x8BBA;&#x3002;</p>
+<p><img src="picture/fig_issue9.png" alt=""></p>
+<p>&#x8981;&#x5728;&#x540C;&#x4E00;&#x4ED3;&#x5E93;&#x4E2D;&#x53EF;&#x4EE5;&#x94FE;&#x63A5;&#x76F8;&#x5173;&#x95EE;&#x9898;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x952E;&#x5165;#&#xFF0C;&#x540E;&#x8DDF; ISSUE &#x6807;&#x53F7;&#x6216;&#x90E8;&#x5206;&#x6807;&#x9898;&#xFF0C;&#x7136;&#x540E;&#x5355;&#x51FB;&#x8981;&#x94FE;&#x63A5;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6709;&#x5173;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#x201C;&#x201C;<a href="https://docs.github.com/en/get-started/writing-on-github" target="_blank">&#x5728; GitHub &#x4E0A;&#x64B0;&#x5199;</a>&#x201D;&#x201D;&#x3002;</p>
+<p><img src="picture/fig_issue10.png" alt=""></p>
+<h2 id="8-&#x67E5;&#x770B;-issue-&#x89E3;&#x51B3;&#x8FDB;&#x5EA6;"><a name="8-&#x67E5;&#x770B;-issue-&#x89E3;&#x51B3;&#x8FDB;&#x5EA6;" class="plugin-anchor" href="#8-&#x67E5;&#x770B;-issue-&#x89E3;&#x51B3;&#x8FDB;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x67E5;&#x770B; ISSUE &#x89E3;&#x51B3;&#x8FDB;&#x5EA6;</h2>
+<p>&#x67E5;&#x770B; ISSUE &#x89E3;&#x51B3;&#x6709; 3 &#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;task list&#x201D;&#x7684;&#x5B8C;&#x6210;&#x8FDB;&#x5EA6;&#x67E5;&#x770B; ISSUE &#x7684;&#x89E3;&#x51B3;&#x8FDB;&#x5EA6;</li>
+<li>&#x65B0;&#x5EFA;&#x7684; ISSUE &#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x52A0;&#x5165; ABACUS ISSUEs &#x9879;&#x76EE;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x8BA8;&#x8BBA;&#x4E4B;&#x540E;&#x4F1A;&#x5728;&#x5176;&#x4E2D;&#x52A0;&#x5165;&quot;Iteration&quot;&#x89E3;&#x51B3;&#x5468;&#x671F;&#xFF0C;&quot;Priority&quot;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&quot;Collaborators&quot;&#x5F00;&#x53D1;&#x8005;&#x5355;&#x4F4D;&#xFF0C;&quot;Project&quot;&#x662F;&#x5426;&#x7EB3;&#x5165;&#x8FD1;&#x671F;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x9879;&#x76EE;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x770B;&#x5230; ISSUEs &#x7684;&#x8FDB;&#x5C55;&#x3002;</li>
+<li>Assignees &#x662F;&#x89E3;&#x51B3; ISSUE &#x7684;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x9700;&#x8981; ABACUS &#x7BA1;&#x7406;&#x5458;&#x8FDB;&#x884C;&#x5206;&#x8BCA;&#x3002;</li>
+</ol>
+<p><img src="picture/fig_issue11.png" alt=""></p>
+<h2 id="9-&#x5173;&#x95ED;-issue"><a name="9-&#x5173;&#x95ED;-issue" class="plugin-anchor" href="#9-&#x5173;&#x95ED;-issue"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x5173;&#x95ED; ISSUE</h2>
+<p>&#x4EE5;&#x7B2C; 1 &#x6B65;&#x548C;&#x7B2C; 2 &#x6B65;&#x540C;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x627E;&#x5230;&#x60F3;&#x8981;&#x5173;&#x95ED;&#x7684; ISSUE&#x3002; &#x70B9;&#x51FB;&#x201C;Close issue&#x201D;&#xFF0C;&#x5173;&#x95ED; ISSUE&#x3002;</p>
+<p><img src="picture/fig_issue12.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x8981;&#x6DFB;&#x52A0;&#x5173;&#x95ED; ISSUE &#x7684;&#x539F;&#x56E0;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x201C;Leave a comment&#x201D;&#x5904;&#x6DFB;&#x52A0;&#x5173;&#x95ED;&#x539F;&#x56E0;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x201C;Close with comment&#x201D;&#xFF0C;&#x5173;&#x95ED; ISSUE&#x3002;</p>
+<p><img src="picture/fig_issue13.png" alt=""></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-10-02 11:02:27
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-dox.html" class="navigation navigation-prev " aria-label="Previous page: ABACUS 注释规范：Doxygen 入门 (c++)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="develop-path1.html" class="navigation navigation-next " aria-label="Next page: Introduction to ABACUS: Path to PW calculation - Part 1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS 的 Github 仓库 Issues 处理流程","level":"1.2.3","depth":2,"next":{"title":"Introduction to ABACUS: Path to PW calculation - Part 1","level":"1.2.4","depth":2,"path":"develop-path1.md","ref":"develop-path1.md","articles":[]},"previous":{"title":"ABACUS 注释规范：Doxygen 入门 (c++)","level":"1.2.2","depth":2,"path":"develop-dox.md","ref":"develop-dox.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-upf.html#fig1.1.5.1","level":"1.1.5","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":1,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.1.5.1"},{"backlink":"abacus-upf.html#fig1.1.5.2","level":"1.1.5","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":2,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.1.5.2"},{"backlink":"abacus-upf.html#fig1.1.5.3","level":"1.1.5","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":3,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.1.5.3"},{"backlink":"abacus-upf.html#fig1.1.5.4","level":"1.1.5","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":4,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.1.5.4"},{"backlink":"abacus-upf.html#fig1.1.5.5","level":"1.1.5","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":5,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.1.5.5"},{"backlink":"abacus-surface2.html#fig1.1.14.1","level":"1.1.14","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":6,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.1.14.1"},{"backlink":"abacus-surface2.html#fig1.1.14.2","level":"1.1.14","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":7,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.1.14.2"},{"backlink":"abacus-surface2.html#fig1.1.14.3","level":"1.1.14","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":8,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.1.14.3"},{"backlink":"abacus-surface5.html#fig1.1.15.1","level":"1.1.15","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":9,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.1.15.1"},{"backlink":"abacus-surface5.html#fig1.1.15.2","level":"1.1.15","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":10,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.1.15.2"},{"backlink":"abacus-surface5.html#fig1.1.15.3","level":"1.1.15","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":11,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.1.15.3"},{"backlink":"abacus-surface5.html#fig1.1.15.4","level":"1.1.15","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":12,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.1.15.4"},{"backlink":"abacus-surface5.html#fig1.1.15.5","level":"1.1.15","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":13,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.1.15.5"},{"backlink":"abacus-surface6.html#fig1.1.16.1","level":"1.1.16","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":14,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.1.16.1"},{"backlink":"abacus-surface6.html#fig1.1.16.2","level":"1.1.16","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":15,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.1.16.2"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-issue.md","mtime":"2023-10-02T03:02:27.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-02T03:03:00.766Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
