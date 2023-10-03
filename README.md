@@ -30,12 +30,11 @@ ABACUS 网站访问：
 
 1. ABACUS的编译介绍
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
-   2. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
-   3. [GCC 编译 ABACUS 教程](abacus-gcc.md)
-   4. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
-   5. [在超算环境编译 ABACUS 的建议](abacus-hcp.md)
-   6. [<mark style="color:red;">编译无MPI的ABACUS</mark>](https://xmywuqhxb0.feishu.cn/docx/JCv0dHPP6o69JdxtG33cIcTnnke)<mark style="color:red;"></mark>
-   7. 曙光DCU平台编译教程：[ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+   2. [GCC 编译 ABACUS 教程](abacus-gcc.md)
+   3. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
+   4. [在超算环境编译 ABACUS 的建议](abacus-hcp.md)
+   5. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+   6. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
    <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
@@ -73,9 +72,9 @@ ABACUS 网站访问：
     4. [ABACUS+DPGEN 使用教程](abacus-dpgen.md)<a href="https://nb.bohrium.dp.tech/detail/6116401077" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     5. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)<a href="https://nb.bohrium.dp.tech/detail/8041860882" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     6. [ABACUS+Candela 使用教程](abacus-candela.md)<a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    7. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    8. [ABACUS+USPEX 接口教程](abacus-uspex.md)
-    9. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
+    7. [ABACUS+USPEX 接口教程](abacus-uspex.md)
+    8. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
+    9. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     10. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
     11. ABACUS+CINEB教程（缺）
         1. [ASE-NEB-ABACUS工作流与算例（持续完善中）](https://github.com/QuantumMisaka/ase-neb-abacus)
