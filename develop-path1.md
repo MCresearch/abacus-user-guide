@@ -444,9 +444,9 @@ void Driver::reading(void)
 
 这个函数实现了从 `Input` 类对象的数据成员到 `GlobalV` 和 `GlobalC` 等全局变量集合的转换。相当于从 `Input` 到 `GlobalV` 和 `GlobalC`，以及其他直接的类的参数上载：
 
-其他内容见 ABACUS 第一版开发手册（[02. IO 模块](https://dptechnology.feishu.cn/wiki/wikcn8RfpGtELuidwVJ5ZGxCUie#YKsGdUySEo20SgxGqhXchDUKnib)，目前暂为飞书内部文档）：
-
 ![](picture/fig_path1-1.jpg)
+
+其他内容见 ABACUS 第一版开发手册（[02. IO 模块](https://dptechnology.feishu.cn/wiki/wikcn8RfpGtELuidwVJ5ZGxCUie#YKsGdUySEo20SgxGqhXchDUKnib)，目前暂为飞书内部文档）：
 
 ```cpp
 void Input_Conv::Convert(void)
@@ -682,7 +682,7 @@ void Driver::atomic_world(void)
 ![](picture/fig_path1-2.png)
 
 ```cpp
-cppvoid Driver::init()
+void Driver::init()
 {    
     this->reading();
     this->atomic_world(); // <- here!    

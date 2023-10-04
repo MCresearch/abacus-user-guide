@@ -335,7 +335,7 @@ int UnitCell::read_atom_species(std::ifstream &ifa, std::ofstream &ofs_running)
 }
 ```
 
-<strong>我们约定，LATTICE_CONSTANT无量纲，LATTICE_VECTORS有量纲，STRU文件中原子坐标无量纲</strong>。
+<strong>我们约定，`LATTICE_CONSTANT`无量纲，`LATTICE_VECTORS`有量纲，`STRU`文件中原子坐标无量纲</strong>。
 
 ###### UnitCell::read_atom_positions()
 
@@ -355,7 +355,7 @@ bool UnitCell::read_atom_positions(std::ifstream &ifpos, std::ofstream &ofs_runn
 STRU 第二行指定坐标类型，被读取为 `UnitCell::Coordinate`。`UnitCell::Coordinate` 在 `STRU` 里有不同选项，⚙ 决定原子的具体位置和单位：
 
 ```cpp
-if(Coordinate != "Cartesian" 
+            if(Coordinate != "Cartesian" 
             && Coordinate != "Direct" 
             && Coordinate != "Cartesian_angstrom"
             && Coordinate != "Cartesian_au"
@@ -410,7 +410,7 @@ if(Coordinate != "Cartesian"
 接下来是按原子种类循环 `ATOMIC_POSITIONS` section:
 
 ```cpp
-int na = 0;
+        int na = 0;
         this->nat = 0;
         assert(ntype>0);
         for (int it = 0;it < ntype; it++)
@@ -424,7 +424,7 @@ int na = 0;
 > 已在重构计划中
 
 ```cpp
-ModuleBase::GlobalFunc::READ_VALUE(ifpos, atoms[it].label);
+            ModuleBase::GlobalFunc::READ_VALUE(ifpos, atoms[it].label);
             bool sequence_match = false;
             for(int it2=0; it2<ntype; it2++)
             {
@@ -443,7 +443,7 @@ ModuleBase::GlobalFunc::READ_VALUE(ifpos, atoms[it].label);
 读取当前原子类型的 starting_magnetization、原子总数 na
 
 ```cpp
-ModuleBase::GlobalFunc::READ_VALUE(ifpos, magnet.start_magnetization[it] );
+            ModuleBase::GlobalFunc::READ_VALUE(ifpos, magnet.start_magnetization[it] );
             ...
             ModuleBase::GlobalFunc::READ_VALUE(ifpos, na);
             this->atoms[it].na = na;
@@ -477,7 +477,7 @@ ModuleBase::GlobalFunc::READ_VALUE(ifpos, magnet.start_magnetization[it] );
 ⚙ 然后在 ATOMIC_POSITIONS 中读取：
 
 ```cpp
-atoms[it].mass = this->atom_mass[it];
+                atoms[it].mass = this->atom_mass[it];
 ```
 
 ❗ 此处的 `atoms[it].mass` 与 `this->atom_mass[it]` 的用法与 `atomis[it].label` 与 `this->atom_label[it]` 不同：传值 vs 核对。
@@ -485,7 +485,7 @@ atoms[it].mass = this->atom_mass[it];
 接下来读取类中每个原子的速度信息，在做分子动力学模拟的时候可能需要用到：
 
 ```cpp
-for (int ia = 0;ia < na; ia++)
+                for (int ia = 0;ia < na; ia++)
                 {
                     ifpos >> v.x >> v.y >> v.z;
 ```
@@ -495,7 +495,7 @@ for (int ia = 0;ia < na; ia++)
 `atoms[it].mag` 的赋值并非直接读取：
 
 ```cpp
-else if ( tmpid == "mag" || tmpid == "magmom")
+                    else if ( tmpid == "mag" || tmpid == "magmom")
                     {
                         set_element_mag_zero = true;
                         double tmpamg=0; ifpos >> tmpamg;
@@ -524,7 +524,7 @@ else if ( tmpid == "mag" || tmpid == "magmom")
 ⚙ 若 mag/magmom 后有一个值，则读取其值赋给 `atoms[it]::mag[ia]`，将 `input_vec_mag` 置为 `false`，若有三个值，则三个值依次被传入 `atoms[it].m_loc_[ia].x`, `atoms[it].m_loc_[ia].y` 和 `atoms[it].m_loc_[ia].z`，并将 `input_vec_mag` 置为 `true`，之后其向量模长为 `atoms[it]::mag[ia]`，然后在使用 `angle1`, `angle2` 来重新生成 `mag`。
 
 ```cpp
-if(GlobalV::NSPIN==4)
+                    if(GlobalV::NSPIN==4)
                     {
                         if(GlobalV::NONCOLIN)
                         {
@@ -566,7 +566,7 @@ if(GlobalV::NSPIN==4)
 > 🤔<strong>批判性思考</strong>
 > 然而，在 Quantum ESPRESSO 中，并不允许出现 `nspin=4` 且 `noncolinear=.false.` 的情况，在 ABACUS≤3.3.0 中是允许的，你怎么看？
 
-Quantum ESPRESSO 相关信息：
+Quantum ESPRESSO 相关信息：[pw.x input description](https://www.quantum-espresso.org/Doc/INPUT_PW.html#nspin)
 
 ABACUS 对 `nspin=4` 情况的参数处理：
 
@@ -669,7 +669,7 @@ UnitCell::atoms::m_loc_; UnitCell::atoms::angle1; UnitCell::atoms::angle2;
 离开 `STRU` 文件的解析部分，接下来计算了初始磁化强度：
 
 ```cpp
-//after read STRU, calculate initial total magnetization when NSPIN=2
+    //after read STRU, calculate initial total magnetization when NSPIN=2
     if(GlobalV::NSPIN == 2 && !GlobalV::TWO_EFERMI)
     {
         for(int it = 0;it<this->ntype; it++)
@@ -684,30 +684,24 @@ UnitCell::atoms::m_loc_; UnitCell::atoms::angle1; UnitCell::atoms::angle2;
 
 由于 `INPUT` 中参数众多，因此在前文中对参数有所遗漏。但基于前文已有内容介绍，关于 `GlobalV::TWO_EFERMI` 变量，可以通过如下方式查找其意义：
 
-1. 在 `module_io/input_conv.cpp` 中寻找该变量，是何变量赋其值，发现：
-
-```cpp
-if (std::abs(INPUT.nupdown) > 1e-6)
-    {
-        GlobalV::TWO_EFERMI = true;
-        GlobalV::nupdown = INPUT.nupdown;
-    }
-```
-
-因此 `GlobalV::TWO_EFERMI` 变量实际依赖于 `INPUT.nupdown`。
-
-1. 接下来在 `module_io/input.cpp` 中寻找含 `INPUT.nupdown` 的 `if(strcmp(...))` 单元，查看在 `INPUT` 文件中是何参数赋予其具体值：
-
-```cpp
-else if (strcmp("nupdown", word) == 0)
-        {
-            read_value(ifs, nupdown);
-        }
-```
-
-即 `INPUT.nupdown` 在 `INPUT` 中也为 `nupdown`。接下来打开 Full keyword list 寻找其解释。
-
-1. 得到结果，即 `nupdown` 为 spin up 和 spin down 电子数量差值：
+1. 在 `module_io/input_conv.cpp` 中寻找该变量，是何变量赋其值，发现：       
+    ```cpp
+            if (std::abs(INPUT.nupdown) > 1e-6)
+           {
+                GlobalV::TWO_EFERMI = true;
+                GlobalV::nupdown = INPUT.nupdown;
+            }
+    ```
+    因此 `GlobalV::TWO_EFERMI` 变量实际依赖于 `INPUT.nupdown`。
+2. 接下来在 `module_io/input.cpp` 中寻找含 `INPUT.nupdown` 的 `if(strcmp(...))` 单元，查看在 `INPUT` 文件中是何参数赋予其具体值：
+   ```cpp
+                else if (strcmp("nupdown", word) == 0)
+                {
+                    read_value(ifs, nupdown);
+                }
+   ```
+   即 `INPUT.nupdown` 在 `INPUT` 中也为 `nupdown`。接下来打开 [Full keyword list](https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#nupdown) 寻找其解释。
+3. 得到结果，即 `nupdown` 为 spin up 和 spin down 电子数量差值：
 
 ![](picture/fig_path2-1.png)
 
@@ -716,7 +710,7 @@ else if (strcmp("nupdown", word) == 0)
 接下来根据在 STRU 中读取的晶胞参数，计算晶胞体积，并计算倒空间矢量（在上篇中已经对 `latvec`, `G`, `GT`, `GGT` 有所介绍，`invGGT` 的意义也不言自明）：
 
 ```cpp
-this->omega = std::abs( latvec.Det() ) * this->lat0 * lat0 * lat0 ;
+    this->omega = std::abs( latvec.Det() ) * this->lat0 * lat0 * lat0 ;
 
     this->GT = latvec.Inverse();
     this->G  = GT.Transpose();
@@ -835,7 +829,7 @@ ESolver_FP::ESolver_FP()
 对于 ESolver 本身，其指针对象 p_esolver 实际上也有类似操作：
 
 ```cpp
-//Some API to operate E_Solver
+    //Some API to operate E_Solver
     void init_esolver(ESolver*& p_esolver)
     {
         //determine type of esolver based on INPUT information

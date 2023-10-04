@@ -11,15 +11,15 @@
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
 > 2. 不堆砌代码解释——避免平庸的代码解释，努力兼顾拉近读者和代码距离的同时，做到提纲挈领，不逐行复制代码后进行停留在代码语义上的解释
 
-# Driver
+<strong>Driver</strong>
 
-## Driver::atomic_world()
+<strong>Driver::atomic_world()</strong>
 
-### Driver::driver_run()
+<strong>Driver::driver_run()</strong>
 
-#### 多层继承：Init() functions in esolver class
+# 多层继承：Init() functions in esolver class
 
-##### Trigger: ESolver_FP::Init()
+## Trigger: ESolver_FP::Init()
 
 承接上篇中已经导入的结构信息，以及了解到构造函数及其伴随的变量初始化和 ABACUS 里应用到的 C++ 多态编程，接下来即将（逐渐）步入 ABACUS 的核心内容。我们暂时跳过位于 `source/driver_run.cpp:driver_run()` 的：
 
@@ -120,7 +120,7 @@ namespace ModuleESolver
 
 同理，`ESolver_KS` 的数据成员，也被 `ESolver_KS_PW` 继承。`ESolver_FP::Init()` 首先调用 `UnitCell::read_pseudo()` 函数进行赝势文件读取，而将赝势文件读取任务放在 FP 层级下，也暗示对于 ABACUS 的第一性原理方法实现来讲，都需要使用赝势。
 
-###### Pseudopotential import: UnitCell::read_pseudo()
+### Pseudopotential import: UnitCell::read_pseudo()
 
 ```cpp
 void UnitCell::read_pseudo(std::ofstream &ofs)
@@ -130,9 +130,9 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 在解读赝势文件读取功能之前，首先需要对赝势文件的结构和信息做一定程度的了解。
 
-####### ONCV pseudopotential file
+#### ONCV pseudopotential file
 
-######## Section 0: Norm-conserving conditions, generation of pseudopotential and header of exact UPF file
+##### Section 0: Norm-conserving conditions, generation of pseudopotential and header of exact UPF file
 
 赝势的意义不言自明，其中模守恒赝势需满足如下条件：
 
@@ -148,7 +148,7 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 3. $$V_l(r)=\frac{1}{\phi^\text{ps}_l(r)}[\epsilon^\text{ps}_l-\frac{\hbar^2}{2m}\frac{l(l+1)}{r^2}+\frac{\hbar^2}{2m}\frac{d^2}{dr^2}]\phi^\text{ps}_l(r)$$，解得$$V_l(r)$$。
 4. 扣除$$V_l(r)$$中 Hartree、xc 部分，得到$$V^\text{ps}_l(r)$$：$$V^\text{ps}_l(r)=V_l(r)-V^\text{H}[\rho^\text{ps}(r)]-V^\text{xc}[\rho^\text{ps}(r)]$$。$$\rho^\text{ps}(r)=\frac{1}{4\pi}\sum_i^\text{occ}{f_{i}|\phi^\text{ps}_l(r)|^2}$$
 
-更多细节见
+更多细节见：[www.tcm.phy.cam.ac.uk](https://www.tcm.phy.cam.ac.uk/~jry20/gipaw/tutorial_pp.pdf)
 
 ```html
 <UPF version="2.0.1">
@@ -165,10 +165,10 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 从 UPF 文件（注意 UPF 文件也有不同的版本，目前 ABACUS 都支持，若有不支持的，可以提 Github 的 issues 进行讨论）开始，截止到 `<PP_HEADER>` 之前，提供了赝势文件的作者信息，引用信息以及生成赝势文件所使用的程序和相应输入文件，并附带输入文件参数中的解释。由于此块内容对实际计算并不起作用，因此暂时略过。
 
-######## Section 1: <PP_HEADER>
+##### Section 1: <PP_HEADER>
 
 ```html
-<PP_HEADER
+    <PP_HEADER
       generated="Generated using ONCVPSP code by D. R. Hamann" author="Martin Schlipf and Francois Gygi"
       date="150105" comment=""
       element="Al"
@@ -194,10 +194,10 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 `<PP_HEADER>` 部分尽管已经位于所谓“not human readable”区域，但也并非如此。这部分“标签”（HTML 语境）/block 实际上包含了众多精简过的信息，如元素名称（element）、赝势类型（pseudo_type，模守恒，norm-conserving，NC），相对论效应（relativistic），是否为超软赝势等等信息。当前 Al 理论上其原子序数 13，因此有 13 个电子，但此处 z_valence 参数为 11，即有两个 1s 电子被赝化，只留下 2s, 2p, 3s, 3p 电子共 2+6+2+1 个。对于某些元素，甚至有大核赝势与小核赝势之分，根据赝化电子数量不同进行区分。显而易见地，赝化电子数量越多，则计算量越小，但计算结果的精确程度可能更低。
 
-######## Section 2: <PP_MESH>
+##### Section 2: <PP_MESH>
 
 ```html
-<PP_MESH>
+    <PP_MESH>
         <PP_R type="real"  size=" 602" columns="8">
             0.0000    0.0100    0.0200    0.0300    0.0400    0.0500    0.0600    0.0700
             <!-- omitted information here -->
@@ -215,10 +215,10 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 这部分开始出现了关于实空间格点相关量的定义。在 tag 中不仅指定数据类型为实数，也指定当前数据的长度（size），以及数据存储的列数（columns = 8）。`PP_R` 为格点坐标，`PP_RAB` 则为格点间距。
 
-######## Section 3: <PP_LOCAL>
+##### Section 3: <PP_LOCAL>
 
 ```html
-<PP_LOCAL type="real"  size=" 602" columns="4">
+    <PP_LOCAL type="real"  size=" 602" columns="4">
         -4.5793174225E+01   -4.5788454271E+01   -4.5774276797E+01   -4.5750659428E+01
         <!-- omitted information here -->
         -3.6912752197E+00   -3.6850921941E+00   -3.6789298138E+00   -3.6727880140E+00
@@ -230,10 +230,10 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 ![](picture/fig_path3-1.png)
 
-######## Section 4: <PP_NONLOCAL>
+##### Section 4: <PP_NONLOCAL>
 
 ```html
-<PP_NONLOCAL>
+    <PP_NONLOCAL>
         <PP_BETA.1
            type="real"
            size=" 602"
@@ -253,8 +253,8 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
            cutoff_radius_index=" 246" cutoff_radius="    2.4500000000E+00" >
            <!-- omitted information here -->
         </PP_BETA.2>
-        <PP_BETA.3 type="real" size=" 602" columns="4" index="3" angular_momentum="1"<strong>
-</strong>           cutoff_radius_index=" 246" cutoff_radius="    2.4500000000E+00" >
+        <PP_BETA.3 type="real" size=" 602" columns="4" index="3" angular_momentum="1"
+           cutoff_radius_index=" 246" cutoff_radius="    2.4500000000E+00" >
            <!-- omitted information here -->
         </PP_BETA.3>
         <PP_BETA.4 type="real" size=" 602" columns="4" index="4" angular_momentum="1"
@@ -274,7 +274,7 @@ void UnitCell::read_pseudo(std::ofstream &ofs)
 
 ![](picture/fig_path3-2.png)
 
-######## Section 5: <PP_PSWFC> and <PP_RHOATOM>
+##### Section 5: <PP_PSWFC> and <PP_RHOATOM>
 
 ```html
 <PP_PSWFC>
@@ -297,7 +297,7 @@ Quantum ESPRESSO 官网上提供了更多关于 UPF 文件格式的信息：[Uni
 > ❗<strong>注意</strong>
 > 读入的投影子 projector $$|\beta\rangle$$和 pswfc $$\tilde{\phi}(r)$$已经乘径向坐标$$r$$。
 
-####### UnitCell::read_cell_pseudopots()
+#### UnitCell::read_cell_pseudopots()
 
 link to Github -> [link](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_cell/read_cell_pseudopots.cpp)
 
@@ -361,7 +361,7 @@ int Pseudopot_upf::init_pseudo_reader(const std::string &fn, std::string &type)
 <PP_HEADER>
 
 ```cpp
-while (ifs.good())
+    while (ifs.good())
     {
         ifs >> dummy;
         if(dummy=="<PP_HEADER>")
@@ -377,7 +377,7 @@ while (ifs.good())
 <PP_MESH>
 
 ```cpp
-if ( ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_MESH>") )
+    if ( ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_MESH>") )
     {
         read_pseudo_mesh(ifs);
         ModuleBase::GlobalFunc::SCAN_END(ifs, "</PP_MESH>");
@@ -387,7 +387,7 @@ if ( ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_MESH>") )
 <PP_NLCC>
 
 ```cpp
-if (this->nlcc)
+    if (this->nlcc)
     {
         ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_NLCC>"); 
         read_pseudo_nlcc(ifs);
@@ -398,7 +398,7 @@ if (this->nlcc)
 <PP_LOCAL>
 
 ```cpp
-ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_LOCAL>");
+    ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_LOCAL>");
     read_pseudo_local(ifs);
     ModuleBase::GlobalFunc::SCAN_END(ifs, "</PP_LOCAL>");
 ```
@@ -406,7 +406,7 @@ ModuleBase::GlobalFunc::SCAN_BEGIN(ifs, "<PP_LOCAL>");
 与 <PP_LOCAL> 类似的还有 <PP_NONLOCAL>, <PP_PSWFC>, <PP_RHOATOM>, 从 <PP_ADDINFO> 则可以读取旋轨耦合相关信息：
 
 ```cpp
-if (has_so)
+    if (has_so)
     {
         ModuleBase::GlobalFunc::SCAN_BEGIN (ifs,"<PP_ADDINFO>");
         read_pseudo_so (ifs);
@@ -431,7 +431,7 @@ if (has_so)
 我们假设 ONCV.upf 格式赝势文件顺利读取完毕，`upf.init_pseudo_reader()` 返回 0（`error == 0`），来到条件判断：
 
 ```cpp
-if(error==0)
+            if(error==0)
             {
                 if(this->atoms[i].flag_empty_element) upf.set_empty_element();            
                 error_ap = upf.average_p(GlobalV::soc_lambda);
@@ -443,7 +443,7 @@ if(error==0)
 我们来到 line 82,
 
 ```cpp
-if(GlobalV::MY_RANK==0)
+                if(GlobalV::MY_RANK==0)
                 {
                         atoms[i].ncpp.set_pseudo_nc( upf );
 ....
@@ -478,7 +478,7 @@ void pseudo_nc::set_pseudo_nc(const Pseudopot_upf &upf)
 
 该函数属于类 `pseudo_nc`，而 `pseudo_nc` 对象为 `atom` 的数据成员，`atoms` 则为 `UnitCell` 的数据成员。`pseudo_nc::set_pseudo_h()`，`pseudo_nc::set_pseudo_atom` 和 `pseudo_nc::set_pseudo_vl` 的内容在此省略，但其分别为将 Hamilton, 原子性质和 Vlocal 相关数据从 upf 对象拷贝。之后(1)使用 `lll` 刷新为 upf 对象的 projectors 的角动量，然后计算出磁角动量区分时的 projector 个数。(2)取所有 projector 衰减到 0 时候的最大最普适半径。
 
-####### 赝势信息后处理
+#### 赝势信息后处理
 
 回到 `module_cell/unitcell.cpp` line 663，接下来为每个原子创建目录，在目录中写 `[原子label].NONLOCAL` 文件。`[label].NONLOCAL` 文件中内容包含 `<HEADER>`, `<DIJ>` 和 `<PP_BETA>` 三个 tag。
 
@@ -536,32 +536,80 @@ for(int j=0; j<cut_mesh; ++j)
                 ofs << "</PP_BETA>" << std::endl;
 ```
 
-####### 赝势信息分发：UnitCell::bcast_unitcell2(void)
+#### 赝势信息分发：UnitCell::bcast_unitcell2(void)
 
 `#ifdef __MPI`
 
+接下来对赝势信息进行MPI进程（processor）间的分发：
+```cpp
+#ifdef __MPI
+    bcast_unitcell2();
+#endif
+```
+
+```cpp
+// module_cell/unitcell.cpp:bcast_unitcell2()
+void UnitCell::bcast_unitcell2(void)
+{
+    for (int i = 0; i < ntype; i++)
+    {
+        atoms[i].bcast_atom2();
+    }
+    return;
+}
+```
+
+```cpp
+// module_cell/atom_spec.cpp:Atom::bcast_atom2()
+void Atom::bcast_atom2()
+{
+    this->ncpp.bcast_atom_pseudo();
+}
+```
+
+```cpp
+// module_cell/atom_pseudo.cpp::Atom_pseudo::bcast_atom_pseudo()
+void Atom_pseudo::bcast_atom_pseudo(void)
+{
+....
+        Parallel_Common::bcast_int( lmax );
+....
+        Parallel_Common::bcast_double( etotps );
+....
+        Parallel_Common::bcast_bool( tvanp );
+....
+        Parallel_Common::bcast_string( psd );
+....
+        // below two 'bcast_double' lines of codes seem to have bugs,
+        // on some computers, the code will stuck here for ever.
+        // mohan note 2021-04-28
+        Parallel_Common::bcast_double( dion.c , nbeta * nbeta);
+        Parallel_Common::bcast_double( betar.c, nr * nc );
+}
+```
+
 `#endif`
 
-####### 赝势信息核对
+#### 赝势信息核对
 
 接下来跨原子种类检验泛函是否一致：
 
 ```cpp
-for(int it=0; it<ntype; it++)
+    for(int it=0; it<ntype; it++)
     {
         if(atoms[0].ncpp.xc_func !=atoms[it].ncpp.xc_func)
         {
 ```
 
-####### STRU 结构检查：UnitCell::check_structure()
+#### STRU 结构检查：UnitCell::check_structure()
 
 检验结构中任意两原子之间距离是否大于其固定倍数（<1）的共价半径和，
 
 ```cpp
-check_structure(GlobalV::MIN_DIST_COEF);
+    check_structure(GlobalV::MIN_DIST_COEF);
 ```
 
-####### 计算轨道数：UnitCell::cal_natomwfc()
+#### 计算轨道数：UnitCell::cal_natomwfc()
 
 `UnitCell::cal_natomwfc()` 函数计算所有种类的原子轨道数量加和，对于非 `nspin=4`，即非 soc（自旋轨道耦合）情况，角量子数 l 和 s 非耦合，l 单独可以作为好的量子数来区分量子态，因此对于每个赝势中定义的 wfc，若其对应 occupation 大于等于 0（即有效 wfc），则对应于其角量子数 l，轨道数量增加 2l+1，即计数其磁量子数 m，也相当于对 alpha 和 beta spin 的单独计数。对于 `nspin=4` 的情况，若考虑 soc，则轨道数对 j=l+s 的情况，当前原子种类当前角量子数对应轨道数量记为 2l+1+1，否则为 2l+1。对于非 soc 但 `nspin=4`，当前原子种类轨道当前角量子数对应轨道数量记(2l+1)*2：
 
@@ -621,11 +669,11 @@ GlobalV::NLOCAL = 0;
 2. 计算跨原子种类最大角量子数 UnitCell::lmax 和某 l 对应最大 zeta 数 `UnitCell::nmax`，以及跨原子种类的类内 zeta 数总和最大值 UnitCell::nmax_total
 3. 寻找赝势中最大角量子数 `UnitCell::lmax_ppwf`。
 
-####### 价电子数核对
+#### 价电子数核对
 
 核对赝势中定义的价电子数与 ABACUS 预置库中原子的最小价电子数
 
-####### 获取最大格点数量：UnitCell::cal_meshx()
+#### 获取最大格点数量：UnitCell::cal_meshx()
 
 计算跨原子种类的最大格点数量，存储在 `UnitCell::meshx` 中，目前 ABACUS 代码中变量命名后缀 x 可能代表 max，正如之前看到 `npwx` 等。
 

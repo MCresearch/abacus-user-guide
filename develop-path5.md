@@ -11,15 +11,15 @@
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
 > 2. 不堆砌代码解释——避免平庸的代码解释，努力兼顾拉近读者和代码距离的同时，做到提纲挈领，不逐行复制代码后进行停留在代码语义上的解释
 
-# Driver
+<strong>Driver</strong>
 
-## Driver::atomic_world()
+<strong>Driver::atomic_world()</strong>
 
-### Driver::driver_run()
+<strong>Driver::driver_run()</strong>
 
-#### 多层继承：Init() functions in esolver class
+# 多层继承：Init() functions in esolver class
 
-##### 盯紧数据流：Constructor the ESolver_KS()
+## 盯紧数据流：Constructor the ESolver_KS()
 
 跟随继承关系，我们从 `ESolver_FP` 来到 `ESolver_KS`，之后我们还会进入下一层 `ESolver_KS_PW`。和之前一样，我们仍然需要关心从 `ESolver_FP` 到 `ESolver_KS`，多了哪些数据成员，数据成员在何时被分配内存，何时拥有具体数值，对之后理解程序的整体流程控制十分重要。
 
@@ -109,7 +109,7 @@ namespace ModuleESolver
 
 接下来我们对 `ESolver_KS()` 中的其他操作以及其具体结果进行介绍。
 
-###### Constructor the ModulePW::PW_Basis_K_Big()
+### Constructor the ModulePW::PW_Basis_K_Big()
 
 `ModulePW::PW_Basis_K_Big` 类的构造函数进行过一次重载，此时调用的版本为重载版本。在重载版本中，完全为继承 `PW_Basis` 的构造函数对应版本，但内容简单：
 
@@ -144,7 +144,7 @@ void FFT::set_precision(std::string precision_) {
 }
 ```
 
-###### Constructor the Charge_Mixing()
+### Constructor the Charge_Mixing()
 
 我们按照相同路数查看 `Charge_Mixing` 类的构造函数：
 
@@ -159,7 +159,7 @@ Charge_Mixing::Charge_Mixing()
 以及其所属类的指针 `p_chgmix` 的相关调用操作：
 
 ```cpp
-p_chgmix = new Charge_Mixing();
+        p_chgmix = new Charge_Mixing();
         p_chgmix->set_rhopw(this->pw_rho);
         p_chgmix->set_mixing(INPUT.mixing_mode,
                              INPUT.mixing_beta,
@@ -204,10 +204,10 @@ void Charge_Mixing::need_auto_set()
 }
 ```
 
-##### Trigger: ESolver_KS::Init()
+## Trigger: ESolver_KS::Init()
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
         ESolver_FP::Init(inp,ucell);
@@ -252,7 +252,7 @@ template<typename FPTYPE, typename Device>
 
 <em>因 Symmetry::analy_sys()功能尚未完全部署，暂时跳过。</em>
 
-###### 波函数 k 点采样：K_Vectors::set()
+### 波函数 k 点采样：K_Vectors::set()
 
 在一般的第一性原理软件中，或对建模为周期性体系（认定其中包含平移对称性的体系）而言，平移对称性决定了$$\mathbf{k}$$是量子数之一，因此为区分态，并且计算态，k 点采样对于准确计算体系的性质尤为重要（尽量准确计算占据态），但这一 k 点所对应$$\mathbf{k}$$需要和原本用于展开波函数的平面波基其$$\mathbf{G}$$加以区分：$$\mathbf{G}$$（通过 ecut 决定）只能决定当前待求波函数的精度，但还并不能决定当前体系的性质能否计算准确。回顾 Bloch 定理，在 k 点$$\mathbf{k}$$，第 n 个能级在实空间坐标表象下的波函数为：
 
@@ -322,7 +322,7 @@ void K_Vectors::set(const ModuleSymmetry::Symmetry &symm, const std::string &k_f
 }
 ```
 
-####### k 点生成：K_Vectors::read_kpoints()及变量赋值回溯复习
+#### k 点生成：K_Vectors::read_kpoints()及变量赋值回溯复习
 
 来到 `K_Vectors::read_kpoints()` 函数，对于前三条件判断，第一则为让非 rank0 processors 退出该函数，
 
@@ -375,7 +375,9 @@ bool K_Vectors::read_kpoints(const std::string &fn)
 
 ![](picture/fig_path5-8.png)
 
-![](picture/fig_path5-9.png)
+[Full List of INPUT Keywords ‒ ABACUS documentation](https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html)
+
+![善用Ctrl+F](picture/fig_path5-9.png)
 
 即如果指定了一个值，则 `kspacing[1]` 和 `kspacing[2]` 拥有和 `kspacing[0]` 相同值，若定义三个值，则三个值各不相同，通过 `Input::read_kspacing()` 实现。定义值后，将覆盖写入 `KPT` 文件，因此在之后的读取过程中读入的结果其实是刚刚写的结果。
 
@@ -488,15 +490,15 @@ Line
 
 `"Monkhorst-Pack"` 和 `"Gamma"` 方式对 k 空间采样：
 
-![](picture/fig_path5-10.png)
+![klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1](picture/fig_path5-10.png)
 
 以这两种采样方式所给定的在 `this->kvec_d` 数组中存储顺序：
 
-![](picture/fig_path5-11.png)
+![klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)](picture/fig_path5-11.png)
 
-####### k 点归约、后处理与并行同步
+#### k 点归约、后处理与并行同步
 
-######## 归约：K_Vectors::ibz_kpoint()
+##### 归约：K_Vectors::ibz_kpoint()
 
 在按照一定方法（Monkhorst-Pack、直接给定 k 点、Kpath）采样 k 点之后，需要根据对称性减少 k 点数量，使得计算量减少。对称操作可以使得 k vector 发生置换，或使得 k vector 不变。
 
@@ -663,9 +665,9 @@ void K_Vectors::ibz_kpoint(const ModuleSymmetry::Symmetry &symm, bool use_symm,s
     ....
 ```
 
-![](picture/fig_path5-12.png)
+![1-dimensional example](picture/fig_path5-12.png)
 
-![](picture/fig_path5-13.png)
+![2-dimensional example](picture/fig_path5-13.png)
 
 k 点归约通过 C++11 开始支持的匿名函数实现：
 
@@ -722,6 +724,8 @@ void K_Vectors::ibz_kpoint(const ModuleSymmetry::Symmetry &symm, bool use_symm,s
 
 之后匹配已经记录的 `kvec_d`（在变量 `kvec_d_ibz` 中，std::vector<> 容器），如果是新的则记录，如果是旧的则提高 k 点权重，用于后续计算需要 k 点平均的物理量。k 点归约部分的程序框图大致如下：
 
+![](picture/fig_path5-14.png)
+
 经过 k 点归约，下列变量数据成员的值被改变：
 
 | 修改变量           | 意义                                                                                                                                                                                                                          |
@@ -754,7 +758,7 @@ void K_Vectors::ibz_kpoint(const ModuleSymmetry::Symmetry &symm, bool use_symm,s
 
 该函数的具体实现请自主阅读（[Link](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_cell/klist.cpp#L560)）。
 
-######## 后处理：K_Vectors::update_use_ibz()
+##### 后处理：K_Vectors::update_use_ibz()
 
 然而到达上层函数 `K_Vectors::set(): line 105` 后，以下量被更新：
 
@@ -840,7 +844,7 @@ void K_Vectors::set_both_kvec(const ModuleBase::Matrix3 &G, const ModuleBase::Ma
 
 而对于更一般的，科学计算软件编写过程中需要注意的各种数值噪声、精度损失问题，见（文档缺失）。
 
-######## 分发与并行同步：`K_Vectors::mpi_k()`
+##### 分发与并行同步：`K_Vectors::mpi_k()`
 
 生成、归约并进行过简单的 k 点后处理后，接下来对 k 点进行分发（记住 k 点的 MPI 并行在平面波基矢量下是比平面波并行和能带数并行更有效的并行方式，因为每个 k 点的 Kohn-Sham 方程求解基本都是独立的，所以并行效率较高）。
 
@@ -939,7 +943,7 @@ void K_Vectors::mpi_k(void)
 
 该函数第 12 行为每个 processor 分配了一定数量的 k 点，❗ 注意，此时每个 processor 的 `K_Vectors::nks` 的数量已经不同。之后在第 41 行，已经按照 `this->nks*this->nspin` 大小 resize 数组，而非原本的 `this->nkstot*this->nspin`。`K_Vectors::mpi_k()` 函数运行结束时，各 processor 已经拥有数量和内容不相同的 `this->isk`, `this->wk`, `this->kvec_d` 以及 `this->kvec_c`。即<strong>分配的 processor-特征变量是直接的 k 点坐标</strong>。
 
-####### Unrestricted Kohn-Sham (UKS) case
+#### Unrestricted Kohn-Sham (UKS) case
 
 贯穿刚刚的过程我们默认了只关心 RKS，即 Restricted Kohn-Sham scheme，对于非限制性情况（即不限制两自旋 channel 必须具有相同空间轨道）却丝毫未提及，仅在 `K_Vectors::set()` 函数的一开始见过对于 noncolinear 情况，设置 `nspin` 由 4 到 1。特别地，对于更加一般的情况，`nspin`=2 是最基本和常见的 scheme。
 

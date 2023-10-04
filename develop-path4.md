@@ -11,22 +11,22 @@
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
 > 2. 不堆砌代码解释——避免平庸的代码解释，努力兼顾拉近读者和代码距离的同时，做到提纲挈领，不逐行复制代码后进行停留在代码语义上的解释
 
-# Driver
+<strong>Driver</strong>
 
-## Driver::atomic_world()
+<strong>Driver::atomic_world()</strong>
 
-### Driver::driver_run()
+<strong>Driver::driver_run()</strong>
 
-#### 多层继承：Init() functions in esolver class
+# 多层继承：Init() functions in esolver class
 
-##### Trigger: ESolver_FP::Init()
+## Trigger: ESolver_FP::Init()
 
-###### 平面波格点初始化：PW_Basis:: initgrids()
+### 平面波格点初始化：PW_Basis:: initgrids()
 
 完成了 `INPUT` 和 `STRU`，以及赝势文件的读取环节，接下来我们来到平面波的初始化设置相关部分。
 
 ```cpp
-void ESolver_FP::Init(Input& inp, UnitCell& cell)
+    void ESolver_FP::Init(Input& inp, UnitCell& cell)
     {
         ....
         if (inp.nx * inp.ny * inp.nz == 0)
@@ -57,7 +57,7 @@ ESolver_FP::ESolver_FP()
 相较于 `PW_Basis::initgrids()`，`PW_Basis_Big::initgrids()` 还初始化了 `nbx`, `nby` 和 `nbz` 的值，尽管对于平面波而言整个 `PW_Basis_Big` 都是冗余功能（`PW_Basis_Big` 只是在 LCAO 里面做格点积分的时候会用到）：
 
 ```cpp
-virtual void initgrids(const double lat0_in,const ModuleBase::Matrix3 latvec_in,
+    virtual void initgrids(const double lat0_in,const ModuleBase::Matrix3 latvec_in,
         const double gridecut)
     {
         // generation of nx, ny and nz are omitted here
@@ -156,7 +156,7 @@ void PW_Basis:: initparameters(
 
 ❗ 注意：这里还完成了倒空间格点数量 `fftnx`, `fftny` 和 `fftnz` 的赋值。因为 FFT 变换前后的格点数量一般相同，因此 `fftnx = nx`，`fftny = ny`，...。
 
-![](picture/fig_path4-1.png)
+![ ](picture/fig_path4-1.png)
 
 然后对平面波在 MPI 进程间进行分发：
 
@@ -183,11 +183,11 @@ void PW_Basis::setuptransform()
 }
 ```
 
-###### PW_Basis::setuptransform()（[link](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_basis/module_pw/pw_basis.cpp#L53)）
+### PW_Basis::setuptransform()（[link](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_basis/module_pw/pw_basis.cpp#L53)）
 
-####### 并行机制简述
+#### 并行机制简述
 
-######## 并行池
+##### 并行池
 
 到这里，我们不得不开始对平面波的 MPI 并行机制有一个大致的认识。在 ABACUS 中，CPU（=processor）首先根据不同的布里渊区 k 点分组被划分成不同的并行池（parallelizaiton pool），每个 pool 都包含几个 k 点，在每个 pool 里面会有完整的对该 k 点求解 Kohn-Sham 方程的过程。因此，在每个 pool 中采用一定数量的 CPU 进程来完成计算。在 `INPUT` 文件中，`KPAR` 参数决定了并行池的数量（即 pool 的个数）。换句话说，ABACUS 的 k 点并行机制为，将 k 点（设其数量为 nkpt）分配在 `KPAR` 个 pool 中，若一共有 `nproc` 个 processor，则：
 
@@ -198,7 +198,7 @@ void PW_Basis::setuptransform()
 
 另外注意，自旋是通过 k 点这个 index 被包含进计算的。即对同 1 个 k 点的自旋上下是通过在程序里设置两个 k 点来完成计算的。例如，我们采用 4*4*4=64 个 k 点进行运算，如果不开对称性，那么 nspin=1 时程序执行的是 64 个 k 点，npsin=2 时程序执行的是 64*2=128 个 k 点。
 
-######## MPI 进程编号：rank
+##### MPI 进程编号：rank
 
 rank 是一个在 MPI 并行里常被用到的变量。在拥有不止一个 processor 的时候，每个 processor 都具有唯一的编号，称为 rank。如果在每个 processor 都有 rank 的基础上还定义了 pool，以及在每个 pool 中的 processor 数量，则 processor 除了有跨 pool 的全局 rank，也可以有 pool 之内的局部 rank，这部分内容见 `module_base/global_variable.cpp`:
 
@@ -232,7 +232,7 @@ if(GlobalV::MY_RANK==0)
         }
 ```
 
-######## 并行策略
+##### 并行策略
 
 于是问题便到来：在并行条件下，代码究竟是如何执行的？
 
@@ -259,11 +259,11 @@ if(GlobalV::MY_RANK==0)
 > A process is an instance of a program that is being executed. It has its own memory space, system resources, and execution context. A process can contain multiple threads, each of which can execute independently and concurrently within the same process. Processes are managed by the operating system and can communicate with each other through inter-process communication mechanisms.
 > A thread, on the other hand, is a lightweight unit of execution within a process. It shares the same memory space and system resources as the process it belongs to, but has its own execution context. Multiple threads within a process can execute concurrently and share data and resources within the process. Threads are managed by the operating system or by the application itself, depending on the programming language and platform.
 
-######## OpenMP-MPI 混合编程
+##### OpenMP-MPI 混合编程
 
 通常来讲，尽管 OpenMP 提供了线程并行，但由于共享内存可能并不存在于 processors 之间，或 computer, nodes 之间，且没有适合的内存共享系统（multi-socket server），此时如果以 OpenMP 放心运行，则可能得出错误结果或直接报错——因为内存无法访问。对于这种情况，需要使用 MPI（Message passing interface）来维持无内存共享处理单元之间的信息交换，以及信息分发和分布计算，而在处理单元内部，即可以共享内存的域内，则可以通过 OpenMP 技术来进行线程级并行。
 
-####### 实空间格点分发
+#### 实空间格点分发
 
 在简单介绍完并行机制后，我们知道，对于未显式以并行方式实现的函数，其运行将在每一个 processor。在接下来的平面波分发过程中，请始终牢记这一理念，尤其在 processor-local 变量和 processor-global 变量的传值过程中。
 
@@ -288,7 +288,7 @@ void PW_Basis::setuptransform()
 
 回到正题：
 
-######## 实空间：PW_Basis::distribute_r()
+##### 实空间：PW_Basis::distribute_r()
 
 > ❗<strong>Attention</strong>
 > 注意，此时实际调用的也是 `PW_Basis_Big` 而非 `PW_Basis` 的 `distribute_r()` 函数。
@@ -337,9 +337,9 @@ if(ip == this->poolrank)
 
 该判断不会 always `true`。因此 `PW_Basis::distribute_r()` 将 3D 实空间格点，按照 z 方向进行分发，分给了不同的 processors，并赋值 `this->npz`，`this->nplane`, `this->startz_current` 和 `this->nrxx`，意义分别为<strong>当前 processor 的 z 方向格点数量</strong>、<strong>xy 平面数量</strong>、<strong>z 格点的起始索引</strong>以及<strong>当前 processor 所分得实空间格点总数</strong>（分配后 z 方向格点 ×xy 平面格点）。
 
-![](picture/fig_path4-2.png)
+![PW_Basis::distribute_r()：设一个pool中有5个processors](picture/fig_path4-2.png)
 
-######## 倒空间：PW_Basis::distribute_g()
+##### 倒空间：PW_Basis::distribute_g()
 
 倒空间格点的分发采用了和实空间不同的方式，这主要是因为倒空间“球”的存在（ecutwfc 和 ecutrho），使得非空间中所有点都需要考虑在内，而实空间则并非如此。更一般而言，有限的实空间带来无限的倒空间（即实空间 delta 函数需要无限数量的平面波展开）延展，而有限的倒空间（倒空间 delta 点）带来无限的实空间延展（如一个平面波）。
 
@@ -400,7 +400,7 @@ void PW_Basis::distribution_method1()
     }
 ```
 
-######### 分发最小单元：“棍子” - 准备工作
+### 分发最小单元：“棍子” - 准备工作
 
 穿过布里渊区的整数点（2pi/a 的整数倍）都代表一个三个 index 的平面波，而一系列的点在截断半径以内沿着某个方向就组成了所谓的“stick”（代表平面波集合的“棍子”，一个“棍子”包含了多个平面波，简称就叫“棍子”）。
 
@@ -437,7 +437,7 @@ for (int ix = ix_start; ix <= ix_end; ++ix)
     }
 ```
 
-![](picture/fig_path4-3.png)
+![this->count_pw_st(st_length2D, st_bottom2D)](picture/fig_path4-3.png)
 
 在倒空间分发平面波时，由于 x/y/z 均等在正负半轴 span，因此常常会涉及到 C++ 不支持负数索引的问题（btw: Python 和 FORTRAN 支持负数索引，但支持方式不同），ABACUS 当前所采取的策略是：
 
@@ -453,7 +453,7 @@ $$
 
 因此倒空间可以缩减（reduce），此两种情况均对倒空间 xy 平面上格点采样有所影响：
 
-######### “棍子”的分发和分发记录
+###### “棍子”的分发和分发记录
 
 `PW_Basis::collect_st()` 和 `PW_Basis::divide_sticks_1()` 分别排序与分发“棍子”到不同 processor：
 
@@ -471,7 +471,7 @@ $$
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `this->npw_per`          | 各 processor 被分配平面波数量                                                                                                                                                                                                                                                                                                                                                                  |
 | `this->nst_per`          | 各 processor 被分配“棍子”数量                                                                                                                                                                                                                                                                                                                                                                |
-| `this->fftixy2ip`        | 从“棍子”translated (x,y)-pair 到 processor index 的映射，即通过“棍子”所在(x,y)到 processor 的映射关系：``cpp// module_basis/module_pw/pw_distributeg_method1.cpp:line 282this->fftixy2ip[st_i[is] * this->fftny + st_j[is]] = ipmin;`` translated pair 实际为一维索引，使用 `x*fftny + y`。进而 `fftixy2ip[st_i[is] * this->fftny + st_j[is]]` 实现了从“棍子”索引到 processor 索引的映射。 |
+| `this->fftixy2ip`        | 从“棍子”translated (x,y)-pair 到 processor index 的映射，即通过“棍子”所在(x,y)到 processor 的映射关系：```cpp // module_basis/module_pw/pw_distributeg_method1.cpp:line 282 this->fftixy2ip[st_i[is] * this->fftny + st_j[is]] = ipmin;``` translated pair 实际为一维索引，使用 `x*fftny + y`。进而 `fftixy2ip[st_i[is] * this->fftny + st_j[is]]` 实现了从“棍子”索引到 processor 索引的映射。 |
 | `this->startnsz_per`     | 每个包含“棍子”的 processor 其第一个 z-axis grid point 的编号，从 0 开始，跨 processor。                                                                                                                                                                                                                                                                                                      |
 
 关于 `this->startnsz_per` 意义的介绍，见辅助阅读材料：[Appendix.2 平面波倒空间分发详解](https://ucoyxk075n.feishu.cn/docx/F6kLdqi50oEr75xxUxGcgJGWncf)。
@@ -518,7 +518,7 @@ void PW_Basis::distribution_method1()
     ....
 ```
 
-######### 映射表：OOP？
+###### 映射表：OOP？
 
 在倒空间平面波的分发过程中，共建立过四个映射表，分别是 `this->fftixy2ip`, `this->istot2ixy`, `this->ig2isz` 和 `this->is2fftixy`，其意义分别为：
 
@@ -563,7 +563,7 @@ void PW_Basis::distribution_method1()
 }
 ```
 
-####### 分发后处理
+#### 分发后处理
 
 ```cpp
 void PW_Basis::setuptransform()
@@ -612,7 +612,7 @@ void PW_Basis::getstartgr()
 
 下面将要调用 `PW_Basis::ft:clear()` 函数，再之后将和 FFTW 以及 MPI 库进行交互，完成 FFT 操作的准备工作。但至此，所有平面波和实空间格点的分发工作已经完成。
 
-####### Special topic: utilization of FFTW library in ABACUS
+#### Special topic: utilization of FFTW library in ABACUS
 
 ```cpp
 void PW_Basis::setuptransform()
@@ -628,7 +628,7 @@ void PW_Basis::setuptransform()
 
 暂略
 
-###### PW_Basis::collect_local_pw()
+### PW_Basis::collect_local_pw()
 
 接下来以一个简单的函数来检验之前的学习效果：
 
@@ -698,7 +698,7 @@ void ESolver_FP::Init(Input& inp, UnitCell& cell)
         ....
 ```
 
-###### PW_Basis::collect_uniqgg()
+### PW_Basis::collect_uniqgg()
 
 ```cpp
 void ESolver_FP::Init(Input& inp, UnitCell& cell)

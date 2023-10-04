@@ -14,7 +14,7 @@
 
 # 主题 1：dataflow
 
-## 全局变量
+## 1. 全局变量
 
 不仅在上篇（[Part 5](develop-path5.md)）的最后，在 k 点分发时我们看到了在 `GlobalC` 中声明为 `extern` 的 `Parallel_Kpoints` 类对象 `Pkpoints`，在很多地方会被直接调用的 `UnitCell` 类对象 `ucell`，以及实际上最一开始看到的 `Input` 类对象 `INPUT`，也被声明为 `extern`。
 
@@ -24,13 +24,15 @@
 
 另一方面，如果有 `extern` 变量的生命周期和整个程序相同，可能给开发者带来困难：判断其何时何阶段具有何值就更有难度。
 
-## 输入文件读取
+## 2. 输入文件读取
 
 综合前 5 篇介绍的内容，结合 ABACUS workflow 的赋值顺序，将有关的全局变量总结如下：
 
+![](picture/fig_sm1-flow.png)
+
 # 主题 2：分发存储
 
-## 格点分发
+## 1. 格点分发
 
 在 [Part 4](develop-path4.md)，我们解读过 ABACUS 关于实空间格点与倒空间格点的分发策略。我们需要重新<strong>确定所分发的产物是什么</strong>。
 
@@ -42,7 +44,7 @@ this->fftny = this->ny;
 this->fftnz = this->nz;
 ```
 
-### 实空间格点（[link](https://ucoyxk075n.feishu.cn/docx/R2b5dB0jKoMLwGxJERDcYpfanUb#JM21dgJZOoUBxPxp43mcprzInCb)）
+### 1.1 实空间格点（[link](https://ucoyxk075n.feishu.cn/docx/R2b5dB0jKoMLwGxJERDcYpfanUb#JM21dgJZOoUBxPxp43mcprzInCb)）
 
 实空间格点的分发策略分两步：
 
@@ -63,7 +65,7 @@ this->fftnz = this->nz;
 
 可以预想，对于三维空间的数据，可以以 `this->startz_current` 为依据分配具有数据的格点给不同 processor，也可使用一个 processor，访问 `this->startz` 数组来实现三维空间格点数据在 processor 间的分发。
 
-### 倒空间格点（[link](https://ucoyxk075n.feishu.cn/docx/R2b5dB0jKoMLwGxJERDcYpfanUb#PyVAdzA0xoYGdqxQgAucmNrznWU)）
+### 1.2 倒空间格点（[link](https://ucoyxk075n.feishu.cn/docx/R2b5dB0jKoMLwGxJERDcYpfanUb#PyVAdzA0xoYGdqxQgAucmNrznWU)）
 
 倒空间的格点分发策略分两步：
 
@@ -100,7 +102,7 @@ this->fftnz = this->nz;
 
 （x, y, z）→（ip, is, iz）：`this->fftixy2ip` 确定 ip，在 ip 中得到 `this->nst`，再访问当前 processor 的 `this->is2fftixy`，核对（x, y），得到 is，然后转换 z 到 iz。
 
-## k 点分发（[link](https://ucoyxk075n.feishu.cn/docx/RCLSd2Of5oughUxmVDZcBhmqnDe#X6MVdY6t4oAFcGxvVfIcMUmgnUh)）
+## 2. k 点分发（[link](https://ucoyxk075n.feishu.cn/docx/RCLSd2Of5oughUxmVDZcBhmqnDe#X6MVdY6t4oAFcGxvVfIcMUmgnUh)）
 
 k 点的分发策略分三步：
 
@@ -123,9 +125,9 @@ k 点分发后在 `K_Vectors` 类中，主要有如下成员变量被赋值：
 
 # 开发初步尝试：doxygen 注释和单元测试
 
-## 程序注释规范
+## 1. 程序注释规范
 
-### 现状介绍
+### 1.1 现状介绍
 
 诚然这个系列的文档是为让 ABACUS 新晋开发者更快熟悉 ABACUS 代码，清楚 ABACUS 中各个变量和功能可能声明、初始化和实现的位置，以及变量间的从属关系，但文档的发行速度和更新速度远慢于 ABACUS 新版本的开发。因为这一点，ABACUS 开发团队同时希望 ABACUS 的信息 self-contained，即在每个程序文件中都有足够详尽的关于当前文件内容的注释，以及其他可能需要的信息。
 
@@ -139,9 +141,9 @@ k 点分发后在 `K_Vectors` 类中，主要有如下成员变量被赋值：
 
 然而，在头文件中添加 section 型注释可能会导致在 vscode 中讲注释显示在临近的第一个变量/函数上（如上图，会显示在 `NPROC` 上），而其他各变量和函数均保持未注释状态，此时在其他代码位置鼠标悬停时不会有注释显式。
 
-### 基本注释原则
+### 1.2 基本注释原则
 
-#### Doxygen 注释
+#### 1.2.1 Doxygen 注释
 
 ABACUS 现在推进 doxygen 格式的注释。Doxygen 注释在 vscode 中可以使用插件进行模板插入：
 
@@ -154,39 +156,39 @@ Doxygen 函数注释样例：
 | ![](picture/fig_sm1-6.png) | ![](picture/fig_sm1-7.png) |
 | ------------------------------------------- | ------------------------------------------- |
 
-#### 若干注意事项
+#### 1.2.2 若干注意事项
 
 1. 对于某个类中数据成员和成员函数的注释，请添加在相应的头文件中，避免在源文件中添加此类注释。对于程序代码的注释则没有要求，只需保证清晰明了。
 2. （对于头文件中添加的函数注释）特别对于一些 void 类型函数，形参表中变量既有输入也有输出的，在 `@param` 字段注明“[in]”或者"[out]"作为标识
 3. `@brief` 字段尽量保证描述清晰且语言简洁，更多的内容可以添加在 `@details` 字段
 4. 注意事项等可以添加在 `@attention` 字段
 
-### 为了更平滑的开发和维护：扩展注释内容
+### 1.3 为了更平滑的开发和维护：扩展注释内容
 
-#### 模块封装化注释
+#### 1.3.1 模块封装化注释
 
 封装、继承和多态是包括 C++ 在内的高级编程语言的核心理念。良好的封装有助于保护程序运行的稳定性，同时有利于开发工作的开展。然而，封装不仅仅是局部而言对某个类的封装，更应该将封装的理念应用于整体的程序设计。程序整体组织层面的封装，有利于在程序因一定需求需大幅改变结构时，能够稳定运行而不出错，同时能够实现各部分的独立、高效开发。
 
 现阶段 ABACUS 缺乏模块层级的注释，即对于某个模块（module）究竟需要传入哪些参数/物理量/性质，传出哪些参数/物理量/性质，是尚未总结和落实到文档中的方面。
 
-#### 上游-下游函数注释
+#### 1.3.2 上游-下游函数注释
 
 另一方面，除去 vscode 自身所包含的“查找所有引用”/“转到引用”的功能外，鼓励为函数添加注释时，添加 `@note` 字段，注明引用该函数的下游函数，即：考虑到通过 vscode“查看定义”，以及函数本身的调用方式可以方便查找到当前函数的上游函数，但在上游函数却较为困难获知被何下游函数调用。
 
 注释下游函数有利于局部重构工作的开展。
 
-## 单元测试
+## 2. 单元测试
 
 大型程序包含数量众多的函数，对 C++ 等支持 OOP 的语言来说，也包含更多的类等。保障程序中各函数的顺利和正确执行，是保障程序整体能够运行的基础。对于数值计算软件来说，除去正常运行测试外，之后也应包括数值精度测试，这一理念的前提是开发者具有数值计算软件的编程常识，如避免小数位数丢失、DivideZeroError、相减精度丢失等数值错误，同时也将推动 ABACUS 在精度方面进行一定数量的小范围重构，符合 2023 Q2 推行的“测试驱动开发（Test Driven Development, TDD）”理念。
 
-### 单元测试的设计原则
+### 2.1 单元测试的设计原则
 
 1. 独立性：在设计和编写单元测试时，应当尽可能减少对其他部分函数的依赖，当作其他函数并未测试，因此可靠性不能保证。
 2. 高覆盖：对于程序流程控制出现分支的情况，应酌情对所有分支进行全面覆盖，以保证所有分支的函数和运算都可以正常执行。
 3. 自动：禁止出现 stdin 交互
 4. 快速：因为仅需要测试函数是否正常运行，是否可以得到预期结果，因此需要尽可能避免使用需要高时间复杂度的计算方式，而是使用尽可能简单（可以 unphysical）的数据，尽可能快地得出结果，可以考虑对预期结果进行硬编码。
 
-### 对 private 变量的访问
+### 2.2 对 private 变量的访问
 
 由于当前 ABACUS 代码的封装并不完善，部分函数声明为 private 却仍然需要测试。另一方面，getter 和 setter 函数在原则上应当是从外部直接访问私有变量的唯一方式，但在使用之前也需要进行有效性测试。考虑到这两点，我们不得不尝试访问 private 或 protected 变量和成员函数。目前而言 ABACUS 中对 private 变量访问的方式主要有两种：
 
@@ -194,15 +196,15 @@ Doxygen 函数注释样例：
 2. 我们曾对访问 private 成员的方法进行过讨论，搜集到解决方案如下：[https://github.com/deepmodeling/abacus-develop/issues/2666](https://github.com/deepmodeling/abacus-develop/issues/2666)
    C++ 委员会有关于几种访问私有成员的方式及其讨论：http://www.gotw.ca/gotw/076.htm
 
-### 更多细节补充
+### 2.3 更多细节补充
 
 ABACUS 的单元测试依靠 Googletest 框架实现。关于 Googletest 的安装、单元测试的运行、单元测试的注释规范等，见：[ABACUS 测试者必知必会](https://dptechnology.feishu.cn/wiki/wikcnqfbpNCB3m4KTDvERnuWotd) 。
 
 为保证本地机器的工作不受影响，建议单元测试的编译和进行在 Bohrium 平台进行。
 
-## Fork and Pull request：在 ABACUS 上发布你的注释和单元测试，甚至更多！
+## 3. Fork and Pull request：在 ABACUS 上发布你的注释和单元测试，甚至更多！
 
-### Fork 和 Pull request
+### 3.1 Fork 和 Pull request
 
 Fork 是便于进行多人协作开发的机制，其“叉子”体现在：
 
@@ -210,7 +212,7 @@ Fork 是便于进行多人协作开发的机制，其“叉子”体现在：
 2. 在自己的仓库进行的任何改动将不会直接影响到原程序的时间线，但可以通过代码改动比较，来尽可能无冲突地将多人的改动进行合并
 3. 提交自己的改动，将自己 Fork 出的时间线和原有时间线进行合并的操作称为 Pull request (PR)
 
-### 工作流示例 1
+### 3.2 工作流示例 1
 
 1. Fork ABACUS Github 仓库到自己的账号下
 
@@ -236,6 +238,10 @@ Fork 是便于进行多人协作开发的机制，其“叉子”体现在：
 7. Github Desktop 中选择打开自己的仓库，再次审核代码改动后创建 pull request，待自动代码编译检查通过与代码人工审核
 
 ![](picture/fig_sm1-13.png)
+
+### 3.3 工作流示例2
+
+[Contributing to ABACUS ‒ ABACUS documentation](https://abacus.deepmodeling.com/en/latest/CONTRIBUTING.html#submitting-a-pull-request)
 
 # 附：如何在飞书中平滑地分享文档
 
