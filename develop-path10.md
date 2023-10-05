@@ -616,9 +616,9 @@ void HSolverPW<FPTYPE, Device>::update_precondition(std::vector<FPTYPE> &h_diag,
 
 ![](picture/fig_path10-7.png)
 
-Preconditioner of CG diagonalization method:
+Preconditioner of CG diagonalization method: [PreconditionerCGDiag.pdf](https://gitee.com/mcresearch/abacus-user-guide/blob/master/examples/develop/PreconditionerCGDiag.pdf)
 
-Preconditioner of Davidson diagonalization method:
+Preconditioner of Davidson diagonalization method: [PreconditionerDavidsonDiag.pdf](https://gitee.com/mcresearch/abacus-user-guide/blob/master/examples/develop/PreconditionerDavidsonDiag.pdf)
 
 #### HSolverPW::hamiltSolvePsiK()
 
@@ -695,7 +695,7 @@ void DiagoDavid<FPTYPE, Device>::diag(hamilt::Hamilt<FPTYPE, Device>* phm_in,
 
 Source code link: [https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_hsolver/diago_david.cpp#L49](https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_hsolver/diago_david.cpp#L49)
 
-![](picture/fig_path10-9.png)
+![Higher resolution framework of diag_mock() and relationship with other modules and functions](picture/fig_path10-9.png)
 
 > 🔧<strong>重构信息</strong>
 > `diag_mock()` will be renamed as `diag_once()` in the future
@@ -710,8 +710,10 @@ Source code link: [https://github.com/deepmodeling/abacus-develop/blob/develop/s
 基于上图，我们将选择数个关键点进行说明。
 
 1\. 对角化维度（ndim）设定
-   由于平面波数量众多-> 基函数数量众多-> 待对角化 Hamiltonian 矩阵维度巨大，而真正关心特征值/本征值/本征态数量远小于基函数数量，因此考虑使用子空间方法迭代求解其中能量最低的 n 个特征值/特征向量，而非一次性计算全部。由于子空间对角化方法的特性，实际需要对角化的子空间维度比用户所需能带数量要多（ndim 倍），ndim 被设计为用户设定参数：
-   ![](picture/fig_path10-10.png)
+
+由于平面波数量众多-> 基函数数量众多-> 待对角化 Hamiltonian 矩阵维度巨大，而真正关心特征值/本征值/本征态数量远小于基函数数量，因此考虑使用子空间方法迭代求解其中能量最低的 n 个特征值/特征向量，而非一次性计算全部。由于子空间对角化方法的特性，实际需要对角化的子空间维度比用户所需能带数量要多（ndim 倍），ndim 被设计为用户设定参数：
+
+![](picture/fig_path10-10.png)
 
 `nbasis`: [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md) : npwx*GlobalV::NPOL, npwx: maximal number of planewaves among all kpoints, for non-noncolinear cases, GlobalV::NPOL is 1, otherwise is 2.
 
@@ -812,7 +814,7 @@ typename OperatorPW<FPTYPE, Device>::hpsi_info OperatorPW<FPTYPE, Device>::hPsi(
 
 3\. 线性代数相关操作
 
-遍布 `SchmidtOrth`、`calc_elem`、`diag_zhegvx`、`calc_grad`、`refresh` 和 `diag_mock` 本体，其中存在很多类似于 BLAS 和 LAPACK 数学库中操作（矢量、矩阵）的命名方式，例如 `gemm_op`、`gemv_op` 等。同样地，如此组织操作，是为了尽可能支持模板偏特化。举例来讲，`gemm` 为 general matrix-matrix multiplication，`gemv` 则为 general matrix-vector multiplication，更多的使用方式见 BLAS quick reference 以及 LAPACK online documentation（[https://www.netlib.org/lapack/explore-html/index.html](https://www.netlib.org/lapack/explore-html/index.html)）：
+遍布 `SchmidtOrth`、`calc_elem`、`diag_zhegvx`、`calc_grad`、`refresh` 和 `diag_mock` 本体，其中存在很多类似于 BLAS 和 LAPACK 数学库中操作（矢量、矩阵）的命名方式，例如 `gemm_op`、`gemv_op` 等。同样地，如此组织操作，是为了尽可能支持模板偏特化。举例来讲，`gemm` 为 general matrix-matrix multiplication，`gemv` 则为 general matrix-vector multiplication，更多的使用方式见 BLAS quick reference 以及 LAPACK online documentation（[https://www.netlib.org/lapack/explore-html/index.html](https://www.netlib.org/lapack/explore-html/index.html)）：[BlasQuickReference.pdf](https://gitee.com/mcresearch/abacus-user-guide/blob/master/examples/develop/BlasQuickReference.pdf)
 
 > 🔧重构信息
 > Present Gram-Schmidt orthogonalization need to optimize both for numerical accurancy and performance reasons.

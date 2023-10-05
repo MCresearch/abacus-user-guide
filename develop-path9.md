@@ -706,7 +706,23 @@ $$
 \rho(\mathbf{G})=\frac{1}{\Omega_\text{cell}}\int_{\Omega_\text{cell}}{\rho(\mathbf{r})e^{-i\mathbf{G}\cdot\mathbf{r}}d\mathbf{r}}
 $$
 
-令$$\mathbf{r}'+\mathbf{\tau}_ {\alpha,i}\equiv\mathbf{r}$$，并在下文中标记$$S^\alpha(\mathbf{G})\equiv\sum_{i}^{n^\alpha}{e^{-i\mathbf{G}\cdot\mathbf{\tau}_{\alpha,i}}}$$：
+$$
+\rho(\mathbf{G})=\frac{1}{\Omega_\text{cell}}\sum_{\mathbf{T}}\int_{\Omega_\text{cell}}{\sum_{\alpha,i}{\rho^\alpha(\mathbf{r}-\mathbf{\tau}_{\alpha,i}-\mathbf{T})e^{-i\mathbf{G}\cdot\mathbf{r}}}}d\mathbf{r}^\prime
+$$
+
+令$$\mathbf{r}^\prime+\mathbf{\tau}_ {\alpha,i}\equiv\mathbf{r}$$，并在下文中标记$$S^\alpha(\mathbf{G})\equiv\sum_{i}^{n^\alpha}{e^{-i\mathbf{G}\cdot\mathbf{\tau}_{\alpha,i}}}$$：
+
+$$
+\rho(\mathbf{G})=\frac{1}{\Omega_\text{cell}}\sum_{\mathbf{T}}\int_{\Omega_\text{cell}}{\sum_{\alpha,i}{\rho^\alpha(\mathbf{r}^\prime-\mathbf{T})e^{-i\mathbf{G}\cdot(\mathbf{r}^\prime+\mathbf{\tau}_{\alpha,i})}}}d\mathbf{r}^\prime
+$$
+
+$$
+=\int_{\text{all space}}{\sum_{\alpha,i}{\rho^\alpha(\mathbf{r}^\prime)e^{-i\mathbf{G}\cdot(\mathbf{r}^\prime+\mathbf{\tau}_{\alpha,i})}}}d\mathbf{r}^\prime
+$$
+
+$$
+=\int_{\text{all space}}{\sum_{\alpha,i}{\rho^\alpha(\mathbf{r}^\prime)e^{-i\mathbf{G}\cdot(\mathbf{r}^\prime+\mathbf{\tau}_{\alpha,i})}}}d\mathbf{r}^\prime
+$$
 
 $$
 =\sum_\alpha{(\int_\text{all space}{\rho^\alpha(\mathbf{r^\prime})e^{-i\mathbf{G}\cdot\mathbf{r}^\prime}}d\mathbf{r}^\prime)\sum_i{e^{-i\mathbf{G}\cdot\mathbf{\tau}_{\alpha,i}}}}
