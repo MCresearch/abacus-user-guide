@@ -156,7 +156,7 @@ void PW_Basis:: initparameters(
 
 ❗ 注意：这里还完成了倒空间格点数量 `fftnx`, `fftny` 和 `fftnz` 的赋值。因为 FFT 变换前后的格点数量一般相同，因此 `fftnx = nx`，`fftny = ny`，...。
 
-![ ](picture/fig_path4-1.png)
+![](picture/fig_path4-1.png)
 
 然后对平面波在 MPI 进程间进行分发：
 

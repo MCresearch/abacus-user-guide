@@ -11,19 +11,19 @@
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
 > 2. 不堆砌代码解释——避免平庸的代码解释，努力兼顾拉近读者和代码距离的同时，做到提纲挈领，不逐行复制代码后进行停留在代码语义上的解释
 
-# Driver
+<strong>Driver</strong>
 
-## Driver::atomic_world()
+<strong>Driver::atomic_world()</strong>
 
-### Driver::driver_run()
+<strong>Driver::driver_run()</strong>
 
-#### 多层继承：Init() functions in esolver class
+# 多层继承：Init() functions in esolver class
 
-##### Initialization of rest parts of GlobalC
+## Initialization of rest parts of GlobalC
 
-###### pseudopot_cell_vnl
+### pseudopot_cell_vnl
 
-####### pseudopot_cell_vnl::init()
+#### pseudopot_cell_vnl::init()
 
 `init()` 函数赋值以下变量，并为指针和数组进行初始化：
 
@@ -58,9 +58,9 @@
 
 因此部分函数冗长但功能简单，可读性强，因此不逐行解读，如需寻找代码细节，请自行阅读（[link](https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_hamilt_pw/hamilt_pwdft/VNL_in_pw.cpp#L62)）。
 
-####### pseudopot_cell_vnl::init_vloc()
+#### pseudopot_cell_vnl::init_vloc()
 
-######## code
+##### code
 
 ```cpp
 template <typename FPTYPE, typename Device>
@@ -152,13 +152,13 @@ $$
 V_{\mathrm{loc}}\left( \mathbf{G} \right) =\frac{4\pi}{\Omega}\int{r^2\mathrm{d}r\frac{\sin \left( |\mathbf{G}|r \right)}{|\mathbf{G}|r}\left[ V_{\mathrm{loc}}\left( r \right) +\frac{Ze^2}{r}\mathrm{erf}\left( r \right) \right]}-Ze^2\frac{\exp \left[ -\frac{|\mathbf{G}|^2}{4} \right]}{|\mathbf{G}|^2}
 $$
 
-![](picture/fig_path8.png)
+![](picture/fig_path8-1.png)
 
 > 🤔<strong>思考时间</strong>
 > Write a piece of code to calculate the term above! Compare with the version in ABACUS source code, what are your pros and what are your cons?
 > If you are confident enough with your codes in aspect of well-documenting, clean-formatting and even efficiency and accurancy, why not pull a request to replace the present one? Do it!
 
-######## Relevant topic: a glimpse of Ewald summation
+##### Relevant topic: a glimpse of Ewald summation
 
 数值计算过程中需要考虑更多的技术问题，对于函数积分的可收敛性是其中一个重要的方面。erf(x)和 erfc(x)分别定义为：
 
@@ -224,7 +224,7 @@ $$
 > 🤔<strong>思考时间</strong>
 > More specifically the Ewald summation technique, there are many derivatives of it, for the Ewald summation takes a large part of computation time in classical Molecular dyanmics simulation. Further reading: PME (Particle Mesh Ewald summation), SPME (Smoothed Particle Mesh Ewald summation).
 
-####### Nonlocal pseudopotential initialization
+#### Nonlocal pseudopotential initialization
 
 ```cpp
 template <typename FPTYPE, typename Device>
@@ -239,11 +239,11 @@ void ESolver_KS_PW<FPTYPE, Device>::Init_GlobalC(Input& inp, UnitCell& cell)
     GlobalC::ppcell.cal_effective_D();
 ```
 
-######## pseudopot_cell_vnl::init_vnl()
+##### pseudopot_cell_vnl::init_vnl()
 
 在上篇（[Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md) ）和 `init()` 函数中（[link](https://ucoyxk075n.feishu.cn/docx/LRCEd799ko7WJrxorsQc2YMDndd#doxcnZKpIIIo5ZviJRPHCfqL8F2)）已经阐明各变量的意义，init_vnl()则对非局域赝势相关变量（`nhtol`, `nhtolm`, `nhtoj`, `indv`, `dvan/dvan_so`, `tab` 等）进行了实际的赋值操作，使其符合表（[link](https://ucoyxk075n.feishu.cn/docx/LRCEd799ko7WJrxorsQc2YMDndd#doxcnZKpIIIo5ZviJRPHCfqL8F2)）中描述。考虑到篇幅限制和实际需求，此处 SOC 相关部分略过，但保留链接可供自行查看：[link](https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_hamilt_pw/hamilt_pwdft/VNL_in_pw.cpp#L438)
 
-######## pseudopot_cell_vnl::cal_effective_D()
+##### pseudopot_cell_vnl::cal_effective_D()
 
 先前实际上已经对$$D_{ij}$$的出现位置进行过介绍（[Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md) ），此处 `cal_effective_D()` 则实现的是从 `dvan`（[原子种类][global index of projectori][global index of projectorj]）到 `deeq`（[ispin][global index of atom][index of projectori][index of projectorj]）的数据拷贝。
 
@@ -287,6 +287,8 @@ void pseudopot_cell_vnl::cal_effective_D(void)
 
 到这里，`GlobalC::pseudopot_cell_vnl ppcell` 中大部分数据成员的值均从 `UnitCell::atoms::ncpp` 中获得，即实现了如下数据传输方式：
 
+![](picture/fig_path8-2.png)
+
 即赝势数据从 upf 文件经 `UnitCell::atom.ncpp` 解析，上传至 `GlobalC` 中，详细其对应类为 `GlobalC::pseudopot_cell_vnl`，具体实例化对象为 `ppcell`。这一操作类似于 `Input::INPUT` 解析 INPUT 文件，上传至 `GlobalV`，唯一的区别是 `GlobalV` 直接以散装变量方式存储。
 
 > 🔧<strong>重构信息</strong>
@@ -296,9 +298,9 @@ void pseudopot_cell_vnl::cal_effective_D(void)
 > INPUT 文件的读取，使用 `Input` 类中方法，`Input` 被声明为 `extern`，其成员函数 `Input::input_conv()` 将大部分变量传到 `GlobalV`，少部分直接传到具体的类数据成员中。
 > 😖 somewhat in mess
 
-###### wavefunc
+### wavefunc
 
-####### wf_atomic::init_at_1()
+#### wf_atomic::init_at_1()
 
 ```cpp
 template <typename FPTYPE, typename Device>
@@ -317,7 +319,7 @@ void ESolver_KS_PW<FPTYPE, Device>::Init_GlobalC(Input& inp, UnitCell& cell)
 
 。注意如 Part 3 所提到，实际读取的 pswfc 已经乘以 r。
 
-####### wavefunc::wfcinit()
+#### wavefunc::wfcinit()
 
 ```cpp
 template <typename FPTYPE, typename Device>
@@ -434,10 +436,10 @@ void Relax_Driver::relax_driver(ModuleESolver::ESolver *p_esolver)
 
 通过检查 `ESolver` 各派生类和基类之间的继承关系，`ESolver_KS::Run()` 为此时实际调用的函数。
 
-##### ESolver::Run()/ESolver_KS::Run()
+## ESolver::Run()/ESolver_KS::Run()
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Run(const int istep, UnitCell& ucell)
     {
 ....//omit totally irelevant lines

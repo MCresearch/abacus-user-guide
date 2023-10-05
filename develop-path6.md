@@ -22,7 +22,7 @@
 我们来到 `ModuleESolver::ESolver_KS::Init()`，在 `source/module_esolver/esolver_ks.cpp: line105`（[link](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_esolver/esolver_ks.cpp#L105)）：
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
     ....
@@ -67,12 +67,12 @@ namespace ModuleESolver
         ModulePW::PW_Basis_K_Big* tmp = static_cast<ModulePW::PW_Basis_K_Big*>(pw_wfc);
 ```
 
-因此对 `pw_wfc` 中成员函数的调用，和 `pw_rho` 类似地，此处会调用到其派生类 `PW_Basis_K_Big` 的对象 `tmp` 的成员函数。另一方面在 [Introduction to ABACUS: Path to PW calculation - Part 4](https://ucoyxk075n.feishu.cn/docx/R2b5dB0jKoMLwGxJERDcYpfanUb)，我们对 `PW_Basis_Big::initgrids()` 在形参表中不包含 `nx`, `ny` 和 `nz` 的重载情况进行了介绍。当时使用 `ecutrho`，生成了 `nx`, `ny`, `nz`，`bx`，`by`，`bz` 及其组合，以及倒空间 `fftnx`, `fftny` 和 `fftnz`，然后分别将格点进行了实空间和倒空间的分发，为切片和“棍子”为分配基本单元，在 processors 间进行分发。
+因此对 `pw_wfc` 中成员函数的调用，和 `pw_rho` 类似地，此处会调用到其派生类 `PW_Basis_K_Big` 的对象 `tmp` 的成员函数。另一方面在 [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)，我们对 `PW_Basis_Big::initgrids()` 在形参表中不包含 `nx`, `ny` 和 `nz` 的重载情况进行了介绍。当时使用 `ecutrho`，生成了 `nx`, `ny`, `nz`，`bx`，`by`，`bz` 及其组合，以及倒空间 `fftnx`, `fftny` 和 `fftnz`，然后分别将格点进行了实空间和倒空间的分发，为切片和“棍子”为分配基本单元，在 processors 间进行分发。
 
 此处继续沿用依靠 `Input::ecutrho` 生成的 `nx`, `ny` 和 `nz`，调用包含 `nx`, `ny` 和 `nz` 在形参表中的 `PW_Basis_K::initgrids()` 函数（和 `PW_Basis_Big` 类不同，`PW_Basis_K_Big` 类并未重载 `initgrids()`）,
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
     ....
@@ -89,7 +89,7 @@ template<typename FPTYPE, typename Device>
 > 🤔<strong>思考时间</strong>
 > 这样做的结果是什么？让 ecutwfc 等于 ecutrho 的操作正确吗？
 
-![](picture/fig_path6-1.png)
+![update cutoff value based on factorized nx, ny and nz](picture/fig_path6-1.png)
 
 `nx`, `ny` 和 `nz` 实空间格点数量增多的原因？→ 回顾 `nx`, `ny` 和 `nz` 的生成方式：在给定 ecutwfc 球半径后（通过 `ecutrho`），在可以分辨每个倒空间中点的情况下所确定出的最小格点数量。之后在给定的 ecutwfc 球中分别寻找可能达到的最大的 `x`/`y`/`z` 格点数，作为 `nx`, `ny` 和 `nz`，然后进行(2, 3, 5)-factorization，此处从
 
@@ -373,7 +373,7 @@ public:
 之后反向更新 `ESolver_KS::K_Vectors::ngk` 中值：
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
     ....
@@ -433,7 +433,7 @@ void PW_Basis_K::collect_local_pw()
 ##### GlobalC::Parallel_Grid::init()
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
     ....
@@ -584,9 +584,8 @@ $$
 V(\mathbf{G})=\int{d\mathbf{r} e^{i\mathbf{G}\cdot\mathbf{r}}
 \sum_{\mathbf{T}}{
 \sum_{\alpha}^{N}{
-\sum_{i}^{n^\alpha}{
-V^{\alpha}(\mathbf{r}-\mathbf{\tau}_{\alpha i}-\mathbf{T})
-}
+\sum_{i}^{n^\alpha}
+{V^{\alpha}(\mathbf{r}-\mathbf{\tau}_{\alpha i}-\mathbf{T})}
 }
 }
 }
@@ -691,7 +690,7 @@ $$\text{eigts}_1[i]=e^{i\mathbf{G}_1[i]\cdot\mathbf{\tau}_i}$$。
 ##### 电荷外推初始化：Charge_Extra::Init_CE()
 
 ```cpp
-template<typename FPTYPE, typename Device>
+    template<typename FPTYPE, typename Device>
     void ESolver_KS<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
     {
 ....

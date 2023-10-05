@@ -11,13 +11,13 @@
 > 1. 不脱离代码——避免读者看完手册后对代码没有一丁点概念
 > 2. 不堆砌代码解释——避免平庸的代码解释，努力兼顾拉近读者和代码距离的同时，做到提纲挈领，不逐行复制代码后进行停留在代码语义上的解释
 
-# Driver
+<strong>Driver</strong>
 
-## Driver::atomic_world()
+<strong>Driver::atomic_world()<strong>
 
-### Driver::driver_run()
+<strong>Driver::driver_run()<strong>
 
-#### 多层继承：Init() functions in esolver class
+# 多层继承：Init() functions in esolver class
 
 终于来到和原本 `p_esolver` 相同的类的成员函数 `Init()`：
 
@@ -54,9 +54,9 @@ void ESolver_KS_PW<FPTYPE, Device>::Init(Input& inp, UnitCell& ucell)
 }
 ```
 
-##### Initialization of HSolverPW object
+## Initialization of HSolverPW object
 
-###### Constructor
+### Constructor
 
 首先来到按照注释划分的第一部分“Initialize HSolver”（line 6，HSolver 就是求解体系哈密顿量的求解器）：
 
@@ -106,9 +106,9 @@ HSolverPW<FPTYPE, Device>::HSolverPW(ModulePW::PW_Basis_K* wfc_basis_in, wavefun
 
 ，即将 `ESolver_KS::pw_wfc` 复制进 HSolverPW 的数据成员 `wfc_basis`，`ESolver_KS::wf` 到 `HSolverPW::pwf`。
 
-##### Initialization of ElecState object
+## Initialization of ElecState object
 
-###### Constructor
+### Constructor
 
 接下来来到 `ESolver_KS_PW::Init()`“第二部分”中 `ElecState` 类对象的初始化。
 
@@ -141,7 +141,9 @@ ElecStatePW<FPTYPE, Device>::ElecStatePW(ModulePW::PW_Basis_K *wfc_basis_in, Cha
 
 在该构造函数的函数体外初始化了成员变量 `basis` 以 `ESolver_KS::pw_wfc`。除了设置 `ElecStatePW::classname` 这一数据成员的具体值外，调用 `ElecState::init_ks()` 函数（显然继承自基类）。
 
-###### ElecState::init_ks()
+![](picture/fig_path7-flow.png)
+
+### ElecState::init_ks()
 
 ```cpp
 void ElecState::init_ks(Charge* chg_in, // pointer for class Charge
@@ -167,7 +169,7 @@ void ElecState::init_ks(Charge* chg_in, // pointer for class Charge
 }
 ```
 
-####### Link Charge* ElecState::charge to Charge ESolver_FP::chg
+#### Link Charge* ElecState::charge to Charge ESolver_FP::chg
 
 ⚠ 注意在 `ElecState`/`ElecStatePW` 类中的数据成员 `charge` 是 `Charge` 类指针，被赋值为 `ESolver_FP` 类的 `Charge` 类对象，即使得 `ElecState` 类的 `Charge` 类指针指向 `ESolver_FP` 的 `chr` 数据成员。
 
@@ -202,6 +204,7 @@ void Charge::set_rhopw(ModulePW::PW_Basis* rhopw_in)
     this->rhopw = rhopw_in;
 }
 ```
+> 🤔在变量命名过程中应当注意避免随意
 
 | context                 | 用于展开电荷的 PW_Basis 类指针 | 包含 Big FFT grid 的用于电荷展开的 PW_Basis_Big 类指针 |
 | ----------------------- | ------------------------------ | ------------------------------------------------------ |
@@ -211,9 +214,9 @@ void Charge::set_rhopw(ModulePW::PW_Basis* rhopw_in)
 | `ESolver_FP` 数据成员    | `pw_rho`                       | `pw_big`                                               |
 | `Charge` 数据成员        | `rhopw`                        |                                                        |
 
-####### Calculate numbers of electrons in different spin channels
+#### Calculate numbers of electrons in different spin channels
 
-`ElecState::init_nelec_spin()` 函数的调用为 `this->nelec_spin` 赋值，其中 `GlobalV::nupdown` 的意义已经在（[Introduction to ABACUS: Path to PW calculation - Part 2](https://ucoyxk075n.feishu.cn/docx/JruadAi9FoipBAxkxWaczZoxnwg#GtbCdmMyHoArL7xb3IZcgti4nHb) ）介绍，为 up 和 down spin 的差值：
+`ElecState::init_nelec_spin()` 函数的调用为 `this->nelec_spin` 赋值，其中 `GlobalV::nupdown` 的意义已经在（[Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md) ）介绍，为 up 和 down spin 的差值：
 
 ```cpp
 void ElecState::init_nelec_spin()
@@ -228,7 +231,7 @@ void ElecState::init_nelec_spin()
 }
 ```
 
-####### Get number of bands to solve: ElecState::cal_nbands()
+#### Get number of bands to solve: ElecState::cal_nbands()
 
 `ElecState::cal_nbands()` 函数的调用为 `GlobalV::NBANDS`（需要计算的能带数量）这一全局变量赋值或对通过 `INPUT` 文件中 `nbands` 关键词进行赋值的值进行合理性检查。对于未在 `INPUT` 文件中进行赋值的情况，则在此函数之前仍然保持值为 0，之后的赋值策略为：
 
@@ -282,7 +285,7 @@ void ElecState::cal_nbands()
 > 🤔<strong>思考时间</strong>
 > Is there any differences bewteen the ways to assign default values for number of bands to calculate in ABACUS and Quantum ESPRESSO?
 
-回溯：`GlobalV::nelec` 的值从 `ESolver_KS::Init()` 调用时确定（具体调用 `UnitCell::cal_nelec()`，[Introduction to ABACUS: Path to PW calculation - Part 5](https://ucoyxk075n.feishu.cn/docx/RCLSd2Of5oughUxmVDZcBhmqnDe#Tjg1dV3biorDVfxdl4vcmHNlnHh)）。
+回溯：`GlobalV::nelec` 的值从 `ESolver_KS::Init()` 调用时确定（具体调用 `UnitCell::cal_nelec()`，[Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)）。
 
 ```cpp
 //module_base/global_variable.cpp
@@ -319,6 +322,8 @@ void ElecState::cal_nbands()
 //module_io/input_conv.cpp line 589
     Occupy::decision(INPUT.occupations, INPUT.smearing_method, INPUT.smearing_sigma);
 ```
+
+![](picture/fig_path7-flow2.png)
 
 而 `Occupy::gauss()` 的功能仅仅为：
 
@@ -357,10 +362,10 @@ void ElecState::cal_nbands()
     }
 ```
 
-###### Others
+### Others
 
 ```cpp
-this->pelec->charge->allocate(GlobalV::NSPIN);
+    this->pelec->charge->allocate(GlobalV::NSPIN);
     this->pelec->omega = GlobalC::ucell.omega;
 ```
 
@@ -415,7 +420,7 @@ void Charge::allocate(const int& nspin_in)
 }
 ```
 
-##### Initialization of Potential
+## Initialization of Potential
 
 ```cpp
 template <typename FPTYPE, typename Device>
@@ -493,7 +498,7 @@ class Potential : public PotBase
 
 ![](picture/fig_path7-3.png)
 
-##### Initialization of rest parts of GlobalC
+## Initialization of rest parts of GlobalC
 
 `GlobalC` 和 `GlobalV` 是两个特殊的类，如第一版开发者文档所提到，此两种类的收益为避免过大的形参表，但负向收益为带来对两类中全局变量意外覆盖读写的隐患，因此在 ABACUS 的未来版本中，会逐步弃用 `GlobalC` 和 `GlobalV`，转而使用对象：利用高度且合理的封装方式，每次传入对象，对象包含各自相关的数据成员和函数。但就当前而言，`GlobalC` 提供了一些全局类。此处剩余的一些全局类申请内存空间、被初始化。
 
@@ -532,7 +537,7 @@ void ESolver_KS_PW<FPTYPE, Device>::Init_GlobalC(Input& inp, UnitCell& cell)
 > 这里有一个有趣的东西是 `kspw_psi`（在求力部分还有 `__kspw_psi`）。有兴趣的读者可以自行查看对于 gpu 或者单精度情况，在调用的 `psi` 构造函数中发生了什么。
 > 实际上，`kspw_psi` 支持了异构计算，而 `psi`，如 esolver_fp.h 声明中，实际上只为 `psi::Psi<std::complex<double>, Device = psi::DEVICE_CPU>*` 类指针。因此真正计算架构-dependent 的是 `kspw_psi`。`ESolver_KS_PW` 为支持异构计算，整个类为模板类。在 psi 被分配内存空间后，为 `kspw_psi` 赋予了其数据的可达性（accessibility），`reinterpret_cast` 或者复制内容。
 
-###### Psi
+### Psi
 
 `Psi` 是 ABACUS 中一类特殊的数据结构，用于存储波函数（平面波基函数系数）信息。其包含如下数据成员：
 
@@ -572,7 +577,7 @@ template <typename T, typename Device = DEVICE_CPU> class Psi
 }
 ```
 
-####### Codes
+#### Codes
 
 我们首先阅读为 `Psi` 申请内存空间的代码
 
@@ -704,7 +709,7 @@ struct resize_memory_op<FPTYPE, psi::DEVICE_CPU>
 
 因此 `Psi` 类对象最终使用 `resize_memory_op()` 来为 `Psi::psi` 数据成员进行内存申请，用于存储波函数信息/其同样是 3d-flatten，即申请的实际上是一级指针，规模为 `[ikpoint][iband][ibasis]`。
 
-####### Feature: struct with overloaded "()", extends the way of defining functions
+#### Feature: struct with overloaded "()", extends the way of defining functions
 
 `Psi` 申请内存时使用了在之前介绍的 ABACUS 代码中从未出现过的方式，即创建模板类结构体，之后在其中重载括号运算符，以调用函数的方式使用重载的括号。这种方式为 C++ 结构体所独有，是固定特性，对原本的函数实现方式实现了更大范围的拓展，结合 `using` 关键字，可以达到模板类实例化、封装、多态等效果。
 
@@ -839,9 +844,9 @@ this->kspw_psi = GlobalV::device_flag == "gpu" || GlobalV::precision_flag == "si
 this->kspw_psi = reinterpret_cast<psi::Psi<std::complex<double>>*>(this->psi);
 ```
 
-###### pseudopot_cell_vnl
+### pseudopot_cell_vnl
 
-####### Before init()
+#### Before init()
 
 我们之前没有特别关注过这个被声明在 `GlobalC` 里的全局类（[line 278](https://github.com/abacusmodeling/abacus-develop/blob/develop/source/module_hamilt_pw/hamilt_pwdft/global.h#L284)），这里我们首先非常粗略回顾其顾名思义的非局域项的原理，之后在下一篇中对该类成员函数的一些细节进行详细说明（但仍然不会逐行逐句进行“翻译”）。该类的名字 `pseudopot_cell_vnl` 实际上是 pseudopotential_cell_V(potential)_nonlocal 的缩写。首先简单介绍 Kleinman-Bylander 方法（[Phys. Rev. Lett. ](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.48.1425)<strong>48</strong>[, 1425（1982）](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.48.1425)）将 pseudopotential 分为完全非局域和局域部分：
 
