@@ -32,7 +32,7 @@ ABACUS 提供了直接输出静电势的接口，并提供了对其进行后处�
 
 下面是输入文件的示例：
 
-`INPUT` 文件记录计算所需主要参数，为了输出静电势，只需要设置 `out_pot`` ``2` 即可（设置 `out_pot 1` 时，会输出总的局域势，2 相比于 1 少输出了交换关联势，具体可以参考线上文档 [https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#out-pot](https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#out-pot)）。
+`INPUT` 文件记录计算所需主要参数，为了输出静电势，只需要设置 `out_pot 2` 即可（设置 `out_pot 1` 时，会输出总的局域势，2 相比于 1 少输出了交换关联势，具体可以参考线上文档 [https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#out-pot](https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#out-pot)）。
 
 ```shell
 INPUT_PARAMETERS
@@ -108,13 +108,13 @@ Cubefile created from ABACUS SCF calculation. The inner loop is z index, followe
 5（总原子数） 0.0 0.0 0.0（原点坐标）
 27（沿x轴格点数nx） 0.200383 0.000000 0.000000（晶格矢量a1的1/nx，in Bohr。即晶格常数a*a1/nx）
 27（沿y轴格点数ny） 0.000000 0.200383 0.000000（晶格矢量a2的1/ny，in Bohr）
-192（沿z轴格点数nz） 0.000000 0.000000 0.199254（晶格矢量a3的1/ny，in Bohr）
+192（沿z轴格点数nz） 0.000000 0.000000 0.199254（晶格矢量a3的1/nz，in Bohr）
  13（第一个原子的原子序数） 11（赝势中的价电子数） 0.000000 0.000000 0.000000（该原子位置的笛卡尔坐标，in Bohr）
  13 11 2.705164 2.705164 3.825680
  13 11 0.000000 0.000000 7.651359
  13 11 2.705164 2.705164 11.477039
  13 11 0.000000 0.000000 15.302718
- （FFT格点上的数据，z坐标变化最快，接下来依次是y, x，一般为6个数据一行，每走完z的一次循环换一行）
+ （空间格点上的数据，z坐标变化最快，接下来依次是y, x，一般为6个数据一行，每走完z的一次循环换一行）
  -1.808618025e+01 -1.683249579e+01 -1.326226499e+01 -8.726520963e+00 -4.859516723e+00 -2.648153424e+00
  -1.754646057e+00 -1.082969997e+00 -7.712730497e-01 -5.301070017e-01 -1.865686936e-01 1.178808012e-03
  1.531960521e-01 2.434659807e-01 3.236379649e-01 3.580121711e-01 3.871087692e-01 4.067752520e-01

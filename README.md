@@ -32,7 +32,7 @@ ABACUS 网站访问：
    1. [官方编译教程](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
    2. [GCC 编译 ABACUS 教程](abacus-gcc.md)
    3. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
-   4. [在超算环境编译 ABACUS 的建议](abacus-hcp.md)
+   4. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
    5. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
    6. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
 2. ABACUS建模介绍
