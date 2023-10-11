@@ -6,7 +6,7 @@
 
 <strong>最后更新时间：2023/09/04</strong>
 
-ABACUS（Atomic-orbtial Based Ab-initio Computation at UStc，中文名原子算筹）是国产开源密度泛函理论软件，相关介绍 ABACUS 的新闻可在 [ABACUS 新闻稿整理](abacus-news.md)查看。此文档用于给 ABACUS 开发者提供代码编程规范方面的建议。
+ABACUS（Atomic-orbtial Based Ab-initio Computation at UStc，中文名原子算筹）是国产开源密度泛函理论软件，相关介绍 ABACUS 的新闻可在 [ABACUS 新闻稿整理](news.md)查看。此文档用于给 ABACUS 开发者提供代码编程规范方面的建议。
 
 # 前言
 

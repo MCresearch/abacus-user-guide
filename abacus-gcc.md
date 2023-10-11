@@ -32,7 +32,7 @@ ABACUS（原子算筹）软件同时支持两种基矢量，一种是平面波�
 
 ## 1. 查看当前系统版本：
 
-```powershell
+```bash
 root@bohrium-11852-1041346:~# lsb_release -a
 No LSB modules are available.
 Distributor ID: Ubuntu
@@ -43,7 +43,7 @@ Codename:       focal
 
 ## 2. 检查当前 GCC 编译器版本：
 
-```powershell
+```bash
 root@bohrium-11852-1041346:~# g++ --version
 g++ (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
 Copyright (C) 2019 Free Software Foundation, Inc.
@@ -51,7 +51,7 @@ Copyright (C) 2019 Free Software Foundation, Inc.
 
 ## 3. 检查当前环境是否有 git
 
-```powershell
+```bash
 root@bohrium-11852-1041346:~# git --version
 git version 2.25.1
 ```
@@ -66,7 +66,7 @@ git version 2.25.1
 
 ### 1.1 安装依赖库。
 
-```powershell
+```bash
 sudo apt update 
 sudo apt install -y libopenblas-openmp-dev
 sudo apt install -y liblapack-dev 
@@ -75,14 +75,14 @@ sudo apt install -y libfftw3-dev
 
 ### 1.2 从仓库克隆代码到本地，并进入目录。
 
-```powershell
+```bash
 git clone https://github.com/deepmodeling/abacus-develop.git
 cd abacus-develop/
 ```
 
 ### 1.3 开始编译并安装 `abacus`。
 
-```powershell
+```bash
 cmake -B build -DENABLE_MPI=OFF
 cd build && make -j`nproc`
 ```
@@ -95,7 +95,7 @@ cd build && make -j`nproc`
 
 ### 2.1 安装依赖库。（同串行，如果已经安装，则不用重复操作）
 
-```powershell
+```bash
 sudo apt update 
 sudo apt install -y libopenblas-openmp-dev
 sudo apt install -y liblapack-dev 
@@ -104,20 +104,20 @@ sudo apt install -y libfftw3-dev
 
 ### 2.2 安装 MPI library。这里选择更为常用的 <strong>open MPI</strong>。
 
-```powershell
+```bash
 sudo apt install -y libopenmpi-dev
 ```
 
 ### 2.3 从仓库克隆代码到本地，并进入目录。
 
-```powershell
+```bash
 git clone https://github.com/deepmodeling/abacus-develop.git
 cd abacus-develop/
 ```
 
 ### 2.4 开始编译并安装 `abacus`。
 
-```powershell
+```bash
 cmake -B build -DENABLE_LCAO=OFF
 cd build && make -j`nproc`
 ```
@@ -134,7 +134,7 @@ cd build && make -j`nproc`
 
 ## 1. 安装 PW 基组依赖的软件库。（同上，如果已经安装，则不用重复操作）
 
-```powershell
+```bash
 sudo apt update 
 sudo apt install -y libopenblas-openmp-dev
 sudo apt install -y liblapack-dev 
@@ -143,13 +143,13 @@ sudo apt install -y libfftw3-dev
 
 ## 2. 安装 MPI library。这里选择更为常用的 <strong>open MPI</strong>。（同上，如果已经安装，则不用重复操作）
 
-```powershell
+```bash
 sudo apt install -y libopenmpi-dev
 ```
 
 ## 3. 安装 LCAO 基组依赖的 ScaLAPACK 和 CEREAL 软件库。
 
-```powershell
+```bash
 sudo apt install -y libscalapack-mpi-dev
 sudo apt install -y libcereal-dev
 ```
@@ -158,7 +158,7 @@ sudo apt install -y libcereal-dev
 
 如果你的系统是 Ubuntu 22.04，那么你可以以很简单的方式成功安装 ELPA：
 
-```powershell
+```bash
 sudo apt install -y libelpa-dev
 ```
 
@@ -166,9 +166,34 @@ sudo apt install -y libelpa-dev
 
 手动编译安装 ELPA 可以分为以下几步：
 
+- 下载并进入 ELPA 目录：
+
+```bash
+wget https://elpa.mpcdf.mpg.de/software/tarball-archive/Releases/2021.05.002/elpa-2021.05.002.tar.gz
+tar xzf elpa-2021.05.002.tar.gz 
+cd elpa-2021.05.002
+mkdir build  && cd build
+```
+
+- `configure`
+
+```bash
+../configure --enable-openmp CFLAGS="-O3 -march=native -funsafe-loop-optimizations -funsafe-math-optimizations -ftree-vect-loop-version -ftree-vectorize" FCFLAGS="-O2 -mavx" --disable-avx512
+```
+
+- 编译安装
+
+```bash
+make -j`nproc`
+make install
+ln -s /usr/local/include/elpa_openmp-2021.05.002/elpa /usr/local/include/
+```
+
+> 注意：`ln -s /usr/local/include/elpa_openmp-2021.05.002/elpa /usr/local/include/ ` 是非常重要的！（很多用户是这里出的问题！）
+
 ## 5. 开始编译并安装 `abacus`。
 
-```powershell
+```bash
 cmake -B build
 cd build && make -j`nproc`
 ```

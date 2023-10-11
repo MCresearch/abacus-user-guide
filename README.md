@@ -20,7 +20,7 @@ ABACUS 网站访问：
 
 [https://abacus.deepmodeling.com/en/latest/](https://abacus.deepmodeling.com/en/latest/)
 
-本教程系列旨在帮助新手用户入门了解 ABACUS 的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](abacus-contribute.md)。
+本教程系列旨在帮助新手用户入门了解 ABACUS 的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献ABACUS使用教程](contribute.md)。
 
 本教程中标有<a href="" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> Logo的部分可以直接在[Bohrium Notebook](https://nb.bohrium.dp.tech)上打开。
 
