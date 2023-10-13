@@ -15,6 +15,7 @@
     * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
     * [采用 ABACUS 进行表面计算（一）：静电势和功函数](abacus-surface1.md)
     * [采用 ABACUS 进行表面计算（二）：偶极修正](abacus-surface2.md)
+    * [采用 ABACUS 进行表面计算（三）：表面能计算](abacus-surface3.md)
     * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
