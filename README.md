@@ -58,8 +58,9 @@ ABACUS 网站访问：
    1. [静电势和功函数](abacus-surface1.md)
    2. [偶极修正](abacus-surface2.md)
    3. [表面能计算](abacus-surface3.md)
-   4. [外加电场](abacus-surface5.md)
-   5. [补偿电荷](abacus-surface6.md)
+   4. [表面缺陷能和吸附能计算](abacus-surface4.md)
+   5. [外加电场](abacus-surface5.md)
+   6. [补偿电荷](abacus-surface6.md)
 9.  分析结果
    1. 能带计算
       1. [<mark style="color:red;">如何正确画能带，NSCF读电荷密度</mark>](https://xmywuqhxb0.feishu.cn/docx/K8GRdTst4oXQNoxnQVbcFZTmntb)<mark style="color:red;"></mark>
