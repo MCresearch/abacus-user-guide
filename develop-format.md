@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/10/03</strong>
+<strong>最后更新时间：2023/10/23</strong>
 
 # 一、引言
 
@@ -81,7 +81,13 @@ clang-format --version
 clang-format -style=file -i demo.cpp
 ```
 
-# 三、参考文献：
+# 三、格式化时的注意事项：
+
+由于直接对整个文件格式化会导致每一行的历史修改信息被覆盖，因此我们要求在您修改某文件相应的代码内容之后，**先commit一次，然后再对该文件进行格式化，再提交一次专门对文件格式化的commit。**
+这样细化每一个commit具体的信息，更有利于PR的审核和项目的管理。
+
+
+# 四、参考文献：
 
 [使用 clang-format 进行 C++ 代码风格管理](https://blog.shipengx.com/archives/ed6ff3ad.html)
 
