@@ -110,3 +110,8 @@ ABACUS 网站访问：
 18. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
 19. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
 
+# 五、算法文档
+
+1. [最大局域化 Wannier 函数方法简介](algorithm-wannier.md)
+2. [电荷密度混合算法介绍](algorithm-mix.md)
+
