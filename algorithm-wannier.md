@@ -66,7 +66,11 @@ $$P_{\mathbf{k}}=\sum_{n=1}^{J}|\psi_{n\mathbf{k}}\rangle\langle\psi_{n\mathbf{k
 第二个等号具体证明如下：
 
 $$
-\sum_{m=1}^{J}|\tilde\psi_{m\mathbf{k}}\rangle\langle\tilde\psi_{m\mathbf{k}}|=\sum_{m=1}^{J}\sum_{pq}^{J}U_{mp}^{\mathbf{k}}|\psi_{p\mathbf{k}}\rangle U^{\mathbf{k}*}_{qm}\langle\psi_{q\mathbf{k}}|=\sum_{pq}^{J}\sum_{m=1}^{J}U^{\mathbf{k}*}_{qm}U_{mp}^{\mathbf{k}}|\psi_{p\mathbf{k}}\rangle\langle\psi_{q\mathbf{k}}|=\sum_{pq}^{J}\delta_{pq}|\psi_{p\mathbf{k}}\rangle\langle\psi_{q\mathbf{k}}|=\sum_{p=1}^{J}|\psi_{p\mathbf{k}}\rangle\langle\psi_{p\mathbf{k}}|
+\sum_{m=1}^{J}|\tilde\psi_{m\mathbf{k}}\rangle\langle\tilde\psi_{m\mathbf{k}}|=\sum_{m=1}^{J}\sum_{pq}^{J}U_{mp}^{\mathbf{k}}|\psi_{p\mathbf{k}}\rangle U^{\mathbf{k}*}_{qm}\langle\psi_{q\mathbf{k}}|
+$$
+
+$$
+=\sum_{pq}^{J}\sum_{m=1}^{J}U^{\mathbf{k}*}_{qm}U_{mp}^{\mathbf{k}}|\psi_{p\mathbf{k}}\rangle\langle\psi_{q\mathbf{k}}|=\sum_{pq}^{J}\delta_{pq}|\psi_{p\mathbf{k}}\rangle\langle\psi_{q\mathbf{k}}|=\sum_{p=1}^{J}|\psi_{p\mathbf{k}}\rangle\langle\psi_{p\mathbf{k}}|
 $$
 
 也就是说一组或者一个孤立的能带的投影算符是不随规范变换的。
@@ -94,7 +98,15 @@ $$\tilde\Omega=\sum_{n}\sum_{\mathbf{R}m\neq\mathbf{0}n}|\langle\mathbf{R}m|\mat
 规范不变的部分可以写作：
 
 $$
-\Omega_I=\sum_{n\alpha}\left[\langle\mathbf{0}n|r_\alpha^2|\mathbf{0}n\rangle-\sum_{\mathbf{R}m}\langle\mathbf{0}n|r_\alpha|\mathbf{R}m\rangle\langle\mathbf{R}m|r_\alpha|\mathbf{0}n\rangle\right]=\sum_{n\alpha}\left[\langle\mathbf{0}n|r_\alpha^2|\mathbf{0}n\rangle-\sum_{m}\langle\mathbf{0}n|r_{\alpha}P_{m}r_\alpha|\mathbf{0}n\rangle \right]=\sum_{n\alpha}\langle\mathbf{0}n|r_{\alpha}(1-\sum_{m}P_{m})r_\alpha|\mathbf{0}n\rangle =\sum_{n\alpha}\langle \mathbf{0}n|r_{\alpha}Qr_\alpha|\mathbf{0}n\rangle
+\Omega_I=\sum_{n\alpha}\left[\langle\mathbf{0}n|r_\alpha^2|\mathbf{0}n\rangle-\sum_{\mathbf{R}m}\langle\mathbf{0}n|r_\alpha|\mathbf{R}m\rangle\langle\mathbf{R}m|r_\alpha|\mathbf{0}n\rangle\right]
+$$
+
+$$
+=\sum_{n\alpha}\left[\langle\mathbf{0}n|r_\alpha^2|\mathbf{0}n\rangle-\sum_{m}\langle\mathbf{0}n|r_{\alpha}P_{m}r_\alpha|\mathbf{0}n\rangle \right]
+$$
+
+$$
+=\sum_{n\alpha}\langle\mathbf{0}n|r_{\alpha}(1-\sum_{m}P_{m})r_\alpha|\mathbf{0}n\rangle =\sum_{n\alpha}\langle \mathbf{0}n|r_{\alpha}Qr_\alpha|\mathbf{0}n\rangle
 $$
 
 上式中最后一个等号使用了定义
