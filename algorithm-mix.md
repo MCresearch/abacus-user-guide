@@ -297,13 +297,13 @@ $$
 - `mixing_type`：选择 mixing 算法，可选项为 `plain`, `pulay`, `broyden`，分别对应上述三种算法，一般而言，Broyden 算法收敛最快，Pulay 略慢，plain 最慢。默认选项为 `broyden`。
 - `mixing_beta`：对应上述公式中的参数$$\beta$$，$$\beta$$绝对值越小，则收敛过程越稳定，但达到收敛所需的步数可能增多。对于难以收敛的体系，特别是收敛过程中能量出现上下波动的例子，可以尝试减小 `mixing_beta`。
 - `mixing_ndim`：对应上述公式中的参数$$n$$，Pulay 和 Broyden 算法会借助过去$$n$$步的信息构建下一次迭代的电荷密度，默认值为 8。对于难以收敛的体系，略增大 `mixing_ndim` 可以增强收敛过程的稳定性。
-- `mixing_gg0`：是否采用 Kerker scaling 方法，此方法会抑制混合过程中的高频项。特别是对于难以收敛的金属体系，打开 Kerker 方法可以帮助计算达到收敛。
+- `mixing_gg0`：是否采用 Kerker scaling 方法，此方法会在倒空间中给$$|F\rangle$$乘上$$\frac{k^2}{k^2+gg0^2}$$的因子，以抑制混合过程中的高频项，其中$$k$$为波矢，$$gg0$$由 `mixing_gg0` 设置。特别是对于难以收敛的金属体系，打开 Kerker 方法可以帮助计算达到收敛。
 - `mixing_tau`：是否对动能密度进行混合，适用于使用 meta-GGA 交换关联泛函的场景。
 - `mixing_dftu`：是否对密度矩阵进行混合，适用于使用 DFT+U 的场景。
 - `scf_thr`：对应于 charge mixing 的收敛判据$$\Delta$$，对于原子轨道基组(LCAO)，默认值为 1e-7，对于平面波基组(PW)，默认值为 1e-9。
 - `scf_thr_type`：选择上述公式中内积$$\langle f|f\rangle$$的定义，以及相应收敛判据的计算方式。
 
-  - 1：$$\langle f|f\rangle = \frac{1}{2}\iint{\frac{f(r)f(r')}{|r-r'|}drdr'}$$，收敛判据为$$\langle\Delta\rho|\Delta\rho\rangle < \Delta$$，默认用于 PW 基组；
+  - 1：$$\langle f|g\rangle = \iint{\frac{f(r)g(r')}{|r-r'|}drdr'} = 4\pi\int{\frac{\mathcal{R}[f^*(k)g(k)]}{k^2}dk}$$，$$\mathcal{R}$$表示取实部，收敛判据为$$\langle\Delta\rho|\Delta\rho\rangle < \Delta$$，默认用于 PW 基组；
   - 2：$$\langle f|f\rangle = \int{f^2(r)dr}$$，收敛判据为$$\int{|\Delta\rho|dr} < \Delta$$，默认用于 LCAO 基组。
 
 # 四、参考文献

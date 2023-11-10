@@ -76,11 +76,12 @@ ABACUS 网站访问：
     6. [ABACUS+Candela 使用教程](abacus-candela.md)<a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     7. [ABACUS+USPEX 接口教程](abacus-uspex.md)
     8. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
-    9. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    10. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    11. [从 DFT 先去 DeePKS 再到 DeePMD | DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    12. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
-    13. ABACUS+CINEB教程（缺）
+    9. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
+    10. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    11. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    12. [从 DFT 先去 DeePKS 再到 DeePMD | DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    13. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+    14. ABACUS+CINEB教程（缺）
         1. [ASE-NEB-ABACUS工作流与算例](https://github.com/QuantumMisaka/ase-neb-abacus) （v1.0.1 支持对NEB的各个image进行并行计算，大大提升NEB计算效率）
         2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
 
