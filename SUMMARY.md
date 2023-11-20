@@ -34,6 +34,7 @@
   * [ABACUS 的 Github 仓库 Issues 处理流程](develop-issue.md)
   * [ABACUS 线上文档输入参数撰写规范](develop-input.md)
   * [ABACUS 代码存放规范](develop-rule.md)
+  * [ABACUS 全局数据结构和代码行数检测](develop-linedete.md)
   * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
   * [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
   * [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
