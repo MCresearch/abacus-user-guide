@@ -36,6 +36,11 @@ Intel® oneAPI HPC Toolkit 相比于 Intel® oneAPI Base Toolkit 多了一些必
 source /opt/intel/oneapi/setvars.sh
 ```
 
+> ELPA仅用于 LCAO基组求解特征值与特征矩阵的过程，如果由于机器等原因导致 ELPA 难以安装，可以暂不安装ELPA，在编译 abacus 的时候添加-DUSE_ELPA=0即可绕过ELPA安装困难的问题。
+> 在ABACUS中，LCAO基组求解特征值与特征矩阵提供了两种方法，一种是调用ELPA进行求解（默认选项），一种是调用ScaLAPACK进行求解。
+> 如果使用-DUSE_ELPA=0编译选项，请参考使用文档配置ks_solver为scalapack_gvx，调用ScaLAPACK进行求解。（http://abacus.deepmodeling.com/en/stable/advanced/input_files/input-main.html#ks-solver）
+
+
 ## 1. 安装 仅支持 PW 基组的 ABACUS
 
 对于仅支持 PW 基组的 ABACUS，我们同时支持两种版本的编译：串行版本和并行版本。

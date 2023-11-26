@@ -28,6 +28,12 @@ ABACUS（原子算筹）软件同时支持两种基矢量，一种是平面波�
   - <strong>CEREAL</strong>：CEREAL 是一个 C++ 序列化库，用于将 C++ 对象转换为可存储或传输的数据格式，以及将其反序列化回对象。
   - <strong>ELPA</strong>：ELPA（Eigenvalue SoLvers for Petaflop-Applications）是一个用于高性能计算的开源库，旨在解决大规模高性能计算中的特征值问题，特别是密集矩阵的特征值问题。（用户编译安装 abacus 的时候大多在这里出现问题）
 
+> ELPA仅用于 LCAO基组求解特征值与特征矩阵的过程，如果由于机器等原因导致 ELPA 难以安装，可以暂不安装ELPA，在编译 abacus 的时候添加-DUSE_ELPA=0即可绕过ELPA安装困难的问题。
+> 
+> 在ABACUS中，LCAO基组求解特征值与特征矩阵提供了两种方法，一种是调用ELPA进行求解（默认选项），一种是调用ScaLAPACK进行求解。
+> 
+> 如果使用-DUSE_ELPA=0编译选项，请参考使用文档配置ks_solver为scalapack_gvx，调用ScaLAPACK进行求解。（http://abacus.deepmodeling.com/en/stable/advanced/input_files/input-main.html#ks-solver）
+
 # 二、检查当前服务器基础环境：
 
 ## 1. 查看当前系统版本：
