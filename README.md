@@ -35,6 +35,9 @@ ABACUS 网站访问：
    4. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
    5. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
    6. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
+   7. [ABACUS 编译教程系列之一：基于Intel编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B站视频）
+   8. [ABACUS 编译教程系列之二：基于CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B站视频）
+   9. [ABACUS 编译教程系列之三：docker的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B站视频）
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
    <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
