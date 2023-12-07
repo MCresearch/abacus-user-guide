@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| 社区人物志 \ 致力于用电子结构计算改变世界，他是认真的                   |  [网页链接](https://mp.weixin.qq.com/s/4QQ6pBUaXNJgDdKP8tysXg) | 2023/11/30 |
 | DP还能干这个？深度势能结合DeePKS+ABACUS研究溶液中的质子转移             |  [网页链接](https://mp.weixin.qq.com/s/qIgB2yBWz_ABVNwwTsz4SQ) | 2023/11/22 |
 | ABACUS 3.4发布：代码重构助力开发者加入，性能提升推动大模型生产           | [网页链接](https://mp.weixin.qq.com/s/_JFryTw58DMdqINdfAFoZw) | 2023/10/07 |
 | 当Hackathon遇上ABACUS \ ABACUS@Hackathon作品合集大揭秘                | [网页链接](https://mp.weixin.qq.com/s/3NfQWkQ3PIjT9H4tZKU1-w) | 2023/09/24 |
