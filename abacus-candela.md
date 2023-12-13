@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/08/23</strong>
+<strong>最后更新时间：2023/12/13</strong>
 
 <strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/2912697542" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
@@ -40,7 +40,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 
 下载完成后解压，之后进入 `abacus-user-guide/examples/candela` 文件夹
 
-算例中包含 `RDF`、`SSF`、`DSF`、`MSD` 四个文件夹和 `MD_dump` 文件。其中 `MD_dump` 是 32 原子的铝的 MD 轨迹
+算例中包含 `RDF`、`SSF`、`DSF`、`MSD` 以及 `MSD_ntype_2` 五个文件夹和 `MD_dump` 文件。其中 `MD_dump` 是 32 原子的铝的 MD 轨迹
 
 # 三、流程
 
@@ -187,6 +187,8 @@ python PathtoCandela/examples/e3_dsf/onedsf.py 0.00006 0.0006
 
 ## 4 均方差位移
 
+### 4.1 单种原子
+
 进入 `MSD` 文件夹，`INPUT` 文件具体如下：
 
 ```bash
@@ -225,3 +227,40 @@ mpirun -n 2 candela
 ```
 
 即可得到 MSD，输出到 `MSD_each.txt` 和 `MSD_total.txt`。其中 `MSD_each.txt` 第一列为时间，单位为 ps，第二列到最后一列即为对应的每段的 MSD，单位为$$\mathrm{Angstrom^{2}}$$；`MSD_total.txt` 第一列为时间，单位为 ps，第二列为平均的每段的 MSD，单位为$$\mathrm{Angstrom^{2}}$$。
+
+### 4.2 多种原子
+
+进入 `MSD_ntype_2` 文件夹，`INPUT` 文件具体如下：
+
+```bash
+calculation   msd_multiple
+geo_in_type   ABACUS
+geo_directory MD_dump
+geo_1         0
+geo_2         100
+geo_interval  1
+geo_ignore    50
+
+ntype         2
+natom         17
+natom1        16
+natom2        1
+id1           C
+id2           Li
+
+msd_n         2
+msd_t0        0.003
+msd_t         0.0015
+msd_dt0       0.0015
+msd_dt        0.00006
+ele_select    C
+msd_natom     16
+```
+
+以上参数在 Candela 的[线上文档](https://candela-docs.readthedocs.io/en/latest/)中均有详细说明，与单种原子不同的参数如下：
+
+- natom1、natom2：不同种类原子的个数
+- id1、id2：不同种类原子的名称，需要与读入的 MD_dump 中原子名称一致
+- ele_select：计算 MSD 的原子名称，需要与 id1 或 id2 对应
+
+多种原子的计算过程与结果与单种原子并无区别。
