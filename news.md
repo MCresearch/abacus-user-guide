@@ -6,6 +6,8 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| 涓流汇沧海，积篑成丘山——手动@关注 ABACUS 的您，亲启这封年终回顾          | [网页链接](https://mp.weixin.qq.com/s/DZ6ri00-1bCM9MAewcIkkA) | 2023/12/29 |
+| ABACUS 3.5发布——更稳定高效的Kohn-Sham方程自洽求解                     |  [网页链接](https://mp.weixin.qq.com/s/qrCMik68qZMwg78ZdnNIBA) | 2023/12/29 |
 | 社区人物志 \ 致力于用电子结构计算改变世界，他是认真的                   |  [网页链接](https://mp.weixin.qq.com/s/4QQ6pBUaXNJgDdKP8tysXg) | 2023/11/30 |
 | DP还能干这个？深度势能结合DeePKS+ABACUS研究溶液中的质子转移             |  [网页链接](https://mp.weixin.qq.com/s/qIgB2yBWz_ABVNwwTsz4SQ) | 2023/11/22 |
 | ABACUS 3.4发布：代码重构助力开发者加入，性能提升推动大模型生产           | [网页链接](https://mp.weixin.qq.com/s/_JFryTw58DMdqINdfAFoZw) | 2023/10/07 |
