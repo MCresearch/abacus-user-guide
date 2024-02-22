@@ -14,7 +14,7 @@
 
 ## mixing_type
 
-描述：混合电荷密度所使用的方法 
+描述：混合电荷密度所使用的方法
 
 可选：broyden，pulay，plain
 
