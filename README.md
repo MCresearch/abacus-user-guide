@@ -84,16 +84,16 @@ ABACUS 网站访问：
     9. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
     10. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     11. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    12. [从 DFT 先去 DeePKS 再到 DeePMD | DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    13. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
-    14. ABACUS+ASE 做过渡态计算
-        1. [ATST-Tools: ASE-ABACUS过渡态计算工作流套件与算例。](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持NEB，Dimer，AutoNEB等过渡态方法。
+    12. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+    13. ABACUS+ASE 做过渡态计算
+        1. [ATST-Tools: ASE-ABACUS过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持NEB，Dimer，AutoNEB等过渡态方法。
         2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
-    15. ABACUS+ASE 遗传算法 （暂缺，待更新）
+    14. ABACUS+ASE 遗传算法 （暂缺，待更新）
 
 # 三、使用经验
 
-1. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
+1. [ABACUS 收敛性问题解决手册](abacus-conv.md)
+2. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
 
 # 四、开发者文档
 

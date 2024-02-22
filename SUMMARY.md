@@ -27,6 +27,7 @@
     * [ABACUS+USPEX 接口教程](abacus-uspex.md)
     * [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
     * [ABACUS+Wannier90 使用教程](abacus-wannier.md)
+    * [ABACUS 收敛性问题解决手册](abacus-conv.md)
 * ABACUS 开发者文档
     * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
     * [ABACUS 中使用格式化工具 clang-format](develop-format.md)
