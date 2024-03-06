@@ -120,6 +120,7 @@ ABACUS 网站访问：
 21. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
 22. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
 23. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
+24. [C++ 程序设计的一些想法](develop-design.md)
 
 # 五、算法文档
 

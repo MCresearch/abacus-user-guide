@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| ABACUS还能干这个？为数百万度高温物质的DP势提供训练数据                  | [网页链接](https://mp.weixin.qq.com/s/8M8RyKGuMkRIeCMnjwup3A) | 2024/01/10 |
 | 涓流汇沧海，积篑成丘山——手动@关注 ABACUS 的您，亲启这封年终回顾          | [网页链接](https://mp.weixin.qq.com/s/DZ6ri00-1bCM9MAewcIkkA) | 2023/12/29 |
 | ABACUS 3.5发布——更稳定高效的Kohn-Sham方程自洽求解                     |  [网页链接](https://mp.weixin.qq.com/s/qrCMik68qZMwg78ZdnNIBA) | 2023/12/29 |
 | 社区人物志 \ 致力于用电子结构计算改变世界，他是认真的                   |  [网页链接](https://mp.weixin.qq.com/s/4QQ6pBUaXNJgDdKP8tysXg) | 2023/11/30 |

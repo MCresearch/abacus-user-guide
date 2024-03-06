@@ -52,6 +52,7 @@
     * [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
     * [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
     * [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
+    * [C++ 程序设计的一些想法](develop-design.md)
 * 算法文档
     * [最大局域化 Wannier 函数方法简介](algorithm-wannier.md)
     * [电荷密度混合算法介绍](algorithm-mix.md)
