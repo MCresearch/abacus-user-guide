@@ -132,7 +132,7 @@ mixing_gg0      1.5
 算完之后用以下命令产生 `FORCE_SET` 文件：
 
 ```bash
-phonopy -f ./disp-001/OUT/running_scf.log ./disp-002/OUT/running_scf.log ...
+phonopy -f ./disp-001/OUT*/running_scf.log ./disp-002/OUT*/running_scf.log ...
 ```
 
 即要指定所有微扰构型算完之后的 `running_scf.log` 文件位置。如果运行有错，需要首先检查是否所有构型都已正常结束，且其中有力输出（可以找“FORCE”来确认）。

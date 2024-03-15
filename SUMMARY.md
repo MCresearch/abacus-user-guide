@@ -3,6 +3,7 @@
 * [ABACUS 使用教程](README.md)
     * [GCC 编译 ABACUS 教程](abacus-gcc.md)
     * [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
+    * [编译 Nvidia GPU 版本的 ABACUS](abacus-gpu.md)
     * [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
     * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
     * [模守恒赝势生成方法简介](abacus-upf.md)
