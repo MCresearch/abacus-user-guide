@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| ABACUS还能干这个？借助AI来描述电子动能                                 | [网页链接](https://mp.weixin.qq.com/s/fm5hS9f4yF_KZB9UBqGkvg) | 2024/03/19 |
 | ABACUS还能干这个？为数百万度高温物质的DP势提供训练数据                  | [网页链接](https://mp.weixin.qq.com/s/8M8RyKGuMkRIeCMnjwup3A) | 2024/01/10 |
 | 涓流汇沧海，积篑成丘山——手动@关注 ABACUS 的您，亲启这封年终回顾          | [网页链接](https://mp.weixin.qq.com/s/DZ6ri00-1bCM9MAewcIkkA) | 2023/12/29 |
 | ABACUS 3.5发布——更稳定高效的Kohn-Sham方程自洽求解                     |  [网页链接](https://mp.weixin.qq.com/s/qrCMik68qZMwg78ZdnNIBA) | 2023/12/29 |
@@ -23,7 +24,6 @@
 | ABACUS 3.2 发布：支持 Hefei-NAMD 接口，全面提升代码稳定性和易用性        | [网页链接](https://mp.weixin.qq.com/s/lB9Q3JiSuMmipkhd2-_ylA) | 2023/04/01 |
 | ABACUS 还能干这个？探索准一维材料碳纳米管中的无序超均匀性                | [网页链接](https://mp.weixin.qq.com/s/VTf67VFAW0pVBMMnAKjBUg) | 2023/03/07 |
 | ABACUS 3.1 发布，支持平面波基组下的 GPU 高效计算，发布固液界面计算新功能  | [网页链接](https://mp.weixin.qq.com/s/D8gcQb0bikMdgizLsbvCfQ) | 2023/01/01 |
-| 探索 AI+DFT 最前线，「原子算筹」ABACUS 3.0 重磅发布！                    | [网页链接](https://mp.weixin.qq.com/s/NJWbv96nF1wyjPb19NiE1Q) | 2022/10/02 |
 | 探索 AI+DFT 最前线，「原子算筹」ABACUS 3.0 重磅发布！                    | [网页链接](https://mp.weixin.qq.com/s/2YGVyNXMGL6S_MAyNhMADw) | 2022/10/01 |
 | ABACUS 3.0：共建 AI 辅助的新一代电子结构算法平台                         | [网页链接](https://mp.weixin.qq.com/s/qWQGGkwHMMDeTFP1kLAiCA) | 2022/10/01 |
 | ABACUS 新进展：用混合随机密度泛函理论方法模拟极端高温物质电子性质         | [网页链接](https://mp.weixin.qq.com/s/oOF-Zel5ufqUx8ahZ0mpcw) | 2022/09/20 |
