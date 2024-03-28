@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 |
 | ------------------------------------------------------------------- | ------------------------------------------------------------ | ---------- |
+| ABACUS还能干这个？预测二维铁电材料SnTe中的巨大位移电流效应              | [网页链接](https://mp.weixin.qq.com/s/Ks2T59ddhULCypiaDv9eJg) | 2024/03/28 |
 | ABACUS还能干这个？借助AI来描述电子动能                                 | [网页链接](https://mp.weixin.qq.com/s/fm5hS9f4yF_KZB9UBqGkvg) | 2024/03/19 |
 | ABACUS还能干这个？为数百万度高温物质的DP势提供训练数据                  | [网页链接](https://mp.weixin.qq.com/s/8M8RyKGuMkRIeCMnjwup3A) | 2024/01/10 |
 | 涓流汇沧海，积篑成丘山——手动@关注 ABACUS 的您，亲启这封年终回顾          | [网页链接](https://mp.weixin.qq.com/s/DZ6ri00-1bCM9MAewcIkkA) | 2023/12/29 |
