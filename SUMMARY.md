@@ -57,5 +57,6 @@
 * 算法文档
     * [最大局域化 Wannier 函数方法简介](algorithm-wannier.md)
     * [电荷密度混合算法介绍](algorithm-mix.md)
+    * [在 ABACUS 中进行差分测试](algorithm-delta.md)
 * [ABACUS 新闻稿整理](news.md)
 * [如何贡献 ABACUS 使用教程](contribute.md)
