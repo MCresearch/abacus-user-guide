@@ -6,6 +6,8 @@
     * [编译 Nvidia GPU 版本的 ABACUS](abacus-gpu.md)
     * [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
     * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+    * [ABACUS 答疑手册](abacus-question.md)
+    * [ABACUS 收敛性问题解决手册](abacus-conv.md)
     * [模守恒赝势生成方法简介](abacus-upf.md)
     * [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
     * [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)
@@ -28,7 +30,6 @@
     * [ABACUS+USPEX 接口教程](abacus-uspex.md)
     * [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
     * [ABACUS+Wannier90 使用教程](abacus-wannier.md)
-    * [ABACUS 收敛性问题解决手册](abacus-conv.md)
 * ABACUS 开发者文档
     * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
     * [ABACUS 中使用格式化工具 clang-format](develop-format.md)
