@@ -8,7 +8,7 @@
 | ------------------------------------------------------------------------ | ------------------------------------------------------------- | ---------- | ---------- |
 | 超算&AI应用周报 \ ABACUS v3.6.0版本上线超算互联网，助力大原子模型建设    | [网页链接](https://mp.weixin.qq.com/s/2gAzbi0WIIdF5V6rEdYqaQ) | 2024/04/07 | 超算互联网 |
 | ABACUS软件简单介绍                                                       | [网页链接](https://mp.weixin.qq.com/s/ILiUAwtXN6DmXQUfs8u_KA) | 2024/04/06 |  学术之友  |
-| ABACUS 带你领略电子轨道的美妙                                            | [网页链接](https://mp.weixin.qq.com/s/dgkWlm7Eq7IVZG77YdQLsg) | 2024/04/03 |  深度势能  |
+| ABACUS 带你领略电子轨道的美妙                                            | [网页链接](https://mp.weixin.qq.com/s/dgkWlm7Eq7IVZG77YdQLsg) | 2024/04/03 |    NBHub   |
 | ABACUS 3.6发布——DFT+U算法改进、国产硬件适配助力大原子模型建设            | [网页链接](https://mp.weixin.qq.com/s/E6-b7zAS6Eh4vu0SaqGGpg) | 2024/04/01 |  深度势能  |
 | ABACUS还能干这个？预测二维铁电材料SnTe中的巨大位移电流效应               | [网页链接](https://mp.weixin.qq.com/s/Ks2T59ddhULCypiaDv9eJg) | 2024/03/28 |  深度势能  |
 | ABACUS还能干这个？借助AI来描述电子动能                                   | [网页链接](https://mp.weixin.qq.com/s/fm5hS9f4yF_KZB9UBqGkvg) | 2024/03/19 |  深度势能  |
