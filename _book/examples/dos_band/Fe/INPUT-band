@@ -13,7 +13,7 @@ scf_thr         1e-8
 scf_nmax        50
 #Parameters (3.Basis)
 basis_type      pw
-# kpar            4
+kpar            4
 gamma_only      0
 #Parameters (4.Smearing)
 smearing_method mp

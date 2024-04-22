@@ -55,7 +55,8 @@ ABACUS 网站访问：
 ](https://nb.bohrium.dp.tech/detail/52882361357)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    5. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
-   6. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   6. [结合 ABACUS 和 Atomkit 计算态密度和能带](abacus-dos.md)
+   7. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 1. DeePKS方法
    1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>

@@ -13,6 +13,7 @@
     * [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)
     * [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)
     * [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
+    * [结合 ABACUS 和 Atomkit 计算态密度和能带](abacus-dos.md)
     * [ABACUS 分子动力学使用教程](abacus-md.md)
     * [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
     * [ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
