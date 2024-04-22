@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------- | ---------- | ---------- |
+| ABACUS还能干这个？薄膜技术显著增强TaAs中的非线性霍尔效应                 | [网页链接](https://mp.weixin.qq.com/s/Hfwo4-rFjP-rrAv6KDC3Ww) | 2024/04/22 |  深度势能  |
 | 超算&AI应用周报 \ ABACUS v3.6.0版本上线超算互联网，助力大原子模型建设    | [网页链接](https://mp.weixin.qq.com/s/2gAzbi0WIIdF5V6rEdYqaQ) | 2024/04/07 | 超算互联网 |
 | ABACUS软件简单介绍                                                       | [网页链接](https://mp.weixin.qq.com/s/ILiUAwtXN6DmXQUfs8u_KA) | 2024/04/06 |  学术之友  |
 | ABACUS 带你领略电子轨道的美妙                                            | [网页链接](https://mp.weixin.qq.com/s/dgkWlm7Eq7IVZG77YdQLsg) | 2024/04/03 |    NBHub   |

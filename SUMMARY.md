@@ -23,7 +23,7 @@
     * [采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算](abacus-surface4.md)
     * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
-    * [结合 ABACUS 和 Atomkit 计算态密度和能带](abacus-dos.md)
+    * [ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
     * [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
     * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)

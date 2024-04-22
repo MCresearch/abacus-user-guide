@@ -1,4 +1,4 @@
-# 结合 ABACUS 和 Atomkit 计算态密度和能带
+# ABACUS+Atomkit 计算态密度和能带
 
 <strong>作者：陈涛，邮箱：chentao@stu.pku.edu.cn</strong>
 
