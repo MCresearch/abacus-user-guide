@@ -6,6 +6,8 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------- | ---------- | ---------- |
+| 张林峰：重构世界，从原子开始                                             | [网页链接](https://mp.weixin.qq.com/s/pZvC_dx7KttrNlMlRtbgpg) | 2024/04/28 |  深势科技  |
+| ABACUS还能干这个？通过梯度锗掺杂实现高效同质结锡基钙钛矿太阳能电池       | [网页链接](https://mp.weixin.qq.com/s/92dRM2jaXXVWHYXtiSnMXQ) | 2024/04/28 |  深度势能  |
 | 专题进展 \ 我国计算物理软件研发的现状及展望                              | [网页链接](https://mp.weixin.qq.com/s/WF_sNGzr0-5nevCnSguIpQ) | 2024/04/25 |    SCPMA   |
 | ABACUS还能干这个？薄膜技术显著增强TaAs中的非线性霍尔效应                 | [网页链接](https://mp.weixin.qq.com/s/Hfwo4-rFjP-rrAv6KDC3Ww) | 2024/04/22 |  深度势能  |
 | 超算&AI应用周报 \ ABACUS v3.6.0版本上线超算互联网，助力大原子模型建设    | [网页链接](https://mp.weixin.qq.com/s/2gAzbi0WIIdF5V6rEdYqaQ) | 2024/04/07 | 超算互联网 |
