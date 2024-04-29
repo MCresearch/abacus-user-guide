@@ -2,7 +2,7 @@
 
 # 一、介绍
 
-ABACUS（Atomic-orbtial Based Ab-initio Computation at UStc，中文名原子算筹）是国产开源密度泛函理论软件，相关介绍 ABACUS 的新闻可在[ABACUS 新闻稿整理](abacus-news.md)查看，以下是一些常用地址：
+ABACUS（Atomic-orbtial Based Ab-initio Computation at UStc，中文名原子算筹）是国产开源密度泛函理论软件，相关介绍 ABACUS 的新闻可在[ABACUS 新闻稿整理](news.md)查看，以下是一些常用地址：
 
 ABACUS 在 DeepModeling 社区中的 GitHub 仓库地址为：
 
@@ -96,7 +96,8 @@ ABACUS 网站访问：
 
 1. [ABACUS 答疑手册](abacus-question.md)
 2. [ABACUS 收敛性问题解决手册](abacus-conv.md)
-3. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
+3. [ABACUS计算模拟实例 | 概述](https://bohrium.dp.tech/notebooks/93842852314)<a href="https://bohrium.dp.tech/notebooks/93842852314" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+4. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
 
 # 四、开发者文档
 
