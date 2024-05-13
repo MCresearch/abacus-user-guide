@@ -1,0 +1,31 @@
+INPUT_PARAMETERS
+#Parameters (1.General)
+suffix          H2_ocp
+calculation     md
+esolver_type    tddft
+nbands			5
+nspin           1
+pseudo_dir      ../../../tests/PP_ORB
+orbital_dir     ../../../tests/PP_ORB
+
+#Parameters (2.Iteration)
+ecutwfc         60
+scf_thr         1e-6
+scf_nmax        100
+
+#Parameters (3.Basis)
+basis_type      lcao
+gamma_only      0
+
+#Parameters (4.Smearing)
+smearing_method     gauss
+
+#Parameters (5.MD Parameters)
+md_type         nve
+md_nstep        1000
+md_dt           0.05
+md_tfirst       0
+
+#Parameters (6.Occupation Parameters)
+ocp                         1
+ocp_set                     1 1 0 0 0
