@@ -66,6 +66,7 @@ Libxc 网址：[Libxc - a library of exchange-correlation functionals for densit
 
 ```bash
 cd libxc-4.3.4
+autoreconf -i
 ./configure --prefix='PATH/TO/LIBXC' CC=icc FC=ifort
 make
 make install
