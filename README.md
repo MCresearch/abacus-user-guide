@@ -56,25 +56,26 @@ ABACUS 网站访问：
    4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    5. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
    6. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-1. DeePKS方法
+4. DeePKS方法
    1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-2. [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
-3. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-4. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-5. 采用ABACUS进行表面计算
+5. [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
+6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+8. [ABACUS 实时演化含时密度泛函理论使用教程](abacus-tddft.md)
+9. 采用ABACUS进行表面计算
    1. [静电势和功函数](abacus-surface1.md)
    2. [偶极修正](abacus-surface2.md)
    3. [表面能计算](abacus-surface3.md)
    4. [表面缺陷能和吸附能计算](abacus-surface4.md)
    5. [外加电场](abacus-surface5.md)
    6. [补偿电荷](abacus-surface6.md)
-6.  分析结果
+10. 分析结果
    1. 能带计算
       1. [ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
    2. PDOS计算
       1. [<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://xmywuqhxb0.feishu.cn/docx/ONSldj82VoNGKSxaoDQcoKBtnGh)<mark style="color:red;"></mark>
-7.  和其他软件对接
+11.  和其他软件对接
     1. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)<a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)<a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     3. [ABACUS+Phono3py 计算晶格热导率](https://nb.bohrium.dp.tech/detail/6116471155)<a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
@@ -84,13 +85,14 @@ ABACUS 网站访问：
     7. [ABACUS+USPEX 接口教程](abacus-uspex.md)
     8. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
     9. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
-    10. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    11. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    12. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
-    13. ABACUS+ASE 做过渡态计算
+    10. [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
+    11. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    12. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    13. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+    14. ABACUS+ASE 做过渡态计算
         1. [ATST-Tools: ASE-ABACUS过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持NEB，Dimer，AutoNEB等过渡态方法。
         2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
-    14. ABACUS+ASE 遗传算法 （暂缺，待更新）
+    15. ABACUS+ASE 遗传算法 （暂缺，待更新）
 
 # 三、使用经验
 
@@ -123,7 +125,7 @@ ABACUS 网站访问：
 20. [Introduction to ABACUS: Path to PW calculation - Part 10](develop-path10.md)
 21. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
 22. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
-23. [如何在 ABACUS 中添加一个输入参数（v3.7.0 后）](develop-addinp2.md)
+23. [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
 24. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
 25. [C++ 程序设计的一些想法](develop-design.md)
 

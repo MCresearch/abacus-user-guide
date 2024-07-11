@@ -1,4 +1,4 @@
-# 如何在 ABACUS 中添加一个输入参数（v3.7.0 后）
+# 如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
 
 <strong>作者：刘千锐，邮箱：terry_liu@pku.edu.cn</strong>
 
@@ -84,7 +84,7 @@ item.get_final_value = [](Input_Item& item, const Parameter& para) {
         };
 ```
 
-以及如果是并行版，需要添加广播函数（<strong>bcastfuncs*</strong>）：如何调用 Parallel_Common 进行 bcast 的函数，该函数一定会执行。
+以及如果是并行版，需要添加广播函数（<strong>bcastfuncs*</strong>）：如何调用 Parallel_Common 进行 bcast 的函数，该函数一定会执行。<u>该函数不一定只传输该参数，还可以传输其他引入的非 INPUT 参数</u>，例如 gamma_only_local 这个变量不是 INPUT 参数，但是其由 gamma_only 和 basis_type 共同决定取值，这种额外引入的参数也需要在 gamma_only 或 basis_type 处添加他的 bcast 函数。
 
 ```cpp
 #ifdef __MPI
@@ -148,14 +148,11 @@ bcastfuncs.push_back([](Parameter& para) {
 2\. 对于形如
 
 ```cpp
-item.read_value = [](const Input_Item& item, Parameter& para) {
-            para.input.nelec = std::stoi(item.str_values[0]); 
-        };
-        item.get_final_value = [](Input_Item& item, const Parameter& para) {
+item.get_final_value = [](Input_Item& item, const Parameter& para) {
             item.final_value << para.input.nelec;
-        };
+        };  
         bcastfuncs.push_back([](Parameter& para) {
-            Parallel_Common::bcast_bool(para.input.nelec); 
+            Parallel_Common::bcast_bool(para.input.PARAMETER); 
         });
 ```
 
@@ -164,11 +161,14 @@ item.read_value = [](const Input_Item& item, Parameter& para) {
 3\. 对于形如
 
 ```cpp
-item.get_final_value = [](Input_Item& item, const Parameter& para) {
+item.read_value = [](const Input_Item& item, Parameter& para) {
+            para.input.nelec = std::stoi(item.str_values[0]); 
+        };
+        item.get_final_value = [](Input_Item& item, const Parameter& para) {
             item.final_value << para.input.nelec;
-        };  
+        };
         bcastfuncs.push_back([](Parameter& para) {
-            Parallel_Common::bcast_bool(para.input.PARAMETER); 
+            Parallel_Common::bcast_bool(para.input.nelec); 
         });
 ```
 

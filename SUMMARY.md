@@ -17,6 +17,7 @@
     * [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
     * [ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)
     * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
+    * [ABACUS 实时演化含时密度泛函理论使用教程](abacus-tddft.md)
     * [采用 ABACUS 进行表面计算（一）：静电势和功函数](abacus-surface1.md)
     * [采用 ABACUS 进行表面计算（二）：偶极修正](abacus-surface2.md)
     * [采用 ABACUS 进行表面计算（三）：表面能计算](abacus-surface3.md)
@@ -32,6 +33,7 @@
     * [ABACUS+USPEX 接口教程](abacus-uspex.md)
     * [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
     * [ABACUS+Wannier90 使用教程](abacus-wannier.md)
+    * [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
 * ABACUS 开发者文档
     * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
     * [ABACUS 中使用格式化工具 clang-format](develop-format.md)
@@ -55,7 +57,7 @@
     * [Introduction to ABACUS: Path to PW calculation - Part 10](develop-path10.md)
     * [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
     * [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
-    * [如何在 ABACUS 中添加一个输入参数（v3.7.0 后）](develop-addinp2.md)
+    * [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
     * [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
     * [C++ 程序设计的一些想法](develop-design.md)
 * 算法文档
