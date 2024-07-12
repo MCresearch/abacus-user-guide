@@ -21,7 +21,7 @@ $$
 此时，$$C_{xxxx}\mapsto C_{11},C_{xxyy}\mapsto C_{12},.....$$
 
 $$
-\begin{bmatrix}\sigma_{1}\\\sigma_{2}\\\sigma_{3}\\\sigma_{4}\\\sigma_{5}\\\sigma_{6}\end{bmatrix}=\begin{bmatrix}C_{11}&C_{12}&C_{13}&C_{14}&C_{15}&C_{16}\\C_{12}&C_{22}&C_{23}&C_{24}&C_{25}&C_{26}\\C_{13}&C_{23}&C_{33}&C_{34}&C_{35}&C_{36}\\C_{14}&C_{24}&C_{34}&C_{44}&C_{45}&C_{46}\\C_{15}&C_{25}&C_{35}&C_{45}&C_{55}&C_{56}\\C_{16}&C_{26}&C_{36}&C_{46}&C_{56}&C_{66}\end{bmatrix}\begin{bmatrix}\epsilon_{1}\\\epsilon_{2}\\\epsilon_{3}\\2\epsilon_{5}\\2\epsilon_{5}\\2\epsilon_{6}\end{bmatrix}
+\begin{bmatrix}\sigma_{1}\\\sigma_{2}\\\sigma_{3}\\\sigma_{4}\\\sigma_{5}\\\sigma_{6}\end{bmatrix}=\begin{bmatrix}C_{11}&C_{12}&C_{13}&C_{14}&C_{15}&C_{16}\\C_{12}&C_{22}&C_{23}&C_{24}&C_{25}&C_{26}\\C_{13}&C_{23}&C_{33}&C_{34}&C_{35}&C_{36}\\C_{14}&C_{24}&C_{34}&C_{44}&C_{45}&C_{46}\\C_{15}&C_{25}&C_{35}&C_{45}&C_{55}&C_{56}\\C_{16}&C_{26}&C_{36}&C_{46}&C_{56}&C_{66}\end{bmatrix}\begin{bmatrix}\epsilon_{1}\\\epsilon_{2}\\\epsilon_{3}\\2\epsilon_{4}\\2\epsilon_{5}\\2\epsilon_{6}\end{bmatrix}
 $$
 
 如果我们通过施加应变$$\varepsilon_i$$使晶体变形并计算相应的应力，则可以从方程中获得弹性常数。晶体晶胞上的变形矩阵为$$\boldsymbol{D=I+\varepsilon}$$，其中$$\boldsymbol{I}$$是 3*3 的单位矩阵，$$\boldsymbol{\varepsilon}$$是 Voigt 表示法中的应变矩阵。
