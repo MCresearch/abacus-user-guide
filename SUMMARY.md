@@ -2,6 +2,7 @@
 
 * [ABACUS 使用教程](README.md)
     * [GCC 编译 ABACUS 教程](abacus-gcc.md)
+    * [Intel oneAPI 2024.x 编译 ABACUS 教程](abacus-oneapi.md)
     * [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
     * [编译 Nvidia GPU 版本的 ABACUS](abacus-gpu.md)
     * [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
@@ -43,6 +44,7 @@
     * [ABACUS 代码存放规范](develop-rule.md)
     * [ABACUS formatter-2.0 版本使用说明书](develop-formatter2.md)
     * [ABACUS 全局数据结构和代码行数检测](develop-linedete.md)
+    * [性能分析工具：vtune 快速上手教程](develop-vtune.md)
     * [ABACUS 中的测试（一）：测试的重要性](develop-test1.md)
     * [ABACUS 中的测试（二）：测试工具 gtest](develop-test2.md)
     * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
