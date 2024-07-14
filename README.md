@@ -87,13 +87,14 @@ ABACUS 网站访问：
     8. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
     9. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
     10. [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
-    11. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    12. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-    13. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
-    14. ABACUS+ASE 做过渡态计算
+    11. [ABACUS+Bader charge 分析教程](abacus-bader.md)
+    12. [ABACUS+pyatb 能带反折叠计算](https://nb.bohrium.dp.tech/detail/2012704420)<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    13. [ABACUS+DeepH 建立碳材料的哈密顿量模型](https://nb.bohrium.dp.tech/detail/6242632169)<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+    14. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+    15. ABACUS+ASE 做过渡态计算
         1. [ATST-Tools: ASE-ABACUS过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持NEB，Dimer，AutoNEB等过渡态方法。
         2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
-    15. ABACUS+ASE 遗传算法 （暂缺，待更新）
+    16. ABACUS+ASE 遗传算法 （暂缺，待更新）
 
 # 三、使用经验
 
@@ -125,24 +126,25 @@ ABACUS 网站访问：
 7. [ABACUS formatter-2.0 版本使用说明书](develop-formatter2.md)
 8. [ABACUS 全局数据结构和代码行数检测](develop-linedete.md)
 9. [性能分析工具：vtune 快速上手教程](develop-vtune.md)
-10. [ABACUS 中的测试（一）：测试的重要性](develop-test1.md)
-11. [ABACUS 中的测试（二）：测试工具 gtest](develop-test2.md)
-12. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
-13. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
-14. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
-15. [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
-16. [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
-17. [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
-18. [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
-19. [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
-20. [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
-21. [Introduction to ABACUS: Path to PW calculation - Part 9](develop-path9.md)
-22. [Introduction to ABACUS: Path to PW calculation - Part 10](develop-path10.md)
-23. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
-24. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
-25. [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
-26. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
-27. [C++ 程序设计的一些想法](develop-design.md)
+10. [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
+11. [ABACUS 中的测试（一）：测试的重要性](develop-test1.md)
+12. [ABACUS 中的测试（二）：测试工具 gtest](develop-test2.md)
+13. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
+14. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
+15. [Introduction to ABACUS: Path to PW calculation - Part 3](develop-path3.md)
+16. [Introduction to ABACUS: Path to PW calculation - Part 4](develop-path4.md)
+17. [Introduction to ABACUS: Path to PW calculation - Part 5](develop-path5.md)
+18. [Introduction to ABACUS: Path to PW calculation - Summary 1](develop-sm1.md)
+19. [Introduction to ABACUS: Path to PW calculation - Part 6](develop-path6.md)
+20. [Introduction to ABACUS: Path to PW calculation - Part 7](develop-path7.md)
+21. [Introduction to ABACUS: Path to PW calculation - Part 8](develop-path8.md)
+22. [Introduction to ABACUS: Path to PW calculation - Part 9](develop-path9.md)
+23. [Introduction to ABACUS: Path to PW calculation - Part 10](develop-path10.md)
+24. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
+25. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
+26. [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
+27. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
+28. [C++ 程序设计的一些想法](develop-design.md)
 
 # 五、算法文档
 
