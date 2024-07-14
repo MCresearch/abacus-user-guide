@@ -2,7 +2,7 @@
 
 <strong>作者：陈诺，邮箱：cn037@stu.pku.edu.cn</strong>
 
-<strong>最后更新时间：2024/07/13</strong>
+<strong>最后更新时间：2024/07/14</strong>
 
 # Intel OneAPI 工具链
 
@@ -132,7 +132,7 @@ icpx: warning: argument unused during compilation: '-I /opt/intel/oneapi/2024.2/
 ### 安装 cereal
 
 ```bash
-sudo apt install -y libelpa-dev
+sudo apt install libcereal-dev
 ```
 
 ### 安装 elpa
@@ -142,6 +142,8 @@ sudo apt install -y libelpa-dev
 ```bash
 /usr/bin/ld: warning: libmpi.so.40, needed by /usr/lib/x86_64-linux-gnu/libelpa.so, may conflict with libmpi.so.12
 ```
+
+运行算例时报错：
 
 ```bash
 * * * * * *
@@ -176,6 +178,14 @@ cd abacus-develop/toolchain
 cereal-1.3.2  cmake-3.28.1  elpa-2023.05.001  libxc-6.2.2  lsan.supp  setup  toolchain.conf  toolchain.env  tsan.supp  valgrind.supp
 ```
 
+- 使用toolchain构建的elpa，在构建abacus时有警告如下，暂未发现影响使用。该问题由scalapack库未指定mkl版本导致，“自行编译安装”方式（见下）无此问题。
+
+> 参见[2.4 Non standard paths or non standard libraries](https://security.feishu.cn/link/safety?target=https%3A%2F%2Fgitlab.mpcdf.mpg.de%2Felpa%2Felpa%2F-%2Fblob%2Fmaster%2Fdocumentation%2FINSTALL.md%2324-non-standard-paths-or-non-standard-libraries&scene=ccm&logParams=%7B%22location%22%3A%22ccm_docs%22%7D&lang=zh-CN)
+
+```bash
+/usr/bin/ld: warning: libmpi.so.40, needed by /lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1, may conflict with libmpi.so.12
+```
+
 也可以根据 [documentation/INSTALL.md · master · elpa / elpa · GitLab](https://gitlab.mpcdf.mpg.de/elpa/elpa/-/blob/master/documentation/INSTALL.md)，自行编译安装 elpa。
 
 #### 自行编译安装
@@ -190,7 +200,7 @@ wget https://elpa.mpcdf.mpg.de/software/tarball-archive/Releases/2024.05.001/elp
 tar xvf elpa-2024.05.001.tar.gz
 ```
 
-- 安装脚本，仅供参考。
+- 安装脚本，仅供参考。这一步可能需要几分钟。如果运行脚本时显示oneAPI warnings提示已经设置过环境变量并退出，请打开一个新的shell环境，执行安装脚本。最后的make install和ln需要sudo权限，如果无法提供，请手动完成这两步。
 
 ```bash
 #!/bin/bash -e
@@ -200,7 +210,8 @@ tar xvf elpa-2024.05.001.tar.gz
 
 # source oneAPI environments
 echo "using oneAPI 2024.2"
-. /opt/intel/oneapi/2024.2/oneapi-vars.sh
+. /opt/intel/oneapi/2024.2/oneapi-vars.sh \
+|| { echo "Failed to load oneAPI environment. Please restart in a new shell without oneAPI vars set."; false; }
 
 # in elpa main dir
 # check whether there is a 'build' directory
@@ -210,22 +221,58 @@ if [ -d "build" ]; then
 fi
 mkdir build && cd build
 
+MKL_HOME=/opt/intel/oneapi/2024.2
+
 CC=mpiicx CXX=mpiicpx FC=mpiifort ../configure \
---disable-avx --disable-avx2 --disable-avx512 --disable-sse --disable-sse-assembly
+--disable-avx --disable-avx2 --disable-avx512 --disable-sse --disable-sse-assembly \
+SCALAPACK_LDFLAGS="-L$MKL_HOME/lib/ -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential \
+                             -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -Wl,-rpath,$MKL_HOME/lib/" \
+SCALAPACK_FCFLAGS="-L$MKL_HOME/lib/ -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential \
+                    -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -I$MKL_HOME/include/mkl/intel64/lp64"
 
-make -j`nproc` > make.log 2>&1 
-
+make -j$(nproc) > make.log 2>&1 
 echo "installation process may require administrative privileges."
 read -p "Would you like to continue with 'sudo make install'? (y/n): " -n 1 -r
-echo    # Move to a new line
+echo    # (Optional) Move to a new line
 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Proceeding with installation using administrative privileges..."
-    sudo make install > install.log 2>&1
-    sudo ln -s /usr/local/include/elpa-2024.05.001/elpa /usr/local/include/
+    sudo make install > install.log 2>&1 
 else
     echo "Installation has been canceled."
+    echo "Please manually execute 'make install' and link elpa to default path."
+fi
+
+# link elpa to /usr/local/include
+
+# The target path for the symbolic link
+LINK_PATH="/usr/local/include/elpa"
+# The source path for the original link (replace with the actual source path)
+SOURCE_PATH="/usr/local/include/elpa-2024.05.001/elpa"
+
+# Check if the link exists
+if [ -L "$LINK_PATH" ]; then
+    # If the link exists, delete it
+    echo "The link already exists, deleting the old link..."
+    sudo rm "$LINK_PATH"
+else
+    # If the link does not exist, check for the presence of a file or directory
+    if [ -e "$LINK_PATH" ]; then
+        echo "A file or directory exists at the path, unable to create the link. Please delete or rename the file/directory first."
+        exit 1
+    fi
+fi
+
+# Create a new symbolic link
+sudo ln -s "$SOURCE_PATH" "$LINK_PATH"
+
+# Check if the link was created successfully
+if [ -L "$LINK_PATH" ]; then
+    echo "The new symbolic link has been created successfully."
+else
+    echo "Failed to create the symbolic link."
+    exit 1
 fi
 
 echo "elpa install over."
@@ -275,6 +322,9 @@ Call Stack (most recent call first):
 
 CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
 -- Configuring incomplete, errors occurred!
+
+# 请设置环境
+. /opt/intel/oneapi/2024.2/oneapi-vars.sh
 ```
 
 - 找不到 elpa，请在配置时指定安装路径。
@@ -293,6 +343,11 @@ CMake Error in CMakeLists.txt:
 
   * The installation package was faulty and references files it does not
   provide.
+
+
+# 请指定ELPA_DIR（及其他自己手动构建的库）
+CXX=mpiicpx cmake -B build \
+-DELPA_DIR=~/abacus-develop/toolchain/install/elpa-2023.05.001/cpu/
 
 
 #####
@@ -318,13 +373,13 @@ CMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake:62 (mess
 
   is not able to compile a simple test program.
   
-  # use CXX=mpiicpx instead of mpiicpc
+  # use CXX=mpiicpx instead of CXX=mpiicpc
 ```
 
-- 但是链接错误
-
-  - 请检查 oneAPI HPC kits 的安装；
-  - 使用 `/opt/intel/oneapi/2024.2/oneapi-vars.sh`，而不是 `/opt/intel/oneapi/setvars.sh`
+- 运行了oneAPI配置环境变量脚本，但是链接错误
+  - 请检查oneAPI HPC kits的安装；可进入installer查看当前安装的所有Toolkits和对应版本，见下条。
+  - 使用/opt/intel/oneapi/2024.2/oneapi-vars.sh，而不是/opt/intel/oneapi/setvars.sh
+  
 - 如果安装了多版本的 oneAPI 工具链，怀疑环境遭到破坏，可以使用 `/opt/intel/oneapi/installer` 中的 `installer` 工具修复和移除不需要版本以及更新。
 
 ```bash
@@ -336,13 +391,13 @@ sudo ./installer
 # 使用Update获得新版本
 ```
 
-- 如果遇到 libmpi.so 相关报错，可以用 `locate` 查看所有相关库。
+- 如果遇到 `libmpi.so` 相关报错，可以用 `locate` 查看所有相关库。
 
 ```bash
 locate libmpi.so
 ```
 
-- 运行算例或测试失败，请确保安装时运行了 install 命令，以及运行了 oneAPI 的配置环境变量脚本。
+- 运行算例或测试失败，请确保最新构建后运行了install命令，且没有因为权限不足安装失败。
 
 # 参考
 
