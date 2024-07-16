@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| ABACUS@Notebooks \ 探索化学元素周期表的奥秘                                     | [网页链接](https://mp.weixin.qq.com/s/jbxYmTcx_fTkdbAzJfFrLw)         | 2024/07/06 |   NBHub    |
 | 拓展科学边界 \ OpenLAM于WAIC发布最新进展 构建大原子模型开放社区平台             | [网页链接](https://mp.weixin.qq.com/s/V-ehT06OkS-IzdfXIQGvjA)         | 2024/07/06 |  深度势能  |
 | 中国科研团队开发“原子算筹”软件 助力新材料研发                                   | [网页链接](https://m.chinanews.com/wap/detail/chs/sp/10245956.shtml)  | 2024/07/04 | 中国新闻网 |
 | ABACUS还能干这个？见刊Nat. Commun、ACS Nano，含时密度泛函理论揭示光催化微观机理 | [网页链接](https://mp.weixin.qq.com/s/5yQC_gP0CTHnojrFrSpOgw)         | 2024/07/04 |  深度势能  |
