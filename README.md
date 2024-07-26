@@ -113,7 +113,8 @@ ABACUS 网站访问：
 13. [ABACUS计算模拟实例 | XI. Pt表面简单物种的吸附能计算](https://bohrium.dp.tech/notebooks/15517833825)<a href="https://bohrium.dp.tech/notebooks/15517833825" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 14. [ABACUS计算模拟实例 | XII. Pt(111)表面羟基解离的过渡态搜索](https://bohrium.dp.tech/notebooks/36595625971)<a href="https://bohrium.dp.tech/notebooks/36595625971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 15. [ABACUS计算模拟实例 | XIII. Pt表面的ORR催化路径](https://bohrium.dp.tech/notebooks/49942212168)<a href="https://bohrium.dp.tech/notebooks/49942212168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-16. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
+16. [ABACUS对比CP2K精度和效率测试 | Si的状态方程（EOS）](https://bohrium.dp.tech/notebooks/77351186918)<a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+17. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
 
 # 四、开发者文档
 
