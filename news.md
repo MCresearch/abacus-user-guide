@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| ABACUS还能干这个？探究非局域势效应对温稠密物质的电导率与热导率计算影响          | [网页链接](https://mp.weixin.qq.com/s/7prhTi75Vmv1EqYcXeBRcw)         | 2024/07/30 |  深度势能  |
 | 2024 Q2 OpenLAM Report \ 更稳定的代码 更丰富的领域模型                          | [网页链接](https://mp.weixin.qq.com/s/7Sl0uqS_jX5MjR19fmGqlw)         | 2024/07/29 |  深度势能  |
 | ABACUS@Notebooks \ 探索化学元素周期表的奥秘                                     | [网页链接](https://mp.weixin.qq.com/s/jbxYmTcx_fTkdbAzJfFrLw)         | 2024/07/06 |   NBHub    |
 | 拓展科学边界 \ OpenLAM于WAIC发布最新进展 构建大原子模型开放社区平台             | [网页链接](https://mp.weixin.qq.com/s/V-ehT06OkS-IzdfXIQGvjA)         | 2024/07/06 |  深度势能  |
