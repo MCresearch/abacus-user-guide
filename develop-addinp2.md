@@ -29,6 +29,8 @@ double nelec_delta = 0.0;       ///< change in the number of total electrons
 
 <u>注：对于任何类成员变量的 double, int, bool 等一般类型变量，在定义时就建议给一个初始值。如果类成员没有初始值，很可能会有难以察觉的 bug</u>
 
+<u>注：string类型变量的初始值不能为"", 如果想自动设置，可以设置初始值为"auto", "none"等。</u>
+
 ## 1.2 在参数列表中添加参数
 
 路径 <u>module\_io/read\_input\_item\_\*.cpp </u>（不同的参数分好了类，其对应不同文件，需要加到属于的文件里面），如 nelec 就在<u>read_input_item_general.cpp</u>中
