@@ -1,4 +1,4 @@
-# 文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+# 文件输出功能的实现代码结构设计建议：以 ABACUS CifParser 为例
 
 <strong>作者：黄一珂，邮箱：huangyk@aisi.ac.cn</strong>
 
