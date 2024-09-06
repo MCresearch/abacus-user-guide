@@ -47,6 +47,7 @@
     * [ABACUS 全局数据结构和代码行数检测](develop-linedete.md)
     * [性能分析工具：vtune 快速上手教程](develop-vtune.md)
     * [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
+    * [文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例](develop-cifparser.md)
     * [ABACUS 中的测试（一）：测试的重要性](develop-test1.md)
     * [ABACUS 中的测试（二）：测试工具 gtest](develop-test2.md)
     * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)

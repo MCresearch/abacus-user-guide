@@ -1,0 +1,1472 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="develop-test1.html" />
+    
+    
+    <link rel="prev" href="develop-grid.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ABACUS 使用教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数DFT方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.24" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.25" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.26" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.27" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.28" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.29" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.30" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.31" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.32" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.33" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.34" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.35" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.11" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#xFF1A;&#x4EE5;-abcus-cifparser-&#x4E3A;&#x4F8B;"><a name="&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#xFF1A;&#x4EE5;-abcus-cifparser-&#x4E3A;&#x4F8B;" class="plugin-anchor" href="#&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#xFF1A;&#x4EE5;-abcus-cifparser-&#x4E3A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#xFF1A;&#x4EE5; ABCUS CifParser &#x4E3A;&#x4F8B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x9EC4;&#x4E00;&#x73C2;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;huangyk@aisi.ac.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2024 &#x5E74; 9 &#x6708; 6 &#x65E5;</strong></p>
+<p><em>&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x5E76;&#x4E0D;&#x662F;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x7684;&#x8FB9;&#x89D2;&#x4EFB;&#x52A1;&#x3002;&#x826F;&#x597D;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x8BBE;&#x8BA1;&#x4E0D;&#x4EC5;&#x80FD;&#x4FBF;&#x6377;&#x7528;&#x6237;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x63D0;&#x5347;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x4F7F;&#x5F97;&#x8F6F;&#x4EF6;&#x80FD;&#x591F;&#x65E0;&#x7F1D;&#x5730;&#x7ED3;&#x5408; community &#x5DF2;&#x6709;&#x6210;&#x719F;&#x5DE5;&#x4F5C;&#x8303;&#x5F0F;&#xFF0C;&#x4E5F;&#x4F1A;&#x5728;&#x5FC5;&#x8981;&#x65F6;&#x4E3A;&#x4EE5; disk I/O &#x89E3;&#x51B3;&#x5185;&#x5B58;&#x95EE;&#x9898;&#x53D1;&#x6325;&#x660E;&#x663E;&#x4F5C;&#x7528;</em></p>
+<h1 id="&#x80CC;&#x666F;"><a name="&#x80CC;&#x666F;" class="plugin-anchor" href="#&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x80CC;&#x666F;</h1>
+<ul>
+<li>&#x968F;&#x7740; ABACUS &#x7684;&#x529F;&#x80FD;&#x6301;&#x7EED;&#x589E;&#x52A0;&#xFF0C;&#x5BF9;&#x611F;&#x5174;&#x8DA3;&#x7269;&#x7406;&#x91CF;&#x8F93;&#x51FA;&#x7684;&#x9700;&#x6C42;&#x4E5F;&#x968F;&#x4E4B;&#x589E;&#x52A0;&#xFF0C;&#x4E14;&#x4ECE; running_log &#x4E2D;&#x6293;&#x53D6;&#x4FE1;&#x606F;&#x6108;&#x52A0;&#x56F0;&#x96BE;</li>
+<li>&#x968F;&#x7740; ABACUS &#x7684;&#x7528;&#x6237;&#x7FA4;&#x4F53;&#x589E;&#x52A0;&#xFF0C;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684; ABACUS &#x4E0E;&#x5404;&#x79CD;&#x5177;&#x6709;&#x7ED3;&#x6784;&#x5316;&#x6587;&#x4EF6;&#x63A5;&#x53E3;&#x7684;&#x540E;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x4E0D;&#x517C;&#x5BB9;&#x7684; issue/&#x62A5;&#x544A;&#x6570;&#x91CF;&#x4E5F;&#x5728;&#x589E;&#x52A0;</li>
+<li>&#x5C06;&#x79EF;&#x5206;&#x8868;&#x548C;&#x5176;&#x4ED6;&#x975E;&#x9AD8;&#x9891;&#x8BBF;&#x95EE;&#xFF08;&#x8BA1;&#x7B97;&#x6B21;&#x6570;&#x6709;&#x9650;&#xFF0C;&#x4F46;&#x6BCF;&#x6B21;&#x8BA1;&#x7B97;&#x6210;&#x672C;&#x8F83;&#x9AD8;&#xFF09;&#x6570;&#x636E;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x6765;&#x51CF;&#x8F7B;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#xFF0C;&#x662F;&#x6A21;&#x62DF;&#x66F4;&#x5927;&#x5C3A;&#x5EA6;&#x4F53;&#x7CFB;&#x7684;&#x5E38;&#x89C1;&#x548C;&#x6210;&#x719F;&#x6280;&#x672F;&#x8DEF;&#x7EBF;&#x4E4B;&#x4E00;</li>
+</ul>
+<h1 id="&#x89C4;&#x8303;&#x5316;&#x6587;&#x4EF6;&#x8F93;&#x51FA;-&#x8BFB;&#x5165;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;"><a name="&#x89C4;&#x8303;&#x5316;&#x6587;&#x4EF6;&#x8F93;&#x51FA;-&#x8BFB;&#x5165;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#&#x89C4;&#x8303;&#x5316;&#x6587;&#x4EF6;&#x8F93;&#x51FA;-&#x8BFB;&#x5165;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89C4;&#x8303;&#x5316;&#x6587;&#x4EF6;&#x8F93;&#x51FA;-&#x8BFB;&#x5165;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h1>
+<h2 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x65B0;&#x601D;&#x8003;"><a name="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x65B0;&#x601D;&#x8003;" class="plugin-anchor" href="#&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x65B0;&#x601D;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x65B0;&#x601D;&#x8003;</h2>
+<p>&#x5728;&#x8BBE;&#x8BA1;&#x548C;&#x7F16;&#x5199;&#x8F93;&#x51FA;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;<strong>&#x5FC5;&#x987B;</strong>&#x518D;&#x6B21;<strong>&#x660E;&#x786E;</strong>&#x81F3;&#x5C11;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x65B9;&#x9762;&#xFF1A;</p>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x8F93;&#x51FA;&#x529F;&#x80FD;&#x7684;&#x7528;&#x9014;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;<strong>&#x662F;&#x7ED9;&#x4EBA;&#x8BFB;&#x8FD8;&#x662F;&#x673A;&#x5668;&#x8BFB;</strong>&#xFF1F;</li>
+<li><strong>&#x4ECE;&#x539F;&#x5219;&#x4E0A;&#x8BB2;</strong>&#xFF0C;&#x6240;&#x9700;&#x8F93;&#x51FA;&#x7269;&#x7406;&#x91CF;&#xFF0C;&#x5728;&#x8F93;&#x51FA;&#x8FC7;&#x7A0B;&#x4E2D;&#x4EA7;&#x751F;&#x7684;<strong>&#x7CBE;&#x5EA6;&#x635F;&#x5931;&#x662F;&#x5426;&#x5E94;&#x8BE5;</strong>&#x53D1;&#x751F;&#xFF1F;</li>
+</ul>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;ABACUS &#x76EE;&#x524D;&#x7684;&#x786E;&#x5B58;&#x5728;&#x201C;&#x5177;&#x6709;&#x6709;&#x9650;&#x4FDD;&#x7559;&#x4F4D;&#x6570;&#xFF0C;&#x4F46;&#x7528;&#x4E8E;&#x88AB;&#x671F;&#x671B;&#x8FDB;&#x884C;&#x6570;&#x503C;&#x8BEF;&#x5DEE;&#x5C3D;&#x53EF;&#x80FD;&#x5C0F;&#x7684;&#x8BA1;&#x7B97;&#x201D;&#x8FD9;&#x4E00;&#x60C5;&#x51B5;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li>LCAO &#x6CE2;&#x51FD;&#x6570;&#xFF1A;out_wfc_lcao &#x5173;&#x952E;&#x8BCD;&#x53EF;&#x8D4B;&#x503C; 1 &#x8F93;&#x51FA;&#x4E3A; plaintext&#xFF0C;&#x8D4B;&#x503C; 2 &#x8F93;&#x51FA;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x3002;&#x4F46; plaintext &#x6587;&#x4EF6;&#x7528;&#x4E8E; restart SCF &#x8BA1;&#x7B97;</li>
+<li>&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#xFF1A;out_chg &#x5173;&#x952E;&#x8BCD;&#x53EF;&#x8D4B;&#x503C; 1 &#x8F93;&#x51FA;&#x5B9E;&#x7A7A;&#x95F4;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x4E3A; Gaussian cube&#xFF0C;<strong>&#x8BE5;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x53EA;&#x4FDD;&#x7559; 3 &#x4F4D;&#x5C0F;&#x6570;&#xFF0C;&#x4E14;&#x5728; PR#4958 &#x4E4B;&#x524D;&#x65E0;&#x6CD5;&#x66F4;&#x6539;</strong>&#xFF0C;&#x7528;&#x4E8E; restart SCF &#x8BA1;&#x7B97;</li>
+<li>H(k), S(k)&#xFF1A;out_mat_hs &#x5173;&#x952E;&#x8BCD;&#x53EF;&#x8D4B;&#x503C; 1 &#x8F93;&#x51FA; H(k)&#x548C; S(k)&#x4E3A; plaintext&#x3002;<strong>&#x8BE5;&#x7C7B;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x53EA;&#x4FDD;&#x7559; 6 &#x4F4D;&#x5C0F;&#x6570;&#xFF0C;&#x4E14;&#x5728; PR#3468 &#x4E4B;&#x524D;&#x65E0;&#x6CD5;&#x66F4;&#x6539;</strong>&#xFF0C;&#x8054;&#x5408; out_wfc_lcao 1 &#x6240;&#x8F93;&#x51FA;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#x6587;&#x4EF6;&#xFF0C;&#x6570;&#x503C;&#x8BEF;&#x5DEE;&#x8FBE;&#x5230;<strong>1e-5</strong>&#x6570;&#x91CF;&#x7EA7;&#xFF0C;&#x5DF2;&#x7ECF;&#x65E0;&#x6CD5;&#x7528;&#x4E8E;&#x7CBE;&#x5EA6;&#x8981;&#x6C42;&#x7A0D;&#x9AD8;&#x7684;&#x540E;&#x5904;&#x7406;&#x8BA1;&#x7B97;</li>
+</ul>
+<p>...</p>
+<p>&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x7684;&#x51FA;&#x73B0;&#xFF0C;&#x53CD;&#x6620;&#x4E86; ABACUS &#x6D89;&#x53CA;&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x5E76;&#x672A;&#x826F;&#x597D;&#x8BBE;&#x8BA1;&#xFF0C;&#x4E14;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#x4E00;&#x79CD;&#x6587;&#x4EF6;&#x627F;&#x62C5;&#x4E86;&#x4EBA;&#x8BFB;&#x548C;&#x673A;&#x5668;&#x8BFB;&#xFF0C;&#x5B9A;&#x6027;&#x548C;&#x4E25;&#x683C;&#x5B9A;&#x91CF;&#x4E24;&#x79CD;&#x573A;&#x666F;&#x9700;&#x6C42;&#x3002;</p>
+<h2 id="&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x8C03;&#x7814;"><a name="&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x8C03;&#x7814;" class="plugin-anchor" href="#&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x8C03;&#x7814;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x8C03;&#x7814;</h2>
+<p><strong>&#x57FA;&#x4E8E;&#x7B2C;&#x4E00;&#x6B65;&#x5BF9;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x76EE;&#x7684;&#x7684;&#x518D;&#x6B21;&#x660E;&#x786E;</strong>&#xFF0C;&#x4E4B;&#x540E;&#x8003;&#x8651;&#x50A8;&#x5B58;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x6574;&#x4E2A;&#x8BA1;&#x7B97;&#x5316;&#x5B66;/&#x8BA1;&#x7B97;&#x7269;&#x7406;&#x9886;&#x57DF;&#x7684;&#x8F6F;&#x4EF6;&#x5DF2;&#x7ECF;&#x5BF9;&#x76F8;&#x5F53;&#x591A;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5C31;&#x201C;&#x5E94;&#x5F53;&#x5982;&#x4F55;&#x8F93;&#x51FA;&#x201D;&#x3001;&#x201C;&#x8F93;&#x51FA;&#x4E3A;&#x4F55;&#x79CD;&#x683C;&#x5F0F;&#x201D;&#x51DD;&#x805A;&#x51FA;&#x5171;&#x8BC6;&#xFF0C;&#x5982;&#x5B9E;&#x7A7A;&#x95F4;&#x4E09;&#x7EF4;&#x683C;&#x70B9;&#x6570;&#x636E;&#x4EE5; Gaussian Cube/xsd &#x6587;&#x4EF6;&#x8F93;&#x51FA;&#xFF0C;&#x7A00;&#x758F;&#x77E9;&#x9635;&#x4F7F;&#x7528; csr &#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF0C;&#x7ED8;&#x56FE;&#x6570;&#x636E;&#x4F7F;&#x7528; gnuplot &#x53EF;&#x8BFB;&#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF0C;&#x7ED3;&#x6784;&#x6587;&#x4EF6;&#x4F7F;&#x7528; cif/(ext-)xyz/pdb &#x7B49;&#x683C;&#x5F0F;&#x8F93;&#x51FA;&#x3002;&#x4E5F;&#x4E0D;&#x65AD;&#x6709;&#x65B0;&#x7684;&#x683C;&#x5F0F;&#x88AB;&#x63A8;&#x5E7F;&#xFF0C;&#x5982;&#x4E09;&#x7EF4;&#x683C;&#x70B9;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x5177;&#x6709;&#x66F4;&#x9AD8;&#x538B;&#x7F29;&#x6BD4;&#x7684; BQB&#xFF0C;&#x56E0;&#x4E3A; Python &#x7684;&#x5927;&#x8303;&#x56F4;&#x5E94;&#x7528;&#x56E0;&#x6B64;&#x652F;&#x6301;&#x8F93;&#x51FA; npy, npz &#x7B49;&#x3002;&#x56E0;&#x6B64;&#x5177;&#x6709;&#x8F93;&#x51FA;&#x548C;&#x8BFB;&#x5165;&#x7269;&#x7406;&#x91CF;&#x7684;&#x9700;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x8BE5;&#x529F;&#x80FD;&#x5BF9;&#x7528;&#x6237;&#x53EF;&#x89C1;&#x4E14;&#x88AB;&#x9AD8;&#x5EA6;&#x4FE1;&#x4EFB;&#x5730;&#x4F7F;&#x7528;&#xFF0C;&#x5E94;&#x5F53;&#x9996;&#x5148;&#x5BF9;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x548C;&#x6807;&#x51C6;&#x8FDB;&#x884C;&#x8C03;&#x7814;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<p><a href="https://www.quantum-espresso.org/Doc/INPUT_PP.html#idm124" target="_blank">https://www.quantum-espresso.org/Doc/INPUT_PP.html#idm124</a></p>
+<p><a href="https://manual.cp2k.org/trunk/CP2K_INPUT/FORCE_EVAL/DFT/PRINT.html" target="_blank">https://manual.cp2k.org/trunk/CP2K_INPUT/FORCE_EVAL/DFT/PRINT.html</a></p>
+<p>&#x7279;&#x522B;&#x5730;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;&#x4E8E; restart &#x6240;&#x9700;&#x6587;&#x4EF6;&#x548C; MD &#x8F68;&#x8FF9;&#x7684;&#x5B58;&#x50A8;&#xFF0C;&#x5E94;&#x5F53;&#x5728;&#x8F6F;&#x4EF6;&#x95F4;&#x8FDB;&#x884C;&#x5E7F;&#x6CDB;&#x8C03;&#x7814;&#x3002;&#x5BF9;&#x4E8E; restart&#xFF0C;&#x5982; QE &#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x3001;&#x6CE2;&#x51FD;&#x6570;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;CP2K &#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#x6700;&#x65B0;&#x4E09;&#x6B65;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;GROMACS &#x5C06;&#x8F68;&#x8FF9;&#x4FDD;&#x5B58;&#x5728;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x7684; trr &#x4E2D;&#xFF0C;LAMMPS &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; dump &#x5173;&#x952E;&#x8BCD;&#x5C06;&#x6307;&#x5B9A;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;CP2K &#x9ED8;&#x8BA4;&#x5C06; AIMD &#x8F68;&#x8FF9;&#x4FDD;&#x5B58;&#x5728; xyz &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E14;&#x4ED6;&#x4EEC;&#x652F;&#x6301;&#x6839;&#x636E; suffix/prefix &#x6765;&#x6279;&#x91CF;&#x8BBE;&#x7F6E;&#x5404;&#x79CD;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; MD &#x8F68;&#x8FF9;&#x5219;&#x5E94;&#x5F53;&#x8C03;&#x7814;&#x5E38;&#x89C1;&#x7684;&#x8F68;&#x8FF9;&#x5206;&#x6790;&#x540E;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x8F6F;&#x4EF6;&#x7684;&#x53EF;&#x63A5;&#x53D7;&#x683C;&#x5F0F;&#xFF0C;&#x5982; Visual Molecular Dynamics (VMD)&#x3001;OVITO&#xFF0C;&#x5206;&#x522B;&#x5728;&#x86CB;&#x767D;&#x6A21;&#x62DF;&#x3001;&#x6750;&#x6599;&#x6A21;&#x62DF;&#x9886;&#x57DF;&#x4E45;&#x8D1F;&#x76DB;&#x540D;&#xFF0C;&#x5404;&#x81EA;&#x5177;&#x6709;&#x5E9E;&#x5927;&#x7684;&#x7528;&#x6237;&#x7FA4;&#x4F53;&#xFF1A;</p>
+<p><img src="picture/fig_cifparse1.png" alt=""></p>
+<h2 id="&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5199;&#x4E00;&#x4E2A;&#x597D;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x5E93;"><a name="&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5199;&#x4E00;&#x4E2A;&#x597D;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x5E93;" class="plugin-anchor" href="#&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5199;&#x4E00;&#x4E2A;&#x597D;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;&#x5199;&#x4E00;&#x4E2A;&#x597D;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x5E93;</h2>
+<p>&#x4E0D;&#x5F97;&#x4E0D;&#x627F;&#x8BA4;&#xFF0C;&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x5B9E;&#x73B0;&#x5728;&#x5B9E;&#x9645;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#x65F6;&#x662F;&#x201C;dirty work&#x201D;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5E94;&#x5F53;&#x5C3D;&#x53EF;&#x80FD;&#x51CF;&#x5C11;&#x201C;dirty work&#x201D;&#x5360;&#x7528;&#x6240;&#x6709;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x57FA;&#x4E8E;&#x8FD9;&#x79CD;&#x76EE;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x91CF;&#x5176;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x62BD;&#x8C61;&#x7684;&#x8BA4;&#x8BC6;&#xFF0C;&#x4E4B;&#x540E;&#x6839;&#x636E;&#x7CBE;&#x5EA6;&#x8981;&#x6C42;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x56E0;&#x6B64;&#x6240;&#x6709;&#x771F;&#x6B63;&#x5BF9;&#x8F93;&#x5165;-&#x8F93;&#x51FA;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x5E94;&#x5F53;&#x5177;&#x6709;&#x5E93;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x800C;&#x975E;&#x603B;&#x662F; case-by-case &#x5730;&#x53BB;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x5982; ABACUS &#x4E4B;&#x524D;&#x7248;&#x672C;&#x4E2D;&#x51FA;&#x73B0;&#x7684; STRU_SIMPLE.cif &#x548C; STRU_READIN_ADJUST.cif&#xFF0C;&#x4E24;&#x6587;&#x4EF6;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x4E24;&#x6587;&#x4EF6;&#x90FD;&#x4E0D;&#x5177;&#x6709;&#x5B8C;&#x6574;&#x7684; cif &#x6587;&#x4EF6;&#x89C4;&#x5B9A;&#x7684;&#x7ED3;&#x6784;&#x3002;</p>
+<h3 id="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x96F6;&#xFF1A;100-&#x660E;&#x786E;&#x5C01;&#x88C5;&#x7684;&#x5FC5;&#x8981;&#x6027;"><a name="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x96F6;&#xFF1A;100-&#x660E;&#x786E;&#x5C01;&#x88C5;&#x7684;&#x5FC5;&#x8981;&#x6027;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x96F6;&#xFF1A;100-&#x660E;&#x786E;&#x5C01;&#x88C5;&#x7684;&#x5FC5;&#x8981;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x96F6;&#xFF1A;100% &#x660E;&#x786E;&#x5C01;&#x88C5;&#x7684;&#x5FC5;&#x8981;&#x6027;</h3>
+<p>&#x591A;&#x4EBA;&#x534F;&#x4F5C;&#x5F00;&#x53D1; C++ &#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x6709;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x5F00;&#x53D1;&#x8005;&#x8D77;&#x624B;&#x5C31;&#x8981;&#x628A;&#x81EA;&#x5DF1;&#x5C06;&#x8981;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x7528;&#x201C;class XXX {}&#x201D;&#x5957;&#x8D77;&#x6765;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F46;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x5982;&#x6B64;&#x505A;&#x5374;&#x4E0D;&#x80FD;&#x7ED9;&#x51FA;&#x4EE4;&#x4EBA;&#x6EE1;&#x610F;&#x7684;&#x56DE;&#x7B54;&#xFF0C;&#x5373;&#x201C;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x201D;&#x5176;&#x201C;&#x5BF9;&#x8C61;&#x201D;&#x7A76;&#x7ADF;&#x4E3A;&#x4F55;&#x7269;&#x7684;&#x610F;&#x4E49;&#x4E0D;&#x660E;&#x786E;&#x3002;&#x5C31;&#x5F53;&#x524D;&#x8BED;&#x5883;&#x800C;&#x8A00;&#xFF0C;&#x5C06; ABACUS &#x4E2D;&#x6570;&#x636E;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x5E94;&#x8BE5;&#x6D89;&#x53CA;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7684;&#x590D;&#x5236;&#x548C;&#x5B58;&#x50A8;&#xFF0C;&#x5373;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x5E76;&#x4E0D;&#x5E94;&#x5F53;&#x5728; ABACUS &#x529F;&#x80FD;&#x6A21;&#x5757;&#x548C;&#x6587;&#x4EF6;&#x4E4B;&#x95F4;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x201C;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x201D;&#xFF0C;&#x800C;&#x5927;&#x90E8;&#x5206; C++ &#x5F00;&#x53D1;&#x8005;&#x5728;&#x7F16;&#x5199;&#x7C7B;&#x58F0;&#x660E;&#x65F6;&#xFF0C;&#x53C8;&#x683C;&#x5916;&#x81EA;&#x7136;&#x5730;&#x5C06;&#x6570;&#x636E;&#x653E;&#x5728; private &#x57DF;&#x4E2D;&#xFF0C;&#x8FD9;&#x65E0;&#x7591;&#x5728;&#x8BBE;&#x8BA1;&#x4E0A;&#x662F;&#x9519;&#x4E0A;&#x52A0;&#x9519;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x5BF9;&#x4E8E; ModuleIO::CifParser&#xFF0C;&#x5C3D;&#x7BA1; CifParser &#x53C2;&#x8003; pymatgen.CifParser &#x8BBE;&#x8BA1;&#x6210;&#x7C7B;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5BF9; cif &#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x5199;&#x5747;&#x4E3A; static &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#xFF0C;&#x5C01;&#x88C5;&#x6210;&#x7C7B;&#x7684;&#x610F;&#x56FE;&#x4EC5;&#x4EC5;&#x4E3A;&#x5BF9;&#x9F50; pymatgen.CifParser &#x4EE5;&#x6587;&#x4EF6;&#x540D;&#x4E3A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x6784;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#xFF0C;&#x6B64;&#x65F6;&#x7C7B;&#x5177;&#x6709;&#x552F;&#x4E00;&#x6570;&#x636E;&#x6210;&#x5458;&#x201C;raw&#x201D;&#xFF0C;&#x5176;&#x88AB;&#x8D4B;&#x503C;&#x662F;&#x5728;&#x8C03;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6784;&#x9020;&#x5BF9;&#x8C61;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x76F4;&#x63A5; static read &#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8FD9;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x7B26;&#x5408;&#x4E86; RAII&#xFF08;Resource Acquisition Is Initiallization&#xFF09;&#x539F;&#x5219;&#xFF0C;&#x89C1;&#x6269;&#x5C55;&#x9605;&#x8BFB;&#x6750;&#x6599;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">CifParser</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">public</span><span class="token operator">:</span>
+            <span class="token function">CifParser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">delete</span><span class="token punctuation">;</span> <span class="token comment">// I cannot see any necessity to have a default constructor</span>
+            <span class="token function">CifParser</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// read the cif file and store the information</span>
+            <span class="token operator">~</span><span class="token function">CifParser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// actually do not need to do anything explicitly</span>
+
+            <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token comment">//...</span>
+                             <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token comment">//...</span>
+                             <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">private</span><span class="token operator">:</span>
+            <span class="token comment">// interface to ABACUS UnitCell impl.</span>
+            <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">_unpack_ucell</span><span class="token punctuation">(</span><span class="token comment">//...</span>
+                                      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// stores the information of the cif file</span>
+            std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;&gt;</span> raw_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E00;&#xFF1A;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5C3D;&#x53EF;&#x80FD;&#x907F;&#x514D;&#x5BF9;-stl-&#x5BB9;&#x5668;&#x548C;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x7C7B;&#x6709;&#x4F9D;&#x8D56;"><a name="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E00;&#xFF1A;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5C3D;&#x53EF;&#x80FD;&#x907F;&#x514D;&#x5BF9;-stl-&#x5BB9;&#x5668;&#x548C;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x7C7B;&#x6709;&#x4F9D;&#x8D56;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E00;&#xFF1A;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5C3D;&#x53EF;&#x80FD;&#x907F;&#x514D;&#x5BF9;-stl-&#x5BB9;&#x5668;&#x548C;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x7C7B;&#x6709;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E00;&#xFF1A;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x5C3D;&#x53EF;&#x80FD;&#x907F;&#x514D;&#x5BF9; STL &#x5BB9;&#x5668;&#x548C;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x7C7B;&#x6709;&#x4F9D;&#x8D56;</h3>
+<p><img src="picture/fig_cifparse2.png" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x603B;&#x5E94;&#x5F53;&#x5C3D;&#x53EF;&#x80FD;&#x4F4E;&#x8026;&#x5408;&#x5730;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x5BF9;&#x4E8E;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x548C;&#x4EE3;&#x7801;&#x8C03;&#x8BD5;&#x90FD;&#x4F1A;&#x9020;&#x6210;&#x6781;&#x5927;&#x7684;&#x56F0;&#x96BE;&#x3002;&#x539F;&#x5148;&#x5BF9; cif &#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x7684;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x4F5C;&#x4E3A; UnitCell &#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x5B9E;&#x9645;&#x4E0A;&#x610F;&#x5473;&#x7740;&#x201C;<strong>&#x5982;&#x679C;&#x9700;&#x8981;&#x8F93;&#x51FA; cif &#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x9996;&#x5148;&#x6784;&#x9020;&#x4E00;&#x4E2A; UnitCell &#x5BF9;&#x8C61;</strong>&#x201D;&#x2014;&#x2014;&#x8FD9;&#x663E;&#x7136;&#x4ECE;&#x539F;&#x5219;&#x4E0A;&#x662F;&#x8352;&#x8C2C;&#x7684;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x5B9E;&#x73B0;&#x4E0A;&#xFF0C;UnitCell &#x4E2D;&#x53EA;&#x6709;&#x5C11;&#x90E8;&#x5206;&#x6570;&#x636E;&#x662F; cif &#x6587;&#x4EF6;&#x5199;&#x5165;&#x6240;&#x9700;&#x8981;&#x7684;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> abc_angles<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">int</span> natom<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">*</span> atom_site_labels<span class="token punctuation">,</span> <span class="token comment">// the one without numbers</span>
+                  <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> atom_site_fract_coords<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> title <span class="token operator">=</span> <span class="token string">&quot;# generated by ABACUS&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> data_tag <span class="token operator">=</span> <span class="token string">&quot;data_?&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> atom_site_occups <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span> <span class="token comment">// may be this will be useful after impementation of VCA?</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> cell_formula_units_z <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                 std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;&gt;</span><span class="token operator">&amp;</span> out<span class="token punctuation">,</span>
+                 <span class="token keyword">const</span> <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5982;&#x6B64;&#x5BF9;&#x4E24;&#x4E2A;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x4E0D;&#x6784;&#x5EFA; UnitCell &#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x5F97;&#x8BE5;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x7F16;&#x5199;&#x76F8;&#x5F53;&#x5BB9;&#x6613;&#x3002;</p>
+<p>&#x4E4B;&#x540E;&#x56E0;&#x4E3A;&#x5F53;&#x524D; ABACUS &#x7684;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x539F;&#x56E0;&#xFF0C;&#x91CD;&#x8F7D;&#x4E00;&#x4E2A;&#x5F62;&#x53C2;&#x8868;&#x5177;&#x6709; UnitCell &#x5BF9;&#x8C61;&#xFF0C;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> UnitCell<span class="token operator">&amp;</span> ucell<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> title <span class="token operator">=</span> <span class="token string">&quot;# generated by ABACUS&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> data_tag <span class="token operator">=</span> <span class="token string">&quot;data_?&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x9700;&#x8981;&#x4ECE; UnitCell &#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x53D6;&#x9700;&#x8981;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E4B;&#x540E;&#x8C03;&#x7528;&#x6838;&#x5FC3;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4F7F;&#x5F97; cif &#x7684;&#x5199;&#x5165;&#x7531;</p>
+<pre class="language-"><code class="lang-cpp">ucell<span class="token punctuation">.</span><span class="token function">print_cell_cif</span><span class="token punctuation">(</span><span class="token string">&quot;STRU.cif&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x53D8;&#x5316;&#x4E3A;</p>
+<pre class="language-"><code class="lang-cpp">ModuleIO<span class="token double-colon punctuation">::</span><span class="token class-name">CifParser</span><span class="token double-colon punctuation">::</span><span class="token function">write</span><span class="token punctuation">(</span>GlobalV<span class="token double-colon punctuation">::</span>global_out_dir <span class="token operator">+</span> <span class="token string">&quot;STRU.cif&quot;</span><span class="token punctuation">,</span> ucell<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x3002;&#x53E6;&#x5916;&#x51FA;&#x4E8E;&#x5BF9; ABACUS Python &#x5316;&#x7684;&#x8003;&#x8651;&#xFF08;pybind &#x5BF9;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x652F;&#x6301;&#x8303;&#x56F4;&#xFF0C;&#x5177;&#x4F53;&#x89C1; <a href="https://pybind11.readthedocs.io/en/stable/advanced/cast/overview.html#list-of-all-builtin-conversions" target="_blank">https://pybind11.readthedocs.io/en/stable/advanced/cast/overview.html#list-of-all-builtin-conversions</a>&#xFF09;&#xFF0C;&#x53E6;&#x8BBE;&#x7F6E;&#x4E00;&#x201C;write&#x201D;&#x51FD;&#x6570;&#x7684;&#x91CD;&#x8F7D;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> abc_angles<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span><span class="token operator">&amp;</span> atom_site_labels<span class="token punctuation">,</span> <span class="token comment">// the one without numbers</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> atom_site_fract_coords<span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> title <span class="token operator">=</span> <span class="token string">&quot;# generated by ABACUS&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> data_tag <span class="token operator">=</span> <span class="token string">&quot;data_?&quot;</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> atom_site_occups <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// may be this will be useful after impementation of VCA?</span>
+                  <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> cell_formula_units_z <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E8C;&#xFF1A;&#x8BFB;&#x5199;&#x4E00;&#x81F4;&#x6027;"><a name="&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E8C;&#xFF1A;&#x8BFB;&#x5199;&#x4E00;&#x81F4;&#x6027;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E8C;&#xFF1A;&#x8BFB;&#x5199;&#x4E00;&#x81F4;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x4E8C;&#xFF1A;&#x8BFB;&#x5199;&#x4E00;&#x81F4;&#x6027;</h3>
+<p>&#x4E00;&#x822C;&#x5730;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x201C;write&#x201D;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x4EE5;&#x201C;read&#x201D;&#x51FD;&#x6570;&#x518D;&#x8BFB;&#x5165;&#x7684;&#x6570;&#x636E;&#x548C;&#x539F;&#x5148;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token function">TEST</span><span class="token punctuation">(</span>CifParserTest<span class="token punctuation">,</span> WriteTest<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__MPI</span></span>
+    <span class="token function">MPI_Comm_rank</span><span class="token punctuation">(</span>MPI_COMM_WORLD<span class="token punctuation">,</span> <span class="token operator">&amp;</span>rank<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+    <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string fcif <span class="token operator">=</span> <span class="token string">&quot;test.cif&quot;</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>ofstream <span class="token function">ofs</span><span class="token punctuation">(</span>fcif<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">&gt;</span> abc_angles <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2.46637620</span><span class="token punctuation">,</span> <span class="token number">2.46637620</span><span class="token punctuation">,</span> <span class="token number">24.84784531</span><span class="token punctuation">,</span> <span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">120.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token keyword">int</span> natom <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> atom_site_labels <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;C&quot;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">&gt;</span> atom_site_fract <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.75</span><span class="token punctuation">,</span> 
+                                                 <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.25</span><span class="token punctuation">,</span> 
+                                                 <span class="token number">0.333333</span><span class="token punctuation">,</span> <span class="token number">0.666667</span><span class="token punctuation">,</span> <span class="token number">0.75</span><span class="token punctuation">,</span> 
+                                                 <span class="token number">0.666667</span><span class="token punctuation">,</span> <span class="token number">0.333333</span><span class="token punctuation">,</span> <span class="token number">0.25</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    ModuleIO<span class="token double-colon punctuation">::</span><span class="token class-name">CifParser</span><span class="token double-colon punctuation">::</span><span class="token function">write</span><span class="token punctuation">(</span>fcif<span class="token punctuation">,</span> 
+                               abc_angles<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                               natom<span class="token punctuation">,</span> 
+                               atom_site_labels<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                               atom_site_fract<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                               <span class="token string">&quot;# Generated during unittest of function ModuleIO::CifParser::write&quot;</span><span class="token punctuation">,</span>
+                               <span class="token string">&quot;data_test&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;&gt;</span> data<span class="token punctuation">;</span>
+    ModuleIO<span class="token double-colon punctuation">::</span><span class="token class-name">CifParser</span><span class="token double-colon punctuation">::</span><span class="token function">read</span><span class="token punctuation">(</span>fcif<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ...</span>
+</code></pre>
+<h3 id="&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E00;&#xFF1A;&#x4E0D;&#x8981;&#x603B;&#x662F;&#x6307;&#x671B;-rank-0"><a name="&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E00;&#xFF1A;&#x4E0D;&#x8981;&#x603B;&#x662F;&#x6307;&#x671B;-rank-0" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E00;&#xFF1A;&#x4E0D;&#x8981;&#x603B;&#x662F;&#x6307;&#x671B;-rank-0"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E00;&#xFF1A;&#x4E0D;&#x8981;&#x603B;&#x662F;&#x6307;&#x671B; rank 0</h3>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5DF2;&#x7ECF;&#x5BF9;&#x90E8;&#x5206;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684; rank &#x540C;&#x65F6;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x5199;&#xFF0C;&#x6765;&#x51CF;&#x8F7B;&#x5355;&#x4E00; rank&#xFF08;ABACUS &#x901A;&#x5E38;&#x6307;&#x5B9A;&#x4E3A; rank 0&#xFF09;&#x7684;&#x8BFB;&#x5199;&#x8D1F;&#x62C5;&#xFF0C;&#x56E0;&#x6B64;&#x5728; read &#x548C; write &#x51FD;&#x6570;&#x4E2D;&#x6709;&#x5982;&#x4E0B;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">void</span> ModuleIO<span class="token double-colon punctuation">::</span><span class="token class-name">CifParser</span><span class="token double-colon punctuation">::</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> abc_angles<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> <span class="token keyword">int</span> natom<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">*</span> atom_site_labels<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> atom_site_fract_coords<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> title<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> data_tag<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> <span class="token keyword">double</span><span class="token operator">*</span> atom_site_occups<span class="token punctuation">,</span>
+                                <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> cell_formula_units_z<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__MPI </span><span class="token comment">// well...very simple...</span></span>
+    <span class="token keyword">int</span> myrank<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>rank <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">void</span> ModuleIO<span class="token double-colon punctuation">::</span><span class="token class-name">CifParser</span><span class="token double-colon punctuation">::</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> fcif<span class="token punctuation">,</span>
+                               std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;&gt;</span><span class="token operator">&amp;</span> out<span class="token punctuation">,</span>
+                               <span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// okey for read, cannot just use if rank != 0 then return, because need to broadcast the map</span>
+    out<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__MPI</span></span>
+    <span class="token keyword">int</span> myrank<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>rank <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// only the rank assigned to read the cif file will read the file</span>
+    <span class="token punctuation">{</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+    std<span class="token double-colon punctuation">::</span>ifstream <span class="token function">ifs</span><span class="token punctuation">(</span>fcif<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4EFB;&#x610F;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x4F8B;&#x5982;&#x57FA;&#x4E8E;&#x901A;&#x8BAF;&#x57DF;&#x548C;&#x5177;&#x4F53; processor &#x7684;&#x5212;&#x5206;&#xFF0C;&#x5728;&#x8C03;&#x7528; read &#x6216;&#x8005; write &#x65F6;&#x5C06;&#x201C;rank&#x201D;&#x6307;&#x5B9A;&#x4E3A; 0&#xFF0C;&#x800C;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x7ED1;&#x5B9A;&#x4F8B;&#x5982; <code>GlobalV::MY_RANK == rank</code>&#x3002;</p>
+<h3 id="&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E09;&#xFF1A;&#x5E76;&#x975E;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x5728;&#x4E00;&#x4E2A;-rank-&#x518D;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5199;&#x5165;"><a name="&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E09;&#xFF1A;&#x5E76;&#x975E;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x5728;&#x4E00;&#x4E2A;-rank-&#x518D;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5199;&#x5165;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E09;&#xFF1A;&#x5E76;&#x975E;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x5728;&#x4E00;&#x4E2A;-rank-&#x518D;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5199;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x5EFA;&#x8BAE;&#x4E09;&#xFF1A;&#x5E76;&#x975E;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x6536;&#x96C6;&#x5728;&#x4E00;&#x4E2A; rank &#x518D;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x5199;&#x5165;</h3>
+<p>&#x5C3D;&#x7BA1;&#x5728;&#x5F53;&#x524D; CifParser &#x7684;&#x6848;&#x4F8B;&#x4E2D;&#x4E0D;&#x6D89;&#x53CA;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x6211;&#x4EEC;&#x4F1A;&#x9047;&#x5230;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9; PW &#x6CE2;&#x51FD;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x4E3A;&#x907F;&#x514D;&#x591A;&#x4E2A; MPI &#x8FDB;&#x7A0B;&#x5199;&#x6587;&#x4EF6;&#x65F6;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#xFF0C;ABACUS &#x4E2D;&#x5E38;&#x5E38;&#x4F7F;&#x7528;&#x201C;&#x6536;&#x96C6;&#x5230; rank0&#x201D;-&#x201C;rank 0 &#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5E76;&#x5199;&#x5165;&#x201D;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5E76;&#x975E;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x5355;&#x4E2A; rank &#x7684;&#x5185;&#x5B58;&#x6240;&#x627F;&#x53D7;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x91CF;&#x975E;&#x5E38;&#x5927;&#x65F6;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x6570;&#x636E;&#x5728;&#x6BCF;&#x4E2A; rank &#x72EC;&#x7ACB;&#x5199;&#x5165;&#xFF0C;&#x800C;&#x975E;&#x8FDB;&#x884C;&#x6536;&#x96C6;&#x3002;</p>
+<h1 id="&#x6269;&#x5C55;&#x9605;&#x8BFB;"><a name="&#x6269;&#x5C55;&#x9605;&#x8BFB;" class="plugin-anchor" href="#&#x6269;&#x5C55;&#x9605;&#x8BFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5C55;&#x9605;&#x8BFB;</h1>
+<p>C++ &#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x7684;&#x4E00;&#x4E9B;&#x60F3;&#x6CD5;&#xFF1A;<a href="https://mcresearch.github.io/abacus-user-guide/develop-design.html" target="_blank">https://mcresearch.github.io/abacus-user-guide/develop-design.html</a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2024-09-06 16:46:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-grid.html" class="navigation navigation-prev " aria-label="Previous page: 以格点积分程序为例：一些代码开发习惯小贴士">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="develop-test1.html" class="navigation navigation-next " aria-label="Next page: ABACUS 中的测试（一）：测试的重要性">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例","level":"1.2.11","depth":2,"next":{"title":"ABACUS 中的测试（一）：测试的重要性","level":"1.2.12","depth":2,"path":"develop-test1.md","ref":"develop-test1.md","articles":[]},"previous":{"title":"以格点积分程序为例：一些代码开发习惯小贴士","level":"1.2.10","depth":2,"path":"develop-grid.md","ref":"develop-grid.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-upf.html#fig1.1.9.1","level":"1.1.9","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":1,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.1.9.1"},{"backlink":"abacus-upf.html#fig1.1.9.2","level":"1.1.9","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":2,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.1.9.2"},{"backlink":"abacus-upf.html#fig1.1.9.3","level":"1.1.9","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":3,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.1.9.3"},{"backlink":"abacus-upf.html#fig1.1.9.4","level":"1.1.9","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":4,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.1.9.4"},{"backlink":"abacus-upf.html#fig1.1.9.5","level":"1.1.9","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":5,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.1.9.5"},{"backlink":"abacus-pw.html#fig1.1.13.1","level":"1.1.13","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":6,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.1.13.1"},{"backlink":"abacus-pw.html#fig1.1.13.2","level":"1.1.13","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":7,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.1.13.2"},{"backlink":"abacus-pw.html#fig1.1.13.3","level":"1.1.13","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":8,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.1.13.3"},{"backlink":"abacus-pw.html#fig1.1.13.4","level":"1.1.13","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":9,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.1.13.4"},{"backlink":"abacus-surface2.html#fig1.1.20.1","level":"1.1.20","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":10,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.1.20.1"},{"backlink":"abacus-surface2.html#fig1.1.20.2","level":"1.1.20","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":11,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.1.20.2"},{"backlink":"abacus-surface2.html#fig1.1.20.3","level":"1.1.20","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":12,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.1.20.3"},{"backlink":"abacus-surface5.html#fig1.1.23.1","level":"1.1.23","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":13,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.1.23.1"},{"backlink":"abacus-surface5.html#fig1.1.23.2","level":"1.1.23","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":14,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.1.23.2"},{"backlink":"abacus-surface5.html#fig1.1.23.3","level":"1.1.23","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":15,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.1.23.3"},{"backlink":"abacus-surface5.html#fig1.1.23.4","level":"1.1.23","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":16,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.1.23.4"},{"backlink":"abacus-surface5.html#fig1.1.23.5","level":"1.1.23","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":17,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.1.23.5"},{"backlink":"abacus-surface6.html#fig1.1.24.1","level":"1.1.24","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":18,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.1.24.1"},{"backlink":"abacus-surface6.html#fig1.1.24.2","level":"1.1.24","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":19,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.1.24.2"},{"backlink":"abacus-dos.html#fig1.1.25.1","level":"1.1.25","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":20,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.1.25.1"},{"backlink":"abacus-dos.html#fig1.1.25.2","level":"1.1.25","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":21,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.1.25.2"},{"backlink":"abacus-bader.html#fig1.1.35.1","level":"1.1.35","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":22,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.1.35.1"},{"backlink":"abacus-bader.html#fig1.1.35.2","level":"1.1.35","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":23,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.1.35.2"},{"backlink":"abacus-bader.html#fig1.1.35.3","level":"1.1.35","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":24,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.1.35.3"},{"backlink":"abacus-bader.html#fig1.1.35.4","level":"1.1.35","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":25,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.1.35.4"},{"backlink":"abacus-bader.html#fig1.1.35.5","level":"1.1.35","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":26,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.1.35.5"},{"backlink":"abacus-bader.html#fig1.1.35.6","level":"1.1.35","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":27,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.1.35.6"},{"backlink":"abacus-bader.html#fig1.1.35.7","level":"1.1.35","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":28,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.1.35.7"},{"backlink":"abacus-bader.html#fig1.1.35.8","level":"1.1.35","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":29,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.1.35.8"},{"backlink":"abacus-bader.html#fig1.1.35.9","level":"1.1.35","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":30,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.1.35.9"},{"backlink":"abacus-bader.html#fig1.1.35.10","level":"1.1.35","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":31,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.1.35.10"},{"backlink":"abacus-bader.html#fig1.1.35.11","level":"1.1.35","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":32,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.1.35.11"},{"backlink":"develop-path4.html#fig1.2.17.1","level":"1.2.17","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":33,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.2.17.1"},{"backlink":"develop-path4.html#fig1.2.17.2","level":"1.2.17","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":34,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.2.17.2"},{"backlink":"develop-path5.html#fig1.2.18.1","level":"1.2.18","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":35,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.2.18.1"},{"backlink":"develop-path5.html#fig1.2.18.2","level":"1.2.18","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":36,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.2.18.2"},{"backlink":"develop-path5.html#fig1.2.18.3","level":"1.2.18","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":37,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.2.18.3"},{"backlink":"develop-path5.html#fig1.2.18.4","level":"1.2.18","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":38,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.2.18.4"},{"backlink":"develop-path5.html#fig1.2.18.5","level":"1.2.18","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":39,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.2.18.5"},{"backlink":"develop-path6.html#fig1.2.20.1","level":"1.2.20","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":40,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.2.20.1"},{"backlink":"develop-path10.html#fig1.2.24.1","level":"1.2.24","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":41,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.2.24.1"},{"backlink":"develop-path10.html#fig1.2.24.2","level":"1.2.24","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":42,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.2.24.2"},{"backlink":"develop-path10.html#fig1.2.24.3","level":"1.2.24","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":43,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.2.24.3"},{"backlink":"develop-path10.html#fig1.2.24.4","level":"1.2.24","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":44,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.2.24.4"},{"backlink":"develop-path10.html#fig1.2.24.5","level":"1.2.24","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":45,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.2.24.5"},{"backlink":"develop-path11.html#fig1.2.25.1","level":"1.2.25","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":46,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.2.25.1"},{"backlink":"algorithm-wannier.html#fig1.3.1.1","level":"1.3.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":47,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.3.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-cifparser.md","mtime":"2024-09-06T08:46:40.487Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T08:55:59.238Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

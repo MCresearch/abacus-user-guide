@@ -146,6 +146,7 @@ ABACUS 网站访问：
 26. [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
 27. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
 28. [C++ 程序设计的一些想法](develop-design.md)
+29. [文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例](develop-cifparser.md)
 
 # 五、算法文档
 
