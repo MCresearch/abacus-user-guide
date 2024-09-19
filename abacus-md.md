@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/09/14</strong>
+<strong>最后更新时间：2024/09/19</strong>
 
 <strong>在Bohrium Notebook上快速学习：</strong><a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
@@ -246,56 +246,6 @@ init_vel            1
 - md_dumpfreq：MD 输出文件 MD_dump 中原子以及晶胞信息的输出频率
 - md\_restartfreq：结构文件 STRU\_MD\_\${istep} 的输出频率，MD 续算文件 Restart_md.dat 的更新频率
 
-### 3.4 STRU 文件的设置
-
-首先，我们可以通过如下命令确定 DP 势文件中是否存在关键字“type_map”：
-
-```bash
-$ strings Al-SCAN.pb | grep type_map
-{"model": {"type_map": ["Al"], "descriptor": {"type": "se_e2_a", "sel": [150], "rcut_smth": 0.5, "rcut": 6.0, "neuron": [25, 50, 100], "resnet_dt": false, "axis_neuron": 16, "seed": 1, "activation_function": "tanh", "type_one_side": false, "precision": "default", "trainable": true, "exclude_types": [], "set_davg_zero": false}, "fitting_net": {"neuron": [240, 240, 240], "resnet_dt": true, "seed": 1, "type": "ener", "numb_fparam": 0, "numb_aparam": 0, "activation_function": "tanh", "precision": "default", "trainable": true, "rcond": 0.001, "atom_ener": []}, "data_stat_nbatch": 10, "data_stat_protect": 0.01}, "learning_rate": {"type": "exp", "decay_steps": 5000, "start_lr": 0.001, "stop_lr": 3.51e-08, "scale_by_worker": "linear"}, "loss": {"type": "ener", "start_pref_e": 0.02, "limit_pref_e": 1, "start_pref_f": 1000, "limit_pref_f": 1, "start_pref_v": 0, "limit_pref_v": 0, "start_pref_ae": 0.0, "limit_pref_ae": 0.0, "start_pref_pf": 0.0, "limit_pref_pf": 0.0, "enable_atom_ener_coeff": false}, "training": {"training_data": {"systems": ["../deepmd_data/"], "batch_size": "auto", "set_prefix": "set", "auto_prob": "prob_sys_size", "sys_probs": null}, "validation_data": {"systems": ["../deepmd_validation"], "batch_size": 1, "numb_btch": 3, "set_prefix": "set", "auto_prob": "prob_sys_size", "sys_probs": null}, "numb_steps": 1000000, "seed": 10, "disp_file": "lcurve.out", "disp_freq": 100, "save_freq": 1000, "save_ckpt": "model.ckpt", "disp_training": true, "time_training": true, "profiling": false, "profiling_file": "timeline.json", "enable_profiler": false, "tensorboard": false, "tensorboard_log_dir": "log", "tensorboard_freq": 1}}
-```
-
-如果存在关键字 type_map，那么 ABACUS 会自动匹配 STRU 和 DP 势文件中的原子种类顺序。
-
-否则，STRU 中的原子种类以及顺序必须与 DP 势文件中的原子种类以及顺序一致。
-
-例如，如果我们用 Al-Cu-Mg 三元合金的 DP 势文件来跑 Al-Mg 二元合金的 MD，那么 STRU 应该如下所示：
-
-```bash
-ATOMIC_SPECIES
-Al  26.982
-Cu  63.546
-Mg  24.305
-
-LATTICE_CONSTANT
-1.889727000000
-
-LATTICE_VECTORS
-4.0  0.0  0.0
-0.0  4.0  0.0
-0.0  0.0  4.0
-
-ATOMIC_POSITIONS
-Cartesian
-
-Al
-0
-2
-0.0  0.0  0.0
-0.5  0.5  0.0
-
-Cu
-0
-0
-
-Mg
-0
-2
-0.5  0.0  0.5
-0.0  0.5  0.5
-```
-
-注：在这个例子中，即使 Cu 原子的数量为 0，也必须在 STRU 中给出 Cu 原子相关信息。
 
 # 三、MD 输出和续算功能
 
