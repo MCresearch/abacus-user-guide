@@ -66,6 +66,7 @@ Libxc 网址：[Libxc - a library of exchange-correlation functionals for densit
 
 ```bash
 cd libxc-4.3.4
+autoreconf -i
 ./configure --prefix='PATH/TO/LIBXC' CC=icc FC=ifort
 make
 make install
@@ -412,7 +413,7 @@ upfconv.x -u  al.upf #利用QE的upflib将UPFv.1转化成UPFv.2格式
 
 ## 3. ld1.x
 
-QE 的 atomic 模块中的 `ld1.x` 支持生成赝势。其不仅可以生成模守恒赝势、还支持超软赝势、PAW 方法，支持全相对论、标量（非）相对论赝势（rel, non-rel/sca-rel），其径向波函数支持 [TM](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993)（更稳定）与 [RRKJ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227) 两种方法，支持交换关联近似 7 类 LDA（ pz）,GGA（pbe, pbesol, revpbe, bp, wc, pw91。
+QE 的 atomic 模块中的 `ld1.x` 支持生成赝势。其不仅可以生成模守恒赝势、还支持超软赝势、PAW 方法，支持全相对论、标量（非）相对论赝势（rel, non-rel/sca-rel），其径向波函数支持 [TM](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993)（更稳定）与 [RRKJ](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.1227) 两种方法，支持交换关联近似 7 类 LDA（pz）,GGA（pbe, pbesol, revpbe, bp, wc, pw91）。
 
 下载好 QE 软件后，可以直接安装：
 
@@ -497,7 +498,7 @@ element='C Si Ge'
 /
 &inputp
    pseudotype=2,
-   file_pseudopw='Al.pbe-n-nc.UPF', #输入赝势
+   file_pseudopw='Al.pbe-n-nc.UPF', #输出赝势
    lloc=2,
    nlcc=.true.,
    tm=.true.
