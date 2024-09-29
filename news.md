@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| 高斯基组 vs ABACUS数值原子轨道：EOS与热导率的密度泛函计算对比                   | [网页链接](https://mp.weixin.qq.com/s/0sou-pn_09P0qJ0bjdb44Q)         | 2024/09/29 |  深度势能  |
 | ABACUS还能干这个？探究非局域势效应对温稠密物质的电导率与热导率计算影响          | [网页链接](https://mp.weixin.qq.com/s/7prhTi75Vmv1EqYcXeBRcw)         | 2024/07/30 |  深度势能  |
 | 2024 Q2 OpenLAM Report \ 更稳定的代码 更丰富的领域模型                          | [网页链接](https://mp.weixin.qq.com/s/7Sl0uqS_jX5MjR19fmGqlw)         | 2024/07/29 |  深度势能  |
 | ABACUS@Notebooks \ 探索化学元素周期表的奥秘                                     | [网页链接](https://mp.weixin.qq.com/s/jbxYmTcx_fTkdbAzJfFrLw)         | 2024/07/06 |   NBHub    |
