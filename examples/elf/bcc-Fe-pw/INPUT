@@ -1,0 +1,25 @@
+INPUT_PARAMETERS
+#Parameters (1.General)
+suffix			blpstest
+calculation     scf
+symmetry		1
+pseudo_dir ../../PP_ORB
+
+#Parameters (2.Iteration)
+ecutwfc			65
+scf_nmax			100
+nbands		20
+nspin	2
+
+#Parameters (3.Basis)
+basis_type		pw
+
+#Parameters (4.Smearing)
+smearing_method		gauss
+smearing_sigma		0.0074
+
+#Parameters (5.Mixing)
+mixing_type		broyden
+mixing_beta		0.4
+
+out_elf 1
