@@ -1,0 +1,7 @@
+INPUT_PARAMETERS
+basis_type pw
+calculation scf
+pseudo_dir ../../PP_ORB
+nspin 1
+ecutwfc 100
+out_elf	1
