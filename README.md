@@ -74,7 +74,7 @@ ABACUS 网站访问：
    6. [补偿电荷](abacus-surface6.md)
 10. 分析结果
    1. 能带计算：[ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
-   2. PDOS计算：[<mark style="color:red;">ABACUS里怎样做DOS和PDOS计算</mark>](https://xmywuqhxb0.feishu.cn/docx/ONSldj82VoNGKSxaoDQcoKBtnGh)<mark style="color:red;"></mark>
+   2. PDOS计算：[ABACUS 计算 PDOS](abacus-pdos.md)
    3. [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
    4. [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
 11. 和其他软件对接

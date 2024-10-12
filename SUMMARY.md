@@ -27,6 +27,7 @@
     * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
     * [ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
+    * [ABACUS 计算 PDOS](abacus-pdos.md)
     * [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
     * [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
