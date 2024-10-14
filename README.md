@@ -34,12 +34,13 @@ ABACUS 网站访问：
    3. [Intel oneAPI 2024.x 编译 ABACUS 教程](abacus-oneapi.md)
    4. [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
    5. [编译 Nvidia GPU 版本的 ABACUS](abacus-gpu.md)
-   6. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
-   7. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
-   8. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
-   9. [ABACUS 编译教程系列之一：基于Intel编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B站视频）
-   10. [ABACUS 编译教程系列之二：基于CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B站视频）
-   11. [ABACUS 编译教程系列之三：docker的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B站视频）
+   6. [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
+   7. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
+   8. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+   9. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
+   10. [ABACUS 编译教程系列之一：基于Intel编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B站视频）
+   11. [ABACUS 编译教程系列之二：基于CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B站视频）
+   12. [ABACUS 编译教程系列之三：docker的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B站视频）
 2. ABACUS建模介绍
    1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
    <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
@@ -54,10 +55,9 @@ ABACUS 网站访问：
    2. 带自旋的体系计算：[ABACUS磁性材料计算使用教程](https://nb.bohrium.dp.tech/detail/7141761751)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    3. \+U计算：[ABACUS使用DFT+U计算教程 |基础版
 ](https://nb.bohrium.dp.tech/detail/52882361357)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   1. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   2. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
-   3. [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
-   4. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   5. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
+   6. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 4. DeePKS方法
    1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
