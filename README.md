@@ -37,13 +37,12 @@ ABACUS 网站访问：
    6. [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
    7. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
    8. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
-   9. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain) (md文档待整理)
+   9. [ABACUS toolchain 脚本集](https://github.com/deepmodeling/abacus-develop/tree/develop/toolchain)<a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    10. [ABACUS 编译教程系列之一：基于Intel编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B站视频）
    11. [ABACUS 编译教程系列之二：基于CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B站视频）
    12. [ABACUS 编译教程系列之三：docker的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B站视频）
 2. ABACUS建模介绍
-   1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)
-   <mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   1. 准备晶胞和原子位置等信息的文件STRU：[如何转换STRU的格式](https://nb.bohrium.dp.tech/detail/9814968648)<a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    2. 准备赝势：
    [模守恒赝势生成方法简介](abacus-upf.md)
    3. 数值原子轨道基组生成教程：
@@ -52,15 +51,15 @@ ABACUS 网站访问：
       3. [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)<a href="https://nb.bohrium.dp.tech/detail/8841868194" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 3. Kohn-Sham密度泛函理论
    1. [电子自洽迭代](https://nb.bohrium.dp.tech/detail/7417640496)<a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   2. 带自旋的体系计算：[ABACUS磁性材料计算使用教程](https://nb.bohrium.dp.tech/detail/7141761751)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   2. 带自旋的体系计算：[ABACUS磁性材料计算使用教程](https://nb.bohrium.dp.tech/detail/7141761751)<a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    3. \+U计算：[ABACUS使用DFT+U计算教程 |基础版
-](https://nb.bohrium.dp.tech/detail/52882361357)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+](https://nb.bohrium.dp.tech/detail/52882361357)<a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    4. 结构优化：[ABACUS 使用教程｜结构优化](https://nb.bohrium.dp.tech/detail/9119461238)<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    5. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
    6. 分子动力学：[ABACUS 分子动力学使用教程](abacus-md.md)<a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 4. DeePKS方法
-   1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<mark style="color:red;"></mark><a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 5. [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
 6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
@@ -94,7 +93,7 @@ ABACUS 网站访问：
     14. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
     15. ABACUS+ASE 做过渡态计算
         1. [ATST-Tools: ASE-ABACUS过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持NEB，Dimer，AutoNEB等过渡态方法。
-        2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) <mark style="color:red;"></mark> （简单算例）
+        2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc)  （简单算例）
     16. ABACUS+ASE 遗传算法 （暂缺，待更新）
 
 # 三、使用经验
@@ -115,7 +114,7 @@ ABACUS 网站访问：
 14. [ABACUS计算模拟实例 | XII. Pt(111)表面羟基解离的过渡态搜索](https://bohrium.dp.tech/notebooks/36595625971)<a href="https://bohrium.dp.tech/notebooks/36595625971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 15. [ABACUS计算模拟实例 | XIII. Pt表面的ORR催化路径](https://bohrium.dp.tech/notebooks/49942212168)<a href="https://bohrium.dp.tech/notebooks/49942212168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 16. [ABACUS对比CP2K精度和效率测试 | Si的状态方程（EOS）](https://bohrium.dp.tech/notebooks/77351186918)<a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-17. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)<mark style="color:red;"></mark>
+17. 有VASP使用背景的用户上手ABACUS教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)
 
 # 四、开发者文档
 
