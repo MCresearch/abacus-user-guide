@@ -6,10 +6,12 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| 《金属学报》专刊发布，DeepModeling社区赋能材料科学                              | [网页链接](https://mp.weixin.qq.com/s/R3BqZPUZc4pZ3MTdSlHxiw)         | 2024/10/14 |  深度势能  |
 | ABACUS还能干这个？Acta Materialia发表关于铝铜合金强化相的稳定性研究             | [网页链接](https://mp.weixin.qq.com/s/wXZhTyfsfKFPAMwxp4Kp1Q)         | 2024/10/10 |  深度势能  |
 | ABACUS 3.8发布——数值原子基下的异构加速和杂化泛函效率提升                        | [网页链接](https://mp.weixin.qq.com/s/oqp-fX8nEcvKn7193akr7A)         | 2024/10/08 |  深度势能  |
 | ABACUS+DeePKS保姆级实战教程 \ 以钙钛矿体系为例                                  | [网页链接](https://mp.weixin.qq.com/s/hdRI7ka0eQNnUxTVHhVllQ)         | 2024/10/08 |   NBHub    |
 | 高斯基组 vs ABACUS数值原子轨道：EOS与热导率的密度泛函计算对比                   | [网页链接](https://mp.weixin.qq.com/s/0sou-pn_09P0qJ0bjdb44Q)         | 2024/09/29 |  深度势能  |
+| DeePTB v1见刊Nat. Commun. ，v2重磅发布！支持严格局域等变表示LCAO-量子算符       | [网页链接](https://mp.weixin.qq.com/s/D8HiolP1pyJUQxj7dw5_OQ)         | 2024/08/15 |  深度势能  |
 | ABACUS还能干这个？探究非局域势效应对温稠密物质的电导率与热导率计算影响          | [网页链接](https://mp.weixin.qq.com/s/7prhTi75Vmv1EqYcXeBRcw)         | 2024/07/30 |  深度势能  |
 | 2024 Q2 OpenLAM Report \ 更稳定的代码 更丰富的领域模型                          | [网页链接](https://mp.weixin.qq.com/s/7Sl0uqS_jX5MjR19fmGqlw)         | 2024/07/29 |  深度势能  |
 | ABACUS@Notebooks \ 探索化学元素周期表的奥秘                                     | [网页链接](https://mp.weixin.qq.com/s/jbxYmTcx_fTkdbAzJfFrLw)         | 2024/07/06 |   NBHub    |
