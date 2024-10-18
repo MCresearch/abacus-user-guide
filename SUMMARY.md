@@ -30,6 +30,7 @@
     * [ABACUS 计算 PDOS](abacus-pdos.md)
     * [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
     * [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
+    * [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
     * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
     * [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
     * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)

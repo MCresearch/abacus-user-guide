@@ -76,6 +76,7 @@ ABACUS 网站访问：
    2. PDOS计算：[ABACUS 计算 PDOS](abacus-pdos.md)
    3. [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
    4. [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
+   5. [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
 11. 和其他软件对接
     1. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)<a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)<a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
