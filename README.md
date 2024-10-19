@@ -61,23 +61,23 @@ ABACUS 网站访问：
    1. [DeePKS基础篇](https://nb.bohrium.dp.tech/detail/8742877753)<a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
    2. [DeePKS案例篇 + 增强采样](https://nb.bohrium.dp.tech/detail/7144731675)<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 5. [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
-6. 随机波函数密度泛函理论：[ABACUS 随机波函数DFT方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-7. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-8. [ABACUS 实时演化含时密度泛函理论使用教程](abacus-tddft.md)
-9. 采用ABACUS进行表面计算
+6. 随机波函数密度泛函理论：[ABACUS 随机波函数 DFT 方法使用教程](abacus-sdft.md)<a href="https://nb.bohrium.dp.tech/detail/5915692245" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+7. [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
+8. 无轨道密度泛函理论：[ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)<a href="https://nb.bohrium.dp.tech/detail/6416644691" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+9. [ABACUS 实时演化含时密度泛函理论使用教程](abacus-tddft.md)
+10. 采用ABACUS进行表面计算
    1. [静电势和功函数](abacus-surface1.md)
    2. [偶极修正](abacus-surface2.md)
    3. [表面能计算](abacus-surface3.md)
    4. [表面缺陷能和吸附能计算](abacus-surface4.md)
    5. [外加电场](abacus-surface5.md)
    6. [补偿电荷](abacus-surface6.md)
-10. 分析结果
+11. 分析结果
    1. 能带计算：[ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
    2. PDOS计算：[ABACUS 计算 PDOS](abacus-pdos.md)
    3. [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
    4. [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
-   5. [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
-11. 和其他软件对接
+12. 和其他软件对接
     1. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)<a href="https://nb.bohrium.dp.tech/detail/8741867512" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     2. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)<a href="https://nb.bohrium.dp.tech/detail/2712467526" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
     3. [ABACUS+Phono3py 计算晶格热导率](https://nb.bohrium.dp.tech/detail/6116471155)<a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
