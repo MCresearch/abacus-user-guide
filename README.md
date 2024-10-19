@@ -1,4 +1,4 @@
-# ABACUS 中文文档首页
+# ABACUS 中文文档主页
 
 # 一、介绍
 
@@ -22,7 +22,7 @@ ABACUS 网站访问：
 
 本教程系列旨在帮助新手用户入门了解 ABACUS 的使用。秉着开源软件的理念，本文档是由开源社区的老师同学们贡献所成。如果你也想贡献一份文档，我们十分欢迎，请参考[如何贡献 ABACUS 使用教程](contribute.md)。
 
-本教程中标有<a href="" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> Logo的部分可以直接在 [Bohrium Notebook](https://nb.bohrium.dp.tech/) 上打开。
+本教程中标有 <a href="" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> Logo的部分可以直接在 [Bohrium Notebook](https://nb.bohrium.dp.tech/) 上打开。
 
 在 Bohrium Notebook 上快速学习，见[快速开始 ABACUS｜ 自洽 能带 态密度 结构优化](https://nb.bohrium.dp.tech/detail/4641406377)；在 Bohrium 平台上运行大任务，见[教程](https://bohrium-doc.dp.tech/docs/software/ABACUS/)。
 
@@ -38,14 +38,14 @@ ABACUS 网站访问：
 6. [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
 7. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
 8. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
-9. ABACUS toolchain 脚本集<a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+9. ABACUS toolchain 脚本集 <a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 10. [ABACUS 编译教程系列之一：基于 Intel 编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B 站视频）
 11. [ABACUS 编译教程系列之二：基于 CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B 站视频）
 12. [ABACUS 编译教程系列之三：docker 的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B 站视频）
 
 ## 2.2 建模
 
-1. 准备晶胞和原子位置等信息的文件 STRU：如何转换 STRU 的格式<a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+1. 准备晶胞和原子位置等信息的文件 STRU：如何转换 STRU 的格式 <a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 2. 准备赝势： [模守恒赝势生成方法简介](abacus-upf.md)
 3. 数值原子轨道基组生成教程：
    1. [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
@@ -55,14 +55,14 @@ ABACUS 网站访问：
 ## 2.3 Kohn-Sham 密度泛函理论
 
 1. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
-2. 电子自洽迭代<a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-3. ABACUS 使用教程 ｜ 结构优化<a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-4. ABACUS 磁性材料计算使用教程<a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-5. ABACUS 使用 DFT+U 计算教程 | 基础版<a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+2. 电子自洽迭代 <a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+3. ABACUS 使用教程 ｜ 结构优化 <a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+4. ABACUS 磁性材料计算使用教程 <a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+5. ABACUS 使用 DFT+U 计算教程 | 基础版 <a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 6. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
 7. [ABACUS 收敛性问题解决手册](abacus-conv.md)
 8. [ABACUS 答疑手册](abacus-question.md)
-9. ABACUS 对比 CP2K 精度和效率测试 | Si 的状态方程（EOS）<a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+9. ABACUS 对比 CP2K 精度和效率测试 | Si 的状态方程（EOS） <a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 10. 有 VASP 使用背景的用户上手 ABACUS 教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)
 
 ## 2.4 分子动力学
@@ -73,14 +73,14 @@ ABACUS 网站访问：
 ## 2.5 AI 辅助功能
 
 1. DeePKS 方法
-   1. DeePKS 基础篇<a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   2. DeePKS 案例篇 + 增强采样<a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   3. DeePKS 实战（一）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的能量标签训练（针对单一元素组合体系）<a href="https://bohrium.dp.tech/notebooks/63318124759" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   4. DeePKS 实战（二）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的多标签计算（针对单一元素组合体系）<a href="https://bohrium.dp.tech/notebooks/63271724759" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   5. DeePKS 实战（三）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的多标签训练（针对非单一元素组合体系）<a href="https://bohrium.dp.tech/notebooks/29569927682" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-   6. DeePKS 实战（附录）| 使用 DeePKS init 功能进行训练数据的生产<a href="https://bohrium.dp.tech/notebooks/86415179178" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   1. DeePKS 基础篇 <a href="https://nb.bohrium.dp.tech/detail/8742877753" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   2. DeePKS 案例篇 + 增强采样 <a href="https://nb.bohrium.dp.tech/detail/7144731675" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   3. DeePKS 实战（一）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的能量标签训练（针对单一元素组合体系） <a href="https://bohrium.dp.tech/notebooks/63318124759" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   4. DeePKS 实战（二）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的多标签计算（针对单一元素组合体系） <a href="https://bohrium.dp.tech/notebooks/63271724759" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   5. DeePKS 实战（三）| 钙钛矿体系以 PBE 效率实现 HSE06 精度的多标签训练（针对非单一元素组合体系） <a href="https://bohrium.dp.tech/notebooks/29569927682" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+   6. DeePKS 实战（附录）| 使用 DeePKS init 功能进行训练数据的生产 <a href="https://bohrium.dp.tech/notebooks/86415179178" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 2. [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
-3. ABACUS+DeepH 建立碳材料的哈密顿量模型<a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+3. ABACUS+DeepH 建立碳材料的哈密顿量模型 <a href="https://nb.bohrium.dp.tech/detail/6242632169" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
 ## 2.6 特色功能
 
@@ -100,15 +100,15 @@ ABACUS 网站访问：
 5. [ABACUS+Bader charge 分析教程](abacus-bader.md)
 6. [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
 7. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
-8. ABACUS+pyatb 能带反折叠计算<a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+8. ABACUS+pyatb 能带反折叠计算 <a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 9. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
-10. ABACUS+Phono3py 计算晶格热导率<a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+10. ABACUS+Phono3py 计算晶格热导率 <a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 11. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
 12. [ABACUS+Candela 使用教程](abacus-candela.md)
 13. [ABACUS+USPEX 接口教程](abacus-uspex.md)
 14. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
 15. ABACUS+ASE 做过渡态计算
-    1. [ATST-Tools: ASE-ABACUS 过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools)<a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 支持 NEB，Dimer，AutoNEB 等过渡态方法
+    1. [ATST-Tools: ASE-ABACUS 过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools) <a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> (支持 NEB，Dimer，AutoNEB 等过渡态方法)
     2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) （简单算例）
 
 # 三、教程
@@ -124,19 +124,19 @@ ABACUS 网站访问：
 
 ## 3.2 《计算材料学》采用 ABACUS 的计算模拟实例
 
-1. ABACUS 计算模拟实例 | 概述<a href="https://bohrium.dp.tech/notebooks/93842852314" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-2. ABACUS 计算模拟实例 | I. 原子及小分子气体能量计算<a href="https://bohrium.dp.tech/notebooks/81868491785" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-3. ABACUS 计算模拟实例 | II. C2H5OH 的振动模式与频率计算<a href="https://bohrium.dp.tech/notebooks/52515261357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-4. ABACUS 计算模拟实例 | III. 材料平衡晶格常数计算<a href="https://bohrium.dp.tech/notebooks/24564476824" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-5. ABACUS 计算模拟实例 | IV. 堆垛层错能的计算<a href="https://bohrium.dp.tech/notebooks/57232361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-6. ABACUS 计算模拟实例 | V. Al 的弹性性能指标计算<a href="https://bohrium.dp.tech/notebooks/73791986918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-7. ABACUS 计算模拟实例 | VI. 空位形成能与间隙能计算<a href="https://bohrium.dp.tech/notebooks/97738352314" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-8. 2024 秋计算材料学-上机练习：ABACUS 能带和态密度计算<a href="https://bohrium.dp.tech/notebooks/21913576824" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-9. ABACUS 计算模拟实例 | VIII. 基于 HSE06 的态密度与能带计算<a href="https://bohrium.dp.tech/notebooks/58898161357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-10. ABACUS 计算模拟实例 | IX. 表面能的计算<a href="https://bohrium.dp.tech/notebooks/45588412168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-11. ABACUS 计算模拟实例 | XI. Pt 表面简单物种的吸附能计算<a href="https://bohrium.dp.tech/notebooks/15517833825" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-12. ABACUS 计算模拟实例 | XII. Pt(111)表面羟基解离的过渡态搜索<a href="https://bohrium.dp.tech/notebooks/36595625971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-13. ABACUS 计算模拟实例 | XIII. Pt 表面的 ORR 催化路径<a href="https://bohrium.dp.tech/notebooks/49942212168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+1. ABACUS 计算模拟实例 | 概述 <a href="https://bohrium.dp.tech/notebooks/93842852314" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+2. ABACUS 计算模拟实例 | I. 原子及小分子气体能量计算 <a href="https://bohrium.dp.tech/notebooks/81868491785" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+3. ABACUS 计算模拟实例 | II. C2H5OH 的振动模式与频率计算 <a href="https://bohrium.dp.tech/notebooks/52515261357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+4. ABACUS 计算模拟实例 | III. 材料平衡晶格常数计算 <a href="https://bohrium.dp.tech/notebooks/24564476824" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+5. ABACUS 计算模拟实例 | IV. 堆垛层错能的计算 <a href="https://bohrium.dp.tech/notebooks/57232361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+6. ABACUS 计算模拟实例 | V. Al 的弹性性能指标计算 <a href="https://bohrium.dp.tech/notebooks/73791986918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+7. ABACUS 计算模拟实例 | VI. 空位形成能与间隙能计算 <a href="https://bohrium.dp.tech/notebooks/97738352314" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+8. 2024 秋计算材料学-上机练习：ABACUS 能带和态密度计算 <a href="https://bohrium.dp.tech/notebooks/21913576824" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+9. ABACUS 计算模拟实例 | VIII. 基于 HSE06 的态密度与能带计算 <a href="https://bohrium.dp.tech/notebooks/58898161357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+10. ABACUS 计算模拟实例 | IX. 表面能的计算 <a href="https://bohrium.dp.tech/notebooks/45588412168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+11. ABACUS 计算模拟实例 | XI. Pt 表面简单物种的吸附能计算 <a href="https://bohrium.dp.tech/notebooks/15517833825" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+12. ABACUS 计算模拟实例 | XII. Pt(111)表面羟基解离的过渡态搜索 <a href="https://bohrium.dp.tech/notebooks/36595625971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+13. ABACUS 计算模拟实例 | XIII. Pt 表面的 ORR 催化路径 <a href="https://bohrium.dp.tech/notebooks/49942212168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
 # 四、<strong>开发者文档</strong>
 

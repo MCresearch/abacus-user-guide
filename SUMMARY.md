@@ -1,6 +1,6 @@
 # Summary
 
-* [ABACUS 使用教程](README.md)
+* [介绍](README.md)
     * [ABACUS 新闻稿整理](news.md)
     * [如何贡献 ABACUS 使用教程](contribute.md)
 
