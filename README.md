@@ -38,7 +38,7 @@ ABACUS 网站访问：
 6. [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
 7. [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
 8. [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
-9. ABACUS toolchain 脚本集 <a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+9. ABACUS toolchain 脚本集 <a href="https://bohrium.dp.tech/notebooks/5215742477" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 10. [ABACUS 编译教程系列之一：基于 Intel 编译器](https://www.bilibili.com/video/BV1ZN411L75Z/)（B 站视频）
 11. [ABACUS 编译教程系列之二：基于 CUDA](https://www.bilibili.com/video/BV1Jb4y1L7KB/)（B 站视频）
 12. [ABACUS 编译教程系列之三：docker 的使用](https://www.bilibili.com/video/BV13C4y1R7DL/)（B 站视频）
