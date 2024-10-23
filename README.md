@@ -121,6 +121,7 @@ ABACUS 网站访问：
 4. [表面缺陷能和吸附能计算](abacus-surface4.md)
 5. [外加电场](abacus-surface5.md)
 6. [补偿电荷](abacus-surface6.md)
+7. 固定电势方法在ABACUS中的实现 <a href="https://bohrium.dp.tech/notebooks/86445129178" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
 ## 3.2 《计算材料学》采用 ABACUS 的计算模拟实例
 
