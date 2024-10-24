@@ -22,7 +22,7 @@
         * [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
         * [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
         * [ABACUS 收敛性问题解决手册](abacus-conv.md)
-        * [ABACUS 答疑手册](abacus-question.md)
+        * [ABACUS 答疑手册 v0.2 版本](abacus-question.md)
     * 分子动力学
         * [ABACUS 分子动力学使用教程](abacus-md.md)
         * [ABACUS+DeePMD-kit 做机器学习分子动力学模拟](abacus-dpmd.md)

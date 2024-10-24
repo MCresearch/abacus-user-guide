@@ -61,7 +61,7 @@ ABACUS 网站访问：
 5. ABACUS 使用 DFT+U 计算教程 | 基础版 <a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 6. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
 7. [ABACUS 收敛性问题解决手册](abacus-conv.md)
-8. [ABACUS 答疑手册](abacus-question.md)
+8. [ABACUS 答疑手册 v0.2 版本](abacus-question.md)
 9. ABACUS 对比 CP2K 精度和效率测试 | Si 的状态方程（EOS） <a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 10. 有 VASP 使用背景的用户上手 ABACUS 教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)
 

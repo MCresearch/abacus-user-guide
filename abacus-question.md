@@ -1,8 +1,8 @@
-# ABACUS 答疑手册
+# ABACUS 答疑手册 v0.2 版本
 
 <strong>作者：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2024/04/05</strong>
+<strong>最后更新时间：2024/10/24</strong>
 
 # 一、背景
 
@@ -14,13 +14,13 @@
 
 <strong>LCAO：</strong>Linear Combination of Atomic Orbitals，指局域轨道，在 ABACUS 里面也指数值原子轨道
 
-基于过去几年来积累的用户问题，接下来本文档将尽量以问答的形式来替使用 ABACUS 的用户答疑解惑，例如：
+基于过去几年来积累的用户问题，接下来本文档将尽量以问答的形式来替使用 ABACUS 的用户答疑解惑，例如
 
 1. <strong>问：ABACUS 和 ABAQUS 是什么关系？</strong>
-   答：ABAQUS 是一款知名的多物理场有限元仿真分析软件，ABACUS 的英文单词翻译是算盘，ABACUS 作为一款国产密度泛函理论软件，中文名是原子算筹。
+答：ABAQUS 是一款知名的多物理场有限元仿真分析软件，ABACUS 的英文单词翻译是算盘，ABACUS 作为一款国产密度泛函理论软件，中文名是原子算筹。
 
 2. <strong>问：使用 ABACUS 需要收费吗？</strong>
-    答：从软件的角度来讲不收费，因为是开源软件，但跑该软件的机器得自己准备，机器要交电费。
+答：从软件的角度来讲不收费，因为是开源软件，但跑该软件的机器得自己准备，机器要交电费。
 
 3. <strong>问：ABACUS 的开发过程是怎样的，什么人可以成为开发者？</strong>
 答：ABACUS 的代码开发记录完全公开，所有代码的修改都在 [https://github.com/deepmodeling/abacus-develop](https://github.com/deepmodeling/abacus-develop) 网页上可以查到，ABACUS 为所有感兴趣的参与者都保留了成为开发者的可能性，每个人都有可能称为开发者。
@@ -39,13 +39,13 @@
 
 答：可以参考官方文档 [https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)
 
-也可以登录网址 [https://mcresearch.gitee.io/abacus-user-guide/](https://mcresearch.gitee.io/abacus-user-guide/)，上面有一些针对不同编译器的中文编译教程。
+也可以登录网址 [https://mcresearch.github.io/abacus-user-guide/](https://mcresearch.github.io/abacus-user-guide/)，上面有一些针对不同编译器的中文编译教程。
 
 另外，注意“安装 ABACUS”这句话其实有歧义，ABACUS 有很多不同的安装选项，比如是否只安装支持平面波的功能，还是也要安装支持数值原子轨道的功能，是否要使用 LIBXC 等等不同选项，可根据自己的需要来安装具体的代码模块。
 
 ### <strong>1.3 如何在曙光的 DCU 上编译 ABACUS？</strong>
 
-答：可参考文档 [https://mcresearch.gitee.io/abacus-user-guide/abacus-dcu.html](https://mcresearch.gitee.io/abacus-user-guide/abacus-dcu.html)
+答：可参考文档 [https://mcresearch.github.io/abacus-user-guide/abacus-dcu.html](https://mcresearch.github.io/abacus-user-guide/abacus-dcu.html)
 
 ## 2. 计算前准备
 
@@ -63,21 +63,25 @@
 
 关于数值原子轨道的背景知识，可以参考文档：
 
-[https://mcresearch.gitee.io/abacus-user-guide/abacus-nac1.html](https://mcresearch.gitee.io/abacus-user-guide/abacus-nac1.html)
+[https://mcresearch.github.io/abacus-user-guide/abacus-nac1.html](https://mcresearch.github.io/abacus-user-guide/abacus-nac1.html)
 
-[https://mcresearch.gitee.io/abacus-user-guide/abacus-nac2.html](https://mcresearch.gitee.io/abacus-user-guide/abacus-nac2.html)
+[https://mcresearch.github.io/abacus-user-guide/abacus-nac2.html](https://mcresearch.github.io/abacus-user-guide/abacus-nac2.html)
 
-[https://mcresearch.gitee.io/abacus-user-guide/abacus-nac3.html](https://mcresearch.gitee.io/abacus-user-guide/abacus-nac3.html)
+[https://mcresearch.github.io/abacus-user-guide/abacus-nac3.html](https://mcresearch.github.io/abacus-user-guide/abacus-nac3.html)
 
 ### 2.4 能量截断值收敛性测试是必须要做的吗？
 
 答：是的，除非你或者别人之前已经做过了，得到了推荐的能量截断值。否则，一般来讲一个给定的赝势（模守恒或者超软赝势），你需要从低到高逐步增加能量截断值来判断总能量已经收敛。
 
-### 2.5 关于长度单位
+### 2.5 布里渊区 k 点收敛性和什么有关系？
+
+答：布里渊区 k 点只和实空间的晶胞大小有关系，因此当换了晶胞之后需要测试 k 点的收敛性。然而，一般我们会有一些经验规律，比如实空间某个方向增大一倍，则倒空间相应的 k 点数量可以少取一半，一直小到只取 Gamma 点（0，0，0）为止。所以，改变赝势或者交换关联泛函的时候，并不需要重新测试 k 点的收敛情况。
+
+### 2.6 关于长度单位
 
 答：没有注意到单位的转换是初学者容易犯的错之一。长度单位 Angstroms（埃）和 Bohr 的转换关系需要了解（1 埃=1.8897259886 Bohr，反过来 1 Borh=0.529177249 Angstroms，转换时候尽可能多地取有效数字，会让原子坐标更准确），不同软件的长度单位可能有取得不同的情况，涉及到晶格矢量、原子位置，以及坐标系转换（Direct 和 Cartesian 的区别，前者是晶格坐标系，后者单位才是长度单位），如果原子位置或者晶胞设错了，不同软件计算结果就会不同。一个小技巧判断不同软件的晶格结构和原子坐标是否一样：可以看不同软件算出来的 Ewald 能量（周期性边界条件下算离子-离子库伦排斥能的快速算法），如果 Ewald 能量能对上（精确到小数点后 10 位以上），那么说明两个软件的原子坐标和晶格矢量设置都是一样的。
 
-### 2.6 关于能量单位
+### 2.7 关于能量单位
 
 答：涉及到能量单位的有多处。首先是平面波的能量截断值，VASP 经常用的是 eV，QE 和 ABACUS 用的是 Ry，这两者有转换关系（1 Ry=13.605703976 eV），所以用 VASP 习惯的用户需要把对应的 eV 转换成 Ry 再使用 ABACUS。其次是 smearing 的参数选择，例如 0.015，其单位是 Ry 或者 eV 也对结果有较大影响。
 
@@ -125,7 +129,11 @@
 
 答：因为电子和离子的描述方式变了，所以需要重新测试能量截断值 Ecut 的收敛性，即增加 Ecut，看总能量变化，例如从 90 Ry 变到 100 Ry，如果总能量变化小于 1 meV/atom，则认为可以收敛。
 
-### 4.5 别人文献看到的某元素的能量截断值，是否可以直接拿过来使用？
+### 4.5 从 PBE 泛函换到 Meta-GGA 泛函，例如 SCAN，或者杂化泛函，是否需要换赝势文件？
+
+答：一个约定俗成的赝势用法是：PBE 的赝势可以用于 Meta-GGA 泛函，例如 SCAN 泛函，甚至杂化泛函包括 PBE0 和 HSE06 泛函。但是，LDA 的赝势就不可以用于 SCAN 泛函或者 PBE0、HSE06 泛函。因为 SCAN 泛函和 HSE06 泛函也是基于 PBE 泛函发展起来的。
+
+### 4.6 别人文献看到的某元素的能量截断值，是否可以直接拿过来使用？
 
 答：一般来说是不可以，例如用了 VASP 的 PAW 势，就难以直接拿到模守恒赝势里使用。
 
