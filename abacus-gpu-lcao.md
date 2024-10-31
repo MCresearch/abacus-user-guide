@@ -4,7 +4,9 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2024/10/06</strong>
+<strong>最后更新时间：2024/10/31</strong>
+
+<strong>文档对应 notebook：[ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682)</strong>
 
 # 一、简介
 
@@ -14,7 +16,7 @@
 
 要使用 GPU 版的 ABACUS，使用 CMAKE 编译 ABACUS 的时候（ABACUS 编译方法详见 [https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)），需要进行如下设置。
 
-- <strong>格点积分 GPU 版支持，以及 cusolver 求解器支持：</strong>需要设置 `-DUSE_CUDA=ON`。
+- <strong>格点积分 GPU 版支持，以及 cusolver 求解器支持：</strong>需要安装 cuda-toolkit，并在编译 ABACUS 时设置 `-DUSE_CUDA=ON`。
 - <strong>cusolvermp 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了 cusolvermp 相关库，具体安装方法见 [https://docs.nvidia.com/cuda/cusolvermp/](https://docs.nvidia.com/cuda/cusolvermp/)<strong>。</strong>除了设置 `-DUSE_CUDA=ON` 之外，还需要设置 `-DENABLE_CUSOLVERMP=ON`。
 - <strong>GPU 版 ELPA 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了支持 GPU 版本的 ELPA，安装方法详见 [https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL](https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL)，安装过程可以参考 [https://github.com/deepmodeling/abacus-develop/pull/4969](https://github.com/deepmodeling/abacus-develop/pull/4969)。安装好 ELPA 之后，在编译 ABACUS 时，需要设置 `-DUSE_CUDA=ON`, `-DUSE_ELPA=ON`。
 
@@ -412,8 +414,8 @@ TIME STATISTICS
  SEE INFORMATION IN : OUT.autotest/
 ```
 
-输出中的 `“RUNNING WITH DEVICE”` 一行标出了此次运算使用的设备，同时运行时间统计里可以看到格点积分以及广义特征值求解的具体耗时，通过这两项耗时可以对比 GPU 和 CPU 的计算效率。格点积分耗时对应 `cal_gint`, `cal_gint_vlocal`, `cal_gint_rho`,`cal_gint_force` 这几项，广义特征值求解对应 `solve` 项（在上面输出中标黄项）。
+输出中的 `“RUNNING WITH DEVICE”` 一行标出了此次运算使用的设备，同时运行时间统计里可以看到格点积分以及广义特征值求解的具体耗时，通过这两项耗时可以对比 GPU 和 CPU 的计算效率。格点积分耗时对应 `cal_gint`, `cal_gint_vlocal`, `cal_gint_rho`,`cal_gint_force` 这几项，广义特征值求解对应 `hamiltSolvePsiK` 项（在上面输出中标黄项）。
 
 可以看到 GPU 运行用了 95 秒，而同样体系用 CPU 运行用了 224 秒，GPU 对于该体系有一定的加速效果。
 
-以上就是本教程的内容，希望对学习采用 ABACUS 结合 GPU 进行密度泛函理论计算的读者有所帮助，有问题可以发邮箱给作者（见开头）。
+以上就是本教程的内容，希望对学习采用 ABACUS 结合 GPU 进行密度泛函理论计算的读者有所帮助，大家也可以在 bohrium 平台按照<strong>[ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682)</strong>跑一遍实际安装使用流程，有问题可以发邮箱给作者（见开头）。
