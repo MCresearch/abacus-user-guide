@@ -77,6 +77,7 @@
         * [在 ABACUS 中进行差分测试](algorithm-delta.md)
     * 模块介绍
         * [ESolver 模块介绍](develop-ESolver.md)
+        * [HSolver 模块介绍](develop-HSolver.md)
         * [HContainer 模块介绍](develop-HContainer.md)
     * 平面波代码介绍
         * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)

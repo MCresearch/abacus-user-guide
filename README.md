@@ -170,7 +170,8 @@ ABACUS 网站访问：
 ## 4.4 模块介绍
 
 1. [ESolver 模块介绍](develop-ESolver.md)
-2. [HContainer 模块介绍](develop-HContainer.md)
+2. [HSolver 模块介绍](develop-HSolver.md)
+3. [HContainer 模块介绍](develop-HContainer.md)
 
 ## 4.5 平面波代码介绍
 
