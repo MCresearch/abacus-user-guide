@@ -1,8 +1,8 @@
 # ABACUS 的 Github 仓库 Issues 处理流程
 
-<strong>作者：赵天琦，邮箱：zhaotq@aisi.ac.cnmailto:zhaotq@aisi.ac.cn；</strong>
+<strong>作者：赵天琦，邮箱：zhaotq@aisi.ac.cn</strong>
 
-<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cnmailto:mohanchen@pku.edu.cn</strong>
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
 <strong>最后更新时间：2023/10/01</strong>
 

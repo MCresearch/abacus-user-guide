@@ -75,6 +75,9 @@
         * [文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例](develop-cifparser.md)
         * [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
         * [在 ABACUS 中进行差分测试](algorithm-delta.md)
+    * 模块介绍
+        * [HContainer 模块介绍](develop-HContainer.md)
+        * [ESolver 模块介绍](develop-ESolver.md)
     * 平面波代码介绍
         * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
         * [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)

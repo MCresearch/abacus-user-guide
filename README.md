@@ -167,7 +167,12 @@ ABACUS 网站访问：
 5. [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
 6. [在 ABACUS 中进行差分测试](algorithm-delta.md)
 
-## 4.4 平面波代码介绍
+## 4.4 模块介绍
+
+1. [HContainer 模块介绍](develop-HContainer.md)
+2. [ESolver 模块介绍](develop-ESolver.md)
+
+## 4.5 平面波代码介绍
 
 1. [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
 2. [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
