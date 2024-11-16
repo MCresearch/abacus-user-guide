@@ -93,6 +93,10 @@
         * [Introduction to ABACUS: Path to PW calculation - Part 10](develop-path10.md)
         * [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
         * [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
+    * Pyabacus 介绍
+        * [Pyabacus 文档一：用户手册](develop-pyabacus1.md)
+        * [Pyabacus 文档二：HSolver 模块](develop-pyabacus2.md)
+        * [Pyabacus 文档三：开发者指南](develop-pyabacus3.md)
 * 算法文档
     * [最大局域化 Wannier 函数方法简介](algorithm-wannier.md)
     * [电荷密度混合算法介绍](algorithm-mix.md)

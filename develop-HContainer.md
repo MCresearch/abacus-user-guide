@@ -53,13 +53,6 @@ HContainer 类是本模块的核心，提供以下关键功能：
 - <strong>R 指数循环</strong>：通过 `fix_R` 和 `unfix_R` 方法，用户可以固定或解除对特定布拉维格矢 R 的哈密顿量矩阵的操作。
 - <strong>Gamma 模式</strong>：`fix_gamma` 方法允许 HContainer 进入 Gamma 模式，该模式下只处理 `R=(0,0,0)` 的哈密顿量矩阵。
 
-### 2. HTransPara 和 HTransSerial 类
-
-这两个类用于处理 HContainer 在并行环境下的数据传输：
-
-- <strong>HTransPara</strong>：负责并行处理器间的数据打包、发送和接收。
-- <strong>HTransSerial</strong>：负责串行处理器与并行处理器间的数据传输。
-
 ## 三、使用示例
 
 ### 1. 初始化 HContainer
@@ -69,8 +62,10 @@ HContainer 作为一个类，可以用于实例化存储局域原子轨道基组
 ```cpp
 <em>// 假设ucell是已经初始化的UnitCell对象</em>
 HContainer<double> HR(ucell);
-<em>// 或者使用Parallel_Orbitals对象</em><em>paraV来对HContainer初始化</em>
+<em>// 或者使用Parallel_Orbitals对象paraV来对HContainer初始化</em>
 HContainer<double> HR(paraV);
+// 使用确定的<IJR>原子对数组初始化
+HContainer<double> HR(paraV, data_pointer, ijr_info)；
 ```
 
 ### 2. 插入原子对
@@ -101,6 +96,12 @@ HContainer 的 `data()` 函数的参数为原子 `i` 和 `j` 的指标，以及�
 double* data_pointer = HR.data(0, 1, {0, 0, 0});
 ```
 
+通过 <I,J,R> 原子对信息获取目标的小矩阵的接口为 data 函数，其参数为原子 I 和 J 的指标，以及布拉维格子 `R`，返回的是一个类型 `T`（doube 或者 complex<double>）的指针
+
+```cpp
+double* data_ijr_pointer = HR.data(i, j, r_index);
+```
+
 ### 5. R 指数循环
 
 固定布拉维格子 `R`，对原子对进行循环操作。
@@ -116,35 +117,25 @@ HR.unfix_R();
 
 ### 6. 并行数据传输
 
-在 `func_transfer.cpp` 文件里定义了一系列用于并行数据同步的接口。
+#### 6.1 HTransPara 和 HTransSerial 类
 
-- 单进程完整 HContainer-> 多进程 2D 块并行 HContainer  —— 从文件中读取哈密顿量
+这两个类用于处理 HContainer 在并行环境下的数据传输：
 
-  - 接口 `transferSerial2Parallels` 单进程读入的完整哈密顿量分发到并行存储的哈密顿量
-    - 三个接口
-- 多进程 2D 块并行 HContainer-> 单进程完整 HContainer  —— 向文件中写入哈密顿量
-- 多进程某算法并行 HContainer-> 多进程 2D 块并行 HContainer —— 格点积分哈密顿量传输
-- 多进程 2D 块并行 HContainer-> 多进程某算法并行 HContainer —— 格点积分密度矩阵传输
+- <strong>HTransPara</strong>：负责并行处理器间的数据打包、发送和接收。
+- <strong>HTransSerial</strong>：负责串行处理器与并行处理器间的数据传输。
+- 在 `func_transfer.cpp` 文件里定义了一系列用于并行数据同步的接口，目前支持 5 种传输功能：
 
-在 `transfer.h` 文件里定义了 `HTransPara` 类和 `HTransSerial` 类，只有在定义 `__MPI` 的时候被编译。
+  - <strong>transferSerial2Parallels </strong>单进程上完整 HContainer 对象往多进程上 2D 块并行存储 HContainer 对象数据传输；（典型应用场景：暂无）
+  - <strong>transferParallels2Serial </strong>多进程上 2D 块并行存储 HContainer 对象往单进程上完整 HContainer 对象数据传输；（典型应用场景：gatherParallels）
+  - <strong>transferSerials2Parallels </strong>多进程上每进程各一个未并行存储的 HContainer 对象往多进程上 2D 块并行存储的 HContainer 对象数据传输并求和（典型应用场景：格点积分 transfer_pvpR）；
+  - <strong>transferParallels2Serials </strong>多进程上 2D 块并行存储 HContainer 对象往多进程上传输目标进程需要的稀疏特征的未进行并行存储的 HContainer 对象（典型应用场景：格点积分 transfer_DM2DtoGrid）。
+  - <strong>gatherParallels </strong>多进程上 2D 块并行存储 HContainer 对象往单进程上未并行且为空的 HContainer 对象数据传输（典型应用场景：write_dmr）
 
-```cpp
-#ifdef __MPI
-HTransPara<double> hTransPara(n_processes, &HR);
-hTransPara.cal_orb_indexes(irank);
-hTransPara.send_orb_indexes(irank);
-#endif
-```
+#### 6.2 并行模式下的注意事项
 
-## 四、性能优化
+- <strong>并行程序编写</strong>：HContainer 中内置了<strong>2D 块轨道并行方案</strong>，通过指针 <strong>const Parallel_Orbitals* paraV</strong> 控制具体的并行方案，每个原子对的稠密矩阵在任何核数并行下都依然是稠密矩阵，调用 HContainer 时不需要手动判断轨道的并行方式，可以结合<strong>Parallel_Orbitals</strong>类中提供的获取 local 轨道指标的功能函数辅助完成高效的并行程序编写。
+- <strong>数据同步</strong>：由于 HContainer 中采用了 2D 块轨道并行方案，一个矩阵元数据只唯一存储在其中一个进程的 HContainer 对象上，不需要进行手动同步，数据格式转换或并行方案切换时，可以手动调用<strong>hcontainer_funcs.h</strong>中提供的功能函数。
 
-### 1. 已经完成的性能优化
+<strong>注 1</strong>：目前已开发的基于 HContainer 的功能函数有限，有更多对 HContainer 的接口需求请提交 Issue。
 
-- <strong>内存池使用</strong>：尽量使用内存池来避免频繁的内存分配和释放，降低内存碎片。
-- <strong>数据局部性</strong>：在并行环境下，尽量减少跨处理器的数据访问，提高数据访问的局部性。
-- <strong>原子对排序</strong>：在插入原子对时，保持原子对的有序性，避免不必要的排序操作。
-
-### 2. 并行模式下的注意事项
-
-- <strong>MPI 环境</strong>：确保在 MPI 环境下编译和运行程序，以利用 HContainer 的并行能力。
-- <strong>数据同步</strong>：在进行并行数据传输后，确保所有处理器上的数据是同步的。
+<strong>注 2</strong>：更多详细 Demo 代码和设计思路详见飞书文档 [HContainer 类设计文档](https://dptechnology.feishu.cn/docx/IiQEdkycoo1j7gxdKJMcQeYxnDg?from=from_copylink)

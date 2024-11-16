@@ -189,6 +189,12 @@ ABACUS 网站访问：
 12. [Introduction to ABACUS: Path to PW calculation - Part 11](develop-path11.md)
 13. [Introduction to ABACUS: Path to PW calculation - Summary Final](develop-sm2.md)
 
+## 4.6 Pyabacus 介绍
+
+1. [Pyabacus 文档一：用户手册](develop-pyabacus1.md)
+2. [Pyabacus 文档二：HSolver 模块](develop-pyabacus2.md)
+3. [Pyabacus 文档三：开发者指南](develop-pyabacus3.md)
+
 # 五、算法文档
 
 1. [电荷密度混合算法介绍](algorithm-mix.md)
