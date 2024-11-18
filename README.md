@@ -94,22 +94,24 @@ ABACUS 网站访问：
 ## 2.7 后处理
 
 1. [ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
-2. [ABACUS 计算 PDOS](abacus-pdos.md)
-3. [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
-4. [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
-5. [ABACUS+Bader charge 分析教程](abacus-bader.md)
-6. [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
-7. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
-8. ABACUS+pyatb 能带反折叠计算 <a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-9. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
-10. ABACUS+Phono3py 计算晶格热导率 <a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-11. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
-12. [ABACUS+Candela 使用教程](abacus-candela.md)
-13. [ABACUS+USPEX 接口教程](abacus-uspex.md)
-14. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
-15. ABACUS+ASE 做过渡态计算
-    1. [ATST-Tools: ASE-ABACUS 过渡态计算工作流套件与算例](https://github.com/QuantumMisaka/ATST-Tools) <a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> (支持 NEB，Dimer，AutoNEB 等过渡态方法)
-    2. [<mark style="color:red;">ABACUS-ASE做NEB计算</mark>](https://dptechnology.feishu.cn/wiki/wikcnzar41sN8ZtGLtm3PLnarSc) （简单算例）
+2. [ABACUS+ASE](https://gitlab.com/1041176461/ase-abacus)(source)
+   1. ABACUS+ASE使用方法简介 <a href="https://bohrium.dp.tech/notebooks/6516485694" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 
+   2. [ABACUS+ASE接口使用技巧](https://bbs.abacus-dft.com/forum.php?mod=viewthread&tid=4&extra=page%3D1)
+   3. [ATST-Tools: ABACUS+ASE过渡态计算套件](https://github.com/QuantumMisaka/ATST-Tools)
+3. [ABACUS 计算 PDOS](abacus-pdos.md)
+4. [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
+5. [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
+6. [ABACUS+Bader charge 分析教程](abacus-bader.md)
+7. [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
+8. [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
+9.  ABACUS+pyatb 能带反折叠计算 <a href="https://nb.bohrium.dp.tech/detail/2012704420" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+10. [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
+11. ABACUS+Phono3py 计算晶格热导率 <a href="https://nb.bohrium.dp.tech/detail/6116471155" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+12. [ABACUS+Wannier90 使用教程](abacus-wannier.md)
+13. [ABACUS+Candela 使用教程](abacus-candela.md)
+14. [ABACUS+USPEX 接口教程](abacus-uspex.md)
+15. [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
+    
 
 # 三、教程
 
@@ -121,7 +123,10 @@ ABACUS 网站访问：
 4. [表面缺陷能和吸附能计算](abacus-surface4.md)
 5. [外加电场](abacus-surface5.md)
 6. [补偿电荷](abacus-surface6.md)
-7. 固定电势方法在ABACUS中的实现 <a href="https://bohrium.dp.tech/notebooks/86445129178" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+7. [ATST-Tools: ABACUS+ASE表面反应过渡态计算](https://github.com/QuantumMisaka/ATST-Tools)
+    1. 双端过渡态优化：NEB, DyNEB与AutoNEB算法 <a href="https://nb.bohrium.dp.tech/detail/39369325971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 
+    2. 单端过渡态优化：Dimer, Sella <a href="https://bohrium.dp.tech/notebooks/29581597682" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a> 
+8. 固定电势方法在ABACUS中的实现 <a href="https://bohrium.dp.tech/notebooks/86445129178" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
 ## 3.2 《计算材料学》采用 ABACUS 的计算模拟实例
 
