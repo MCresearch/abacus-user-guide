@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| ABACUS还能干这个？微观探测结合DFT（ABACUS+TB2J）探索GeFe3N材料的微观磁性        | [网页链接](https://mp.weixin.qq.com/s/GKQ9DTNi_cK7L0urGFDh6A)         | 2024/12/23 |  深度势能  |
 | 《金属学报》专刊发布，DeepModeling社区赋能材料科学                              | [网页链接](https://mp.weixin.qq.com/s/R3BqZPUZc4pZ3MTdSlHxiw)         | 2024/10/14 |  深度势能  |
 | ABACUS还能干这个？Acta Materialia发表关于铝铜合金强化相的稳定性研究             | [网页链接](https://mp.weixin.qq.com/s/wXZhTyfsfKFPAMwxp4Kp1Q)         | 2024/10/10 |  深度势能  |
 | ABACUS 3.8发布——数值原子基下的异构加速和杂化泛函效率提升                        | [网页链接](https://mp.weixin.qq.com/s/oqp-fX8nEcvKn7193akr7A)         | 2024/10/08 |  深度势能  |
