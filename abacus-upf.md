@@ -50,7 +50,7 @@ psp8 格式是 ONCVPSP 软件生成的一种赝势格式，在 Abinit 官网（[
 
 ### 1.1 介绍
 
-[ONCVPSP](http://www.mat-simresearch.com/)（Optimized Norm-Conservinng Vanderbilt PSeudoPotential）是由 D.R. Hamann 等人提出的优化版模守恒赝势，其有更高的精度与效率。ONCVPSP 依赖 Libxc，支持多种交换关联泛函。
+[ONCVPSP](http://www.mat-simresearch.com/)（Optimized Norm-Conserving Vanderbilt PSeudoPotential）是由 D.R. Hamann 等人提出的优化版模守恒赝势，其有更高的精度与效率。ONCVPSP 依赖 Libxc，支持多种交换关联泛函。
 
 参考文献：[Optimized norm-conserving Vanderbilt pseudopotentials](http://dx.doi.org/10.1103/PhysRevB.88.085117)。
 
