@@ -140,6 +140,17 @@ ABACUS 网站访问：
 12. ABACUS 计算模拟实例 | XII. Pt(111)表面羟基解离的过渡态搜索 <a href="https://bohrium.dp.tech/notebooks/36595625971" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 13. ABACUS 计算模拟实例 | XIII. Pt 表面的 ORR 催化路径 <a href="https://bohrium.dp.tech/notebooks/49942212168" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
 
+## 3.3 公众号文章推荐
+
+1. [新服务器安装ABACUS](https://mp.weixin.qq.com/s/Cc1TWrGaiYPeZJwbo28DeA)
+2. [ABACUS中坐标变换——调整真空层方向](https://mp.weixin.qq.com/s/HaI17wtxg--AmZNWrxd-UA)
+3. [ABACUS+Wannier90+WannierTools计算Bi2Se3的能带和拓扑性质](https://mp.weixin.qq.com/s/HAByRaMFqScnTsE_6kw8tg)
+4. [更新：ABACUS+Wannier90+WannierTools计算Bi2Se3的能带和拓扑性质](https://mp.weixin.qq.com/s/nfpUpt9sClRX0_lHYwkIHw)
+
+## 3.4 视频推荐
+
+1. [ABACUS轨道生成](https://www.bilibili.com/video/BV1gBsTetEmB/)
+
 # 四、<strong>开发者文档</strong>
 
 ## 4.1 基础规范

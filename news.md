@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| ABACUS还能干这个？助力揭秘镍基高温超导材料磁性奥秘                              | [网页链接](https://mp.weixin.qq.com/s/PDBya2D9q_V6MYKrOx4KXA)         | 2025/02/27 |  深度势能  |
 | ABACUS还能干这个？第一性原理计算阐释二维材料调控复杂氧化物机理                  | [网页链接](https://mp.weixin.qq.com/s/o7tcgjwPE1klTLedCcFRSQ)         | 2025/01/20 |  深度势能  |
 | ABACUS + DeepH + KPROJ还能干这个? MoSe2/WSe2摩尔晶格的电子结构研究              | [网页链接](https://mp.weixin.qq.com/s/HCbXe3AkSa6nEY-MY6-cRg)         | 2025/01/15 |  深度势能  |
 | ABACUS还能干这个？千原子以上高熵二维材料MXene的多重超均匀性研究                 | [网页链接](https://mp.weixin.qq.com/s/e9TUDwrUVOAp-tL2MY8llw)         | 2025/01/10 |  深度势能  |
