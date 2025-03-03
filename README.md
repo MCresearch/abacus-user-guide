@@ -179,6 +179,7 @@ ABACUS 网站访问：
 5. [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
 6. [在 ABACUS 中进行差分测试](algorithm-delta.md)
 7. [ABACUS 如何处理内存 bug？](develop-memory.md)
+8. [Tensor 类文档 1：构造和使用说明](develop-tensor1.md)
 
 ## 4.4 模块介绍
 

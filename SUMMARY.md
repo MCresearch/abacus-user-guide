@@ -77,6 +77,7 @@
         * [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
         * [在 ABACUS 中进行差分测试](algorithm-delta.md)
         * [ABACUS 如何处理内存 bug？](develop-memory.md)
+        * [Tensor 类文档 1：构造和使用说明](develop-tensor1.md)
     * 模块介绍
         * [ESolver 模块介绍](develop-ESolver.md)
         * [HSolver 模块介绍](develop-HSolver.md)
