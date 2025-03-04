@@ -161,9 +161,10 @@ ABACUS 网站访问：
 4. [ABACUS 线上文档输入参数撰写规范](develop-input.md)
 5. [ABACUS 代码存放规范](develop-rule.md)
 6. [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
-7. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
+7. [如何在 ABACUS 中进行异构计算](develop-hetero.md)
 8. [ABACUS formatter-2.0 版本使用说明书](develop-formatter2.md)
 9. [ABACUS 中使用格式化工具 clang-format](develop-format.md)
+10. [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
 
 ## 4.2 性能工具
 

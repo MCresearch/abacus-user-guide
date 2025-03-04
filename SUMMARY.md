@@ -63,9 +63,10 @@
         * [ABACUS 线上文档输入参数撰写规范](develop-input.md)
         * [ABACUS 代码存放规范](develop-rule.md)
         * [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
-        * [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
+        * [如何在 ABACUS 中进行异构计算](develop-hetero.md)
         * [ABACUS formatter-2.0 版本使用说明书](develop-formatter2.md)
         * [ABACUS 中使用格式化工具 clang-format](develop-format.md)
+        * [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
     * 性能工具
         * [性能分析工具：vtune 快速上手教程](develop-vtune.md)
         * [ABACUS 全局数据结构和代码行数检测](develop-linedete.md)

@@ -1,10 +1,10 @@
 # Tensor 类文档 2：使用和拓展
 
-作者：陈诺，邮箱：cn037@stu.pku.edu.cn
+<strong>作者：陈诺，邮箱：cn037@stu.pku.edu.cn</strong>
 
-审核：陈默涵，邮箱：mohanchen@pku.edu.cn
+<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-最后更新时间：2025/03/02
+<strong>最后更新时间：2025/03/02</strong>
 
 # 一、概述
 
