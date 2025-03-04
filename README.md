@@ -180,6 +180,7 @@ ABACUS 网站访问：
 6. [在 ABACUS 中进行差分测试](algorithm-delta.md)
 7. [ABACUS 如何处理内存 bug？](develop-memory.md)
 8. [Tensor 类文档 1：构造和使用说明](develop-tensor1.md)
+9. [Tensor 类文档 2：使用和拓展](develop-tensor2.md)
 
 ## 4.4 模块介绍
 

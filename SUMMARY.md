@@ -78,6 +78,7 @@
         * [在 ABACUS 中进行差分测试](algorithm-delta.md)
         * [ABACUS 如何处理内存 bug？](develop-memory.md)
         * [Tensor 类文档 1：构造和使用说明](develop-tensor1.md)
+        * [Tensor 类文档 2：使用和拓展](develop-tensor2.md)
     * 模块介绍
         * [ESolver 模块介绍](develop-ESolver.md)
         * [HSolver 模块介绍](develop-HSolver.md)
