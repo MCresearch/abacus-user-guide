@@ -46,9 +46,10 @@ ABACUS 网站访问：
 ## 2.2 建模
 
 1. 准备晶胞和原子位置等信息的文件 STRU：如何转换 STRU 的格式 <a href="https://nb.bohrium.dp.tech/detail/9814968648" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-2. [ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例](abacus-eff.md)
-3. 准备赝势： [模守恒赝势生成方法简介](abacus-upf.md)
-4. 数值原子轨道基组生成教程：
+2. [ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例](abacus-eff1.md)
+3. [ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例](abacus-eff2.md)
+4. 准备赝势： [模守恒赝势生成方法简介](abacus-upf.md)
+5. 数值原子轨道基组生成教程：
    1. [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
    2. [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)
    3. [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)
