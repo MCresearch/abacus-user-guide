@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2023/06/30</strong>
+<strong>最后更新时间：2025/03/11</strong>
 
 # 一、介绍
 
@@ -58,16 +58,16 @@ psp8 格式是 ONCVPSP 软件生成的一种赝势格式，在 Abinit 官网（[
 
 #### 1.2.1 安装 Libxc
 
-Libxc 网址：[Libxc - a library of exchange-correlation functionals for density-functional theory](https://www.tddft.org/programs/libxc/)
+Libxc 网址：[Libxc - a library of exchange-correlation functionals for density-functional theory](https://libxc.gitlab.io/)
 
-推荐下载 [libxc-4.3.4](http://www.tddft.org/programs/libxc/down.php?file=4.3.4/libxc-4.3.4.tar.gz)
+推荐下载 [libxc-4.3.4](https://gitlab.com/libxc/libxc/-/archive/4.3.4/libxc-4.3.4.tar.bz2)
 
 然后执行如下命令：
 
 ```bash
 cd libxc-4.3.4
 autoreconf -i
-./configure --prefix='PATH/TO/LIBXC' CC=icc FC=ifort
+./configure --prefix='PATH/TO/LIBXC' CC=icc FC=ifort F77=ifort
 make
 make install
 ```
