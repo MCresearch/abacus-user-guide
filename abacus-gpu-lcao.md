@@ -18,7 +18,7 @@
 
 - <strong>格点积分 GPU 版支持，以及 cusolver 求解器支持：</strong>需要安装 cuda-toolkit，并在编译 ABACUS 时设置 `-DUSE_CUDA=ON`。
 - <strong>cusolvermp 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了 cusolvermp 相关库，具体安装方法见 [https://docs.nvidia.com/cuda/cusolvermp/](https://docs.nvidia.com/cuda/cusolvermp/)<strong>。</strong>除了设置 `-DUSE_CUDA=ON` 之外，还需要设置 `-DENABLE_CUSOLVERMP=ON`。
-- <strong>GPU 版 ELPA 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了支持 GPU 版本的 ELPA，安装方法详见 [https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL](https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL)，安装过程可以参考 [https://github.com/deepmodeling/abacus-develop/pull/4969](https://github.com/deepmodeling/abacus-develop/pull/4969)。安装好 ELPA 之后，在编译 ABACUS 时，需要设置 `-DUSE_CUDA=ON`, `-DUSE_ELPA=ON`。
+- <strong>GPU 版 ELPA 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了支持 GPU 版本的 ELPA，安装方法详见 [https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL](https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL.md)，安装过程可以参考 [https://github.com/deepmodeling/abacus-develop/pull/4969](https://github.com/deepmodeling/abacus-develop/pull/4969)。安装好 ELPA 之后，在编译 ABACUS 时，需要设置 `-DUSE_CUDA=ON`, `-DUSE_ELPA=ON`。
 
 # 三、使用
 
