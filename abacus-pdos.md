@@ -120,9 +120,9 @@ species : { species_1: { s: [m_0], p: [m_0, m_1] }, species_2: { s: [m_0], p: [m
 - 提取指定原子的 PDOS，会在 `PDOS_FILE` 下生成 `atom_index-*.dat` 文件，其中 `*` 代表指定的原子，第一列为横坐标能量范围，第二列到最后一列分别为不同 spin 的 pdos
 
 ```python
-atom_index : [atom_index_1, atom_index_2, atom_index_3, ...]
+atom_index : {atom_index_1, atom_index_2, atom_index_3, ...}
 # eg: 
-# atom_index : [1, 2, 3, 16, 32]
+# atom_index : {1, 2, 3, 16, 32}
 ```
 
 - 提取指定原子的不同 l（s:0, p:1, d:2, f:3, ......）的 PDOS，会在 `PDOS_FILE` 下生成 `atom_index-*` 文件夹，每个文件夹下生成 `atom_index-*_l.dat` 文件，其中 `*` 代表指定的元素，第一列为横坐标能量范围，第二列到最后一列分别为不同 spin 的 pdos
@@ -146,9 +146,9 @@ atom_index : { atom_index_1: { s: [m_0], p: [m_0, m_1] }, atom_index_2: { s: [m_
 - 提取指定原子轨道对应的 PDOS，会在 `PDOS_FILE` 下生成 `index-*.dat` 文件，其中 `*` 代表指定的原子，第一列为横坐标能量范围，第二列到最后一列分别为不同 spin 的 pdos
 
 ```python
-index : [index_1, index_2, index_3, ...]
+index : {index_1, index_2, index_3, ...}
 # eg:
-# index : [1, 2, 3, 4]
+# index : {1, 2, 3, 4}
 ```
 
 # 三、绘制 PDOS 的流程
