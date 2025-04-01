@@ -74,6 +74,7 @@
     * 编程进阶
         * [ABACUS 中的测试（一）：测试的重要性](develop-test1.md)
         * [ABACUS 中的测试（二）：测试工具 gtest](develop-test2.md)
+        * [ABACUS 中的测试（三）：测试方法](develop-test3.md)
         * [C++ 程序设计的一些想法](develop-design.md)
         * [文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例](develop-cifparser.md)
         * [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
