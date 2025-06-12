@@ -1,12 +1,12 @@
 # ABACUS LCAO 基组 GPU 版本使用说明
 
-<strong>作者：邓子超，邮箱：zcdeng@pku.edu.cn</strong>
+**作者：邓子超，邮箱：zcdeng@pku.edu.cnmailto:zcdeng@pku.edu.cn**
 
-<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+**审核：陈默涵，邮箱：mohanchen@pku.edu.cn**
 
-<strong>最后更新时间：2024/10/31</strong>
+**最后更新时间：2025/06/05**
 
-<strong>文档对应 notebook：[ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682)</strong>
+**文档对应 notebook：[ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682)**
 
 # 一、简介
 
@@ -16,37 +16,37 @@
 
 要使用 GPU 版的 ABACUS，使用 CMAKE 编译 ABACUS 的时候（ABACUS 编译方法详见 [https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html](https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html)），需要进行如下设置。
 
-- <strong>格点积分 GPU 版支持，以及 cusolver 求解器支持：</strong>需要安装 cuda-toolkit，并在编译 ABACUS 时设置 `-DUSE_CUDA=ON`。
-- <strong>cusolvermp 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了 cusolvermp 相关库，具体安装方法见 [https://docs.nvidia.com/cuda/cusolvermp/](https://docs.nvidia.com/cuda/cusolvermp/)<strong>。</strong>除了设置 `-DUSE_CUDA=ON` 之外，还需要设置 `-DENABLE_CUSOLVERMP=ON`。
-- <strong>GPU 版 ELPA 求解器支持：</strong>编译 ABACUS 之前，需要确保系统上安装了支持 GPU 版本的 ELPA，安装方法详见 [https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL](https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL.md)，安装过程可以参考 [https://github.com/deepmodeling/abacus-develop/pull/4969](https://github.com/deepmodeling/abacus-develop/pull/4969)。安装好 ELPA 之后，在编译 ABACUS 时，需要设置 `-DUSE_CUDA=ON`, `-DUSE_ELPA=ON`。
+- 格点积分 GPU 版支持，以及 cusolver 求解器支持：需要安装 cuda-toolkit，并在编译 ABACUS 时设置 `-DUSE_CUDA=ON`。
+- (可选项)cusolvermp 求解器支持：编译 ABACUS 之前，需要确保系统上安装了 cusolvermp 相关库，具体安装方法见 [https://docs.nvidia.com/cuda/cusolvermp/](https://docs.nvidia.com/cuda/cusolvermp/)**。**除了设置 `-DUSE_CUDA=ON` 之外，还需要设置 `-DENABLE_CUSOLVERMP=ON`。
+- (可选项)GPU 版 ELPA 求解器支持：编译 ABACUS 之前，需要确保系统上安装了支持 GPU 版本的 ELPA，安装方法详见 [https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL.md](https://github.com/marekandreas/elpa/blob/master/documentation/INSTALL.md)，安装过程可以参考 [https://github.com/deepmodeling/abacus-develop/pull/4969](https://github.com/deepmodeling/abacus-develop/pull/4969)。安装好 ELPA 之后，在编译 ABACUS 时，需要设置 `-DUSE_CUDA=ON`, `-DUSE_ELPA=ON`。
 
 # 三、使用
 
 ## 1. INPUT 参数设置
 
-目前 ABACUS 的 LCAO 基组已经 GPU 化的模块包括<strong>格点积分模块</strong>和<strong>广义特征值求解</strong>模块。这两个模块是否使用 GPU 加速可以分开设置。与格点积分和广义特征值求解相关的输入参数包括 `device` 以及 `ks_solver`。下面详细介绍一下这两个参数的设置，注意以下介绍基于 ABACUS 的 LCAO 基组（INPUT 文件中的 `basis_type` 需要设置为 `lcao`）。
+目前 ABACUS 的 LCAO 基组已经 GPU 化的模块包括**格点积分模块**和**广义特征值求解**模块。这两个模块是否使用 GPU 加速可以分开设置。与格点积分和广义特征值求解相关的输入参数包括 `device` 以及 `ks_solver`。下面详细介绍一下这两个参数的设置，注意以下介绍基于 ABACUS 的 LCAO 基组（INPUT 文件中的 `basis_type` 需要设置为 `lcao`）。
 
-- <strong>device: </strong>`device` 用于指定 ABACUS 是否使用 GPU 来加速运算，可以设置为 `cpu` 或者 `gpu`。如果编译的是 GPU 版的 ABACUS（编译时设置了 `-DUSE_CUDA=ON`），同时机器中至少有一张 GPU 卡，那么 `device` 的默认值为 `gpu`,否则为 `cpu`。
+- device:`device` 用于指定 ABACUS 是否使用 GPU 来加速运算，可以设置为 `cpu` 或者 `gpu`。如果编译的是 GPU 版的 ABACUS（编译时设置了 `-DUSE_CUDA=ON`），同时机器中至少有一张 GPU 卡，那么 `device` 的默认值为 `gpu`,否则为 `cpu`。
 
   - 如果 `device` 设置为 `gpu`, 那么 ABACUS 将使用 GPU 来加速计算，对应的，格点积分将使用 GPU 加速计算，广义特征值求解器 `ks_solver` 也将默认设置为 `cusolver`, 如果您的机器包含多张 GPU，也可以将 `ks_solver` 设置为 `cusolvermp` 或者 `elpa` 来调用多卡求解特征值；
   - 如果 `device` 设置为 `cpu`，ABACUS 将使用 CPU 进行计算，格点积分部分也会使用 CPU 计算，广义特征值求解器 `ks_solver` 默认设置为 `scalapack_gvx`,`genelpa`,或者 `lapack`(默认值详见 [https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#ks-solver](https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#ks-solver))
-- <strong>ks_solver:</strong>`ks_solver` 用于设置广义特征值求解器，目前 LCAO 基组支持的广义特征值求解器有 `lapack`,`scalapack_gvx`,`genelpa`,`cusolver`,`cusolvermp`,`elpa`。其中 `cusolver`,`cusolvermp` 与 `elpa` 可以调用 GPU 进行广义特征值求解,`cusolver` 只支持单 GPU 卡求解，`cusolvermp` 与 `elpa` 支持多 GPU 卡求解。
+- ks_solver:`ks_solver` 用于设置广义特征值求解器，目前 LCAO 基组支持的广义特征值求解器有 `lapack`,`scalapack_gvx`,`genelpa`,`cusolver`,`cusolvermp`,`elpa`。其中 `cusolver`,`cusolvermp` 与 `elpa` 可以调用 GPU 进行广义特征值求解,`cusolver` 只支持单 GPU 卡求解，`cusolvermp` 与 `elpa` 支持多 GPU 卡求解。
 
 在 INPUT 文件中设置好 `device` 和 `ks_solver` 参数后，运行 ABACUS，即可调用 GPU 进行运算。
 
 ## 2. 多卡计算
 
-ABACUS 的格点积分模块以及广义特征值求解模块均支持多块 GPU 卡加速，ABACUS 调用的 GPU 数量通过 MPI 进程数来设置。如果设置 n 个进程，ABACUS 将会自动调用 n 张 GPU 卡来进行计算，若机器中的 GPU 卡数小于 n，ABACUS 则会调用机器中所有 GPU 卡来进行运算。需要注意的是，ABACUS 的广义特征值求解部分只有 `cusolvermp` 和 `elpa` 支持多卡加速，如果 `ks_solver` 设置成 `cusolver`，无论设置多少个进程，ABACUS 都只会调用一张 GPU 卡来进行广义特征值求解。
+ABACUS 的格点积分模块以及广义特征值求解模块均支持多块 GPU 卡加速，ABACUS 调用的 GPU 数量通过 MPI 进程数来设置。如果设置 n 个进程，ABACUS 将会自动调用 n 张 GPU 卡来进行计算，若机器中的 GPU 卡数小于 n，ABACUS 则会调用机器中所有 GPU 卡来进行运算，不推荐进程数设置成大于 GPU 卡数。需要注意的是，ABACUS 的广义特征值求解部分只有 `cusolvermp` 和 `elpa` 支持多卡加速，如果 `ks_solver` 设置成 `cusolver`，无论设置多少个进程，ABACUS 都只会调用一张 GPU 卡来进行广义特征值求解。
 
 # 四、示例
 
 下面以 `tests/performance/P102_si64_lcao` 的 64 个金刚石结构的硅原子体系为例，展示如何使用 GPU 版 ABACUS 进行 LCAO 基组下的计算。
 
-<strong>环境：</strong>GPU/双 3090, CPU / Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz
+环境：GPU/双 3090, CPU / Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz
 
-<strong>ABACUS 版本号:</strong>3.8.0, commit:72b1d7ce9
+ABACUS 版本号：3.8.0, commit:72b1d7ce9
 
-## 1. <strong>GPU 算例和结果</strong>
+## 1. **GPU 算例和结果**
 
 我们首先调用双 GPU 卡进行格点积分运算，同时使用 cusolver 进行广义特征值求解：修改 `INPUT` 文件，添加一行 `“device gpu”`, 同时将 `ks_solver` 设置为 `cusolver`，运行命令 `“OMP_NUM_THREADS=12 mpirun -n 2 abacus"`, 输出为：
 
@@ -229,7 +229,7 @@ TIME STATISTICS
  SEE INFORMATION IN : OUT.autotest/
 ```
 
-## 2. <strong>CPU 算例和结果</strong>
+## 2. CPU 算例和结果
 
 可以看到 GPU 运行用了 95 秒，接下来我们调用 CPU 进行计算，在 `INPUT` 文件中设置 `device` 为 `cpu`，同时设置 `ks_solver` 为 `scalapack_gvx`，运行命令 `“OMP_NUM_THREADS=12 mpirun -n 2 abacus"`, 输出：
 
@@ -418,4 +418,4 @@ TIME STATISTICS
 
 可以看到 GPU 运行用了 95 秒，而同样体系用 CPU 运行用了 224 秒，GPU 对于该体系有一定的加速效果。
 
-以上就是本教程的内容，希望对学习采用 ABACUS 结合 GPU 进行密度泛函理论计算的读者有所帮助，大家也可以在 bohrium 平台按照<strong>[ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682)</strong>跑一遍实际安装使用流程，有问题可以发邮箱给作者（见开头）。
+以上就是本教程的内容，希望对学习采用 ABACUS 结合 GPU 进行密度泛函理论计算的读者有所帮助，大家也可以在 bohrium 平台按照 [ABACUS LCAO 基组 GPU 版本使用介绍 | Bohrium](https://bohrium.dp.tech/notebooks/29414947682) 跑一遍实际安装使用流程，有问题可以发邮箱给作者（见开头）。

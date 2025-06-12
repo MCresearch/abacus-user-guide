@@ -143,7 +143,7 @@ atom_index : { atom_index_1: { s: [m_0], p: [m_0, m_1] }, atom_index_2: { s: [m_
 
 ## 3.  `index`
 
-- 提取指定原子轨道对应的 PDOS，会在 `PDOS_FILE` 下生成 `index-*.dat` 文件，其中 `*` 代表指定的原子，第一列为横坐标能量范围，第二列到最后一列分别为不同 spin 的 pdos
+- 提取指定原子轨道对应的 PDOS，会在 `PDOS_FILE` 下生成 `index-*.dat` 文件，其中 `*` 代表指定的原子轨道，第一列为横坐标能量范围，第二列到最后一列分别为不同 spin 的 pdos
 
 ```python
 index : {index_1, index_2, index_3, ...}

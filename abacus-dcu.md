@@ -1,4 +1,4 @@
-# ABACUS 在曙光 DCU 集群上的编译与使用
+# ABACUS 在曙光 DCU 集群与 AMD 显卡上的编译与使用
 
 <strong>作者：贾志炜，邮箱：jiazhiwei@stu.pku.edu.cn</strong>
 
@@ -8,7 +8,7 @@
 
 # 一、介绍
 
-本教程旨在介绍 ABACUS 在 [曙光 DCU 计算平台](https://ac.sugon.com/) 上的编译与使用。
+本教程旨在介绍 ABACUS 在 [曙光 DCU 计算平台](https://ac.sugon.com/) 上的编译与使用。在AMD显卡上的编译教程详见 [ABACUS AMD版本编译教程](https://scc.ustc.edu.cn/2025/0502/c398a683078/page.htm?open_in_browser=true)。
 
 ## 1. DCU
 
