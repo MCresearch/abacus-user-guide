@@ -28,11 +28,11 @@
 
 本次测试的 Cu(111) 表面吸附 CO 结构由 ABACUS 智能体建模，我们让智能体首先构建了一个Cu晶胞，然后针对其(111)面进行切面，构造层数为4且进行了(2*2)扩胞，一共有64个原子的 Cu(111)表面，并添加 15 Angstrom 的真空层，最后在切面上放置了一个 CO 分子。结构构建的对话过程如下：
 
-![构建Cu(111)-CO表面吸附体系](agent-Cu111-construct.png)
+![构建Cu(111)-CO表面吸附体系](picture/agent-Cu111-construct.png)
 
 构建完成后，智能体将结构保存为CIF文件，其结构如下图所示：
 
-![目标表面吸附结构可视化](Cu_111_CO_z.png)
+![目标表面吸附结构可视化](picture/Cu_111_CO_z.png)
 
 在后续的智能体操作中，这一结构将被转化为 ABACUS 的`STRU`结构文件。这一结构文件内容如下：
 
@@ -143,9 +143,9 @@ C
 
 通过与智能体对话，我们可以通过旋转晶格矢量，进一步构建不同真空层方向的这一表面体系。这一步骤也可以通过ATOMKIT等工具自行实现，相关对话如下：
 
-![将真空层旋转到Y轴](agent-Cu111-to-Y.png)
+![将真空层旋转到Y轴](picture/agent-Cu111-to-Y.png)
 
-![将真空层旋转到X轴](agent-Cu111-to-X.png)
+![将真空层旋转到X轴](picture/agent-Cu111-to-X.png)
 
 这些表面体系的`LATTICE_VECTORS`是一个 3×3 矩阵，代表我们所计算体系在 X, Y, Z 三个方向上的晶格矢量 a, b, c 大小，它们由 `LATTICE_CONSTANT`（晶格常数）进行缩放，此处晶格常数为 1.889726 Bohr, 即 1 Angstrom。可以参考[https://abacus.deepmodeling.com/en/latest/advanced/input_files/stru.html#lattice-vectors](https://abacus.deepmodeling.com/en/latest/advanced/input_files/stru.html#lattice-vectors)。它们的对比如下：
 
@@ -172,7 +172,7 @@ LATTICE_VECTORS
 
 本次计算的`INPUT`文件和`STRU`文件由ABACUS-Agent基于CIF文件准备，准备方式如下所示：
 
-![准备ABACUS输入文件](agent-abacus-prepare.png)
+![准备ABACUS输入文件](picture/agent-abacus-prepare.png)
 
 从智能体的输出中我们可以提取出所用的INPUT。
 
