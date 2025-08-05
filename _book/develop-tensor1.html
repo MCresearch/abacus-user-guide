@@ -1,0 +1,2197 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Tensor 类文档 1：构造和使用说明 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="develop-tensor2.html" />
+    
+    
+    <link rel="prev" href="develop-test3.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    ABACUS编译教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    算法文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Tensor 类文档 1：构造和使用说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tensor-&#x7C7B;&#x6587;&#x6863;-1&#xFF1A;&#x6784;&#x9020;&#x548C;&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><a name="tensor-&#x7C7B;&#x6587;&#x6863;-1&#xFF1A;&#x6784;&#x9020;&#x548C;&#x4F7F;&#x7528;&#x8BF4;&#x660E;" class="plugin-anchor" href="#tensor-&#x7C7B;&#x6587;&#x6863;-1&#xFF1A;&#x6784;&#x9020;&#x548C;&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>Tensor &#x7C7B;&#x6587;&#x6863; 1&#xFF1A;&#x6784;&#x9020;&#x548C;&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x8DEF;&#x767B;&#x8F89;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;denghuilu@pku.edu.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2025/03/02</strong></p>
+<h1 id="&#x4E00;&#x3001;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;"><a name="&#x4E00;&#x3001;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x80CC;&#x666F;&#x4ECB;&#x7ECD;</h1>
+<p>&#x5728; ABACUS &#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684; <code>Tensor</code> &#x5BB9;&#x5668;&#xFF0C;&#x5176;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x7EDF;&#x4E00;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x5BB9;&#x5668;&#x5E76;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x6784;&#x5EFA;&#x4E00;&#x7CFB;&#x5217;&#x7B97;&#x5B50;&#x4EE5;&#x6267;&#x884C;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x4E00;&#x8BBE;&#x8BA1;&#x7684;&#x5F15;&#x5165;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x8003;&#x8651;&#xFF1A;</p>
+<ul>
+<li><strong>&#x6846;&#x67B6;&#x5C42;&#x9762;&#x7684;&#x8003;&#x8651;&#xFF1A;</strong>&#x5728;&#x5F53;&#x4ECA;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x9886;&#x57DF;&#xFF0C;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x5148;&#x8FDB;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x5982; PyTorch &#x548C; TensorFlow&#xFF0C;&#x90FD;&#x5C06;&#x5F20;&#x91CF;&#x4F5C;&#x4E3A;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x5355;&#x5143;&#x3002;&#x8FD9;&#x4E9B;&#x6846;&#x67B6;&#x7684; <code>Tensor</code> &#x5BF9;&#x8C61;&#x4E0D;&#x4EC5;&#x652F;&#x6301;&#x590D;&#x6742;&#x7684;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#x548C;&#x81EA;&#x52A8;&#x68AF;&#x5EA6;&#x8BA1;&#x7B97;&#xFF0C;&#x8FD8;&#x80FD;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#xFF08;&#x4F8B;&#x5982; CPU &#x548C; GPU&#xFF09;&#x95F4;&#x7075;&#x6D3B;&#x5730;&#x8F6C;&#x79FB;&#x6570;&#x636E;&#x548C;&#x6267;&#x884C;&#x8BA1;&#x7B97;&#x4EFB;&#x52A1;&#x3002;&#x6211;&#x4EEC;&#x7684; <code>Tensor</code> &#x7C7B;&#x501F;&#x9274;&#x4E86;&#x6D41;&#x884C;&#x7684;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#x5982; PyTorch &#x548C; TensorFlow &#x4E2D;&#x7684;&#x5F20;&#x91CF;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x9009;&#x62E9;&#x4F7F;&#x5F97;&#x8BE5;&#x7C7B;&#x4E0D;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x4F20;&#x7EDF;&#x7684;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#xFF0C;&#x4E5F;&#x4FDD;&#x7559;&#x4E86;&#x5C06;&#x6765;&#x96C6;&#x6210;&#x5230;&#x73B0;&#x4EE3;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;&#x672A;&#x6765;&#x5982;&#x6709;&#x9700;&#x8981;&#x4E5F;&#x53EF;&#x5728;&#x8FD9;&#x4E00;&#x6846;&#x67B6;&#x4E0B;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x5F15;&#x5165;&#x81EA;&#x52A8;&#x5FAE;&#x5206;&#x7B97;&#x6CD5;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x5B8C;&#x5584; Tensor &#x5BB9;&#x5668;&#x3002;</li>
+<li><p><strong>&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x7A0B;&#x5E8F;&#x7684;&#x89C6;&#x89D2;&#xFF1A;</strong>&#x5728;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF08;DFT&#xFF09;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x6838;&#x5FC3;&#x6311;&#x6218;&#x5728;&#x4E8E;&#x5904;&#x7406;&#x548C;&#x64CD;&#x4F5C;&#x5927;&#x91CF;&#x7684;&#x6570;&#x503C;&#x6570;&#x636E;&#x3002;<code>Tensor</code> &#x7C7B;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x591A;&#x7EF4;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5728;&#x8FD9;&#x65B9;&#x9762;&#x63D0;&#x4F9B;&#x4E86;&#x5F3A;&#x5927;&#x800C;&#x7075;&#x6D3B;&#x7684;&#x652F;&#x6301;&#x3002;&#x91C7;&#x7528; <code>Tensor</code> &#x6570;&#x636E;&#x7C7B;&#x578B;&#x5E26;&#x6765;&#x4E86;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x663E;&#x8457;&#x4F18;&#x52BF;&#xFF1A;</p>
+<ul>
+<li>&#x7EDF;&#x4E00;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x5BB9;&#x5668;&#xFF1A;&#x901A;&#x8FC7;&#x7EDF;&#x4E00;&#x5E95;&#x5C42;&#x5BB9;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x663E;&#x8457;&#x63D0;&#x5347;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x3002;</li>
+<li>&#x591A;&#x5E73;&#x53F0;&#x8BA1;&#x7B97;&#x652F;&#x6301;&#xFF1A;<code>Tensor</code> &#x7C7B;&#x8BBE;&#x8BA1;&#x652F;&#x6301;&#x591A;&#x79CD;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#xFF0C;&#x5E76;&#x4E14;&#x6613;&#x4E8E;&#x6269;&#x5C55;&#x4EE5;&#x9002;&#x5E94;&#x65B0;&#x7684;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#x3002;</li>
+<li>&#x591A;&#x7CBE;&#x5EA6;&#x8BA1;&#x7B97;&#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF1A;&#x652F;&#x6301;&#x591A;&#x7CBE;&#x5EA6;&#x8BA1;&#x7B97;&#xFF0C;&#x589E;&#x5F3A;&#x4E86;&#x8BA1;&#x7B97;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x548C;&#x9002;&#x5E94;&#x6027;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;<code>Tensor</code> &#x5BB9;&#x5668;&#x5728; ABACUS &#x9879;&#x76EE;&#x4E2D;&#x6709;&#x52A9;&#x4E8E;&#x589E;&#x52A0;&#x8BA1;&#x7B97;&#x7684;&#x6548;&#x7387;&#x548C;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x7A33;&#x5B9A;&#x6027;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;tensor-&#x5BF9;&#x8C61;"><a name="&#x4E8C;&#x3001;tensor-&#x5BF9;&#x8C61;" class="plugin-anchor" href="#&#x4E8C;&#x3001;tensor-&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;Tensor &#x5BF9;&#x8C61;</h1>
+<h2 id="21-&#x4EE3;&#x7801;&#x76EE;&#x5F55;"><a name="21-&#x4EE3;&#x7801;&#x76EE;&#x5F55;" class="plugin-anchor" href="#21-&#x4EE3;&#x7801;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x4EE3;&#x7801;&#x76EE;&#x5F55;</h2>
+<p>&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4F4D;&#x4E8E; deepmodeling &#x4E0B;&#x7684; abacus-develop &#x4ED3;&#x5E93;:</p>
+<p><a href="https://github.com/deepmodeling/abacus-develop/tree/develop/source/module_base/module_container" target="_blank">abacus-develop/source/module_base/module_container at develop &#xB7; deepmodeling/abacus-develop</a></p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>denghui@LuDh-4090:module_base<span class="token punctuation">]</span>$ tree <span class="token parameter variable">-d</span> module_container 
+module_container            <span class="token comment">#&#x4EE3;&#x7801;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F4D;&#x4E8E;module_base&#x76EE;&#x5F55;&#x4E0B;</span>
+&#x251C;&#x2500;&#x2500; ATen                    <span class="token comment">#ATen/Array-Tensor &#x5B58;&#x50A8;&#x4E86;Tensor&#x5BB9;&#x5668;&#x7684;&#x65B9;&#x6CD5;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; core                <span class="token comment">#&#x5B58;&#x50A8;&#x4E86;Tensor&#x5BF9;&#x8C61;&#x7684;&#x6838;&#x5FC3;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;reshape&#xFF0C;tensor_buffer&#x4EE5;&#x53CA;Tensor&#x5BF9;&#x8C61;&#x7684;&#x5B9A;&#x4E49;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; kernels             <span class="token comment">#&#x5B9A;&#x4E49;&#x4E86;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x77E9;&#x9635;&#x4E58;&#x6CD5;gemm/gemv&#x7B49;&#x7B49;</span>
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; cuda            <span class="token comment">#&#x63D0;&#x4F9B;&#x4E86;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x6240;&#x9700;&#x7684;CUDA&#x5B9E;&#x73B0;</span>
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; rocm            <span class="token comment">#&#x63D0;&#x4F9B;&#x4E86;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x6240;&#x9700;&#x7684;ROCM&#x5B9E;&#x73B0;</span>
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; <span class="token builtin class-name">test</span>            <span class="token comment">#&#x9488;&#x5BF9;&#x5B9A;&#x4E49;&#x7684;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; ops                 <span class="token comment">#&#x9488;&#x5BF9;Tensor&#x5BF9;&#x8C61;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7B97;&#x5B50;</span>
+&#x2502;       &#x2514;&#x2500;&#x2500; <span class="token builtin class-name">test</span>            <span class="token comment">#&#x7B97;&#x5B50;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</span>
+&#x251C;&#x2500;&#x2500; base                    <span class="token comment">#Tensor&#x65E0;&#x5173;&#x7684;&#x57FA;&#x7840;&#x51FD;&#x6570;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; core                
+&#x2502;   &#x251C;&#x2500;&#x2500; macros              <span class="token comment">#&#x5E38;&#x7528;&#x7684;&#x5B8F;&#x51FD;&#x6570;&#x58F0;&#x660E;</span>
+&#x2502;   &#x251C;&#x2500;&#x2500; third_party         <span class="token comment">#&#x7B2C;&#x4E09;&#x65B9;&#x8F6F;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;BLAS&#x7B49;&#x7684;&#x58F0;&#x660E;</span>
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; backward-cpp    <span class="token comment">#&#x63D0;&#x4F9B;backtrace&#x7684;&#x5B9E;&#x73B0;</span>
+&#x2502;   &#x2514;&#x2500;&#x2500; utils           
+&#x2514;&#x2500;&#x2500; <span class="token builtin class-name">test</span>                    <span class="token comment">#base&#x6A21;&#x5757;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</span>
+</code></pre>
+<h2 id="22-&#x6982;&#x8FF0;"><a name="22-&#x6982;&#x8FF0;" class="plugin-anchor" href="#22-&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x6982;&#x8FF0;</h2>
+<p><code>Tensor</code> &#x7C7B;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x7C7B;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x5F62;&#x72B6;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x5F20;&#x91CF;&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#x4EE5;&#x53CA;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<h3 id="221-&#x5934;&#x6587;&#x4EF6;&#x5F15;&#x7528;"><a name="221-&#x5934;&#x6587;&#x4EF6;&#x5F15;&#x7528;" class="plugin-anchor" href="#221-&#x5934;&#x6587;&#x4EF6;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 &#x5934;&#x6587;&#x4EF6;&#x5F15;&#x7528;</h3>
+<p>&#x8BE5;&#x7C7B;&#x4F9D;&#x8D56;&#x4EE5;&#x4E0B;&#x5934;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;base/core/allocator.h&gt;</span>         <span class="token comment">// &#x5B58;&#x50A8;&#x7BA1;&#x7406;&#x6A21;&#x5757;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ATen/core/tensor_types.h&gt;</span>      <span class="token comment">// &#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ATen/core/tensor_shape.h&gt;</span>      <span class="token comment">// Tensor&#x7EF4;&#x5EA6;&#x7BA1;&#x7406;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ATen/core/tensor_buffer.h&gt;</span>     <span class="token comment">// &#x7BA1;&#x7406;Tensor&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ATen/core/tensor_accessor.h&gt;</span>   <span class="token comment">// Tensor&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#x51FD;&#x6570;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;ATen/kernels/memory.h&gt;</span>         <span class="token comment">// &#x5185;&#x5B58;&#x64CD;&#x4F5C;&#x51FD;&#x6570;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;base/macros/macros.h&gt;</span>          <span class="token comment">// &#x5B8F;&#x51FD;&#x6570;&#x5B9A;&#x4E49;</span></span>
+</code></pre>
+<h3 id="222-&#x7C7B;&#x5B9A;&#x4E49;"><a name="222-&#x7C7B;&#x5B9A;&#x4E49;" class="plugin-anchor" href="#222-&#x7C7B;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2 &#x7C7B;&#x5B9A;&#x4E49;</h3>
+<p><code>Tensor</code> &#x7C7B;&#x7684;&#x5B9A;&#x4E49;&#x5728; container &#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x4E0D;&#x662F;&#x6A21;&#x677F;&#x7C7B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">namespace</span> container <span class="token punctuation">{</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Tensor</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x6210;&#x5458;&#x53D8;&#x91CF;&#x548C;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="23-&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;"><a name="23-&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;" class="plugin-anchor" href="#23-&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x516C;&#x5171;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F; <code>Tensor</code> &#x7C7B;&#x7684;&#x4E00;&#x4E9B;&#x4E3B;&#x8981;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<h3 id="231-&#x6784;&#x9020;&#x51FD;&#x6570;"><a name="231-&#x6784;&#x9020;&#x51FD;&#x6570;" class="plugin-anchor" href="#231-&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1 &#x6784;&#x9020;&#x51FD;&#x6570;</h3>
+<p><img src="picture/fig_tensor11.png" alt=""></p>
+<ul>
+<li><code>Tensor()</code>&#xFF1A;&#x65E0;&#x53C2;&#x6570;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x7A7A;&#x7684; Tensor &#x5BF9;&#x8C61;&#xFF1B;</li>
+<li><code>Tensor(DataType data_type)</code>&#xFF1A;&#x63A5;&#x53D7;&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x7A7A;&#x7684; Tensor &#x5BF9;&#x8C61;&#xFF1B;</li>
+<li><code>Tensor(DataType data_type, TensorShape shape)</code>&#xFF1A;&#x63A5;&#x53D7;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x5F62;&#x72B6;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x6B64;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E3A; Tensor &#x5BF9;&#x8C61;&#x5206;&#x914D;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x5927;&#x5C0F;&#x548C; shape &#x7684;&#x7EF4;&#x5EA6;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x5B58;&#x50A8;&#x5728; CPU &#x4E0A;&#xFF1B;</li>
+<li><code>Tensor(DataType data_type, DeviceType device, const TensorShape&amp; shape)</code>&#xFF1A;&#x63A5;&#x53D7;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#x53C2;&#x6570;&#x548C;&#x5F62;&#x72B6;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x6B64;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E3A; Tensor &#x5BF9;&#x8C61;&#x5206;&#x914D;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x5927;&#x5C0F;&#x548C; shape &#x7684;&#x7EF4;&#x5EA6;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x5B58;&#x50A8;&#x5728; device&#xFF08;&#x8FD9;&#x91CC;&#x7684; device &#x53EF;&#x4EE5;&#x4E3A; CPU &#x4E5F;&#x53EF;&#x4EE5;&#x4E3A; GPU &#x6216;&#x8005;&#x5176;&#x4ED6;&#x652F;&#x6301;&#x7684;&#x8BBE;&#x5907;&#xFF09;&#x4E0A;&#xFF1B;</li>
+<li>&#x6B64;&#x5916;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;&#x548C;&#x79FB;&#x52A8;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x4E00;&#x4E00;&#x5C55;&#x793A;</li>
+</ul>
+<h3 id="232-&#x6210;&#x5458;&#x65B9;&#x6CD5;"><a name="232-&#x6210;&#x5458;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#232-&#x6210;&#x5458;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.2 &#x6210;&#x5458;&#x65B9;&#x6CD5;</h3>
+<ul>
+<li><code>GetAllocator(DeviceType device)</code>&#xFF1A;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x7C7B;&#x578B;&#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5206;&#x914D;&#x5668;&#xFF1B;</li>
+<li><code>zero()</code>&#xFF1A;&#x5C06;&#x5F20;&#x91CF;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x4E3A; 0&#xFF1B;</li>
+<li><code>reshape(TensorShape shape)</code>&#xFF1A;&#x6539;&#x53D8;&#x5F20;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#xFF1B;</li>
+<li><code>resize(const TensorShape&amp; new_shape)</code>&#xFF1A;&#x8C03;&#x6574;&#x5F20;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#xFF1B;</li>
+<li><code>CopyFrom(const Tensor&amp; other)</code>&#xFF1A;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x590D;&#x5236;&#x6570;&#x636E;&#xFF1B;</li>
+<li><code>CopyFrom(const Tensor&amp; other, const TensorShape&amp; shape)</code>&#xFF1A;&#x8BBE;&#x7F6E;&#x7279;&#x5B9A;&#x7684;&#x5F62;&#x72B6;&#xFF0C;&#x5E76;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x590D;&#x5236;&#x6570;&#x636E;&#xFF1B;</li>
+<li><code>AllocateFrom(const Tensor&amp; other, const TensorShape&amp; shape)</code>&#xFF1A;&#x6839;&#x636E;&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x548C;&#x7ED9;&#x5B9A;&#x5F62;&#x72B6;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF1B;</li>
+<li><code>sync(const Tensor&amp; rhs)</code>&#xFF1A;&#x540C;&#x6B65;&#x4E24;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x6570;&#x636E;&#xFF1B;</li>
+<li><code>template <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typename</span> <span class="token attr-name">T</span><span class="token punctuation">&gt;</span></span> T* data() const</code>&#xFF1A;&#x76F4;&#x63A5;&#x8BBF;&#x95EE; Tensor &#x6570;&#x636E;&#x7684;&#x6307;&#x9488;&#x63A5;&#x53E3;&#xFF1B;</li>
+<li>&#x6B64;&#x5916;&#x4E5F;&#x91CD;&#x8F7D;&#x4E86;&#x8F93;&#x51FA;&#x8FD0;&#x7B97;&#x7B26; <code>&lt;&lt;</code>&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; cout &#x8F93;&#x51FA;&#x3002;</li>
+</ul>
+<h2 id="24-&#x793A;&#x4F8B;&#x7528;&#x6CD5;"><a name="24-&#x793A;&#x4F8B;&#x7528;&#x6CD5;" class="plugin-anchor" href="#24-&#x793A;&#x4F8B;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x793A;&#x4F8B;&#x7528;&#x6CD5;</h2>
+<p>&#x4EE5;&#x4E0B;&#x662F; Tensor &#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF0C;&#x53EF;&#x4F9B;&#x53C2;&#x8003;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token function">TEST</span><span class="token punctuation">(</span>Tensor<span class="token punctuation">,</span> Constructor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Test constructor with default allocator</span>
+    container<span class="token double-colon punctuation">::</span>Tensor <span class="token function">t1</span><span class="token punctuation">(</span>container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_FLOAT<span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span><span class="token function">TensorShape</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t1<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_FLOAT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t1<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>CpuDevice<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// EXPECT_EQ(t1.shape().dims(), std::vector&lt;int64_t&gt;({2, 3}));</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t1<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression">__CUDA <span class="token operator">||</span> __ROCM</span></span>
+    <span class="token comment">// Test constructor with specified device type</span>
+    container<span class="token double-colon punctuation">::</span>Tensor <span class="token function">t2</span><span class="token punctuation">(</span>container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_DOUBLE<span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>GpuDevice<span class="token punctuation">,</span>
+                         container<span class="token double-colon punctuation">::</span><span class="token function">TensorShape</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t2<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_DOUBLE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t2<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>GpuDevice<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t2<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dims</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">vector</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int64_t</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t2<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+    <span class="token comment">// Test copy constructor</span>
+    container<span class="token double-colon punctuation">::</span>Tensor t3 <span class="token operator">=</span> t1<span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t3<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_FLOAT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t3<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>CpuDevice<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// EXPECT_EQ(t3.shape().dims(), std::vector&lt;int64_t&gt;({2, 3}));</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t3<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_NE</span><span class="token punctuation">(</span>t3<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Test reference constructor</span>
+    std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">&gt;</span> vec<span class="token punctuation">{</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    container<span class="token double-colon punctuation">::</span>TensorMap <span class="token function">t4</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>vec<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_FLOAT<span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>CpuDevice<span class="token punctuation">,</span>
+                            container<span class="token double-colon punctuation">::</span><span class="token function">TensorShape</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t4<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DataType<span class="token double-colon punctuation">::</span>DT_FLOAT<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t4<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> container<span class="token double-colon punctuation">::</span>DeviceType<span class="token double-colon punctuation">::</span>CpuDevice<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// EXPECT_EQ(t4.shape().dims(), std::vector&lt;int64_t&gt;({1, 3}));</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t4<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">EXPECT_EQ</span><span class="token punctuation">(</span>t4<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vec<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709; Tensor &#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x4F7F;&#x7528;&#x53C2;&#x8003;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x67E5;&#x770B;&#xFF1A;<a href="https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_base/module_container/test/tensor_test.cpp" target="_blank">abacus-develop/source/module_base/module_container/test/tensor_test.cpp at develop &#xB7; deepmodeling/abacus-develop</a> .</p>
+<h2 id="25-&#x5176;&#x4ED6;&#x5F85;&#x529E;&#x4E8B;&#x9879;&#x548C;&#x5907;&#x6CE8;"><a name="25-&#x5176;&#x4ED6;&#x5F85;&#x529E;&#x4E8B;&#x9879;&#x548C;&#x5907;&#x6CE8;" class="plugin-anchor" href="#25-&#x5176;&#x4ED6;&#x5F85;&#x529E;&#x4E8B;&#x9879;&#x548C;&#x5907;&#x6CE8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 &#x5176;&#x4ED6;&#x5F85;&#x529E;&#x4E8B;&#x9879;&#x548C;&#x5907;&#x6CE8;</h2>
+<ul>
+<li>&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x7CFB;&#x7EDF;&#xFF1B;</li>
+<li>&#x6DFB;&#x52A0;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#xFF1B;</li>
+<li>&#x91CD;&#x6784; CMake &#x7CFB;&#x7EDF;&#xFF0C;&#x4F7F;&#x5F97; Tensor &#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x7F16;&#x8BD1;&#x3002;</li>
+</ul>
+<h1 id="&#x4E09;&#x3001;&#x7B97;&#x5B50;&#xFF08;op&#xFF09;&#x7684;&#x6784;&#x5EFA;&#x548C;&#x4F7F;&#x7528;"><a name="&#x4E09;&#x3001;&#x7B97;&#x5B50;&#xFF08;op&#xFF09;&#x7684;&#x6784;&#x5EFA;&#x548C;&#x4F7F;&#x7528;" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x7B97;&#x5B50;&#xFF08;op&#xFF09;&#x7684;&#x6784;&#x5EFA;&#x548C;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x7B97;&#x5B50;&#xFF08;OP&#xFF09;&#x7684;&#x6784;&#x5EFA;&#x548C;&#x4F7F;&#x7528;</h1>
+<p>&#x6709;&#x4E86; Tensor &#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x4F55;&#x57FA;&#x4E8E; Tensor &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x5462;&#xFF1F;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5F15;&#x5165;&#x7B97;&#x5B50;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<h2 id="31-&#x7B97;&#x5B50;&#x7684;&#x58F0;&#x660E;"><a name="31-&#x7B97;&#x5B50;&#x7684;&#x58F0;&#x660E;" class="plugin-anchor" href="#31-&#x7B97;&#x5B50;&#x7684;&#x58F0;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x7B97;&#x5B50;&#x7684;&#x58F0;&#x660E;</h2>
+<p>&#x4EE5;&#x52A0;&#x6CD5;&#x64CD;&#x4F5C;&#x4E3E;&#x4F8B;&#xFF0C;&#x5176;&#x58F0;&#x660E;&#x5B9A;&#x4E49;&#x5728;&#x6587;&#x4EF6; <a href="https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_base/module_container/ATen/ops/linalg_op.h" target="_blank">linalg_op.h</a> &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;&#x5176;&#x4E2D;&#x7684; add_op &#x4E3E;&#x4F8B;&#xFF0C;&#x5176;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/**
+ * @brief A functor to perform add operation on a Tensor.
+ *
+ * This functor adds two Tensors element-wise, resulting in a new Tensor with the same
+ * shape as the input Tensors.
+ */</span>
+<span class="token keyword">struct</span> <span class="token class-name">add_op</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * @brief Perform add operation on the input Tensors.
+     *
+     * This function adds two Tensors element-wise, resulting in a new Tensor with the same
+     * shape as the input Tensors.
+     *
+     * @param x The first input Tensor.
+     * @param y The second input Tensor.
+     * @param z The output Tensor that will hold the result of the add operation.
+     *          It must have the same shape as the input Tensors.
+     */</span>
+    <span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+        <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> x<span class="token punctuation">,</span>
+        <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> y<span class="token punctuation">,</span>
+        Tensor<span class="token operator">&amp;</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+    <span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+        <span class="token keyword">const</span> T<span class="token operator">&amp;</span> alpha<span class="token punctuation">,</span>
+        <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> x<span class="token punctuation">,</span>
+        <span class="token keyword">const</span> T<span class="token operator">&amp;</span> beta<span class="token punctuation">,</span>
+        <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> y<span class="token punctuation">,</span>
+        Tensor<span class="token operator">&amp;</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53; <code>add_op</code> &#x7684;&#x58F0;&#x660E;&#x4E2D;&#x91CD;&#x8F7D;&#x4E86;&#x62EC;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4E00;&#x5171;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x52A0;&#x6CD5;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// z = x + y</span>
+<span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+    <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> x<span class="token punctuation">,</span>
+    <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> y<span class="token punctuation">,</span>
+    Tensor<span class="token operator">&amp;</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// z = alpha * x + beta * y</span>
+<span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+<span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+    <span class="token keyword">const</span> T<span class="token operator">&amp;</span> alpha<span class="token punctuation">,</span>
+    <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> x<span class="token punctuation">,</span>
+    <span class="token keyword">const</span> T<span class="token operator">&amp;</span> beta<span class="token punctuation">,</span>
+    <span class="token keyword">const</span> Tensor<span class="token operator">&amp;</span> y<span class="token punctuation">,</span>
+    Tensor<span class="token operator">&amp;</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="32-&#x7B97;&#x5B50;&#x7684;&#x5B9E;&#x73B0;"><a name="32-&#x7B97;&#x5B50;&#x7684;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#32-&#x7B97;&#x5B50;&#x7684;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x7B97;&#x5B50;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>&#x5BF9;&#x5E94;&#x7684; add_op &#x7684;&#x5B9E;&#x73B0;&#x4F4D;&#x4E8E; <a href="https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_base/module_container/ATen/ops/linalg_op.cpp" target="_blank">linalg_op.cpp</a> &#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">void</span> add_op<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> Tensor <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token keyword">const</span> Tensor <span class="token operator">&amp;</span>y<span class="token punctuation">,</span> Tensor <span class="token operator">&amp;</span>z<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// check the shape</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the shape of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the data type of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the device type of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment">// allocate memory for the result</span>
+    <span class="token function">TEMPLATE_ALL_LAMBDA_2</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        T_ alpha <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        T_ beta  <span class="token operator">=</span> <span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        kernels<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">add</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token punctuation">,</span> DEVICE_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+            x<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> alpha<span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> beta<span class="token punctuation">,</span> y<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> z<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+<span class="token keyword">void</span> add_op<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">const</span> T<span class="token operator">&amp;</span> alpha<span class="token punctuation">,</span> <span class="token keyword">const</span> Tensor <span class="token operator">&amp;</span>x<span class="token punctuation">,</span> <span class="token keyword">const</span> T<span class="token operator">&amp;</span> beta<span class="token punctuation">,</span> <span class="token keyword">const</span> Tensor <span class="token operator">&amp;</span>y<span class="token punctuation">,</span> Tensor <span class="token operator">&amp;</span>z<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// check the shape</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the shape of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the data type of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token function">REQUIRES_OK</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> z<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;add: the device type of the two input Tensors must be the same&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment">// allocate memory for the result</span>
+    <span class="token function">TEMPLATE_ALL_LAMBDA_2</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">data_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token function">device_type</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        kernels<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">add</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> DEVICE_<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+            x<span class="token punctuation">.</span><span class="token function">NumElements</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> alpha<span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> beta<span class="token punctuation">,</span> y<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> z<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x9488;&#x5BF9; add_op &#x7684;&#x4E24;&#x4E2A;&#x8FD0;&#x7B97;&#x51FD;&#x6570;&#x5206;&#x522B;&#x7ED9;&#x51FA;&#x5B9E;&#x73B0;&#xFF1A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5176;&#x5B9E;&#x73B0;&#x8FDB;&#x4E00;&#x6B65;&#x4F9D;&#x8D56;&#x4E8E;&#x5916;&#x90E8;&#x7684; kernels:add &#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x8BE5;&#x7ED3;&#x6784;&#x4F53;&#x4E3A;&#x6A21;&#x677F;&#x7C7B;&#xFF0C;TEMPLATE_ALL_LAMBDA_2 &#x5B8F;&#x51FD;&#x6570;&#x662F;&#x4E8B;&#x5148;&#x5C01;&#x88C5;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B83;&#x5F97;&#x5230;&#x6B64;&#x65F6;&#x5E94;&#x5F53;&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5173;&#x4E8E; kernels::add &#x7684;&#x58F0;&#x660E;&#x548C;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x5728; container/ATen/kernels &#x76EE;&#x5F55;&#x4E0B;&#x7684; <a href="https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_base/module_container/ATen/kernels/linalg.h" target="_blank">linalg.h</a> &#x4EE5;&#x53CA; <a href="https://github.com/deepmodeling/abacus-develop/blob/develop/source/module_base/module_container/ATen/kernels/linalg.cpp" target="_blank">linalg.cpp</a> &#x4E2D;&#x627E;&#x5230;&#x3002;kernels &#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="https://mcresearch.github.io/abacus-user-guide/develop-rule.html" target="_blank">ABACUS &#x4EE3;&#x7801;&#x5B58;&#x653E;&#x89C4;&#x8303; &#xB7; GitBook</a> &#x6587;&#x6863;&#x3002;</p>
+<h2 id="33-&#x7B97;&#x5B50;&#x7684;&#x4F7F;&#x7528;"><a name="33-&#x7B97;&#x5B50;&#x7684;&#x4F7F;&#x7528;" class="plugin-anchor" href="#33-&#x7B97;&#x5B50;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x7B97;&#x5B50;&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x7B97;&#x5B50;&#x7684;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5BF9;&#x5E94;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF1A;<a href="https://github.com/deepmodeling/abacus-develop/tree/develop/source/module_base/module_container/ATen/ops/test" target="_blank">linalg_op_test.cpp</a>&#x3002;</p>
+<p>&#x540C;&#x65F6;&#x4EE5;&#x91CD;&#x6784;&#x540E;&#x7684; CG &#x65B9;&#x6CD5;&#x4E2D;&#x7684; orthogonal_gradient &#x51FD;&#x6570;&#x4E3E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5176;&#x524D;&#x540E;&#x5BF9;&#x6BD4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token keyword">typename</span> <span class="token class-name">Device</span><span class="token operator">&gt;</span>
+<span class="token keyword">void</span> <span class="token class-name">DiagoCG</span><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span><span class="token function">orthogonal_gradient</span><span class="token punctuation">(</span>hamilt<span class="token double-colon punctuation">::</span>Hamilt<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span> <span class="token operator">*</span>phm_in<span class="token punctuation">,</span> <span class="token keyword">const</span> psi<span class="token double-colon punctuation">::</span>Psi<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span> <span class="token operator">&amp;</span>eigenfunction<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">int</span> m<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>test_cg <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ModuleBase</span><span class="token double-colon punctuation">::</span><span class="token function">TITLE</span><span class="token punctuation">(</span><span class="token string">&quot;DiagoCG&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;orthogonal_gradient&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// ModuleBase::timer::tick(&quot;DiagoCG&quot;,&quot;orth_grad&quot;);</span>
+
+    phm_in<span class="token operator">-&gt;</span><span class="token function">sPsi</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>gradient<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>scg<span class="token punctuation">,</span> <span class="token punctuation">(</span>size_t<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>dim<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// int inc = 1;</span>
+    <span class="token comment">//&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+    <span class="token comment">// haozhihan replace 2022-10-07</span>
+    <span class="token generic-function"><span class="token function">gemv_op</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>ctx<span class="token punctuation">,</span>
+        <span class="token char">&apos;C&apos;</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dim<span class="token punctuation">,</span>
+        m<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>one<span class="token punctuation">,</span>
+        eigenfunction<span class="token punctuation">.</span><span class="token function">get_pointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dmx<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>scg<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>zero<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>lagrange<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Parallel_Reduce</span><span class="token double-colon punctuation">::</span><span class="token function">reduce_pool</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-&gt;</span>lagrange<span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// (3) orthogonal |g&gt; and |scg&gt; to all states (0~m-1)</span>
+    <span class="token comment">//&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+    <span class="token comment">// haozhihan replace 2022-10-07</span>
+    <span class="token generic-function"><span class="token function">gemv_op</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>ctx<span class="token punctuation">,</span>
+        <span class="token char">&apos;N&apos;</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dim<span class="token punctuation">,</span>
+        m<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>neg_one<span class="token punctuation">,</span>
+        eigenfunction<span class="token punctuation">.</span><span class="token function">get_pointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dmx<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>lagrange<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>one<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>gradient<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token generic-function"><span class="token function">gemv_op</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>ctx<span class="token punctuation">,</span>
+        <span class="token char">&apos;N&apos;</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dim<span class="token punctuation">,</span>
+        m<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>neg_one<span class="token punctuation">,</span>
+        eigenfunction<span class="token punctuation">.</span><span class="token function">get_pointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>dmx<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>lagrange<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>one<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>scg<span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token keyword">typename</span> <span class="token class-name">Device</span><span class="token operator">&gt;</span>
+<span class="token keyword">void</span> <span class="token class-name">DiagoCG_New</span><span class="token operator">&lt;</span>T<span class="token punctuation">,</span> Device<span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span><span class="token function">orth_grad</span><span class="token punctuation">(</span>
+    <span class="token keyword">const</span> ct<span class="token double-colon punctuation">::</span>Tensor<span class="token operator">&amp;</span> psi<span class="token punctuation">,</span> 
+    <span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> m<span class="token punctuation">,</span> 
+    ct<span class="token double-colon punctuation">::</span>Tensor<span class="token operator">&amp;</span> grad<span class="token punctuation">,</span> 
+    ct<span class="token double-colon punctuation">::</span>Tensor<span class="token operator">&amp;</span> scg<span class="token punctuation">,</span>
+    ct<span class="token double-colon punctuation">::</span>Tensor<span class="token operator">&amp;</span> lagrange<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">spsi_func_</span><span class="token punctuation">(</span>grad<span class="token punctuation">,</span> scg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// scg = S|grad&gt;</span>
+    ct<span class="token double-colon punctuation">::</span>EinsumOption <span class="token function">option</span><span class="token punctuation">(</span>
+        <span class="token comment">/*conj_x=*/</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">/*conj_y=*/</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">/*alpha=*/</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token comment">/*beta=*/</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token comment">/*Tensor out=*/</span><span class="token operator">&amp;</span>lagrange<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    lagrange <span class="token operator">=</span> ct<span class="token double-colon punctuation">::</span>op<span class="token double-colon punctuation">::</span><span class="token function">einsum</span><span class="token punctuation">(</span><span class="token string">&quot;ij,i-&gt;j&quot;</span><span class="token punctuation">,</span> psi<span class="token punctuation">,</span> scg<span class="token punctuation">,</span> option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// TODO: add Tensor operators for communications</span>
+    <span class="token class-name">Parallel_Reduce</span><span class="token double-colon punctuation">::</span><span class="token function">reduce_pool</span><span class="token punctuation">(</span>lagrange<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">data</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// (3) orthogonal |g&gt; and |scg&gt; to all states (0~m-1)</span>
+    option <span class="token operator">=</span> ct<span class="token double-colon punctuation">::</span><span class="token function">EinsumOption</span><span class="token punctuation">(</span>
+        <span class="token comment">/*conj_x=*/</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">/*conj_y=*/</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">/*alpha=*/</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token comment">/*beta=*/</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token comment">/*Tensor out=*/</span><span class="token operator">&amp;</span>grad<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    grad <span class="token operator">=</span> ct<span class="token double-colon punctuation">::</span>op<span class="token double-colon punctuation">::</span><span class="token function">einsum</span><span class="token punctuation">(</span><span class="token string">&quot;ij,j-&gt;i&quot;</span><span class="token punctuation">,</span> psi<span class="token punctuation">,</span> lagrange<span class="token punctuation">,</span> option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    option <span class="token operator">=</span> ct<span class="token double-colon punctuation">::</span><span class="token function">EinsumOption</span><span class="token punctuation">(</span>
+        <span class="token comment">/*conj_x=*/</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">/*conj_y=*/</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">/*alpha=*/</span><span class="token operator">-</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token comment">/*beta=*/</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token comment">/*Tensor out=*/</span><span class="token operator">&amp;</span>scg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    scg <span class="token operator">=</span> ct<span class="token double-colon punctuation">::</span>op<span class="token double-colon punctuation">::</span><span class="token function">einsum</span><span class="token punctuation">(</span><span class="token string">&quot;ij,j-&gt;i&quot;</span><span class="token punctuation">,</span> psi<span class="token punctuation">,</span> lagrange<span class="token punctuation">,</span> option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="&#x56DB;&#x3001;&#x603B;&#x7ED3;"><a name="&#x56DB;&#x3001;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x56DB;&#x3001;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x603B;&#x7ED3;</h1>
+<p>&#x603B;&#x7ED3; Tensor &#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x5165;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li><p>&#x7EDF;&#x4E00;&#x5E95;&#x5C42;&#x5BB9;&#x5668;&#xFF1A;</p>
+<ul>
+<li>Tensor &#x5BF9;&#x8C61;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x53EF;&#x4EE5;&#x4F20;&#x9012; DataType &#x4EE5;&#x53CA; DeviceType &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x8BE5;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x7CBE;&#x5EA6;&#xFF08;&#x4F8B;&#x5982; int,float,double,complex<float>&#x4EE5;&#x53CA; complex<double>&#x7B49;&#x7B49;&#xFF09;&#x548C;&#x8BBE;&#x5907;&#xFF08;DEVICE_CPU &#x4EE5;&#x53CA; DEVICE_GPU&#xFF09;&#x7B49;&#x7B49;&#x3002;&#x8FD9;&#x786E;&#x4FDD;&#x4E86; Tensor &#x5BF9;&#x8C61;&#x5BF9;&#x4E8E;&#x5E7F;&#x6CDB;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#x63D0;&#x4F9B;&#x4E86;&#x652F;&#x6301;&#xFF0C;&#x80FD;&#x591F;&#x9002;&#x5E94;&#x4E8E; ABACUS &#x7684;&#x5E95;&#x5C42;&#x5BB9;&#x5668;&#x9700;&#x6C42;&#xFF1B;</double></float></li>
+<li>Tensor &#x5BF9;&#x8C61;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x5BF9;&#x4E8E;&#x88F8;&#x6307;&#x9488;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5305;&#x62EC;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#xFF0C;&#x5185;&#x5B58;&#x5206;&#x914D;&#x7B49;&#x7B49;&#x73B0;&#x5728;&#x90FD;&#x57FA;&#x4E8E;&#x89C4;&#x8303;&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x6709;&#x5229;&#x4E8E;&#x4EE3;&#x7801;&#x7EF4;&#x62A4;</li>
+</ul>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x7B97;&#x5B50;&#xFF08;op&#xFF09;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x652F;&#x6301;&#x5F02;&#x6784;&#x8BA1;&#x7B97;&#xFF1A;</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x7B97;&#x5B50;&#xFF08;op&#xFF09;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5C06;&#x57FA;&#x4E8E; Tensor &#x7684;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x4ECE;&#x4E3B;&#x5206;&#x652F;&#x5206;&#x79BB;&#x51FA;&#x53BB;&#xFF0C;&#x4E3B;&#x5206;&#x652F;&#x4EE3;&#x7801;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7CBE;&#x5EA6;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#x7684;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x4FDD;&#x7559;&#x4E86;&#x540E;&#x7EED;&#x6269;&#x5C55;&#x7684;&#x53EF;&#x80FD;&#x6027;</p>
+<ul>
+<li>&#x53C2;&#x7167; Torch &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x5728;&#x73B0;&#x6709;&#x7684;&#x67B6;&#x6784;&#x57FA;&#x7840;&#x4E0A;&#x5F15;&#x51FA;&#x5305;&#x62EC;&#x81EA;&#x52A8;&#x5FAE;&#x5206;&#x7B49;&#x7B49;&#x6846;&#x67B6;&#x7684;&#x652F;&#x6301;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2025-07-11 15:17:43
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-test3.html" class="navigation navigation-prev " aria-label="Previous page: ABACUS 中的测试（三）：测试方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="develop-tensor2.html" class="navigation navigation-next " aria-label="Next page: Tensor 类文档 2：使用和拓展">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tensor 类文档 1：构造和使用说明","level":"1.4.3.4","depth":3,"next":{"title":"Tensor 类文档 2：使用和拓展","level":"1.4.3.5","depth":3,"path":"develop-tensor2.md","ref":"develop-tensor2.md","articles":[]},"previous":{"title":"ABACUS 中的测试（三）：测试方法","level":"1.4.3.3","depth":3,"path":"develop-test3.md","ref":"develop-test3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.4.1","level":"1.2.2.4","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.4.1"},{"backlink":"abacus-upf.html#fig1.2.2.4.2","level":"1.2.2.4","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.4.2"},{"backlink":"abacus-upf.html#fig1.2.2.4.3","level":"1.2.2.4","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.4.3"},{"backlink":"abacus-upf.html#fig1.2.2.4.4","level":"1.2.2.4","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.4.4"},{"backlink":"abacus-upf.html#fig1.2.2.4.5","level":"1.2.2.4","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.4.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-path4.html#fig1.4.5.4.1","level":"1.4.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":38,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.4.5.4.1"},{"backlink":"develop-path4.html#fig1.4.5.4.2","level":"1.4.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":39,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.4.5.4.2"},{"backlink":"develop-path5.html#fig1.4.5.5.1","level":"1.4.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":40,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.4.5.5.1"},{"backlink":"develop-path5.html#fig1.4.5.5.2","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":41,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.4.5.5.2"},{"backlink":"develop-path5.html#fig1.4.5.5.3","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":42,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.4.5.5.3"},{"backlink":"develop-path5.html#fig1.4.5.5.4","level":"1.4.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":43,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.4"},{"backlink":"develop-path5.html#fig1.4.5.5.5","level":"1.4.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":44,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.5"},{"backlink":"develop-path6.html#fig1.4.5.7.1","level":"1.4.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":45,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.4.5.7.1"},{"backlink":"develop-path10.html#fig1.4.5.11.1","level":"1.4.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":46,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.4.5.11.1"},{"backlink":"develop-path10.html#fig1.4.5.11.2","level":"1.4.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":47,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.4.5.11.2"},{"backlink":"develop-path10.html#fig1.4.5.11.3","level":"1.4.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":48,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.4.5.11.3"},{"backlink":"develop-path10.html#fig1.4.5.11.4","level":"1.4.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":49,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.4.5.11.4"},{"backlink":"develop-path10.html#fig1.4.5.11.5","level":"1.4.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":50,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.4.5.11.5"},{"backlink":"develop-path11.html#fig1.4.5.12.1","level":"1.4.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":51,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.4.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":52,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.5.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-tensor1.md","mtime":"2025-07-11T07:17:43.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-08-05T02:23:01.216Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

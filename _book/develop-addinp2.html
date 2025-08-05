@@ -1,0 +1,2188 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何在 ABACUS 中新增一个输入参数（v3.7.0 后） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="develop-hetero.html" />
+    
+    
+    <link rel="prev" href="develop-addinp.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    ABACUS编译教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    算法文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >如何在 ABACUS 中新增一个输入参数（v3.7.0 后）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5982;&#x4F55;&#x5728;-abacus-&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF08;v370-&#x540E;&#xFF09;"><a name="&#x5982;&#x4F55;&#x5728;-abacus-&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF08;v370-&#x540E;&#xFF09;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x5728;-abacus-&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF08;v370-&#x540E;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x5728; ABACUS &#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF08;v3.7.0 &#x540E;&#xFF09;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x5218;&#x5343;&#x9510;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;terry_liu@pku.edu.cn</strong></p>
+<p><strong>&#x5355;&#x4F4D;&#xFF1A;&#x5317;&#x4EAC;&#x5927;&#x5B66;</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2024/7/10</strong></p>
+<p><strong>&#x5982;&#x679C;&#x9047;&#x5230;&#x672C;&#x6587;&#x6863;&#x65E0;&#x6CD5;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6B22;&#x8FCE;&#x7ED9; ABACUS &#x63D0;&#x51FA; Issues&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x8FD9;&#x4E2A;&#x6587;&#x6863;</strong></p>
+<h1 id="&#x5F00;&#x53D1;&#x8005;&#x987B;&#x77E5;"><a name="&#x5F00;&#x53D1;&#x8005;&#x987B;&#x77E5;" class="plugin-anchor" href="#&#x5F00;&#x53D1;&#x8005;&#x987B;&#x77E5;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x5F00;&#x53D1;&#x8005;&#x987B;&#x77E5;</strong></h1>
+<h2 id="11-&#x58F0;&#x660E;&#x53C2;&#x6570;&#x5E76;&#x7ED9;&#x51FA;&#x521D;&#x59CB;&#x503C;"><a name="11-&#x58F0;&#x660E;&#x53C2;&#x6570;&#x5E76;&#x7ED9;&#x51FA;&#x521D;&#x59CB;&#x503C;" class="plugin-anchor" href="#11-&#x58F0;&#x660E;&#x53C2;&#x6570;&#x5E76;&#x7ED9;&#x51FA;&#x521D;&#x59CB;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x58F0;&#x660E;&#x53C2;&#x6570;&#x5E76;&#x7ED9;&#x51FA;&#x521D;&#x59CB;&#x503C;</h2>
+<p>&#x8DEF;&#x5F84; <u>module_parameter/input_parameter.h</u></p>
+<p>&#x9996;&#x5148;&#x73B0;&#x5728;<u>input_parameter.h</u>&#x4E2D;&#x6DFB;&#x52A0;&#x76F8;&#x5173;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x5982; <code>nelec_delta</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">bool</span> init_vel <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>          <span class="token comment">///&lt; read velocity from STRU or not  liuyu 2021-07-14</span>
+<span class="token keyword">double</span> symmetry_prec <span class="token operator">=</span> <span class="token number">1.0e-6</span><span class="token punctuation">;</span>  <span class="token comment">///&lt; LiuXh add 2021-08-12, accuracy for symmetry</span>
+<span class="token keyword">bool</span> symmetry_autoclose <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">///&lt; whether to close symmetry automatically</span>
+                                <span class="token comment">///&lt; when error occurs in symmetry analysis</span>
+<span class="token keyword">double</span> nelec <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>             <span class="token comment">///&lt; total number of electrons</span>
+<span class="token keyword">double</span> nelec_delta <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>       <span class="token comment">///&lt; change in the number of total electrons</span>
+</code></pre>
+<p>&#x5728;&#x58F0;&#x660E;&#x7684;&#x540C;&#x65F6;&#x7ED9;&#x51FA;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982; nelec &#x9ED8;&#x8BA4;&#x4E3A; 0.0&#x3002;</p>
+<p><u>&#x6CE8;&#xFF1A;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x7C7B;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684; double, int, bool &#x7B49;&#x4E00;&#x822C;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5B9A;&#x4E49;&#x65F6;&#x5C31;&#x5EFA;&#x8BAE;&#x7ED9;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x3002;&#x5982;&#x679C;&#x7C7B;&#x6210;&#x5458;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x96BE;&#x4EE5;&#x5BDF;&#x89C9;&#x7684; bug</u></p>
+<p><u>&#x6CE8;&#xFF1A;string&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x503C;&#x4E0D;&#x80FD;&#x4E3A;&quot;&quot;, &#x5982;&#x679C;&#x60F3;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x503C;&#x4E3A;&quot;auto&quot;, &quot;none&quot;&#x7B49;&#x3002;</u></p>
+<h2 id="12-&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;"><a name="12-&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;" class="plugin-anchor" href="#12-&#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x5728;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;</h2>
+<p>&#x8DEF;&#x5F84; <u>module_io/read_input_item_*.cpp </u>&#xFF08;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x5206;&#x597D;&#x4E86;&#x7C7B;&#xFF0C;&#x5176;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x5230;&#x5C5E;&#x4E8E;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF09;&#xFF0C;&#x5982; nelec &#x5C31;&#x5728;<u>read_input_item_general.cpp</u>&#x4E2D;</p>
+<p>&#x6DFB;&#x52A0; nelec &#x53C2;&#x6570;&#x7684; item</p>
+<pre class="language-"><code class="lang-cpp">Input_Item <span class="token function">item</span><span class="token punctuation">(</span><span class="token string">&quot;nelec&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E4B;&#x540E;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#xFF1A;<strong>&#xFF08;*&#x4E3A;&#x5FC5;&#x586B;&#xFF09;</strong></p>
+<p>&#x6CE8;&#x91CA;&#xFF08;<strong>annotation*</strong>&#xFF09;&#xFF1A;&#x8BE5;&#x6CE8;&#x91CA;&#x4F1A;&#x88AB;&#x6253;&#x5370;&#x5728; OUT.*&#x6587;&#x4EF6;&#x5939;&#x7684; INPUT &#x4E2D;</p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>annotation <span class="token operator">=</span> <span class="token string">&quot;input number of electrons&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8BFB;&#x5165;&#x51FD;&#x6570;&#xFF08;<strong>read_value*</strong>&#xFF09;&#xFF1A;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x8BFB;&#x5165;&#x7684; vector<string> str_value &#x8F6C;&#x5316;&#x6210;&#x60F3;&#x8981;&#x7684; parameter &#x53C2;&#x6570;&#xFF0C;<u>&#x8BE5;&#x51FD;&#x6570;&#x53EA;&#x6709;&#x5728; INPUT &#x6709;&#x76F8;&#x5E94;&#x53C2;&#x6570;&#x7684;&#x540D;&#x5B57;&#x65F6;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x3002;</u></string></p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>read_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>str_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x51FD;&#x6570;&#xFF08;<strong>reset_value</strong>&#xFF09;&#xFF1A;&#x5982;&#x679C;&#x5176;&#x4ED6;&#x67D0;&#x4E9B;&#x53C2;&#x6570;&#x6EE1;&#x8DB3;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x662F;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5F53;&#x524D;&#x53C2;&#x6570;&#xFF08;nelec&#xFF09;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E00;&#x5B9A;&#x4F1A;&#x6267;&#x884C;&#x3002;<u>&#x4E66;&#x5199;&#x89C4;&#x8303;&#x8981;&#x6C42;&#xFF1A;&#x53EA;&#x628A;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x90E8;&#x5206;&#x5B9A;&#x4E49;&#x5728;&#x5F53;&#x524D;&#x53C2;&#x6570;&#x7684; reset_value&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF0C;&#x8BF7;&#x5B9A;&#x4E49;&#x5728;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x7684; reset_value &#x3002;</u></p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>reset_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>somecondition<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x68C0;&#x9A8C;&#x51FD;&#x6570;&#xFF08;<strong>check_value</strong>&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x76EE;&#x524D;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x9002;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5408;&#x9002;&#x5C31;&#x62A5;&#x9519;&#x9000;&#x51FA;&#xFF08;warning_quit&#xFF09;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E00;&#x5B9A;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>check_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token class-name">ModuleBase</span><span class="token double-colon punctuation">::</span><span class="token function">WARNING_QUIT</span><span class="token punctuation">(</span><span class="token string">&quot;ReadInput&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;nelec should be no less than 0.0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x83B7;&#x53D6;&#x6700;&#x7EC8;&#x6253;&#x5370;&#x503C;&#x51FD;&#x6570;&#xFF08;<strong>get_final_value*</strong>&#xFF09;&#xFF1A;&#x7528;&#x4E8E;&#x7ED9; stringstream final_value &#x8D4B;&#x503C;&#xFF0C;&#x6700;&#x7EC8; final_value.str()&#x4F1A;&#x88AB;&#x6253;&#x5370;&#x5728; OUT.*&#x7684; INPUT &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E00;&#x5B9A;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>get_final_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            item<span class="token punctuation">.</span>final_value <span class="token operator">&lt;&lt;</span> para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4EE5;&#x53CA;&#x5982;&#x679C;&#x662F;&#x5E76;&#x884C;&#x7248;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x5E7F;&#x64AD;&#x51FD;&#x6570;&#xFF08;<strong>bcastfuncs*</strong>&#xFF09;&#xFF1A;&#x5982;&#x4F55;&#x8C03;&#x7528; Parallel_Common &#x8FDB;&#x884C; bcast &#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E00;&#x5B9A;&#x4F1A;&#x6267;&#x884C;&#x3002;<u>&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x4E00;&#x5B9A;&#x53EA;&#x4F20;&#x8F93;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F20;&#x8F93;&#x5176;&#x4ED6;&#x5F15;&#x5165;&#x7684;&#x975E; INPUT &#x53C2;&#x6570;</u>&#xFF0C;&#x4F8B;&#x5982; gamma_only_local &#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x4E0D;&#x662F; INPUT &#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x7531; gamma_only &#x548C; basis_type &#x5171;&#x540C;&#x51B3;&#x5B9A;&#x53D6;&#x503C;&#xFF0C;&#x8FD9;&#x79CD;&#x989D;&#x5916;&#x5F15;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x9700;&#x8981;&#x5728; gamma_only &#x6216; basis_type &#x5904;&#x6DFB;&#x52A0;&#x4ED6;&#x7684; bcast &#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__MPI</span></span>
+        bcastfuncs<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Parallel_Common</span><span class="token double-colon punctuation">::</span><span class="token function">bcast_bool</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+</code></pre>
+<p>&#x6700;&#x540E;&#x5C06; item &#x6DFB;&#x52A0;&#x5230;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">add_item</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x603B;&#x7ED3;&#xFF1A;"><a name="&#x603B;&#x7ED3;&#xFF1A;" class="plugin-anchor" href="#&#x603B;&#x7ED3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;&#xFF1A;</h3>
+<pre class="language-"><code class="lang-cpp"><span class="token punctuation">{</span>
+        Input_Item <span class="token function">item</span><span class="token punctuation">(</span><span class="token string">&quot;nelec&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>annotation <span class="token operator">=</span> <span class="token string">&quot;input number of electrons&quot;</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>read_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>str_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>reset_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>somecondition<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+        item<span class="token punctuation">.</span>check_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token class-name">ModuleBase</span><span class="token double-colon punctuation">::</span><span class="token function">WARNING_QUIT</span><span class="token punctuation">(</span><span class="token string">&quot;ReadInput&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;nelec should be no less than 0.0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>get_final_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            item<span class="token punctuation">.</span>final_value <span class="token operator">&lt;&lt;</span> para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__MPI</span></span>
+        bcastfuncs<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Parallel_Common</span><span class="token double-colon punctuation">::</span><span class="token function">bcast_bool</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">add_item</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x53C2;&#x6570;&#x6DFB;&#x52A0;&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x4FEE;&#x6539;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x800C;&#x5B9E;&#x9645;&#x4E0A;&#x5927;&#x90E8;&#x5206;&#x53C2;&#x6570;&#x7684; bcastfuncs&#x3001;get_final_value&#x3001;read_value &#x51FD;&#x6570;&#x586B;&#x5199;&#x662F;&#x51E0;&#x4E4E;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x4ED6;&#x4EEC;&#x6709;&#x5171;&#x540C;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x4E3A;&#x4E86;&#x4E66;&#x5199;&#x65B9;&#x4FBF;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528; module_io/read_input_tool.h &#x5B9A;&#x4E49;&#x7684;&#x5B8F;&#x51FD;&#x6570;&#x6765;&#x8FDB;&#x884C;&#x4E66;&#x5199;&#x7684;&#x7B80;&#x5316;&#xFF1A;</p>
+<p>1. &#x5BF9;&#x4E8E;&#x5F62;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp">bcastfuncs<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Parallel_Common</span><span class="token double-colon punctuation">::</span><span class="token function">bcast_bool</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x7684; bcastfuncs &#x51FD;&#x6570;&#x4E66;&#x5199;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x4F7F;&#x7528; add_double_bcast, add_int_bcast, add_bool_bcast, add_string_bcast, add_doublevec_bcast, add_intvec_bcast, add_stringvec_bcast &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4EE3;&#x66FF;</p>
+<p>2. &#x5BF9;&#x4E8E;&#x5F62;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>get_final_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            item<span class="token punctuation">.</span>final_value <span class="token operator">&lt;&lt;</span> para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+        bcastfuncs<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Parallel_Common</span><span class="token double-colon punctuation">::</span><span class="token function">bcast_bool</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>PARAMETER<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x7684; get_final_value &#x4E0E; bcastfuncs &#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;&#x4E66;&#x5199;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; sync_double, sync_int, sync_bool, sync_string, sync_doublevec, sync_intvec, sync_stringvec &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4EE3;&#x66FF;</p>
+<p>3. &#x5BF9;&#x4E8E;&#x5F62;&#x5982;</p>
+<pre class="language-"><code class="lang-cpp">item<span class="token punctuation">.</span>read_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>str_values<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>get_final_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            item<span class="token punctuation">.</span>final_value <span class="token operator">&lt;&lt;</span> para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        bcastfuncs<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Parallel_Common</span><span class="token double-colon punctuation">::</span><span class="token function">bcast_bool</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x7684; read_value, get_final_value &#x4E0E; bcastfuncs &#x51FD;&#x6570;&#x7684;&#x5408;&#x5E76;&#x4E66;&#x5199;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; read_sync_double, read_sync_string, read_sync_int, read_sync_bool &#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4EE3;&#x66FF;</p>
+<p>&#x56E0;&#x6B64;&#x6DFB;&#x52A0; nelec &#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x6210;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token punctuation">{</span>
+        Input_Item <span class="token function">item</span><span class="token punctuation">(</span><span class="token string">&quot;nelec&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>annotation <span class="token operator">=</span> <span class="token string">&quot;input number of electrons&quot;</span><span class="token punctuation">;</span>
+        <span class="token function">read_sync_double</span><span class="token punctuation">(</span>nelec<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        item<span class="token punctuation">.</span>reset_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>somecondition<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+        item<span class="token punctuation">.</span>check_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> para<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>para<span class="token punctuation">.</span>input<span class="token punctuation">.</span>nelec <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token class-name">ModuleBase</span><span class="token double-colon punctuation">::</span><span class="token function">WARNING_QUIT</span><span class="token punctuation">(</span><span class="token string">&quot;ReadInput&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;nelec should be no less than 0.0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span><span class="token function">add_item</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="12-&#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;"><a name="12-&#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;" class="plugin-anchor" href="#12-&#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;</h2>
+<p><strong>&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x820D;&#x5F03;&#x4F7F;&#x7528; INPUT &#x4E0E; GloablV::&#xFF0C;&#x8BF7;&#x52FF;&#x5728;&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x65B0;&#x53D8;&#x91CF;&#xFF01;</strong></p>
+<p>&#x9700;&#x8981;&#x7528;&#x5230;&#x53C2;&#x6570;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x8BF7;&#x4EE5;&#x53EA;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> nbands <span class="token operator">=</span> PARAM<span class="token punctuation">.</span>inp<span class="token punctuation">.</span>nbands<span class="token punctuation">;</span> <span class="token comment">//&#x53EA;&#x8BFB;&#x7684;&#x8BBF;&#x95EE;&#x5143;&#x7D20;</span>
+</code></pre>
+<p>&#x800C;&#x5176;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x4FEE;&#x6539;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x65F6;&#x7F16;&#x8BD1;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp">PARAM<span class="token punctuation">.</span>inp<span class="token punctuation">.</span>nbands <span class="token operator">=</span> <span class="token number">0</span>&#xFF1B; <span class="token comment">//&#x4F1A;&#x62A5;&#x9519;</span>
+</code></pre>
+<h2 id="13-&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;"><a name="13-&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#13-&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;</h2>
+<h3 id="a-&#x8BFB;&#x5165;&#x6D4B;&#x8BD5;"><a name="a-&#x8BFB;&#x5165;&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#a-&#x8BFB;&#x5165;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>A. &#x8BFB;&#x5165;&#x6D4B;&#x8BD5;</h3>
+<p>&#x8DEF;&#x5F84;&#xFF1A;<u>source/module_io/test/read_input_pteset.cpp</u></p>
+<pre class="language-"><code>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">&gt;</span></span>source/module_io/test/support/INPUT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x5728; INPUT &#x4E2D;&#x6DFB;&#x52A0;&#x8FD9;&#x4E00;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp">nelec                  <span class="token number">10</span> #input number of electrons
+</code></pre>
+<p>&#x5728; <code>TEST_F(InputParaTest, ParaRead)</code> &#x6D4B;&#x8BD5;&#x8FD9;&#x4E00;&#x8BFB;&#x5165;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>EXPECT_EQ(PARAM.inp.nelec, 10);
+</code></pre><h3 id="b-&#x7279;&#x6B8A;&#x573A;&#x666F;&#x7684;-resetvalue-&#x548C;-checkvalue-&#x6D4B;&#x8BD5;"><a name="b-&#x7279;&#x6B8A;&#x573A;&#x666F;&#x7684;-resetvalue-&#x548C;-checkvalue-&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#b-&#x7279;&#x6B8A;&#x573A;&#x666F;&#x7684;-resetvalue-&#x548C;-checkvalue-&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>B. &#x7279;&#x6B8A;&#x573A;&#x666F;&#x7684; reset_value &#x548C; check_value &#x6D4B;&#x8BD5;</h3>
+<p>&#x8DEF;&#x5F84;&#xFF1A;<u>source/module_io/test/read_input_item_test.cpp</u></p>
+<p>&#x5728; <code>TEST_F(InputTest, Item_test)</code> &#x6DFB;&#x52A0;&#x7279;&#x5B9A;&#x53C2;&#x6570;&#x7684; reset_value &#x51FD;&#x6570;&#x548C; check_value &#x7684;&#x8986;&#x76D6;&#x6027;&#x6D4B;&#x8BD5;&#x3002;</p>
+<h2 id="14-&#x6DFB;&#x52A0;&#x6587;&#x6863;"><a name="14-&#x6DFB;&#x52A0;&#x6587;&#x6863;" class="plugin-anchor" href="#14-&#x6DFB;&#x52A0;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 &#x6DFB;&#x52A0;&#x6587;&#x6863;</h2>
+<p>&#x8DEF;&#x5F84;&#xFF1A;<u>docs/advanced/input_files/input-main.md</u></p>
+<p>&#x6BCF;&#x4E2A;&#x65B0;&#x53C2;&#x6570;&#x7684; PR<strong>&#x5FC5;&#x987B;</strong>&#x5305;&#x542B;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x88AB;&#x63A5;&#x6536;&#x3002;&#x8BF7;&#x5728; <code>input-main.md</code> &#x4E2D;&#x6DFB;&#x52A0;&#x53C2;&#x6570;&#x63CF;&#x8FF0;&#x3002;</p>
+<h1 id="&#x8BBE;&#x8BA1;&#x6587;&#x6863;&#x53C2;&#x8003;"><a name="&#x8BBE;&#x8BA1;&#x6587;&#x6863;&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x8BBE;&#x8BA1;&#x6587;&#x6863;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x8BA1;&#x6587;&#x6863;&#x53C2;&#x8003;</h1>
+<p>&#x53C2;&#x8003;&#xFF1A;&#x6797;&#x9708;&#x6CFD;&#x535A;&#x58EB;&#x63D0;&#x7684;&#x65B9;&#x6848; <a href="https://github.com/PeizeLin/abacus-develop/tree/3dc78534f7fedd89d00bd4fedbf3836d7fa54ce6" target="_blank">github.com</a></p>
+<h2 id="21-&#x80CC;&#x666F;"><a name="21-&#x80CC;&#x666F;" class="plugin-anchor" href="#21-&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x80CC;&#x666F;</h2>
+<p>v3.7.0 &#x4E4B;&#x524D;&#x6DFB;&#x52A0;&#x53C2;&#x8003;<a href="https://mcresearch.github.io/abacus-user-guide/develop-addinp.html" target="_blank">&#x5982;&#x4F55;&#x5728; ABACUS &#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#xFF08;&#x622A;&#x81F3; v3.5.3&#xFF09;</a></p>
+<h3 id="211-&#x539F;-inputcpp"><a name="211-&#x539F;-inputcpp" class="plugin-anchor" href="#211-&#x539F;-inputcpp"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1 &#x539F; input.cpp</h3>
+<p>&#x5F53;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684; INPUT &#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x5728; input &#x7C7B;&#x91CC;&#x505A;&#x4EE5;&#x4E0B;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<p>A. &#x9996;&#x5148;&#x5728; Default &#x51FD;&#x6570;&#x4E2D;&#x7ED9;&#x521D;&#x59CB;&#x503C;&#xFF1B;</p>
+<p>B. &#x518D;&#x5728; read &#x51FD;&#x6570;&#x4E2D;&#x7684; if &#x4E2D;&#x52A0;&#x4E00;&#x4E2A;&#x5224;&#x65AD;&#x5206;&#x652F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span><span class="token string">&quot;suffix&quot;</span><span class="token punctuation">,</span> word<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// out dir</span>
+<span class="token punctuation">{</span>
+     <span class="token function">read_value</span><span class="token punctuation">(</span>ifs<span class="token punctuation">,</span> suffix<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>C. &#x518D;&#x5728; Bcast &#x51FD;&#x6570;&#x4E2D;&#x6DFB;&#x52A0; bcast</p>
+<p>D. &#xFF08;&#x5927;&#x90E8;&#x5206;&#xFF09;&#x5728; GlobalV &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x529F;&#x80FD;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5E76;&#x7ED9;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x8FD9;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7528;&#xFF0C;&#x8FD8;&#x5BB9;&#x6613;&#x8BA9;&#x4EBA;&#x8BEF;&#x89E3;&#x5230;&#x5E95;&#x8FD9;&#x4E2A;&#x548C; input.cpp &#x54EA;&#x4E2A;&#x662F;&#x521D;&#x59CB;&#x503C;&#xFF09;</p>
+<p>E. &#x518D;&#x5728; input_conv.cpp &#x4E2D;&#x8F6C;&#x5316;&#x6210; GlobalV &#x7684;&#x53D8;&#x91CF;</p>
+<p>F. &#x518D;&#x5728; write_input.cpp &#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x4F7F;&#x5176;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x5230; OUT.ABACUS &#x6587;&#x4EF6;&#x5939;&#x4E2D; INPUT</p>
+<blockquote>
+<p>&#x75DB;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x6BCF;&#x52A0;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E; ABACUS &#x4E3B;&#x4EE3;&#x7801;&#x9700;&#x201C;&#x7FFB;&#x5C71;&#x8D8A;&#x5CAD;&#x201D;&#x5730;&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x6613;&#x7BA1;&#x7406;</li>
+<li>input.cpp &#x7684;&#x53D8;&#x91CF;&#x548C; GlobalV &#x7684;&#x53D8;&#x91CF;&#x5927;&#x90E8;&#x5206;&#x91CD;&#x590D;&#xFF0C;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x4E14;&#x5BB9;&#x6613;&#x8BEF;&#x89E3;</li>
+<li>&#x5927;&#x91CF;&#x7684; if &#x5206;&#x652F;
+&#x6539;&#x8FDB;&#x601D;&#x8DEF;&#xFF1A;</li>
+<li>&#x5C06;&#x76F8;&#x540C;&#x7684;&#x53C2;&#x6570;&#x4EE3;&#x7801;&#x96C6;&#x4E2D;&#x8D77;&#x6765;</li>
+<li>input &#x7C7B;&#x53EA;&#x5B9E;&#x73B0;&#x8BFB;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4E0D;&#x5B58;&#x50A8;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x7531;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x5B58;&#x50A8;</li>
+</ol>
+</blockquote>
+<h3 id="212-globalv"><a name="212-globalv" class="plugin-anchor" href="#212-globalv"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.2 GlobalV</h3>
+<p>&#x5176;&#x5B9E;&#x4EE3;&#x7801;&#x6709;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x53EF;&#x6015;&#xFF0C;&#x53EF;&#x6015;&#x7684;&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x6539;&#x53D8;&#xFF0C;&#x800C;&#x90E8;&#x5206; GlobalV &#x5C31;&#x662F;&#x8FD9;&#x6837;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x9650;&#x5236;&#x4ED6;&#x4EBA;&#x5728;&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;&#x4E4B;&#x540E;&#x6539;&#x53D8;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p><em>&#x76EE;&#x524D;&#x5F88;&#x591A;&#x4E5F;&#x4F7F;&#x7528;&#x4E86; public &#x7684;&#x7C7B;&#x9759;&#x6001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x5176;&#x5B9E;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</em></p>
+<h2 id="22-&#x91CD;&#x6784;&#x8BBE;&#x8BA1;"><a name="22-&#x91CD;&#x6784;&#x8BBE;&#x8BA1;" class="plugin-anchor" href="#22-&#x91CD;&#x6784;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x91CD;&#x6784;&#x8BBE;&#x8BA1;</h2>
+<h3 id="221-parameter-&#x7C7B;"><a name="221-parameter-&#x7C7B;" class="plugin-anchor" href="#221-parameter-&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 Parameter &#x7C7B;</h3>
+<p>&#x8BE5;&#x7C7B;&#x53EA;&#x5B58;&#x50A8; ABACUS &#x8FD0;&#x884C;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x4EE3;&#x66FF; GlobalV &#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8BE5;&#x7C7B;&#x5C06;&#x6210;&#x5458;&#x8BBE;&#x6210;&#x79C1;&#x6709;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x7ED9; ReadInput &#x7C7B;&#x4FEE;&#x6539;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5176;&#x4ED6;&#x7C7B;&#x53EA;&#x6709;&#x8BBF;&#x503C;&#x6743;&#x9650;&#xFF0C;&#x6CA1;&#x6709;&#x4FEE;&#x6539;&#x6743;&#x9650;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Parameter</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Parameter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Parameter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// We can only read the value of input, but cannot modify it.</span>
+    <span class="token keyword">const</span> Input_para<span class="token operator">&amp;</span> inp <span class="token operator">=</span> input<span class="token punctuation">;</span>
+    <span class="token comment">// We can only read the value of mdp, but cannot modify it.</span>
+    <span class="token keyword">const</span> MD_para<span class="token operator">&amp;</span> mdp <span class="token operator">=</span> input<span class="token punctuation">.</span>mdp<span class="token punctuation">;</span>
+    <span class="token comment">// We can only read the value of other parameters, but cannot modify it.</span>
+    <span class="token keyword">const</span> System_para<span class="token operator">&amp;</span> globalv <span class="token operator">=</span> system<span class="token punctuation">;</span>
+
+    <span class="token comment">// Set the rank &amp; nproc</span>
+    <span class="token keyword">void</span> <span class="token function">set_rank_nproc</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> myrank<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">&amp;</span> nproc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Set the start time</span>
+    <span class="token keyword">void</span> <span class="token function">set_start_time</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>time_t<span class="token operator">&amp;</span> start_time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token comment">// Only ReadInput can modify the value of Parameter.</span>
+    <span class="token keyword">friend</span> <span class="token keyword">class</span> <span class="token class-name">ModuleIO</span><span class="token operator">:</span><span class="token base-clause"><span class="token operator">:</span><span class="token class-name">ReadInput</span></span><span class="token punctuation">;</span>
+    <span class="token comment">// INPUT parameters</span>
+    Input_para input<span class="token punctuation">;</span>
+    <span class="token comment">// System parameters</span>
+    System_para system<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="22-inputitem-&#x7C7B;"><a name="22-inputitem-&#x7C7B;" class="plugin-anchor" href="#22-inputitem-&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 Input_Item &#x7C7B;</h2>
+<p>&#x7528;&#x4E8E;&#x5B58;&#x50A8; input &#x53C2;&#x6570;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7528; input_item &#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#xFF0C;&#x4E0D;&#x540C; input_item &#x7528; vector &#x6253;&#x5305;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">Input_Item</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Input_Item</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> label_in<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        label <span class="token operator">=</span> label_in<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    std<span class="token double-colon punctuation">::</span>string label<span class="token punctuation">;</span>                   <span class="token comment">///&lt; label of the input item</span>
+    std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token operator">&gt;</span> str_values<span class="token punctuation">;</span> <span class="token comment">///&lt; string values of the input item</span>
+    std<span class="token double-colon punctuation">::</span>stringstream final_value<span class="token punctuation">;</span>       <span class="token comment">///&lt; final value for writing to output INPUT file</span>
+    std<span class="token double-colon punctuation">::</span>string annotation<span class="token punctuation">;</span> <span class="token comment">///&lt; annotation of the input item</span>
+
+    <span class="token comment">// ====== !!! These functions are complete.        ======</span>
+    <span class="token comment">// ====== !!! Do not add any more functions here.  ======</span>
+    <span class="token comment">/// read value if INPUT file has this item</span>
+    std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span><span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> read_value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span> item<span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span> param<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">/// check value </span>
+    std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> check_value <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+    <span class="token comment">/// reset some values</span>
+    std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token keyword">const</span> Input_Item<span class="token operator">&amp;</span><span class="token punctuation">,</span> Parameter<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> reset_value <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+    <span class="token comment">/// get final_value function for output INPUT file</span>
+    std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span>Input_Item<span class="token operator">&amp;</span><span class="token punctuation">,</span> <span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">&gt;</span> get_final_value <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+    <span class="token comment">// ====== !!! Do not add any more functions here.  ======</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x56DB;&#x4E2A;&#x5B58;&#x50A8;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<p><strong>label</strong>: &#x53C2;&#x6570;&#x7684;&#x540D;&#x5B57;</p>
+<p><strong>annotation</strong>: &#x53C2;&#x6570;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210; INPUT &#x7684;&#x6CE8;&#x91CA;</p>
+<p><strong>str_values</strong>: &#x8BFB;&#x5165;&#x7684; raw &#x6570;&#x636E;&#xFF0C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x7528; vector &#x5B58;&#x50A8;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;kspacing 3 3 3</p>
+<p><strong>final_value</strong>: &#x6700;&#x7EC8;&#x7684;&#x53D6;&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210; INPUT</p>
+<p>&#x56DB;&#x4E2A; std::function &#x6210;&#x5458;&#xFF1A;</p>
+<p><strong>read_value</strong>&#xFF08;&#x5FC5;&#x586B;&#xFF09;: &#x5F53;&#x4ECE; INPUT &#x8BFB;&#x5165;&#x53C2;&#x6570;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7684;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;</p>
+<p><strong>reset_value</strong>&#xFF08;&#x9009;&#x586B;&#xFF09;: &#x6839;&#x636E;&#x5176;&#x8BFB;&#x5165;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x4FEE;&#x6539;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x7684;&#x503C;&#x65F6;&#x586B;&#x5165;&#xFF0C;&#x4F8B;&#x5982; calculation &#x9ED8;&#x8BA4;&#x662F; scf&#xFF0C;&#x5F53;&#x4F60;&#x8BFB;&#x5165; calculation &#x662F; nscf &#x540E;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5C06; init_chg &#x6539;&#x6210; file</p>
+<p><strong>check_value</strong>&#xFF08;&#x9009;&#x586B;&#xFF09;&#xFF1A;&#x6839;&#x636E;&#x5176;&#x8BFB;&#x5165;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x53C2;&#x6570;&#x662F;&#x5426;&#x5408;&#x9002;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x8BFB;&#x5165; ecut &#x4E3A;-100&#xFF0C;&#x5219;&#x9700;&#x8981; warning_quit()</p>
+<p><strong>get_final_value</strong>&#xFF08;&#x5927;&#x90E8;&#x5206;&#x5FC5;&#x586B;&#xFF09;&#xFF1A;&#x6B64;&#x51FD;&#x6570;&#x4E00;&#x5B9A;&#x4F1A;&#x6267;&#x884C;&#xFF08;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x4ECE; INPUT &#x8BFB;&#x5165;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6B64;&#x51FD;&#x6570;&#x4E2D;&#x7ED9;&#x51FA; final_value &#x7684;&#x8D4B;&#x503C;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x7528;&#x4E8E;&#x6253;&#x5370; INPUT &#x6587;&#x4EF6;</p>
+<h2 id="22-readinput-&#x7C7B;"><a name="22-readinput-&#x7C7B;" class="plugin-anchor" href="#22-readinput-&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 ReadInput &#x7C7B;</h2>
+<p>&#x6B64;&#x7C7B;&#x53EA;&#x8D1F;&#x8D23;&#x8BFB;&#x5165; INPUT &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9; Parameter &#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6B64;&#x7C7B;&#x4E0D;&#x8D1F;&#x8D23;&#x5B58;&#x50A8;&#x53C2;&#x6570;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">ReadInput</span>
+<span class="token punctuation">{</span>
+ <span class="token keyword">public</span><span class="token operator">:</span>
+     <span class="token comment">/**
+     * @brief read in parameters from input file
+     *
+     * @param param parameters of ABACUS
+     * @param filename_in read INPUT file name
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">read_parameters</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span> param<span class="token punctuation">,</span> <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> filename_in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * @brief write out parameters to output file
+     *
+     * @param param parameters of ABACUS
+     * @param filename_out write output file name
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">write_parameters</span><span class="token punctuation">(</span><span class="token keyword">const</span> Parameter<span class="token operator">&amp;</span> param<span class="token punctuation">,</span> <span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> filename_out<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> Input_Item<span class="token operator">&gt;&gt;</span> input_lists<span class="token punctuation">;</span>
+    <span class="token comment">//----These functions are done only when INPUT file has them.------</span>
+    <span class="token comment">// read value if INPUT file has this item</span>
+    std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>Input_Item<span class="token operator">*</span><span class="token operator">&gt;</span> readvalue_items<span class="token punctuation">;</span>
+
+    <span class="token comment">/// bcast all values function</span>
+    <span class="token comment">/// if no MPI, this function will resize the vector</span>
+    std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span>Parameter<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span> bcastfuncs<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E3B;&#x8981;&#x4E24;&#x4E2A; public &#x51FD;&#x6570;&#xFF1A;</p>
+<p><strong>read_parameters</strong>&#xFF1A; &#x8BFB;&#x5165; INPUT &#x6587;&#x4EF6;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9; param</p>
+<p><strong>write_parameters</strong>&#xFF1A; &#x6253;&#x5370; INPUT &#x6587;&#x4EF6;</p>
+<p>3 &#x4E2A; vector:</p>
+<p><strong>input_lists</strong>: &#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6240;&#x6709;&#x7684; Input_Item&#xFF0C;&#x7528;&#x4E8E;&#x904D;&#x5386;&#x8C03;&#x7528;<strong> resetvalue, getfinalvalue</strong></p>
+<p><strong>readvalue_items</strong>: &#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8BFB;&#x5165; INPUT &#x4E2D;&#x76F8;&#x5E94; Input_Item &#x6307;&#x9488;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x8BFB;&#x5165;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;</p>
+<p><strong>bcastfuncs</strong>: &#x7528;&#x4E8E;&#x6240;&#x6709;&#x53C2;&#x6570;&#x7684; bcast</p>
+<p>&#x539F;&#x5219;&#x4E0A;<strong>bcastfuncs</strong>&#x4E5F;&#x53EF;&#x4EE5;&#x7528; vector<input_item*> &#x5B58;&#x50A8;&#xFF0C;&#x4E00;&#x65B9;&#x9762;&#x7531;&#x4E8E;&#x5176;&#x4E0D;&#x4F9D;&#x8D56; Input_Item&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x80FD;&#x4F1A; bcast &#x975E; input &#x5217;&#x8868;&#x53C2;&#x6570;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x4F46;&#x4E3A;&#x4E86;&#x8BBF;&#x5B58;&#x6548;&#x7387;&#xFF0C;&#x7528; vector<functional>&#x5B58;&#x50A8;&#x66F4;&#x597D;</functional></input_item*></p>
+<h3 id="221-readparameters-&#x51FD;&#x6570;"><a name="221-readparameters-&#x51FD;&#x6570;" class="plugin-anchor" href="#221-readparameters-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 read_parameters &#x51FD;&#x6570;</h3>
+<p>&#x5BF9;&#x4E8E; ReadInput &#x7684; read_parameter&#xFF0C;&#x5176;&#x6267;&#x884C;&#x7684;&#x987A;&#x5E8F;&#x662F;:</p>
+<p>&#x5148;&#x786E;&#x5B9A; INPUT &#x5BF9;&#x5E94;&#x54EA;&#x4E9B; Input_Item&#xFF0C;&#x7136;&#x540E;&#x5C06; INPUT &#x4E2D;&#x8BFB;&#x5165;&#x7684;&#x4FE1;&#x606F;&#x5B58;&#x5165; item &#x7684; str_values &#x4E2D;&#xFF0C;&#x4E4B;&#x540E;&#x4F9D;&#x6B21;&#x6267;&#x884C;</p>
+<ol>
+<li><strong>readvalue_items</strong></li>
+<li><strong>inputlist-&gt;resetvalue</strong></li>
+<li>i<strong>nputlist-&gt;checkvalue</strong></li>
+<li><strong>bcastfuncs</strong></li>
+</ol>
+<h3 id="222-writeparameters-&#x51FD;&#x6570;"><a name="222-writeparameters-&#x51FD;&#x6570;" class="plugin-anchor" href="#222-writeparameters-&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2 write_parameters &#x51FD;&#x6570;</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x6253;&#x5370; INPUT&#xFF0C;&#x987A;&#x5E8F;&#x6267;&#x884C; input_lists &#x7684;<strong>getfinalvalue</strong></p>
+<p>&#x7136;&#x540E;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> item<span class="token operator">:</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>input_lists<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   Input_Item<span class="token operator">*</span> p_item <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>p_item<span class="token operator">-&gt;</span>getfinalvalue <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+   p_item<span class="token operator">-&gt;</span><span class="token function">getfinalvalue</span><span class="token punctuation">(</span><span class="token operator">*</span>p_item<span class="token punctuation">,</span> param<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   ModuleBase<span class="token double-colon punctuation">::</span><span class="token class-name">GlobalFunc</span><span class="token double-colon punctuation">::</span><span class="token function">OUTP</span><span class="token punctuation">(</span>ofs<span class="token punctuation">,</span> p_item<span class="token operator">-&gt;</span>label<span class="token punctuation">,</span> p_item<span class="token operator">-&gt;</span>final_value<span class="token punctuation">.</span><span class="token function">str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> p_item<span class="token operator">-&gt;</span>annotation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2025-07-11 15:17:43
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-addinp.html" class="navigation navigation-prev " aria-label="Previous page: 如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="develop-hetero.html" class="navigation navigation-next " aria-label="Next page: 如何在 ABACUS 中进行异构计算">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何在 ABACUS 中新增一个输入参数（v3.7.0 后）","level":"1.4.1.7","depth":3,"next":{"title":"如何在 ABACUS 中进行异构计算","level":"1.4.1.8","depth":3,"path":"develop-hetero.md","ref":"develop-hetero.md","articles":[]},"previous":{"title":"如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）","level":"1.4.1.6","depth":3,"path":"develop-addinp.md","ref":"develop-addinp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.4.1","level":"1.2.2.4","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.4.1"},{"backlink":"abacus-upf.html#fig1.2.2.4.2","level":"1.2.2.4","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.4.2"},{"backlink":"abacus-upf.html#fig1.2.2.4.3","level":"1.2.2.4","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.4.3"},{"backlink":"abacus-upf.html#fig1.2.2.4.4","level":"1.2.2.4","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.4.4"},{"backlink":"abacus-upf.html#fig1.2.2.4.5","level":"1.2.2.4","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.4.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-path4.html#fig1.4.5.4.1","level":"1.4.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":38,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.4.5.4.1"},{"backlink":"develop-path4.html#fig1.4.5.4.2","level":"1.4.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":39,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.4.5.4.2"},{"backlink":"develop-path5.html#fig1.4.5.5.1","level":"1.4.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":40,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.4.5.5.1"},{"backlink":"develop-path5.html#fig1.4.5.5.2","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":41,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.4.5.5.2"},{"backlink":"develop-path5.html#fig1.4.5.5.3","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":42,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.4.5.5.3"},{"backlink":"develop-path5.html#fig1.4.5.5.4","level":"1.4.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":43,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.4"},{"backlink":"develop-path5.html#fig1.4.5.5.5","level":"1.4.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":44,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.5"},{"backlink":"develop-path6.html#fig1.4.5.7.1","level":"1.4.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":45,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.4.5.7.1"},{"backlink":"develop-path10.html#fig1.4.5.11.1","level":"1.4.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":46,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.4.5.11.1"},{"backlink":"develop-path10.html#fig1.4.5.11.2","level":"1.4.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":47,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.4.5.11.2"},{"backlink":"develop-path10.html#fig1.4.5.11.3","level":"1.4.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":48,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.4.5.11.3"},{"backlink":"develop-path10.html#fig1.4.5.11.4","level":"1.4.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":49,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.4.5.11.4"},{"backlink":"develop-path10.html#fig1.4.5.11.5","level":"1.4.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":50,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.4.5.11.5"},{"backlink":"develop-path11.html#fig1.4.5.12.1","level":"1.4.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":51,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.4.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":52,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.5.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-addinp2.md","mtime":"2025-07-11T07:17:43.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-08-05T02:23:01.216Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
