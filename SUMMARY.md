@@ -31,6 +31,7 @@
         * [ABACUS+DeePMD-kit 做机器学习分子动力学模拟](abacus-dpmd.md)
     * AI辅助功能
         * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
+        * [DeePKS-ES 介绍及使用教程](abacus-deepks-es.md)
     * 特色功能
         * [ABACUS 随机波函数 DFT 方法使用教程](abacus-sdft.md)
         * [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
