@@ -14,7 +14,9 @@ DeePKS（Deep Kohn-Sham）是一种机器学习交换关联泛函方法。它将
 
 ## 性质修正
 
-DeePKS 通过神经网络对低级别方法的哈密顿量进行修正。在数值原子轨道（LCAO）基组下，DeePKS 的总哈密顿量$H^{\text d}$由基础哈密顿量 $H^{\text b}$（ 低级别方法计算结果）与校正项$V^{\delta}$组成：$H^{\text d} = H^{\text b} + V^{\delta}$。$V^{\delta}$对应的能量修正项为$E^{\delta}$，其定义为各原子贡献的总和：$E^\delta=\sum_{I}F_{\mathrm{NN}}(\mathbf{d}^I)$。式中，$F_{\mathrm{NN}}$是神经网络，$\mathbf{d}^I$是原子$I$的电子结构描述符（保证旋转、平移和置换不变性）。其他修正项可以通过对能量修正项的求导实现，比如受力修正项为 $\mathbf{F}^{\delta}_{I}=-\frac{\partial E^{\delta}}{\partial\tau_I}$，其中$\tau_I$是原子$I$的位置。在 DeePKS 模型完成训练后，可以进行自洽迭代收敛（SCF）计算，如下图所示：
+DeePKS 通过神经网络对低级别方法的哈密顿量进行修正。在数值原子轨道（LCAO）基组下，DeePKS 的总哈密顿量$$H^d$$由基础哈密顿量$$H^{\text b}$$（低级别方法计算结果）与校正项$$V^{\delta}$$组成：$$H^{\text d} = H^{\text b} + V^{\delta}$$。$$V^{\delta}$$对应的能量修正项为$$E^{\delta}$$，其定义为各原子贡献的总和：
+$$E^\delta=\sum_{I}F_{\mathrm{NN}}(\mathbf{d}^I)$$
+式中，$$F_{\mathrm{NN}}$$是神经网络，$$\mathbf{d}^I$$是原子$$I$$的电子结构描述符（保证旋转、平移和置换不变性）。其他修正项可以通过对能量修正项的求导实现，比如受力修正项为 $$\mathbf{F}^{\delta}_{I}=-\frac{\partial E^{\delta}}{\partial\tau_I}$$，其中$$\tau_I$$是原子$$I$$的位置。在 DeePKS 模型完成训练后，可以进行自洽迭代收敛（SCF）计算，如下图所示：
 
 ![](picture/fig-deepks-es-scf.png)
 
@@ -22,8 +24,12 @@ DeePKS 通过神经网络对低级别方法的哈密顿量进行修正。在数�
 
 DeePKS 模型的训练需要通过迭代训练进行，核心流程包括以下两步循环，直至收敛：
 
-在以上第二步中，损失函数中一般包含能量、原子受力等项。为了在训练步中能够计算原子受力，需要在 SCF 中输出相应的系数，即通过链式法则，将受力修正项写为 $\mathbf{F}^{\delta}_{I}=-\frac{\partial E^{\delta}}{\partial\tau_I}
-=-\sum_{Inlm}\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}\frac{\partial\mathbf{d}^I_{nlm}}{\partial\tau_I}$，其中$\mathbf{d}^I_{nlm}$是描述符$\mathbf{d}^I$的具体分量。$\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}$项由DeePKS-kit经过反向传播计算，$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\tau_I}$ 系数项则由 ABACUS 输出。
+在以上第二步中，损失函数中一般包含能量、原子受力等项。为了在训练步中能够计算原子受力，需要在 SCF 中输出相应的系数，即通过链式法则，将受力修正项写为
+
+$$\mathbf{F}^{\delta}_{I}=-\frac{\partial E^{\delta}}{\partial\tau_I}
+=-\sum_{Inlm}\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}\frac{\partial\mathbf{d}^I_{nlm}}{\partial\tau_I}$$
+
+其中$$\mathbf{d}^I_{nlm}$$是描述符$$\mathbf{d}^I$$的具体分量。$$\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}$$项由DeePKS-kit经过反向传播计算，$$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\tau_I}$$ 系数项则由 ABACUS 输出。
 
 # 二、DeePKS-ES 介绍
 
@@ -35,20 +41,19 @@ DeePKS-ES（Electronic Structure）是对原始 DeePKS 方法的改进，重点�
 
 ## 哈密顿量及相关电子结构性质的计算
 
-前面说过，DeePKS 的总哈密顿量$H^{\text d}$由基础哈密顿量 $H^{\text b}$（ 低级别方法计算结果）与校正项$V^{\delta}$组成：$H^{\text d} = H^{\text b} + V^{\delta}$。为了在 DeePKS-kit 中计算修正项$V^{\delta}$，从而在损失函数中加入哈密顿量的损失，将$V^{\delta}$通过链式法则拆分为 $V^\delta_{\mu\nu}=\frac{\partial E^{\delta}}{\partial\rho_{\mu\nu}}
-=\sum_{Inlm}\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$，其中$\mu$和$\nu$ 是 LCAO 基组的下标。
+前面说过，DeePKS 的总哈密顿量$$H^{\text d}$$由基础哈密顿量 $$H^{\text b}$$（低级别方法计算结果）与校正项$$V^{\delta}$$组成：$$H^{\text d} = H^{\text b} + V^{\delta}$$。为了在 DeePKS-kit 中计算修正项$$V^{\delta}$$，从而在损失函数中加入哈密顿量的损失，将$$V^{\delta}$$通过链式法则拆分为 $$V^\delta_{\mu\nu}=\frac{\partial E^{\delta}}{\partial\rho_{\mu\nu}}=\sum_{Inlm}\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$$，其中$\mu$和$\nu$ 是 LCAO 基组的下标。
 
-如同原子受力等项，$\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}$项由 DeePKS-kit 经过反向传播计算，而$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$系数项则由 ABACUS 输出。该系数项可以直接输出，但是为了节省内存，也可以将其拆分为
+如同原子受力等项，$$\frac{\partial E^{\delta}}{\partial\mathbf{d}^I_{nlm}}$$项由 DeePKS-kit 经过反向传播计算，而$$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$$系数项则由 ABACUS 输出。该系数项可以直接输出，但是为了节省内存，也可以将其拆分为
 
 $$
-\frac{\partial \mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}=\sum_{m^{\prime}m^{\prime\prime}}\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}
-    \frac{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}{\partial \rho_{\mu\nu}}
-    \\=\sum_{m^{\prime}m^{\prime\prime}} \frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle\langle\alpha^I_{nlm^{\prime\prime}}\vert\phi_\nu\rangle,
+
+\frac{\partial \mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}=\sum_{m^{\prime}m^{\prime\prime}}\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}\frac{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}{\partial \rho_{\mu\nu}}\\=\sum_{m^{\prime}m^{\prime\prime}} \frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle\langle\alpha^I_{nlm^{\prime\prime}}\vert\phi_\nu\rangle
+
 $$
 
-并分别输出$\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}$和$\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle$（$\langle\alpha^I_{nlm^{\prime\prime}}\vert\phi_\nu\rangle$与该项一致）。其中投影密度矩阵是构建描述符的关键中间量。
+并分别输出$$\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}$$和$$\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle（\langle\alpha^I_{nlm^{\prime\prime}}\vert\phi_\nu\rangle$$与该项一致）。其中投影密度矩阵是构建描述符的关键中间量。
 
-在获得$V^{\delta}$项后，将其与基础泛函的哈密顿量矩阵$H^{\text b}$叠加，即得到 DeePKS-ES 预测的哈密顿量矩阵$H^{\text d}$。通过广义特征值求解$H\mathbf{c}_{i}=\varepsilon_{i}S\mathbf{c}_{i}$，可以获得体系的能级$\varepsilon_{i}$和波函数组合系数$\mathbf{c}_{i}$，它们同样作为重要的电子结构性质，同样可纳入损失函数参与模型训练。
+在获得$$V^{\delta}$$项后，将其与基础泛函的哈密顿量矩阵$$H^{\text b}$$叠加，即得到 DeePKS-ES 预测的哈密顿量矩阵$$H^{\text d}$$。通过广义特征值求解$$H\mathbf{c}_{i}=\varepsilon_{i}S\mathbf{c}_{i}$$，可以获得体系的能级$$\varepsilon_{i}$$和波函数组合系数$$\mathbf{c}_{i}$$，它们同样作为重要的电子结构性质，同样可纳入损失函数参与模型训练。
 
 ## 损失函数
 
@@ -56,9 +61,9 @@ DeePKS-ES 的损失函数涵盖总能量、原子力、哈密顿矩阵、波函�
 
 ![](picture/fig-deepks-es-formula.png)
 
-其中包含五项，表达式$\Vert x\Vert^2$表示$x$的每个元素的平方和。参数$\lambda_{\rm E}, \lambda_{\rm F}, \lambda_{\rm H}, \lambda_{\rm \psi}, \lambda_{\rm b}$分别是能量、原子力、哈密顿矩阵、波函数系数和能级的权重因子。上标$t$和$d$分别代表目标泛函和 DeePKS-ES 模型的结果。第一项是能量项，定义为每个原子的平均能量与目标能量的差值，其中$N_a$是系统中的原子数。第二项涉及原子受力，计算每个原子在三个方向上的力差值。
+其中包含五项，表达式$$\Vert x\Vert^2$$表示$$x$$的每个元素的平方和。参数$$\lambda_{\rm E}, \lambda_{\rm F}, \lambda_{\rm H}, \lambda_{\rm \psi}, \lambda_{\rm b}$$分别是能量、原子力、哈密顿矩阵、波函数系数和能级的权重因子。上标$$t$$和$$d$$分别代表目标泛函和 DeePKS-ES 模型的结果。第一项是能量项，定义为每个原子的平均能量与目标能量的差值，其中$N_a$是系统中的原子数。第二项涉及原子受力，计算每个原子在三个方向上的力差值。
 
-此外，损失函数中还加入了 LCAO 基组下的哈密顿矩阵及其特征向量和特征值，分别为第三、第四和第五项。在哈密顿项中，计算目标哈密顿矩阵$H^{\text t}$与 DeePKS-ES 模型得到的哈密顿矩阵$H^{\text d}$之间的差值。需要注意的是，哈密顿矩阵的大小为$N_{l} \times N_{l}$，其中$N_{l}$表示基组的数量，然而，每个原子的近邻数量不会随系统尺寸增加而增加，这意味着随着系统尺寸增大，哈密顿矩阵中非零元素的数量与$N_{l}$仅成正比例增长（即$O(N_{l})$而非$O(N_{l}^2)$）。因此，我们用$N_{l}$而非$N_{l}^2$对矩阵元的差别平方和进行归一化。对于波函数组合系数与能级，可以用$N_{\psi}$和$N_{\text b}$这两个参数，分别指定损失函数中需要包含的特征向量$\mathbf{c}_{i}$和特征值$\varepsilon_{i}$的数量。对于 gamma only 情形，波函数存在 +1 和-1 的自由度，即仅相差正负符号的波函数视为同样的波函数，这种情况已在程序中考虑。
+此外，损失函数中还加入了 LCAO 基组下的哈密顿矩阵及其特征向量和特征值，分别为第三、第四和第五项。在哈密顿项中，计算目标哈密顿矩阵$H^{\text t}$与 DeePKS-ES 模型得到的哈密顿矩阵$$H^{\text d}$$之间的差值。需要注意的是，哈密顿矩阵的大小为$$N_{l} \times N_{l}$$，其中$$N_{l}$$表示基组的数量，然而，每个原子的近邻数量不会随系统尺寸增加而增加，这意味着随着系统尺寸增大，哈密顿矩阵中非零元素的数量与$N_{l}$仅成正比例增长（即$$O(N_{l})$$而非$$O(N_{l}^2)$$）。因此，我们用$$N_{l}$$而非$$N_{l}^2$$对矩阵元的差别平方和进行归一化。对于波函数组合系数与能级，可以用$$N_{\psi}$$和$$N_{\text b}$$这两个参数，分别指定损失函数中需要包含的特征向量$$\mathbf{c}_{i}$$和特征值$$\varepsilon_{i}$$的数量。对于 gamma only 情形，波函数存在 +1 和-1 的自由度，即仅相差正负符号的波函数视为同样的波函数，这种情况已在程序中考虑。
 
 ## DeePKS-ES 的计算流程图
 
@@ -213,9 +218,9 @@ init_train: # parameters for nn init training
 # 以下内容省略
 ```
 
-- `read_overlap`：是否读入 LCAO 基组的重叠矩阵 overlap.npy。该矩阵在进行广义特征值求解$H\mathbf{c}_{i}=\varepsilon_{i}S\mathbf{c}_{i}$，求解波函数组合系数和能级时需要。如果需要针对波函数组合系数和能级进行训练，则设置为 True
-- `v_delta_factor/phi_factor/band_factor/density_m_factor`：损失函数中哈密顿量矩阵差别、波函数组合系数差别、能级差别以及密度矩阵差别的占比系数，前三者即二、3.节公式中的$\lambda_{\rm H}, \lambda_{\rm \psi}, \lambda_{\rm b}$。密度矩阵差别没有在前述文章中使用，它为多个波函数的平方和，不需要考虑波函数的相位情况，更推荐使用
-- `vd_devide_by_nlocal`：是否采用哈密顿量矩阵损失中，对矩阵元的差别平方和用$N_{l}$而非$N_{l}^2$进行归一化的策略。推荐设置为 True，保证不同大小体系的哈密顿量矩阵损失量级相同。
+- `read_overlap`：是否读入 LCAO 基组的重叠矩阵 overlap.npy。该矩阵在进行广义特征值求解$$H\mathbf{c}_{i}=\varepsilon_{i}S\mathbf{c}_{i}$$，求解波函数组合系数和能级时需要。如果需要针对波函数组合系数和能级进行训练，则设置为 True
+- `v_delta_factor/phi_factor/band_factor/density_m_factor`：损失函数中哈密顿量矩阵差别、波函数组合系数差别、能级差别以及密度矩阵差别的占比系数，前三者即二、3.节公式中的$$\lambda_{\rm H}, \lambda_{\rm \psi}, \lambda_{\rm b}$$。密度矩阵差别没有在前述文章中使用，它为多个波函数的平方和，不需要考虑波函数的相位情况，更推荐使用
+- `vd_devide_by_nlocal`：是否采用哈密顿量矩阵损失中，对矩阵元的差别平方和用$$N_{l}$$而非$$N_{l}^2$$进行归一化的策略。推荐设置为 True，保证不同大小体系的哈密顿量矩阵损失量级相同。
 - `phi_occ/band_occ/density_m_occ`：损失函数中波函数组合系数差别、能级差别以及密度矩阵差别中，考虑几条波函数或能级，前二者即二、3.节公式中$N_{\psi}$和$N_{\text b}$。可以直接设定为一个数值，表示所有体系中均考虑相同个数的波函数或能级。也可以设置为字典，字典的键为体系**原子**数，对应的值为对应考虑的波函数或能级个数。比如上述 `phi_occ` 设置含义为，3 个原子的体系（即水分子单体）考虑 4 条波函数，6 个原子的体系（即水分子二聚体）考虑 8 条波函数，均为对应体系的所有占据态波函数个数。
 - `display_detail_test`：是否展示各项详细的损失函数值。不限于 DeePKS-ES 方法中使用，也可以在 `init_train` 中设置。如果设置为 true，则会在 `iter.0*/01.train/log.train` 文件中显示各个损失函数项的具体值，为平方和并乘上占比系数的总效果，否则不会显示。训练集损失和测试集损失分别以 trn_loss 和 tst_loss 开头，后面接具体项名字。可用于调整占比系数，保证各项损失的量级相似。输出显示举例如下：
 
@@ -240,7 +245,7 @@ init_train: # parameters for nn init training
 
 `02_train/iter/scf_abacus.yaml` 设置了迭代训练的 scf 步中，ABACUS 的输入参数设置。
 
-使用 DeePKS-ES，只需要在 `scf_abacus` 下设置 `deepks_v_delta`=1/2 即可。设置为 1 即为直接输出$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$系数项，设置为 2 为分别输出$\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}$和$\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle$以节省内存，详见二、2.节。推荐设置为 2。
+使用 DeePKS-ES，只需要在 `scf_abacus` 下设置 `deepks_v_delta`=1/2 即可。设置为 1 即为直接输出$$\frac{\partial\mathbf{d}^I_{nlm}}{\partial\rho_{\mu\nu}}$$系数项，设置为 2 为分别输出$$\frac{\partial \mathbf{d}^I_{nlm}}{\partial D^I_{nlm^{\prime}m^{\prime\prime}}}$$和$$\langle\phi_\mu\vert\alpha^I_{nlm^{\prime}}\rangle$$以节省内存，详见二、2.节。推荐设置为 2。
 
 使用三、3.中的标签准备方式，`lattice_constant` 需要设置为 1，`coord_type` 需要设置为"Cartesian"。
 
