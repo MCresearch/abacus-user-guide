@@ -51,6 +51,8 @@
         * [ABACUS+Candela 使用教程](abacus-candela.md)
         * [ABACUS+USPEX 接口教程](abacus-uspex.md)
         * [ABACUS+Hefei NAMD 使用教程](abacus-namd.md)
+    * 其他
+        * [ABACUS对比CP2K精度和效率测试 | Si的状态方程（EOS）](abacus-vscp2k.md)
 * 教程
     * [采用 ABACUS 进行表面计算（一）：静电势和功函数](abacus-surface1.md)
     * [采用 ABACUS 进行表面计算（二）：偶极修正](abacus-surface2.md)
