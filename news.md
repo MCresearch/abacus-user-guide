@@ -6,7 +6,20 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|国产开源软件专题研讨会——第五届ABACUS开发者会议（第三轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/2dTeJLqI7f_lu4rqkvxrNQ)|2025/07/30|深度势能|
+|国产开源软件专题研讨会——第五届ABACUS开发者会议（第二轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/bOrp6dwOyZbTF25LLbY2xg)|2025/07/15|深度势能|
+|ABACUS+DeePKS还能干这个？面向水体系的高精度电子结构通用模型|[网页链接](https://mp.weixin.qq.com/s/piaAOx4BPweUwR96XRIaOg)|2025/07/08|深度势能|
 | AI4S-Agent 共建计划｜ABACUS-agent-tools本地搭建与贡献案例 | [网页链接](https://mp.weixin.qq.com/s/Bq_Z0yhHOoMA4MxB78XG_g)| 2025/06/31 | 北京科学智能研究院 |
+|国产开源软件专题研讨会——第五届ABACUS开发者会议（第一轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/mHSIxXfUWtXNxpdOU5ramA)|2025/06/27|深度势能|
+|ABACUS安装教程 - Toolchain （2-Intel）|[网页链接](https://mp.weixin.qq.com/s/cjAc6XnAcCwCpfedoeyMeA)|2025/06/24|深度势能|
+|ABACUS赝势-轨道捆绑包APNS-PPORB-v1发布：精度与效率平衡的初探|[网页链接](https://mp.weixin.qq.com/s/MEE6SR-hV--8kQmiSwEWIA)|2025/06/16|深度势能|
+|ABACUS安装教程 - Toolchain （1-GNU）|[网页链接](https://mp.weixin.qq.com/s/WR2BB3JK1zGQQ9T83IBcOA)|2025/05/23|深度势能|
+|DP+ABACUS还能干这个？机器学习辅助的电化学反应中氢核量子效应探究和计算方法开发|[网页链接](https://mp.weixin.qq.com/s/Pc7WijJQpnzsYMWQKRFTsQ)|2025/05/23|深度势能|
+|ABACUS还能干这个？助力理解二维磁性材料层数依赖的磁各向异性|[网页链接](https://mp.weixin.qq.com/s/lTdsETJTHPYhYWXXNHYKIQ)|2025/04/16|深度势能|
+|混合规范RT-TDDFT——兼具效率和精度的算法创新|[网页链接](https://mp.weixin.qq.com/s/xOHbQQRVw4Ltet6DGrSRnQ)|2025/04/15|深度势能|
+|ABACUS LTS v3.10 版本正式发布：专注稳定可靠，助力科研生态建设|[网页链接](https://mp.weixin.qq.com/s/nCgqADwEQYqzfeZMsbNvGA)|2025/04/11|深度势能|
+|ABACUS还能干这个？Kohn-Sham问题的直接最小化求解最新研究进展|[网页链接](https://mp.weixin.qq.com/s/x_kVetHrxIzEwq18ujh61w)|2025/04/08|深度势能|
+|ABACUS还能干这个？结合PYATB代码探索二维BCN体系的新结构与物性|[网页链接](https://mp.weixin.qq.com/s/YaEZXZE6T94m4U7Sdf04pA)|2025/04/03|深度势能|
 | ABACUS：一款开源开放的AI4S时代电子结构软件包                              | [网页链接](https://mp.weixin.qq.com/s/V2WVr_O2_LJ-VJ09MaHaqQ)         | 2025/03/27 |  深度势能  |
 | ABACUS还能干这个？助力揭秘镍基高温超导材料磁性奥秘                              | [网页链接](https://mp.weixin.qq.com/s/PDBya2D9q_V6MYKrOx4KXA)         | 2025/02/27 |  深度势能  |
 | ABACUS还能干这个？第一性原理计算阐释二维材料调控复杂氧化物机理                  | [网页链接](https://mp.weixin.qq.com/s/o7tcgjwPE1klTLedCcFRSQ)         | 2025/01/20 |  深度势能  |
