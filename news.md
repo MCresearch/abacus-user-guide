@@ -7,10 +7,8 @@
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
 |国产开源软件专题研讨会——第五届ABACUS开发者会议（第三轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/2dTeJLqI7f_lu4rqkvxrNQ)|2025/07/30|深度势能|
-|国产开源软件专题研讨会——第五届ABACUS开发者会议（第二轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/bOrp6dwOyZbTF25LLbY2xg)|2025/07/15|深度势能|
 |ABACUS+DeePKS还能干这个？面向水体系的高精度电子结构通用模型|[网页链接](https://mp.weixin.qq.com/s/piaAOx4BPweUwR96XRIaOg)|2025/07/08|深度势能|
 | AI4S-Agent 共建计划｜ABACUS-agent-tools本地搭建与贡献案例 | [网页链接](https://mp.weixin.qq.com/s/Bq_Z0yhHOoMA4MxB78XG_g)| 2025/06/31 | 北京科学智能研究院 |
-|国产开源软件专题研讨会——第五届ABACUS开发者会议（第一轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/mHSIxXfUWtXNxpdOU5ramA)|2025/06/27|深度势能|
 |ABACUS安装教程 - Toolchain （2-Intel）|[网页链接](https://mp.weixin.qq.com/s/cjAc6XnAcCwCpfedoeyMeA)|2025/06/24|深度势能|
 |ABACUS赝势-轨道捆绑包APNS-PPORB-v1发布：精度与效率平衡的初探|[网页链接](https://mp.weixin.qq.com/s/MEE6SR-hV--8kQmiSwEWIA)|2025/06/16|深度势能|
 |ABACUS安装教程 - Toolchain （1-GNU）|[网页链接](https://mp.weixin.qq.com/s/WR2BB3JK1zGQQ9T83IBcOA)|2025/05/23|深度势能|
