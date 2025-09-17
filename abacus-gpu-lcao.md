@@ -1,6 +1,6 @@
 # ABACUS LCAO 基组 GPU 版本使用说明
 
-**作者：邓子超，邮箱：zcdeng@pku.edu.cnmailto:zcdeng@pku.edu.cn**
+**作者：邓子超，邮箱：zcdeng@pku.edu.cn**
 
 **审核：陈默涵，邮箱：mohanchen@pku.edu.cn**
 
