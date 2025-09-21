@@ -23,6 +23,7 @@
         * [数值原子轨道（三）：产生高精度数值原子轨道](abacus-nac3.md)
     * Kohn-Sham密度泛函理论
         * [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
+        * [ABACUS 平面波基组下的杂化泛函](abacus-exx.md)
         * [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
         * [ABACUS 收敛性问题解决手册](abacus-conv.md)
         * [ABACUS 答疑手册 v0.2 版本](abacus-question.md)

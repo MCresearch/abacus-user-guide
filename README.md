@@ -58,15 +58,16 @@ ABACUS 网站访问：
 ## 2.3 Kohn-Sham 密度泛函理论
 
 1. [ABACUS 的平面波计算与收敛性测试](abacus-pw.md)
-2. 电子自洽迭代 <a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-3. ABACUS 使用教程 ｜ 结构优化 <a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-4. ABACUS 磁性材料计算使用教程 <a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-5. ABACUS 使用 DFT+U 计算教程 | 基础版 <a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-6. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
-7. [ABACUS 收敛性问题解决手册](abacus-conv.md)
-8. [ABACUS 答疑手册 v0.2 版本](abacus-question.md)
-9. [ABACUS 对比 CP2K 精度和效率测试 | Si 的状态方程（EOS）](https://www.bohrium.com/notebooks/77351186918)<a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
-10. 有 VASP 使用背景的用户上手 ABACUS 教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)
+2. [ABACUS 平面波基组下的杂化泛函](abacus-exx.md)
+3. 电子自洽迭代 <a href="https://nb.bohrium.dp.tech/detail/7417640496" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+4. ABACUS 使用教程 ｜ 结构优化 <a href="https://nb.bohrium.dp.tech/detail/9119461238" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+5. ABACUS 磁性材料计算使用教程 <a href="https://nb.bohrium.dp.tech/detail/7141761751" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+6. ABACUS 使用 DFT+U 计算教程 | 基础版 <a href="https://nb.bohrium.dp.tech/detail/52882361357" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+7. [ABACUS+LibRI 做杂化泛函计算教程](abacus-libri.md)
+8. [ABACUS 收敛性问题解决手册](abacus-conv.md)
+9. [ABACUS 答疑手册 v0.2 版本](abacus-question.md)
+10. [ABACUS 对比 CP2K 精度和效率测试 | Si 的状态方程（EOS）](https://www.bohrium.com/notebooks/77351186918)<a href="https://bohrium.dp.tech/notebooks/77351186918" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg" /></a>
+11. 有 VASP 使用背景的用户上手 ABACUS 教程：[<mark style="color:red;">ABACUS新人使用的一些注意事项</mark>](https://xmywuqhxb0.feishu.cn/docx/KN3KdqbX6o9S6xxtbtCcD5YPnue)
 
 ## 2.4 分子动力学
 
