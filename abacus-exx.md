@@ -115,7 +115,8 @@ E_{\text{X, HSE}} = -\frac{e^2}{2} \cdot 4\pi\Omega \sum_{n\mathbf{k}, m\mathbf{
 \left(1 - \mathrm{e}^{-|\mathbf{k} - \mathbf{q} + \mathbf{G}|^2 / 4\mu^2}\right).
 $$
 
-## 处理 $|\mathbf{k} - \mathbf{q} + \mathbf{G}| = 0$ 发散问题
+## 处理 |k - q + G| = 0 发散问题
+
 
 当$|\mathbf{k} - \mathbf{q} + \mathbf{G}| = 0$时分母发散。若直接舍去该项会导致结果随 k 点增加收敛缓慢。采用 Sorouri 等人改进的方法[3] 解决此问题。
 
