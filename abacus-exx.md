@@ -18,23 +18,23 @@
 
 # 二、平面波基组下的杂化泛函算法
 
-我们主要关注精确交换能和精确交换能算符求解的部分，以及自洽迭代（SCF）的部分（目前不支持非自洽计算 NSCF），其他部分和 LDA、GGA 等泛函是一致的。在这一节的所有公式中，斜体$e$为元电荷，正体$\mathrm{e}$是自然对数的底数。
+我们主要关注精确交换能和精确交换能算符求解的部分，以及自洽迭代（SCF）的部分（目前不支持非自洽计算 NSCF），其他部分和 LDA、GGA 等泛函是一致的。在这一节的所有公式中，斜体$$e$$为元电荷，正体$$\mathrm{e}$$是自然对数的底数。
 
 ## 精确交换能算符
 
-考虑在 K 点$\mathbf{k}$上的轨道$\varphi_\mathbf{k}(\mathbf{r})$作用于精确交换能算符，定义周期性的布洛赫函数如下
+考虑在 K 点$$\mathbf{k}$$上的轨道$$\varphi_\mathbf{k}(\mathbf{r})$$作用于精确交换能算符，定义周期性的布洛赫函数如下
 
 $$
 u_{n\mathbf{k}}(\mathbf{r})= \frac{1}{\sqrt\Omega} \sum_{\mathbf{G}} c(\mathbf{G})\mathrm{e} ^{i\mathbf{G}\cdot \mathbf{r}}  = \mathrm{e} ^{-i\mathbf{k}\cdot \mathbf{r}} \varphi_{\mathbf{k}}(\mathbf{r}),
 $$
 
-这里$\Omega$代表体积。引入交叠密度：
+这里$$\Omega$$代表体积。引入交叠密度：
 
 $$
 n_{\mathbf{k}, m\mathbf{q}}(\mathbf{r}) = u_\mathbf{k}(\mathbf{r})u^*_{m\mathbf{q}}(\mathbf{r}),
 $$
 
-这里 m 遍历所有能带，$\mathbf{q}$遍历第一布里渊区所有的 K 点，对上式作傅里叶变换，得到关系：
+这里 m 遍历所有能带，$$\mathbf{q}$$遍历第一布里渊区所有的 K 点，对上式作傅里叶变换，得到关系：
 
 $$
 n(\mathbf{r}) = \sum_{\mathbf{G}} n(\mathbf{G}) \mathrm{e}^{i\mathbf{G} \cdot \mathbf{r}} \\
@@ -48,7 +48,7 @@ V_{\text{X, HF}} \varphi_\mathbf{k}(\mathbf{r}) = -e^2 \sum_{m\mathbf{q}}f_{m\ma
 \int \frac{\sum_{\mathbf{G}} n_{\mathbf{k}, m\mathbf{q}}(\mathbf{G})\mathrm{e}^{i(\mathbf{k} - \mathbf{q} +\mathbf{G})\cdot\mathbf{r'}}}{|\mathbf{r} - \mathbf{r}'|} d\mathbf{r}',
 $$
 
-这里$f_{m\mathbf{q}}$是第 m 条能带在编号为 q 的 k 点处的占据数。
+这里$$f_{m\mathbf{q}}$$是第 m 条能带在编号为 q 的 k 点处的占据数。
 
 之后通过变量替换并交换积分与求和顺序：
 
@@ -83,7 +83,7 @@ E_{\text{X, HF}} = -\frac{e^2}{2} \cdot 4\pi\Omega \sum_{n\mathbf{k}, m\mathbf{q
 \sum_{\mathbf{G}} \frac{n^*_{n\mathbf{k}, m\mathbf{q}}(\mathbf{G}) n_{n\mathbf{k}, m\mathbf{q}}(\mathbf{G})}{|\mathbf{k} - \mathbf{q} + \mathbf{G}|^2},
 $$
 
-这里 m, n 遍历所有能带，$\mathbf{k}, \mathbf{q}$遍历第一布里渊区所有的 K 点。
+这里 m, n 遍历所有能带，$$\mathbf{k}, \mathbf{q}$$遍历第一布里渊区所有的 K 点。
 
 ## HSE 杂化泛函的特殊处理
 
@@ -126,9 +126,9 @@ $$
 F(\mathbf{k}) = \sum_{\mathbf{G}} \frac{\mathrm{e}^{-\eta |\mathbf{k} + \mathbf{G}|^2}}{|\mathbf{k} + \mathbf{G}|^2},
 $$
 
-该函数具有与 $1/|\mathbf{k}+\mathbf{G}|^2$相同的发散行为，这里$\eta$ 为经验值。
+该函数具有与 $$1/|\mathbf{k}+\mathbf{G}|^2$$相同的发散行为，这里$$\eta$$ 为经验值。
 
-定义剔除零项的求和$\sum\ '$和修正函数：
+定义剔除零项的求和$$\sum\ '$$和修正函数：
 
 $$
 F'(\mathbf{k}) = 
@@ -153,7 +153,7 @@ E_{\text{X, HF}} &=
 \tag{7}
 $$
 
-其中第一项消除了局部发散，第二项中$\sum_{\mathbf{q}} F(\mathbf{k}-\mathbf{q})$在密集 K 网格下近似为积分：
+其中第一项消除了局部发散，第二项中$$\sum_{\mathbf{q}} F(\mathbf{k}-\mathbf{q})$$在密集 K 网格下近似为积分：
 
 $$
 \frac{1}{\text{nqs}} \sum_{\mathbf{q}} F(\mathbf{k} - \mathbf{q}) \approx \frac{\Omega}{(2\pi)^3} \int_{\text{BZ}} F(\mathbf{q}) d\mathbf{q},
@@ -169,35 +169,35 @@ $$
 
 ## 低秩分解方法（ACE 方法）
 
-尽管精确交换算符可用前述方式计算，但其矩阵形式是满秩的，空间复杂度达 $O(N_{\text{basis}}^2)$，难以存储和操作。
+尽管精确交换算符可用前述方式计算，但其矩阵形式是满秩的，空间复杂度达 $$O(N_{\text{basis}}^2)$$，难以存储和操作。
 
 Lin [4] 提出 Adaptively Compressed Exchange (ACE) 算符方法，通过低秩近似压缩算符维度，在保证精度前提下显著降低时空复杂度。
 
 以下推导假设单 K 点情形，所有轨道为向量形式：
 
-- $\{\psi\}$：用于构建算符的轨道；
-- $\{\varphi\}$：内层迭代轨道；
-- $V$：精确交换算符；
-- $V_{\text{ACE}}$：其 ACE 近似；
-- $\Psi = [\psi_1, \psi_2, \dots, \psi_{N_b}]$：轨道拼接成“矩阵”；
-- $\dagger$：共轭转置。
+- $$\{\psi\}$$：用于构建算符的轨道；
+- $$\{\varphi\}$$：内层迭代轨道；
+- $$V$$：精确交换算符；
+- $$V_{\text{ACE}}$$：其 ACE 近似；
+- $$\Psi = [\psi_1, \psi_2, \dots, \psi_{N_b}]$$：轨道拼接成“矩阵”；
+- $$\dagger$$：共轭转置。
 
-**通过****exxace****参数可以调整是否使用 ACE 加速，默认启用。**
+**通过exxace参数可以调整是否使用 ACE 加速，默认启用。**
 
 ### ACE 基本假设
 
-- 给定满秩算符 $V[\{\psi\}]$（高成本）；
-- 寻找低秩近似 $V_{\text{ACE}}[\{\psi\}]$，使得 $V_{\text{ACE}} \psi_i = V \psi_i$ 对所有 $\psi_i \in \{\psi\}$ 严格成立；
-- 若 $\{\varphi\}$ 在迭代中变化小，则 $V_{\text{ACE}} \varphi_i \approx V \varphi_i$。
+- 给定满秩算符 $$V[\{\psi\}]$$（高成本）；
+- 寻找低秩近似 $$V_{\text{ACE}}[\{\psi\}]$$，使得 $$V_{\text{ACE}} \psi_i = V \psi_i$$ 对所有 $$\psi_i \in \{\psi\}$$ 严格成立；
+- 若 $$\{\varphi\}$$ 在迭代中变化小，则 $$V_{\text{ACE}} \varphi_i \approx V \varphi_i$$。
 
 ### ACE 构建步骤
 
-1. 计算响应：$W = V \Psi$
-2. 构造重叠矩阵：$M = \Psi^\dagger V \Psi$
-3. 因$M$是负半定 Hermite 矩阵，对$-M$进行 Cholesky 分解：$M = -L L^\dagger$
-4. 求逆：$L^{-1}$
-5. 计算中间量：$\Xi = L^{-1} W^\dagger$
-6. 得到近似算符：$V_{\text{ACE}} = -\Xi^\dagger \Xi$
+1. 计算响应：$$W = V \Psi$$
+2. 构造重叠矩阵：$$M = \Psi^\dagger V \Psi$$
+3. 因$M$是负半定 Hermite 矩阵，对$-M$进行 Cholesky 分解：$$M = -L L^\dagger$$
+4. 求逆：$$L^{-1}$$
+5. 计算中间量：$$\$Xi = L^{-1} W^\dagger$$
+6. 得到近似算符：$$V_{\text{ACE}} = -\Xi^\dagger \Xi$$
 
 > ✅ 优势：大幅减少内存占用与矩阵乘法开销，适用于大规模体系。
 
