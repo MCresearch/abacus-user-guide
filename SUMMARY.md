@@ -30,6 +30,7 @@
     * 分子动力学
         * [ABACUS 分子动力学使用教程](abacus-md.md)
         * [ABACUS+DeePMD-kit 做机器学习分子动力学模拟](abacus-dpmd.md)
+        * [ABACUS+DPA-3：基于 Bohrium 平台的安装与使用](abacus-dpa3-toturial.md)
     * AI辅助功能
         * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
         * [DeePKS-ES 介绍及使用教程](abacus-deepks-es.md)
