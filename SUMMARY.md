@@ -91,6 +91,7 @@
         * [HSolver 模块介绍](develop-HSolver.md)
         * [HContainer 模块介绍](develop-HContainer.md)
         * [Psi 模块介绍](develop-psi.md)
+        * [格点积分模块介绍](develop-gint.md)
     * 平面波代码介绍
         * [Introduction to ABACUS: Path to PW calculation - Part 1](develop-path1.md)
         * [Introduction to ABACUS: Path to PW calculation - Part 2](develop-path2.md)
