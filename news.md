@@ -6,6 +6,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|ABACUS安装教程 - Toolchain (5) - GPU (1)|[网页链接](https://mp.weixin.qq.com/s/YekI3LXy7vuTN36ut5M6Rg)|2025/10/13|原子算筹|
 |拜托了我的赛先生！SAI-1上多卡ABACUS高性能计算案例大赏|[网页链接](https://mp.weixin.qq.com/s/IeLoD_DGnh3Un_mqCc2q2w)|2025/09/22|波本喵|
 |ABACUS v3.9.0.12更新介绍|[网页链接](https://mp.weixin.qq.com/s/j_xnPLcSf19S3bXUSB1DtQ)|2025/08/22|原子算筹|
 |ABACUS v3.9.0.11更新介绍|[网页链接](https://mp.weixin.qq.com/s/V6onMLDJBcJyIE8mnxy19A)|2025/08/06|原子算筹|
