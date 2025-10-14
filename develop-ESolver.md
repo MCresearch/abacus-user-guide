@@ -99,9 +99,13 @@ ESolver::runner()
 
 ## 2. 代码框架图
 
+![代码框架图](picture/fig-esolver-1.png)
+
 图：能量求解器 ESolver 的框架图。ESolver 分成两大部分：第一性原理的能量求解器 ESolver_FP 和经验势的求解器。其中 ESolver_FP 又派生出无轨道密度泛函理论求解器 ESolver_OF（用平面波基矢量）和 Kohn-Sham 密度泛函理论求解器 ESolver_KS。其中 ESolver_KS 需要波函数 Psi，电子信息 ElecState，和电子哈密顿量求解器 HSolver 作为输入，同时可以派生出不同基矢量的能量求解器。
 
 ## 3. 模块关系图
+
+![模块关系图](picture/fig-esolver-2.png)
 
 图：a. IO 模块提供 ESolver 需要的输入参数和物理量输出接口; b. Cell 模块作为 ESolver 模块的核心输入，是 ESolver 的求解目标，ESolver 中的 Cell 模块对象是只读的; c. ESolver 提供 MD 和 Relax 模块需要的系统势能和原子受力、应力等信息;
 
