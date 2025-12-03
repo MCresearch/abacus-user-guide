@@ -40,7 +40,7 @@ python3 setup.py install
 git clone https://gitee.com/mcresearch/abacus-user-guide.git
 ```
 
-下载后解压，之后进入 `abacus-user-guide/examples/interface_Phonopy` 文件夹
+下载后解压，之后进入 `abacus-user-guide/examples/interface_Phonopy/1_Al` 文件夹
 
 # 三、流程
 
