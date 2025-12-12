@@ -1,0 +1,2324 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS 分子动力学使用教程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-dpmd.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    ABACUS编译教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-exx.html">
+            
+                <a href="abacus-exx.html">
+            
+                    
+                    ABACUS 平面波基组下的杂化泛函
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="abacus-dpa3-toturial.html">
+            
+                <a href="abacus-dpa3-toturial.html">
+            
+                    
+                    ABACUS+DPA-3：基于 Bohrium 平台的安装与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.13" data-path="abacus-phonopy-heat.html">
+            
+                <a href="abacus-phonopy-heat.html">
+            
+                    
+                    ABACUS+Phonopy 计算吉布斯自由能等热力学性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="develop-gint.html">
+            
+                <a href="develop-gint.html">
+            
+                    
+                    格点积分模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="develop-fft.html">
+            
+                <a href="develop-fft.html">
+            
+                    
+                    FFT 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    算法文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS 分子动力学使用教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;"><a name="abacus-&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;" class="plugin-anchor" href="#abacus-&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x4F7F;&#x7528;&#x6559;&#x7A0B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x5218;&#x88D5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;liuyu@stu.pku.edu.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2024/09/19</strong></p>
+<p><strong>&#x5728;Bohrium Notebook&#x4E0A;&#x5FEB;&#x901F;&#x5B66;&#x4E60;&#xFF1A;</strong><a href="https://nb.bohrium.dp.tech/detail/2241262724" target="_blank"><img src="https://cdn.dp.tech/bohrium/web/static/images/open-in-bohrium.svg"></a></p>
+<h1 id="&#x4E00;&#x3001;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;"><a name="&#x4E00;&#x3001;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7B80;&#x4ECB;</h1>
+<p><strong>&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Molecular Dynamics&#xFF0C;&#x7B80;&#x79F0; MD&#xFF09;&#xFF1A;</strong>&#x4E00;&#x79CD;&#x6A21;&#x62DF;&#x539F;&#x5B50;&#x4F53;&#x7CFB;&#x968F;&#x65F6;&#x95F4;&#x8FD0;&#x52A8;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x88AB;&#x5E7F;&#x6CDB;&#x7684;&#x7528;&#x6765;&#x7814;&#x7A76;&#x4E0E;&#x539F;&#x5B50;&#x8FD0;&#x52A8;&#x8DEF;&#x5F84;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x8FC7;&#x7A0B;&#xFF0C;&#x5982;&#x76F8;&#x53D8;&#x3001;&#x6269;&#x6563;&#x3001;&#x5316;&#x5B66;&#x53CD;&#x5E94;&#x7B49;&#x7B49;&#x3002;&#x672C;&#x6559;&#x7A0B;&#x65E8;&#x5728;&#x4ECB;&#x7ECD; ABACUS &#x4E2D;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x662F;&#x5982;&#x4F55;&#x9009;&#x53D6;&#x7CBE;&#x5EA6;&#x548C;&#x6548;&#x7387;&#x7684;&#x5E73;&#x8861;&#xFF0C;&#x5176;&#x4E2D;&#x7CBE;&#x5EA6;&#x9AD8;&#x4F4E;&#x4E3B;&#x8981;&#x53D6;&#x51B3;&#x4E8E;&#x52BF;&#x51FD;&#x6570;&#x7684;&#x51C6;&#x786E;&#x7A0B;&#x5EA6;&#xFF0C;&#x800C;&#x6548;&#x7387;&#x4E3B;&#x8981;&#x53D7;&#x9650;&#x4E8E;&#x6C42;&#x51FA;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x80FD;&#x91CF;&#x548C;&#x53D7;&#x529B;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x3002;</p>
+<p><strong>&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Classical MD&#xFF0C;&#x7B80;&#x79F0; CMD&#xFF09;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x6784;&#x5EFA;&#x63CF;&#x8FF0;&#x539F;&#x5B50;&#x95F4;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x7684;&#x52BF;&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x5F97;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x53D7;&#x529B;&#xFF08;&#x53D7;&#x529B;&#x7B49;&#x4E8E;&#x80FD;&#x91CF;&#x5BF9;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#x7684;&#x5BFC;&#x6570;&#xFF09;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x79EF;&#x5206;&#x8FD0;&#x52A8;&#x65B9;&#x7A0B;&#x6765;&#x83B7;&#x5F97;&#x6BCF;&#x4E2A;&#x539F;&#x5B50;&#x7684;&#x4E0B;&#x4E00;&#x65F6;&#x523B;&#x4F4D;&#x7F6E;&#xFF0C;&#x4ECE;&#x800C;&#x83B7;&#x5F97;&#x968F;&#x65F6;&#x95F4;&#x6F14;&#x5316;&#x7684;&#x7C92;&#x5B50;&#x4F4D;&#x7F6E;&#x548C;&#x901F;&#x5EA6;&#x3002;&#x5F53;&#x7CFB;&#x7EDF;&#x5904;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x5BC6;&#x5EA6;&#x3001;&#x6E29;&#x5EA6;&#x548C;&#x538B;&#x5F3A;&#x7B49;&#x7269;&#x7406;&#x6761;&#x4EF6;&#x9650;&#x5236;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x7EDF;&#x8BA1;&#x7269;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;&#x7269;&#x8D28;&#x7684;&#x6027;&#x8D28;&#x3002;&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x91C7;&#x53D6;&#x67D0;&#x4E2A;&#x7CFB;&#x7EFC;&#x540E;&#xFF0C;&#x5BF9;&#x7C92;&#x5B50;&#x4F4D;&#x7F6E;&#x548C;&#x901F;&#x5EA6;&#x91C7;&#x6837;&#xFF0C;&#x4E4B;&#x540E;&#x7EDF;&#x8BA1;&#x51FA;&#x4F53;&#x7CFB;&#x7684;&#x70ED;&#x529B;&#x5B66;&#x5B8F;&#x89C2;&#x6027;&#x8D28;&#x3002;</p>
+<p><strong>&#x4ECE;&#x5934;&#x7B97;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;ab initio molecular dynamics&#xFF0C;&#x7B80;&#x79F0; AIMD&#xFF09;&#xFF1A;</strong>&#x4E5F;&#x79F0;&#x4E3A;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#xFF08;first-principles molecular dynamics&#xFF0C;&#x7B80;&#x79F0; FPMD&#xFF09;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x91C7;&#x7528;&#x7684;&#x662F;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x65B9;&#x6CD5;&#xFF08;&#x4F8B;&#x5982;&#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF09;&#x6765;&#x8BA1;&#x7B97;&#x4F53;&#x7CFB;&#x7684;&#x52BF;&#x80FD;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x8BA1;&#x7B97;&#x91CF;&#x76F8;&#x6BD4;&#x4E8E;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x8981;&#x6602;&#x8D35;&#x5F88;&#x591A;&#x3002;</p>
+<p><strong>ABACUS &#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x529F;&#x80FD;&#xFF1A;</strong>&#x652F;&#x6301;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66; FPMD &#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x7ECF;&#x5178;&#x7684; Lennard-Jones&#xFF08;LJ &#x5BF9;&#x52BF;&#xFF09;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x3002;&#x6B64;&#x5916;&#xFF0C;ABACUS &#x8FD8;&#x652F;&#x6301;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;Deep Potential Molecular Dynamics&#xFF0C;&#x7B80;&#x79F0; DPMD&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x7F16;&#x8BD1; <a href="https://github.com/deepmodeling/deepmd-kit" target="_blank">DeePMD-kit</a> &#x8F6F;&#x4EF6;&#x5305;&#x5E76;&#x5728;&#x7F16;&#x8BD1;&#x539F;&#x5B50;&#x7B97;&#x7B79;&#x8F6F;&#x4EF6;&#x65F6;&#x8FDB;&#x884C;&#x52A8;&#x6001;&#x5E93;&#x7684;&#x94FE;&#x63A5;&#x3002;</p>
+<h1 id="&#x4E8C;&#x3001;&#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><a name="&#x4E8C;&#x3001;&#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x6587;&#x6863;&#x548C;&#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;</h1>
+<p>ABACUS &#x91CC;&#x5173;&#x4E8E;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x65B9;&#x6CD5;&#x7684;&#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x5730;&#x5740;&#x4E3A;&#xFF1A;<a href="http://abacus.deepmodeling.com/en/latest/advanced/md.html" target="_blank">http://abacus.deepmodeling.com/en/latest/advanced/md.html</a></p>
+<p>ABACUS &#x91CC;&#x5173;&#x4E8E;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x53C2;&#x6570;&#x7684;&#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x5730;&#x5740;&#x4E3A;&#xFF1A;</p>
+<p><a href="http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics" target="_blank">http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics</a></p>
+<p>ABACUS &#x7684; MD &#x7B97;&#x4F8B;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x4E3A;&#xFF08;&#x56FD;&#x5185; gitee&#xFF09;&#xFF1A;</p>
+<p><a href="https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/md" target="_blank">https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/md</a></p>
+<p>&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x7684;&#x4E0B;&#x8F7D;&#x547D;&#x4EE4;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code>git clone https://gitee.com/mcresearch/abacus-user-guide.git
+</code></pre><p>&#x4E4B;&#x540E;&#x8FDB;&#x5165; <code>/abacus-user-guide/examples/md</code> &#x76EE;&#x5F55;</p>
+<p>&#x6216;&#x8005;&#x91C7;&#x7528; Github &#x4ED3;&#x5E93;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md" target="_blank">https://github.com/MCresearch/abacus-user-guide/tree/master/examples/md</a></p>
+<p>&#x6CE8;&#xFF1A;&#x7B97;&#x4F8B;&#x4ED3;&#x5E93;&#x91CC;&#x9762;&#x5305;&#x542B; <code>1_AIMD</code>&#xFF0C;<code>2_LJMD</code>&#xFF08;&#x91C7;&#x7528; Lennard-Jones &#x7ECF;&#x5178;&#x52BF;&#x505A; MD&#xFF09;&#xFF0C;<code>3_DPMD</code>&#xFF08;&#x91C7;&#x7528;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x65B9;&#x6CD5;&#x505A; MD&#xFF09;&#x548C; <code>4_FIRE</code>&#xFF08;&#x91C7;&#x7528; FIRE &#x7B97;&#x6CD5;&#x505A;&#x7ED3;&#x6784;&#x4F18;&#x5316;&#xFF09;&#x56DB;&#x4E2A;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x4EE5;&#x4E0A;&#x7B97;&#x4F8B;&#x8981;&#x5728; ABACUS v3.2.1 &#x7248;&#x672C;&#x53CA;&#x4EE5;&#x4E0A;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4E0B;&#x8F7D;&#x4F7F;&#x7528; ABACUS &#x6700;&#x65B0;&#x7248;&#x672C;&#xFF01;</p>
+<h2 id="1-&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;aimd&#xFF09;"><a name="1-&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;aimd&#xFF09;" class="plugin-anchor" href="#1-&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;aimd&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF08;AIMD&#xFF09;</h2>
+<p>&#x8FDB;&#x5165; <code>1_AIMD</code> &#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x63D0;&#x4F9B;&#x4E86; 8 &#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C06; <code>INPUT_*</code> &#x590D;&#x5236;&#x4E3A; <code>INPUT</code> &#x5373;&#x53EF;&#xFF08;<code>INPUT_*</code> &#x4EE3;&#x8868;&#x4ECE; <code>INPUT_0</code> &#x5230; <code>INPUT_7</code> &#x5171; 8 &#x4E2A;&#x4E0D;&#x540C;&#x7684; INPUT &#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x5E94; 8 &#x79CD;&#x4E0D;&#x540C;&#x7684; MD &#x7B97;&#x6CD5;&#xFF09;&#x3002;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; 8 &#x539F;&#x5B50;&#x7684;&#x91D1;&#x521A;&#x77F3;&#x7ED3;&#x6784; Si&#xFF0C;&#x6676;&#x683C;&#x7ED3;&#x6784;&#x653E;&#x5728; <code>STRU</code> &#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x5E03;&#x91CC;&#x6E0A;&#x533A;&#x7684; k &#x70B9;&#x91C7;&#x6837;&#x653E;&#x5728; <code>KPT</code> &#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
+<p>8 &#x4E2A; INPUT &#x6587;&#x4EF6;&#x5BF9;&#x5E94;&#x7684; MD &#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><code>INPUT_0</code>&#xFF1A;&#x91C7;&#x7528; NVE &#x5FAE;&#x6B63;&#x5219;&#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_1</code>&#xFF1A;&#x91C7;&#x7528; NVT &#x6B63;&#x5219;&#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_2</code>&#xFF1A;&#x91C7;&#x7528; Langevin &#x70ED;&#x5E93;</p>
+<p><code>INPUT_3</code>&#xFF1A;&#x91C7;&#x7528; Anderson &#x70ED;&#x5E93;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_4</code>&#xFF1A;&#x91C7;&#x7528; MSST &#x65B9;&#x6CD5;</p>
+<p><code>INPUT_5</code>&#xFF1A;&#x91C7;&#x7528; Berendsen &#x70ED;&#x5E93;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_6</code>&#xFF1A;&#x91C7;&#x7528; rescaling &#x65B9;&#x6CD5;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p><code>INPUT_7</code>&#xFF1A;&#x91C7;&#x7528; rescale_v &#x65B9;&#x6CD5;&#xFF0C;NVT &#x7CFB;&#x7EFC;</p>
+<p>&#x4EE5; <code>INPUT_0</code> &#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters (1.General)</span>
+suffix                 Si_nve
+calculation            md
+nbands                 <span class="token number">20</span>
+symmetry               <span class="token number">0</span>
+pseudo_dir             <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/tests/PP_ORB
+orbital_dir            <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/tests/PP_ORB
+
+<span class="token comment">#Parameters (2.Iteration)</span>
+ecutwfc                <span class="token number">30</span>
+scf_thr                1e-5
+scf_nmax               <span class="token number">100</span>
+
+<span class="token comment">#Parameters (3.Basis)</span>
+basis_type             lcao
+ks_solver              genelpa
+gamma_only             <span class="token number">1</span>
+
+<span class="token comment">#Parameters (4.Smearing)</span>
+smearing_method        gaussian
+smearing_sigma         <span class="token number">0.001</span>
+
+<span class="token comment">#Parameters (5.Mixing)</span>
+mixing_type            pulay
+mixing_beta            <span class="token number">0.3</span>
+chg_extrap             second-order
+
+<span class="token comment">#Parameters (6.MD)</span>
+md_type                nve
+md_nstep               <span class="token number">10</span>
+md_dt                  <span class="token number">1</span>
+md_tfirst              <span class="token number">300</span>
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x5728; <a href="http://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#molecular-dynamics" target="_blank">ABACUS &#x7EBF;&#x4E0A;&#x6587;&#x6863;</a>&#x4E2D;&#x5747;&#x6709;&#x8BF4;&#x660E;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x518D;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x6982;&#x8FF0;&#xFF1A;</p>
+<ul>
+<li>calculation&#xFF1A;&#x8BBE;&#x7F6E; ABACUS &#x8BA1;&#x7B97;&#x7C7B;&#x578B;&#xFF0C;&#x505A;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x8BF7;&#x8BBE;&#x7F6E;&#x4E3A; md&#x3002;</li>
+<li>esolver_type&#xFF1A;&#x7ED9;&#x5B9A;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x7CFB;&#x7EDF;&#x80FD;&#x91CF;&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x9ED8;&#x8BA4; Kohn-Sham &#x5BC6;&#x5EA6;&#x6CDB;&#x51FD;&#x7406;&#x8BBA;&#xFF08;ksdft&#xFF09;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; LJ &#x52BF;&#xFF08;lj&#xFF09;&#x6216;&#x8005;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;dp&#xFF09;&#x3002;&#x7406;&#x8BBA;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x6240;&#x6709;&#x7684; esolver_type &#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; MD &#x8BA1;&#x7B97;&#x3002;</li>
+<li>chg_extrap&#xFF1A;&#x7535;&#x8377;&#x5916;&#x63D2;&#x6CD5;&#xFF0C;&#x5728; relax &#x548C; md &#x8BA1;&#x7B97;&#x4E2D;&#x53EF;&#x7528;&#x4E8E;&#x4F18;&#x5316;&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x52A0;&#x901F;&#x7535;&#x5B50;&#x8FED;&#x4EE3;&#x6536;&#x655B;&#xFF0C;MD &#x4E2D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; second-order&#x3002;</li>
+<li>md_type&#xFF1A;MD &#x7B97;&#x6CD5;&#x79CD;&#x7C7B;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6B63;&#x5219;&#x7CFB;&#x7EDF; nvt&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x4F8B;&#x5B50;&#x9009;&#x62E9;&#x7684;&#x662F; nve&#xFF0C;&#x5373; NVE &#x5FAE;&#x6B63;&#x5219;&#x7CFB;&#x7EFC;&#x3002;</li>
+<li>md_nstep&#xFF1A;MD &#x6A21;&#x62DF;&#x7684;&#x603B;&#x6B65;&#x6570;&#x3002;</li>
+<li>md_dt&#xFF1A;MD &#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x65F6;&#x95F4;&#x6B65;&#x957F;&#xFF08;&#x5355;&#x4F4D;&#x662F; fs&#xFF09;&#xFF0C;&#x4E0E; md_nstep &#x5171;&#x540C;&#x51B3;&#x5B9A; MD &#x603B;&#x65F6;&#x957F;&#x3002;</li>
+<li>md_tfirst&#xFF1A;MD &#x7CFB;&#x7EDF;&#x7684;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#xFF08;&#x5355;&#x4F4D;&#x662F; K&#xFF09;&#x3002;</li>
+</ul>
+<h2 id="2-lennard-jones-&#x52BF;&#x51FD;&#x6570;"><a name="2-lennard-jones-&#x52BF;&#x51FD;&#x6570;" class="plugin-anchor" href="#2-lennard-jones-&#x52BF;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2. Lennard-Jones &#x52BF;&#x51FD;&#x6570;</h2>
+<p>&#x8FDB;&#x5165; <code>2_LJMD</code> &#x76EE;&#x5F55;&#xFF0C;ABACUS &#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x91C7;&#x7528; Lennard-Jones&#xFF08;LJ&#xFF09;&#x7ECF;&#x5178;&#x52BF;&#x51FD;&#x6570;&#x8FDB;&#x884C; MD &#x6A21;&#x62DF;&#x7684;&#x7B97;&#x4F8B;&#xFF0C;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; LJ &#x5BF9;&#x52BF;&#x4F5C;&#x4E3A;&#x80FD;&#x91CF;&#x6C42;&#x89E3;&#x5668;&#x6765;&#x505A;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x521D;&#x59CB;&#x7ED3;&#x6784;&#x662F;&#x8FB9;&#x957F; 20 &#x57C3;&#x7684;&#x6B63;&#x65B9;&#x4F53;&#x76D2;&#x5B50;&#x4E2D;&#x7684; 256 &#x4E2A;&#x65E0;&#x5E8F; He &#x539F;&#x5B50;&#x3002;</p>
+<h3 id="21-lj-&#x5BF9;&#x52BF;"><a name="21-lj-&#x5BF9;&#x52BF;" class="plugin-anchor" href="#21-lj-&#x5BF9;&#x52BF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 LJ &#x5BF9;&#x52BF;</h3>
+<p>LJ &#x5BF9;&#x52BF;&#x7684;&#x89E3;&#x6790;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;<script type="math/tex; ">u^{ij}</script>&#x8868;&#x793A;&#x539F;&#x5B50; i &#x4E0E;&#x539F;&#x5B50; j &#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x80FD;&#xFF0C;<script type="math/tex; ">r^{ij}</script>&#x8868;&#x793A;&#x8FD9;&#x4E24;&#x4E2A;&#x539F;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;<script type="math/tex; ">\epsilon</script>&#xFF0C;<script type="math/tex; ">\sigma</script>&#x548C;<script type="math/tex; ">r_{cut}</script>&#x5219;&#x662F; LJ &#x52BF;&#x9700;&#x8981;&#x7684; 3 &#x4E2A;&#x53C2;&#x6570;&#x3002;LJ &#x52BF;&#x53EA;&#x8003;&#x8651;&#x622A;&#x65AD;&#x534A;&#x5F84;<script type="math/tex; ">r_{cut}</script>&#x5185;&#x7684;&#x8FD1;&#x90BB;&#x539F;&#x5B50; j &#x5BF9;&#x4E2D;&#x5FC3;&#x539F;&#x5B50; i &#x7684;&#x80FD;&#x91CF;&#x8D21;&#x732E;&#x3002;</p>
+<p><script type="math/tex; mode=display">
+\begin{array}{c}
+u^{i j}=4 \varepsilon\left[\left(\frac{\sigma}{r_{i j}}\right)^{12}-\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \\
+\boldsymbol{F}_{i}=-\nabla_{i} U=\sum_{j} 4 \varepsilon\left[12\left(\frac{\sigma}{r_{i j}}\right)^{12}-6\left(\frac{\sigma}{r_{i j}}\right)^{6}\right] \frac{\boldsymbol{r}_{i}-\boldsymbol{r}_{j}}{r_{i j}^{2}} H\left(r_{c u t}-r_{i j}\right)
+\end{array} \\
+H(x)=\left\{\begin{array}{l}
+0\ \ \ \ (x<0) \\
+1\ \ \ \ (x>0)
+\end{array}\right.\\
+</script></p>
+<h3 id="22-stru"><a name="22-stru" class="plugin-anchor" href="#22-stru"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 STRU</h3>
+<p>LJMD &#x662F;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B; <code>KPT</code>&#xFF0C;&#x8D5D;&#x52BF;&#x548C;&#x8F68;&#x9053;&#x6587;&#x4EF6;&#xFF0C;<code>STRU</code> &#x7684;&#x524D;&#x9762;&#x51E0;&#x90E8;&#x5206;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">ATOMIC_SPECIES
+He <span class="token number">4.0026</span>
+
+LATTICE_CONSTANT
+<span class="token number">1.889727</span>
+
+LATTICE_VECTORS
+<span class="token number">20</span> <span class="token number">0</span> <span class="token number">0</span>
+<span class="token number">0</span> <span class="token number">20</span> <span class="token number">0</span>
+<span class="token number">0</span> <span class="token number">0</span> <span class="token number">20</span>
+
+ATOMIC_POSITIONS
+Cartesian
+
+He <span class="token comment">#label</span>
+<span class="token number">0</span> <span class="token comment">#magnetism</span>
+<span class="token number">256</span> <span class="token comment">#number of atoms</span>
+</code></pre>
+<ul>
+<li>ATOMIC_SPECIES&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8D5D;&#x52BF;&#x4FE1;&#x606F;</li>
+<li>NUMERICAL_ORBITAL&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x8F68;&#x9053;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="23-input"><a name="23-input" class="plugin-anchor" href="#23-input"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 INPUT</h3>
+<p><code>INPUT</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x9700;&#x8981;&#x505A;&#x5C11;&#x91CF;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters (General)</span>
+suffix              autotest
+
+calculation         md
+pseudo_dir          <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+
+<span class="token comment">#Parameters (esolver)</span>
+esolver_type        lj
+lj_rcut             <span class="token number">8.5</span>
+lj_epsilon          <span class="token number">0.01032</span>
+lj_sigma            <span class="token number">3.405</span>
+
+cal_force           <span class="token number">1</span>
+cal_stress          <span class="token number">1</span>
+
+<span class="token comment">#Parameters (MD)</span>
+md_nstep            <span class="token number">5</span>
+md_type             nve
+md_dt               <span class="token number">1</span>
+md_tfirst           <span class="token number">300</span>
+
+init_vel            <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>esolver_type&#xFF1A;&#x6307;&#x5B9A;&#x4E3A; lj &#x5C31;&#x53EF;&#x4EE5;&#x505A; Lennard-Jones &#x7ECF;&#x5178;&#x52BF;&#x51FD;&#x6570;&#x3002;</li>
+<li>lj_rcut&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x622A;&#x65AD;&#x534A;&#x5F84;<script type="math/tex; ">r_{cut}</script>&#x3002;</li>
+<li>lj_epsilon&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;<script type="math/tex; ">\epsilon</script>&#x3002;</li>
+<li>lj_sigma&#xFF1A;LJ &#x5BF9;&#x52BF;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5373;<script type="math/tex; ">\sigma</script>&#x3002;</li>
+<li>init_vel&#xFF1A;&#x8BFB;&#x53D6; <code>STRU</code> &#x4E2D;&#x7684;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x4FE1;&#x606F;&#xFF0C;&#x539F;&#x5B50;&#x5355;&#x4F4D;&#x5236;&#x3002;</li>
+</ul>
+<h2 id="3-&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;deep-potential&#xFF09;"><a name="3-&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;deep-potential&#xFF09;" class="plugin-anchor" href="#3-&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;deep-potential&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#xFF08;Deep Potential&#xFF09;</h2>
+<p>ABACUS &#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; DPMD &#x7684;&#x7B97;&#x4F8B;&#xFF0C;&#x8FDB;&#x5165; <code>3_DPMD</code> &#x76EE;&#x5F55;&#x3002;&#x8BE5;&#x7B97;&#x4F8B;&#x91C7;&#x7528; DP &#x6A21;&#x578B;&#xFF08;DeePMD-kit &#x4EA7;&#x751F;&#x7684;&#x6DF1;&#x5EA6;&#x52BF;&#x80FD;&#x6A21;&#x578B;&#xFF09;&#x4F5C;&#x4E3A;&#x80FD;&#x91CF;&#x6C42;&#x89E3;&#x5668;&#x6765;&#x505A;&#x57FA;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x521D;&#x59CB;&#x7ED3;&#x6784;&#x662F; 864 &#x4E2A;&#x65E0;&#x5E8F;&#x94DD;&#x539F;&#x5B50;&#x3002;</p>
+<h3 id="31-dp-&#x6A21;&#x578B;"><a name="31-dp-&#x6A21;&#x578B;" class="plugin-anchor" href="#31-dp-&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 DP &#x6A21;&#x578B;</h3>
+<p><a href="https://github.com/deepmodeling/deepmd-kit" target="_blank">DeePMD-kit</a> &#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7684;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x6A21;&#x62DF;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x8BA1;&#x7B97;&#x6570;&#x636E;&#x5BF9;&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x901A;&#x7528;&#x7684;&#x591A;&#x4F53;&#x52BF;&#x80FD;&#x6A21;&#x578B;&#xFF08;DP &#x6A21;&#x578B;&#xFF09;&#x3002;</p>
+<h3 id="32-&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;"><a name="32-&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#32-&#x7F16;&#x8BD1;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x7F16;&#x8BD1;&#x65B9;&#x5F0F;</h3>
+<p>ABACUS &#x91C7;&#x7528; DP &#x6A21;&#x578B;&#x505A; MD &#x8BA1;&#x7B97;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x4E0E; DeePMD-kit &#x7684;&#x63A5;&#x53E3;&#xFF0C;<a href="http://abacus.deepmodeling.com/en/latest/advanced/install.html#build-with-deepmd-kit" target="_blank">cmake</a> &#x4EE5;&#x53CA; <a href="http://abacus.deepmodeling.com/en/latest/advanced/install.html#add-deepmd-kit-support" target="_blank">makefile</a> &#x7F16;&#x8BD1;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003; ABACUS &#x7EBF;&#x4E0A;&#x6587;&#x6863;&#x3002;</p>
+<h3 id="33-input-&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;"><a name="33-input-&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;" class="plugin-anchor" href="#33-input-&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 INPUT &#x6587;&#x4EF6;&#x8BBE;&#x7F6E;</h3>
+<p>DPMD &#x662F;&#x7ECF;&#x5178;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63D0;&#x4F9B; KPT&#xFF0C;&#x8D5D;&#x52BF;&#x548C;&#x8F68;&#x9053;&#x6587;&#x4EF6;</p>
+<p>INPUT &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x9700;&#x8981;&#x505A;&#x5C11;&#x91CF;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters        (General)</span>
+suffix              autotest
+calculation         md
+
+esolver_type        dp
+pot_file            <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB/Al-SCAN.pb
+
+cal_force           <span class="token number">1</span>
+cal_stress          <span class="token number">1</span>
+
+md_nstep            <span class="token number">3</span>
+md_type             msst
+md_dt               <span class="token number">1</span>
+md_tfirst           <span class="token number">200</span>
+md_dumpfreq         <span class="token number">1</span>
+md_restartfreq      <span class="token number">1</span>
+
+msst_qmass          <span class="token number">200</span>
+msst_vel            <span class="token number">0.028</span>
+msst_vis            <span class="token number">0.3</span>
+
+init_vel            <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>esolver_type&#xFF1A;&#x8BBE;&#x7F6E;&#x4E3A; dp</li>
+<li>pot_file&#xFF1A;DP &#x6A21;&#x578B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</li>
+<li>md_dumpfreq&#xFF1A;MD &#x8F93;&#x51FA;&#x6587;&#x4EF6; MD_dump &#x4E2D;&#x539F;&#x5B50;&#x4EE5;&#x53CA;&#x6676;&#x80DE;&#x4FE1;&#x606F;&#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;</li>
+<li>md_restartfreq&#xFF1A;&#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU_MD_${istep} &#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;MD &#x7EED;&#x7B97;&#x6587;&#x4EF6; Restart_md.dat &#x7684;&#x66F4;&#x65B0;&#x9891;&#x7387;</li>
+</ul>
+<h1 id="&#x4E09;&#x3001;md-&#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;"><a name="&#x4E09;&#x3001;md-&#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;" class="plugin-anchor" href="#&#x4E09;&#x3001;md-&#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;MD &#x8F93;&#x51FA;&#x548C;&#x7EED;&#x7B97;&#x529F;&#x80FD;</h1>
+<h2 id="1-md-&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><a name="1-md-&#x8F93;&#x51FA;&#x6587;&#x4EF6;" class="plugin-anchor" href="#1-md-&#x8F93;&#x51FA;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1. MD &#x8F93;&#x51FA;&#x6587;&#x4EF6;</h2>
+<p>ABACUS &#x7684; MD &#x6A21;&#x62DF;&#x4F1A;&#x4EA7;&#x751F; 3 &#x7C7B;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF1A;&#x7ED3;&#x6784;&#x6587;&#x4EF6; <code>STRU_MD_${istep}</code>&#xFF0C;&#x7EED;&#x7B97;&#x6587;&#x4EF6; <code>Restart_md.dat</code>&#xFF0C;&#x4FE1;&#x606F;&#x6587;&#x4EF6; <code>MD_dump</code>&#x3002;</p>
+<h3 id="11-&#x7ED3;&#x6784;&#x6587;&#x4EF6;-strumdistep"><a name="11-&#x7ED3;&#x6784;&#x6587;&#x4EF6;-strumdistep" class="plugin-anchor" href="#11-&#x7ED3;&#x6784;&#x6587;&#x4EF6;-strumdistep"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU_MD_${istep}</h3>
+<p>&#x53C2;&#x6570; <code>md_restartfreq</code> &#x63A7;&#x5236; OUT.${suffix}/STRU/&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7ED3;&#x6784;&#x6587;&#x4EF6;STRU_MD_${istep}&#x7684;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E0E;&#x8F93;&#x5165;&#x7ED3;&#x6784;&#x6587;&#x4EF6; STRU &#x76F8;&#x540C;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E; MD &#x7EED;&#x7B97;&#x3002;&#x8FD9;&#x91CC; istep &#x4EE3;&#x8868;&#x79BB;&#x5B50;&#x6B65;&#xFF0C;&#x4ECE; 0 &#x5F00;&#x59CB;&#x8BA1;&#x6570;&#x3002;</p>
+<h3 id="12-&#x7EED;&#x7B97;&#x6587;&#x4EF6;-restartmddat"><a name="12-&#x7EED;&#x7B97;&#x6587;&#x4EF6;-restartmddat" class="plugin-anchor" href="#12-&#x7EED;&#x7B97;&#x6587;&#x4EF6;-restartmddat"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x7EED;&#x7B97;&#x6587;&#x4EF6; Restart_md.dat</h3>
+<p>&#x53C2;&#x6570; <code>md_restartfreq</code> &#x63A7;&#x5236; OUT.${suffix}/Restart_md.dat &#x7684;&#x66F4;&#x65B0;&#x9891;&#x7387;&#xFF0C;&#x7528;&#x4E8E; MD &#x7EED;&#x7B97;&#x3002;</p>
+<h3 id="13-&#x4FE1;&#x606F;&#x6587;&#x4EF6;-mddump"><a name="13-&#x4FE1;&#x606F;&#x6587;&#x4EF6;-mddump" class="plugin-anchor" href="#13-&#x4FE1;&#x606F;&#x6587;&#x4EF6;-mddump"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x4FE1;&#x606F;&#x6587;&#x4EF6; MD_dump</h3>
+<p>&#x53C2;&#x6570; <code>md_dumpfreq</code> &#x63A7;&#x5236; OUT.${suffix}/MD_dump &#x6587;&#x4EF6;&#x7684;&#x8FFD;&#x52A0;&#x8F93;&#x51FA;&#x9891;&#x7387;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x6BCF; <code>md_dumpfreq</code> &#x6B65;&#x7684; MD &#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC; MD &#x6B65;&#x6570;&#xFF0C;&#x6676;&#x683C;&#x5E38;&#x6570;&#xFF0C;&#x6676;&#x683C;&#x77E2;&#x91CF;&#xFF0C;&#x6676;&#x683C;&#x7EF4;&#x91CC;&#xFF0C;&#x539F;&#x5B50;&#x7F16;&#x53F7;&#xFF0C;&#x539F;&#x5B50;&#x4F4D;&#x7F6E;&#xFF0C;&#x539F;&#x5B50;&#x53D7;&#x529B;&#xFF0C;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x3002;&#x5176;&#x4E2D;&#xFF0C;&#x6676;&#x683C;&#x7EF4;&#x91CC;&#xFF0C;&#x539F;&#x5B50;&#x53D7;&#x529B;&#xFF0C;&#x539F;&#x5B50;&#x901F;&#x5EA6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x53C2;&#x6570; <code>dump_virial</code>&#xFF0C;<code>dump_force</code>&#xFF0C;<code>dump_vel</code> &#x63A7;&#x5236;&#x662F;&#x5426;&#x8F93;&#x51FA;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">MDSTEP:  <span class="token number">0</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">123.045275146001</span>  <span class="token parameter variable">-3.807535058112</span>  <span class="token parameter variable">-13.541439282961</span>
+  <span class="token parameter variable">-3.807535058112</span>  <span class="token number">124.421300186299</span>  <span class="token number">24.047959743672</span>
+  <span class="token parameter variable">-13.541439282961</span>  <span class="token number">24.047959743672</span>  <span class="token number">125.016024430342</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">0.000000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.000000000000</span>  <span class="token parameter variable">-0.885362725233</span>  <span class="token number">0.500467424348</span>  <span class="token number">0.150239620206</span>  <span class="token parameter variable">-0.003506076235</span>  <span class="token number">0.000412570794</span>  <span class="token number">0.000094403053</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.300822817264</span>  <span class="token number">1.376389287977</span>  <span class="token number">1.354798867769</span>  <span class="token number">0.885362725233</span>  <span class="token parameter variable">-0.500467424348</span>  <span class="token parameter variable">-0.150239620206</span>  <span class="token number">0.003506076235</span>  <span class="token parameter variable">-0.000412570794</span>  <span class="token parameter variable">-0.000094403053</span>
+
+MDSTEP:  <span class="token number">1</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">123.051574098220</span>  <span class="token parameter variable">-2.465332696362</span>  <span class="token parameter variable">-10.608474638302</span>
+  <span class="token parameter variable">-2.465332696362</span>  <span class="token number">123.587154919736</span>  <span class="token number">16.307187552709</span>
+  <span class="token parameter variable">-10.608474638302</span>  <span class="token number">16.307187552709</span>  <span class="token number">123.960669810770</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.389827754452</span>  <span class="token number">2.701629481339</span>  <span class="token number">2.699621723525</span>  <span class="token parameter variable">-0.602062173578</span>  <span class="token number">0.391990779819</span>  <span class="token number">0.096323485153</span>  <span class="token parameter variable">-0.010548689866</span>  <span class="token number">0.004659227844</span>  <span class="token number">0.001267888485</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.308600113700</span>  <span class="token number">1.373562332082</span>  <span class="token number">1.353979669688</span>  <span class="token number">0.602062173578</span>  <span class="token parameter variable">-0.391990779819</span>  <span class="token parameter variable">-0.096323485153</span>  <span class="token number">0.010548689866</span>  <span class="token parameter variable">-0.004659227844</span>  <span class="token parameter variable">-0.001267888485</span>
+
+MDSTEP:  <span class="token number">2</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">122.953007762375</span>  <span class="token parameter variable">-0.240072876170</span>  <span class="token parameter variable">-4.211946086929</span>
+  <span class="token parameter variable">-0.240072876170</span>  <span class="token number">122.930693852071</span>  <span class="token number">3.378536464243</span>
+  <span class="token parameter variable">-4.211946086929</span>  <span class="token number">3.378536464243</span>  <span class="token number">122.992607262385</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.376757913710</span>  <span class="token number">2.708010452044</span>  <span class="token number">2.701308224779</span>  <span class="token parameter variable">-0.124946902346</span>  <span class="token number">0.155367961328</span>  <span class="token number">0.009378252255</span>  <span class="token parameter variable">-0.012739769308</span>  <span class="token number">0.006644009927</span>  <span class="token number">0.001613591879</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.321669954442</span>  <span class="token number">1.367181361377</span>  <span class="token number">1.352293168434</span>  <span class="token number">0.124946902346</span>  <span class="token parameter variable">-0.155367961328</span>  <span class="token parameter variable">-0.009378252255</span>  <span class="token number">0.012739769308</span>  <span class="token parameter variable">-0.006644009927</span>  <span class="token parameter variable">-0.001613591879</span>
+
+MDSTEP:  <span class="token number">3</span>
+LATTICE_CONSTANT: <span class="token number">5.397605400000</span> Angstrom
+LATTICE_VECTORS
+  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>
+  <span class="token number">0.500000000000</span>  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>
+  <span class="token number">0.000000000000</span>  <span class="token number">0.500000000000</span>  <span class="token number">0.500000000000</span>
+VIRIAL <span class="token punctuation">(</span>kbar<span class="token punctuation">)</span>
+  <span class="token number">122.881221914392</span>  <span class="token number">1.206247195689</span>  <span class="token number">2.345023988024</span>
+  <span class="token number">1.206247195689</span>  <span class="token number">123.110079832453</span>  <span class="token parameter variable">-8.436042066928</span>
+  <span class="token number">2.345023988024</span>  <span class="token parameter variable">-8.436042066928</span>  <span class="token number">123.123976300784</span>
+INDEX    LABEL    POSITION <span class="token punctuation">(</span>Angstrom<span class="token punctuation">)</span>    FORCE <span class="token punctuation">(</span>eV/Angstrom<span class="token punctuation">)</span>    VELOCITY <span class="token punctuation">(</span>Angstrom/fs<span class="token punctuation">)</span>
+  <span class="token number">0</span>  Si  <span class="token number">5.364727401370</span>  <span class="token number">2.714719749381</span>  <span class="token number">2.702800880457</span>  <span class="token number">0.310711926370</span>  <span class="token parameter variable">-0.086233730382</span>  <span class="token parameter variable">-0.043760493686</span>  <span class="token parameter variable">-0.009222308089</span>  <span class="token number">0.005510922784</span>  <span class="token number">0.001122226311</span>
+  <span class="token number">1</span>  Si  <span class="token number">1.333700466782</span>  <span class="token number">1.360472064040</span>  <span class="token number">1.350800512757</span>  <span class="token parameter variable">-0.310711926370</span>  <span class="token number">0.086233730382</span>  <span class="token number">0.043760493686</span>  <span class="token number">0.009222308089</span>  <span class="token parameter variable">-0.005510922784</span>  <span class="token parameter variable">-0.001122226311</span>
+</code></pre>
+<h2 id="2-md-&#x7EED;&#x7B97;&#x529F;&#x80FD;"><a name="2-md-&#x7EED;&#x7B97;&#x529F;&#x80FD;" class="plugin-anchor" href="#2-md-&#x7EED;&#x7B97;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>2 MD &#x7EED;&#x7B97;&#x529F;&#x80FD;</h2>
+<p>&#x5982;&#x679C; ABACUS &#x8FD0;&#x884C;&#x8FBE;&#x5230;&#x6307;&#x5B9A;&#x7684; MD &#x6B65;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x8BA1;&#x7B97;&#x4E2D;&#x65AD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; MD &#x7EED;&#x7B97;&#x529F;&#x80FD;&#x7EE7;&#x7EED;&#x4E4B;&#x524D;&#x7684; MD &#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4E00;&#x4E2A; <code>INPUT</code> &#x6587;&#x4EF6;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters        (General)</span>
+suffix              autotest
+calculation         md
+pseudo_dir          <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+
+esolver_type        dp
+pot_file            <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB/Al-SCAN.pb
+
+cal_force           <span class="token number">1</span>
+cal_stress          <span class="token number">1</span>
+
+md_nstep            <span class="token number">3</span>
+md_type             msst
+md_dt               <span class="token number">1</span>
+md_tfirst           <span class="token number">200</span>
+md_dumpfreq         <span class="token number">1</span>
+md_restartfreq      <span class="token number">1</span>
+md_restart          <span class="token number">1</span>
+
+msst_qmass          <span class="token number">200</span>
+msst_vel            <span class="token number">0.028</span>
+msst_vis            <span class="token number">0.3</span>
+
+init_vel            <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>md_restart&#xFF1A;&#x63A7;&#x5236;&#x7EED;&#x7B97;&#x7684;&#x5F00;&#x5173;&#xFF0C;&#x5728; MD &#x7EED;&#x7B97;&#x65F6;&#x5C06;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x4E3A; 1&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4E0D;&#x53D8;&#x3002;&#x5F53; md_restart &#x8BBE;&#x4E3A; 1&#xFF0C;ABACUS &#x4F1A;&#x8BFB;&#x53D6;<code>${read_file_dir}/Restart_md.dat</code>&#x6587;&#x4EF6;&#xFF0C;&#x4ECE;&#x4E2D;&#x83B7;&#x53D6;&#x5F53;&#x524D;MD&#x6B65;&#x6570;istep&#x4EE5;&#x53CA;&#x7EED;&#x7B97;&#x6240;&#x9700;&#x7684;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x5982;&#x6052;&#x6E29;&#x5668;&#x4EE5;&#x53CA;&#x6052;&#x538B;&#x5668;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6839;&#x636E;istep&#x4ECE;<code>OUT.${suffix}/STRU/</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x8BFB;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x7ED3;&#x6784;&#x6587;&#x4EF6; <code>STRU_MD_${istep}</code>&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C; MD &#x7EED;&#x7B97;&#x4E86;&#x3002;</li>
+</ul>
+<h1 id="&#x56DB;&#x3001;md-&#x540E;&#x5904;&#x7406;"><a name="&#x56DB;&#x3001;md-&#x540E;&#x5904;&#x7406;" class="plugin-anchor" href="#&#x56DB;&#x3001;md-&#x540E;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;MD &#x540E;&#x5904;&#x7406;</h1>
+<p>&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x8F6F;&#x4EF6;&#x5982; <a href="https://jp-minerals.org/vesta/en/" target="_blank">VESTA</a>&#x3001;<a href="https://www.ks.uiuc.edu/Research/vmd/" target="_blank">VMD</a>&#x3001;<a href="https://www.ovito.org/" target="_blank">OVITO</a> &#x5E76;&#x4E0D;&#x652F;&#x6301; ABACUS &#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x540E;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x5B9E;&#x73B0; ABACUS &#x7684; STRU&#x3001;MD_dump &#x6587;&#x4EF6;&#x4E0E;&#x5E38;&#x7528;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x7684;&#x8F6C;&#x5316;&#x3002;&#x6211;&#x4EEC;&#x6BD4;&#x8F83;&#x63A8;&#x8350;&#x7684;&#x540E;&#x5904;&#x7406;&#x8F6F;&#x4EF6;&#x6709;&#xFF1A;</p>
+<h2 id="1-ase"><a name="1-ase" class="plugin-anchor" href="#1-ase"><i class="fa fa-link" aria-hidden="true"></i></a>1 ASE</h2>
+<ul>
+<li>&#x5B98;&#x7F51;&#xFF1A;<a href="https://wiki.fysik.dtu.dk/ase/" target="_blank">https://wiki.fysik.dtu.dk/ase/</a></li>
+<li>&#x7528;&#x6CD5;&#x53C2;&#x8003; ABACUS &#x7EBF;&#x4E0A;&#x6587;&#x6863;&#xFF1A;<a href="http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html" target="_blank">http://abacus.deepmodeling.com/en/latest/advanced/interface/ase.html</a></li>
+</ul>
+<h2 id="2-dpdata"><a name="2-dpdata" class="plugin-anchor" href="#2-dpdata"><i class="fa fa-link" aria-hidden="true"></i></a>2 dpdata</h2>
+<ul>
+<li>github &#x7F51;&#x5740;&#xFF1A;<a href="https://github.com/deepmodeling/dpdata" target="_blank">https://github.com/deepmodeling/dpdata</a></li>
+<li>gitee &#x7F51;&#x5740;&#xFF1A;<a href="https://gitee.com/deepmodeling/dpdata" target="_blank">https://gitee.com/deepmodeling/dpdata</a></li>
+</ul>
+<h2 id="3-&#x6848;&#x4F8B;"><a name="3-&#x6848;&#x4F8B;" class="plugin-anchor" href="#3-&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>3 &#x6848;&#x4F8B;</h2>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x7528; LJMD &#x7B97;&#x4F8B;&#x6765;&#x6F14;&#x793A;&#x5982;&#x4F55;&#x91C7;&#x7528;<strong>dpdata+OVITO</strong>&#x7684;&#x65B9;&#x5F0F;&#x5728; MD &#x8BA1;&#x7B97;&#x5B8C;&#x6210;&#x540E;&#x5236;&#x4F5C;&#x5206;&#x5B50;&#x52A8;&#x529B;&#x5B66;&#x8F68;&#x8FF9;&#x52A8;&#x753B;&#x3002;</p>
+<h3 id="31-md-&#x8BA1;&#x7B97;"><a name="31-md-&#x8BA1;&#x7B97;" class="plugin-anchor" href="#31-md-&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 MD &#x8BA1;&#x7B97;</h3>
+<p>&#x4E0B;&#x8F7D;&#x6848;&#x4F8B;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> clone https://gitee.com/mcresearch/abacus-user-guide
+</code></pre>
+<p>&#x8FDB;&#x5165; LJMD &#x6587;&#x4EF6;&#x5939;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">cd</span> abacus-user-guide/examples/md/2_LJMD
+</code></pre>
+<p>&#x4FEE;&#x6539; INPUT &#x53C2;&#x6570;&#xFF0C;&#x628A; md_nstep &#x6539;&#x4E3A; 100</p>
+<pre class="language-"><code class="lang-bash">INPUT_PARAMETERS
+<span class="token comment">#Parameters (General)</span>
+suffix              autotest
+
+calculation         md
+pseudo_dir          <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+
+<span class="token comment">#Parameters (esolver)</span>
+esolver_type        lj
+lj_rcut             <span class="token number">8.5</span>
+lj_epsilon          <span class="token number">0.01032</span>
+lj_sigma            <span class="token number">3.405</span>
+
+cal_force           <span class="token number">1</span>
+cal_stress          <span class="token number">1</span>
+
+<span class="token comment">#Parameters (MD)</span>
+md_nstep            <span class="token number">100</span>
+md_type             nve
+md_dt               <span class="token number">1</span>
+md_tfirst           <span class="token number">300</span>
+
+init_vel            <span class="token number">1</span>
+</code></pre>
+<p>&#x8FD0;&#x884C; abacus</p>
+<pre class="language-"><code class="lang-bash">$ abacus
+</code></pre>
+<h3 id="32-dpdata-&#x8F6C;&#x5316;&#x683C;&#x5F0F;"><a name="32-dpdata-&#x8F6C;&#x5316;&#x683C;&#x5F0F;" class="plugin-anchor" href="#32-dpdata-&#x8F6C;&#x5316;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 dpdata &#x8F6C;&#x5316;&#x683C;&#x5F0F;</h3>
+<p>&#x5B89;&#x88C5; dpdata</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">git</span> clone https://github.com/deepmodeling/dpdata.git dpdata
+$ <span class="token builtin class-name">cd</span> dpdata
+$ pip <span class="token function">install</span> <span class="token builtin class-name">.</span>
+</code></pre>
+<p>&#x8FD0;&#x884C; dpdata&#xFF0C;&#x5C06; MD_dump &#x6587;&#x4EF6;&#x8F6C;&#x5316;&#x4E3A; GROMACS &#x7684; gro &#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6; data.gro</p>
+<pre class="language-"><code class="lang-bash">$ python3
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token function">import</span> dpdata
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> data <span class="token operator">=</span> dpdata.LabeledSystem<span class="token punctuation">(</span><span class="token string">&quot;./&quot;</span>, <span class="token assign-left variable">fmt</span><span class="token operator">=</span><span class="token string">&quot;abacus/md&quot;</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> data.to_gro<span class="token punctuation">(</span><span class="token string">&quot;data.gro&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="33-ovito-&#x5236;&#x4F5C;&#x52A8;&#x753B;"><a name="33-ovito-&#x5236;&#x4F5C;&#x52A8;&#x753B;" class="plugin-anchor" href="#33-ovito-&#x5236;&#x4F5C;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 OVITO &#x5236;&#x4F5C;&#x52A8;&#x753B;</h3>
+<p>&#x6253;&#x5F00; OVITO&#xFF0C;&#x70B9;&#x51FB;&#x5DE6;&#x4E0A;&#x89D2; load file&#xFF0C;&#x9009;&#x62E9;&#x4E0A;&#x4E00;&#x6B65;&#x7684; data.gro &#x6587;&#x4EF6;</p>
+<p><img src="picture/fig_md-1.png" alt=""></p>
+<p>&#x53F3;&#x4E0A;&#x89D2; rendering settings</p>
+<p><img src="picture/fig_md-2.png" alt=""></p>
+<p>&#x70B9;&#x51FB; Render active viewport &#x5373;&#x53EF;&#x4FDD;&#x5B58;&#x52A8;&#x753B;&#x6587;&#x4EF6;</p>
+<p><img src="picture/fig_md-3.png" alt=""></p>
+<h1 id="&#x4E94;&#x3001;&#x7279;&#x6B8A;&#x7684;-md-&#x65B9;&#x6CD5;"><a name="&#x4E94;&#x3001;&#x7279;&#x6B8A;&#x7684;-md-&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x4E94;&#x3001;&#x7279;&#x6B8A;&#x7684;-md-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x7279;&#x6B8A;&#x7684; MD &#x65B9;&#x6CD5;</h1>
+<h2 id="1-fast-inertial-relaxation-engine"><a name="1-fast-inertial-relaxation-engine" class="plugin-anchor" href="#1-fast-inertial-relaxation-engine"><i class="fa fa-link" aria-hidden="true"></i></a>1. Fast Inertial Relaxation Engine</h2>
+<p>ABACUS &#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x57FA;&#x4E8E; MD &#x7684; <a href="https://doi.org/10.1103/PhysRevLett.97.170201" target="_blank">Fast Inertial Relaxation Engine</a> (FIRE)&#x7ED3;&#x6784;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x7B97;&#x6CD5;&#x6BD4;&#x5171;&#x8F6D;&#x68AF;&#x5EA6;&#x6CD5;&#x7684;&#x6807;&#x51C6;&#x5B9E;&#x73B0;&#x5FEB;&#x5F97;&#x591A;&#xFF0C;&#x5177;&#x6709;&#x989D;&#x5916;&#x7684;&#x901F;&#x5EA6;&#x4FEE;&#x6539;&#x548C;&#x81EA;&#x9002;&#x5E94;&#x65F6;&#x95F4;&#x6B65;&#x957F;&#xFF0C;&#x5177;&#x6709;&#x4F18;&#x5F02;&#x7684;&#x4F18;&#x5316;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x9762;&#x63D0;&#x4F9B;&#x7684; <code>4_FIRE</code> &#x7B97;&#x4F8B;&#x4E3A;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x6240;&#x9700;&#x7684;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">INPUT_PARAMETERS
+<span class="token comment">#Parameters (1.General)</span>
+suffix                 Si_fire
+calculation            md
+nbands                 <span class="token number">6</span>
+symmetry               <span class="token number">0</span>
+pseudo_dir             <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+orbital_dir            <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/PP_ORB
+
+<span class="token comment">#Parameters (2.Iteration)</span>
+ecutwfc                <span class="token number">30</span>
+scf_thr                1e-8
+scf_nmax               <span class="token number">100</span>
+
+<span class="token comment">#Parameters (3.Basis)</span>
+basis_type             pw
+
+<span class="token comment">#Parameters (4.Smearing)</span>
+smearing_method        gaussian
+smearing_sigma         <span class="token number">0.001</span>
+
+<span class="token comment">#Parameters (5.Mixing)</span>
+mixing_type            pulay
+mixing_beta            <span class="token number">0.3</span>
+chg_extrap             second-order
+
+<span class="token comment">#Parameters (6.MD)</span>
+md_type                fire
+md_nstep               <span class="token number">100</span>
+md_dt                  <span class="token number">1</span>
+md_tfirst              <span class="token number">300</span>
+
+force_thr_ev           <span class="token number">0.001</span>
+</code></pre>
+<ul>
+<li>calculation&#xFF1A;FIRE &#x7B97;&#x6CD5;&#x662F;&#x57FA;&#x4E8E; MD &#x65B9;&#x6CD5;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x5C06; calculation &#x8BBE;&#x4E3A; md</li>
+<li>md_type&#xFF1A;&#x91C7;&#x7528; FIRE &#x7B97;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x4E3A; fire</li>
+<li>md_tfirst&#xFF1A;MD &#x9700;&#x8981;&#x79BB;&#x5B50;&#x901F;&#x5EA6;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x6E29;&#x5EA6;&#x6765;&#x968F;&#x673A;&#x751F;&#x6210;&#x79BB;&#x5B50;&#x901F;&#x5EA6;&#xFF0C;&#x6216;&#x8005;&#x5728; <code>STRU</code> &#x6587;&#x4EF6;&#x4E2D;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x521D;&#x59CB;&#x901F;&#x5EA6;</li>
+<li>force_thr_ev&#xFF1A;&#x79BB;&#x5B50;&#x53D7;&#x529B;&#x7684;&#x6536;&#x655B;&#x9608;&#x503C;&#xFF0C;&#x5F53;&#x79BB;&#x5B50;&#x53D7;&#x529B;&#x7684;&#x6BCF;&#x4E2A;&#x5206;&#x91CF;&#x5747;&#x5C0F;&#x4E8E;&#x8BE5;&#x9608;&#x503C;&#x6216;&#x8005; MD &#x8FD0;&#x884C;&#x81F3;&#x6700;&#x5927;&#x6B65;&#x6570;&#x65F6;&#xFF0C;MD &#x7EC8;&#x6B62;</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2025-07-11 15:17:43
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="abacus-dpmd.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ABACUS+DeePMD-kit 做机器学习分子动力学模拟">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS 分子动力学使用教程","level":"1.2.4.1","depth":3,"next":{"title":"ABACUS+DeePMD-kit 做机器学习分子动力学模拟","level":"1.2.4.2","depth":3,"path":"abacus-dpmd.md","ref":"abacus-dpmd.md","articles":[]},"previous":{"title":"分子动力学","level":"1.2.4","depth":2,"ref":"","articles":[{"title":"ABACUS 分子动力学使用教程","level":"1.2.4.1","depth":3,"path":"abacus-md.md","ref":"abacus-md.md","articles":[]},{"title":"ABACUS+DeePMD-kit 做机器学习分子动力学模拟","level":"1.2.4.2","depth":3,"path":"abacus-dpmd.md","ref":"abacus-dpmd.md","articles":[]},{"title":"ABACUS+DPA-3：基于 Bohrium 平台的安装与使用","level":"1.2.4.3","depth":3,"path":"abacus-dpa3-toturial.md","ref":"abacus-dpa3-toturial.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.4.1","level":"1.2.2.4","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.4.1"},{"backlink":"abacus-upf.html#fig1.2.2.4.2","level":"1.2.2.4","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.4.2"},{"backlink":"abacus-upf.html#fig1.2.2.4.3","level":"1.2.2.4","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.4.3"},{"backlink":"abacus-upf.html#fig1.2.2.4.4","level":"1.2.2.4","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.4.4"},{"backlink":"abacus-upf.html#fig1.2.2.4.5","level":"1.2.2.4","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.4.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-ESolver.html#fig1.4.4.1.1","level":"1.4.4.1","list_caption":"Figure: 代码框架图","alt":"代码框架图","nro":38,"url":"picture/fig-esolver-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"代码框架图","attributes":{},"skip":false,"key":"1.4.4.1.1"},{"backlink":"develop-ESolver.html#fig1.4.4.1.2","level":"1.4.4.1","list_caption":"Figure: 模块关系图","alt":"模块关系图","nro":39,"url":"picture/fig-esolver-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"模块关系图","attributes":{},"skip":false,"key":"1.4.4.1.2"},{"backlink":"develop-path4.html#fig1.4.5.4.1","level":"1.4.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":40,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.4.5.4.1"},{"backlink":"develop-path4.html#fig1.4.5.4.2","level":"1.4.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":41,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.4.5.4.2"},{"backlink":"develop-path5.html#fig1.4.5.5.1","level":"1.4.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":42,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.4.5.5.1"},{"backlink":"develop-path5.html#fig1.4.5.5.2","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":43,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.4.5.5.2"},{"backlink":"develop-path5.html#fig1.4.5.5.3","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":44,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.4.5.5.3"},{"backlink":"develop-path5.html#fig1.4.5.5.4","level":"1.4.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":45,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.4"},{"backlink":"develop-path5.html#fig1.4.5.5.5","level":"1.4.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":46,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.5"},{"backlink":"develop-path6.html#fig1.4.5.7.1","level":"1.4.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":47,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.4.5.7.1"},{"backlink":"develop-path10.html#fig1.4.5.11.1","level":"1.4.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":48,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.4.5.11.1"},{"backlink":"develop-path10.html#fig1.4.5.11.2","level":"1.4.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":49,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.4.5.11.2"},{"backlink":"develop-path10.html#fig1.4.5.11.3","level":"1.4.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":50,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.4.5.11.3"},{"backlink":"develop-path10.html#fig1.4.5.11.4","level":"1.4.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":51,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.4.5.11.4"},{"backlink":"develop-path10.html#fig1.4.5.11.5","level":"1.4.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":52,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.4.5.11.5"},{"backlink":"develop-path11.html#fig1.4.5.12.1","level":"1.4.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":53,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.4.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":54,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.5.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"abacus-md.md","mtime":"2025-07-11T07:17:43.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-12-12T04:55:11.184Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

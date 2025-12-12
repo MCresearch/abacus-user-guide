@@ -1,0 +1,2301 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Intel oneAPI 2024.x 编译 ABACUS 教程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="abacus-intel.html" />
+    
+    
+    <link rel="prev" href="abacus-gcc.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    ABACUS编译教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-exx.html">
+            
+                <a href="abacus-exx.html">
+            
+                    
+                    ABACUS 平面波基组下的杂化泛函
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="abacus-dpa3-toturial.html">
+            
+                <a href="abacus-dpa3-toturial.html">
+            
+                    
+                    ABACUS+DPA-3：基于 Bohrium 平台的安装与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.13" data-path="abacus-phonopy-heat.html">
+            
+                <a href="abacus-phonopy-heat.html">
+            
+                    
+                    ABACUS+Phonopy 计算吉布斯自由能等热力学性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    ABACUS 开发者文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="develop-gint.html">
+            
+                <a href="develop-gint.html">
+            
+                    
+                    格点积分模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="develop-fft.html">
+            
+                <a href="develop-fft.html">
+            
+                    
+                    FFT 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    算法文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Intel oneAPI 2024.x 编译 ABACUS 教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="intel-oneapi-20242025-&#x7F16;&#x8BD1;-abacus-&#x6559;&#x7A0B;"><a name="intel-oneapi-20242025-&#x7F16;&#x8BD1;-abacus-&#x6559;&#x7A0B;" class="plugin-anchor" href="#intel-oneapi-20242025-&#x7F16;&#x8BD1;-abacus-&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Intel oneAPI 2024/2025 &#x7F16;&#x8BD1; ABACUS &#x6559;&#x7A0B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x9648;&#x8BFA;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;cn037@stu.pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2025/03/22</strong></p>
+<h1 id="intel-oneapi-&#x5DE5;&#x5177;&#x94FE;"><a name="intel-oneapi-&#x5DE5;&#x5177;&#x94FE;" class="plugin-anchor" href="#intel-oneapi-&#x5DE5;&#x5177;&#x94FE;"><i class="fa fa-link" aria-hidden="true"></i></a>Intel OneAPI &#x5DE5;&#x5177;&#x94FE;</h1>
+<blockquote>
+<p>&#x1F382;
+<strong>&#x672C;&#x6559;&#x7A0B;&#x9002;&#x7528;&#x4E8E; 2024.0 &#x53CA;&#x66F4;&#x65B0;&#x7248;&#x672C;&#x7684; oneAPI&#x3002;</strong></p>
+</blockquote>
+<h2 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h2>
+<p>&#x672C;&#x6559;&#x7A0B;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x4F7F;&#x7528; Intel oneAPI 2024/2025 &#x5DE5;&#x5177;&#x94FE;&#x7F16;&#x8BD1; ABACUS&#x3002;</p>
+<p>&#x548C;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x76F8;&#x6BD4;&#xFF0C;&#x65B0;&#x7684; oneAPI &#x5DE5;&#x5177;&#x94FE;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x7B49;&#x65B9;&#x9762;&#x6709;&#x8F83;&#x5927;&#x53D8;&#x5316;&#x3002;</p>
+<p>oneAPI 2024 &#x4E2D;&#xFF0C;Intel&#xAE; C++ Compiler Classic (icc) &#x505C;&#x6B62;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x4E86;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x5E03;&#x5C40;&#x3002;</p>
+<p>oneAPI 2025 &#x4E2D;&#xFF0C;Intel&#xAE; Fortran Compiler Classic (ifort) &#x505C;&#x6B62;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="oneapi-base-toolkit"><a name="oneapi-base-toolkit" class="plugin-anchor" href="#oneapi-base-toolkit"><i class="fa fa-link" aria-hidden="true"></i></a>OneAPI Base Toolkit</h3>
+<p>OneAPI Base Toolkit &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x57FA;&#x7840;&#x5DE5;&#x5177;&#x548C;&#x5E93;&#xFF0C;&#x5305;&#x62EC; <code>BLAS</code>, <code>LAPACK</code>, <code>ScaLAPACK</code> and <code>FFTW3</code> &#x7B49;&#x5173;&#x952E;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><strong>Intel&#xAE; oneAPI DPC++/C++ Compiler</strong>&#xFF1A;&#x9762;&#x5411; CPU&#x3001;GPU&#x3001;FPGA &#x7684; C++ &#x7F16;&#x8BD1;&#x5668;&#x3002;</li>
+<li><strong>Intel&#xAE; oneAPI DPC++ Library</strong>&#xFF1A;&#x63D0;&#x4F9B;&#x5E76;&#x884C;&#x7B97;&#x6CD5;&#x7684;&#x5E93;&#x3002;</li>
+<li><strong>Intel&#xAE; oneAPI Math Kernel Library</strong>&#xFF1A;&#x5373; MKL&#xFF0C;&#x63D0;&#x4F9B;&#x9AD8;&#x5EA6;&#x4F18;&#x5316;&#x7684;&#x6570;&#x5B66;&#x51FD;&#x6570;&#x5E93;&#xFF0C;&#x5305;&#x62EC;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x3001;FFT &#x7B49;&#x3002;</li>
+<li><strong>Intel&#xAE; VTune&#x2122; Profiler</strong>&#xFF1A;&#x6027;&#x80FD;&#x5206;&#x6790;&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x3002;</li>
+</ul>
+<h3 id="oneapi-hpc-toolkit"><a name="oneapi-hpc-toolkit" class="plugin-anchor" href="#oneapi-hpc-toolkit"><i class="fa fa-link" aria-hidden="true"></i></a>OneAPI HPC Toolkit</h3>
+<p>OneAPI HPC Toolkit &#x662F;&#x4E3A;&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#xFF08;HPC&#xFF09;&#x7279;&#x522B;&#x4F18;&#x5316;&#x7684;&#x5DE5;&#x5177;&#x96C6;&#xFF0C;&#x5B83;&#x5728; OneAPI Base Toolkit &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x4E86;&#x66F4;&#x591A;&#x9488;&#x5BF9; HPC &#x5E94;&#x7528;&#x7684;&#x7279;&#x6027;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><strong>Intel&#xAE; oneAPI DPC++/C++ Compiler</strong>&#xFF1A;&#x542B;&#x6709; C++ MPI &#x7F16;&#x8BD1;&#x5668;&#x3002;</li>
+<li><strong>Intel&#xAE; Fortran Compiler &amp; Intel&#xAE; Fortran Compiler Classic</strong>&#xFF1A;Fortran &#x7F16;&#x8BD1;&#x5668;&#x3002;</li>
+<li><strong>Intel&#xAE; MPI Library</strong>&#xFF1A;MPI &#x5E93;&#x3002;</li>
+</ul>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<p>&#x53EF;&#x4EE5;&#x4ECE;&#x5B98;&#x7F51;&#x4E0A;&#x83B7;&#x5F97;&#x6700;&#x65B0;&#x7684;&#x5B89;&#x88C5;&#x5305;&#x3002;&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x3002;</p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&amp;linux-install-type=offline" target="_blank">Download the Intel&#xAE; oneAPI Base Toolkit</a></p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit-download.html?operatingsystem=linux&amp;linux-install-type=offline" target="_blank">Download the Intel&#xAE; HPC Toolkit</a></p>
+<p>&#x4EE5; <strong>2024.2 &#x7248;&#x672C;</strong>&#x4E3A;&#x4F8B;&#xFF0C;&#x5C55;&#x793A;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x548C;&#x5B89;&#x88C5; ABACUS &#x7684;&#x6D41;&#x7A0B;&#x3002;</p>
+<h3 id="offline-installer"><a name="offline-installer" class="plugin-anchor" href="#offline-installer"><i class="fa fa-link" aria-hidden="true"></i></a>Offline installer</h3>
+<h4 id="base-toolkit"><a name="base-toolkit" class="plugin-anchor" href="#base-toolkit"><i class="fa fa-link" aria-hidden="true"></i></a>Base Toolkit</h4>
+<ul>
+<li>&#x4E0B;&#x8F7D;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">wget</span> https://registrationcenter-download.intel.com/akdlm/IRC_NAS/9a98af19-1c68-46ce-9fdd-e249240c7c42/l_BaseKit_p_2024.2.0.634_offline.sh
+</code></pre>
+<ul>
+<li>&#x5B89;&#x88C5;&#xFF0C;&#x53EF;&#x9009;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;&#x5B89;&#x88C5;<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> ./l_BaseKit_p_2024.2.0.634_offline.sh
+</code></pre>
+</li>
+<li>&#x6216;&#x76F4;&#x63A5;&#x5728;shell&#x4E2D;&#x9759;&#x9ED8;&#x5B89;&#x88C5;<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> ./l_BaseKit_p_2024.2.0.634_offline.sh <span class="token parameter variable">-a</span> <span class="token parameter variable">--silent</span> <span class="token parameter variable">--cli</span> <span class="token parameter variable">--eula</span> accept
+</code></pre>
+<h4 id="hpc-toolkit"><a name="hpc-toolkit" class="plugin-anchor" href="#hpc-toolkit"><i class="fa fa-link" aria-hidden="true"></i></a>HPC Toolkit</h4>
+</li>
+<li>&#x4E0B;&#x8F7D;<pre class="language-"><code class="lang-bash"><span class="token function">wget</span> https://registrationcenter-download.intel.com/akdlm/IRC_NAS/d4e49548-1492-45c9-b678-8268cb0f1b05/l_HPCKit_p_2024.2.0.635_offline.sh
+</code></pre>
+</li>
+<li>&#x5B89;&#x88C5;&#xFF0C;&#x7C7B;&#x4F3C;<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> ./l_HPCKit_p_2024.2.0.635_offline.sh <span class="token parameter variable">-a</span> <span class="token parameter variable">--silent</span> <span class="token parameter variable">--cli</span> <span class="token parameter variable">--eula</span> accept
+</code></pre>
+</li>
+<li>&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#xFF0C;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4F4D;&#x4E8E;<code>/opt/intel/oneapi</code>&#x3002;&#x4EE5;2024.2&#x7248;&#x672C;&#x4E3A;&#x4F8B;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x5982;&#x4E0B;&#xFF1A;<pre class="language-"><code class="lang-bash">&#x279C;  oneapi <span class="token function">ls</span>
+<span class="token number">2024.2</span>   basekit  common    dal       dev-utilities  dnnl      dpl     installer  ippcp      logs  modulefiles-setup.sh  setvars.sh   tbb  vtune
+advisor  ccl      compiler  debugger  diagnostics    dpcpp-ct  hpckit  ipp        licensing  mkl   mpi                   support.txt  tcm
+</code></pre>
+</li>
+<li>&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5982; <code>2024.2/</code> &#x548C; <code>installer/</code></li>
+</ul>
+<h2 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;"><a name="&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;" class="plugin-anchor" href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;</h2>
+<p>&#x8981;&#x4F7F;&#x7528; oneAPI &#x63D0;&#x4F9B;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x6B63;&#x786E;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x3002;</p>
+<ul>
+<li>2024.0 &#x53CA;&#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x65B0;&#x7684;&#x76EE;&#x5F55;&#x5E03;&#x5C40;&#x3002;&#x8FD9;&#x5BFC;&#x81F4;&#x4E86;&#x548C;&#x8001;&#x7248;&#x672C;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x53C2;&#x89C1; <a href="https://www.intel.com/content/www/us/en/docs/oneapi/programming-guide/2024-2/use-the-setvars-and-oneapi-vars-scripts-with-linux.html" target="_blank">Use the setvars and oneapi-vars Scripts with Linux*</a></p>
+</blockquote>
+<ul>
+<li>&#x548C;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x76F8;&#x6BD4;&#xFF0C;&#x7531;&#x7EC4;&#x4EF6;&#x76EE;&#x5F55;&#x5E03;&#x5C40;&#xFF08;Component Directory Layout&#xFF09;&#x6539;&#x4E3A;&#x7EDF;&#x4E00;&#x76EE;&#x5F55;&#x5E03;&#x5C40;&#xFF08;Unified Directory Layout&#xFF09;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#xFF08;bin, lib, include, share&#xFF09;&#x7B49;&#x7EDF;&#x4E00;&#x653E;&#x5728;&#x4EE5;&#x5DE5;&#x5177;&#x5305;&#x7248;&#x672C;&#x53F7;&#x547D;&#x540D;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x4E2D;&#x3002;</li>
+<li>&#x5728;&#x539F;&#x5148;&#x7684; Component Directory Layout &#x4E2D;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x4EF6;&#x6709;&#x5404;&#x81EA;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x811A;&#x672C;&#xFF0C;&#x7531;&#x4E00;&#x4E2A;&#x4F4D;&#x4E8E; oneAPI &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684;&#x811A;&#x672C; <code>/opt/intel/oneapi/setvars.sh</code> &#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x3002;&#x65B0;&#x7248;&#x7684; Unified Directory Layout &#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x88AB;&#x96C6;&#x4E2D;&#x5230;&#x7EC4;&#x4EF6;&#x5171;&#x7528;&#x7684;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x5C06;&#x5176;&#x5934;&#x6587;&#x4EF6;&#x63D0;&#x4F9B;&#x7ED9;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684; include &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5C06;&#x5176;&#x5E93;&#x6587;&#x4EF6;&#x63D0;&#x4F9B;&#x7ED9;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684; lib &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x5DE5;&#x5177;&#x5305;&#x4E4B;&#x95F4;&#x7684;&#x5207;&#x6362;&#x66F4;&#x5BB9;&#x6613;&#xFF0C;&#x65E0;&#x9700;&#x7EF4;&#x62A4;&#x901A;&#x7528;&#x7684; <code>setvars.sh</code>&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x5DE5;&#x5177;&#x5305;&#x7248;&#x672C;&#x53F7;&#x547D;&#x540D;&#x7684;&#x76EE;&#x5F55;&#x63D0;&#x4F9B;&#x7684;&#x811A;&#x672C; <code>/opt/intel/oneapi/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toolkit-version</span><span class="token punctuation">&gt;</span></span>/oneapi-vars.sh</code> &#x8BBE;&#x7F6E;&#x3002;</li>
+<li>&#x4EE5; 2024.2 &#x4E3A;&#x4F8B;&#xFF0C;&#x6BCF;&#x6B21;&#x4F7F;&#x7528; icpx &#x7B49;&#x7F16;&#x8BD1;&#x5668;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5728; shell &#x73AF;&#x5883;&#x4E2D; source &#x4E00;&#x6B21;&#x811A;&#x672C;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">.</span> /opt/intel/oneapi/2024.2/oneapi-vars.sh
+<span class="token comment"># configure, build, ...</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5E94;&#x8BE5;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6B63;&#x786E;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># source&#x524D;</span>
+&#x279C;  oneapi mpiicpx <span class="token parameter variable">-v</span>
+zsh: <span class="token builtin class-name">command</span> not found: mpiicpx
+<span class="token comment"># source&#x540E;</span>
+&#x279C;  oneapi mpiicpx <span class="token parameter variable">-v</span>
+mpiicpx <span class="token keyword">for</span> the Intel<span class="token punctuation">(</span>R<span class="token punctuation">)</span> MPI Library @IMPI_OFFICIALVERSION@ <span class="token keyword">for</span> Linux*
+Copyright Intel Corporation.
+Intel<span class="token punctuation">(</span>R<span class="token punctuation">)</span> oneAPI DPC++/C++ Compiler <span class="token number">2024.2</span>.0 <span class="token punctuation">(</span><span class="token number">2024.2</span>.0.20240602<span class="token punctuation">)</span>
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/intel/oneapi/compiler/2024.2/bin/compiler
+Configuration file: /opt/intel/oneapi/compiler/2024.2/bin/compiler/<span class="token punctuation">..</span>/icpx.cfg
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: <span class="token builtin class-name">.</span><span class="token punctuation">;</span>@m64
+Selected multilib: <span class="token builtin class-name">.</span><span class="token punctuation">;</span>@m64
+icpx: warning: argument unused during compilation: <span class="token string">&apos;-I /opt/intel/oneapi/2024.2/include&apos;</span> <span class="token punctuation">[</span>-Wunused-command-line-argument<span class="token punctuation">]</span>
+</code></pre>
+<blockquote>
+<p>&#x1F382;
+source &#x548C;.&#x547D;&#x4EE4;</p>
+</blockquote>
+<ul>
+<li><code>.</code> &#x547D;&#x4EE4;&#x5728; POSIX &#x6807;&#x51C6;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x5728;&#x6240;&#x6709; POSIX &#x517C;&#x5BB9;&#x7684; shell &#x4E2D;&#x90FD;&#x5E94;&#x8BE5;&#x53EF;&#x7528;&#x3002;</li>
+<li><code>source</code> &#x547D;&#x4EE4;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x662F; <code>.</code> &#x7684;&#x522B;&#x540D;&#xFF0C;&#x4F46;&#x5728;&#x67D0;&#x4E9B;&#x73AF;&#x5883;&#x4E2D;&#x4E0D;&#x53EF;&#x7528;&#x3002;&#x5982;&#x679C;&#x811A;&#x672C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; source&#xFF0C;&#x8BF7;&#x6362;&#x6210;&#x901A;&#x7528;&#x7684; <code>.</code>.</li>
+</ul>
+<p>&#x8FD9;&#x4E00;&#x6B65;&#x4F1A;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x4F1A;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x7684; C++ &#x7F16;&#x8BD1;&#x5668;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86; oneAPI &#x7F16;&#x8BD1;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#xFF08;configure&#xFF09;&#x65F6;&#x6307;&#x5B9A;&#x6784;&#x5EFA;&#xFF08;build&#xFF09;&#x91C7;&#x7528;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x5982; <code>CXX=icpx</code>&#x3002;</p>
+<ul>
+<li><strong>2024.0</strong> &#x5F00;&#x59CB;&#xFF0C;&#x539F;&#x5148;&#x7684; classical &#x7F16;&#x8BD1;&#x5668;&#x505C;&#x6B62;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<blockquote>
+<p><a href="https://www.intel.com/content/www/us/en/developer/articles/release-notes/oneapi-c-compiler-release-notes.html" target="_blank">Intel&#xAE; C++ Compiler Classic Release Notes</a></p>
+</blockquote>
+<p>&#x8BF7;&#x4F7F;&#x7528;&#x65B0;&#x7684; <code>icpx/mpiicpx</code> &#x53D6;&#x4EE3;&#x539F;&#x6765;&#x7684; <code>icpc/mpiicpc</code>&#x3002;</p>
+<h1 id="abacus-&#x5B89;&#x88C5;"><a name="abacus-&#x5B89;&#x88C5;" class="plugin-anchor" href="#abacus-&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>abacus &#x5B89;&#x88C5;</h1>
+<h2 id="&#x4F9D;&#x8D56;&#x5E93;"><a name="&#x4F9D;&#x8D56;&#x5E93;" class="plugin-anchor" href="#&#x4F9D;&#x8D56;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F9D;&#x8D56;&#x5E93;</h2>
+<h3 id="&#x5B89;&#x88C5;-cereal"><a name="&#x5B89;&#x88C5;-cereal" class="plugin-anchor" href="#&#x5B89;&#x88C5;-cereal"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5; cereal</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libcereal-dev
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;-elpa"><a name="&#x5B89;&#x88C5;-elpa" class="plugin-anchor" href="#&#x5B89;&#x88C5;-elpa"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5; elpa</h3>
+<p>&#x5728; Ubuntu22.04 &#x7B49;&#x53D1;&#x884C;&#x7248;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; apt &#x83B7;&#x53D6;&#x9884;&#x6784;&#x5EFA;&#x7684; elpa &#x5305;&#xFF08;pre-build packages&#xFF09;&#x3002;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#xFF0C;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684; MPI &#x5E93;&#x6784;&#x5EFA; elpa &#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x51B2;&#x7A81;&#xFF0C;apt &#x83B7;&#x53D6;&#x7684; elpa &#x5305;&#x548C; oneAPI 2024.2 &#x6784;&#x5EFA;&#x7684; abacus &#x5728;&#x8FD0;&#x884C;&#x65F6;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">/usr/bin/ld: warning: libmpi.so.40, needed by /usr/lib/x86_64-linux-gnu/libelpa.so, may conflict with libmpi.so.12
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7B97;&#x4F8B;&#x65F6;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">* * * * * *
+ <span class="token operator">&lt;&lt;</span> Start SCF iteration.
+Abort<span class="token punctuation">(</span><span class="token number">403251971</span><span class="token punctuation">)</span> on <span class="token function">node</span> <span class="token number">0</span> <span class="token punctuation">(</span>rank <span class="token number">0</span> <span class="token keyword">in</span> <span class="token function">comm</span> <span class="token number">0</span><span class="token punctuation">)</span>: Fatal error <span class="token keyword">in</span> internal_Bcast: Unknown error class, error stack:
+internal_Bcast<span class="token punctuation">(</span><span class="token number">4152</span><span class="token punctuation">)</span>: MPI_Bcast<span class="token punctuation">(</span>buffer<span class="token operator">=</span>0x2c0e960, <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">1</span>, INVALID DATATYPE, <span class="token number">1</span>, <span class="token assign-left variable">comm</span><span class="token operator">=</span>0xc400001b<span class="token punctuation">)</span> failed
+internal_Bcast<span class="token punctuation">(</span><span class="token number">4112</span><span class="token punctuation">)</span>: Invalid datatype
+Abort<span class="token punctuation">(</span><span class="token number">67707651</span><span class="token punctuation">)</span> on <span class="token function">node</span> <span class="token number">1</span> <span class="token punctuation">(</span>rank <span class="token number">1</span> <span class="token keyword">in</span> <span class="token function">comm</span> <span class="token number">0</span><span class="token punctuation">)</span>: Fatal error <span class="token keyword">in</span> internal_Bcast: Unknown error class, error stack:
+internal_Bcast<span class="token punctuation">(</span><span class="token number">4152</span><span class="token punctuation">)</span>: MPI_Bcast<span class="token punctuation">(</span>buffer<span class="token operator">=</span>0x2fcdac0, <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">1</span>, INVALID DATATYPE, <span class="token number">1</span>, <span class="token assign-left variable">comm</span><span class="token operator">=</span>0xc4000013<span class="token punctuation">)</span> failed
+internal_Bcast<span class="token punctuation">(</span><span class="token number">4112</span><span class="token punctuation">)</span>: Invalid datatype
+</code></pre>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5229;&#x7528; oneAPI &#x5DE5;&#x5177;&#x94FE;&#x6784;&#x5EFA; elpa&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;-toolchain"><a name="&#x4F7F;&#x7528;-toolchain" class="plugin-anchor" href="#&#x4F7F;&#x7528;-toolchain"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528; toolchain</h4>
+<p>&#x7531;&#x4E8E; elpa &#x7684;&#x7F16;&#x8BD1;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; abacus toolchain &#x811A;&#x672C;&#x81EA;&#x52A8;&#x6784;&#x5EFA;&#x548C;&#x5B89;&#x88C5; elpa&#x3002;&#x8BE5;&#x811A;&#x672C;&#x7528; icpx &#x548C; mpiicpc &#x7F16;&#x8BD1; elpa&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5; cereal &#x548C; libxc&#x3002;</p>
+<p><a href="https://bohrium.dp.tech/notebooks/5215742477" target="_blank">&#x4E00;&#x952E;&#x914D;&#x7F6E;&#x7F16;&#x8BD1; ABACUS | toolchain &#x811A;&#x672C;&#x7684;&#x4F7F;&#x7528;</a></p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">.</span> /opt/intel/oneapi/2024.2/oneapi-vars.sh
+<span class="token builtin class-name">cd</span> abacus-develop/toolchain
+./toolchain_intel.sh <span class="token comment"># &#x811A;&#x672C;&#x5C06;&#x4F1A;&#x7528;intel&#x5DE5;&#x5177;&#x94FE;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x3002;</span>
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x7684;&#x5E93;&#x76EE;&#x5F55;&#x4E3A; <code>abacus-develop/toolchain/install</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x7684;&#x5E93;&#x76EE;&#x5F55;&#x4E3A;abacus-develop/toolchain/install</span>
+ &#x279C;  toolchain git:<span class="token punctuation">(</span>develop<span class="token punctuation">)</span> &#x2717; <span class="token function">ls</span> <span class="token function">install</span>
+cereal-1.3.2  cmake-3.28.1  elpa-2023.05.001  libxc-6.2.2  lsan.supp  setup  toolchain.conf  toolchain.env  tsan.supp  valgrind.supp
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528; toolchain &#x6784;&#x5EFA;&#x7684; elpa&#xFF0C;&#x5728;&#x6784;&#x5EFA; abacus &#x65F6;&#x6709;&#x8B66;&#x544A;&#x5982;&#x4E0B;&#xFF0C;&#x6682;&#x672A;&#x53D1;&#x73B0;&#x5F71;&#x54CD;&#x4F7F;&#x7528;&#x3002;&#x8BE5;&#x95EE;&#x9898;&#x7531; scalapack &#x5E93;&#x672A;&#x6307;&#x5B9A; mkl &#x7248;&#x672C;&#x5BFC;&#x81F4;&#xFF0C;&#x201C;&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x201D;&#x65B9;&#x5F0F;&#xFF08;&#x89C1;&#x4E0B;&#xFF09;&#x65E0;&#x6B64;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x53C2;&#x89C1; <a href="https://gitlab.mpcdf.mpg.de/elpa/elpa/-/blob/master/documentation/INSTALL.md#24-non-standard-paths-or-non-standard-libraries" target="_blank">2.4 Non standard paths or non standard libraries</a></p>
+</blockquote>
+<pre class="language-"><code class="lang-bash">/usr/bin/ld: warning: libmpi.so.40, needed by /lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1, may conflict with libmpi.so.12
+</code></pre>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528; toolchain&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E; <a href="https://gitlab.mpcdf.mpg.de/elpa/elpa/-/blob/master/documentation/INSTALL.md" target="_blank">documentation/INSTALL.md &#xB7; master &#xB7; elpa / elpa &#xB7; GitLab</a>&#xFF0C;&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5; elpa&#x3002;</p>
+<h4 id="&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><a name="&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x884C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;</h4>
+<p>&#x81EA;&#x884C;&#x4E0B;&#x8F7D;&#x548C;&#x5B89;&#x88C5; elpa &#x5230;&#x73AF;&#x5883;&#x4E2D;&#x3002;&#x4EE5; oneAPI 2024.2 &#x548C; elpa-2024.05.001 &#x4E3A;&#x4F8B;&#x3002;</p>
+<ul>
+<li>&#x5728;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D; elpa &#x5305;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">wget</span> https://elpa.mpcdf.mpg.de/software/tarball-archive/Releases/2024.05.001/elpa-2024.05.001.tar.gz
+
+<span class="token function">tar</span> xvf elpa-2024.05.001.tar.gz
+</code></pre>
+<ul>
+<li>&#x4EE5; oneAPI 2024.2 &#x4E3A;&#x4F8B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5B89;&#x88C5;&#x811A;&#x672C;&#xFF0C;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;&#x3002;&#x8FD9;&#x4E00;&#x6B65;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x51E0;&#x5206;&#x949F;&#x3002;&#x5982;&#x679C;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x65F6;&#x663E;&#x793A; oneAPI warnings &#x63D0;&#x793A;&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x8FC7;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5E76;&#x9000;&#x51FA;&#xFF0C;&#x8BF7;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684; shell &#x73AF;&#x5883;&#xFF0C;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x811A;&#x672C;&#x3002;&#x6700;&#x540E;&#x7684; <code>make install&#x548C;ln</code> &#x9700;&#x8981; sudo &#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x63D0;&#x4F9B;&#xFF0C;&#x8BF7;&#x624B;&#x52A8;&#x5B8C;&#x6210;&#x8FD9;&#x4E24;&#x6B65;&#x3002;</li>
+<li>oneAPI <strong>2025.0 &#x5F00;&#x59CB;</strong>&#xFF0C;Intel&#xAE; Fortran Compiler Classic (ifort) &#x505C;&#x6B62;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<blockquote>
+<p><a href="https://www.intel.cn/content/www/cn/zh/developer/articles/release-notes/oneapi-hpc-toolkit/2025.html" target="_blank">Intel&#xAE; HPC Toolkit Release Notes</a></p>
+</blockquote>
+<p>&#x8BF7;&#x4F7F;&#x7528;&#x65B0;&#x7684; <code>ifx/mpiifx</code> &#x53D6;&#x4EE3;&#x539F;&#x6765;&#x7684; <code>ifort/mpiifort</code>&#x3002;</p>
+<p>&#x8BF7;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#xFF0C;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x811A;&#x672C;&#x4E2D;&#x7684; oneAPI &#x5DE5;&#x5177;&#x94FE;&#x7248;&#x672C;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528; oneAPI 2025.0 &#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x8BF7;&#x628A; 21 &#x884C; <code>FC=mpiifort</code> &#x66FF;&#x6362;&#x4E3A; <code>FC=mpiifx</code>&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> elpa-2024.05.001
+</code></pre>
+<pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/bash -e</span>
+
+<span class="token comment"># buildelpa.sh</span>
+<span class="token comment"># run in elpa main dir</span>
+
+<span class="token comment"># source oneAPI environments</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;using oneAPI 2024.2&quot;</span>
+<span class="token builtin class-name">.</span> /opt/intel/oneapi/2024.2/oneapi-vars.sh <span class="token punctuation">\</span>
+<span class="token operator">||</span> <span class="token punctuation">{</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;Failed to load oneAPI environment. Please restart in a new shell without oneAPI vars set.&quot;</span><span class="token punctuation">;</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment"># in elpa main dir</span>
+<span class="token comment"># check whether there is a &apos;build&apos; directory</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-d</span> <span class="token string">&quot;build&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;rm -rf build&quot;</span>
+    <span class="token function">rm</span> <span class="token parameter variable">-rf</span> build
+<span class="token keyword">fi</span>
+<span class="token function">mkdir</span> build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> build
+
+<span class="token assign-left variable">MKL_HOME</span><span class="token operator">=</span>/opt/intel/oneapi/2024.2
+
+<span class="token assign-left variable">__CC</span><span class="token operator">=</span>mpiicx <span class="token assign-left variable">CXX</span><span class="token operator">=</span>mpiicpx <span class="token assign-left variable">FC</span><span class="token operator">=</span>mpiifort <span class="token punctuation">..</span>/configure <span class="token punctuation">\</span>
+--disable-avx --disable-avx2 --disable-avx512 --disable-sse --disable-sse-assembly <span class="token punctuation">\</span>
+<span class="token assign-left variable">SCALAPACK_LDFLAGS</span><span class="token operator">=</span><span class="token string">&quot;-L<span class="token variable">$MKL_HOME</span>/lib/ -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential \
+                             -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -Wl,-rpath,<span class="token variable">$MKL_HOME</span>/lib/&quot;</span> <span class="token punctuation">\</span>
+<span class="token assign-left variable">SCALAPACK_FCFLAGS</span><span class="token operator">=</span><span class="token string">&quot;-L<span class="token variable">$MKL_HOME</span>/lib/ -lmkl_scalapack_lp64 -lmkl_intel_lp64 -lmkl_sequential \
+                    -lmkl_core -lmkl_blacs_intelmpi_lp64 -lpthread -lm -I<span class="token variable">$MKL_HOME</span>/include/mkl/intel64/lp64&quot;</span>
+
+<span class="token function">make</span> -j<span class="token variable"><span class="token variable">$(</span>nproc<span class="token variable">)</span></span> <span class="token operator">&gt;</span> make.log <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> 
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;installation process may require administrative privileges.&quot;</span>
+<span class="token builtin class-name">read</span> <span class="token parameter variable">-p</span> <span class="token string">&quot;Would you like to continue with &apos;sudo make install&apos;? (y/n): &quot;</span> <span class="token parameter variable">-n</span> <span class="token number">1</span> <span class="token parameter variable">-r</span>
+<span class="token builtin class-name">echo</span>    <span class="token comment"># (Optional) Move to a new line</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token environment constant">$REPLY</span> <span class="token operator">=~</span> ^<span class="token punctuation">[</span>Yy<span class="token punctuation">]</span>$ <span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Proceeding with installation using administrative privileges...&quot;</span>
+    <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span> <span class="token operator">&gt;</span> install.log <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span> 
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Installation has been canceled.&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Please manually execute &apos;make install&apos; and link elpa to default path.&quot;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># link elpa to /usr/local/include</span>
+
+<span class="token comment"># The target path for the symbolic link</span>
+<span class="token assign-left variable">LINK_PATH</span><span class="token operator">=</span><span class="token string">&quot;/usr/local/include/elpa&quot;</span>
+<span class="token comment"># The source path for the original link (replace with the actual source path)</span>
+<span class="token assign-left variable">SOURCE_PATH</span><span class="token operator">=</span><span class="token string">&quot;/usr/local/include/elpa-2024.05.001/elpa&quot;</span>
+
+<span class="token comment"># Check if the link exists</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-L</span> <span class="token string">&quot;<span class="token variable">$LINK_PATH</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># If the link exists, delete it</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;The link already exists, deleting the old link...&quot;</span>
+    <span class="token function">sudo</span> <span class="token function">rm</span> <span class="token string">&quot;<span class="token variable">$LINK_PATH</span>&quot;</span>
+<span class="token keyword">else</span>
+    <span class="token comment"># If the link does not exist, check for the presence of a file or directory</span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-e</span> <span class="token string">&quot;<span class="token variable">$LINK_PATH</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;A file or directory exists at the path, unable to create the link. Please delete or rename the file/directory first.&quot;</span>
+        <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+    <span class="token keyword">fi</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># Create a new symbolic link</span>
+<span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> <span class="token string">&quot;<span class="token variable">$SOURCE_PATH</span>&quot;</span> <span class="token string">&quot;<span class="token variable">$LINK_PATH</span>&quot;</span>
+
+<span class="token comment"># Check if the link was created successfully</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token parameter variable">-L</span> <span class="token string">&quot;<span class="token variable">$LINK_PATH</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;The new symbolic link has been created successfully.&quot;</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Failed to create the symbolic link.&quot;</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;elpa install over.&quot;</span>
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;-abacus"><a name="&#x5B89;&#x88C5;-abacus" class="plugin-anchor" href="#&#x5B89;&#x88C5;-abacus"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5; ABACUS</h2>
+<p>&#x914D;&#x7F6E;&#x597D;&#x4F9D;&#x8D56;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5B89;&#x88C5; ABACUS&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; toolchain &#x914D;&#x7F6E;&#x73AF;&#x5883;&#xFF0C;&#x90A3;&#x4E48; toolchain &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x548C;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3002;&#x6784;&#x5EFA;&#x65F6;&#xFF0C;&#x8BF7;&#x5229;&#x7528; <code>abacus-develop/toolchain/build_abacus_intel.sh</code> &#x811A;&#x672C;&#x76F4;&#x63A5;&#x6784;&#x5EFA; ABACUS&#xFF08;&#x5728;&#x5176;&#x4E2D;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x6784;&#x5EFA;&#x3002;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5B89;&#x88C5; ABACUS &#x5E76;&#x4F7F;&#x7528; toolchain &#x7684; ELPA&#xFF1A;&#x9700;&#x8981;&#x8BB0;&#x4F4F;&#x6B64;&#x524D; toolchain &#x5B89;&#x88C5; elpa &#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E4B;&#x524D;&#x9009;&#x62E9;&#x624B;&#x52A8;&#x5B89;&#x88C5; ELPA&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#x81EA;&#x884C;&#x7528; cmake &#x6784;&#x5EFA;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x8BBE;&#x7F6E;&#x73AF;&#x5883;</span>
+<span class="token builtin class-name">.</span> /opt/intel/oneapi/2024.2/oneapi-vars.sh
+<span class="token comment"># configure</span>
+<span class="token comment"># &#x5728;&#x6B64;&#x9009;&#x62E9;oneAPI&#x7684;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x6DFB;&#x52A0;&#x7F16;&#x8BD1;&#x9009;&#x9879;&#xFF0C;&#x6307;&#x5B9A;&#x6B64;&#x524D;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;</span>
+<span class="token assign-left variable">CXX</span><span class="token operator">=</span>mpiicpx cmake <span class="token parameter variable">-B</span> build <span class="token punctuation">\</span>
+<span class="token parameter variable">-DELPA_DIR</span><span class="token operator">=~</span>/abacus-develop/toolchain/install/elpa-2023.05.001/cpu/
+<span class="token comment"># &#x6839;&#x636E;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x5176;&#x4ED6;cmake&#x9009;&#x9879;</span>
+
+<span class="token comment"># build</span>
+cmake <span class="token parameter variable">--build</span> build -j<span class="token variable"><span class="token variable">`</span>nproc<span class="token variable">`</span></span> 
+<span class="token comment"># install</span>
+cmake <span class="token parameter variable">--install</span> build
+</code></pre>
+<h1 id="&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"><a name="&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x548C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h1>
+<ul>
+<li>&#x5728;&#x5F00;&#x59CB;&#x6784;&#x5EFA;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x6E05;&#x9664;&#x539F;&#x6709;&#x7684; build &#x76EE;&#x5F55;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">rm</span> <span class="token parameter variable">-rf</span> build
+</code></pre>
+<ul>
+<li>&#x627E;&#x4E0D;&#x5230;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x8BB0;&#x5F97;&#x8FD0;&#x884C; vars &#x811A;&#x672C;&#x8BBE;&#x7F6E; oneAPI &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">CMake Error at /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake:48 <span class="token punctuation">(</span>message<span class="token punctuation">)</span>:
+  Could not <span class="token function">find</span> compiler <span class="token builtin class-name">set</span> <span class="token keyword">in</span> environment variable CXX:
+
+  mpiicpx.
+
+Call Stack <span class="token punctuation">(</span>most recent call first<span class="token punctuation">)</span>:
+  CMakeLists.txt:7 <span class="token punctuation">(</span>project<span class="token punctuation">)</span>
+
+
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred<span class="token operator">!</span>
+
+<span class="token comment"># &#x8BF7;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;</span>
+<span class="token builtin class-name">.</span> /opt/intel/oneapi/2024.2/oneapi-vars.sh
+</code></pre>
+<ul>
+<li>&#x627E;&#x4E0D;&#x5230; elpa&#xFF0C;&#x8BF7;&#x5728;&#x914D;&#x7F6E;&#x65F6;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">CMake Error <span class="token keyword">in</span> CMakeLists.txt:
+  Imported target <span class="token string">&quot;ELPA::ELPA&quot;</span> includes non-existent path
+
+    <span class="token string">&quot;/usr/include/elpa&quot;</span>
+
+  <span class="token keyword">in</span> its INTERFACE_INCLUDE_DIRECTORIES.  Possible reasons include:
+
+  * The path was deleted, renamed, or moved to another location.
+
+  * An <span class="token function">install</span> or uninstall procedure did not complete successfully.
+
+  * The installation package was faulty and references files it does not
+  provide.
+
+
+<span class="token comment"># &#x8BF7;&#x6307;&#x5B9A;ELPA_DIR&#xFF08;&#x53CA;&#x5176;&#x4ED6;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x6784;&#x5EFA;&#x7684;&#x5E93;&#xFF09;</span>
+<span class="token assign-left variable">CXX</span><span class="token operator">=</span>mpiicpx cmake <span class="token parameter variable">-B</span> build <span class="token punctuation">\</span>
+<span class="token parameter variable">-DELPA_DIR</span><span class="token operator">=~</span>/abacus-develop/toolchain/install/elpa-2023.05.001/cpu/
+</code></pre>
+<ul>
+<li>&#x671F;&#x671B;&#x4F7F;&#x7528; intel &#x5DE5;&#x5177;&#x94FE;&#x7F16;&#x8BD1;&#xFF0C;&#x4F46; cmake &#x663E;&#x793A;&#x4F7F;&#x7528; GNU &#x5DE5;&#x5177;&#x94FE;&#x3002;&#x8BF7;&#x4F7F;&#x7528; CXX=mpiicpx &#x6307;&#x5B9A;&#x7F16;&#x8BD1;&#x5668;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">cmake <span class="token parameter variable">-B</span> build <span class="token parameter variable">-DELPA_DIR</span><span class="token operator">=~</span>/abacus-develop/toolchain/install/elpa-2023.05.001/cpu/
+-- The CXX compiler identification is GNU <span class="token number">11.4</span>.0
+
+<span class="token comment"># CXX=mpiicpx cmake ...</span>
+<span class="token comment"># -- The CXX compiler identification is IntelLLVM 2024.2.0</span>
+</code></pre>
+<ul>
+<li>cmake &#x63D0;&#x793A;&#x7F16;&#x8BD1;&#x5668;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x65B0;&#x7248;&#x7684; icpx/mpiicpx&#xFF0C;&#x800C;&#x4E0D;&#x662F; icpc/mpiicpc</li>
+</ul>
+<pre class="language-"><code class="lang-bash">CMake Error at /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake:62 <span class="token punctuation">(</span>message<span class="token punctuation">)</span>:
+  The C++ compiler
+
+    <span class="token string">&quot;/opt/intel/oneapi/2024.2/bin/mpiicpc&quot;</span>
+
+  is not able to compile a simple <span class="token builtin class-name">test</span> program.
+
+<span class="token comment"># use CXX=mpiicpx instead of CXX=mpiicpc</span>
+</code></pre>
+<ul>
+<li><p>&#x8FD0;&#x884C;&#x4E86; oneAPI &#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x811A;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x94FE;&#x63A5;&#x9519;&#x8BEF;</p>
+<ul>
+<li>&#x8BF7;&#x68C0;&#x67E5; oneAPI HPC kits &#x7684;&#x5B89;&#x88C5;&#xFF1B;&#x53EF;&#x8FDB;&#x5165; installer &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5B89;&#x88C5;&#x7684;&#x6240;&#x6709; Toolkits &#x548C;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#xFF0C;&#x89C1;&#x4E0B;&#x6761;&#x3002;</li>
+<li>&#x4F7F;&#x7528; <code>/opt/intel/oneapi/2024.2/oneapi-vars.sh</code>&#xFF0C;&#x800C;&#x4E0D;&#x662F; <code>/opt/intel/oneapi/setvars.sh</code></li>
+</ul>
+</li>
+<li>&#x5982;&#x679C;&#x5B89;&#x88C5;&#x4E86;&#x591A;&#x7248;&#x672C;&#x7684; oneAPI &#x5DE5;&#x5177;&#x94FE;&#xFF0C;&#x6000;&#x7591;&#x73AF;&#x5883;&#x906D;&#x5230;&#x7834;&#x574F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>/opt/intel/oneapi/installer</code> &#x4E2D;&#x7684; <code>installer</code> &#x5DE5;&#x5177;&#x4FEE;&#x590D;&#x548C;&#x79FB;&#x9664;&#x4E0D;&#x9700;&#x8981;&#x7248;&#x672C;&#x4EE5;&#x53CA;&#x66F4;&#x65B0;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">cd</span> /opt/intel/oneapi/installer
+<span class="token function">sudo</span> ./installer
+
+<span class="token comment"># &#x53EF;&#x4EE5;&#x7528;Repair&#x5C1D;&#x8BD5;&#x4FEE;&#x590D;&#x73AF;&#x5883;</span>
+<span class="token comment"># &#x4F7F;&#x7528;Remove&#x79FB;&#x9664;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x7EC4;&#x4EF6;</span>
+<span class="token comment"># &#x4F7F;&#x7528;Update&#x83B7;&#x5F97;&#x65B0;&#x7248;&#x672C;</span>
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x9047;&#x5230; <code>libmpi.so</code> &#x76F8;&#x5173;&#x62A5;&#x9519;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>locate</code> &#x67E5;&#x770B;&#x6240;&#x6709;&#x76F8;&#x5173;&#x5E93;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">locate</span> libmpi.so
+</code></pre>
+<ul>
+<li>&#x8FD0;&#x884C;&#x7B97;&#x4F8B;&#x6216;&#x6D4B;&#x8BD5;&#x5931;&#x8D25;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x6700;&#x65B0;&#x6784;&#x5EFA;&#x540E;&#x8FD0;&#x884C;&#x4E86; install &#x547D;&#x4EE4;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x56E0;&#x4E3A;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#x3002;</li>
+</ul>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="plugin-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<p>Abacus &#x6587;&#x6863;</p>
+<p><a href="https://abacus.deepmodeling.com/en/latest/quick_start/easy_install.html" target="_blank">Easy Installation</a></p>
+<p><a href="https://bohrium.dp.tech/notebooks/5215742477" target="_blank">&#x4E00;&#x952E;&#x914D;&#x7F6E;&#x7F16;&#x8BD1; ABACUS | toolchain &#x811A;&#x672C;&#x7684;&#x4F7F;&#x7528;</a></p>
+<p><a href="https://mcresearch.github.io/abacus-user-guide/abacus-intel.html" target="_blank">Intel oneAPI &#x7F16;&#x8BD1; ABACUS &#x6559;&#x7A0B; &#xB7; GitBook</a></p>
+<p>elpa</p>
+<p><a href="https://gitlab.mpcdf.mpg.de/elpa/elpa/-/blob/master/documentation/INSTALL.md" target="_blank">documentation/INSTALL.md &#xB7; master &#xB7; elpa / elpa &#xB7; GitLab</a></p>
+<p>Intel &#x6587;&#x6863;</p>
+<p><a href="https://www.intel.com/content/www/us/en/docs/oneapi/programming-guide/2024-2/use-the-setvars-and-oneapi-vars-scripts-with-linux.html" target="_blank">Use the setvars and oneapi-vars Scripts with Linux*</a></p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/articles/release-notes/oneapi-c-compiler-release-notes.html" target="_blank">Intel&#xAE; C++ Compiler Classic Release Notes</a></p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/articles/guide/porting-guide-for-icc-users-to-dpcpp-or-icx.html" target="_blank">Porting Guide for DPCPP or ICX</a></p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/articles/guide/porting-guide-for-ifort-to-ifx.html" target="_blank">Porting Guide for ifort Users to ifx</a></p>
+<p><a href="https://www.intel.com/content/www/us/en/developer/articles/release-notes/intel-oneapi-toolkit-release-notes.html" target="_blank">Intel&#xAE; oneAPI Base Toolkit Release Notes</a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2025-07-11 15:17:43
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="abacus-gcc.html" class="navigation navigation-prev " aria-label="Previous page: GCC 编译 ABACUS 教程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="abacus-intel.html" class="navigation navigation-next " aria-label="Next page: Intel oneAPI 编译 ABACUS 教程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Intel oneAPI 2024.x 编译 ABACUS 教程","level":"1.2.1.2","depth":3,"next":{"title":"Intel oneAPI 编译 ABACUS 教程","level":"1.2.1.3","depth":3,"path":"abacus-intel.md","ref":"abacus-intel.md","articles":[]},"previous":{"title":"GCC 编译 ABACUS 教程","level":"1.2.1.1","depth":3,"path":"abacus-gcc.md","ref":"abacus-gcc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.4.1","level":"1.2.2.4","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.4.1"},{"backlink":"abacus-upf.html#fig1.2.2.4.2","level":"1.2.2.4","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.4.2"},{"backlink":"abacus-upf.html#fig1.2.2.4.3","level":"1.2.2.4","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.4.3"},{"backlink":"abacus-upf.html#fig1.2.2.4.4","level":"1.2.2.4","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.4.4"},{"backlink":"abacus-upf.html#fig1.2.2.4.5","level":"1.2.2.4","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.4.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-ESolver.html#fig1.4.4.1.1","level":"1.4.4.1","list_caption":"Figure: 代码框架图","alt":"代码框架图","nro":38,"url":"picture/fig-esolver-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"代码框架图","attributes":{},"skip":false,"key":"1.4.4.1.1"},{"backlink":"develop-ESolver.html#fig1.4.4.1.2","level":"1.4.4.1","list_caption":"Figure: 模块关系图","alt":"模块关系图","nro":39,"url":"picture/fig-esolver-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"模块关系图","attributes":{},"skip":false,"key":"1.4.4.1.2"},{"backlink":"develop-path4.html#fig1.4.5.4.1","level":"1.4.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":40,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.4.5.4.1"},{"backlink":"develop-path4.html#fig1.4.5.4.2","level":"1.4.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":41,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.4.5.4.2"},{"backlink":"develop-path5.html#fig1.4.5.5.1","level":"1.4.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":42,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.4.5.5.1"},{"backlink":"develop-path5.html#fig1.4.5.5.2","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":43,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.4.5.5.2"},{"backlink":"develop-path5.html#fig1.4.5.5.3","level":"1.4.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":44,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.4.5.5.3"},{"backlink":"develop-path5.html#fig1.4.5.5.4","level":"1.4.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":45,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.4"},{"backlink":"develop-path5.html#fig1.4.5.5.5","level":"1.4.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":46,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.4.5.5.5"},{"backlink":"develop-path6.html#fig1.4.5.7.1","level":"1.4.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":47,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.4.5.7.1"},{"backlink":"develop-path10.html#fig1.4.5.11.1","level":"1.4.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":48,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.4.5.11.1"},{"backlink":"develop-path10.html#fig1.4.5.11.2","level":"1.4.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":49,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.4.5.11.2"},{"backlink":"develop-path10.html#fig1.4.5.11.3","level":"1.4.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":50,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.4.5.11.3"},{"backlink":"develop-path10.html#fig1.4.5.11.4","level":"1.4.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":51,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.4.5.11.4"},{"backlink":"develop-path10.html#fig1.4.5.11.5","level":"1.4.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":52,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.4.5.11.5"},{"backlink":"develop-path11.html#fig1.4.5.12.1","level":"1.4.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":53,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.4.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.5.1.1","level":"1.5.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":54,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.5.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"abacus-oneapi.md","mtime":"2025-07-11T07:17:43.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-12-12T04:55:11.184Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

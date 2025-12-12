@@ -1,0 +1,16 @@
+calculation   msd_multiple
+geo_in_type   ABACUS
+geo_directory ../MD_dump
+geo_1         0
+geo_2         100
+geo_interval  1
+geo_ignore    50
+
+ntype         1
+natom         32
+msd_n         2
+msd_t0        0.003
+msd_t         0.0015
+msd_dt0       0.0015
+msd_dt        0.00006
+msd_natom     32

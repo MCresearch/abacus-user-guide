@@ -1,0 +1,38 @@
+INPUT_PARAMETERS
+#Parameters (General)
+suffix                nanoribbon
+calculation           scf
+nbands                70
+nspin                 2
+pseudo_dir	      ../../PP_ORB
+orbital_dir           ../../PP_ORB
+
+#Parameters (Basis)
+basis_type            lcao
+
+#Parameters (Accuracy)
+ecutwfc               100
+scf_thr               1e-6
+scf_nmax              200
+
+#Parameters (Smearing)
+smearing_method       gaussian
+smearing_sigma        0.001
+
+#Parameters (Charge mixing)
+mixing_type           pulay
+mixing_beta           0.1
+mixing_beta_mag       0.1
+mixing_ndim           20
+mixing_gg0            1.5
+mixing_gg0_mag        1.5
+
+#Parameters (Efield)
+efield_flag           1
+efield_dir            2
+efield_amp            0.0019440124
+efield_pos_max        0.95
+efield_pos_dec        0.10
+
+#Parameters (Output)
+out_chg               1
