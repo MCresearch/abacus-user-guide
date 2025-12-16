@@ -4,7 +4,7 @@
     * [ABACUS 新闻稿整理](news.md)
     * [如何贡献 ABACUS 使用教程](contribute.md)
 
-* 用户文档
+* 用户
     * ABACUS编译教程
         * [GCC 编译 ABACUS 教程](abacus-gcc.md)
         * [Intel oneAPI 2024.x 编译 ABACUS 教程](abacus-oneapi.md)
@@ -61,7 +61,8 @@
     * [采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算](abacus-surface4.md)
     * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
-* ABACUS 开发者文档
+* 测试
+* 开发
     * 基础规范
         * [ABACUS 的 Github 仓库 Issues 处理流程](develop-issue.md)
         * [ABACUS 开源项目 C++ 代码规范](develop-C++.md)
@@ -112,6 +113,6 @@
         * [Pyabacus 文档一：用户手册](develop-pyabacus1.md)
         * [Pyabacus 文档二：HSolver 模块](develop-pyabacus2.md)
         * [Pyabacus 文档三：开发者指南](develop-pyabacus3.md)
-* 算法文档
+* 算法
     * [最大局域化 Wannier 函数方法简介](algorithm-wannier.md)
     * [电荷密度混合算法介绍](algorithm-mix.md)
