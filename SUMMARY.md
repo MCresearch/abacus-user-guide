@@ -5,7 +5,7 @@
     * [如何贡献 ABACUS 使用教程](contribute.md)
 
 * 用户
-    * ABACUS编译教程
+    * 编译
         * [GCC 编译 ABACUS 教程](abacus-gcc.md)
         * [Intel oneAPI 2024.x 编译 ABACUS 教程](abacus-oneapi.md)
         * [Intel oneAPI 编译 ABACUS 教程](abacus-intel.md)
@@ -13,6 +13,7 @@
         * [ABACUS LCAO 基组 GPU 版本使用说明](abacus-gpu-lcao.md)
         * [在超算环境编译 ABACUS 的建议](abacus-hpc.md)
         * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
+        * [ABACUS 的-i/-I/--info 功能使用说明](compile-useinfo.md)
     * 建模
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例](abacus-eff1.md)
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例](abacus-eff2.md)
