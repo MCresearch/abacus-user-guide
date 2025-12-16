@@ -6,8 +6,17 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|ABACUS v3.9.0.20 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/x0ip-0mMCTj3nrkkhcPLKA)|2025/12/10|原子算筹|
+|北京大学陈默涵团队——发展AI密度泛函为表面CO吸附难题提供兼顾精度和效率的新方法|[网页链接](https://mp.weixin.qq.com/s/N46rrWXLjk3IwcU_nHDyBg)|2025/12/09|AIforSci|
+|ABACUS v3.9.0.19 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/58JgRmewnlkLfrtXIDrZLQ)|2025/11/27|原子算筹|
+|ABACUS v3.9.0.18 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/6dvxmhKQRIfNeUYcRlnFGQ)|2025/11/11|原子算筹|
+|ABACUS v3.9.0.17 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/qJBmhLEnUFNskpstROQLHA)|2025/10/29|原子算筹|
+|ABACUS v3.9.0.16 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/kH9oXNVzn5nwOM8oVmcIIQ)|2025/10/14|原子算筹|
 |ABACUS安装教程 - Toolchain (5) - GPU (1)|[网页链接](https://mp.weixin.qq.com/s/YekI3LXy7vuTN36ut5M6Rg)|2025/10/13|原子算筹|
+|ABACUS v3.9.0.15 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/4jCbfQj4l_pLKUBkc3CTpQ)|2025/09/29|原子算筹|
 |拜托了我的赛先生！SAI-1上多卡ABACUS高性能计算案例大赏|[网页链接](https://mp.weixin.qq.com/s/IeLoD_DGnh3Un_mqCc2q2w)|2025/09/22|波本喵|
+|ABACUS v3.9.0.14 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/IURTxVzMchITf5_huYra-Q)|2025/09/17|原子算筹|
+|ABACUS v3.9.0.13 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/ArfVw-OFxMw3-ehQa6q-IA)|2025/09/02|原子算筹|
 |ABACUS还能干这个？预测极端高温环境下多种材料的状态方程|[网页链接](https://mp.weixin.qq.com/s/dOSDZRKrK_PrfULoQqDR9w)|2025/9/1|原子算筹|
 |ABACUS v3.9.0.12更新介绍|[网页链接](https://mp.weixin.qq.com/s/j_xnPLcSf19S3bXUSB1DtQ)|2025/08/22|原子算筹|
 |ABACUS v3.9.0.11更新介绍|[网页链接](https://mp.weixin.qq.com/s/V6onMLDJBcJyIE8mnxy19A)|2025/08/06|原子算筹|
