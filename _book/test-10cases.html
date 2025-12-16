@@ -1,0 +1,4778 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ABACUS 平面波基组下的 10 个典型算例 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    ABACUS编译教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-exx.html">
+            
+                <a href="abacus-exx.html">
+            
+                    
+                    ABACUS 平面波基组下的杂化泛函
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="abacus-dpa3-toturial.html">
+            
+                <a href="abacus-dpa3-toturial.html">
+            
+                    
+                    ABACUS+DPA-3：基于 Bohrium 平台的安装与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.13" data-path="abacus-phonopy-heat.html">
+            
+                <a href="abacus-phonopy-heat.html">
+            
+                    
+                    ABACUS+Phonopy 计算吉布斯自由能等热力学性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="test-10cases.html">
+            
+                <a href="test-10cases.html">
+            
+                    
+                    ABACUS 平面波基组下的 10 个典型算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.10" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="develop-gint.html">
+            
+                <a href="develop-gint.html">
+            
+                    
+                    格点积分模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="develop-fft.html">
+            
+                <a href="develop-fft.html">
+            
+                    
+                    FFT 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Introduction to ABACUS: Path to PW calculation - Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >ABACUS 平面波基组下的 10 个典型算例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="abacus-&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x4E0B;&#x7684;-10-&#x4E2A;&#x5178;&#x578B;&#x7B97;&#x4F8B;"><a name="abacus-&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x4E0B;&#x7684;-10-&#x4E2A;&#x5178;&#x578B;&#x7B97;&#x4F8B;" class="plugin-anchor" href="#abacus-&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x4E0B;&#x7684;-10-&#x4E2A;&#x5178;&#x578B;&#x7B97;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>ABACUS &#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x4E0B;&#x7684; 10 &#x4E2A;&#x5178;&#x578B;&#x7B97;&#x4F8B;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x9648;&#x8BFA;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;cn037@stu.pku.edu.cnmailto:cn037@stu.pku.edu.cn</strong></p>
+<p><strong>&#x5BA1;&#x6838;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2025/12/15</strong></p>
+<h1 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECB;&#x7ECD;</h1>
+<p>ABACUS&#xFF08;&#x539F;&#x5B50;&#x7B97;&#x7B79;&#xFF09;&#x4F5C;&#x4E3A;&#x4E00;&#x6B3E;&#x9AD8;&#x6548;&#x3001;&#x5F00;&#x6E90;&#x7684;&#x7B2C;&#x4E00;&#x6027;&#x539F;&#x7406;&#x6750;&#x6599;&#x8BA1;&#x7B97;&#x8F6F;&#x4EF6;&#xFF0C;&#x4E0D;&#x4EC5;&#x652F;&#x6301; CPU&#xFF0C;&#x8FD8;&#x517C;&#x5BB9; GPU&#x3001;DCU &#x7B49;&#x591A;&#x79CD;&#x5F02;&#x6784;&#x786C;&#x4EF6;&#x8BBE;&#x5907;&#xFF0C;&#x5176;&#x5E73;&#x9762;&#x6CE2;&#x57FA;&#x7EC4;&#x6A21;&#x5757;&#x80FD;&#x591F;&#x5728;&#x4E0D;&#x540C;&#x8BA1;&#x7B97;&#x5E73;&#x53F0;&#x4E0A;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6750;&#x6599;&#x4F53;&#x7CFB;&#xFF0C;&#x63D0;&#x4F9B;&#x7075;&#x6D3B;&#x53EF;&#x9760;&#x7684;&#x8BA1;&#x7B97;&#x652F;&#x6301;&#x3002;&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;&#x8BE5;&#x8F6F;&#x4EF6;&#x5728;&#x4E0D;&#x540C;&#x786C;&#x4EF6;&#x5E73;&#x53F0;&#x4E0A;&#x7684;&#x6B63;&#x786E;&#x6027;&#x548C;&#x6548;&#x7387;&#xFF0C;&#x5F00;&#x53D1;&#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7B97;&#x4F8B;&#x548C;&#x7ED3;&#x679C;&#x4F9B;&#x5BF9;&#x6BD4;&#xFF0C;&#x4E3A;&#x8DE8;&#x5E73;&#x53F0;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x63D0;&#x4F9B;&#x53C2;&#x8003;&#x4F9D;&#x636E;&#x3002;&#x672C;&#x7B97;&#x4F8B;&#x96C6;&#x9009;&#x53D6;10&#x4E2A;&#x5178;&#x578B;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;&#xFF0C;&#x6DB5;&#x76D6;&#x534A;&#x5BFC;&#x4F53;&#x3001;&#x5206;&#x5B50;&#x3001;&#x4E8C;&#x7EF4;&#x6750;&#x6599;&#x3001;&#x91D1;&#x5C5E;&#x8868;&#x9762;&#x3001;&#x9499;&#x949B;&#x77FF;&#x3001;&#x91D1;&#x5C5E;&#x5355;&#x8D28;&#x3001;&#x94C1;&#x78C1;&#x6750;&#x6599;&#x3001;&#x6DB2;&#x6001;&#x4F53;&#x7CFB;&#x3001;&#x7535;&#x6C60;&#x6750;&#x6599;&#x7B49;&#x591A;&#x79CD;&#x4EE3;&#x8868;&#x6027;&#x4F53;&#x7CFB;&#x3002;</p>
+<h1 id="&#x8F6F;&#x4EF6;&#x548C;&#x7B97;&#x4F8B;&#x51C6;&#x5907;"><a name="&#x8F6F;&#x4EF6;&#x548C;&#x7B97;&#x4F8B;&#x51C6;&#x5907;" class="plugin-anchor" href="#&#x8F6F;&#x4EF6;&#x548C;&#x7B97;&#x4F8B;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6F;&#x4EF6;&#x548C;&#x7B97;&#x4F8B;&#x51C6;&#x5907;</h1>
+<p>&#x4EE5;&#x4E0A;10&#x4E2A;&#x7B97;&#x4F8B;&#x53EF;&#x5728;<code>gitee</code>&#x6216;&#x8005;<code>GitHub</code>&#x4E0A;&#x514D;&#x8D39;&#x4E0B;&#x8F7D;&#x3002;&#x5177;&#x4F53;&#x65B9;&#x5F0F;&#x662F;&#xFF1A;&#x5728;&#x7F51;&#x9875;&#x53F3;&#x4FA7;&#x70B9;&#x51FB;<code>&#x514B;&#x9686;/&#x4E0B;&#x8F7D;-&gt; &#x4E0B;&#x8F7D; ZIP</code>&#x5F97;&#x5230;&#x7B97;&#x4F8B;&#x538B;&#x7F29;&#x5305;&#x5E76;&#x89E3;&#x538B;&#xFF0C;&#x6216;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x7B97;&#x4F8B;&#xFF1A;</p>
+<ol>
+<li><code>gitee</code> &#x7F51;&#x7AD9;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://gitee.com/mcresearch/abacus-user-guide.git
+</code></pre>
+<ol>
+<li><code>GitHub</code> &#x7F51;&#x7AD9;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://github.com/MCresearch/abacus-user-guide.git
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x76EE;&#x5F55; <code>/abacus-user-guide/examples/pw</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4E0B;&#x6709;&#x5341;&#x4E2A;&#x7B97;&#x4F8B;&#xFF0C;&#x5E76;&#x4E14;&#x914D;&#x5907;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x8D5D;&#x52BF;&#x6587;&#x4EF6;&#xFF0C;&#x65E0;&#x9700;&#x989D;&#x5916;&#x4E0B;&#x8F7D;&#x3002;</p>
+<h1 id="&#x7B97;&#x4F8B;&#x6982;&#x89C8;"><a name="&#x7B97;&#x4F8B;&#x6982;&#x89C8;" class="plugin-anchor" href="#&#x7B97;&#x4F8B;&#x6982;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B97;&#x4F8B;&#x6982;&#x89C8;</h1>
+<p>&#x5341;&#x4E2A;&#x7B97;&#x4F8B;&#x7684;&#x57FA;&#x672C;&#x60C5;&#x51B5;&#x5982;&#x4E0B;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x7B97;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x57FA;&#x4E8E; <code>ABACUS Release v3.9.0.19</code> &#x7248;&#x672C;&#xFF08;<code>commit c255710, tag: v3.9.0.19</code>&#xFF09;&#x7ED9;&#x51FA;&#x4E00;&#x7EC4;&#x53C2;&#x8003;&#x7ED3;&#x679C;&#x3002;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;&#x7684; CPU &#x786C;&#x4EF6;&#x4E3A; <code>Intel&#xAE; Xeon&#xAE; Gold 6132</code>&#xFF0C;&#x4E00;&#x4E0B;&#x7B97;&#x4F8B;&#x4F7F;&#x7528; 28 &#x8FDB;&#x7A0B;&#x5E76;&#x884C;&#x3002;</p>
+<pre class="language-"><code>OMP_NUM_THREADS=1 mpirun -np 28 abacus
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5E8F;&#x53F7;</th>
+<th style="text-align:left">&#x6210;&#x5206;&#x548C;&#x7ED3;&#x6784;</th>
+<th style="text-align:left">&#x6750;&#x6599;&#x4F53;&#x7CFB;</th>
+<th style="text-align:left">&#x539F;&#x5B50;&#x6570;</th>
+<th style="text-align:left">&#x6CE2;&#x51FD;&#x6570;&#x80FD;&#x91CF;&#x622A;&#x65AD;&#x503C;</th>
+<th style="text-align:left">&#x7535;&#x8377;&#x5BC6;&#x5EA6;&#x6DF7;&#x5408;&#x7CFB;&#x6570;</th>
+<th style="text-align:left">k&#x70B9;</th>
+<th style="text-align:left">&#x7EA6;&#x5316;k&#x70B9;</th>
+<th style="text-align:left">&#x7535;&#x5B50;&#x6570;/&#x80FD;&#x5E26;&#x6570;</th>
+<th style="text-align:left">SCF &#x6B65;&#x6570;</th>
+<th style="text-align:left">&#x603B;&#x80FD;&#x91CF; &#xFF08;eV/atom&#xFF09;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">GaAs &#xFF08;Zinc-Blend&#xFF09;</td>
+<td style="text-align:left">&#x534A;&#x5BFC;&#x4F53;&#x6750;&#x6599;</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">60</td>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left">7<em>7</em>7</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">72/46</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">-979.589643548583</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">C2H6O</td>
+<td style="text-align:left">&#x5206;&#x5B50;</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">90</td>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left">1<em>1</em>1</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">20/20</td>
+<td style="text-align:left">17</td>
+<td style="text-align:left">-74.5619286505965</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">MoS2 &#xFF08;2 * 2&#xFF09;</td>
+<td style="text-align:left">&#x4E8C;&#x7EF4;&#x6750;&#x6599;</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">60</td>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left">1<em>7</em>7</td>
+<td style="text-align:left">25</td>
+<td style="text-align:left">104/62</td>
+<td style="text-align:left">18</td>
+<td style="text-align:left">-808.7694928052073</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">Pt (111) &#x8868;&#x9762;</td>
+<td style="text-align:left">&#x91D1;&#x5C5E;&#x8868;&#x9762;</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">50</td>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left">1<em>7</em>7</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">216/129</td>
+<td style="text-align:left">19</td>
+<td style="text-align:left">-3300.5524157774184</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">Ba3Ti3O9</td>
+<td style="text-align:left">&#x9499;&#x949B;&#x77FF;</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">90</td>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left">7<em>7</em>6</td>
+<td style="text-align:left">148</td>
+<td style="text-align:left">120/72</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">-716.7727850530249</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">Na16</td>
+<td style="text-align:left">&#x91D1;&#x5C5E;</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">60</td>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left">7<em>7</em>7</td>
+<td style="text-align:left">172</td>
+<td style="text-align:left">144/86</td>
+<td style="text-align:left">11</td>
+<td style="text-align:left">-1157.9276718190422</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">Fe (bcc) 3<em>3</em>3</td>
+<td style="text-align:left">&#x94C1;&#x78C1;</td>
+<td style="text-align:left">27</td>
+<td style="text-align:left">60</td>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left">6<em>6</em>6</td>
+<td style="text-align:left">16</td>
+<td style="text-align:left">432/286</td>
+<td style="text-align:left">35</td>
+<td style="text-align:left">-3220.5414887556535</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">32 H2O</td>
+<td style="text-align:left">&#x6DB2;&#x6001;&#x6C34;</td>
+<td style="text-align:left">96</td>
+<td style="text-align:left">90</td>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left">Gamma</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">256/128</td>
+<td style="text-align:left">14</td>
+<td style="text-align:left">-155.78037006740306</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">Li27Ni9O54Mn9Co9</td>
+<td style="text-align:left">&#x7535;&#x6C60;&#x9633;&#x6781;</td>
+<td style="text-align:left">108</td>
+<td style="text-align:left">80</td>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left">Gamma</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">855/490</td>
+<td style="text-align:left">23</td>
+<td style="text-align:left">-1148.9174986090584</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">&#x91D1;&#x521A;&#x77F3;Si</td>
+<td style="text-align:left">&#x5927;&#x534A;&#x5BFC;&#x4F53;</td>
+<td style="text-align:left">216</td>
+<td style="text-align:left">60</td>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left">Gamma</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">864/518</td>
+<td style="text-align:left">9</td>
+<td style="text-align:left">-107.23069507047752</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x53C2;&#x8003;&#x7ED3;&#x679C;"><a name="&#x53C2;&#x8003;&#x7ED3;&#x679C;" class="plugin-anchor" href="#&#x53C2;&#x8003;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x7ED3;&#x679C;</h1>
+<p>&#x5173;&#x952E;&#x53C2;&#x6570;&#x548C;&#x53C2;&#x8003;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x3002;</p>
+<h2 id="0014gaas"><a name="0014gaas" class="plugin-anchor" href="#0014gaas"><i class="fa fa-link" aria-hidden="true"></i></a>001_4GaAs</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;54*54*54&#xFF1B;symmetry <span class="token number">1</span>&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">5.75018</span>     <span class="token number">0.00000</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">5.75018</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">0.00000</span>     <span class="token number">5.75018</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x548C;&#x6536;&#x655B;&#x6570;&#x636E;&#xFF1A;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-7.83583788e+03</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">2.5736e-01</td>
+<td style="text-align:left">12.72</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-7.83662393e+03</td>
+<td style="text-align:left">-7.86047670e-01</td>
+<td style="text-align:left">1.8579e-02</td>
+<td style="text-align:left">2.10</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-7.83670732e+03</td>
+<td style="text-align:left">-8.33921763e-02</td>
+<td style="text-align:left">3.2086e-03</td>
+<td style="text-align:left">2.72</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-7.83671553e+03</td>
+<td style="text-align:left">-8.21411408e-03</td>
+<td style="text-align:left">2.6318e-04</td>
+<td style="text-align:left">2.33</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-7.83671705e+03</td>
+<td style="text-align:left">-1.51801502e-03</td>
+<td style="text-align:left">2.2832e-05</td>
+<td style="text-align:left">2.84</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-7.83671713e+03</td>
+<td style="text-align:left">-7.89470630e-05</td>
+<td style="text-align:left">3.0602e-06</td>
+<td style="text-align:left">2.32</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-7.83671715e+03</td>
+<td style="text-align:left">-1.72755270e-05</td>
+<td style="text-align:left">8.6069e-07</td>
+<td style="text-align:left">3.03</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-7.83671715e+03</td>
+<td style="text-align:left">-1.57302851e-06</td>
+<td style="text-align:left">4.0832e-08</td>
+<td style="text-align:left">2.29</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;&#xFF1A;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-9.8613493717</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-9.8613493717</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-9.8613493717</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;-9.861349 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-7836.7171483886640999 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;8 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;31.55 s</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-575.9878801065</td>
+<td style="text-align:left">-7836.7171483887</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-575.9878795597</td>
+<td style="text-align:left">-7836.7171409502</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-575.9841609811</td>
+<td style="text-align:left">-7836.6665470925</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-20.2933877600</td>
+<td style="text-align:left">-276.1057052596</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-340.5021457729</td>
+<td style="text-align:left">-4632.7693637381</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">215.1496705817</td>
+<td style="text-align:left">2927.2614427345</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-84.8353026888</td>
+<td style="text-align:left">-1154.2435081231</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-365.8001011330</td>
+<td style="text-align:left">-4976.9657043850</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0000010934</td>
+<td style="text-align:left">-0.0000148770</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-502.2278452140</td>
+<td style="text-align:left">-6833.1603891725</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.4886949645</td>
+<td style="text-align:left">6.6490361004</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0060966373</td>
+<td style="text-align:left">0.0829490058</td>
+</tr>
+</tbody>
+</table>
+<h2 id="002c2h6o"><a name="002c2h6o" class="plugin-anchor" href="#002c2h6o"><i class="fa fa-link" aria-hidden="true"></i></a>002_C2H6O</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;180*180*180&#xFF1B;symmetry <span class="token number">1</span>&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;&#xFF08;LATTICE_CONSTANT &#x53D6; 1&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">28.00000</span>     <span class="token number">0.00000</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>    <span class="token number">28.00000</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">0.00000</span>    <span class="token number">28.00000</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-6.35299210e+02</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">1.1593e+01</td>
+<td style="text-align:left">18.67</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-6.67295084e+02</td>
+<td style="text-align:left">-3.19958742e+01</td>
+<td style="text-align:left">8.5953e-01</td>
+<td style="text-align:left">8.95</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-6.70870308e+02</td>
+<td style="text-align:left">-3.57522412e+00</td>
+<td style="text-align:left">1.9608e-01</td>
+<td style="text-align:left">6.90</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-6.71008459e+02</td>
+<td style="text-align:left">-1.38150936e-01</td>
+<td style="text-align:left">2.6673e-02</td>
+<td style="text-align:left">7.73</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-6.71041964e+02</td>
+<td style="text-align:left">-3.35054989e-02</td>
+<td style="text-align:left">7.4579e-03</td>
+<td style="text-align:left">10.22</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-6.71047597e+02</td>
+<td style="text-align:left">-5.63225832e-03</td>
+<td style="text-align:left">2.5225e-03</td>
+<td style="text-align:left">9.84</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-6.71053038e+02</td>
+<td style="text-align:left">-5.44184637e-03</td>
+<td style="text-align:left">1.4385e-03</td>
+<td style="text-align:left">9.57</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-6.71055451e+02</td>
+<td style="text-align:left">-2.41262722e-03</td>
+<td style="text-align:left">5.4645e-04</td>
+<td style="text-align:left">10.33</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-6.71056277e+02</td>
+<td style="text-align:left">-8.26176859e-04</td>
+<td style="text-align:left">2.9836e-04</td>
+<td style="text-align:left">8.87</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-6.71056508e+02</td>
+<td style="text-align:left">-2.31238173e-04</td>
+<td style="text-align:left">1.4161e-04</td>
+<td style="text-align:left">10.73</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-6.71056578e+02</td>
+<td style="text-align:left">-6.92208414e-05</td>
+<td style="text-align:left">6.0270e-05</td>
+<td style="text-align:left">10.92</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">-6.71056812e+02</td>
+<td style="text-align:left">-2.34244306e-04</td>
+<td style="text-align:left">2.6294e-05</td>
+<td style="text-align:left">11.96</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">-6.71057045e+02</td>
+<td style="text-align:left">-2.33434179e-04</td>
+<td style="text-align:left">1.2091e-05</td>
+<td style="text-align:left">11.87</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">-6.71057206e+02</td>
+<td style="text-align:left">-1.60988331e-04</td>
+<td style="text-align:left">4.5405e-06</td>
+<td style="text-align:left">12.43</td>
+</tr>
+<tr>
+<td style="text-align:left">CG15</td>
+<td style="text-align:left">-6.71057307e+02</td>
+<td style="text-align:left">-1.00481512e-04</td>
+<td style="text-align:left">1.0164e-06</td>
+<td style="text-align:left">14.74</td>
+</tr>
+<tr>
+<td style="text-align:left">CG16</td>
+<td style="text-align:left">-6.71057349e+02</td>
+<td style="text-align:left">-4.22763798e-05</td>
+<td style="text-align:left">1.8329e-07</td>
+<td style="text-align:left">18.20</td>
+</tr>
+<tr>
+<td style="text-align:left">CG17</td>
+<td style="text-align:left">-6.71057358e+02</td>
+<td style="text-align:left">-8.73749070e-06</td>
+<td style="text-align:left">3.6897e-08</td>
+<td style="text-align:left">18.75</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">168.6435039577</td>
+<td style="text-align:left">-18.4346701408</td>
+<td style="text-align:left">-14.7518716968</td>
+</tr>
+<tr>
+<td style="text-align:left">-18.4346701408</td>
+<td style="text-align:left">104.6632838853</td>
+<td style="text-align:left">-7.3429259155</td>
+</tr>
+<tr>
+<td style="text-align:left">-14.7518716968</td>
+<td style="text-align:left">-7.3429259155</td>
+<td style="text-align:left">76.6637426840</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;116.656844 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-671.0573578553685365 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;17 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;206.23 s</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-49.3217884048</td>
+<td style="text-align:left">-671.0573578554</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-49.3217884048</td>
+<td style="text-align:left">-671.0573578554</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-49.3190669119</td>
+<td style="text-align:left">-671.0203300450</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-26.0469642348</td>
+<td style="text-align:left">-354.3871291955</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-349.4989391978</td>
+<td style="text-align:left">-4755.1770180460</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">177.4904307997</td>
+<td style="text-align:left">2414.8811993508</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-24.2464842195</td>
+<td style="text-align:left">-329.8903418524</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">146.9332042128</td>
+<td style="text-align:left">1999.1288026922</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-423.1534768032</td>
+<td style="text-align:left">-5757.2984130338</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">-0.1104947127</td>
+<td style="text-align:left">-1.5033576918</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.1781234373</td>
+<td style="text-align:left">2.4234936941</td>
+</tr>
+</tbody>
+</table>
+<h2 id="0034mos2"><a name="0034mos2" class="plugin-anchor" href="#0034mos2"><i class="fa fa-link" aria-hidden="true"></i></a>003_4MoS2</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;192*60*60&#xFF1B;nbands <span class="token number">62</span>&#xFF1B;symmetry <span class="token number">1</span>&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">20.0000000</span>   <span class="token number">0.0000000</span>   <span class="token number">0.0000000</span>
+  <span class="token number">0.0000000</span>   <span class="token number">6.3806400</span>   <span class="token number">0.0000000</span>
+  <span class="token number">0.0000000</span>   <span class="token number">3.1903200</span>   <span class="token number">5.5257800</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-9.70290627e+03</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">4.6829e-01</td>
+<td style="text-align:left">263.92</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-9.70282200e+03</td>
+<td style="text-align:left">8.42699435e-02</td>
+<td style="text-align:left">9.3497e-01</td>
+<td style="text-align:left">46.87</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-9.70510163e+03</td>
+<td style="text-align:left">-2.27963387e+00</td>
+<td style="text-align:left">6.9232e-02</td>
+<td style="text-align:left">37.96</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-9.70521007e+03</td>
+<td style="text-align:left">-1.08442572e-01</td>
+<td style="text-align:left">3.5889e-03</td>
+<td style="text-align:left">36.04</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-9.70522886e+03</td>
+<td style="text-align:left">-1.87891582e-02</td>
+<td style="text-align:left">3.9563e-03</td>
+<td style="text-align:left">60.68</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-9.70523113e+03</td>
+<td style="text-align:left">-2.26468160e-03</td>
+<td style="text-align:left">1.1236e-03</td>
+<td style="text-align:left">33.63</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-9.70523160e+03</td>
+<td style="text-align:left">-4.68479418e-04</td>
+<td style="text-align:left">3.6385e-04</td>
+<td style="text-align:left">35.42</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-9.70523194e+03</td>
+<td style="text-align:left">-3.46332845e-04</td>
+<td style="text-align:left">2.2590e-04</td>
+<td style="text-align:left">39.14</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-9.70523211e+03</td>
+<td style="text-align:left">-1.63488652e-04</td>
+<td style="text-align:left">1.6017e-04</td>
+<td style="text-align:left">30.78</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-9.70523251e+03</td>
+<td style="text-align:left">-4.07046557e-04</td>
+<td style="text-align:left">8.5926e-05</td>
+<td style="text-align:left">29.84</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-9.70523288e+03</td>
+<td style="text-align:left">-3.65119722e-04</td>
+<td style="text-align:left">4.9571e-05</td>
+<td style="text-align:left">33.24</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">-9.70523306e+03</td>
+<td style="text-align:left">-1.79666170e-04</td>
+<td style="text-align:left">2.4533e-05</td>
+<td style="text-align:left">32.33</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">-9.70523320e+03</td>
+<td style="text-align:left">-1.44768205e-04</td>
+<td style="text-align:left">1.6566e-05</td>
+<td style="text-align:left">34.85</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">-9.70523349e+03</td>
+<td style="text-align:left">-2.88125700e-04</td>
+<td style="text-align:left">8.8684e-06</td>
+<td style="text-align:left">32.92</td>
+</tr>
+<tr>
+<td style="text-align:left">CG15</td>
+<td style="text-align:left">-9.70523374e+03</td>
+<td style="text-align:left">-2.45886839e-04</td>
+<td style="text-align:left">3.5033e-06</td>
+<td style="text-align:left">33.86</td>
+</tr>
+<tr>
+<td style="text-align:left">CG16</td>
+<td style="text-align:left">-9.70523388e+03</td>
+<td style="text-align:left">-1.41602920e-04</td>
+<td style="text-align:left">9.1081e-07</td>
+<td style="text-align:left">39.08</td>
+</tr>
+<tr>
+<td style="text-align:left">CG17</td>
+<td style="text-align:left">-9.70523390e+03</td>
+<td style="text-align:left">-2.44619773e-05</td>
+<td style="text-align:left">1.1910e-07</td>
+<td style="text-align:left">46.20</td>
+</tr>
+<tr>
+<td style="text-align:left">CG18</td>
+<td style="text-align:left">-9.70523391e+03</td>
+<td style="text-align:left">-1.16300837e-05</td>
+<td style="text-align:left">3.0916e-08</td>
+<td style="text-align:left">50.69</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-1.0059342588</td>
+<td style="text-align:left">0.0000311963</td>
+<td style="text-align:left">0.0000263660</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000311963</td>
+<td style="text-align:left">-1.7729214208</td>
+<td style="text-align:left">0.0001821509</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000263660</td>
+<td style="text-align:left">0.0001821509</td>
+<td style="text-align:left">-1.7711762616</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;-1.516677 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-9705.2339136624868843 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;18 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;924.30 s</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-713.3212800742</td>
+<td style="text-align:left">-9705.2339136625</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-713.3212800742</td>
+<td style="text-align:left">-9705.2339136625</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-713.3101123224</td>
+<td style="text-align:left">-9705.0819686044</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-131.5763993777</td>
+<td style="text-align:left">-1790.1887538602</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-4456.6443263806</td>
+<td style="text-align:left">-60635.7567981476</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">2226.7943795009</td>
+<td style="text-align:left">30297.0918355863</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-98.6354460386</td>
+<td style="text-align:left">-1342.0040908969</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">1615.1641128442</td>
+<td style="text-align:left">21975.4351397956</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-4766.5446223626</td>
+<td style="text-align:left">-64852.1666353902</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.0193210783</td>
+<td style="text-align:left">0.2628767563</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.1254507689</td>
+<td style="text-align:left">1.7068452749</td>
+</tr>
+</tbody>
+</table>
+<h2 id="00412pt111"><a name="00412pt111" class="plugin-anchor" href="#00412pt111"><i class="fa fa-link" aria-hidden="true"></i></a>004_12Pt111</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;180*48*48&#xFF1B;symmetry <span class="token number">1</span>&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">20.00000</span>     <span class="token number">0.00000</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">5.54844</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>    <span class="token parameter variable">-2.77422</span>     <span class="token number">4.80509</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-3.96061177e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">1.7387e-01</td>
+<td style="text-align:left">273.55</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-3.96063381e+04</td>
+<td style="text-align:left">-2.20345573e-01</td>
+<td style="text-align:left">2.6401e-01</td>
+<td style="text-align:left">25.06</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-3.96065456e+04</td>
+<td style="text-align:left">-2.07512203e-01</td>
+<td style="text-align:left">5.5040e-02</td>
+<td style="text-align:left">21.94</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-3.96066163e+04</td>
+<td style="text-align:left">-7.07632037e-02</td>
+<td style="text-align:left">8.1906e-03</td>
+<td style="text-align:left">22.25</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-3.96066250e+04</td>
+<td style="text-align:left">-8.70955431e-03</td>
+<td style="text-align:left">3.3837e-03</td>
+<td style="text-align:left">23.58</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-3.96066265e+04</td>
+<td style="text-align:left">-1.42397136e-03</td>
+<td style="text-align:left">1.4721e-03</td>
+<td style="text-align:left">21.52</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-3.96066280e+04</td>
+<td style="text-align:left">-1.55786106e-03</td>
+<td style="text-align:left">1.0529e-03</td>
+<td style="text-align:left">22.65</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-9.40090456e-04</td>
+<td style="text-align:left">2.2896e-04</td>
+<td style="text-align:left">21.88</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-8.60379047e-05</td>
+<td style="text-align:left">7.0414e-05</td>
+<td style="text-align:left">23.34</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">4.46611316e-05</td>
+<td style="text-align:left">3.7092e-05</td>
+<td style="text-align:left">25.26</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">3.32785605e-05</td>
+<td style="text-align:left">2.2811e-05</td>
+<td style="text-align:left">22.80</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">1.59452763e-05</td>
+<td style="text-align:left">1.0580e-05</td>
+<td style="text-align:left">22.77</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-1.02528709e-05</td>
+<td style="text-align:left">4.5661e-06</td>
+<td style="text-align:left">23.82</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">4.23834356e-06</td>
+<td style="text-align:left">3.3226e-06</td>
+<td style="text-align:left">23.57</td>
+</tr>
+<tr>
+<td style="text-align:left">CG15</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-1.03589991e-05</td>
+<td style="text-align:left">2.2002e-06</td>
+<td style="text-align:left">22.97</td>
+</tr>
+<tr>
+<td style="text-align:left">CG16</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-5.01377971e-06</td>
+<td style="text-align:left">5.0340e-07</td>
+<td style="text-align:left">26.52</td>
+</tr>
+<tr>
+<td style="text-align:left">CG17</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-2.46251249e-06</td>
+<td style="text-align:left">2.8700e-07</td>
+<td style="text-align:left">25.28</td>
+</tr>
+<tr>
+<td style="text-align:left">CG18</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-3.61441228e-06</td>
+<td style="text-align:left">1.6766e-07</td>
+<td style="text-align:left">24.56</td>
+</tr>
+<tr>
+<td style="text-align:left">CG19</td>
+<td style="text-align:left">-3.96066290e+04</td>
+<td style="text-align:left">-1.01492113e-05</td>
+<td style="text-align:left">8.0978e-08</td>
+<td style="text-align:left">27.17</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">24.7752393076</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-25.0000941801</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-25.0000940903</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A; -8.408316 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-39606.6289893290231703 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;19 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;704.60 s&#xFF0C;&#x5176;&#x4E2D; diag_once &#x5360;&#x4E86; 93.94% &#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-2911.0324945717</td>
+<td style="text-align:left">-39606.6289893290</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-2911.0321285717</td>
+<td style="text-align:left">-39606.6240096436</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-2911.0005329307</td>
+<td style="text-align:left">-39606.1941288940</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-413.9958032522</td>
+<td style="text-align:left">-5632.7018723172</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-18289.9805887175</td>
+<td style="text-align:left">-248847.9523159529</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">9119.6015857244</td>
+<td style="text-align:left">124078.5450556876</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-278.1164683877</td>
+<td style="text-align:left">-3783.9686777098</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">6537.4637088091</td>
+<td style="text-align:left">88946.7569080169</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0007320000</td>
+<td style="text-align:left">-0.0099593709</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-19440.8647493502</td>
+<td style="text-align:left">-264506.5346385044</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.2983493386</td>
+<td style="text-align:left">4.0592509996</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0001022263</td>
+<td style="text-align:left">0.0013908600</td>
+</tr>
+</tbody>
+</table>
+<h2 id="0053batio3"><a name="0053batio3" class="plugin-anchor" href="#0053batio3"><i class="fa fa-link" aria-hidden="true"></i></a>005_3BaTiO3</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;72*72*81&#xFF1B;symmetry <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">5.75467</span>     <span class="token number">0.00000</span>     <span class="token number">0.00000</span>
+   <span class="token parameter variable">-2.87734</span>     <span class="token number">4.98369</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">0.00000</span>     <span class="token number">7.10999</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-1.07376173e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">6.6778e+00</td>
+<td style="text-align:left">607.46</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-1.07496593e+04</td>
+<td style="text-align:left">-1.20419306e+01</td>
+<td style="text-align:left">4.6588e-01</td>
+<td style="text-align:left">181.94</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-1.07507326e+04</td>
+<td style="text-align:left">-1.07334585e+00</td>
+<td style="text-align:left">3.5249e-01</td>
+<td style="text-align:left">246.17</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-1.07516561e+04</td>
+<td style="text-align:left">-9.23522025e-01</td>
+<td style="text-align:left">1.4405e-01</td>
+<td style="text-align:left">162.25</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-1.07513218e+04</td>
+<td style="text-align:left">3.34320510e-01</td>
+<td style="text-align:left">9.9641e-02</td>
+<td style="text-align:left">151.37</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-1.07515551e+04</td>
+<td style="text-align:left">-2.33265857e-01</td>
+<td style="text-align:left">7.9230e-04</td>
+<td style="text-align:left">156.26</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-1.07515715e+04</td>
+<td style="text-align:left">-1.64486267e-02</td>
+<td style="text-align:left">6.6773e-03</td>
+<td style="text-align:left">399.66</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-1.07515907e+04</td>
+<td style="text-align:left">-1.92328979e-02</td>
+<td style="text-align:left">4.1247e-04</td>
+<td style="text-align:left">236.57</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-1.07515917e+04</td>
+<td style="text-align:left">-9.73689599e-04</td>
+<td style="text-align:left">4.0061e-06</td>
+<td style="text-align:left">162.42</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-1.07515918e+04</td>
+<td style="text-align:left">-2.98077644e-05</td>
+<td style="text-align:left">1.9859e-05</td>
+<td style="text-align:left">345.54</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-1.07515918e+04</td>
+<td style="text-align:left">-2.32001906e-05</td>
+<td style="text-align:left">1.1934e-06</td>
+<td style="text-align:left">196.24</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">-1.07515918e+04</td>
+<td style="text-align:left">-2.34042136e-06</td>
+<td style="text-align:left">6.9528e-08</td>
+<td style="text-align:left">168.14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-20.3098660878</td>
+<td style="text-align:left">0.0011513007</td>
+<td style="text-align:left">0.0001112323</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0011513007</td>
+<td style="text-align:left">-20.3095629848</td>
+<td style="text-align:left">0.0000668227</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0001112323</td>
+<td style="text-align:left">0.0000668227</td>
+<td style="text-align:left">-19.0965324274</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;-19.905320 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-10751.5917757953739056 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;12 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;3039.78 s&#xFF0C;&#x5176;&#x4E2D; diag_once &#x5360;&#x4E86; 93.78% &#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-790.2271368801</td>
+<td style="text-align:left">-10751.5917757954</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-790.2271368801</td>
+<td style="text-align:left">-10751.5917757954</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-790.2237118687</td>
+<td style="text-align:left">-10751.5451761252</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-37.6927893935</td>
+<td style="text-align:left">-512.8367092659</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-239.9607234901</td>
+<td style="text-align:left">-3264.8331356676</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">184.9249061992</td>
+<td style="text-align:left">2516.0324264247</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-128.8978695880</td>
+<td style="text-align:left">-1753.7454864580</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-606.2934500012</td>
+<td style="text-align:left">-8249.0455800945</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-578.4644611488</td>
+<td style="text-align:left">-7870.4127621230</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.8519517184</td>
+<td style="text-align:left">11.5913977906</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.1951650535</td>
+<td style="text-align:left">2.6553567782</td>
+</tr>
+</tbody>
+</table>
+<h2 id="00616na"><a name="00616na" class="plugin-anchor" href="#00616na"><i class="fa fa-link" aria-hidden="true"></i></a>006_16Na</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;60*60*60&#xFF1B;symmetry <span class="token number">1</span>&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">6.346640091744497</span> <span class="token number">4</span>.937196701587207e-38 <span class="token number">1</span>.2037062152420224e-35 
+<span class="token parameter variable">-0.3705014335305696</span> <span class="token number">6.058733473921547</span> <span class="token number">0.0</span> 
+<span class="token parameter variable">-0.015873658000553906</span> <span class="token number">0.3179036738246763</span> <span class="token number">6.2932225242482485</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-1.85274482e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">4.3907e-01</td>
+<td style="text-align:left">211.12</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-1.85261934e+04</td>
+<td style="text-align:left">1.25480314e+00</td>
+<td style="text-align:left">1.7387e-01</td>
+<td style="text-align:left">40.02</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-1.85270022e+04</td>
+<td style="text-align:left">-8.08765483e-01</td>
+<td style="text-align:left">1.4058e-02</td>
+<td style="text-align:left">52.61</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-1.85267655e+04</td>
+<td style="text-align:left">2.36654658e-01</td>
+<td style="text-align:left">3.5320e-02</td>
+<td style="text-align:left">45.90</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-1.85268367e+04</td>
+<td style="text-align:left">-7.11497284e-02</td>
+<td style="text-align:left">3.1918e-03</td>
+<td style="text-align:left">56.89</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-1.85268421e+04</td>
+<td style="text-align:left">-5.44600048e-03</td>
+<td style="text-align:left">8.4676e-05</td>
+<td style="text-align:left">47.60</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-1.85268425e+04</td>
+<td style="text-align:left">-3.52055756e-04</td>
+<td style="text-align:left">1.7039e-04</td>
+<td style="text-align:left">71.49</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-1.85268427e+04</td>
+<td style="text-align:left">-2.47707077e-04</td>
+<td style="text-align:left">4.4787e-06</td>
+<td style="text-align:left">50.83</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-1.85268427e+04</td>
+<td style="text-align:left">-1.45872453e-05</td>
+<td style="text-align:left">2.5431e-06</td>
+<td style="text-align:left">59.62</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-1.85268427e+04</td>
+<td style="text-align:left">-2.74728249e-06</td>
+<td style="text-align:left">1.2880e-07</td>
+<td style="text-align:left">44.81</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-1.85268427e+04</td>
+<td style="text-align:left">-9.14789446e-07</td>
+<td style="text-align:left">2.3952e-08</td>
+<td style="text-align:left">61.35</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">368.9761499556</td>
+<td style="text-align:left">10.4055449333</td>
+<td style="text-align:left">-1.7068050467</td>
+</tr>
+<tr>
+<td style="text-align:left">10.4055449333</td>
+<td style="text-align:left">375.0995317636</td>
+<td style="text-align:left">-9.0968576755</td>
+</tr>
+<tr>
+<td style="text-align:left">-1.7068050467</td>
+<td style="text-align:left">-9.0968576755</td>
+<td style="text-align:left">371.7866429945</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;371.954108 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A; -18526.8427491046750220 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;11 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;756.21 s&#xFF0C;&#x5176;&#x4E2D; cg &#x6CD5;&#x7684; diag_once &#x5360;&#x4E86; 80.34% &#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-1361.6973380641</td>
+<td style="text-align:left">-18526.8427491047</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-1361.6972847229</td>
+<td style="text-align:left">-18526.8420233599</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-1361.6931159893</td>
+<td style="text-align:left">-18526.7853048300</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-216.0843307041</td>
+<td style="text-align:left">-2939.9781460928</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-764.7144587977</td>
+<td style="text-align:left">-10404.4739826349</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">406.2024013718</td>
+<td style="text-align:left">5526.6671999400</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-203.0760004427</td>
+<td style="text-align:left">-2762.9907330708</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-800.1091735131</td>
+<td style="text-align:left">-10886.0437818495</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0001066825</td>
+<td style="text-align:left">-0.0014514895</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-1051.7301116817</td>
+<td style="text-align:left">-14309.5222770470</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.6440622455</td>
+<td style="text-align:left">8.7629164050</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0003885096</td>
+<td style="text-align:left">0.0052859449</td>
+</tr>
+</tbody>
+</table>
+<h2 id="00727fe"><a name="00727fe" class="plugin-anchor" href="#00727fe"><i class="fa fa-link" aria-hidden="true"></i></a>007_27Fe</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;72*72*72&#xFF1B;nspin <span class="token number">2</span> <span class="token punctuation">(</span>spin-polarized calculations<span class="token punctuation">)</span><span class="token punctuation">;</span> symmetry <span class="token number">1</span>
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">4.2600000</span>  <span class="token parameter variable">-4.2600000</span>  <span class="token parameter variable">-4.2600000</span>
+ <span class="token parameter variable">-4.2600000</span>   <span class="token number">4.2600000</span>  <span class="token parameter variable">-4.2600000</span>
+ <span class="token parameter variable">-4.2600000</span>  <span class="token parameter variable">-4.2600000</span>   <span class="token number">4.2600000</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">TMAG</th>
+<th style="text-align:left">AMAG</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">9.54e+01</td>
+<td style="text-align:left">9.54e+01</td>
+<td style="text-align:left">-8.65871724e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">1.6042e+01</td>
+<td style="text-align:left">1629.54</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">7.71e+01</td>
+<td style="text-align:left">7.71e+01</td>
+<td style="text-align:left">-8.68726768e+04</td>
+<td style="text-align:left">-2.85504365e+02</td>
+<td style="text-align:left">3.0192e-01</td>
+<td style="text-align:left">412.86</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">6.90e+01</td>
+<td style="text-align:left">7.10e+01</td>
+<td style="text-align:left">-8.69628406e+04</td>
+<td style="text-align:left">-9.01638645e+01</td>
+<td style="text-align:left">3.6671e+00</td>
+<td style="text-align:left">1611.63</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">6.89e+01</td>
+<td style="text-align:left">7.11e+01</td>
+<td style="text-align:left">-8.69633206e+04</td>
+<td style="text-align:left">-4.79987191e-01</td>
+<td style="text-align:left">3.1065e+00</td>
+<td style="text-align:left">199.40</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">6.89e+01</td>
+<td style="text-align:left">7.11e+01</td>
+<td style="text-align:left">-8.69439931e+04</td>
+<td style="text-align:left">1.93275088e+01</td>
+<td style="text-align:left">3.1410e+00</td>
+<td style="text-align:left">198.13</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">6.53e+01</td>
+<td style="text-align:left">6.94e+01</td>
+<td style="text-align:left">-8.69546349e+04</td>
+<td style="text-align:left">-1.06417586e+01</td>
+<td style="text-align:left">1.5837e-01</td>
+<td style="text-align:left">425.97</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">6.17e+01</td>
+<td style="text-align:left">6.64e+01</td>
+<td style="text-align:left">-8.69579452e+04</td>
+<td style="text-align:left">-3.31034240e+00</td>
+<td style="text-align:left">4.7708e-01</td>
+<td style="text-align:left">272.85</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">5.96e+01</td>
+<td style="text-align:left">6.45e+01</td>
+<td style="text-align:left">-8.69574278e+04</td>
+<td style="text-align:left">5.17374178e-01</td>
+<td style="text-align:left">8.4429e-01</td>
+<td style="text-align:left">216.59</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">5.92e+01</td>
+<td style="text-align:left">6.40e+01</td>
+<td style="text-align:left">-8.69544029e+04</td>
+<td style="text-align:left">3.02495367e+00</td>
+<td style="text-align:left">6.7697e-01</td>
+<td style="text-align:left">199.39</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">5.95e+01</td>
+<td style="text-align:left">6.37e+01</td>
+<td style="text-align:left">-8.69549347e+04</td>
+<td style="text-align:left">-5.31859541e-01</td>
+<td style="text-align:left">1.7633e-01</td>
+<td style="text-align:left">210.17</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">5.97e+01</td>
+<td style="text-align:left">6.39e+01</td>
+<td style="text-align:left">-8.69543310e+04</td>
+<td style="text-align:left">6.03783240e-01</td>
+<td style="text-align:left">1.7662e-01</td>
+<td style="text-align:left">199.33</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">6.03e+01</td>
+<td style="text-align:left">6.43e+01</td>
+<td style="text-align:left">-8.69542340e+04</td>
+<td style="text-align:left">9.69614413e-02</td>
+<td style="text-align:left">6.6030e-02</td>
+<td style="text-align:left">206.11</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">5.95e+01</td>
+<td style="text-align:left">6.33e+01</td>
+<td style="text-align:left">-8.69544174e+04</td>
+<td style="text-align:left">-1.83398934e-01</td>
+<td style="text-align:left">2.5280e-02</td>
+<td style="text-align:left">240.92</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">5.94e+01</td>
+<td style="text-align:left">6.32e+01</td>
+<td style="text-align:left">-8.69545025e+04</td>
+<td style="text-align:left">-8.51479190e-02</td>
+<td style="text-align:left">1.4637e-02</td>
+<td style="text-align:left">294.65</td>
+</tr>
+<tr>
+<td style="text-align:left">CG15</td>
+<td style="text-align:left">5.97e+01</td>
+<td style="text-align:left">6.34e+01</td>
+<td style="text-align:left">-8.69545794e+04</td>
+<td style="text-align:left">-7.68943539e-02</td>
+<td style="text-align:left">8.1722e-03</td>
+<td style="text-align:left">250.80</td>
+</tr>
+<tr>
+<td style="text-align:left">CG16</td>
+<td style="text-align:left">5.97e+01</td>
+<td style="text-align:left">6.34e+01</td>
+<td style="text-align:left">-8.69545843e+04</td>
+<td style="text-align:left">-4.83096393e-03</td>
+<td style="text-align:left">8.7895e-03</td>
+<td style="text-align:left">239.15</td>
+</tr>
+<tr>
+<td style="text-align:left">CG17</td>
+<td style="text-align:left">5.98e+01</td>
+<td style="text-align:left">6.36e+01</td>
+<td style="text-align:left">-8.69545709e+04</td>
+<td style="text-align:left">1.33527198e-02</td>
+<td style="text-align:left">3.8935e-03</td>
+<td style="text-align:left">203.59</td>
+</tr>
+<tr>
+<td style="text-align:left">CG18</td>
+<td style="text-align:left">6.03e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546129e+04</td>
+<td style="text-align:left">-4.19533335e-02</td>
+<td style="text-align:left">7.8584e-04</td>
+<td style="text-align:left">329.10</td>
+</tr>
+<tr>
+<td style="text-align:left">CG19</td>
+<td style="text-align:left">6.04e+01</td>
+<td style="text-align:left">6.42e+01</td>
+<td style="text-align:left">-8.69546216e+04</td>
+<td style="text-align:left">-8.74961871e-03</td>
+<td style="text-align:left">1.3840e-03</td>
+<td style="text-align:left">437.26</td>
+</tr>
+<tr>
+<td style="text-align:left">CG20</td>
+<td style="text-align:left">6.03e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546193e+04</td>
+<td style="text-align:left">2.36712873e-03</td>
+<td style="text-align:left">9.9378e-04</td>
+<td style="text-align:left">200.38</td>
+</tr>
+<tr>
+<td style="text-align:left">CG21</td>
+<td style="text-align:left">6.03e+01</td>
+<td style="text-align:left">6.42e+01</td>
+<td style="text-align:left">-8.69546186e+04</td>
+<td style="text-align:left">6.96961753e-04</td>
+<td style="text-align:left">3.6621e-04</td>
+<td style="text-align:left">199.68</td>
+</tr>
+<tr>
+<td style="text-align:left">CG22</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546182e+04</td>
+<td style="text-align:left">3.05279369e-04</td>
+<td style="text-align:left">2.3131e-04</td>
+<td style="text-align:left">221.88</td>
+</tr>
+<tr>
+<td style="text-align:left">CG23</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.40e+01</td>
+<td style="text-align:left">-8.69546197e+04</td>
+<td style="text-align:left">-1.42208975e-03</td>
+<td style="text-align:left">2.7379e-05</td>
+<td style="text-align:left">287.94</td>
+</tr>
+<tr>
+<td style="text-align:left">CG24</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.40e+01</td>
+<td style="text-align:left">-8.69546201e+04</td>
+<td style="text-align:left">-4.33446325e-04</td>
+<td style="text-align:left">1.2147e-04</td>
+<td style="text-align:left">521.98</td>
+</tr>
+<tr>
+<td style="text-align:left">CG25</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546200e+04</td>
+<td style="text-align:left">8.06506065e-05</td>
+<td style="text-align:left">4.9929e-05</td>
+<td style="text-align:left">213.98</td>
+</tr>
+<tr>
+<td style="text-align:left">CG26</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546200e+04</td>
+<td style="text-align:left">2.03680157e-05</td>
+<td style="text-align:left">2.4501e-05</td>
+<td style="text-align:left">212.55</td>
+</tr>
+<tr>
+<td style="text-align:left">CG27</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-2.17355861e-04</td>
+<td style="text-align:left">2.1266e-05</td>
+<td style="text-align:left">287.90</td>
+</tr>
+<tr>
+<td style="text-align:left">CG28</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">3.02994638e-05</td>
+<td style="text-align:left">2.4677e-05</td>
+<td style="text-align:left">223.80</td>
+</tr>
+<tr>
+<td style="text-align:left">CG29</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">1.81589291e-05</td>
+<td style="text-align:left">1.1471e-05</td>
+<td style="text-align:left">200.11</td>
+</tr>
+<tr>
+<td style="text-align:left">CG30</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">1.06380708e-05</td>
+<td style="text-align:left">3.7225e-06</td>
+<td style="text-align:left">208.19</td>
+</tr>
+<tr>
+<td style="text-align:left">CG31</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-2.35145677e-05</td>
+<td style="text-align:left">2.1675e-06</td>
+<td style="text-align:left">322.74</td>
+</tr>
+<tr>
+<td style="text-align:left">CG32</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-9.23611092e-06</td>
+<td style="text-align:left">1.4584e-06</td>
+<td style="text-align:left">261.44</td>
+</tr>
+<tr>
+<td style="text-align:left">CG33</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-1.86146749e-07</td>
+<td style="text-align:left">5.2016e-07</td>
+<td style="text-align:left">218.58</td>
+</tr>
+<tr>
+<td style="text-align:left">CG34</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-1.12097639e-06</td>
+<td style="text-align:left">1.9694e-07</td>
+<td style="text-align:left">316.45</td>
+</tr>
+<tr>
+<td style="text-align:left">CG35</td>
+<td style="text-align:left">6.02e+01</td>
+<td style="text-align:left">6.41e+01</td>
+<td style="text-align:left">-8.69546202e+04</td>
+<td style="text-align:left">-1.79000585e-06</td>
+<td style="text-align:left">4.9313e-08</td>
+<td style="text-align:left">350.64</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-119.2155216605</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-119.2155216605</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">-119.2155216605</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;-119.215522 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-86954.6201964026404312 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;35 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;12053.54 s&#xFF0C;&#x5176;&#x4E2D; CG &#x6CD5;&#x7684; diag_once &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5360;&#x7528;&#x4E86; 11432.77 s&#xFF0C;&#x5373; 94.85% &#x7684;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-6391.0444136275</td>
+<td style="text-align:left">-86954.6201964026</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-6391.0439808234</td>
+<td style="text-align:left">-86954.6143078003</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-6391.0328616943</td>
+<td style="text-align:left">-86954.4630242887</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-408.0662265501</td>
+<td style="text-align:left">-5552.0258424407</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-2527.9463472785</td>
+<td style="text-align:left">-34394.4745612748</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">1502.1157483041</td>
+<td style="text-align:left">20437.3332324700</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-678.1817376599</td>
+<td style="text-align:left">-9227.1359117163</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-4687.0312113849</td>
+<td style="text-align:left">-63770.3311786769</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0008656083</td>
+<td style="text-align:left">-0.0117772047</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-3286.5050164938</td>
+<td style="text-align:left">-44715.1947298993</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">1.3881279748</td>
+<td style="text-align:left">18.8864500098</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0006004343</td>
+<td style="text-align:left">0.0081693276</td>
+</tr>
+</tbody>
+</table>
+<h2 id="00832h2o"><a name="00832h2o" class="plugin-anchor" href="#00832h2o"><i class="fa fa-link" aria-hidden="true"></i></a>008_32H2O</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;120*120*120&#xFF1B;k&#x70B9;1*1*1
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">9.8773532935</span> <span class="token number">0.000000</span> <span class="token number">0.000000</span>
+<span class="token number">0.000000</span> <span class="token number">9.8773532935</span> <span class="token number">0.000000</span>
+<span class="token number">0.000000</span> <span class="token number">0.000000</span> <span class="token number">9.8773532935</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-1.48844998e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">1.2077e+01</td>
+<td style="text-align:left">65.71</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-1.49403891e+04</td>
+<td style="text-align:left">-5.58892785e+01</td>
+<td style="text-align:left">5.6110e+00</td>
+<td style="text-align:left">25.50</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-1.49539925e+04</td>
+<td style="text-align:left">-1.36033706e+01</td>
+<td style="text-align:left">1.3700e-01</td>
+<td style="text-align:left">20.00</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-1.49548347e+04</td>
+<td style="text-align:left">-8.42249496e-01</td>
+<td style="text-align:left">4.6556e-02</td>
+<td style="text-align:left">23.96</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-1.49548937e+04</td>
+<td style="text-align:left">-5.89893516e-02</td>
+<td style="text-align:left">8.7855e-03</td>
+<td style="text-align:left">18.67</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-1.49549107e+04</td>
+<td style="text-align:left">-1.69322723e-02</td>
+<td style="text-align:left">1.0669e-03</td>
+<td style="text-align:left">18.00</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-1.49549157e+04</td>
+<td style="text-align:left">-5.01034724e-03</td>
+<td style="text-align:left">6.4380e-04</td>
+<td style="text-align:left">23.27</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-1.49549151e+04</td>
+<td style="text-align:left">5.55649726e-04</td>
+<td style="text-align:left">2.1074e-04</td>
+<td style="text-align:left">14.91</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">-3.96055694e-04</td>
+<td style="text-align:left">2.2886e-05</td>
+<td style="text-align:left">18.99</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">-3.19138194e-05</td>
+<td style="text-align:left">6.7614e-06</td>
+<td style="text-align:left">20.70</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">1.04845025e-05</td>
+<td style="text-align:left">2.3871e-06</td>
+<td style="text-align:left">15.67</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">-3.32430895e-06</td>
+<td style="text-align:left">4.5543e-07</td>
+<td style="text-align:left">18.92</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">2.05961113e-07</td>
+<td style="text-align:left">1.6144e-07</td>
+<td style="text-align:left">16.62</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">-1.49549155e+04</td>
+<td style="text-align:left">2.95829541e-07</td>
+<td style="text-align:left">4.4067e-08</td>
+<td style="text-align:left">16.30</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0.2883639768</td>
+<td style="text-align:left">3.8795586497</td>
+<td style="text-align:left">1.0542813355</td>
+</tr>
+<tr>
+<td style="text-align:left">3.8795586497</td>
+<td style="text-align:left">8.7806643813</td>
+<td style="text-align:left">8.9331282606</td>
+</tr>
+<tr>
+<td style="text-align:left">1.0542813355</td>
+<td style="text-align:left">8.9331282606</td>
+<td style="text-align:left">6.6538534714</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;5.240961 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-14954.9155264706932940 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;14 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;320.93 s&#xFF0C;&#x5176;&#x4E2D; nonlocal_pw &#x5360;&#x4E86; 205.92 s&#xFF0C;&#x5373; 64.16% &#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x5C06;&#x6765;&#x8981;&#x7EE7;&#x7EED;&#x4F18;&#x5316;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-1099.1656235844</td>
+<td style="text-align:left">-14954.9155264707</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-1099.1656235844</td>
+<td style="text-align:left">-14954.9155264707</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-1099.1677854898</td>
+<td style="text-align:left">-14954.9449407032</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-183.2058096314</td>
+<td style="text-align:left">-2492.6429176900</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-924.6314366704</td>
+<td style="text-align:left">-12580.2560886437</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">546.6099604179</td>
+<td style="text-align:left">7437.0100452382</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-271.2195223924</td>
+<td style="text-align:left">-3690.1309133755</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-449.9246249395</td>
+<td style="text-align:left">-6121.5385696897</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-1666.9162338806</td>
+<td style="text-align:left">-22679.5588694765</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">-0.1856559161</td>
+<td style="text-align:left">-2.5259783259</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="009li27ni9o54mn9co9"><a name="009li27ni9o54mn9co9" class="plugin-anchor" href="#009li27ni9o54mn9co9"><i class="fa fa-link" aria-hidden="true"></i></a>009_Li27Ni9O54Mn9Co9</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">nspin <span class="token number">2</span>&#xFF1B;FFT&#x683C;&#x5B50;96*96*160&#xFF1B;1*1*1 k&#x70B9;&#xFF1B;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">8.52869</span>     <span class="token number">0.00000</span>     <span class="token number">0.00000</span>
+   <span class="token parameter variable">-4.26435</span>     <span class="token number">7.38607</span>     <span class="token number">0.00000</span>
+    <span class="token number">0.00000</span>     <span class="token number">0.00000</span>    <span class="token number">14.14561</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">TMAG</th>
+<th style="text-align:left">AMAG</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">4.77e+01</td>
+<td style="text-align:left">4.82e+01</td>
+<td style="text-align:left">-1.23829857e+05</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">3.5996e+01</td>
+<td style="text-align:left">1687.79</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">3.91e+01</td>
+<td style="text-align:left">4.11e+01</td>
+<td style="text-align:left">-1.24037903e+05</td>
+<td style="text-align:left">-2.08045922e+02</td>
+<td style="text-align:left">1.6767e+01</td>
+<td style="text-align:left">410.50</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">2.81e+01</td>
+<td style="text-align:left">3.18e+01</td>
+<td style="text-align:left">-1.24053947e+05</td>
+<td style="text-align:left">-1.60439063e+01</td>
+<td style="text-align:left">1.8092e+01</td>
+<td style="text-align:left">240.91</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">2.53e+01</td>
+<td style="text-align:left">2.91e+01</td>
+<td style="text-align:left">-1.24066021e+05</td>
+<td style="text-align:left">-1.20742278e+01</td>
+<td style="text-align:left">3.2707e+01</td>
+<td style="text-align:left">213.09</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">4.10e+01</td>
+<td style="text-align:left">4.26e+01</td>
+<td style="text-align:left">-1.24075353e+05</td>
+<td style="text-align:left">-9.33163671e+00</td>
+<td style="text-align:left">4.3860e+00</td>
+<td style="text-align:left">212.70</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">4.33e+01</td>
+<td style="text-align:left">4.49e+01</td>
+<td style="text-align:left">-1.24077657e+05</td>
+<td style="text-align:left">-2.30402841e+00</td>
+<td style="text-align:left">2.2254e+00</td>
+<td style="text-align:left">228.18</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">4.42e+01</td>
+<td style="text-align:left">4.61e+01</td>
+<td style="text-align:left">-1.24080294e+05</td>
+<td style="text-align:left">-2.63726063e+00</td>
+<td style="text-align:left">3.4642e+00</td>
+<td style="text-align:left">269.95</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.72e+01</td>
+<td style="text-align:left">-1.24081456e+05</td>
+<td style="text-align:left">-1.16165771e+00</td>
+<td style="text-align:left">6.8967e-01</td>
+<td style="text-align:left">213.81</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.75e+01</td>
+<td style="text-align:left">-1.24081982e+05</td>
+<td style="text-align:left">-5.26359735e-01</td>
+<td style="text-align:left">2.8731e-01</td>
+<td style="text-align:left">248.47</td>
+</tr>
+<tr>
+<td style="text-align:left">CG10</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24082850e+05</td>
+<td style="text-align:left">-8.68121751e-01</td>
+<td style="text-align:left">1.0071e-01</td>
+<td style="text-align:left">290.59</td>
+</tr>
+<tr>
+<td style="text-align:left">CG11</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.80e+01</td>
+<td style="text-align:left">-1.24082986e+05</td>
+<td style="text-align:left">-1.35945509e-01</td>
+<td style="text-align:left">5.2989e-02</td>
+<td style="text-align:left">290.03</td>
+</tr>
+<tr>
+<td style="text-align:left">CG12</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.80e+01</td>
+<td style="text-align:left">-1.24083015e+05</td>
+<td style="text-align:left">-2.87286361e-02</td>
+<td style="text-align:left">1.6464e-02</td>
+<td style="text-align:left">227.65</td>
+</tr>
+<tr>
+<td style="text-align:left">CG13</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.79e+01</td>
+<td style="text-align:left">-1.24083076e+05</td>
+<td style="text-align:left">-6.09357754e-02</td>
+<td style="text-align:left">4.1931e-03</td>
+<td style="text-align:left">354.78</td>
+</tr>
+<tr>
+<td style="text-align:left">CG14</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.79e+01</td>
+<td style="text-align:left">-1.24083086e+05</td>
+<td style="text-align:left">-1.02802877e-02</td>
+<td style="text-align:left">6.7191e-04</td>
+<td style="text-align:left">286.08</td>
+</tr>
+<tr>
+<td style="text-align:left">CG15</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083089e+05</td>
+<td style="text-align:left">-3.02006535e-03</td>
+<td style="text-align:left">2.6890e-04</td>
+<td style="text-align:left">351.64</td>
+</tr>
+<tr>
+<td style="text-align:left">CG16</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083089e+05</td>
+<td style="text-align:left">-2.94229147e-04</td>
+<td style="text-align:left">1.2331e-04</td>
+<td style="text-align:left">239.12</td>
+</tr>
+<tr>
+<td style="text-align:left">CG17</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-2.48892397e-04</td>
+<td style="text-align:left">3.6209e-05</td>
+<td style="text-align:left">261.48</td>
+</tr>
+<tr>
+<td style="text-align:left">CG18</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-1.44384392e-04</td>
+<td style="text-align:left">8.3798e-06</td>
+<td style="text-align:left">334.19</td>
+</tr>
+<tr>
+<td style="text-align:left">CG19</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-1.93796053e-05</td>
+<td style="text-align:left">3.3543e-06</td>
+<td style="text-align:left">298.70</td>
+</tr>
+<tr>
+<td style="text-align:left">CG20</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-6.55459789e-06</td>
+<td style="text-align:left">1.2567e-06</td>
+<td style="text-align:left">286.23</td>
+</tr>
+<tr>
+<td style="text-align:left">CG21</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-4.58040043e-06</td>
+<td style="text-align:left">5.9537e-07</td>
+<td style="text-align:left">312.91</td>
+</tr>
+<tr>
+<td style="text-align:left">CG22</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-1.12477530e-06</td>
+<td style="text-align:left">1.8776e-07</td>
+<td style="text-align:left">243.47</td>
+</tr>
+<tr>
+<td style="text-align:left">CG23</td>
+<td style="text-align:left">4.50e+01</td>
+<td style="text-align:left">4.78e+01</td>
+<td style="text-align:left">-1.24083090e+05</td>
+<td style="text-align:left">-3.68952434e-07</td>
+<td style="text-align:left">7.1732e-08</td>
+<td style="text-align:left">300.39</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">96.8425864942</td>
+<td style="text-align:left">0.0004615343</td>
+<td style="text-align:left">-0.0006177785</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0004615343</td>
+<td style="text-align:left">96.8362112644</td>
+<td style="text-align:left">0.0004867549</td>
+</tr>
+<tr>
+<td style="text-align:left">-0.0006177785</td>
+<td style="text-align:left">0.0004867549</td>
+<td style="text-align:left">86.7276455457</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;93.468814 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-124083.0898497783055063 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;23 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;7830.05 s&#xFF0C;&#x5176;&#x4E2D; nonlocal_pw &#x5360;&#x4E86; 5484.75 s&#xFF0C;&#x5373; 70.05% &#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x5C06;&#x6765;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x4F18;&#x5316;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Energy</th>
+<th style="text-align:left">Rydberg</th>
+<th style="text-align:left">eV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">E_KohnSham</td>
+<td style="text-align:left">-9119.9356218092</td>
+<td style="text-align:left">-124083.0898497783</td>
+</tr>
+<tr>
+<td style="text-align:left">E_KS(sigma-&gt;0)</td>
+<td style="text-align:left">-9119.9356218092</td>
+<td style="text-align:left">-124083.0898497783</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Harris</td>
+<td style="text-align:left">-9119.9316871798</td>
+<td style="text-align:left">-124083.0363163987</td>
+</tr>
+<tr>
+<td style="text-align:left">E_band</td>
+<td style="text-align:left">-794.1408354970</td>
+<td style="text-align:left">-10804.8403772392</td>
+</tr>
+<tr>
+<td style="text-align:left">E_one_elec</td>
+<td style="text-align:left">-5562.4996857876</td>
+<td style="text-align:left">-75681.6908499212</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Hartree</td>
+<td style="text-align:left">3159.0304857493</td>
+<td style="text-align:left">42980.8147618986</td>
+</tr>
+<tr>
+<td style="text-align:left">E_xc</td>
+<td style="text-align:left">-1190.7941700271</td>
+<td style="text-align:left">-16201.5858575490</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Ewald</td>
+<td style="text-align:left">-5525.6722517438</td>
+<td style="text-align:left">-75180.6279042067</td>
+</tr>
+<tr>
+<td style="text-align:left">E_entropy(-TS)</td>
+<td style="text-align:left">-0.0000000000</td>
+<td style="text-align:left">-0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_descf</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_localpp</td>
+<td style="text-align:left">-7438.8070118575</td>
+<td style="text-align:left">-101210.1616836149</td>
+</tr>
+<tr>
+<td style="text-align:left">E_exx</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">E_Fermi</td>
+<td style="text-align:left">0.8685213331</td>
+<td style="text-align:left">11.8168389647</td>
+</tr>
+<tr>
+<td style="text-align:left">E_gap(k)</td>
+<td style="text-align:left">0.0379028892</td>
+<td style="text-align:left">0.5156952631</td>
+</tr>
+</tbody>
+</table>
+<h2 id="010216si"><a name="010216si" class="plugin-anchor" href="#010216si"><i class="fa fa-link" aria-hidden="true"></i></a>010_216Si</h2>
+<ul>
+<li>&#x5173;&#x952E;&#x53C2;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-bash">FFT&#x683C;&#x5B50;160*160*160&#xFF1B;k&#x70B9;1*1*1&#x4E2A;
+</code></pre>
+<ul>
+<li>&#x6676;&#x683C;</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token number">16.4061900</span>   <span class="token number">0.0000000</span>   <span class="token number">0.0000000</span>
+  <span class="token number">0.0000000</span>  <span class="token number">16.4061900</span>   <span class="token number">0.0000000</span>
+  <span class="token number">0.0000000</span>   <span class="token number">0.0000000</span>  <span class="token number">16.4061900</span>
+</code></pre>
+<ul>
+<li>&#x8FED;&#x4EE3;&#x80FD;&#x91CF;&#x4E0E;&#x6536;&#x655B;&#x6570;&#x636E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ITER</th>
+<th style="text-align:left">ETOT/eV</th>
+<th style="text-align:left">EDIFF/eV</th>
+<th style="text-align:left">DRHO</th>
+<th style="text-align:left">TIME/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CG1</td>
+<td style="text-align:left">-2.31580979e+04</td>
+<td style="text-align:left">0.00000000e+00</td>
+<td style="text-align:left">5.7058e+00</td>
+<td style="text-align:left">5042.78</td>
+</tr>
+<tr>
+<td style="text-align:left">CG2</td>
+<td style="text-align:left">-2.31603552e+04</td>
+<td style="text-align:left">-2.25731728e+00</td>
+<td style="text-align:left">5.7127e-01</td>
+<td style="text-align:left">524.17</td>
+</tr>
+<tr>
+<td style="text-align:left">CG3</td>
+<td style="text-align:left">-2.31617119e+04</td>
+<td style="text-align:left">-1.35669091e+00</td>
+<td style="text-align:left">1.5108e-02</td>
+<td style="text-align:left">948.32</td>
+</tr>
+<tr>
+<td style="text-align:left">CG4</td>
+<td style="text-align:left">-2.31618157e+04</td>
+<td style="text-align:left">-1.03750893e-01</td>
+<td style="text-align:left">1.3745e-02</td>
+<td style="text-align:left">1162.31</td>
+</tr>
+<tr>
+<td style="text-align:left">CG5</td>
+<td style="text-align:left">-2.31618264e+04</td>
+<td style="text-align:left">-1.07625460e-02</td>
+<td style="text-align:left">5.0465e-04</td>
+<td style="text-align:left">547.22</td>
+</tr>
+<tr>
+<td style="text-align:left">CG6</td>
+<td style="text-align:left">-2.31618300e+04</td>
+<td style="text-align:left">-3.59016799e-03</td>
+<td style="text-align:left">2.9127e-05</td>
+<td style="text-align:left">1132.12</td>
+</tr>
+<tr>
+<td style="text-align:left">CG7</td>
+<td style="text-align:left">-2.31618301e+04</td>
+<td style="text-align:left">-8.99253500e-05</td>
+<td style="text-align:left">2.0803e-06</td>
+<td style="text-align:left">1002.59</td>
+</tr>
+<tr>
+<td style="text-align:left">CG8</td>
+<td style="text-align:left">-2.31618301e+04</td>
+<td style="text-align:left">-8.67906897e-06</td>
+<td style="text-align:left">5.0548e-07</td>
+<td style="text-align:left">1137.68</td>
+</tr>
+<tr>
+<td style="text-align:left">CG9</td>
+<td style="text-align:left">-2.31618301e+04</td>
+<td style="text-align:left">-1.26659109e-06</td>
+<td style="text-align:left">8.6617e-09</td>
+<td style="text-align:left">840.01</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5E94;&#x529B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Stress_x</th>
+<th style="text-align:left">Stress_y</th>
+<th style="text-align:left">Stress_z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">4.3011932295</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">4.3011932295</td>
+<td style="text-align:left">0.0000000000</td>
+</tr>
+<tr>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">0.0000000000</td>
+<td style="text-align:left">4.3011932295</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x603B;&#x538B;&#x529B;&#xFF1A;4.301193 kbar</li>
+<li>&#x603B;&#x80FD;&#x91CF;&#xFF1A;-23161.8301352231464989 eV</li>
+<li>&#x8FED;&#x4EE3;&#x6B65;&#x6570;&#xFF1A;9 &#x6B65;</li>
+<li>&#x603B;&#x8017;&#x65F6;&#xFF1A;12401.37 s&#xFF08;&#x5176;&#x4E2D;&#xFF0C;nonlocal_pw &#x5360;&#x4E86; 9124.29 s&#xFF0C;&#x5373; 73.57% &#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x5C06;&#x6765;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x6539;&#x8FDB;&#xFF09;</li>
+</ul>
+<h1 id="&#x7ED3;&#x8BED;"><a name="&#x7ED3;&#x8BED;" class="plugin-anchor" href="#&#x7ED3;&#x8BED;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED3;&#x8BED;</h1>
+<pre class="language-"><code>  &#x4EE5;&#x4E0A;&#x7B97;&#x4F8B;&#x7684;&#x4E00;&#x4E9B;&#x7EC6;&#x8282;&#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x6DF1;&#x5165;&#x4F18;&#x5316;&#xFF0C;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x6548;&#x7387; &#x5C06;&#x6765;&#x8FD8;&#x6709;&#x8FDB;&#x4E00;&#x6B65;&#x63D0;&#x5347;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;&#x76EE;&#x524D;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5148;&#x4E13;&#x6CE8;&#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x7684;&#x6B63;&#x786E;&#x6027;&#xFF0C;&#x6548;&#x7387;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x8FD8;&#x4F1A;&#x66F4;&#x6DF1;&#x5165;&#x7684;&#x5BF9;&#x6BD4;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6D4B;&#x51FA;&#x6765;&#x7684;&#x67D0;&#x4E2A;&#x7B97;&#x4F8B;&#x7ED3;&#x679C;&#x548C;&#x8FD9;&#x4E2A;&#x6587;&#x6863;&#x7ED9;&#x7684;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x975E;&#x5E38;&#x6B22;&#x8FCE;&#x5230;&#x6211;&#x4EEC;github&#x8BBA;&#x575B;&#x4E0A;&#x63D0;Issues&#xFF0C;&#x5730;&#x5740;&#x662F;&#xFF1A;https://github.com/deepmodeling/abacus-develop
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2025-12-16 09:32:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ABACUS 平面波基组下的 10 个典型算例","level":"1.4.1","depth":2,"next":{"title":"开发","level":"1.5","depth":1,"ref":"","articles":[{"title":"基础规范","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"ABACUS 的 Github 仓库 Issues 处理流程","level":"1.5.1.1","depth":3,"path":"develop-issue.md","ref":"develop-issue.md","articles":[]},{"title":"ABACUS 开源项目 C++ 代码规范","level":"1.5.1.2","depth":3,"path":"develop-C++.md","ref":"develop-C++.md","articles":[]},{"title":"ABACUS 注释规范：Doxygen 入门 (c++)","level":"1.5.1.3","depth":3,"path":"develop-dox.md","ref":"develop-dox.md","articles":[]},{"title":"ABACUS 线上文档输入参数撰写规范","level":"1.5.1.4","depth":3,"path":"develop-input.md","ref":"develop-input.md","articles":[]},{"title":"ABACUS 代码存放规范","level":"1.5.1.5","depth":3,"path":"develop-rule.md","ref":"develop-rule.md","articles":[]},{"title":"如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）","level":"1.5.1.6","depth":3,"path":"develop-addinp.md","ref":"develop-addinp.md","articles":[]},{"title":"如何在 ABACUS 中新增一个输入参数（v3.7.0 后）","level":"1.5.1.7","depth":3,"path":"develop-addinp2.md","ref":"develop-addinp2.md","articles":[]},{"title":"如何在 ABACUS 中进行异构计算","level":"1.5.1.8","depth":3,"path":"develop-hetero.md","ref":"develop-hetero.md","articles":[]},{"title":"ABACUS formatter-2.0 版本使用说明书","level":"1.5.1.9","depth":3,"path":"develop-formatter2.md","ref":"develop-formatter2.md","articles":[]},{"title":"ABACUS 中使用格式化工具 clang-format","level":"1.5.1.10","depth":3,"path":"develop-format.md","ref":"develop-format.md","articles":[]}]},{"title":"性能工具","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"性能分析工具：vtune 快速上手教程","level":"1.5.2.1","depth":3,"path":"develop-vtune.md","ref":"develop-vtune.md","articles":[]},{"title":"ABACUS 全局数据结构和代码行数检测","level":"1.5.2.2","depth":3,"path":"develop-linedete.md","ref":"develop-linedete.md","articles":[]}]},{"title":"编程进阶","level":"1.5.3","depth":2,"ref":"","articles":[{"title":"ABACUS 中的测试（一）：测试的重要性","level":"1.5.3.1","depth":3,"path":"develop-test1.md","ref":"develop-test1.md","articles":[]},{"title":"ABACUS 中的测试（二）：测试工具 gtest","level":"1.5.3.2","depth":3,"path":"develop-test2.md","ref":"develop-test2.md","articles":[]},{"title":"ABACUS 中的测试（三）：测试方法","level":"1.5.3.3","depth":3,"path":"develop-test3.md","ref":"develop-test3.md","articles":[]},{"title":"Tensor 类文档 1：构造和使用说明","level":"1.5.3.4","depth":3,"path":"develop-tensor1.md","ref":"develop-tensor1.md","articles":[]},{"title":"Tensor 类文档 2：使用和拓展","level":"1.5.3.5","depth":3,"path":"develop-tensor2.md","ref":"develop-tensor2.md","articles":[]},{"title":"在 ABACUS 中进行差分测试","level":"1.5.3.6","depth":3,"path":"algorithm-delta.md","ref":"algorithm-delta.md","articles":[]},{"title":"ABACUS 如何处理内存 bug？","level":"1.5.3.7","depth":3,"path":"develop-memory.md","ref":"develop-memory.md","articles":[]},{"title":"文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例","level":"1.5.3.8","depth":3,"path":"develop-cifparser.md","ref":"develop-cifparser.md","articles":[]},{"title":"C++ 程序设计的一些想法","level":"1.5.3.9","depth":3,"path":"develop-design.md","ref":"develop-design.md","articles":[]},{"title":"以格点积分程序为例：一些代码开发习惯小贴士","level":"1.5.3.10","depth":3,"path":"develop-grid.md","ref":"develop-grid.md","articles":[]}]},{"title":"模块介绍","level":"1.5.4","depth":2,"ref":"","articles":[{"title":"ESolver 模块介绍","level":"1.5.4.1","depth":3,"path":"develop-ESolver.md","ref":"develop-ESolver.md","articles":[]},{"title":"HSolver 模块介绍","level":"1.5.4.2","depth":3,"path":"develop-HSolver.md","ref":"develop-HSolver.md","articles":[]},{"title":"HContainer 模块介绍","level":"1.5.4.3","depth":3,"path":"develop-HContainer.md","ref":"develop-HContainer.md","articles":[]},{"title":"Psi 模块介绍","level":"1.5.4.4","depth":3,"path":"develop-psi.md","ref":"develop-psi.md","articles":[]},{"title":"格点积分模块介绍","level":"1.5.4.5","depth":3,"path":"develop-gint.md","ref":"develop-gint.md","articles":[]},{"title":"FFT 模块介绍","level":"1.5.4.6","depth":3,"path":"develop-fft.md","ref":"develop-fft.md","articles":[]}]},{"title":"平面波代码介绍","level":"1.5.5","depth":2,"ref":"","articles":[{"title":"Introduction to ABACUS: Path to PW calculation - Part 1","level":"1.5.5.1","depth":3,"path":"develop-path1.md","ref":"develop-path1.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 2","level":"1.5.5.2","depth":3,"path":"develop-path2.md","ref":"develop-path2.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 3","level":"1.5.5.3","depth":3,"path":"develop-path3.md","ref":"develop-path3.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 4","level":"1.5.5.4","depth":3,"path":"develop-path4.md","ref":"develop-path4.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 5","level":"1.5.5.5","depth":3,"path":"develop-path5.md","ref":"develop-path5.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Summary 1","level":"1.5.5.6","depth":3,"path":"develop-sm1.md","ref":"develop-sm1.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 6","level":"1.5.5.7","depth":3,"path":"develop-path6.md","ref":"develop-path6.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 7","level":"1.5.5.8","depth":3,"path":"develop-path7.md","ref":"develop-path7.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 8","level":"1.5.5.9","depth":3,"path":"develop-path8.md","ref":"develop-path8.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 9","level":"1.5.5.10","depth":3,"path":"develop-path9.md","ref":"develop-path9.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 10","level":"1.5.5.11","depth":3,"path":"develop-path10.md","ref":"develop-path10.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Part 11","level":"1.5.5.12","depth":3,"path":"develop-path11.md","ref":"develop-path11.md","articles":[]},{"title":"Introduction to ABACUS: Path to PW calculation - Summary Final","level":"1.5.5.13","depth":3,"path":"develop-sm2.md","ref":"develop-sm2.md","articles":[]}]},{"title":"Pyabacus 介绍","level":"1.5.6","depth":2,"ref":"","articles":[{"title":"Pyabacus 文档一：用户手册","level":"1.5.6.1","depth":3,"path":"develop-pyabacus1.md","ref":"develop-pyabacus1.md","articles":[]},{"title":"Pyabacus 文档二：HSolver 模块","level":"1.5.6.2","depth":3,"path":"develop-pyabacus2.md","ref":"develop-pyabacus2.md","articles":[]},{"title":"Pyabacus 文档三：开发者指南","level":"1.5.6.3","depth":3,"path":"develop-pyabacus3.md","ref":"develop-pyabacus3.md","articles":[]}]}]},"previous":{"title":"测试","level":"1.4","depth":1,"ref":"","articles":[{"title":"ABACUS 平面波基组下的 10 个典型算例","level":"1.4.1","depth":2,"path":"test-10cases.md","ref":"test-10cases.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["image-captions","auto-scroll-table","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.4.1","level":"1.2.2.4","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.4.1"},{"backlink":"abacus-upf.html#fig1.2.2.4.2","level":"1.2.2.4","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.4.2"},{"backlink":"abacus-upf.html#fig1.2.2.4.3","level":"1.2.2.4","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.4.3"},{"backlink":"abacus-upf.html#fig1.2.2.4.4","level":"1.2.2.4","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.4.4"},{"backlink":"abacus-upf.html#fig1.2.2.4.5","level":"1.2.2.4","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.4.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-ESolver.html#fig1.5.4.1.1","level":"1.5.4.1","list_caption":"Figure: 代码框架图","alt":"代码框架图","nro":38,"url":"picture/fig-esolver-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"代码框架图","attributes":{},"skip":false,"key":"1.5.4.1.1"},{"backlink":"develop-ESolver.html#fig1.5.4.1.2","level":"1.5.4.1","list_caption":"Figure: 模块关系图","alt":"模块关系图","nro":39,"url":"picture/fig-esolver-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"模块关系图","attributes":{},"skip":false,"key":"1.5.4.1.2"},{"backlink":"develop-path4.html#fig1.5.5.4.1","level":"1.5.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":40,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.5.5.4.1"},{"backlink":"develop-path4.html#fig1.5.5.4.2","level":"1.5.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":41,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.5.5.4.2"},{"backlink":"develop-path5.html#fig1.5.5.5.1","level":"1.5.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":42,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.5.5.5.1"},{"backlink":"develop-path5.html#fig1.5.5.5.2","level":"1.5.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":43,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.5.5.5.2"},{"backlink":"develop-path5.html#fig1.5.5.5.3","level":"1.5.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":44,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.5.5.5.3"},{"backlink":"develop-path5.html#fig1.5.5.5.4","level":"1.5.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":45,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.5.5.5.4"},{"backlink":"develop-path5.html#fig1.5.5.5.5","level":"1.5.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":46,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.5.5.5.5"},{"backlink":"develop-path6.html#fig1.5.5.7.1","level":"1.5.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":47,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.5.5.7.1"},{"backlink":"develop-path10.html#fig1.5.5.11.1","level":"1.5.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":48,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.5.5.11.1"},{"backlink":"develop-path10.html#fig1.5.5.11.2","level":"1.5.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":49,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.5.5.11.2"},{"backlink":"develop-path10.html#fig1.5.5.11.3","level":"1.5.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":50,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.5.5.11.3"},{"backlink":"develop-path10.html#fig1.5.5.11.4","level":"1.5.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":51,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.5.5.11.4"},{"backlink":"develop-path10.html#fig1.5.5.11.5","level":"1.5.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":52,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.5.5.11.5"},{"backlink":"develop-path11.html#fig1.5.5.12.1","level":"1.5.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":53,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.5.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.6.1.1","level":"1.6.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":54,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.6.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"test-10cases.md","mtime":"2025-12-16T01:32:40.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-12-16T01:32:45.511Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
