@@ -1,0 +1,28 @@
+ATOMIC_SPECIES
+C  12.0000 C_ONCV_PBE-1.0.upf upf201
+O  16.0000 O_ONCV_PBE-1.0.upf upf201
+
+NUMERICAL_ORBITAL
+C_gga_7au_100Ry_2s2p1d.orb
+O_gga_7au_100Ry_2s2p1d.orb
+
+LATTICE_CONSTANT
+1.8897259886
+
+LATTICE_VECTORS
+       15.0000000000        0.0000000000        0.0000000000
+        0.0000000000       15.0000000000        0.0000000000
+        0.0000000000        0.0000000000       15.0000000000
+
+ATOMIC_POSITIONS
+Direct
+
+C #label
+0.0000   #magnetism
+1 #number of atoms
+        0.0000000000        0.0000000000        0.9997002253 m 1 1 1
+
+O #label
+0.0000   #magnetism
+1 #number of atoms
+        0.0000000000        0.0000000000        0.0755664413 m 1 1 1

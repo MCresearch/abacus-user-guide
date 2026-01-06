@@ -1,0 +1,13 @@
+INPUT_PARAMETERS
+#Parameters (Accuracy)
+ecutwfc			100
+
+basis_type		lcao
+
+calculation		cell-relax
+relax_nmax			100
+force_thr_ev		0.01
+stress_thr       0.5
+
+pseudo_dir	../../../../00_psp_orb
+orbital_dir	../../../../00_psp_orb

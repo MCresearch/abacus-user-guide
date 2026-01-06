@@ -1,0 +1,18 @@
+INPUT_PARAMETERS
+#Parameters (Accuracy)
+ecutwfc			100
+
+basis_type		lcao
+
+calculation		relax
+relax_nmax			100
+force_thr_ev		0.04
+
+dft_functional pbe
+
+scf_thr 1e-6
+
+mixing_beta 0.2
+
+pseudo_dir	../../../00_psp_orb
+orbital_dir	../../../00_psp_orb
