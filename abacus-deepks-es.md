@@ -88,7 +88,7 @@ DeePKS-ES 的计算流程图如下所示，其中蓝色、黄色背景的内容�
 
 ## 算例说明
 
-本教程在 Gitee 上准备了一个 DeePKS-ES 的训练全流程样例（[Gitee 的下载链接](https://gitee.com/mcresearch/abacus-user-guide/tree/master/examples/deepks-es)），包括标签准备、模型训练以及模型测试三个步骤。
+本教程在 Gitee 上准备了一个 DeePKS-ES 的训练全流程样例（[Github 的下载链接](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/deepks-es)），包括标签准备、模型训练以及模型测试三个步骤。
 
 该算例使用 2 帧水分子单体及 2 帧水分子二聚体构型作为训练数据集。PBE 作为基础泛函，HSE 作为目标泛函。
 

@@ -1,0 +1,79 @@
+# this is only part of input settings. 
+# should be used together with systems.yaml and machines.yaml
+
+# number of iterations to do, can be set to zero for DeePHF training
+n_iter: 4
+  
+# directory setting (these are default choices, can be omitted)
+workdir: "."
+share_folder: "share" # folder that stores all other settings
+
+# scf settings, set to false when n_iter = 0 to skip checking
+scf_input: false
+
+
+# train settings, set to false when n_iter = 0 to skip checking
+train_input:
+  # model_args is ignored, since this is used as restart
+  data_args: 
+    batch_size: 1
+    group_batch: 1
+    extra_label: true
+    conv_filter: true
+    conv_name: conv
+    read_overlap: true
+  preprocess_args:
+    preshift: false # restarting model already shifted. Will not recompute shift value
+    prescale: false # same as above
+    prefit_ridge: 1e1
+    prefit_trainable: false
+  train_args: 
+    decay_rate: 0.8
+    decay_steps: 50
+    display_epoch: 10
+    display_detail_test: 1
+    display_natom_loss: true 
+    energy_per_atom: 2
+    force_factor: 1
+    v_delta_factor: 0.005
+    vd_divide_by_nlocal: true
+    phi_factor: 0.1
+    phi_occ: { 3: 4, 6: 8 }
+    band_factor: 0.01
+    band_occ: { 3: 8, 6: 16 }
+    # density_m_factor: 0.1
+    # density_m_occ: { 3: 4, 6: 8 }
+    n_epoch: 100
+    start_lr: 0.0002
+
+# init settings, these are for DeePHF task
+init_model: false # do not use existing model to restart from
+
+init_scf: True
+
+init_train: # parameters for nn training
+  proj_basis: [[0, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
+               [1, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],
+               [2, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]]
+  model_args:
+    hidden_sizes: [100, 100, 100] # neurons in hidden layers
+    output_scale: 100 # the output will be divided by 100 before compare with label
+    use_resnet: true # skip connection
+    actv_fn: mygelu # same as gelu, support force calculation
+    embedding: {embd_sizes: null, init_beta: 5, type: thermal}
+  data_args: 
+    batch_size: 2
+    group_batch: 1 # can collect multiple system in one batch
+  preprocess_args:
+    preshift: true # shift the descriptor by its mean
+    prescale: false # scale the descriptor by its variance (can cause convergence problem)
+    prefit_ridge: 1e1 # do a ridge regression as prefitting
+    prefit_trainable: false
+  train_args: 
+    decay_rate: 0.96 # learning rate decay factor
+    decay_steps: 20 # decay the learning rate every this steps
+    display_epoch: 10
+    n_epoch: 100
+    start_lr: 0.0005
+
+

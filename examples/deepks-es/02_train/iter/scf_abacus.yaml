@@ -1,0 +1,41 @@
+scf_abacus:
+  #INPUT args
+  ntype: 2
+  ecutwfc: 100
+  scf_thr: 1e-6
+  scf_nmax: 100
+  dft_functional: "pbe"
+  gamma_only: 1
+  cal_force: 1
+  deepks_v_delta: 2
+  mixing_type: broyden
+  mixing_beta: 0.4
+  #STRU args ( Here are default STRU args, you can set for each group in  ../systems/group.xx/stru_abacus.yaml )
+  orb_files: ["O_gga_7au_100Ry_2s2p1d.orb","H_gga_6au_100Ry_2s1p.orb"]
+  pp_files: ["O_ONCV_PBE-1.0.upf", "H_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  deepks_descriptor_lmax: 2
+  lattice_constant: 1
+  coord_type: "Cartesian"
+  #cmd args
+  run_cmd : "OMP_NUM_THREADS=1 mpirun"
+  abacus_path: "abacus"
+init_scf_abacus:
+  orb_files: ["O_gga_7au_100Ry_2s2p1d.orb","H_gga_6au_100Ry_2s1p.orb"]
+  pp_files: ["O_ONCV_PBE-1.0.upf", "H_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  ntype: 2
+  ecutwfc: 100
+  scf_thr: 1e-6
+  scf_nmax: 100
+  dft_functional: "pbe"
+  gamma_only: 1 
+  cal_force: 0
+  mixing_type: broyden
+  mixing_beta: 0.4
+  deepks_descriptor_lmax: 2
+  lattice_constant: 1
+  coord_type: "Cartesian"
+  #cmd args
+  run_cmd : "OMP_NUM_THREADS=1 mpirun"
+  abacus_path: "abacus"
