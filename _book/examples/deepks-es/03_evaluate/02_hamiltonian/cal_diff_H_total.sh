@@ -1,0 +1,1 @@
+python cal_diff_H_total.py 01_hse/ 02_pbe/ 03_deepks/ HSE PBE DeePKS-ES

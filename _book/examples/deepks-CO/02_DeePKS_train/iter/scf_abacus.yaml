@@ -1,0 +1,42 @@
+scf_abacus:
+  #INPUT args
+  ntype: 0 # will be set automatically
+  ecutwfc: 100
+  scf_thr: 1e-6
+  scf_nmax: 150
+  dft_functional: "pbe"
+  cal_force: 1
+  mixing_type: broyden
+  mixing_beta: 0.2
+  smearing_method: "gaussian"
+  smearing_sigma: 0.015
+  #STRU args ( Here are default STRU args, you can set for each group in  ../systems/group.xx/stru_abacus.yaml )
+  orb_files: ["Rh_gga_7au_100Ry_4s2p2d1f.orb","C_gga_7au_100Ry_2s2p1d.orb","O_gga_7au_100Ry_2s2p1d.orb"]
+  pp_files: ["Rh_ONCV_PBE-1.0.upf","C_ONCV_PBE-1.0.upf", "O_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  deepks_descriptor_lmax: 2
+  lattice_constant: 1.8897261246
+  coord_type: "Cartesian"
+  #cmd args
+  run_cmd : "mpirun"
+  abacus_path: "YOUR_ABACUS_PATH"
+init_scf_abacus:
+  orb_files: ["Rh_gga_7au_100Ry_4s2p2d1f.orb","C_gga_7au_100Ry_2s2p1d.orb","O_gga_7au_100Ry_2s2p1d.orb"]
+  pp_files: ["Rh_ONCV_PBE-1.0.upf","C_ONCV_PBE-1.0.upf", "O_ONCV_PBE-1.0.upf"]
+  proj_file: ["jle.orb"]
+  ntype: 0
+  ecutwfc: 100
+  scf_thr: 1e-6
+  scf_nmax: 150
+  dft_functional: "pbe"
+  cal_force: 0
+  mixing_type: broyden
+  mixing_beta: 0.2
+  smearing_method: "gaussian"
+  smearing_sigma: 0.015
+  deepks_descriptor_lmax: 2
+  lattice_constant: 1.8897261246
+  coord_type: "Cartesian"
+  #cmd args
+  run_cmd : "mpirun"
+  abacus_path: "YOUR_ABACUS_PATH"
