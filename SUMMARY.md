@@ -35,6 +35,7 @@
     * AI辅助功能
         * [ABACUS+DPGEN 使用教程](abacus-dpgen.md)
         * [DeePKS-ES 介绍及使用教程](abacus-deepks-es.md)
+        * [DeePKS 案例教程：Rh(111) 表面 CO 吸附能计算](abacus-deepks-toturial-rh111.md)
     * 特色功能
         * [ABACUS 随机波函数 DFT 方法使用教程](abacus-sdft.md)
         * [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)

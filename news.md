@@ -6,9 +6,15 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|对称性支配下偶极子随机跃迁诱导的巨压电效应——西湖大学刘仕团队发表最新成果|[网页链接](https://mp.weixin.qq.com/s/coOXrCHse9O_49z6f25DhQ)|2026/01/05|原子算筹|
+|ABACUS Agent 1.1.6 - 2025星海漫游之旅|[网页链接](https://mp.weixin.qq.com/s/iW4hfcNdc_XmtjKCvq9HzQ)|2026/01/01|量子御坂|
+|（补）ABACUS v3.9.0.2 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/8cZyIOmL47gKyaAMPmENqw)|2025/112/31|原子算筹|
+|（补）ABACUS v3.9.0.1 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/St1jJGpM20HhzOd_HYvNhA)|2025/112/31|原子算筹|
+|ABACUS v3.9.0.19 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/EGnSEPtplRCiXqF0mTVA5g)|2025/12/31|原子算筹|
+|第一性原理自旋模型：高效、精准预测磁性材料居里温度|[网页链接](https://mp.weixin.qq.com/s/h5mUkLWJ690eOS2YFDRksg)|2025/12/23|原子算筹|
+|单层二维M2X2材料中的内禀高陈数起源研究|[网页链接](https://mp.weixin.qq.com/s/UMlNFo8wA374gTBqlZmtMA)|2025/12/18|原子算筹|
 |ABACUS v3.9.0.20 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/x0ip-0mMCTj3nrkkhcPLKA)|2025/12/10|原子算筹|
 |北京大学陈默涵团队——发展AI密度泛函为表面CO吸附难题提供兼顾精度和效率的新方法|[网页链接](https://mp.weixin.qq.com/s/N46rrWXLjk3IwcU_nHDyBg)|2025/12/09|AIforSci|
-|ABACUS v3.9.0.19 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/58JgRmewnlkLfrtXIDrZLQ)|2025/11/27|原子算筹|
 |ABACUS v3.9.0.18 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/6dvxmhKQRIfNeUYcRlnFGQ)|2025/11/11|原子算筹|
 |ABACUS v3.9.0.17 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/qJBmhLEnUFNskpstROQLHA)|2025/10/29|原子算筹|
 |ABACUS v3.9.0.16 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/kH9oXNVzn5nwOM8oVmcIIQ)|2025/10/14|原子算筹|
