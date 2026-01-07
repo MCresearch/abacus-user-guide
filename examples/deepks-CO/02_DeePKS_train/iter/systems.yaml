@@ -1,0 +1,21 @@
+# this is only part of input settings. 
+# should be used together with params.yaml and machines.yaml
+
+# training and testing systems
+systems_train: # can also be files that containing system paths
+  - ../systems/group.00 # support glob
+  - ../systems/group.01
+  - ../systems/group.02
+  - ../systems/group.03
+  - ../systems/group.04
+  - ../systems/group.05
+  - ../systems/group.06
+  - ../systems/group.07
+  - ../systems/group.08
+  - ../systems/group.09
+
+systems_test: # if empty, use the last system of training set
+  - ../systems/group.010
+
+
+

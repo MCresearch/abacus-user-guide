@@ -1,0 +1,10 @@
+INPUT_PARAMETERS
+#Parameters (Accuracy)
+ecutwfc			100
+
+basis_type		lcao
+
+calculation		scf
+
+pseudo_dir	../../../../../00_psp_orb
+orbital_dir	../../../../../00_psp_orb
