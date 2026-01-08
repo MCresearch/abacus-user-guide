@@ -1,8 +1,10 @@
 # ABACUS 新闻稿整理
 
-<strong>整理人：陈涛，邮箱：chentao@stu.pku.edu.cn; 张笑扬，邮箱：zxypku21@stu.pku.edu.cn</strong>
+**整理人：陈涛，2020-2025，邮箱：chentao@stu.pku.edu.cn**
 
-<strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
+**整理人：张笑扬，邮箱，2025-至今：zxypku21@stu.pku.edu.cn**
+
+**审核：陈默涵，邮箱：mohanchen@pku.edu.cn**
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
@@ -22,6 +24,8 @@
 |ABACUS v3.9.0.15 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/4jCbfQj4l_pLKUBkc3CTpQ)|2025/09/29|原子算筹|
 |拜托了我的赛先生！SAI-1上多卡ABACUS高性能计算案例大赏|[网页链接](https://mp.weixin.qq.com/s/IeLoD_DGnh3Un_mqCc2q2w)|2025/09/22|波本喵|
 |ABACUS v3.9.0.14 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/IURTxVzMchITf5_huYra-Q)|2025/09/17|原子算筹|
+|ABACUS磁性交换作用的计算以及与微磁学的结合|[网页链接](https://mp.weixin.qq.com/s/8ZO682BIJy7w0ge-qJB_9g)|2025/09/15|原子算筹|
+|中科大团队在铁电研究领域取得重要突破 ，提出广义 Neumann 定理，有望改写铁电研究的教科书|[网页链接](https://mp.weixin.qq.com/s/Q4vkbHxLwqbSm7e9Tg6vjA)|2025/09/10|原子算筹|
 |ABACUS v3.9.0.13 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/ArfVw-OFxMw3-ehQa6q-IA)|2025/09/02|原子算筹|
 |ABACUS还能干这个？预测极端高温环境下多种材料的状态方程|[网页链接](https://mp.weixin.qq.com/s/dOSDZRKrK_PrfULoQqDR9w)|2025/9/1|原子算筹|
 |ABACUS v3.9.0.12更新介绍|[网页链接](https://mp.weixin.qq.com/s/j_xnPLcSf19S3bXUSB1DtQ)|2025/08/22|原子算筹|
