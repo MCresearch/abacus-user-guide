@@ -21,7 +21,7 @@ ABACUS（原子算筹）作为一款高效、开源的第一性原理材料计�
 git clone https://gitee.com/mcresearch/abacus-user-guide.git
 ```
 
-1. `GitHub` 网站
+2. `GitHub` 网站
 
 ```bash
 git clone https://github.com/MCresearch/abacus-user-guide.git
@@ -31,7 +31,7 @@ git clone https://github.com/MCresearch/abacus-user-guide.git
 
 # 算例概览
 
-十个算例的基本情况如下。对于每个算例，我们基于 `ABACUS Release v3.9.0.19` 版本（`commit c255710, tag: v3.9.0.19`）给出一组参考结果。测试使用的 CPU 硬件为 `Intel® Xeon® Gold 6132`，一下算例使用 28 进程并行。
+十个算例的基本情况如下。对于每个算例，我们基于 `ABACUS Release v3.9.0.19` 版本（`commit c255710, tag: v3.9.0.19`）给出一组参考结果。测试使用的 CPU 硬件为 `Intel® Xeon® Gold 6132`，以下算例使用 28 进程并行。
 
 ```
 OMP_NUM_THREADS=1 mpirun -np 28 abacus
@@ -716,4 +716,4 @@ FFT格子160*160*160；k点1*1*1个
 
 # 结语
 
-以上算例的一些细节目前还没有进行深入优化，整个程序的运行效率 将来还有进一步提升的可能性。目前大家可以先专注这个测试结果的正确性，效率之后我们还会更深入的对比。如果你测出来的某个算例结果和这个文档给的不一样，非常欢迎到我们github论坛上提Issues，地址是：https://github.com/deepmodeling/abacus-develop
+以上算例的一些细节目前还没有进行深入优化，整个程序的运行效率将来还有进一步提升的可能性。目前大家可以先专注这个测试结果的正确性，效率之后我们还会更深入的对比。如果你测出来的某个算例结果和这个文档给的不一样，非常欢迎到我们github论坛上提Issues，地址是：https://github.com/deepmodeling/abacus-develop
