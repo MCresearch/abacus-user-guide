@@ -335,10 +335,10 @@ Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
 SCF 计算结束后，将得到的这些系数文件复制/链接到另一个我们自己创建的新文件夹下，根据上面的教程设置控制文件，开启计算类型 `calculation=get_pchg` 的新计算，就可以在 `OUT.ABACUS` 文件夹下得到如下的电荷密度文件。若选择 `if_separate_k=true`，输出文件将形如：
 
 ```bash
-BAND1_K1_SPIN1_CHG.cube
-BAND1_K1_SPIN2_CHG.cube
-BAND1_K2_SPIN1_CHG.cube
-BAND1_K2_SPIN2_CHG.cube
+pchgi1s1k1.cube
+pchgi1s1k2.cube
+pchgi1s2k1.cube
+pchgi1s2k2.cube
 ......
 ```
 

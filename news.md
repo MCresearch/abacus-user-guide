@@ -8,6 +8,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|ATOMKIT Studio更新：新增ABACUS格式导入与可视化交互升级|[网页链接](https://mp.weixin.qq.com/s/X26b8FSTIDX2TMUY1yHEeQ)|2026/01/23|学术之友|
 |对称性支配下偶极子随机跃迁诱导的巨压电效应——西湖大学刘仕团队发表最新成果|[网页链接](https://mp.weixin.qq.com/s/coOXrCHse9O_49z6f25DhQ)|2026/01/05|原子算筹|
 |ABACUS Agent 1.1.6 - 2025星海漫游之旅|[网页链接](https://mp.weixin.qq.com/s/iW4hfcNdc_XmtjKCvq9HzQ)|2026/01/01|量子御坂|
 |（补）ABACUS v3.9.0.2 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/8cZyIOmL47gKyaAMPmENqw)|2025/112/31|原子算筹|

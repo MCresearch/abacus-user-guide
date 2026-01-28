@@ -65,6 +65,7 @@
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
 * 测试
     * [ABACUS 平面波基组下的 10 个典型算例](test-10cases.md)
+    * [ABACUS 平面波基组下的 10 个典型算例(V2026.1.27)](test-10cases2.md)
 * 开发
     * 基础规范
         * [ABACUS 的 Github 仓库 Issues 处理流程](develop-issue.md)
