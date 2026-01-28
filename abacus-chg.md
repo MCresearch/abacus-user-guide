@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2024 年 10 月 10 日</strong>
+<strong>最后更新时间：2024年10月10日，2026年1月20日</strong>
 
 # 一、引言
 
@@ -94,7 +94,7 @@ Cubefile created from ABACUS. Inner loop is z, followed by y and x
 
 ## 2. 输出文件命名规则
 
-对于多能带、多 k 点、多自旋的计算，电荷密度输出文件名形如 `BAND*_K*_SPIN*_CHG.cube`，`*` 是相应的编号。这些编号都是从 1 开始的（如果发现有从 0 或者非 1 开始命名的编号，请在 [ABACUS GitHub issue](https://github.com/deepmodeling/abacus-develop/issues) 中向我们反馈）。波函数的命名规则是类似的。
+对于多能带、多 k 点、多自旋的计算，电荷密度输出文件名形如 `pchgi*s#k$.cube`，`*` 是相应的编号。这些编号都是从 1 开始的（如果发现有从 0 或者非 1 开始命名的编号，请在 [ABACUS GitHub issue](https://github.com/deepmodeling/abacus-develop/issues) 中向我们反馈）。波函数的命名规则是类似的。
 
 - 能带（BAND）编号与 SCF 计算中生成的 `istate.info` 文件中的约定一致。
 - 自旋（SPIN）编号在 `nspin=1` 时只有为 1 的编号；`nspin=2` 时编号为 1 表示自旋向上的分量，编号为 2 表示自旋向下的分量；目前 ABACUS 还不支持对 `nspin=4`（非共线磁矩）的能带分解电荷密度的计算。
@@ -108,7 +108,7 @@ $$
 \rho_{n}^{\sigma}(\mathbf{r})=\sum_{\mathbf{k}}\rho_{n\mathbf{k}}^{\sigma}(\mathbf{r})
 $$
 
-输出文件名形如 `BAND*_SPIN*_CHG.cube`。当 `if_separate_k` 设置为 `true` 时，程序会分别计算不同 k 点的贡献并输出，输出文件名形如 `BAND*_K*_SPIN*_CHG.cube`。
+输出文件名形如 `pchgi1s1.cube`。当 `if_separate_k` 设置为 `true` 时，程序会分别计算不同 k 点的贡献并输出，输出文件名形如 `pchgi1s1k1.cube`。
 
 有时候对称性分析会约化一些 k 点，并且相应地，k 点权重会发生改变。例如当 `symmetry=1`（开启晶格对称性分析）时，对于一个 2×2×2 的 k 点采样，下面是一个可能的 `kpoints` 文件：
 
@@ -219,7 +219,7 @@ out_wfc_lcao                1
 out_chg                     1
 ```
 
-这里，重要的是需要设置参数 `out_wfc_lcao`，此时你将在 `OUT.ABACUS` 文件夹下得到各个 k 点的波函数系数文件，名称形如 `WFC_NAO_K*.txt`，这些文件将在下一步计算中被读取，并计算能带分解电荷密度。
+这里，重要的是需要设置参数 `out_wfc_lcao`，此时你将在 `OUT.ABACUS` 文件夹下得到各个 k 点的波函数系数文件，名称形如 `wfs#k$_nao.txt`，这些文件将在下一步计算中被读取，并计算能带分解电荷密度。
 
 这里的 `out_chg` 控制的是是否输出体系真实的总电荷密度，包含了所有 k 点、所有占据能带的贡献。因此如果你不需要总电荷密度，大可将 `out_chg` 设为 `0`。
 
@@ -330,7 +330,7 @@ Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
 
 不难发现，实际上 2×2×1 的 Brillouin 区采样只能采到<em>Γ</em>点和<em>M</em>点（编号 2、3、4 的 k 点都等价为<em>M</em>点，在 `symmetry=1` 时会显式约化）。可以预想到，K2、K3、K4 在实空间中的分布形状应该是一致的，它们只相差相应的晶格对称性操作。
 
-以 LCAO 为例，开启共线磁矩 `nspin=2`（仅作为演示，没有磁性的石墨烯自旋上下结果应该完全一致），在第一步 SCF 后可以在 `OUT.ABACUS` 文件夹下得到如下波函数系数文件：`WFC_NAO_K1.txt`、……、`WFC_NAO_K8.txt`。这里 K1 到 K8 代表 8 个 k 点，k 点编号比实际设置时多了一倍是因为其中编号 1～4 是代表自旋向上的波函数文件，而编号 5～8 是代表自旋向下的波函数文件。
+以 LCAO 为例，开启共线磁矩 `nspin=2`（仅作为演示，没有磁性的石墨烯自旋上下结果应该完全一致），在第一步 SCF 后可以在 `OUT.ABACUS` 文件夹下得到如下波函数系数文件：`wfs1k1_nao.txt`、 `wfs2k1_nao.txt` 、……、`wfs1k4_nao.txt`、`wfs2k4_nao.txt`。这里 K1 到 K8 代表 8 个 k 点，k 点编号比实际设置时多了一倍是因为其中编号 1～4 是代表自旋向上的波函数文件，而编号 5～8 是代表自旋向下的波函数文件。
 
 SCF 计算结束后，将得到的这些系数文件复制/链接到另一个我们自己创建的新文件夹下，根据上面的教程设置控制文件，开启计算类型 `calculation=get_pchg` 的新计算，就可以在 `OUT.ABACUS` 文件夹下得到如下的电荷密度文件。若选择 `if_separate_k=true`，输出文件将形如：
 
@@ -344,11 +344,11 @@ BAND1_K2_SPIN2_CHG.cube
 
 若选择 `if_separate_k=false`，则输出文件名中不会带有 k 点信息。这些 `cube` 格式文件可以直接在 `VESTA` 软件中打开并可视化。
 
-例如，第一条能带 <em>Γ</em> 点自旋向上的贡献存储在 `BAND1_K1_SPIN1_CHG.cube` 文件里，可视化效果为：
+例如，第一条能带 <em>Γ</em> 点自旋向上的贡献存储在 `pchgi1s1k1.cube` 文件里，可视化效果为：
 
 ![](picture/fig_chg2.png)
 
-第二条能带三个不同 <em>M</em> 点的贡献为 `BAND2_K2_SPIN*_CHG.cube`、`BAND2_K3_SPIN*_CHG.cube`、`BAND2_K4_SPIN*_CHG.cube`：
+第二条能带三个不同 <em>M</em> 点的贡献为 `pchgi2s1k2.cube`、`pchgi2s1k3.cube`、`pchgi2s1k4.cube`：
 
 ![](picture/fig_chg3.png)
 

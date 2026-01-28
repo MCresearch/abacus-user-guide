@@ -4,7 +4,7 @@
 
 <strong>审核：陈默涵，邮箱：mohanchen@pku.edu.cn</strong>
 
-<strong>最后更新时间：2024/10/10</strong>
+<strong>最后更新时间：2024/10/10, 2026/01/20</strong>
 
 # 一、背景
 
@@ -60,7 +60,7 @@ $$
 
 在 INPUT 中设置 `out_elf 1` 并运行 ABACUS 后，ELF 会被存储到 OUT 文件夹下。
 
-自旋非极化情况下（`nspin 1`）ELF 会被存储到 `ELF.cube` 文件中；自旋极化的情况下（`nspin 2`），除了 `ELF.cube` 中存储的总 ELF，自旋为上和自旋为下的 ELF 会分别存储在 `ELF_SPIN1.cube` 和 `ELF_SPIN2.cube` 中。这些 cube 文件都可以直接在 VESTA 中可视化。
+自旋非极化情况下（`nspin 1`）ELF 会被存储到 `elf.cube` 文件中；自旋极化的情况下（`nspin 2`），除了 `ELF.cube` 中存储的总 ELF，自旋为上和自旋为下的 ELF 会分别存储在 `elf1.cube` 和 `elf2.cube` 中。这些 cube 文件都可以直接在 VESTA 中可视化。
 
 下面举两个具体的例子，一个自旋非极化的水分子，另一个是自旋极化的体心立方铁。
 
@@ -70,7 +70,7 @@ $$
 
 算例地址：[https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/H20-pw](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/H20-pw)
 
-运行此算例得到的 `ELF.cube` 文件如下，由于此算例中的水分子放置在真空中，远离水分子的区域内 ELF 都为零。
+运行此算例得到的 `elf.cube` 文件如下，由于此算例中的水分子放置在真空中，远离水分子的区域内 ELF 都为零。
 
 ```cpp
 STEP: 0  Cubefile created from ABACUS. Inner loop is z, followed by y and x
@@ -98,7 +98,7 @@ STEP: 0  Cubefile created from ABACUS. Inner loop is z, followed by y and x
 
 算例地址：[https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/H20-lcao](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/H20-lcao)
 
-运行此算例后，可得到与上例格式相同的 `ELF.cube` 文件，用 VESTA 可视化的结果如下图，其中左图为 ELF 的等高面，右图为在 H-O-H 截面上的切面图。。
+运行此算例后，可得到与上例格式相同的 `elf.cube` 文件，用 VESTA 可视化的结果如下图，其中左图为 ELF 的等高面，右图为在 H-O-H 截面上的切面图。。
 
 ![](picture/fig_elf4.png)
 
@@ -110,7 +110,7 @@ STEP: 0  Cubefile created from ABACUS. Inner loop is z, followed by y and x
 
 算例地址：[https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/bcc-Fe-pw](https://github.com/MCresearch/abacus-user-guide/tree/master/examples/elf/bcc-Fe-pw)
 
-此算例使用 PW 基组下的 KSDFT。运行此算例后，可以得到 `ELF.cube`，`ELF_SPIN1.cube` 与 `ELF_SPIN2.cube` 三个文件，分别存储总 ELF，自旋为上电子的 ELF 以及自旋为下电子的 ELF，下面为三种不同的 ELF 在(100)晶面上的分布图。
+此算例使用 PW 基组下的 KSDFT。运行此算例后，可以得到 `elfcube`，`elf1.cube` 与 `elf2.cube` 三个文件，分别存储总 ELF，自旋为上电子的 ELF 以及自旋为下电子的 ELF，下面为三种不同的 ELF 在(100)晶面上的分布图。
 
 ![](picture/fig_elf6.png)
 
