@@ -18,6 +18,7 @@
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例](abacus-eff1.md)
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例](abacus-eff2.md)
 	    * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例](abacus-eff3.md)
+        * [ABACUS 赝势轨道简介和资源导航](abacus-pseudopotential-resources.md)
         * [模守恒赝势生成方法简介](abacus-upf.md)
         * [数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法](abacus-nac1.md)
         * [数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道](abacus-nac2.md)
