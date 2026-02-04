@@ -49,6 +49,7 @@
         * [ABACUS 计算电子局域函数 ELF 使用教程](abacus-elf.md)
         * [ABACUS+Bader charge 分析教程](abacus-bader.md)
         * [ABACUS+pymatgen 计算弹性常数](abacus-elastic.md)
+        * [采用 ABACUS 计算弹性常数教程](abacus-elastic2.md)
         * [ABACUS+Phonopy 计算声子谱](abacus-phonopy.md)
         * [ABACUS+ShengBTE 计算晶格热导率](abacus-shengbte.md)
         * [ABACUS+Wannier90 使用教程](abacus-wannier.md)
