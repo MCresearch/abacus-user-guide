@@ -2,7 +2,7 @@
 
 **整理人：陈涛，2020-2025，邮箱：chentao@stu.pku.edu.cn**
 
-**整理人：张笑扬，邮箱，2025-至今：zxypku21@stu.pku.edu.cn**
+**整理人：张笑扬，2025-至今, 邮箱：zxypku21@stu.pku.edu.cn**
 
 **审核：陈默涵，邮箱：mohanchen@pku.edu.cn**
 
