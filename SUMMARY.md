@@ -1,7 +1,7 @@
 # Summary
 
 * [介绍](README.md)
-    * [ABACUS 新闻稿整理](news.md)
+    * [ABACUS 新闻稿](news.md)
     * [如何贡献 ABACUS 使用教程](contribute.md)
 
 * 用户
