@@ -1,4 +1,4 @@
-# ABACUS 新闻稿整理
+# ABACUS 新闻稿
 
 **整理人：陈涛，2020-2025，邮箱：chentao@stu.pku.edu.cn**
 
@@ -8,12 +8,17 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+|ABACUS v3.9.0.24 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/PPNGcu4z9WsbeMnCvlp0kQ)|2026/02/03|原子算筹|
+|ABACUS 还能干这个？助力核幔边界研究，揭示地球深处或存在长期水储库|[网页链接](https://mp.weixin.qq.com/s/Ajr_fXXb3oKWxvPBR5EM8g)|2026/02/02|原子算筹|
+|ABACUS v3.9.0.23 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/96KGmzmBkvh-CAO0gWZ3fQ)|2026/01/27|原子算筹|
+|ABACUS v3.9.0.22 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/v_EhSiCv9mvb0wiF7k9q1w)|2026/01/23|原子算筹|
 |ATOMKIT Studio更新：新增ABACUS格式导入与可视化交互升级|[网页链接](https://mp.weixin.qq.com/s/X26b8FSTIDX2TMUY1yHEeQ)|2026/01/23|学术之友|
 |对称性支配下偶极子随机跃迁诱导的巨压电效应——西湖大学刘仕团队发表最新成果|[网页链接](https://mp.weixin.qq.com/s/coOXrCHse9O_49z6f25DhQ)|2026/01/05|原子算筹|
 |ABACUS Agent 1.1.6 - 2025星海漫游之旅|[网页链接](https://mp.weixin.qq.com/s/iW4hfcNdc_XmtjKCvq9HzQ)|2026/01/01|量子御坂|
-|（补）ABACUS v3.9.0.2 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/8cZyIOmL47gKyaAMPmENqw)|2025/112/31|原子算筹|
-|（补）ABACUS v3.9.0.1 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/St1jJGpM20HhzOd_HYvNhA)|2025/112/31|原子算筹|
-|ABACUS v3.9.0.19 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/EGnSEPtplRCiXqF0mTVA5g)|2025/12/31|原子算筹|
+|（补）ABACUS v3.9.0.2 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/8cZyIOmL47gKyaAMPmENqw)|2025/12/31|原子算筹|
+|（补）ABACUS v3.9.0.1 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/St1jJGpM20HhzOd_HYvNhA)|2025/12/31|原子算筹|
+|（修订版）ABACUS v3.9.0.19 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/EGnSEPtplRCiXqF0mTVA5g)|2025/12/31|原子算筹|
+|ABACUS v3.9.0.21 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/pfeafhxnoKlNsMK-ZMsYhQ)|2025/12/24|原子算筹|
 |第一性原理自旋模型：高效、精准预测磁性材料居里温度|[网页链接](https://mp.weixin.qq.com/s/h5mUkLWJ690eOS2YFDRksg)|2025/12/23|原子算筹|
 |单层二维M2X2材料中的内禀高陈数起源研究|[网页链接](https://mp.weixin.qq.com/s/UMlNFo8wA374gTBqlZmtMA)|2025/12/18|原子算筹|
 |ABACUS v3.9.0.20 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/x0ip-0mMCTj3nrkkhcPLKA)|2025/12/10|原子算筹|
