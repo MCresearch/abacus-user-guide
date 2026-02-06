@@ -12,6 +12,7 @@
 |ABACUS v3.9.0.24 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/PPNGcu4z9WsbeMnCvlp0kQ)|2026/02/03|原子算筹|
 |ABACUS 还能干这个？助力核幔边界研究，揭示地球深处或存在长期水储库|[网页链接](https://mp.weixin.qq.com/s/Ajr_fXXb3oKWxvPBR5EM8g)|2026/02/02|原子算筹|
 |国产之光！JCP Editor's Picks丨30家单位联合：ABACUS如何打通AI for Science的“任督二脉”？|[网页链接](https://mp.weixin.qq.com/s/Q4hWDwWfvYQKM7nP3sG6aQ)|2026/01/30|星使智算|
+|给自旋念个“紧箍咒”：ABACUS结合DeepSPIN精准预测磁性相变|[网页链接](https://mp.weixin.qq.com/s/jDH3Cv2ZUOVZI0NhSDUrBA)|2026/01/29|npj CM论文概述|
 |ABACUS v3.9.0.23 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/96KGmzmBkvh-CAO0gWZ3fQ)|2026/01/27|原子算筹|
 |ABACUS v3.9.0.22 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/v_EhSiCv9mvb0wiF7k9q1w)|2026/01/23|原子算筹|
 |ATOMKIT Studio更新：新增ABACUS格式导入与可视化交互升级|[网页链接](https://mp.weixin.qq.com/s/X26b8FSTIDX2TMUY1yHEeQ)|2026/01/23|学术之友|
@@ -73,7 +74,6 @@
 | ABACUS还能干这个？第一性原理计算阐释二维材料调控复杂氧化物机理                  | [网页链接](https://mp.weixin.qq.com/s/o7tcgjwPE1klTLedCcFRSQ)         | 2025/01/20 |  深度势能  |
 | ABACUS + DeepH + KPROJ还能干这个? MoSe2/WSe2摩尔晶格的电子结构研究              | [网页链接](https://mp.weixin.qq.com/s/HCbXe3AkSa6nEY-MY6-cRg)         | 2025/01/15 |  深度势能  |
 | ABACUS还能干这个？千原子以上高熵二维材料MXene的多重超均匀性研究                 | [网页链接](https://mp.weixin.qq.com/s/e9TUDwrUVOAp-tL2MY8llw)         | 2025/01/10 |  深度势能  |
-|给自旋念个“紧箍咒”：ABACUS结合DeepSPIN精准预测磁性相变|[网页链接](https://mp.weixin.qq.com/s/jDH3Cv2ZUOVZI0NhSDUrBA)|2025/01/09|npj CM论文概述|
 | ABACUS还能干这个？结合TB2J软件探索CrTe2薄膜自旋极化的反常现象                   | [网页链接](https://mp.weixin.qq.com/s/jYWinh2inV66lb9ArjJVkQ)         | 2025/01/07 |  深度势能  |
 | ABACUS还能干这个？解释S空位诱导基于TiOx/MoS2–xOx结构的RRAM中导电细丝的形成机制  | [网页链接](https://mp.weixin.qq.com/s/igmHK6AJxVuTQEXZ_pI_8Q)         | 2025/01/02 |  深度势能  |
 | ABACUS 3.9发布——平面波基组计算效率大幅提升，新增恒电势模拟功能                  | [网页链接](https://mp.weixin.qq.com/s/LNNJu5cZoib6AF5av_Y71w)         | 2024/12/31 |  深度势能  |
