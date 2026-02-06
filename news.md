@@ -32,6 +32,7 @@
 |ABACUS v3.9.0.17 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/qJBmhLEnUFNskpstROQLHA)|2025/10/29|原子算筹|
 |ABACUS v3.9.0.16 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/kH9oXNVzn5nwOM8oVmcIIQ)|2025/10/14|原子算筹|
 |ABACUS安装教程 - Toolchain (5) - GPU (1)|[网页链接](https://mp.weixin.qq.com/s/YekI3LXy7vuTN36ut5M6Rg)|2025/10/13|原子算筹|
+|国产GPGPU × 国产软件｜沐曦携手 ABACUS，共筑国产科学计算新生态|[网页链接](https://mp.weixin.qq.com/s/apQ-YRmCOk-mD8jGg9W5ow)|2025/09/30|沐曦科学计算团队|
 |ABACUS v3.9.0.15 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/4jCbfQj4l_pLKUBkc3CTpQ)|2025/09/29|原子算筹|
 |《原子算筹（ABACUS）软件使用与开发手册》V0.1版本发布|[网页链接](https://mp.weixin.qq.com/s/vz4eh9litpbooK8y5ODcIg)|2025/09/23|波本喵|
 |拜托了我的赛先生！SAI-1上多卡ABACUS高性能计算案例大赏|[网页链接](https://mp.weixin.qq.com/s/IeLoD_DGnh3Un_mqCc2q2w)|2025/09/22|波本喵|
@@ -46,6 +47,7 @@
 |ABACUS v3.9.0.11更新介绍|[网页链接](https://mp.weixin.qq.com/s/V6onMLDJBcJyIE8mnxy19A)|2025/08/06|原子算筹|
 |国产开源软件专题研讨会——第五届ABACUS开发者会议（第三轮通知）（8.06-8.09北京）|[网页链接](https://mp.weixin.qq.com/s/2dTeJLqI7f_lu4rqkvxrNQ)|2025/07/30|深度势能|
 |ABACUS v3.9.0.10更新介绍|[网页链接](https://mp.weixin.qq.com/s/JX5P78t1Lql5AAm1WREN4g)|2025/07/22|原子算筹|
+|软硬协同 性能突围 ｜ 在超算互联网体验全新ABACUS LTS v3.10|[网页链接](https://mp.weixin.qq.com/s/oRrQwAPUuBuphzRBesoXPQ)|2025/07/17|超算互联网|
 |ABACUS v3.9.0.9更新介绍|[网页链接](https://mp.weixin.qq.com/s/MEMqomrN8phWikwWDf9yCw)|2025/07/08|原子算筹|
 |ABACUS+DeePKS还能干这个？面向水体系的高精度电子结构通用模型|[网页链接](https://mp.weixin.qq.com/s/piaAOx4BPweUwR96XRIaOg)|2025/07/08|深度势能|
 | AI4S-Agent 共建计划｜ABACUS-agent-tools本地搭建与贡献案例 | [网页链接](https://mp.weixin.qq.com/s/Bq_Z0yhHOoMA4MxB78XG_g)| 2025/06/31 | 北京科学智能研究院 |
