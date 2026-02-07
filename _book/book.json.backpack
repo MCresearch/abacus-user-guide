@@ -1,0 +1,82 @@
+{
+  "name": "abacus-user-guide",
+  "description": "国产DFT开源软件ABACUS中文使用教程",
+  "plugins": [
+      "image-captions",
+      "auto-scroll-table",
+      "splitter",
+      "3-ba",
+
+      "theme-comscore", 
+      "insert-logo",
+      "custom-favicon",
+
+      "intopic-toc",
+      "anchors",
+
+      "chapter-fold",
+      "expandable-chapters",
+      "-lunr", 
+      "-search", 
+      "search-plus",
+
+      "prism",
+      "-highlight",
+      "code",
+      "mathjax-pro",
+
+      "hide-element",
+      "tbfed-pagefooter",
+      "disqus",
+
+      "github-buttons",
+      "sharing-plus",
+      "-sharing"
+  ],
+
+  "pluginsConfig": {
+      "tbfed-pagefooter": {
+        "copyright":"Copyright &copy mcresearch.gitee.io 2023",
+        "modify_label": "该文章修订时间：",
+        "modify_format": "YYYY-MM-DD HH:mm:ss"
+      },
+      "disqus": {
+        "shortName": "abacus-user-guide"
+      },
+      "image-captions": {
+        "caption": "图 _PAGE_IMAGE_NUMBER_. _CAPTION_"
+      },
+      "3-ba": {
+          "token": "25153cb8bd9a872cfec60b4b23ac0176"
+      },
+      "hide-element": {
+          "elements": [".gitbook-link"]
+      },
+      "page-treeview": {
+          "copyright": "Copyright &#169; aleen42",
+          "minHeaderCount": "2",
+          "minHeaderDeep": "2"
+      },
+      "page-toc-button": {
+        "maxTocDepth": 2,
+        "minTocSize": 2
+      },
+      "insert-logo": {
+        "url": "./picture/abacus-logo.svg",
+        "style": "background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;"
+      },
+      "favicon": "./picture/abacus-logo.jpg",
+      "github-buttons": {
+        "buttons": [{
+          "user": "MCresearch",
+          "repo": "abacus-user-guide",
+          "type": "star",
+          "size": "middle",
+          "count": true
+        }]
+      },
+      "sharing": {
+        "weibo": false
+      }
+  }
+}

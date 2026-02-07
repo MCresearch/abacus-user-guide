@@ -1,0 +1,51 @@
+INPUT_PARAMETERS RUNNING ABACUS-DFT
+
+#Parameters (1.General)
+suffix                  ABACUS  # suffix of OUTPUT DIR
+nspin                   2   #  1/2/4 4 for SOC
+symmetry                1   #  0/1  1 for open, default
+esolver_type            ksdft  # ksdft, ofdft, sdft, tddft, lj, dp
+dft_functional          pbe  # same as upf file, can be lda/pbe/scan/hf/pbe0/hse
+ks_solver               cusolver  # default for ksdft-lcao
+device                  gpu
+vdw_method              none  # d3 , d3_bj, none
+pseudo_dir             /home/pku-jianghong/liuzhaoqing/PP_ORB/PP
+orbital_dir            /home/pku-jianghong/liuzhaoqing/PP_ORB/ORB
+
+#Parameters (2.Iteration)
+calculation             scf # scf relax cell-relax md
+ecutwfc                 100
+scf_thr                 1e-7
+scf_nmax                400
+relax_nmax              200
+relax_method            bfgs_trad  # cg, bfgs, cg_bfgs, sd, "fire"
+force_thr_ev            0.05  # ev
+# stress_thr            5
+
+#Parameters (3.Basis)
+basis_type              lcao  # lcao or pw
+kspacing              0.14 1 0.14 # replace KPT
+# gamma_only            1  # 0/1, replace KPT
+
+#Parameters (4.Smearing)
+smearing_method         gaussian   # mp/gaussian/cold/fixed
+smearing_sigma          0.004  # Rydberg
+
+#Parameters (5.Mixing)
+mixing_type             broyden  # pulay/broyden
+mixing_ndim             20
+mixing_beta             0.025  # for metal: 0.05-0.4
+#mixing_beta_mag         0.2
+mixing_gg0              1.0  # only for metal
+
+#Parameters (6.Calculation)
+cal_force          1
+cal_stress         1
+out_stru           1  # print STRU in OUT
+out_chg            0  # print CHG or not
+out_bandgap        1
+out_mul            1  # print Mulliken charge and mag of atom in mulliken.txt
+onsite_radius     3.0
+efield_flag       1
+dip_cor_flag      1
+efield_dir        1
