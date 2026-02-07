@@ -7,7 +7,7 @@
 **审核：陈默涵，邮箱：mohanchen@pku.edu.cn**
 
 | 标题 | 链接 | 日期 | 公众号 |
-| ------------------------------------------------------------------------------- | ---------- | ---------- | ---------- |
+| ----------------------------------------------- | ---------- | ---------- | ---------- |
 |ABACUS 赝势轨道简介和资源导航|[网页链接](https://mp.weixin.qq.com/s/vEunt8IcbtFnnbFO7Lo2Zw)|2026/02/04|原子算筹|
 |ABACUS v3.9.0.24 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/PPNGcu4z9WsbeMnCvlp0kQ)|2026/02/03|原子算筹|
 |ABACUS 还能干这个？助力核幔边界研究，揭示地球深处或存在长期水储库|[网页链接](https://mp.weixin.qq.com/s/Ajr_fXXb3oKWxvPBR5EM8g)|2026/02/02|原子算筹|
@@ -33,6 +33,7 @@
 |ABACUS v3.9.0.16 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/kH9oXNVzn5nwOM8oVmcIIQ)|2025/10/14|原子算筹|
 |ABACUS安装教程 - Toolchain (5) - GPU (1)|[网页链接](https://mp.weixin.qq.com/s/YekI3LXy7vuTN36ut5M6Rg)|2025/10/13|原子算筹|
 |国产GPGPU × 国产软件｜沐曦携手 ABACUS，共筑国产科学计算新生态|[网页链接](https://mp.weixin.qq.com/s/apQ-YRmCOk-mD8jGg9W5ow)|2025/09/30|沐曦科学计算团队|
+|https://mp.weixin.qq.com/s/rmix5GnCepo_n9Mi-rD4wQ|[网页链接](https://mp.weixin.qq.com/s/rmix5GnCepo_n9Mi-rD4wQ)|2025/09/30|深度势能|
 |ABACUS v3.9.0.15 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/4jCbfQj4l_pLKUBkc3CTpQ)|2025/09/29|原子算筹|
 |《原子算筹（ABACUS）软件使用与开发手册》V0.1版本发布|[网页链接](https://mp.weixin.qq.com/s/vz4eh9litpbooK8y5ODcIg)|2025/09/23|波本喵|
 |拜托了我的赛先生！SAI-1上多卡ABACUS高性能计算案例大赏|[网页链接](https://mp.weixin.qq.com/s/IeLoD_DGnh3Un_mqCc2q2w)|2025/09/22|波本喵|
