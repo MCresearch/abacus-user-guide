@@ -1,0 +1,11 @@
+calculation ele_conductivity
+wf_in_type ABACUS
+wfdirectory OUT.ABACUS
+
+dw 0.1
+wcut 10
+smear 1
+fwhm 0.01
+cond_method 1
+readvmatrix 1
+temperature 2000

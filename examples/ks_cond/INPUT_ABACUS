@@ -1,0 +1,23 @@
+INPUT_PARAMETERS
+#Parameters     (General)
+calculation     scf
+pseudo_dir      .
+#Parameters     (Accuracy)
+ecutwfc         60   
+scf_thr         1e-8
+symmetry        0
+#Parameters     (Smearing)
+smearing_method fd
+smearing_sigma  0.0304014440309863 
+# Rydberg
+#Parameters (MD)
+basis_type      pw 
+nspin           1
+
+#Parameters (6.Conductivity)
+cal_cond         1
+cond_fwhm        0.05
+cond_wcut        10
+cond_dw          0.2
+cond_dt          0.1
+cond_nonlocal    true
