@@ -79,6 +79,7 @@
         * [ABACUS 代码存放规范](develop-rule.md)
         * [如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）](develop-addinp.md)
         * [如何在 ABACUS 中新增一个输入参数（v3.7.0 后）](develop-addinp2.md)
+        * [如何在 ABACUS 中新增一个输入参数（v3.9.24 后）](develop-addinp3.md)
         * [如何在 ABACUS 中进行异构计算](develop-hetero.md)
         * [ABACUS formatter-2.0 版本使用说明书](develop-formatter2.md)
         * [ABACUS 中使用格式化工具 clang-format](develop-format.md)
