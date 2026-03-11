@@ -28,10 +28,10 @@ cuSOLVERMp 则是 NVIDIA 提供的**分布式多节点 / 多 GPU 稠密线性代
 
 编译带 cusolvermp 支持的 ABACUS，需要在一般的 ABACUS 编译流程之前，先安装并加载 NVIDIA HPC SDK 环境。总体编译安装流程如下：
 
-1. 安装 NVIDIA HPC SDK。 注意需要安装 >=23.5 版本的 HPC SDK，过早版本的 NVIDIA HPC SDK 可能出现兼容问题。
-2. 加载 NVIDIA HPC SDK 环境。这里直接使用 NVIDIA 提供的 modulefile 即可。
+1.安装 NVIDIA HPC SDK。 注意需要安装 >=23.5 版本的 HPC SDK，过早版本的 NVIDIA HPC SDK 可能出现兼容问题。
+2.加载 NVIDIA HPC SDK 环境。这里直接使用 NVIDIA 提供的 modulefile 即可。
 
-a. 当 **NVIDIA HPC SDK 版本 <25.9** 时，`cusolvermp` 的通信功能依赖 **HPC-X** 组件，因此需要加载特定的 modulefile（`nvhpc-hpcx-cudaxx/xx.x`）。
+  a.当 **NVIDIA HPC SDK 版本 <25.9** 时，`cusolvermp` 的通信功能依赖 **HPC-X** 组件，因此需要加载特定的 modulefile（`nvhpc-hpcx-cudaxx/xx.x`）。
       以 **HPC SDK 25.3** 为例，可按如下方式加载：
 
 ```bash
@@ -39,16 +39,16 @@ module use /opt/nvidia/hpc_sdk/modulefiles
 module load nvhpc-hpcx-cuda12/25.3
 ```
 
-b. 当 **NVIDIA HPC SDK 版本 ≥ 25.9** 时，`cusolvermp` 的通信功能改为使用 **NCCL**，不再依赖 **HPC-X** 组件，因此只需加载基础的 modulefile(`nvhpc/xx.x`) 即可。
+  b.当 **NVIDIA HPC SDK 版本 ≥ 25.9** 时，`cusolvermp` 的通信功能改为使用 **NCCL**，不再依赖 **HPC-X** 组件，因此只需加载基础的 modulefile(`nvhpc/xx.x`) 即可。
 
-以 **HPC SDK 26.1** 为例，可按如下方式加载：
+  以 **HPC SDK 26.1** 为例，可按如下方式加载：
 
 ```bash
 module use /opt/nvidia/hpc_sdk/modulefiles
 module load nvhpc/26.1
 ```
 
-3. 编译 ABACUS。在编译 ABACUS 时候需设置 `"-DENABLE_CUSOLVERMP=ON"`
+3.编译 ABACUS。在编译 ABACUS 时候需设置 `"-DENABLE_CUSOLVERMP=ON"`
 
 # 功能使用
 
