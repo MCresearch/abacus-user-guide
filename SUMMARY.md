@@ -46,6 +46,7 @@
         * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
         * [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
     * 后处理
+        * [abacuslite 使用教程：API](abacus-abacuslite.md)
         * [ABACUS+Atomkit 计算态密度和能带](abacus-dos.md)
         * [ABACUS 计算 PDOS](abacus-pdos.md)
         * [ABACUS 输出部分的电荷密度和波函数及可视化教程](abacus-chg.md)
