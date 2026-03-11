@@ -68,6 +68,7 @@
     * [采用 ABACUS 进行表面计算（五）：外加电场](abacus-surface5.md)
     * [采用 ABACUS 进行表面计算（六）：补偿电荷](abacus-surface6.md)
 * 测试
+    * [国际开放云平台 Materials Cloud 上线 ABACUS 软件精度验证结果](abacus-precision.md)
     * [ABACUS 平面波基组下的 10 个典型算例](test-10cases.md)
     * [ABACUS 平面波基组下的 10 个典型算例(V2026.1.27)](test-10cases2.md)
     * [ABACUS 计算案例 : TiC-Ni 半导体-金属异质结体系的 SCF 和电荷密度差](test-ticni.md)
