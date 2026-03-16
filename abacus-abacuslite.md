@@ -518,9 +518,7 @@ _ = atoms.get_potential_energy() # NSCF calculation will be performed
 bs = bscalc.band_structure()
 bs.write('bandstructure.json')
 # you can use the ase-cli to plot the JSON file later by:
-# ```
 # ase band-structure bandstructure.json -r -10 15
-# ```
 ```
 
 上述代码将能带读取到了 bs 对象中，之后将数据写入 bandstructure.json，此文件可以使用命令
@@ -581,10 +579,8 @@ abacus = Abacus(
 )
 
 # get the structure, can also from the 
-# ```
 # from ase.io import read
 # atoms = read(...)
-# ```
 atoms = bulk('Si', 'diamond', a=5.43)
 
 # bind the atoms with the abacus
