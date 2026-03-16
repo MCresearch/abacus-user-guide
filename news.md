@@ -8,6 +8,22 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ----------------------------------------------- | ---------- | ---------- | ---------- |
+|国际开放云平台Materials Cloud上线ABACUS软件精度验证结果|[网页链接](https://mp.weixin.qq.com/s/nFSVLDT5fZeSwl9y9k2bTw)|2026/03/13|原子算筹|
+|ABACUS 平面波 KSDFT 电子电导热导计算教程|[网页链接](https://mp.weixin.qq.com/s/DCnysYQu-VtBVFYeNV_BNQ)|2026/03/11|原子算筹|
+|ABACUS计算案例 : TiC-Ni半导体-金属异质结体系的SCF和电荷密度差|[网页链接](https://mp.weixin.qq.com/s/wa0apLn2VECvpXVD3lxGlg)|2026/03/09|原子算筹|
+|突破物理极限！8英寸晶圆级2.5 Å极低EOT介质膜助力2D半导体走向“埃米时代”|[网页链接](https://mp.weixin.qq.com/s/5-U9pAKPlAbCYi_H_4Bw_w)|2026/03/06|原子算筹|
+|使用abacustest处理DOS和PDOS数据|[网页链接](https://mp.weixin.qq.com/s/ZQjQECXWDMGt7-5bufmW9w)|2026/03/05|原子算筹|
+|当ABACUS遇上SciencePedia：用AI重新定义科学计算软件教程|[网页链接](https://mp.weixin.qq.com/s/nsYbMeVZWFw3NebAE-WkPQ)|2026/03/04|深度势能|
+|ABACUS v3.9.0.25 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/G0NQfo16YHLb2QSTaEB3QA)|2026/03/04|原子算筹|
+|使用abacustest做谐振频率分析计算|[网页链接](https://mp.weixin.qq.com/s/t4iql1vY98x9Ai3LB1kMIw)|2026/03/03|原子算筹|
+|使用abacustest计算晶体的弹性性质|[网页链接](https://mp.weixin.qq.com/s/_thx77h6ObX1XVmKK9x-Gg)|2026/03/02|原子算筹|
+|当磁性材料遇到AI：沐曦股份联合清华大学发布“磁性材料·AI原子基座模型”|[网页链接](https://mp.weixin.qq.com/s/R-6w4K1LleIVy6jS-VQ1eA)|2026/02/28|沐曦股份|
+|使用abacustest计算功函数|[网页链接](https://mp.weixin.qq.com/s/vzcmOIfQbcRueCnvvrGuZw)|2026/02/28|原子算筹|
+|使用abacustest准备ABACUS输入文件|[网页链接](https://mp.weixin.qq.com/s/Y4G7sppNNpc5Ot4V0qd2CQ)|2026/02/27|原子算筹|
+|Abacustest v0.4.53版本介绍|[网页链接](https://mp.weixin.qq.com/s/wHMTatCID1-WwO0RZOUDBg)|2026/02/26|原子算筹|
+|2025.03-2026.02原子算筹ABACUS社区生态报告|[网页链接](https://mp.weixin.qq.com/s/6zk7tPbvIML9Dqwr0_lHcA)|2026/02/10|原子算筹|
+|ABACUS杂化泛函使用教程（基于LCAO）|[网页链接](https://mp.weixin.qq.com/s/rHqyA9OGiDN5Y_DKJhG-Zg)|2026/02/09|原子算筹|
+|合肥综合性国家科学中心人工智能研究院团队提出高性能通用电子结构哈密顿量预测模型|[网页链接](https://mp.weixin.qq.com/s/jk1sJ71j1kziaWAH19OkHg)|2026/02/06|原子算筹|
 |ABACUS 赝势轨道简介和资源导航|[网页链接](https://mp.weixin.qq.com/s/vEunt8IcbtFnnbFO7Lo2Zw)|2026/02/04|原子算筹|
 |ABACUS v3.9.0.24 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/PPNGcu4z9WsbeMnCvlp0kQ)|2026/02/03|原子算筹|
 |ABACUS 还能干这个？助力核幔边界研究，揭示地球深处或存在长期水储库|[网页链接](https://mp.weixin.qq.com/s/Ajr_fXXb3oKWxvPBR5EM8g)|2026/02/02|原子算筹|
