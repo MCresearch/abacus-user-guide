@@ -1,0 +1,1313 @@
+                                                                                     
+                              ABACUS v3.9.0.25
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: 5d834e975 (Mon Mar 9 11:19:58 2026 +0800)
+
+    Start Time is Fri Mar 20 13:22:11 2026
+                                                                                     
+ ------------------------------------------------------------------------------------
+
+ READING GENERAL INFORMATION
+                           global_out_dir = OUT.ABACUS/
+                           global_in_card = INPUT
+                               pseudo_dir = 
+                              orbital_dir = 
+                                    DRANK = 1
+                                    DSIZE = 8
+                                   DCOLOR = 1
+                                    GRANK = 1
+                                    GSIZE = 1
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                        #Setup Unitcell#                            |
+ | From the input file and the structure file we know the number of   |
+ | different elments in this unitcell, then we list the detail        |
+ | information for each element, especially the zeta and polar atomic |
+ | orbital number for each element. The total atom number is counted. |
+ | We calculate the nearest atom distance for each atom and show the  |
+ | Cartesian and Direct coordinates for each atom. We list the file   |
+ | address for atomic orbitals. The volume and the lattice vectors    |
+ | in real and reciprocal space is also shown.                        |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ READING UNITCELL INFORMATION
+                       Number of elements = 5
+                  Lattice constant (Bohr) = 1.88972
+              Lattice constant (Angstrom) = 0.999994
+
+ READING ATOM TYPE 1
+                               Atom label = Li
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+                      L=2, number of zeta = 1
+            Number of atoms for this type = 27
+               magnetization of element 1 = 0
+
+ READING ATOM TYPE 2
+                               Atom label = Ni
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+                      L=2, number of zeta = 1
+            Number of atoms for this type = 9
+               magnetization of element 2 = 2
+
+ READING ATOM TYPE 3
+                               Atom label = O
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+                      L=2, number of zeta = 1
+            Number of atoms for this type = 54
+               magnetization of element 3 = 0
+
+ READING ATOM TYPE 4
+                               Atom label = Mn
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+                      L=2, number of zeta = 1
+            Number of atoms for this type = 9
+               magnetization of element 4 = 3
+
+ READING ATOM TYPE 5
+                               Atom label = Co
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+                      L=2, number of zeta = 1
+            Number of atoms for this type = 9
+               magnetization of element 5 = 0
+
+                        TOTAL ATOM NUMBER = 108
+
+ DIRECT COORDINATES
+ atom                  x                  y                  z     mag
+   Li     0.000000000000     0.000000000000     0.000000000000  0.0000
+   Li     0.000000000000     0.333333299999     0.000000000000  0.0000
+   Li     0.000000000000     0.666666700001     0.000000000000  0.0000
+   Li     0.333333299999     0.000000000000     0.000000000000  0.0000
+   Li     0.333333299999     0.333333299999     0.000000000000  0.0000
+   Li     0.333333299999     0.666666700001     0.000000000000  0.0000
+   Li     0.666666700001     0.000000000000     0.000000000000  0.0000
+   Li     0.666666700001     0.333333299999     0.000000000000  0.0000
+   Li     0.666666700001     0.666666700001     0.000000000000  0.0000
+   Li     0.222222300001     0.111111000000     0.333333000000  0.0000
+   Li     0.222222300001     0.444444299999     0.333333000000  0.0000
+   Li     0.222222300001     0.777777699999     0.333333000000  0.0000
+   Li     0.555555600000     0.111111000000     0.333333000000  0.0000
+   Li     0.555555600000     0.444444299999     0.333333000000  0.0000
+   Li     0.555555600000     0.777777699999     0.333333000000  0.0000
+   Li     0.888889000000     0.111111000000     0.333333000000  0.0000
+   Li     0.888889000000     0.444444299999     0.333333000000  0.0000
+   Li     0.888889000000     0.777777699999     0.333333000000  0.0000
+   Li     0.111111000000     0.222222300001     0.666667000000  0.0000
+   Li     0.111111000000     0.555555600000     0.666667000000  0.0000
+   Li     0.111111000000     0.888889000000     0.666667000000  0.0000
+   Li     0.444444299999     0.222222300001     0.666667000000  0.0000
+   Li     0.444444299999     0.555555600000     0.666667000000  0.0000
+   Li     0.444444299999     0.888889000000     0.666667000000  0.0000
+   Li     0.777777699999     0.222222300001     0.666667000000  0.0000
+   Li     0.777777699999     0.555555600000     0.666667000000  0.0000
+   Li     0.777777699999     0.888889000000     0.666667000000  0.0000
+   Ni     0.111111000000     0.888889000000     0.166667000000  2.0000
+   Ni     0.444444299999     0.555555600000     0.166667000000  2.0000
+   Ni     0.777777699999     0.222222300001     0.166667000000  2.0000
+   Ni     0.333333299999     0.000000000000     0.500000000000  2.0000
+   Ni     0.666666700001     0.666666700001     0.500000000000  2.0000
+   Ni     0.000000000000     0.333333299999     0.500000000000  2.0000
+   Ni     0.222222300001     0.777777699999     0.833333000000  2.0000
+   Ni     0.555555600000     0.444444299999     0.833333000000  2.0000
+   Ni     0.888889000000     0.111111000000     0.833333000000  2.0000
+    O     0.000000000000     0.000000000000     0.239587000000  0.0000
+    O     0.000000000000     0.333333299999     0.239587000000  0.0000
+    O     0.000000000000     0.666666700001     0.239587000000  0.0000
+    O     0.333333299999     0.000000000000     0.239587000000  0.0000
+    O     0.333333299999     0.333333299999     0.239587000000  0.0000
+    O     0.333333299999     0.666666700001     0.239587000000  0.0000
+    O     0.666666700001     0.000000000000     0.239587000000  0.0000
+    O     0.666666700001     0.333333299999     0.239587000000  0.0000
+    O     0.666666700001     0.666666700001     0.239587000000  0.0000
+    O     0.222222300001     0.111111000000     0.093746000000  0.0000
+    O     0.222222300001     0.444444299999     0.093746000000  0.0000
+    O     0.222222300001     0.777777699999     0.093746000000  0.0000
+    O     0.555555600000     0.111111000000     0.093746000000  0.0000
+    O     0.555555600000     0.444444299999     0.093746000000  0.0000
+    O     0.555555600000     0.777777699999     0.093746000000  0.0000
+    O     0.888889000000     0.111111000000     0.093746000000  0.0000
+    O     0.888889000000     0.444444299999     0.093746000000  0.0000
+    O     0.888889000000     0.777777699999     0.093746000000  0.0000
+    O     0.222222300001     0.111111000000     0.572920000001  0.0000
+    O     0.222222300001     0.444444299999     0.572920000001  0.0000
+    O     0.222222300001     0.777777699999     0.572920000001  0.0000
+    O     0.555555600000     0.111111000000     0.572920000001  0.0000
+    O     0.555555600000     0.444444299999     0.572920000001  0.0000
+    O     0.555555600000     0.777777699999     0.572920000001  0.0000
+    O     0.888889000000     0.111111000000     0.572920000001  0.0000
+    O     0.888889000000     0.444444299999     0.572920000001  0.0000
+    O     0.888889000000     0.777777699999     0.572920000001  0.0000
+    O     0.111111000000     0.222222300001     0.427079999999  0.0000
+    O     0.111111000000     0.555555600000     0.427079999999  0.0000
+    O     0.111111000000     0.888889000000     0.427079999999  0.0000
+    O     0.444444299999     0.222222300001     0.427079999999  0.0000
+    O     0.444444299999     0.555555600000     0.427079999999  0.0000
+    O     0.444444299999     0.888889000000     0.427079999999  0.0000
+    O     0.777777699999     0.222222300001     0.427079999999  0.0000
+    O     0.777777699999     0.555555600000     0.427079999999  0.0000
+    O     0.777777699999     0.888889000000     0.427079999999  0.0000
+    O     0.111111000000     0.222222300001     0.906254000000  0.0000
+    O     0.111111000000     0.555555600000     0.906254000000  0.0000
+    O     0.111111000000     0.888889000000     0.906254000000  0.0000
+    O     0.444444299999     0.222222300001     0.906254000000  0.0000
+    O     0.444444299999     0.555555600000     0.906254000000  0.0000
+    O     0.444444299999     0.888889000000     0.906254000000  0.0000
+    O     0.777777699999     0.222222300001     0.906254000000  0.0000
+    O     0.777777699999     0.555555600000     0.906254000000  0.0000
+    O     0.777777699999     0.888889000000     0.906254000000  0.0000
+    O     0.000000000000     0.000000000000     0.760413000000  0.0000
+    O     0.000000000000     0.333333299999     0.760413000000  0.0000
+    O     0.000000000000     0.666666700001     0.760413000000  0.0000
+    O     0.333333299999     0.000000000000     0.760413000000  0.0000
+    O     0.333333299999     0.333333299999     0.760413000000  0.0000
+    O     0.333333299999     0.666666700001     0.760413000000  0.0000
+    O     0.666666700001     0.000000000000     0.760413000000  0.0000
+    O     0.666666700001     0.333333299999     0.760413000000  0.0000
+    O     0.666666700001     0.666666700001     0.760413000000  0.0000
+   Mn     0.111111000000     0.222222300001     0.166667000000  3.0000
+   Mn     0.444444299999     0.888889000000     0.166667000000  3.0000
+   Mn     0.777777699999     0.555555600000     0.166667000000  3.0000
+   Mn     0.333333299999     0.333333299999     0.500000000000  3.0000
+   Mn     0.666666700001     0.000000000000     0.500000000000  3.0000
+   Mn     0.000000000000     0.666666700001     0.500000000000  3.0000
+   Mn     0.222222300001     0.111111000000     0.833333000000  3.0000
+   Mn     0.555555600000     0.777777699999     0.833333000000  3.0000
+   Mn     0.888889000000     0.444444299999     0.833333000000  3.0000
+   Co     0.111111000000     0.555555600000     0.166667000000  0.0000
+   Co     0.444444299999     0.222222300001     0.166667000000  0.0000
+   Co     0.777777699999     0.888889000000     0.166667000000  0.0000
+   Co     0.333333299999     0.666666700001     0.500000000000  0.0000
+   Co     0.666666700001     0.333333299999     0.500000000000  0.0000
+   Co     0.000000000000     0.000000000000     0.500000000000  0.0000
+   Co     0.222222300001     0.444444299999     0.833333000000  0.0000
+   Co     0.555555600000     0.111111000000     0.833333000000  0.0000
+   Co     0.888889000000     0.777777699999     0.833333000000  0.0000
+
+ ATOMIC VELOCITIES
+ atom                 vx                 vy                 vz
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Li                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+   Ni                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+    O                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Mn                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+   Co                  0                  0                  0
+
+                     Cell volume (Bohr^3) = 6013.22
+                        Cell volume (A^3) = 891.066
+
+ Lattice vectors: (Cartesian coordinate: in unit of a_0)
+             +8.52869                  +0                  +0
+             -4.26435            +7.38607                  +0
+                   +0                  +0            +14.1456
+ Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
+            +0.117251          +0.0676951                  -0
+                   -0            +0.13539                  -0
+                   +0                  -0          +0.0706933
+
+ #ENERGY SOLVER# ksdft_pw
+ RUNNING WITH DEVICE  : CPU / Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz (x2)
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                 #Read Pseudopotentials Files#                      |
+ | ABACUS supports norm-conserving (NC) pseudopotentials for both     |
+ | plane wave basis and numerical atomic orbital basis sets.          |
+ | In addition, ABACUS supports ultrasoft pseudopotentials (USPP)     |
+ | for plane wave basis set.                                          |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+                PAO radial cut off (Bohr) = 15
+                     Pseudopotential file = ./Li.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 0
+                        Valence electrons = 3
+                                     Lmax = 1
+                           Number of zeta = 2
+                     Number of projectors = 4
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                PAO radial cut off (Bohr) = 15
+                     Pseudopotential file = ./Ni.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 1
+                        Valence electrons = 18
+                                     Lmax = 2
+                           Number of zeta = 4
+                     Number of projectors = 6
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                           L of projector = 2
+                           L of projector = 2
+                PAO radial cut off (Bohr) = 15
+                     Pseudopotential file = ./O.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 1
+                        Valence electrons = 6
+                                     Lmax = 2
+                           Number of zeta = 2
+                     Number of projectors = 5
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                           L of projector = 2
+                PAO radial cut off (Bohr) = 15
+                     Pseudopotential file = ./Mn.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 1
+                        Valence electrons = 15
+                                     Lmax = 2
+                           Number of zeta = 4
+                     Number of projectors = 6
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                           L of projector = 2
+                           L of projector = 2
+                PAO radial cut off (Bohr) = 15
+                     Pseudopotential file = ./Co.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 1
+                        Valence electrons = 17
+                                     Lmax = 2
+                           Number of zeta = 4
+                     Number of projectors = 6
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                           L of projector = 2
+                           L of projector = 2
+         Number of pseudo atomic orbitals = 540
+ The readin total magnetization is 45
+            Electron number of element Li = 3
+      Total electron number of element Li = 81
+            Electron number of element Ni = 18
+      Total electron number of element Ni = 162
+             Electron number of element O = 6
+       Total electron number of element O = 324
+            Electron number of element Mn = 15
+      Total electron number of element Mn = 135
+            Electron number of element Co = 17
+      Total electron number of element Co = 153
+          Autoset the number of electrons = 855
+               Occupied electronic states = 428
+     Number of electronic states (NBANDS) = 490
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: the number of valence electrons in pseudopotential > 1 for Li: [He] 2s1
+ Warning: the number of valence electrons in pseudopotential > 10 for Ni: [Ar] 3d8 4s2
+ Warning: the number of valence electrons in pseudopotential > 7 for Mn: [Ar] 3d5 4s2
+ Warning: the number of valence electrons in pseudopotential > 9 for Co: [Ar] 3d7 4s2
+ Pseudopotentials with additional electrons can yield (more) accurate outcomes, but may be less efficient.
+ If you're confident that your chosen pseudopotential is appropriate, you can safely ignore this warning.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                  
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |           #Setup Plane Waves of Charge/Potential#                  |
+ | Use the kinetic energy cutoff and the lattice vectors to generate  |
+ | the dimensions of FFT grid, which is used to represent the charge  |
+ | density or potential. If USPP is used, a double grid technique     |
+ | is applied.                                                        |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ SETUP PLANE WAVES FOR CHARGE/POTENTIAL
+ FFT DIMENSIONS ARE FROM INPUT
+ KINETIC ENEGY CUTOFF IS DETERMINED FROM nx, ny, nz
+  Energy cutoff for charge/potential (Ry) = 622.531
+            FFT grid for charge/potential = [ 128, 128, 256 ]
+           Number of FFT grids this proc. = 524288
+                Division for big FFT grid = [ 1, 1, 1 ]
+      FFT (big) grid for charge/potential = [ 128, 128, 256 ]
+     Number of FFT (big) grids this proc. = 524288
+                    Number of plane waves = 581319
+        Number of sticks on FFT x-y plane = 5731
+
+ PARALLEL PW FOR CHARGE/POTENTIAL
+     PROC   COLUMNS(POT)             PW
+        1            715          72665
+        2            715          72665
+        3            715          72665
+        4            715          72665
+        5            717          72665
+        6            717          72665
+        7            720          72664
+        8            717          72665
+ --------------- SUM -------------------
+        8           5731         581319
+
+                            Number of |g| = 34589
+                                  Max |g| = 28.9454
+                                  Min |g| = 0
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                      #Symmetry Analysis#                           |
+ | We calculate the norm of 3 vectors and the angles between them,    |
+ | the type of Bravais lattice is given. We can judge if the unticell |
+ | is a primitive cell. Finally we give the point group operation for |
+ | this unitcell. We use the point group operations to perform        |
+ | symmetry analysis on given k-point mesh and the charge density.    |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ LATTICE VECTORS: (CARTESIAN COORDINATE: IN UNIT OF A0)
+             +8.52869                  +0                  +0
+             -4.26435            +7.38607                  +0
+                   +0                  +0            +14.1456
+                     Right-handed lattice = 1
+                                   NORM_A = 8.52869
+                                   NORM_B = 8.5287
+                                   NORM_C = 14.1456
+                           ALPHA (DEGREE) = 90
+                           BETA  (DEGREE) = 90
+                           GAMMA (DEGREE) = 120
+
+ The lattice vectors have been changed (STRU_SIMPLE.cif)
+
+ For optimal symmetric configuration:
+                             BRAVAIS TYPE = 12
+                     BRAVAIS LATTICE NAME = 12. Monoclinic P (simple)
+                                    ibrav = 12
+                                    IBRAV = 12
+                                  BRAVAIS = SIMPLE MONOLINIC CELL
+                       LATTICE CONSTANT A = 14.7721
+                                B/A RATIO = 0.957588
+                                C/A RATIO = 1.52753
+                                COS(BETA) = -0.98198
+                     Right-handed lattice = 1
+(for primitive cell:)
+                                    IBRAV = 4
+                                  BRAVAIS = HEXAGONAL CELL
+                       LATTICE CONSTANT A = 4.92405
+                                C/A RATIO = 2.87276
+optimized lattice volume: 891.082
+optimized primitive cell volume: 297.027
+Original cell was built up by 3 primitive cells.
+              Number of rotation matrices = 4
+              PURE POINT GROUP OPERATIONS = 1
+                   SPACE GROUP OPERATIONS = 1
+                              POINT GROUP = C_1
+               POINT GROUP IN SPACE GROUP = C_1
+ DONE : SYMMETRY Time : 0.188626 (SEC)
+
+ DONE : SETUP UNITCELL Time : 0.188649 (SEC)
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                       #Setup K-points#                             |
+ | We setup the k-points according to input parameters.               |
+ | The reduced k-points are set according to symmetry operations.     |
+ | We treat the spin as another set of k-points.                      |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+ SETUP K-POINTS
+                                    nspin = 2
+                   Input type of k points = Monkhorst-Pack(Gamma)
+                                   nkstot = 1
+                     Right-handed lattice = 1
+
+ For reciprocal-space lattice
+                     Bravais lattice type = 4
+                     Bravais lattice name = 04. Hexagonal cell
+Error: Bravais lattice type of reciprocal lattice is not compatible with that of real space lattice:
+ibrav of real space lattice: 12. Monoclinic P (simple)
+ibrav of reciprocal lattice: 04. Hexagonal cell
+(which should be 12).
+           Number of irreducible k-points = 1
+
+ K-POINTS REDUCTION ACCORDING TO SYMMETRY
+     IBZ    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT  ibz2bz
+       1  0.00000000  0.00000000  0.00000000  1.0000       0
+
+                               nkstot now = 1
+ K-POINTS DIRECT COORDINATES
+ KPOINTS    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  1.0000
+
+
+       Number of k-points in this process = 1
+       Minimum distributed k-point number = 1
+                             nks(nspin=2) = 2
+                          nkstot(nspin=2) = 2
+
+ K-POINTS CARTESIAN COORDINATES
+ KPOINTS CARTESIAN_X CARTESIAN_Y CARTESIAN_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  1.0000
+       2  0.00000000  0.00000000  0.00000000  1.0000
+
+
+ K-POINTS DIRECT COORDINATES
+ KPOINTS    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  1.0000
+       2  0.00000000  0.00000000  0.00000000  1.0000
+
+ DONE : INIT K-POINTS Time : 0.21618 (SEC)
+
+
+ Warning_Memory_Consuming allocated:  SF::strucFac 5.5439 MB
+ XC:	101	130	
+
+ Warning_Memory_Consuming allocated:  Chg::rho 8 MB
+
+ Warning_Memory_Consuming allocated:  Chg::rho_save 8 MB
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Setup charge mixing parameters                                     |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+                              mixing_type = broyden
+                              mixing_beta = 0.3
+                               mixing_gg0 = 1
+                           mixing_gg0_min = 0.1
+                          mixing_beta_mag = 1.2
+                           mixing_gg0_mag = 0
+                              mixing_ndim = 8
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |              #Setup Plane Waves of Wave Functions#                 |
+ | Use the kinetic energy cutoff and the lattice vectors to generate  |
+ | the dimensions of FFT grid, which is used to represent the wave    |
+ | functions of electrons.                                            |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ SETUP PLANE WAVES FOR WAVE FUNCTIONS
+     Energy cutoff for wavefunc (unit:Ry) = 80
+              FFT grid for wave functions = [ 128, 128, 256 ]
+              Number of total plane waves = 72605
+        Number of sticks on FFT x-y plane = 1417
+
+ PARALLEL PW FOR WAVE FUNCTIONS
+     PROC   COLUMNS(POT)             PW
+        1            177           9075
+        2            177           9075
+        3            177           9075
+        4            177           9075
+        5            178           9082
+        6            177           9075
+        7            177           9073
+        8            177           9075
+ --------------- sum -------------------
+        8           1417          72605
+ DONE : INIT PLANEWAVE Time : 0.395632 (SEC)
+
+                                 init_chg = atomic
+
+ Warning_Memory_Consuming allocated:  Pot::veff 8 MB
+
+ Warning_Memory_Consuming allocated:  Pot::veff_smooth 8 MB
+ DONE : LOCAL POTENTIAL Time : 4.37243 (SEC)
+
+
+ SETUP NONLOCAL PSEUDOPOTENTIALS IN PLANE WAVE BASIS
+ Li non-local projectors:
+ projector 1 L=0
+ projector 2 L=0
+ projector 3 L=1
+ projector 4 L=1
+ Ni non-local projectors:
+ projector 1 L=0
+ projector 2 L=0
+ projector 3 L=1
+ projector 4 L=1
+ projector 5 L=2
+ projector 6 L=2
+ O non-local projectors:
+ projector 1 L=0
+ projector 2 L=0
+ projector 3 L=1
+ projector 4 L=1
+ projector 5 L=2
+ Mn non-local projectors:
+ projector 1 L=0
+ projector 2 L=0
+ projector 3 L=1
+ projector 4 L=1
+ projector 5 L=2
+ projector 6 L=2
+ Co non-local projectors:
+ projector 1 L=0
+ projector 2 L=0
+ projector 3 L=1
+ projector 4 L=1
+ projector 5 L=2
+ projector 6 L=2
+      TOTAL NUMBER OF NONLOCAL PROJECTORS = 1404
+
+ Warning_Memory_Consuming allocated:  VNL::vkb 194.417 MB
+
+ Init Non-Local PseudoPotential table : 
+ Init Non-Local-Pseudopotential done.
+ DONE : NON-LOCAL POTENTIAL Time : 4.70159 (SEC)
+
+                                     npwx = 9075
+
+ Warning_Memory_Consuming allocated:  Psi_PW 135.704 MB
+
+ Using ATOMIC starting wave functions for all 540 atomic orbitals (covers 490 bands)
+
+ Make real space PAO into reciprocal space.
+       max mesh points in Pseudopotential = 1501
+     dq(describe PAO in reciprocal space) = 0.01
+                                    max q = 1078
+
+ number of pseudo atomic orbitals for Li is 2
+WARNING: norm of atomic wavefunction # 2 of atomic type Li is 0.999974, renormalized
+
+ number of pseudo atomic orbitals for Ni is 4
+
+ number of pseudo atomic orbitals for O is 2
+
+ number of pseudo atomic orbitals for Mn is 4
+
+ number of pseudo atomic orbitals for Co is 4
+ DONE : INIT BASIS Time : 5.15045 (SEC)
+
+ ================================================================
+ SELF-CONSISTENT
+ ================================================================
+
+ Warning_Memory_Consuming allocated:  Veff<PW>::porter 8 MB
+
+ Warning_Memory_Consuming allocated:  Veff<PW>::porter1 8 MB
+
+ Warning_Memory_Consuming allocated:  Meta<PW>::porter 8 MB
+
+ Warning_Memory_Consuming allocated:  DiagSub::temp 74.7757 MB
+
+ Warning_Memory_Consuming allocated:  Nonlocal<PW>::becp 11.5686 MB
+
+ Warning_Memory_Consuming allocated:  Nonlocal<PW>::ps 11.5686 MB
+ DONE : INIT SCF Time : 42.1872 (SEC)
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         1
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 0.01
+
+ Warning_Memory_Consuming allocated:  ElecSPW::wfcr 8 MB
+
+ Warning_Memory_Consuming allocated:  ElecSPW::wfcr_a 8 MB
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 45.9447
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 26.3693
+                          Diago Threshold = 0.01
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9908.6018130316     -134813.4438703606   
+  E_Harris       -9980.0153354900     -135785.0746900460   
+  E_Fermi        0.8697306805         11.8332929803        
+  E_gap(k)       0.0646276610         0.8793044377         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         2
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 0.00308413
+          Total magnetism (Bohr mag/cell) = 21.012
+       Absolute magnetism (Bohr mag/cell) = 28.0898
+              Electron number for spin up = 438.006
+            Electron number for spin down = 416.994
+ Electron density deviation 61.0235
+                          Diago Threshold = 0.00308413
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9906.6002899349     -134786.2117515664   
+  E_Harris       -9876.2313154940     -134373.0206567538   
+  E_Fermi        0.8009104888         10.8969462355        
+  E_gap(k)       0.0005205303         0.0070821776         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         3
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 0.00308413
+          Total magnetism (Bohr mag/cell) = 44.9999
+       Absolute magnetism (Bohr mag/cell) = 45.8558
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 9.90472
+                          Diago Threshold = 0.00308413
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9914.0109789880     -134887.0393487950   
+  E_Harris       -9844.6093185231     -133942.7813158113   
+  E_Fermi        0.7924087602         10.7812742836        
+  E_gap(k)       0.0117017128         0.1592099708         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         4
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 0.00115845
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 46.2246
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 4.15653
+                          Diago Threshold = 0.00115845
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.6426854765     -134882.0284585028   
+  E_Harris       -9882.1380746157     -134453.3862375222   
+  E_Fermi        0.8165922253         11.1103072071        
+  E_gap(k)       0.0468761564         0.6377828275         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         5
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 0.000486144
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 46.9619
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.485604
+                          Diago Threshold = 0.000486144
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.8590011533     -134884.9715842735   
+  E_Harris       -9920.6884556212     -134977.8910792686   
+  E_Fermi        0.8594833633         11.6938710769        
+  E_gap(k)       0.0503160239         0.6845846263         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         6
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 5.67958e-05
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.5418
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.0571107
+                          Diago Threshold = 5.67958e-05
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9062701222     -134885.6147115894   
+  E_Harris       -9910.9357835280     -134845.1991680757   
+  E_Fermi        0.8332243613         11.3365990267        
+  E_gap(k)       0.0397741080         0.5411545018         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         7
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 6.67961e-06
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.9074
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.109996
+                          Diago Threshold = 6.67961e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9095976418     -134885.6599848161   
+  E_Harris       -9918.6464267018     -134950.1078504832   
+  E_Fermi        0.8353506130         11.3655281652        
+  E_gap(k)       0.0369572726         0.5028294894         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         8
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 6.67961e-06
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.9417
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.04455
+                          Diago Threshold = 6.67961e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9063728113     -134885.6161087454   
+  E_Harris       -9917.3907023803     -134933.0228445947   
+  E_Fermi        0.8356114033         11.3690763989        
+  E_gap(k)       0.0365971910         0.4979303282         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         9
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 5.21052e-06
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7672
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.00511109
+                          Diago Threshold = 5.21052e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9127423650     -134885.7027709698   
+  E_Harris       -9913.4084663404     -134878.8417436705   
+  E_Fermi        0.8349140887         11.3595889463        
+  E_gap(k)       0.0422149731         0.5743641757         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        10
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 5.97789e-07
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7315
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.000865549
+                          Diago Threshold = 5.97789e-07
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9129852884     -134885.7060761126   
+  E_Harris       -9912.9156741370     -134872.1369617748   
+  E_Fermi        0.8425045594         11.4628625995        
+  E_gap(k)       0.0416051476         0.5660670737         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        11
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 1.01234e-07
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7358
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 0.000201786
+                          Diago Threshold = 1.01234e-07
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131163635     -134885.7078594806   
+  E_Harris       -9913.5074324318     -134880.1882464222   
+  E_Fermi        0.8391829998         11.4176704624        
+  E_gap(k)       0.0409634698         0.5573365987         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        12
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 2.36007e-08
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7341
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 6.40329e-05
+                          Diago Threshold = 2.36007e-08
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131247190     -134885.7079731630   
+  E_Harris       -9913.6643648298     -134882.3234212357   
+  E_Fermi        0.8387404533         11.4116493075        
+  E_gap(k)       0.0410430214         0.5584189548         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        13
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 7.48923e-09
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7294
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 8.74439e-06
+                          Diago Threshold = 7.48923e-09
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131358784     -134885.7081249947   
+  E_Harris       -9913.9372546422     -134886.0362776102   
+  E_Fermi        0.8388645814         11.4133381574        
+  E_gap(k)       0.0411678065         0.5601167419         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        14
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 1.02274e-09
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.73
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 5.13333e-06
+                          Diago Threshold = 1.02274e-09
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131374639     -134885.7081465661   
+  E_Harris       -9913.9803649412     -134886.6228233191   
+  E_Fermi        0.8389557714         11.4145788609        
+  E_gap(k)       0.0411709997         0.5601601889         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        15
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 6.00389e-10
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7307
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 1.58857e-06
+                          Diago Threshold = 6.00389e-10
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131381805     -134885.7081563168   
+  E_Harris       -9913.9457552596     -134886.1519344445   
+  E_Fermi        0.8389542273         11.4145578528        
+  E_gap(k)       0.0411679010         0.5601180279         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        16
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 1.85798e-10
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7311
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 5.26444e-07
+                          Diago Threshold = 1.85798e-10
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131385661     -134885.7081615621   
+  E_Harris       -9913.9273421870     -134885.9014117387   
+  E_Fermi        0.8389621112         11.4146651191        
+  E_gap(k)       0.0411711658         0.5601624480         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        17
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 6.15724e-11
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7314
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 2.57816e-07
+                          Diago Threshold = 6.15724e-11
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131386502     -134885.7081627063   
+  E_Harris       -9913.9047889863     -134885.5945597011   
+  E_Fermi        0.8389735983         11.4148214085        
+  E_gap(k)       0.0411713857         0.5601654405         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#        18
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Average iterative diagonalization steps for k-points is 2
+ current threshold of diagonalizaiton is 3.0154e-11
+          Total magnetism (Bohr mag/cell) = 45
+       Absolute magnetism (Bohr mag/cell) = 47.7315
+              Electron number for spin up = 450
+            Electron number for spin down = 405
+ Electron density deviation 9.75817e-08
+                          Diago Threshold = 3.0154e-11
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -9913.9131386431     -134885.7081626106   
+  E_KS(sigma->0) -9913.9131386431     -134885.7081626106   
+  E_Harris       -9913.9028693742     -134885.5684420392   
+  E_band         -817.9318408124      -11128.5336106771    
+  E_one_elec     -6121.7931649791     -83291.2690211700    
+  E_Hartree      3500.0598922590      47620.7578759880     
+  E_xc           -1766.5076141786     -24034.5691132148    
+  E_Ewald        -5525.6722517444     -75180.6279042139    
+  E_entropy(-TS) -0.0000000000        -0.0000000000        
+  E_descf        0.0000000000         0.0000000000         
+  E_localpp      -9643.4560803578     -131205.9511056125   
+  E_exx          0.0000000000         0.0000000000         
+  E_Fermi        0.8389803117         11.4149127493        
+  E_gap(k)       0.0411701762         0.5601489834         
+ ----------------------------------------------------------
+
+ #SCF IS CONVERGED#
+ #TOTAL ENERGY# -134885.70816 eV
+ Write eigenvalues and occupations to file: OUT.ABACUS/eig_occ.txt
+
+
+
+ #TOTAL-FORCE (eV/Angstrom)#
+ -------------------------------------------------------------------------
+     Atoms              Force_x              Force_y              Force_z 
+ -------------------------------------------------------------------------
+       Li1        -0.0594894658        -0.1030516251         0.0000047737 
+       Li2         0.0281474124         0.0484906089        -0.0001624255 
+       Li3         0.0312975661         0.0545915299        -0.0001249537 
+       Li4         0.0279117008         0.0486100826         0.0001787468 
+       Li5         0.0314795047         0.0545335176        -0.0000116795 
+       Li6        -0.0593255570        -0.1030474637        -0.0001450218 
+       Li7         0.0316262401         0.0544111060         0.0001361397 
+       Li8        -0.0595763776        -0.1028763873         0.0001442480 
+       Li9         0.0280771070         0.0485966983        -0.0000156628 
+      Li10         0.0316339481        -0.0544944569        -0.0001905648 
+      Li11        -0.0594103153         0.1030399890         0.0001620257 
+      Li12         0.0281354312        -0.0484448437         0.0001735901 
+      Li13        -0.0595688490         0.1030257855         0.0000521137 
+      Li14         0.0280824153        -0.0485037289         0.0000204690 
+      Li15         0.0315334162        -0.0546055090         0.0000522985 
+      Li16         0.0279774020        -0.0485537037        -0.0001465371 
+      Li17         0.0313696591        -0.0546029336         0.0001879000 
+      Li18        -0.0596251560         0.1028874880        -0.0001668182 
+      Li19        -0.0630057826         0.0001603968         0.0001888685 
+      Li20         0.1190201166        -0.0000683671        -0.0000493236 
+      Li21        -0.0560416408        -0.0000581467         0.0001471519 
+      Li22         0.1189342245         0.0000800348        -0.0001595291 
+      Li23        -0.0560460606         0.0000647920        -0.0000150289 
+      Li24        -0.0629763944        -0.0001463900        -0.0002194400 
+      Li25        -0.0560227040         0.0001442656        -0.0001787322 
+      Li26        -0.0630696782         0.0000182981        -0.0000175890 
+      Li27         0.1189224078        -0.0002087476         0.0001579536 
+       Ni1        -0.0213645699         0.0013198987        -0.0002586423 
+       Ni2        -0.0184474124        -0.0000830722        -0.0000935546 
+       Ni3        -0.0210168251        -0.0012228627         0.0000155724 
+       Ni4         0.0121213544         0.0175458148        -0.0001632033 
+       Ni5         0.0091437577         0.0160400136         0.0000231307 
+       Ni6         0.0092681116         0.0192738884         0.0001477221 
+       Ni7         0.0093064366        -0.0189984601        -0.0000347457 
+       Ni8         0.0091642305        -0.0158652124         0.0000932047 
+       Ni9         0.0119637460        -0.0178079557         0.0002741861 
+        O1        -1.1371745383         0.6978873410         0.6981030706 
+        O2         1.1503138702         0.6307199192         0.7394404640 
+        O3        -0.0420680957        -1.3458176925         0.7268862614 
+        O4         1.1499794157         0.6322691708         0.7385665697 
+        O5        -0.0405319990        -1.3466296208         0.7260904209 
+        O6        -1.1359352934         0.6985604151         0.6994324694 
+        O7        -0.0406400665        -1.3467776743         0.7262590358 
+        O8        -1.1376484240         0.6980689443         0.6985534524 
+        O9         1.1501875322         0.6319785351         0.7384270474 
+       O10        -0.0408809246         1.3465450589        -0.7258911063 
+       O11        -1.1359044732        -0.6986991323        -0.6991388127 
+       O12         1.1498882272        -0.6306383701        -0.7391161265 
+       O13        -1.1374305566        -0.6979047914        -0.6982043823 
+       O14         1.1501073913        -0.6318841350        -0.7382343690 
+       O15        -0.0403413127         1.3465340867        -0.7260293953 
+       O16         1.1504159011        -0.6323770754        -0.7383768838 
+       O17        -0.0420750314         1.3461716333        -0.7268749460 
+       O18        -1.1374586080        -0.6978626393        -0.6982065449 
+       O19        -1.1440144669         0.7086099808         0.7274826979 
+       O20         1.1722213707         0.6363365304         0.6988242415 
+       O21        -0.0270096310        -1.3115299525         0.7387233612 
+       O22         1.1722147611         0.6358853131         0.6984866549 
+       O23        -0.0272646957        -1.3110283279         0.7387052778 
+       O24        -1.1454788519         0.7075526128         0.7263356475 
+       O25        -0.0287054677        -1.3105751849         0.7397556849 
+       O26        -1.1454413499         0.7079136348         0.7264503547 
+       O27         1.1719866404         0.6341531663         0.6997169763 
+       O28         1.1856986295        -0.6364580632        -0.7275099813 
+       O29        -0.0353101291         1.3331679573        -0.6984926951 
+       O30        -1.1205978092        -0.6800983155        -0.7397697772 
+       O31        -0.0350969100         1.3332557102        -0.6988398071 
+       O32        -1.1218391872        -0.6790906289        -0.7386418119 
+       O33         1.1857930091        -0.6380879537        -0.7263618372 
+       O34        -1.1222769925        -0.6792668606        -0.7387738027 
+       O35         1.1854580474        -0.6381911683        -0.7264154783 
+       O36        -0.0368575805         1.3320507113        -0.6996761262 
+       O37         1.1865889876         0.6380276529         0.7259286622 
+       O38        -0.0356256353        -1.3340351474         0.6981883210 
+       O39        -1.1229732879         0.6799807471         0.7383918308 
+       O40        -0.0371179613        -1.3328929072         0.6991421674 
+       O41        -1.1222389576         0.6799276627         0.7381498373 
+       O42         1.1868071037         0.6366374738         0.7269610287 
+       O43        -1.1211049295         0.6805964534         0.7391873267 
+       O44         1.1862216086         0.6384075692         0.7259349091 
+       O45        -0.0354650968        -1.3340964765         0.6982159680 
+       O46         1.1729592689        -0.6360477293        -0.6981145406 
+       O47        -0.0273489073         1.3121523011        -0.7385678387 
+       O48        -1.1461392057        -0.7085647801        -0.7262097206 
+       O49        -0.0289432542         1.3115330437        -0.7395353087 
+       O50        -1.1459322141        -0.7082482284        -0.7260407654 
+       O51         1.1733412438        -0.6363540462        -0.6985862978 
+       O52        -1.1444828815        -0.7093420503        -0.7269954848 
+       O53         1.1728157790        -0.6343619590        -0.6994036123 
+       O54        -0.0276497271         1.3119612324        -0.7383441588 
+       Mn1         0.0479757130        -0.0011860617        -0.0003352674 
+       Mn2         0.0476286606         0.0008574622        -0.0000370174 
+       Mn3         0.0455114251         0.0002920512        -0.0002196320 
+       Mn4        -0.0226260640        -0.0391206658         0.0000023757 
+       Mn5        -0.0249478411        -0.0410645884        -0.0001114929 
+       Mn6        -0.0229795349        -0.0420191622         0.0001141919 
+       Mn7        -0.0250433785         0.0410372959         0.0003410178 
+       Mn8        -0.0223755513         0.0393110764         0.0001859974 
+       Mn9        -0.0231712720         0.0418426110         0.0000607964 
+       Co1         0.0246745743         0.0000980401        -0.0001449653 
+       Co2         0.0242962696         0.0002036348        -0.0001832832 
+       Co3         0.0250111988        -0.0004458282        -0.0001978684 
+       Co4        -0.0119693451        -0.0212812250        -0.0000183105 
+       Co5        -0.0125003536        -0.0210915569         0.0000339001 
+       Co6        -0.0124913554        -0.0216395692        -0.0000059328 
+       Co7        -0.0118802111         0.0211791813         0.0001901902 
+       Co8        -0.0123355091         0.0215909519         0.0001349649 
+       Co9        -0.0129011594         0.0212180641         0.0001955650 
+ -------------------------------------------------------------------------
+
+ #TOTAL-STRESS (kbar)#
+ ----------------------------------------------------------------
+              Stress_x             Stress_y             Stress_z 
+ ----------------------------------------------------------------
+         48.5896939417         0.0009656844         0.0003065866 
+          0.0009656844        48.5864367605         0.0001898091 
+          0.0003065866         0.0001898091        40.6635568913 
+ ----------------------------------------------------------------
+ #TOTAL-PRESSURE# (EXCLUDE KINETIC PART OF IONS): 45.946563 kbar
+
+ --------------------------------------------
+ !FINAL_ETOT_IS -134885.7081626106228214 eV
+ --------------------------------------------
+
+
+
+TIME STATISTICS
+-------------------------------------------------------------------
+   CLASS_NAME          NAME        TIME/s   CALLS    AVG/s  PER/%  
+-------------------------------------------------------------------
+                 total             7867.08 17       462.77  100.00 
+ Driver          atomic_world      7867.08 1        7867.08 100.00 
+ Relax_Driver    relax_driver      7861.88 1        7861.88 99.93  
+ ESolver_KS      runner            7828.90 1        7828.90 99.51  
+ Operator        hPsi              6221.91 38882    0.16    79.09  
+ Operator        veff_pw           2008.00 38882    0.05    25.52  
+ PW_Basis_K      recip2real        1230.43 74226    0.02    15.64  
+ PW_Basis_K      real2recip        789.27  56586    0.01    10.03  
+ Operator        nonlocal_pw       4209.65 38882    0.11    53.51  
+ Nonlocal        add_nonlocal_pp   2093.00 38882    0.05    26.60  
+ ESolver_KS_PW   hamilt2rho_single 7768.56 18       431.59  98.75  
+ HSolverPW       solve             7768.56 18       431.59  98.75  
+ HSolverPW       solve_psik        7424.81 36       206.24  94.38  
+ DiagoCG         diag_once         6751.98 36       187.56  85.83  
+ ElecStatePW     psiToRho          338.48  18       18.80   4.30   
+ DiagoIterAssist diag_subspace     664.50  34       19.54   8.45   
+-------------------------------------------------------------------
+
+
+ NAME-------------------------|MEMORY(MB)------------------
+                         total      4279.6625
+                      VNL::vkb      1555.4416
+                        Psi_PW      1085.7071
+                 DiagSub::temp       598.2468
+            Nonlocal<PW>::becp        92.5488
+              Nonlocal<PW>::ps        92.5488
+                      Chg::rho        64.0000
+                 Chg::rho_save        64.0000
+                     Pot::veff        64.0000
+              Pot::veff_smooth        64.0000
+              Veff<PW>::porter        64.0000
+             Veff<PW>::porter1        64.0000
+              Meta<PW>::porter        64.0000
+                 ElecSPW::wfcr        64.0000
+               ElecSPW::wfcr_a        64.0000
+                  SF::strucFac        44.3511
+                  DiagSub::hcc        35.5957
+                  DiagSub::scc        35.5957
+                  DiagSub::vcc        35.5957
+                 Chg::rho_core        32.0000
+                 Pot::veff_fix        32.0000
+                  SF::eigts123        13.5004
+                     VNL::vkb1         9.9708
+                     Chg::rhog         8.8702
+                Chg::rhog_save         8.8702
+                      VNL::ylm         4.9854
+             YlmReal::Ylm_Real         4.9854
+                Chg::rhog_core         4.4351
+                  PW_B_K::gcar         3.3236
+                      VNL::tab         1.9739
+                   VNL::tab_at         1.3159
+                   PW_B_K::gk2         1.1079
+ -------------   < 1.0 MB has been ignored ----------------
+ ----------------------------------------------------------
+
+ Start  Time  : Fri Mar 20 13:22:11 2026
+ Finish Time  : Fri Mar 20 15:33:18 2026
+ Total  Time  : 2 h 11 mins 7 secs 

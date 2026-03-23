@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: The lattice vector is left-handed; a right-handed vector is prefered.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                            startmag_type = 1
+                       charge from rho_at = 16
+                         charge should be = 16
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 283.5
+
+ SETUP ATOMIC RHO FOR SPIN 2
+                 Electron number from rho = 148.5
+           total electron number from rho = 432
+                                should be = 432
+                 charge before normalized = 431.999999999995
+                  charge after normalized = 432
+ scf  warning : Threshold on eigenvalues was too large.
+                            startmag_type = 1
+                       charge from rho_at = 15.9999979891803
+                         charge should be = 16
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 283.499999999998
+
+ SETUP ATOMIC RHO FOR SPIN 2
+                 Electron number from rho = 148.5
+           total electron number from rho = 431.999999999999
+                                should be = 432
