@@ -1,0 +1,26 @@
+ smearing_decision  warning : Fixed occupations,gauss broadening ignored
+ AUTO_SET gaussian_parameter to 0
+                            startmag_type = 2
+                       charge from rho_at = 0.999999
+                         charge should be = 1
+                            startmag_type = 2
+                       charge from rho_at = 6
+                         charge should be = 6
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 256
+           total electron number from rho = 256
+                                should be = 256
+                 charge before normalized = 256
+                  charge after normalized = 256
+                            startmag_type = 2
+                       charge from rho_at = 0.9999990394558
+                         charge should be = 1
+                            startmag_type = 2
+                       charge from rho_at = 5.99999615160952
+                         charge should be = 6
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 255.999999999998
+           total electron number from rho = 255.999999999998
+                                should be = 256

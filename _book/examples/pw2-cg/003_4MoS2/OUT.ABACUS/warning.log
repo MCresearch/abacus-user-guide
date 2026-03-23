@@ -1,0 +1,27 @@
+ K_Vectors::ibz_kpoint  warning : Automatically set symmetry to 0 and continue ...
+                            startmag_type = 2
+                       charge from rho_at = 14
+                         charge should be = 14
+                            startmag_type = 2
+                       charge from rho_at = 6
+                         charge should be = 6
+ Warning: negative or imaginary starting charge :  neg = -0.000193817 ima = 2.0883e-14 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 104
+           total electron number from rho = 104
+                                should be = 104
+                 charge before normalized = 104
+                  charge after normalized = 104
+                            startmag_type = 2
+                       charge from rho_at = 13.9999936476081
+                         charge should be = 14
+                            startmag_type = 2
+                       charge from rho_at = 5.99999610086859
+                         charge should be = 6
+ Warning: negative or imaginary starting charge :  neg = -0.000193816516790114 ima = 2.0882969466986e-14 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 104.000000000003
+           total electron number from rho = 104.000000000003
+                                should be = 104

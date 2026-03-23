@@ -1,0 +1,21 @@
+                            startmag_type = 2
+                       charge from rho_at = 18
+                         charge should be = 18
+ Warning: negative or imaginary starting charge :  neg = -0.000498758 ima = 1.55083e-07 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 216
+           total electron number from rho = 216
+                                should be = 216
+                 charge before normalized = 216
+                  charge after normalized = 216
+ scf  warning : Threshold on eigenvalues was too large.
+                            startmag_type = 2
+                       charge from rho_at = 17.9999988130888
+                         charge should be = 18
+ Warning: negative or imaginary starting charge :  neg = -0.000498758024129172 ima = 1.55083085327034e-07 SPIN = 0
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 215.999999999999
+           total electron number from rho = 215.999999999999
+                                should be = 216

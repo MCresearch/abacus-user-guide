@@ -1,0 +1,49 @@
+ K_Vectors::ibz_kpoint  warning : Automatically set symmetry to 0 and continue ...
+                            startmag_type = 2
+                       charge from rho_at = 2.99995
+                         charge should be = 3
+                            startmag_type = 1
+                       charge from rho_at = 18
+                         charge should be = 18
+                            startmag_type = 2
+                       charge from rho_at = 6
+                         charge should be = 6
+                            startmag_type = 1
+                       charge from rho_at = 15
+                         charge should be = 15
+                            startmag_type = 2
+                       charge from rho_at = 17
+                         charge should be = 17
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 450
+
+ SETUP ATOMIC RHO FOR SPIN 2
+                 Electron number from rho = 405
+           total electron number from rho = 855
+                                should be = 855
+                 charge before normalized = 855.000000000001
+                  charge after normalized = 855
+                            startmag_type = 2
+                       charge from rho_at = 2.99994703977593
+                         charge should be = 3
+                            startmag_type = 1
+                       charge from rho_at = 17.9999980590601
+                         charge should be = 18
+                            startmag_type = 2
+                       charge from rho_at = 5.99999615160952
+                         charge should be = 6
+                            startmag_type = 1
+                       charge from rho_at = 14.999998117064
+                         charge should be = 15
+                            startmag_type = 2
+                       charge from rho_at = 16.9999977632353
+                         charge should be = 17
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 449.999999999996
+
+ SETUP ATOMIC RHO FOR SPIN 2
+                 Electron number from rho = 405.000000000002
+           total electron number from rho = 854.999999999997
+                                should be = 855
