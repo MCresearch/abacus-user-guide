@@ -1,0 +1,34 @@
+INPUT_PARAMETERS
+#Parameters     (General)
+calculation     scf
+
+esolver_type    sdft
+pseudo_dir      .
+orbital_dir     .
+nbands          0
+nbands_sto      all
+nche_sto        10
+seed_sto        20000
+kpar            4
+
+symmetry        0
+cal_force       1
+cal_stress      1
+
+min_dist_coef   0
+#Parameters (Accuracy)
+ecutwfc         30
+scf_thr         1e-8
+scf_nmax        50
+
+#Parameters (3.Basis)
+basis_type      pw
+gamma_only      0
+
+#Parameters (4.Smearing)
+smearing_method fd
+smearing_sigma  51.44908446
+
+#Parameters (5.Mixing)
+mixing_type     broyden
+mixing_beta     0.7

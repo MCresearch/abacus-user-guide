@@ -100,6 +100,7 @@
         * [ABACUS 如何处理内存 bug？](develop-memory.md)
         * [文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例](develop-cifparser.md)
         * [C++ 程序设计的一些想法](develop-design.md)
+        * [依赖反转原则入门介绍](develop-dependency-reverse.md)
         * [以格点积分程序为例：一些代码开发习惯小贴士](develop-grid.md)
     * 模块介绍
         * [ESolver 模块介绍](develop-ESolver.md)

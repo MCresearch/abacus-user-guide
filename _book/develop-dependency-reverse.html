@@ -1,0 +1,2448 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>依赖反转原则入门介绍 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="develop-grid.html" />
+    
+    
+    <link rel="prev" href="develop-design.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="news.html">
+            
+                <a href="news.html">
+            
+                    
+                    ABACUS 新闻稿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="contribute.html">
+            
+                <a href="contribute.html">
+            
+                    
+                    如何贡献 ABACUS 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    用户
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    编译
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="abacus-gcc.html">
+            
+                <a href="abacus-gcc.html">
+            
+                    
+                    GCC 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="abacus-oneapi.html">
+            
+                <a href="abacus-oneapi.html">
+            
+                    
+                    Intel oneAPI 2024.x 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="abacus-intel.html">
+            
+                <a href="abacus-intel.html">
+            
+                    
+                    Intel oneAPI 编译 ABACUS 教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="abacus-gpu.html">
+            
+                <a href="abacus-gpu.html">
+            
+                    
+                    编译 Nvidia GPU 版本的 ABACUS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="abacus-gpu-lcao.html">
+            
+                <a href="abacus-gpu-lcao.html">
+            
+                    
+                    ABACUS LCAO 基组 GPU 版本使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="abacus-hpc.html">
+            
+                <a href="abacus-hpc.html">
+            
+                    
+                    在超算环境编译 ABACUS 的建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="abacus-dcu.html">
+            
+                <a href="abacus-dcu.html">
+            
+                    
+                    ABACUS 在曙光 DCU 集群上的编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="compile-useinfo.html">
+            
+                <a href="compile-useinfo.html">
+            
+                    
+                    ABACUS 的-i/-I/--info 功能使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="abacus-multigpu.html">
+            
+                <a href="abacus-multigpu.html">
+            
+                    
+                    ABACUS 的多 GPU 矩阵求解器功能编译与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    建模
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="abacus-eff1.html">
+            
+                <a href="abacus-eff1.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="abacus-eff2.html">
+            
+                <a href="abacus-eff2.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="abacus-eff3.html">
+            
+                <a href="abacus-eff3.html">
+            
+                    
+                    ABACUS 如何选择晶胞朝向获得最佳并行效率？以铜表面一氧化碳吸附为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="abacus-pseudopotential-resources.html">
+            
+                <a href="abacus-pseudopotential-resources.html">
+            
+                    
+                    ABACUS 赝势轨道简介和资源导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="abacus-upf.html">
+            
+                <a href="abacus-upf.html">
+            
+                    
+                    模守恒赝势生成方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="abacus-nac1.html">
+            
+                <a href="abacus-nac1.html">
+            
+                    
+                    数值原子轨道（一）：ABACUS 中的数值原子轨道命名和使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="abacus-nac2.html">
+            
+                <a href="abacus-nac2.html">
+            
+                    
+                    数值原子轨道（二）：生成给定模守恒赝势的数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="abacus-nac3.html">
+            
+                <a href="abacus-nac3.html">
+            
+                    
+                    数值原子轨道（三）：产生高精度数值原子轨道
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    Kohn-Sham密度泛函理论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="abacus-pw.html">
+            
+                <a href="abacus-pw.html">
+            
+                    
+                    ABACUS 的平面波计算与收敛性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="abacus-exx.html">
+            
+                <a href="abacus-exx.html">
+            
+                    
+                    ABACUS 平面波基组下的杂化泛函
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="abacus-libri.html">
+            
+                <a href="abacus-libri.html">
+            
+                    
+                    ABACUS+LibRI 做杂化泛函计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="abacus-conv.html">
+            
+                <a href="abacus-conv.html">
+            
+                    
+                    ABACUS 收敛性问题解决手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="abacus-question.html">
+            
+                <a href="abacus-question.html">
+            
+                    
+                    ABACUS 答疑手册 v0.2 版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    分子动力学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="abacus-md.html">
+            
+                <a href="abacus-md.html">
+            
+                    
+                    ABACUS 分子动力学使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="abacus-dpmd.html">
+            
+                <a href="abacus-dpmd.html">
+            
+                    
+                    ABACUS+DeePMD-kit 做机器学习分子动力学模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="abacus-dpa3-toturial.html">
+            
+                <a href="abacus-dpa3-toturial.html">
+            
+                    
+                    ABACUS+DPA-3：基于 Bohrium 平台的安装与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    AI辅助功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="abacus-dpgen.html">
+            
+                <a href="abacus-dpgen.html">
+            
+                    
+                    ABACUS+DPGEN 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="abacus-deepks-es.html">
+            
+                <a href="abacus-deepks-es.html">
+            
+                    
+                    DeePKS-ES 介绍及使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="abacus-deepks-toturial-rh111.html">
+            
+                <a href="abacus-deepks-toturial-rh111.html">
+            
+                    
+                    DeePKS 案例教程：Rh(111) 表面 CO 吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    特色功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="abacus-ksdft-pw-heat.html">
+            
+                <a href="abacus-ksdft-pw-heat.html">
+            
+                    
+                    ABACUS 平面波 KSDFT 电子电导热导计算教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="abacus-sdft.html">
+            
+                <a href="abacus-sdft.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="abacus-sdft_cond.html">
+            
+                <a href="abacus-sdft_cond.html">
+            
+                    
+                    ABACUS 随机波函数 DFT 计算电子电导热导教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="abacus-tddft.html">
+            
+                <a href="abacus-tddft.html">
+            
+                    
+                    ABACUS 实时演化含时密度泛函理论使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="abacus-ofdft.html">
+            
+                <a href="abacus-ofdft.html">
+            
+                    
+                    ABACUS 无轨道密度泛函理论方法使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="abacus-sol.html">
+            
+                <a href="abacus-sol.html">
+            
+                    
+                    ABACUS 隐式溶剂模型使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    后处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="abacus-dos.html">
+            
+                <a href="abacus-dos.html">
+            
+                    
+                    ABACUS+Atomkit 计算态密度和能带
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="abacus-pdos.html">
+            
+                <a href="abacus-pdos.html">
+            
+                    
+                    ABACUS 计算 PDOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="abacus-chg.html">
+            
+                <a href="abacus-chg.html">
+            
+                    
+                    ABACUS 输出部分的电荷密度和波函数及可视化教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="abacus-elf.html">
+            
+                <a href="abacus-elf.html">
+            
+                    
+                    ABACUS 计算电子局域函数 ELF 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="abacus-bader.html">
+            
+                <a href="abacus-bader.html">
+            
+                    
+                    ABACUS+Bader charge 分析教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="abacus-elastic.html">
+            
+                <a href="abacus-elastic.html">
+            
+                    
+                    ABACUS+pymatgen 计算弹性常数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="abacus-elastic2.html">
+            
+                <a href="abacus-elastic2.html">
+            
+                    
+                    采用 ABACUS 计算弹性常数教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.8" data-path="abacus-phonopy.html">
+            
+                <a href="abacus-phonopy.html">
+            
+                    
+                    ABACUS+Phonopy 计算声子谱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.9" data-path="abacus-shengbte.html">
+            
+                <a href="abacus-shengbte.html">
+            
+                    
+                    ABACUS+ShengBTE 计算晶格热导率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.10" data-path="abacus-wannier.html">
+            
+                <a href="abacus-wannier.html">
+            
+                    
+                    ABACUS+Wannier90 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.11" data-path="abacus-candela.html">
+            
+                <a href="abacus-candela.html">
+            
+                    
+                    ABACUS+Candela 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.12" data-path="abacus-uspex.html">
+            
+                <a href="abacus-uspex.html">
+            
+                    
+                    ABACUS+USPEX 接口教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.13" data-path="abacus-namd.html">
+            
+                <a href="abacus-namd.html">
+            
+                    
+                    ABACUS+Hefei NAMD 使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.14" data-path="abacus-phonopy-heat.html">
+            
+                <a href="abacus-phonopy-heat.html">
+            
+                    
+                    ABACUS+Phonopy 计算吉布斯自由能等热力学性质
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="abacus-surface1.html">
+            
+                <a href="abacus-surface1.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（一）：静电势和功函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="abacus-surface2.html">
+            
+                <a href="abacus-surface2.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（二）：偶极修正
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="abacus-surface3.html">
+            
+                <a href="abacus-surface3.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（三）：表面能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="abacus-surface4.html">
+            
+                <a href="abacus-surface4.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（四）：表面缺陷能和吸附能计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="abacus-surface5.html">
+            
+                <a href="abacus-surface5.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（五）：外加电场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="abacus-surface6.html">
+            
+                <a href="abacus-surface6.html">
+            
+                    
+                    采用 ABACUS 进行表面计算（六）：补偿电荷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="abacus-abacuslite.html">
+            
+                <a href="abacus-abacuslite.html">
+            
+                    
+                    abacuslite 使用教程：API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    测试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="abacus-precision.html">
+            
+                <a href="abacus-precision.html">
+            
+                    
+                    国际开放云平台 Materials Cloud 上线 ABACUS 软件精度验证结果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="test-10cases.html">
+            
+                <a href="test-10cases.html">
+            
+                    
+                    ABACUS 平面波基组下的 10 个典型算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="test-10cases2.html">
+            
+                <a href="test-10cases2.html">
+            
+                    
+                    ABACUS 平面波基组下的 10 个典型算例(V2026.1.27)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="test-ticni.html">
+            
+                <a href="test-ticni.html">
+            
+                    
+                    ABACUS 计算案例 : TiC-Ni 半导体-金属异质结体系的 SCF 和电荷密度差
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="test-sdft.html">
+            
+                <a href="test-sdft.html">
+            
+                    
+                    ABACUS 随机密度泛函理论典型算例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    基础规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="develop-issue.html">
+            
+                <a href="develop-issue.html">
+            
+                    
+                    ABACUS 的 Github 仓库 Issues 处理流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="develop-C++.html">
+            
+                <a href="develop-C++.html">
+            
+                    
+                    ABACUS 开源项目 C++ 代码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="develop-dox.html">
+            
+                <a href="develop-dox.html">
+            
+                    
+                    ABACUS 注释规范：Doxygen 入门 (c++)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="develop-input.html">
+            
+                <a href="develop-input.html">
+            
+                    
+                    ABACUS 线上文档输入参数撰写规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="develop-rule.html">
+            
+                <a href="develop-rule.html">
+            
+                    
+                    ABACUS 代码存放规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="develop-addinp.html">
+            
+                <a href="develop-addinp.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（截至 v3.5.3）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="develop-addinp2.html">
+            
+                <a href="develop-addinp2.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.7.0 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="develop-addinp3.html">
+            
+                <a href="develop-addinp3.html">
+            
+                    
+                    如何在 ABACUS 中新增一个输入参数（v3.9.24 后）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="develop-hetero.html">
+            
+                <a href="develop-hetero.html">
+            
+                    
+                    如何在 ABACUS 中进行异构计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="develop-formatter2.html">
+            
+                <a href="develop-formatter2.html">
+            
+                    
+                    ABACUS formatter-2.0 版本使用说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="develop-format.html">
+            
+                <a href="develop-format.html">
+            
+                    
+                    ABACUS 中使用格式化工具 clang-format
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    性能工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="develop-vtune.html">
+            
+                <a href="develop-vtune.html">
+            
+                    
+                    性能分析工具：vtune 快速上手教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="develop-linedete.html">
+            
+                <a href="develop-linedete.html">
+            
+                    
+                    ABACUS 全局数据结构和代码行数检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    编程进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="develop-test1.html">
+            
+                <a href="develop-test1.html">
+            
+                    
+                    ABACUS 中的测试（一）：测试的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="develop-test2.html">
+            
+                <a href="develop-test2.html">
+            
+                    
+                    ABACUS 中的测试（二）：测试工具 gtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="develop-test3.html">
+            
+                <a href="develop-test3.html">
+            
+                    
+                    ABACUS 中的测试（三）：测试方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="develop-tensor1.html">
+            
+                <a href="develop-tensor1.html">
+            
+                    
+                    Tensor 类文档 1：构造和使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="develop-tensor2.html">
+            
+                <a href="develop-tensor2.html">
+            
+                    
+                    Tensor 类文档 2：使用和拓展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="algorithm-delta.html">
+            
+                <a href="algorithm-delta.html">
+            
+                    
+                    在 ABACUS 中进行差分测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="develop-memory.html">
+            
+                <a href="develop-memory.html">
+            
+                    
+                    ABACUS 如何处理内存 bug？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="develop-cifparser.html">
+            
+                <a href="develop-cifparser.html">
+            
+                    
+                    文件输出功能的实现代码结构设计建议：以 ABCUS CifParser 为例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.9" data-path="develop-design.html">
+            
+                <a href="develop-design.html">
+            
+                    
+                    C++ 程序设计的一些想法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3.10" data-path="develop-dependency-reverse.html">
+            
+                <a href="develop-dependency-reverse.html">
+            
+                    
+                    依赖反转原则入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.11" data-path="develop-grid.html">
+            
+                <a href="develop-grid.html">
+            
+                    
+                    以格点积分程序为例：一些代码开发习惯小贴士
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    模块介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="develop-ESolver.html">
+            
+                <a href="develop-ESolver.html">
+            
+                    
+                    ESolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="develop-HSolver.html">
+            
+                <a href="develop-HSolver.html">
+            
+                    
+                    HSolver 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="develop-HContainer.html">
+            
+                <a href="develop-HContainer.html">
+            
+                    
+                    HContainer 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="develop-psi.html">
+            
+                <a href="develop-psi.html">
+            
+                    
+                    Psi 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="develop-gint.html">
+            
+                <a href="develop-gint.html">
+            
+                    
+                    格点积分模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="develop-fft.html">
+            
+                <a href="develop-fft.html">
+            
+                    
+                    FFT 模块介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    平面波代码介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="develop-path1.html">
+            
+                <a href="develop-path1.html">
+            
+                    
+                    Path to PW calculation Part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="develop-path2.html">
+            
+                <a href="develop-path2.html">
+            
+                    
+                    Path to PW calculation Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="develop-path3.html">
+            
+                <a href="develop-path3.html">
+            
+                    
+                    Path to PW calculation Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="develop-path4.html">
+            
+                <a href="develop-path4.html">
+            
+                    
+                    Path to PW calculation Part 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="develop-path5.html">
+            
+                <a href="develop-path5.html">
+            
+                    
+                    Path to PW calculation Part 5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="develop-sm1.html">
+            
+                <a href="develop-sm1.html">
+            
+                    
+                    Summary 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="develop-path6.html">
+            
+                <a href="develop-path6.html">
+            
+                    
+                    Path to PW calculation Part 6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.8" data-path="develop-path7.html">
+            
+                <a href="develop-path7.html">
+            
+                    
+                    Path to PW calculation Part 7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.9" data-path="develop-path8.html">
+            
+                <a href="develop-path8.html">
+            
+                    
+                    Path to PW calculation Part 8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.10" data-path="develop-path9.html">
+            
+                <a href="develop-path9.html">
+            
+                    
+                    Path to PW calculation Part 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.11" data-path="develop-path10.html">
+            
+                <a href="develop-path10.html">
+            
+                    
+                    Path to PW calculation Part 10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.12" data-path="develop-path11.html">
+            
+                <a href="develop-path11.html">
+            
+                    
+                    Path to PW calculation Part 11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.13" data-path="develop-sm2.html">
+            
+                <a href="develop-sm2.html">
+            
+                    
+                    Summary Final
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    Pyabacus 介绍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="develop-pyabacus1.html">
+            
+                <a href="develop-pyabacus1.html">
+            
+                    
+                    Pyabacus 文档一：用户手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="develop-pyabacus2.html">
+            
+                <a href="develop-pyabacus2.html">
+            
+                    
+                    Pyabacus 文档二：HSolver 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="develop-pyabacus3.html">
+            
+                <a href="develop-pyabacus3.html">
+            
+                    
+                    Pyabacus 文档三：开发者指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="algorithm-wannier.html">
+            
+                <a href="algorithm-wannier.html">
+            
+                    
+                    最大局域化 Wannier 函数方法简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="algorithm-mix.html">
+            
+                <a href="algorithm-mix.html">
+            
+                    
+                    电荷密度混合算法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >依赖反转原则入门介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x5165;&#x95E8;&#x4ECB;&#x7ECD;"><a name="&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x5165;&#x95E8;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x5165;&#x95E8;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x5165;&#x95E8;&#x4ECB;&#x7ECD;</h1>
+<p><strong>&#x4F5C;&#x8005;&#xFF1A;&#x9648;&#x9ED8;&#x6DB5;&#xFF0C;&#x90AE;&#x7BB1;&#xFF1A;mohanchen@pku.edu.cn</strong></p>
+<p><strong>&#x8F85;&#x52A9;&#xFF1A;Seed V2.0 Flash</strong></p>
+<p><strong>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;2026/04/09</strong></p>
+<h2 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;"><a name="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;</h2>
+<h3 id="&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;"><a name="&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6D3B;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;</h3>
+<p>&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x53BB;&#x9910;&#x5385;&#x5403;&#x996D;&#xFF1A;</p>
+<ul>
+<li><strong>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x4F60;&#x76F4;&#x63A5;&#x8DD1;&#x5230;&#x53A8;&#x623F;&#xFF0C;&#x627E;&#x5230;&#x53A8;&#x5E08;&#x8BF4;&#xFF1A;&quot;&#x6211;&#x8981;&#x4E00;&#x4EFD;&#x5BAB;&#x4FDD;&#x9E21;&#x4E01;&#xFF01;&quot;</li>
+<li><strong>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x4F60;&#x5750;&#x5728;&#x684C;&#x5B50;&#x4E0A;&#xFF0C;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5458;&#xFF1A;&quot;&#x6211;&#x8981;&#x4E00;&#x4EFD;&#x5BAB;&#x4FDD;&#x9E21;&#x4E01;&#xFF01;&quot;&#xFF0C;&#x7136;&#x540E;&#x670D;&#x52A1;&#x5458;&#x53BB;&#x53A8;&#x623F;&#x544A;&#x8BC9;&#x53A8;&#x5E08;&#x3002;</li>
+</ul>
+<p>&#x5728;&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;&#x4F60;&#xFF08;&#x987E;&#x5BA2;&#xFF09;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E;&#x53A8;&#x5E08;&#xFF08;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF09;&#x3002;&#x5982;&#x679C;&#x53A8;&#x5E08;&#x4E0D;&#x5728;&#xFF0C;&#x4F60;&#x5C31;&#x5403;&#x4E0D;&#x5230;&#x996D;&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x65B9;&#x5F0F;&#x4E2D;&#xFF0C;&#x4F60;&#xFF08;&#x987E;&#x5BA2;&#xFF09;&#x4F9D;&#x8D56;&#x4E8E;&#x670D;&#x52A1;&#x5458;&#xFF08;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E;&#x53A8;&#x5E08;&#xFF08;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF09;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x4E0D;&#x7BA1;&#x8C01;&#x5728;&#x53A8;&#x623F;&#x505A;&#x996D;&#xFF0C;&#x751A;&#x81F3;&#x670D;&#x52A1;&#x5458;&#x53EF;&#x4EE5;&#x53BB;&#x70B9;&#x5916;&#x5356;&#xFF0C;&#x4F60;&#x90FD;&#x80FD;&#x5403;&#x5230;&#x60F3;&#x8981;&#x7684;&#x83DC;&#x3002;</p>
+<h3 id="&#x6280;&#x672F;&#x5B9A;&#x4E49;"><a name="&#x6280;&#x672F;&#x5B9A;&#x4E49;" class="plugin-anchor" href="#&#x6280;&#x672F;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6280;&#x672F;&#x5B9A;&#x4E49;</h3>
+<p>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#xFF08;Dependency Inversion Principle&#xFF0C;DIP&#xFF09;&#x6709;&#x4E24;&#x4E2A;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#xFF1A;</p>
+<ol>
+<li><strong>&#x9AD8;&#x5C42;&#x6A21;&#x5757;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4F4E;&#x5C42;&#x6A21;&#x5757;&#xFF0C;&#x4E24;&#x8005;&#x90FD;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x62BD;&#x8C61;</strong></li>
+<li><strong>&#x62BD;&#x8C61;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x7EC6;&#x8282;&#xFF0C;&#x7EC6;&#x8282;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x62BD;&#x8C61;</strong></li>
+</ol>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x8BA9;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x4ECE;&quot;&#x5177;&#x4F53;&#x5B9E;&#x73B0; &#x2192; &#x5177;&#x4F53;&#x5B9E;&#x73B0;&quot;&#x8F6C;&#x5411;&quot;&#x62BD;&#x8C61; &#x2190; &#x5177;&#x4F53;&#x5B9E;&#x73B0;&quot;&#x3002;</p>
+<h2 id="&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;"><a name="&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1F;</h2>
+<h3 id="&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x7684;&#x95EE;&#x9898;"><a name="&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x7684;&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x7684;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x7684;&#x95EE;&#x9898;</h3>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x9700;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;&#x3002;&#x4F20;&#x7EDF;&#x7684;&#x505A;&#x6CD5;&#x53EF;&#x80FD;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<ul>
+<li>&#x4F60;&#x5199;&#x4E00;&#x4E2A; <code>DataProcessor</code> &#x7C7B;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;</li>
+<li>&#x8FD9;&#x4E2A;&#x7C7B;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>FileReader</code> &#x7C7B;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</li>
+<li>&#x5982;&#x679C;&#x4EE5;&#x540E;&#x9700;&#x8981;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4F60;&#x5C31;&#x9700;&#x8981;&#x4FEE;&#x6539; <code>DataProcessor</code> &#x7C7B;</li>
+</ul>
+<p>&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#x6709;&#x4EE5;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li><strong>&#x7D27;&#x8026;&#x5408;</strong>&#xFF1A;<code>DataProcessor</code> &#x548C; <code>FileReader</code> &#x7D27;&#x5BC6;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;</li>
+<li><strong>&#x96BE;&#x6269;&#x5C55;</strong>&#xFF1A;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6570;&#x636E;&#x6E90;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x73B0;&#x6709;&#x4EE3;&#x7801;</li>
+<li><strong>&#x96BE;&#x6D4B;&#x8BD5;</strong>&#xFF1A;&#x6D4B;&#x8BD5;&#x65F6;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x771F;&#x5B9E;&#x7684;&#x6587;&#x4EF6;</li>
+<li><strong>&#x96BE;&#x7EF4;&#x62A4;</strong>&#xFF1A;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x590D;&#x6742;&#xFF0C;&#x96BE;&#x4EE5;&#x7406;&#x89E3;</li>
+</ul>
+<h3 id="&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;"><a name="&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;" class="plugin-anchor" href="#&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;</h3>
+<p>&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x540E;&#xFF0C;&#x4EE3;&#x7801;&#x4F1A;&#x53D8;&#x6210;&#x8FD9;&#x6837;&#xFF1A;</p>
+<ol>
+<li>&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>DataReader</code> &#xFF08;&#x57FA;&#x7C7B;&#xFF09;&#x63A5;&#x53E3;&#xFF0C;&#x89C4;&#x5B9A;&#x4E86;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x4F46;&#x4E0D;&#x5B9E;&#x73B0;&#xFF0C;&#x53EA;&#x662F;&#x865A;&#x7684;&#xFF0C;&#x62BD;&#x8C61;&#x7684;&#xFF09;</li>
+<li>&#x901A;&#x8FC7;&#x7EE7;&#x627F; <code>DataReader</code> &#x7684;&#x529E;&#x6CD5;&#xFF0C;&#x5B9E;&#x73B0; <code>FileReader</code> &#x548C; <code>DatabaseReader</code> &#x7B49;&#x5177;&#x4F53;&#x7C7B;</li>
+<li><code>DataProcessor</code> &#x7C7B;&#x53EA;&#x4F9D;&#x8D56;&#x4E8E;&#x57FA;&#x7C7B; <code>DataReader</code> &#x63A5;&#x53E3;&#xFF0C;&#x4E0D;&#x5173;&#x5FC3;&#x5177;&#x4F53;&#x662F;&#x4ECE;&#x54EA;&#x91CC;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x7EE7;&#x627F;&#x7684;&#x5B9E;&#x73B0;</li>
+</ol>
+<p>&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#x6709;&#x4EE5;&#x4E0B;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li><strong>&#x677E;&#x8026;&#x5408;</strong>&#xFF1A;<code>DataProcessor</code>&#xFF08;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x4EE3;&#x7801;&#xFF09; &#x548C;&#x5177;&#x4F53;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF08;&#x7528;&#x7EE7;&#x627F;&#x865A;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5199;&#xFF09;&#x89E3;&#x8026;</li>
+<li><strong>&#x6613;&#x6269;&#x5C55;</strong>&#xFF1A;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6570;&#x636E;&#x6E90;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0; <code>DataReader</code> &#x63A5;&#x53E3;&#xFF08;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7EE7;&#x627F;&#x7684;&#x5B50;&#x7C7B;&#xFF09;</li>
+<li><strong>&#x6613;&#x6D4B;&#x8BD5;</strong>&#xFF1A;&#x6D4B;&#x8BD5;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x7684; <code>DataReader</code> &#x5B9E;&#x73B0;&#xFF08;&#x5B9E;&#x73B0;&#x4E2A;&#x5047;&#x7684;&#x7EE7;&#x627F;&#xFF09;</li>
+<li><strong>&#x6613;&#x7EF4;&#x62A4;</strong>&#xFF1A;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x6E05;&#x6670;&#xFF0C;&#x804C;&#x8D23;&#x660E;&#x786E;</li>
+</ul>
+<h2 id="&#x4E09;&#x3001;&#x66F4;&#x591A;&#x751F;&#x6D3B;&#x4F8B;&#x5B50;"><a name="&#x4E09;&#x3001;&#x66F4;&#x591A;&#x751F;&#x6D3B;&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x66F4;&#x591A;&#x751F;&#x6D3B;&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x66F4;&#x591A;&#x751F;&#x6D3B;&#x4F8B;&#x5B50;</h2>
+<h3 id="&#x4F8B;&#x5B50;-1&#xFF1A;&#x7535;&#x89C6;&#x9065;&#x63A7;&#x5668;"><a name="&#x4F8B;&#x5B50;-1&#xFF1A;&#x7535;&#x89C6;&#x9065;&#x63A7;&#x5668;" class="plugin-anchor" href="#&#x4F8B;&#x5B50;-1&#xFF1A;&#x7535;&#x89C6;&#x9065;&#x63A7;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x5B50; 1&#xFF1A;&#x7535;&#x89C6;&#x9065;&#x63A7;&#x5668;</h3>
+<ul>
+<li><strong>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6BCF;&#x4E2A;&#x7535;&#x89C6;&#x54C1;&#x724C;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x9065;&#x63A7;&#x5668;&#xFF0C;&#x53EA;&#x80FD;&#x63A7;&#x5236;&#x81EA;&#x5DF1;&#x54C1;&#x724C;&#x7684;&#x7535;&#x89C6;</li>
+<li><strong>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6240;&#x6709;&#x7535;&#x89C6;&#x90FD;&#x9075;&#x5FAA;&#x540C;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x6807;&#x51C6;&#xFF0C;&#x4E00;&#x4E2A;&#x9065;&#x63A7;&#x5668;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x4EFB;&#x4F55;&#x54C1;&#x724C;&#x7684;&#x7535;&#x89C6;</li>
+</ul>
+<h3 id="&#x4F8B;&#x5B50;-2&#xFF1A;&#x7535;&#x6E90;&#x63D2;&#x5EA7;"><a name="&#x4F8B;&#x5B50;-2&#xFF1A;&#x7535;&#x6E90;&#x63D2;&#x5EA7;" class="plugin-anchor" href="#&#x4F8B;&#x5B50;-2&#xFF1A;&#x7535;&#x6E90;&#x63D2;&#x5EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x5B50; 2&#xFF1A;&#x7535;&#x6E90;&#x63D2;&#x5EA7;</h3>
+<ul>
+<li><strong>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6BCF;&#x4E2A;&#x7535;&#x5668;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x72EC;&#x7279;&#x7684;&#x63D2;&#x5934;&#xFF0C;&#x9700;&#x8981;&#x4E13;&#x95E8;&#x7684;&#x63D2;&#x5EA7;</li>
+<li><strong>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6240;&#x6709;&#x7535;&#x5668;&#x90FD;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x63D2;&#x5934;&#xFF0C;&#x4EFB;&#x4F55;&#x63D2;&#x5EA7;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</li>
+</ul>
+<h3 id="&#x4F8B;&#x5B50;-3&#xFF1A;usb-&#x63A5;&#x53E3;"><a name="&#x4F8B;&#x5B50;-3&#xFF1A;usb-&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x4F8B;&#x5B50;-3&#xFF1A;usb-&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x5B50; 3&#xFF1A;USB &#x63A5;&#x53E3;</h3>
+<ul>
+<li><strong>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6BCF;&#x4E2A;&#x8BBE;&#x5907;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x4E13;&#x95E8;&#x7684;&#x6570;&#x636E;&#x7EBF;</li>
+<li><strong>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x65B9;&#x5F0F;</strong>&#xFF1A;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x90FD;&#x4F7F;&#x7528; USB &#x63A5;&#x53E3;&#xFF0C;&#x4E00;&#x6839;&#x6570;&#x636E;&#x7EBF;&#x53EF;&#x4EE5;&#x8FDE;&#x63A5;&#x591A;&#x79CD;&#x8BBE;&#x5907;</li>
+</ul>
+<h2 id="&#x56DB;&#x3001;&#x4EE5;-dsp-&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;"><a name="&#x56DB;&#x3001;&#x4EE5;-dsp-&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;" class="plugin-anchor" href="#&#x56DB;&#x3001;&#x4EE5;-dsp-&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x4EE5; DSP &#x4EE3;&#x7801;&#x4E3A;&#x4F8B;</h2>
+<h3 id="&#x95EE;&#x9898;&#x80CC;&#x666F;"><a name="&#x95EE;&#x9898;&#x80CC;&#x666F;" class="plugin-anchor" href="#&#x95EE;&#x9898;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#x80CC;&#x666F;</h3>
+<p>&#x5728; ABACUS &#x9879;&#x76EE;&#x4E2D;&#xFF0C;<code>module_device</code> &#x6A21;&#x5757;&#x4E2D;&#x7684; DSP &#x76F8;&#x5173;&#x4EE3;&#x7801;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E; <code>source_io</code> &#x6A21;&#x5757;&#x4E2D;&#x7684; <code>PARAM</code> &#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// &#x539F;&#x59CB;&#x4EE3;&#x7801;</span>
+arr <span class="token operator">=</span> <span class="token punctuation">(</span>FPTYPE<span class="token operator">*</span><span class="token punctuation">)</span>mtfunc<span class="token double-colon punctuation">::</span><span class="token function">malloc_ht</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>FPTYPE<span class="token punctuation">)</span> <span class="token operator">*</span> size<span class="token punctuation">,</span> GlobalV<span class="token double-colon punctuation">::</span>MY_RANK <span class="token operator">%</span> PARAM<span class="token punctuation">.</span>inp<span class="token punctuation">.</span>dsp_count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF1A;</p>
+<ul>
+<li><code>memory_op_dsp.cpp</code> &#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E; <code>parameter.h</code> &#x4E2D;&#x7684; <code>PARAM</code> &#x53D8;&#x91CF;</li>
+<li>&#x5982;&#x679C; <code>PARAM</code> &#x7684;&#x7ED3;&#x6784;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x80FD;&#x51FA;&#x9519;</li>
+<li>&#x6D4B;&#x8BD5;&#x65F6;&#x5F88;&#x96BE;&#x6A21;&#x62DF;&#x4E0D;&#x540C;&#x7684; <code>dsp_count</code> &#x503C;</li>
+<li><code>module_device</code> &#x6A21;&#x5757;&#x65E0;&#x6CD5;&#x72EC;&#x7ACB;&#x4E8E; <code>source_io</code> &#x6A21;&#x5757;&#x7F16;&#x8BD1;&#x548C;&#x6D4B;&#x8BD5;</li>
+</ul>
+<h3 id="&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;"><a name="&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;" class="plugin-anchor" href="#&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;</h3>
+<h4 id="&#x6B65;&#x9AA4;-1&#xFF1A;&#x521B;&#x5EFA;&#x62BD;&#x8C61;&#x63A5;&#x53E3;"><a name="&#x6B65;&#x9AA4;-1&#xFF1A;&#x521B;&#x5EFA;&#x62BD;&#x8C61;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;-1&#xFF1A;&#x521B;&#x5EFA;&#x62BD;&#x8C61;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4; 1&#xFF1A;&#x521B;&#x5EFA;&#x62BD;&#x8C61;&#x63A5;&#x53E3;</h4>
+<p>&#x5C31;&#x50CF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5458;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x5B9A;&#x4E49;&#x597D;&#x670D;&#x52A1;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// dsp_selector.h</span>
+<span class="token keyword">class</span> <span class="token class-name">DspSelector</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">virtual</span> <span class="token operator">~</span><span class="token function">DspSelector</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">default</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x83B7;&#x53D6;DSP rank&#x7684;&#x65B9;&#x6CD5;</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">int</span> <span class="token function">get_rank</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x8BBE;&#x7F6E;DSP rank&#x7684;&#x65B9;&#x6CD5;</span>
+    <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">set_rank</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x5C31;&#x50CF;&#x670D;&#x52A1;&#x5458;&#x7684;&#x5DE5;&#x4F5C;&#x624B;&#x518C;&#xFF0C;&#x89C4;&#x5B9A;&#x4E86;&#x670D;&#x52A1;&#x5458;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x54EA;&#x4E9B;&#x670D;&#x52A1;&#x3002;</p>
+<h4 id="&#x6B65;&#x9AA4;-2&#xFF1A;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x7C7B;"><a name="&#x6B65;&#x9AA4;-2&#xFF1A;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x7C7B;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;-2&#xFF1A;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4; 2&#xFF1A;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x7C7B;</h4>
+<p>&#x5C31;&#x50CF;&#x96C7;&#x4F63;&#x5177;&#x4F53;&#x7684;&#x670D;&#x52A1;&#x5458;&#xFF0C;&#x6309;&#x7167;&#x5DE5;&#x4F5C;&#x624B;&#x518C;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// dsp_selector.cpp</span>
+<span class="token keyword">class</span> <span class="token class-name">DefaultDspSelector</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">DspSelector</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> rank_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// &#x5B58;&#x50A8;DSP rank</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// &#x83B7;&#x53D6;rank</span>
+    <span class="token keyword">int</span> <span class="token function">get_rank</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> rank_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x8BBE;&#x7F6E;rank&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+    <span class="token keyword">void</span> <span class="token function">set_rank</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>rank <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> std<span class="token double-colon punctuation">::</span><span class="token function">runtime_error</span><span class="token punctuation">(</span><span class="token string">&quot;DSP rank&#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x7684;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        rank_ <span class="token operator">=</span> rank<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5177;&#x4F53;&#x7C7B;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;&#x670D;&#x52A1;&#x5458;&#xFF0C;&#x6309;&#x7167;&#x5DE5;&#x4F5C;&#x624B;&#x518C;&#x7684;&#x8981;&#x6C42;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;</p>
+<h4 id="&#x6B65;&#x9AA4;-3&#xFF1A;&#x521B;&#x5EFA;&#x5DE5;&#x5382;&#x51FD;&#x6570;"><a name="&#x6B65;&#x9AA4;-3&#xFF1A;&#x521B;&#x5EFA;&#x5DE5;&#x5382;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;-3&#xFF1A;&#x521B;&#x5EFA;&#x5DE5;&#x5382;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4; 3&#xFF1A;&#x521B;&#x5EFA;&#x5DE5;&#x5382;&#x51FD;&#x6570;</h4>
+<p>&#x5C31;&#x50CF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5458;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;&#xFF0C;&#x8D1F;&#x8D23;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x5458;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// dsp_selector.cpp</span>
+<span class="token keyword">void</span> <span class="token function">create_default_selector</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x5458;</span>
+    dsp_selector <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token generic-function"><span class="token function">unique_ptr</span><span class="token generic class-name"><span class="token operator">&lt;</span>DefaultDspSelector<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">DefaultDspSelector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5458;&#x8981;&#x505A;&#x4EC0;&#x4E48;</span>
+    dsp_selector<span class="token operator">-&gt;</span><span class="token function">set_rank</span><span class="token punctuation">(</span>rank<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x5C31;&#x50CF;&#x670D;&#x52A1;&#x5458;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;&#xFF0C;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x5458;&#x3002;</p>
+<h4 id="&#x6B65;&#x9AA4;-4&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9009;&#x62E9;&#x5668;"><a name="&#x6B65;&#x9AA4;-4&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9009;&#x62E9;&#x5668;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;-4&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9009;&#x62E9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4; 4&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x9009;&#x62E9;&#x5668;</h4>
+<p>&#x5C31;&#x50CF;&#x987E;&#x5BA2;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5458;&#x8981;&#x70B9;&#x4EC0;&#x4E48;&#x83DC;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// dsp_config.cpp</span>
+<span class="token keyword">void</span> <span class="token function">init_dsp_selector</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> my_rank<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">int</span> dsp_count<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x9A8C;&#x8BC1;&#x53C2;&#x6570;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>my_rank <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> std<span class="token double-colon punctuation">::</span><span class="token function">runtime_error</span><span class="token punctuation">(</span><span class="token string">&quot;my_rank&#x5FC5;&#x987B;&#x662F;&#x975E;&#x8D1F;&#x7684;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dsp_count <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> std<span class="token double-colon punctuation">::</span><span class="token function">runtime_error</span><span class="token punctuation">(</span><span class="token string">&quot;dsp_count&#x5FC5;&#x987B;&#x662F;&#x6B63;&#x6570;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// &#x8BA1;&#x7B97;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;DSP</span>
+    <span class="token keyword">const</span> <span class="token keyword">int</span> rank <span class="token operator">=</span> my_rank <span class="token operator">%</span> dsp_count<span class="token punctuation">;</span>
+    <span class="token comment">// &#x544A;&#x8BC9;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;&#x6D3E;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5458;&#x6765;&#x5904;&#x7406;</span>
+    base_device<span class="token double-colon punctuation">::</span>memory<span class="token double-colon punctuation">::</span><span class="token function">create_default_selector</span><span class="token punctuation">(</span>rank<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x50CF;&#x987E;&#x5BA2;&#x70B9;&#x5355;&#xFF0C;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5458;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;&#x9700;&#x8981;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<h4 id="&#x6B65;&#x9AA4;-5&#xFF1A;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x4EE3;&#x7801;"><a name="&#x6B65;&#x9AA4;-5&#xFF1A;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x4EE3;&#x7801;" class="plugin-anchor" href="#&#x6B65;&#x9AA4;-5&#xFF1A;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B65;&#x9AA4; 5&#xFF1A;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x4EE3;&#x7801;</h4>
+<p>&#x5C31;&#x50CF;&#x987E;&#x5BA2;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x5458;&#x70B9;&#x83DC;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x627E;&#x53A8;&#x5E08;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// memory_op_dsp.cpp</span>
+<span class="token keyword">void</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>FPTYPE<span class="token operator">*</span><span class="token operator">&amp;</span> arr<span class="token punctuation">,</span> <span class="token keyword">const</span> size_t size<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> record_in<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>arr <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mtfunc<span class="token double-colon punctuation">::</span><span class="token function">free_ht</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x901A;&#x8FC7;&#x670D;&#x52A1;&#x5458;&#x83B7;&#x53D6;DSP rank</span>
+    <span class="token keyword">int</span> rank <span class="token operator">=</span> <span class="token function">get_dsp_selector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">get_rank</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    arr <span class="token operator">=</span> <span class="token punctuation">(</span>FPTYPE<span class="token operator">*</span><span class="token punctuation">)</span>mtfunc<span class="token double-colon punctuation">::</span><span class="token function">malloc_ht</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>FPTYPE<span class="token punctuation">)</span> <span class="token operator">*</span> size<span class="token punctuation">,</span> rank<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// &#x5176;&#x4F59;&#x4EE3;&#x7801;&#x4E0D;&#x53D8;</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;<code>memory_op_dsp.cpp</code> &#x4E0D;&#x518D;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E; <code>parameter.h</code>&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7; <code>DspSelector</code> &#x63A5;&#x53E3;&#x83B7;&#x53D6; DSP rank&#x3002;</p>
+<h2 id="&#x4E94;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;"><a name="&#x4E94;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;" class="plugin-anchor" href="#&#x4E94;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x597D;&#x5904;</h2>
+<h3 id="1-&#x7075;&#x6D3B;&#x6027;"><a name="1-&#x7075;&#x6D3B;&#x6027;" class="plugin-anchor" href="#1-&#x7075;&#x6D3B;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7075;&#x6D3B;&#x6027;</h3>
+<p>&#x5982;&#x679C;&#x4EE5;&#x540E;&#x9700;&#x8981;&#x6539;&#x53D8; DSP rank &#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539; <code>DefaultDspSelector</code> &#x7C7B;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x7B56;&#x7565;&#x9009;&#x62E9; DSP&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>DspSelector</code> &#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">RoundRobinDspSelector</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">DspSelector</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> current_rank_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> max_rank_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">RoundRobinDspSelector</span><span class="token punctuation">(</span><span class="token keyword">int</span> max_rank<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">max_rank_</span><span class="token punctuation">(</span>max_rank<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">get_rank</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> current_rank_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">set_rank</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        current_rank_ <span class="token operator">=</span> rank <span class="token operator">%</span> max_rank_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="2-&#x53EF;&#x6D4B;&#x8BD5;&#x6027;"><a name="2-&#x53EF;&#x6D4B;&#x8BD5;&#x6027;" class="plugin-anchor" href="#2-&#x53EF;&#x6D4B;&#x8BD5;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x53EF;&#x6D4B;&#x8BD5;&#x6027;</h3>
+<p>&#x6D4B;&#x8BD5;&#x65F6;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684; <code>DspSelector</code> &#x5B9E;&#x73B0;&#xFF0C;&#x8FD4;&#x56DE;&#x56FA;&#x5B9A;&#x7684; rank &#x503C;&#xFF0C;&#x65B9;&#x4FBF;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">TestDspSelector</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword">public</span> <span class="token class-name">DspSelector</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> test_rank_ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">TestDspSelector</span><span class="token punctuation">(</span><span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">test_rank_</span><span class="token punctuation">(</span>rank<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">get_rank</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> test_rank_<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">set_rank</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> rank<span class="token punctuation">)</span> <span class="token keyword">override</span> <span class="token punctuation">{</span>
+        test_rank_ <span class="token operator">=</span> rank<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-&#x89E3;&#x8026;"><a name="3-&#x89E3;&#x8026;" class="plugin-anchor" href="#3-&#x89E3;&#x8026;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x89E3;&#x8026;</h3>
+<p><code>memory_op_dsp.cpp</code> &#x4E0D;&#x518D;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E; <code>parameter.h</code>&#xFF0C;&#x5B83;&#x4EEC;&#x901A;&#x8FC7; <code>DspSelector</code> &#x63A5;&#x53E3;&#x95F4;&#x63A5;&#x8054;&#x7CFB;&#x3002;&#x8FD9;&#x6837;&#xFF0C;<code>module_device</code> &#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x4E8E; <code>source_io</code> &#x6A21;&#x5757;&#x7F16;&#x8BD1;&#x548C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<h3 id="4-&#x53EF;&#x7EF4;&#x62A4;&#x6027;"><a name="4-&#x53EF;&#x7EF4;&#x62A4;&#x6027;" class="plugin-anchor" href="#4-&#x53EF;&#x7EF4;&#x62A4;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x53EF;&#x7EF4;&#x62A4;&#x6027;</h3>
+<p>&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x66F4;&#x6E05;&#x6670;&#xFF0C;&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x804C;&#x8D23;&#x66F4;&#x660E;&#x786E;&#xFF1A;</p>
+<ul>
+<li><code>DspSelector</code> &#x63A5;&#x53E3;&#xFF1A;&#x5B9A;&#x4E49;&#x4E86;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E; DSP rank &#x7684;&#x65B9;&#x6CD5;</li>
+<li><code>DefaultDspSelector</code> &#x7C7B;&#xFF1A;&#x5B9E;&#x73B0;&#x4E86;&#x5177;&#x4F53;&#x7684; DSP &#x9009;&#x62E9;&#x903B;&#x8F91;</li>
+<li><code>create_default_selector</code> &#x51FD;&#x6570;&#xFF1A;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x548C;&#x521D;&#x59CB;&#x5316;&#x9009;&#x62E9;&#x5668;</li>
+<li><code>init_dsp_selector</code> &#x51FD;&#x6570;&#xFF1A;&#x8D1F;&#x8D23;&#x8BA1;&#x7B97;&#x548C;&#x8BBE;&#x7F6E; DSP rank</li>
+<li><code>memory_op_dsp.cpp</code>&#xFF1A;&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x5668;&#x83B7;&#x53D6; DSP rank</li>
+</ul>
+<h3 id="5-&#x53EF;&#x6269;&#x5C55;&#x6027;"><a name="5-&#x53EF;&#x6269;&#x5C55;&#x6027;" class="plugin-anchor" href="#5-&#x53EF;&#x6269;&#x5C55;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x53EF;&#x6269;&#x5C55;&#x6027;</h3>
+<p>&#x6DFB;&#x52A0;&#x65B0;&#x7684; DSP &#x9009;&#x62E9;&#x7B56;&#x7565;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x5BB9;&#x6613;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0; <code>DspSelector</code> &#x63A5;&#x53E3;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="&#x516D;&#x3001;&#x4EE3;&#x7801;&#x7ED3;&#x6784;"><a name="&#x516D;&#x3001;&#x4EE3;&#x7801;&#x7ED3;&#x6784;" class="plugin-anchor" href="#&#x516D;&#x3001;&#x4EE3;&#x7801;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;&#x4EE3;&#x7801;&#x7ED3;&#x6784;</h2>
+<p>&#x4FEE;&#x6539;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x5C31;&#x50CF;&#x4E00;&#x4E2A;&#x9910;&#x5385;&#x7684;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre class="language-"><code>source/
+&#x251C;&#x2500;&#x2500; source_base/
+&#x2502;   &#x2514;&#x2500;&#x2500; module_device/          # &#x53A8;&#x623F;
+&#x2502;       &#x251C;&#x2500;&#x2500; dsp_selector.h      # &#x670D;&#x52A1;&#x5458;&#x63A5;&#x53E3;&#xFF08;&#x5DE5;&#x4F5C;&#x624B;&#x518C;&#xFF09;
+&#x2502;       &#x251C;&#x2500;&#x2500; dsp_selector.cpp    # &#x5177;&#x4F53;&#x7684;&#x670D;&#x52A1;&#x5458;&#x548C;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;
+&#x2502;       &#x2514;&#x2500;&#x2500; memory_op_dsp.cpp   # &#x987E;&#x5BA2;&#xFF08;&#x4F7F;&#x7528;&#x670D;&#x52A1;&#x7684;&#x4EBA;&#xFF09;
+&#x2514;&#x2500;&#x2500; source_io/
+    &#x2514;&#x2500;&#x2500; module_parameter/        # &#x524D;&#x53F0;
+        &#x251C;&#x2500;&#x2500; dsp_config.cpp      # &#x670D;&#x52A1;&#x5458;&#x6D3E;&#x9063;&#x4E2D;&#x5FC3;&#x7684;&#x5177;&#x4F53;&#x64CD;&#x4F5C;
+        &#x2514;&#x2500;&#x2500; input_conv.cpp      # &#x987E;&#x5BA2;&#x70B9;&#x5355;&#x7684;&#x5730;&#x65B9;
+</code></pre><h2 id="&#x4E03;&#x3001;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x60C5;&#x51B5;"><a name="&#x4E03;&#x3001;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x60C5;&#x51B5;" class="plugin-anchor" href="#&#x4E03;&#x3001;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x60C5;&#x51B5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;&#x5982;&#x4F55;&#x8BC6;&#x522B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x60C5;&#x51B5;</h2>
+<p>&#x5F53;&#x4F60;&#x53D1;&#x73B0;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF1A;</p>
+<ol>
+<li><strong>&#x7D27;&#x8026;&#x5408;</strong>&#xFF1A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;</li>
+<li><strong>&#x96BE;&#x6D4B;&#x8BD5;</strong>&#xFF1A;&#x6D4B;&#x8BD5;&#x65F6;&#x9700;&#x8981;&#x6A21;&#x62DF;&#x591A;&#x4E2A;&#x4F9D;&#x8D56;</li>
+<li><strong>&#x96BE;&#x6269;&#x5C55;</strong>&#xFF1A;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x591A;&#x4E2A;&#x6A21;&#x5757;</li>
+<li><strong>&#x96BE;&#x7EF4;&#x62A4;</strong>&#xFF1A;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x590D;&#x6742;&#xFF0C;&#x804C;&#x8D23;&#x4E0D;&#x660E;&#x786E;</li>
+<li><strong>&#x91CD;&#x590D;&#x4EE3;&#x7801;</strong>&#xFF1A;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x4E2D;&#x6709;&#x76F8;&#x4F3C;&#x7684;&#x4EE3;&#x7801;</li>
+</ol>
+<h2 id="&#x516B;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x5E38;&#x89C1;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"><a name="&#x516B;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x5E38;&#x89C1;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x516B;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x5E38;&#x89C1;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516B;&#x3001;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x7684;&#x5E38;&#x89C1;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</h2>
+<h3 id="1-&#x63A5;&#x53E3;&#x7EE7;&#x627F;"><a name="1-&#x63A5;&#x53E3;&#x7EE7;&#x627F;" class="plugin-anchor" href="#1-&#x63A5;&#x53E3;&#x7EE7;&#x627F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x63A5;&#x53E3;&#x7EE7;&#x627F;</h3>
+<p>&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x5728; DSP &#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x7C7B;&#x3002;</p>
+<h3 id="2-&#x4F9D;&#x8D56;&#x6CE8;&#x5165;"><a name="2-&#x4F9D;&#x8D56;&#x6CE8;&#x5165;" class="plugin-anchor" href="#2-&#x4F9D;&#x8D56;&#x6CE8;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4F9D;&#x8D56;&#x6CE8;&#x5165;</h3>
+<p>&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6216; setter &#x65B9;&#x6CD5;&#x5C06;&#x4F9D;&#x8D56;&#x4F20;&#x9012;&#x7ED9;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">DataProcessor</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    DataReader<span class="token operator">*</span> reader<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token comment">// &#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6CE8;&#x5165;&#x4F9D;&#x8D56;</span>
+    <span class="token function">DataProcessor</span><span class="token punctuation">(</span>DataReader<span class="token operator">*</span> r<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">reader</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">process</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x4F7F;&#x7528; reader &#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="3-&#x5DE5;&#x5382;&#x6A21;&#x5F0F;"><a name="3-&#x5DE5;&#x5382;&#x6A21;&#x5F0F;" class="plugin-anchor" href="#3-&#x5DE5;&#x5382;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5DE5;&#x5382;&#x6A21;&#x5F0F;</h3>
+<p>&#x901A;&#x8FC7;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x9690;&#x85CF;&#x521B;&#x5EFA;&#x7EC6;&#x8282;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">DataReaderFactory</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">static</span> DataReader<span class="token operator">*</span> <span class="token function">createReader</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">==</span> <span class="token string">&quot;file&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token function">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">==</span> <span class="token string">&quot;database&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token function">DatabaseReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="4-&#x670D;&#x52A1;&#x5B9A;&#x4F4D;&#x5668;"><a name="4-&#x670D;&#x52A1;&#x5B9A;&#x4F4D;&#x5668;" class="plugin-anchor" href="#4-&#x670D;&#x52A1;&#x5B9A;&#x4F4D;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x670D;&#x52A1;&#x5B9A;&#x4F4D;&#x5668;</h3>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4E2D;&#x592E;&#x6CE8;&#x518C;&#x8868;&#x6765;&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">class</span> <span class="token class-name">ServiceLocator</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">static</span> std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>string<span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token operator">*</span><span class="token operator">&gt;</span> services<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">registerService</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> name<span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token operator">*</span> service<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        services<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> service<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token keyword">void</span><span class="token operator">*</span> <span class="token function">getService</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>string<span class="token operator">&amp;</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> services<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x4E5D;&#x3001;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5E94;&#x7528;"><a name="&#x4E5D;&#x3001;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5E94;&#x7528;" class="plugin-anchor" href="#&#x4E5D;&#x3001;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E5D;&#x3001;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5E94;&#x7528;</h2>
+<p>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x6709;&#x5E7F;&#x6CDB;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<h3 id="1-&#x6846;&#x67B6;&#x8BBE;&#x8BA1;"><a name="1-&#x6846;&#x67B6;&#x8BBE;&#x8BA1;" class="plugin-anchor" href="#1-&#x6846;&#x67B6;&#x8BBE;&#x8BA1;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6846;&#x67B6;&#x8BBE;&#x8BA1;</h3>
+<p>&#x8BB8;&#x591A;&#x6D41;&#x884C;&#x7684;&#x6846;&#x67B6;&#x90FD;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li>Spring &#x6846;&#x67B6;&#xFF08;Java&#xFF09;&#xFF1A;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6765;&#x7BA1;&#x7406;&#x5BF9;&#x8C61;</li>
+<li>Angular &#x6846;&#x67B6;&#xFF08;JavaScript&#xFF09;&#xFF1A;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x6765;&#x7BA1;&#x7406;&#x670D;&#x52A1;</li>
+<li>PyTorch&#xFF08;Python&#xFF09;&#xFF1A;&#x4F7F;&#x7528;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#x6765;&#x652F;&#x6301;&#x4E0D;&#x540C;&#x7684;&#x8BBE;&#x5907;</li>
+</ul>
+<h3 id="2-&#x6D4B;&#x8BD5;"><a name="2-&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#2-&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x6D4B;&#x8BD5;</h3>
+<p>&#x5728;&#x6D4B;&#x8BD5;&#x4E2D;&#xFF0C;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#xFF1A;</p>
+<ul>
+<li>&#x6A21;&#x62DF;&#x5916;&#x90E8;&#x4F9D;&#x8D56;&#xFF0C;&#x5982;&#x6570;&#x636E;&#x5E93;&#x3001;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x7B49;</li>
+<li>&#x6D4B;&#x8BD5;&#x4E0D;&#x540C;&#x7684;&#x573A;&#x666F;&#x548C;&#x8FB9;&#x754C;&#x60C5;&#x51B5;</li>
+<li>&#x63D0;&#x9AD8;&#x6D4B;&#x8BD5;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x53EF;&#x9760;&#x6027;</li>
+</ul>
+<h3 id="3-&#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;"><a name="3-&#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#3-&#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<p>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x63D2;&#x4EF6;&#x7CFB;&#x7EDF;</p>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x63D2;&#x4EF6;&#x63A5;&#x53E3;</li>
+<li>&#x63D2;&#x4EF6;&#x5B9E;&#x73B0;&#x63A5;&#x53E3;</li>
+<li>&#x4E3B;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;</li>
+</ul>
+<h3 id="4-&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;"><a name="4-&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;" class="plugin-anchor" href="#4-&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;</h3>
+<p>&#x5728;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x4E2D;&#xFF0C;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;</p>
+<ul>
+<li>&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x901A;&#x4FE1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x4F9D;&#x8D56;</li>
+<li>&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x90E8;&#x7F72;&#x548C;&#x5347;&#x7EA7;</li>
+<li>&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x6280;&#x672F;&#x6808;</li>
+</ul>
+<h2 id="&#x5341;&#x3001;&#x603B;&#x7ED3;"><a name="&#x5341;&#x3001;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x5341;&#x3001;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5341;&#x3001;&#x603B;&#x7ED3;</h2>
+<p>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x5C31;&#x50CF;&#x9910;&#x5385;&#x7684;&#x670D;&#x52A1;&#x6D41;&#x7A0B;&#xFF1A;&#x987E;&#x5BA2;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x5458;&#x70B9;&#x83DC;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x627E;&#x53A8;&#x5E08;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x4E0D;&#x7BA1;&#x53A8;&#x623F;&#x600E;&#x4E48;&#x53D8;&#x5316;&#xFF0C;&#x987E;&#x5BA2;&#x90FD;&#x80FD;&#x4EAB;&#x53D7;&#x5230;&#x4E00;&#x81F4;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x62BD;&#x8C61;&#x63A5;&#x53E3;&#xFF0C;&#x8BA9;&#x9AD8;&#x5C42;&#x6A21;&#x5757;&#xFF08;&#x987E;&#x5BA2;&#xFF09;&#x4F9D;&#x8D56;&#x4E8E;&#x62BD;&#x8C61;&#xFF08;&#x670D;&#x52A1;&#x5458;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF08;&#x53A8;&#x5E08;&#xFF09;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x3001;&#x53EF;&#x6D4B;&#x8BD5;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x3002;</p>
+<p>&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x590D;&#x6742;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x79CD;&#x601D;&#x8003;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x51FA;&#x66F4;&#x52A0;&#x6A21;&#x5757;&#x5316;&#x3001;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x662F;&#x6BCF;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;&#x90FD;&#x5E94;&#x8BE5;&#x638C;&#x63E1;&#x7684;&#x91CD;&#x8981;&#x539F;&#x5219;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x5B66;&#x4E60;&#x548C;&#x5E94;&#x7528;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<ul>
+<li>&#x5199;&#x51FA;&#x66F4;&#x52A0;&#x5065;&#x58EE;&#x7684;&#x4EE3;&#x7801;</li>
+<li>&#x66F4;&#x5BB9;&#x6613;&#x5730;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;</li>
+<li>&#x66F4;&#x6709;&#x6548;&#x5730;&#x6D4B;&#x8BD5;&#x4F60;&#x7684;&#x4EE3;&#x7801;</li>
+<li>&#x4E0E;&#x56E2;&#x961F;&#x6210;&#x5458;&#x66F4;&#x597D;&#x5730;&#x534F;&#x4F5C;</li>
+<li>&#x6210;&#x4E3A;&#x4E00;&#x540D;&#x66F4;&#x4F18;&#x79C0;&#x7684;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x5E08;</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; mcresearch.gitee.io 2023 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2026-04-09 19:44:04
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="develop-design.html" class="navigation navigation-prev " aria-label="Previous page: C++ 程序设计的一些想法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="develop-grid.html" class="navigation navigation-next " aria-label="Next page: 以格点积分程序为例：一些代码开发习惯小贴士">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"依赖反转原则入门介绍","level":"1.5.3.10","depth":3,"next":{"title":"以格点积分程序为例：一些代码开发习惯小贴士","level":"1.5.3.11","depth":3,"path":"develop-grid.md","ref":"develop-grid.md","articles":[]},"previous":{"title":"C++ 程序设计的一些想法","level":"1.5.3.9","depth":3,"path":"develop-design.md","ref":"develop-design.md","articles":[]},"dir":"ltr"},"config":{"plugins":["image-captions","splitter","3-ba","theme-comscore","insert-logo","custom-favicon","intopic-toc","anchors","chapter-fold","expandable-chapters","-lunr","-search","search-plus","prism","-highlight","code","mathjax-pro","hide-element","tbfed-pagefooter","disqus","github-buttons","sharing-plus","-sharing","livereload"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy mcresearch.gitee.io 2023","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"prism":{},"disqus":{"useIdentifier":false,"shortName":"abacus-user-guide"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./picture/abacus-logo.jpg","theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"MCresearch","repo":"abacus-user-guide","type":"star","size":"middle","count":true}]},"custom-favicon":{},"3-ba":{"configuration":"auto","token":"25153cb8bd9a872cfec60b4b23ac0176"},"mathjax-pro":{"forceSVG":false,"version":"2.7.7"},"sharing":{"weibo":false},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none;max-height: 70px;width: -webkit-fill-available;max-width: 180px;","url":"./picture/abacus-logo.svg"},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","variable_name":"_pictures"}},"theme":"default","name":"abacus-user-guide","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"abacus-eff3.html#fig1.2.2.3.1","level":"1.2.2.3","list_caption":"Figure: 构建Cu(111)-CO表面吸附体系","alt":"构建Cu(111)-CO表面吸附体系","nro":1,"url":"picture/agent-Cu111-construct.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"构建Cu(111)-CO表面吸附体系","attributes":{},"skip":false,"key":"1.2.2.3.1"},{"backlink":"abacus-eff3.html#fig1.2.2.3.2","level":"1.2.2.3","list_caption":"Figure: 目标表面吸附结构可视化","alt":"目标表面吸附结构可视化","nro":2,"url":"picture/Cu_111_CO_z.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"目标表面吸附结构可视化","attributes":{},"skip":false,"key":"1.2.2.3.2"},{"backlink":"abacus-eff3.html#fig1.2.2.3.3","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到Y轴","alt":"将真空层旋转到Y轴","nro":3,"url":"picture/agent-Cu111-to-Y.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到Y轴","attributes":{},"skip":false,"key":"1.2.2.3.3"},{"backlink":"abacus-eff3.html#fig1.2.2.3.4","level":"1.2.2.3","list_caption":"Figure: 将真空层旋转到X轴","alt":"将真空层旋转到X轴","nro":4,"url":"picture/agent-Cu111-to-X.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"将真空层旋转到X轴","attributes":{},"skip":false,"key":"1.2.2.3.4"},{"backlink":"abacus-eff3.html#fig1.2.2.3.5","level":"1.2.2.3","list_caption":"Figure: 准备ABACUS输入文件","alt":"准备ABACUS输入文件","nro":5,"url":"picture/agent-abacus-prepare.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"准备ABACUS输入文件","attributes":{},"skip":false,"key":"1.2.2.3.5"},{"backlink":"abacus-upf.html#fig1.2.2.5.1","level":"1.2.2.5","list_caption":"Figure: 局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","alt":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","nro":6,"url":"picture/fig_upf-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"局域势函数与非局域势不同轨道角动量对应的半局域径向势函数","attributes":{},"skip":false,"key":"1.2.2.5.1"},{"backlink":"abacus-upf.html#fig1.2.2.5.2","level":"1.2.2.5","list_caption":"Figure: S赝波函数与全电子波函数对比","alt":"S赝波函数与全电子波函数对比","nro":7,"url":"picture/fig_upf-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S赝波函数与全电子波函数对比","attributes":{},"skip":false,"key":"1.2.2.5.2"},{"backlink":"abacus-upf.html#fig1.2.2.5.3","level":"1.2.2.5","list_caption":"Figure: S的双投影波函数","alt":"S的双投影波函数","nro":8,"url":"picture/fig_upf-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"S的双投影波函数","attributes":{},"skip":false,"key":"1.2.2.5.3"},{"backlink":"abacus-upf.html#fig1.2.2.5.4","level":"1.2.2.5","list_caption":"Figure: 不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","alt":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","nro":9,"url":"picture/fig_upf-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同能级波函数在截断半径处log导数对比，其影响散射性质的计算","attributes":{},"skip":false,"key":"1.2.2.5.4"},{"backlink":"abacus-upf.html#fig1.2.2.5.5","level":"1.2.2.5","list_caption":"Figure: 不同轨道角动量对应的截断能","alt":"不同轨道角动量对应的截断能","nro":10,"url":"picture/fig_upf-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"不同轨道角动量对应的截断能","attributes":{},"skip":false,"key":"1.2.2.5.5"},{"backlink":"abacus-pw.html#fig1.2.3.1.1","level":"1.2.3.1","list_caption":"Figure: 电子自洽迭代计算流程。","alt":"电子自洽迭代计算流程。","nro":11,"url":"picture/fig_pw-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"电子自洽迭代计算流程。","attributes":{},"skip":false,"key":"1.2.3.1.1"},{"backlink":"abacus-pw.html#fig1.2.3.1.2","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","nro":12,"url":"picture/fig_pw-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随ecut (in Ry)变化。","attributes":{},"skip":false,"key":"1.2.3.1.2"},{"backlink":"abacus-pw.html#fig1.2.3.1.3","level":"1.2.3.1","list_caption":"Figure: 体系里平均单个Si原子能量(in eV/atom)随K点变化。","alt":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","nro":13,"url":"picture/fig_pw-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"体系里平均单个Si原子能量(in eV/atom)随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.3"},{"backlink":"abacus-pw.html#fig1.2.3.1.4","level":"1.2.3.1","list_caption":"Figure: 计算时间随K点变化。","alt":"计算时间随K点变化。","nro":14,"url":"picture/fig_pw-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"计算时间随K点变化。","attributes":{},"skip":false,"key":"1.2.3.1.4"},{"backlink":"abacus-dos.html#fig1.2.7.1.1","level":"1.2.7.1","list_caption":"Figure: 铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","alt":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","nro":15,"url":"picture/fig_dos-5.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的态密度（DOS），红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点，即蓝色虚线所在能量位置。可以看出铁的两个自旋方向态密度并不相等，因此铁具有磁性。","attributes":{},"skip":false,"key":"1.2.7.1.1"},{"backlink":"abacus-dos.html#fig1.2.7.1.2","level":"1.2.7.1","list_caption":"Figure: 铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","alt":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","nro":16,"url":"picture/fig_dos-6.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"铁的能带图，红线表示自旋向下电子的能带图，黑线表示自旋向上电子的能带图。费米面设为 0 点。","attributes":{},"skip":false,"key":"1.2.7.1.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.1","level":"1.2.7.5","list_caption":"Figure: SPIN1_CHG.cube","alt":"SPIN1_CHG.cube","nro":17,"url":"picture/fig_Bader1.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN1_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.1"},{"backlink":"abacus-bader.html#fig1.2.7.5.2","level":"1.2.7.5","list_caption":"Figure: SPIN2_CHG.cube","alt":"SPIN2_CHG.cube","nro":18,"url":"picture/fig_Bader2.jpg","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN2_CHG.cube","attributes":{},"skip":false,"key":"1.2.7.5.2"},{"backlink":"abacus-bader.html#fig1.2.7.5.3","level":"1.2.7.5","list_caption":"Figure: SPIN_DENSITY.cube","alt":"SPIN_DENSITY.cube","nro":19,"url":"picture/fig_Bader3.jpg","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"SPIN_DENSITY.cube","attributes":{},"skip":false,"key":"1.2.7.5.3"},{"backlink":"abacus-bader.html#fig1.2.7.5.4","level":"1.2.7.5","list_caption":"Figure: charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","alt":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","nro":20,"url":"picture/fig_Bader4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge1d.dat，0和0.5位置各有一个Fe原子，Bader电荷切分的地方接近0.25和0.75","attributes":{},"skip":false,"key":"1.2.7.5.4"},{"backlink":"abacus-bader.html#fig1.2.7.5.5","level":"1.2.7.5","list_caption":"Figure: spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","alt":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","nro":21,"url":"picture/fig_Bader5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin1d.dat，spin density由正到负，符合反铁磁Fe2的预期","attributes":{},"skip":false,"key":"1.2.7.5.5"},{"backlink":"abacus-bader.html#fig1.2.7.5.6","level":"1.2.7.5","list_caption":"Figure: charge2d_000.dat","alt":"charge2d_000.dat","nro":22,"url":"picture/fig_Bader6.png","index":6,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.6"},{"backlink":"abacus-bader.html#fig1.2.7.5.7","level":"1.2.7.5","list_caption":"Figure: charge2d_025.dat","alt":"charge2d_025.dat","nro":23,"url":"picture/fig_Bader7.png","index":7,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.7"},{"backlink":"abacus-bader.html#fig1.2.7.5.8","level":"1.2.7.5","list_caption":"Figure: charge2d_050.dat","alt":"charge2d_050.dat","nro":24,"url":"picture/fig_Bader8.png","index":8,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"charge2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.8"},{"backlink":"abacus-bader.html#fig1.2.7.5.9","level":"1.2.7.5","list_caption":"Figure: spin2d_000.dat","alt":"spin2d_000.dat","nro":25,"url":"picture/fig_Bader9.png","index":9,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_000.dat","attributes":{},"skip":false,"key":"1.2.7.5.9"},{"backlink":"abacus-bader.html#fig1.2.7.5.10","level":"1.2.7.5","list_caption":"Figure: spin2d_025.dat","alt":"spin2d_025.dat","nro":26,"url":"picture/fig_Bader10.png","index":10,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_025.dat","attributes":{},"skip":false,"key":"1.2.7.5.10"},{"backlink":"abacus-bader.html#fig1.2.7.5.11","level":"1.2.7.5","list_caption":"Figure: spin2d_050.dat","alt":"spin2d_050.dat","nro":27,"url":"picture/fig_Bader11.png","index":11,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"spin2d_050.dat","attributes":{},"skip":false,"key":"1.2.7.5.11"},{"backlink":"abacus-surface2.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":28,"url":"picture/fig_surface2-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"abacus-surface2.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":29,"url":"picture/fig_surface2-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"abacus-surface2.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 静电势沿超胞Z轴变化图","alt":"静电势沿超胞Z轴变化图","nro":30,"url":"picture/fig_surface2-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"abacus-surface5.html#fig1.3.5.1","level":"1.3.5","list_caption":"Figure: Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","alt":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","nro":31,"url":"picture/fig_surface5-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Nanoribbon结构图，黑框代表超胞大小，有真空。超胞里包含32个碳原子（棕色），超胞里接触真空的2个碳原子（每个表面一个碳原子）被2个氢原子（白色）饱和。","attributes":{},"skip":false,"key":"1.3.5.1"},{"backlink":"abacus-surface5.html#fig1.3.5.2","level":"1.3.5","list_caption":"Figure: 锯齿状势场分布图","alt":"锯齿状势场分布图","nro":32,"url":"picture/fig_surface2-1.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"锯齿状势场分布图","attributes":{},"skip":false,"key":"1.3.5.2"},{"backlink":"abacus-surface5.html#fig1.3.5.3","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","alt":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","nro":33,"url":"picture/fig_surface5-3.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和非自旋极化得到的二维nanoribbon的能带图，可以看出费米面附近CBM（Conduction Band Minimum）和VBM（Valence Band Maximum）重合，无带隙。","attributes":{},"skip":false,"key":"1.3.5.3"},{"backlink":"abacus-surface5.html#fig1.3.5.4","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","alt":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","nro":34,"url":"picture/fig_surface5-4.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出不加电场时，两个自旋方向的能带图几乎一样，都有带隙。","attributes":{},"skip":false,"key":"1.3.5.4"},{"backlink":"abacus-surface5.html#fig1.3.5.5","level":"1.3.5","list_caption":"Figure: 采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","alt":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","nro":35,"url":"picture/fig_surface5-5.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"采用PBE交换关联泛函和自旋极化，再给体系加上0.1 V/Å的电场得到的二维nanoribbon的能带图。蓝色和红色代表自旋极化方向不同时对应的两副能带图像，可以看出加了能带之后，其中一个自旋方向的能带图出现费米面附近的交叠，呈现金属性质，另外一个自旋方向的能带图依旧保持在费米面处的能隙。","attributes":{},"skip":false,"key":"1.3.5.5"},{"backlink":"abacus-surface6.html#fig1.3.6.1","level":"1.3.6","list_caption":"Figure: 一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","alt":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","nro":36,"url":"picture/fig_surface6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"一个水分子位于超胞中，红色代表氧原子，白色代表氢原子","attributes":{},"skip":false,"key":"1.3.6.1"},{"backlink":"abacus-surface6.html#fig1.3.6.2","level":"1.3.6","list_caption":"Figure: 静电势（Electrostatic Potential）沿超胞Z轴变化图","alt":"静电势（Electrostatic Potential）沿超胞Z轴变化图","nro":37,"url":"picture/fig_surface6-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"静电势（Electrostatic Potential）沿超胞Z轴变化图","attributes":{},"skip":false,"key":"1.3.6.2"},{"backlink":"develop-ESolver.html#fig1.5.4.1.1","level":"1.5.4.1","list_caption":"Figure: 代码框架图","alt":"代码框架图","nro":38,"url":"picture/fig-esolver-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"代码框架图","attributes":{},"skip":false,"key":"1.5.4.1.1"},{"backlink":"develop-ESolver.html#fig1.5.4.1.2","level":"1.5.4.1","list_caption":"Figure: 模块关系图","alt":"模块关系图","nro":39,"url":"picture/fig-esolver-2.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"模块关系图","attributes":{},"skip":false,"key":"1.5.4.1.2"},{"backlink":"develop-path4.html#fig1.5.5.4.1","level":"1.5.5.4","list_caption":"Figure: PW_Basis::distribute_r()：设一个pool中有5个processors","alt":"PW_Basis::distribute_r()：设一个pool中有5个processors","nro":40,"url":"picture/fig_path4-2.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW_Basis::distribute_r()：设一个pool中有5个processors","attributes":{},"skip":false,"key":"1.5.5.4.1"},{"backlink":"develop-path4.html#fig1.5.5.4.2","level":"1.5.5.4","list_caption":"Figure: this->count_pw_st(st_length2D, st_bottom2D)","alt":"this->count_pw_st(st_length2D, st_bottom2D)","nro":41,"url":"picture/fig_path4-3.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"this->count_pw_st(st_length2D, st_bottom2D)","attributes":{},"skip":false,"key":"1.5.5.4.2"},{"backlink":"develop-path5.html#fig1.5.5.5.1","level":"1.5.5.5","list_caption":"Figure: 善用Ctrl+F","alt":"善用Ctrl+F","nro":42,"url":"picture/fig_path5-9.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"善用Ctrl+F","attributes":{},"skip":false,"key":"1.5.5.5.1"},{"backlink":"develop-path5.html#fig1.5.5.5.2","level":"1.5.5.5","list_caption":"Figure: klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","alt":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","nro":43,"url":"picture/fig_path5-10.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 486: K_Vectors::Monkhorst_Pack_formula(), k_type = 0 and 1","attributes":{},"skip":false,"key":"1.5.5.5.2"},{"backlink":"develop-path5.html#fig1.5.5.5.3","level":"1.5.5.5","list_caption":"Figure: klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","alt":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","nro":44,"url":"picture/fig_path5-11.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"klist.cpp line 520: const int i = mpnx * mpny * (z - 1) + mpnx * (y - 1) + (x - 1)","attributes":{},"skip":false,"key":"1.5.5.5.3"},{"backlink":"develop-path5.html#fig1.5.5.5.4","level":"1.5.5.5","list_caption":"Figure: 1-dimensional example","alt":"1-dimensional example","nro":45,"url":"picture/fig_path5-12.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"1-dimensional example","attributes":{},"skip":false,"key":"1.5.5.5.4"},{"backlink":"develop-path5.html#fig1.5.5.5.5","level":"1.5.5.5","list_caption":"Figure: 2-dimensional example","alt":"2-dimensional example","nro":46,"url":"picture/fig_path5-13.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"2-dimensional example","attributes":{},"skip":false,"key":"1.5.5.5.5"},{"backlink":"develop-path6.html#fig1.5.5.7.1","level":"1.5.5.7","list_caption":"Figure: update cutoff value based on factorized nx, ny and nz","alt":"update cutoff value based on factorized nx, ny and nz","nro":47,"url":"picture/fig_path6-1.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"update cutoff value based on factorized nx, ny and nz","attributes":{},"skip":false,"key":"1.5.5.7.1"},{"backlink":"develop-path10.html#fig1.5.5.11.1","level":"1.5.5.11","list_caption":"Figure: parallelization over kpoints","alt":"parallelization over kpoints","nro":48,"url":"picture/fig_path10-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parallelization over kpoints","attributes":{},"skip":false,"key":"1.5.5.11.1"},{"backlink":"develop-path10.html#fig1.5.5.11.2","level":"1.5.5.11","list_caption":"Figure: parts on which we are concentrated now","alt":"parts on which we are concentrated now","nro":49,"url":"picture/fig_path10-4.png","index":2,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"parts on which we are concentrated now","attributes":{},"skip":false,"key":"1.5.5.11.2"},{"backlink":"develop-path10.html#fig1.5.5.11.3","level":"1.5.5.11","list_caption":"Figure: PW和LCAO的代码设计平行关系与调用","alt":"PW和LCAO的代码设计平行关系与调用","nro":50,"url":"picture/fig_path10-5.png","index":3,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"PW和LCAO的代码设计平行关系与调用","attributes":{},"skip":false,"key":"1.5.5.11.3"},{"backlink":"develop-path10.html#fig1.5.5.11.4","level":"1.5.5.11","list_caption":"Figure: Relationship between variables that matter presently","alt":"Relationship between variables that matter presently","nro":51,"url":"picture/fig_path10-6.png","index":4,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Relationship between variables that matter presently","attributes":{},"skip":false,"key":"1.5.5.11.4"},{"backlink":"develop-path10.html#fig1.5.5.11.5","level":"1.5.5.11","list_caption":"Figure: Higher resolution framework of diag_mock() and relationship with other modules and functions","alt":"Higher resolution framework of diag_mock() and relationship with other modules and functions","nro":52,"url":"picture/fig_path10-9.png","index":5,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"Higher resolution framework of diag_mock() and relationship with other modules and functions","attributes":{},"skip":false,"key":"1.5.5.11.5"},{"backlink":"develop-path11.html#fig1.5.5.12.1","level":"1.5.5.12","list_caption":"Figure: mixing方法的通用框架设计","alt":"mixing方法的通用框架设计","nro":53,"url":"picture/fig_path11-3.png","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"mixing方法的通用框架设计","attributes":{},"skip":false,"key":"1.5.5.12.1"},{"backlink":"algorithm-wannier.html#fig1.6.1.1","level":"1.6.1","list_caption":"Figure: 左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","alt":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","nro":54,"url":"picture/fig_wannier.jpg","index":1,"caption_template":"图 _PAGE_IMAGE_NUMBER_. _CAPTION_","label":"左列：不同k点对应的布洛赫波函数；右列：不同晶格中的Wannier函数。","attributes":{},"skip":false,"key":"1.6.1.1"}]},"gitbook":"*","description":"国产DFT开源软件ABACUS中文使用教程"},"file":{"path":"develop-dependency-reverse.md","mtime":"2026-04-09T11:44:04.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-04-09T11:46:29.300Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-pro/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
