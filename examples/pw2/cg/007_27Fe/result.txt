@@ -1,0 +1,68 @@
+hwloc/linux: Ignoring PCI device with non-16bit domain.
+Pass --enable-32bits-pci-domain to configure to support such devices
+(warning: it would break the library ABI, don't enable unless really needed).
+Info: Local MPI proc number: 8,OpenMP thread number: 2,Total thread number: 16,Local thread limit: 56
+                                                                                     
+                              ABACUS v3.9.0.25
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: 5d834e975 (Mon Mar 9 11:19:58 2026 +0800)
+
+ Wed Mar 18 12:32:19 2026
+ MAKE THE DIR         : OUT.ABACUS/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: The lattice vector is left-handed; a right-handed vector is prefered.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ RUNNING WITH DEVICE  : CPU / Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz (x2)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ Warning: the number of valence electrons in pseudopotential > 8 for Fe: [Ar] 3d6 4s2
+ Pseudopotentials with additional electrons can yield (more) accurate outcomes, but may be less efficient.
+ If you're confident that your chosen pseudopotential is appropriate, you can safely ignore this warning.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ UNIFORM GRID DIM     : 128 * 128 * 128
+ UNIFORM GRID DIM(BIG): 128 * 128 * 128
+ DONE(0.108427   SEC) : SYMMETRY
+ DONE(0.108441   SEC) : SETUP UNITCELL
+ DONE(0.193047   SEC) : INIT K-POINTS
+ ---------------------------------------------------------
+ Self-consistent calculations for electrons
+ ---------------------------------------------------------
+ SPIN    KPOINTS         PROCESSORS  THREADS     
+ 2       32              8           16          
+ ---------------------------------------------------------
+ Use plane wave basis
+ ---------------------------------------------------------
+ ELEMENT NATOM       XC          
+ Fe      27          
+ ---------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ---------------------------------------------------------
+ DONE(0.230239   SEC) : INIT PLANEWAVE
+ START CHARGE      : atomic
+ DONE(0.26843    SEC) : LOCAL POTENTIAL
+ DONE(0.303502   SEC) : NON-LOCAL POTENTIAL
+ MEMORY FOR PSI (MB)  : 286.978
+ DONE(0.408675   SEC) : INIT BASIS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(79.492     SEC) : INIT SCF
+ ITER      TMAG       AMAG        ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ CG1      7.88e+01   8.00e+01  -9.20220066e+04   0.00000000e+00   4.4848e+00 1118.86
+ CG2      6.53e+01   7.04e+01  -9.20285872e+04  -6.58062993e+00   2.7528e-01 466.95
+ CG3      6.29e+01   6.74e+01  -9.20296779e+04  -1.09070674e+00   3.5598e-02 596.24
+ CG4      6.15e+01   6.56e+01  -9.20298386e+04  -1.60698765e-01   1.4330e-02 576.48
+ CG5      6.08e+01   6.48e+01  -9.20298328e+04   5.76440868e-03   8.4364e-02 528.43
+ CG6      6.02e+01   6.40e+01  -9.20298985e+04  -6.56984082e-02   5.0781e-03 483.60
+ CG7      6.00e+01   6.38e+01  -9.20299042e+04  -5.71728594e-03   3.0961e-03 472.86
+ CG8      5.98e+01   6.36e+01  -9.20299084e+04  -4.15944725e-03   4.8582e-04 478.78
+ CG9      5.98e+01   6.36e+01  -9.20299094e+04  -9.58552877e-04   3.9715e-04 536.43
