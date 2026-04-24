@@ -32,7 +32,7 @@ git clone https://gitee.com/mcresearch/abacus-user-guide.git
 git clone https://github.com/MCresearch/abacus-user-guide.git
 ```
 
-进入目录 `/abacus-user-guide/examples/` ，`pw2-cg` 和 `pw2-ds` 子目录下有十个算例，分别对应本算例集 `ks_solver=cg` 和 `ks_solver=dav_subspace`，并且配备了相应的赝势文件，无需额外下载。
+进入目录 `/abacus-user-guide/examples/` ，`pw2/cg` 和 `pw2/ds` 子目录下有十个算例，分别对应本算例集 `ks_solver=cg` 和 `ks_solver=dav_subspace`，并且配备了相应的赝势文件，无需额外下载。
 
 # 参数设置
 
