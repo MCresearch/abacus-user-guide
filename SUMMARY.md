@@ -15,6 +15,7 @@
         * [ABACUS 在曙光 DCU 集群上的编译与使用](abacus-dcu.md)
         * [ABACUS 的-i/-I/--info 功能使用说明](compile-useinfo.md)
         * [ABACUS 的多 GPU 矩阵求解器功能编译与使用](abacus-multigpu.md)
+        * [Windows 系统中一键安装 ABACUS](abacus-windows.md)
     * 建模
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以碳纳米管为例](abacus-eff1.md)
         * [ABACUS 如何选择晶胞朝向获得最佳并行效率？以二维氮化硼为例](abacus-eff2.md)
