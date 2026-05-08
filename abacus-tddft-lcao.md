@@ -151,7 +151,7 @@ $$
 仍天然地保持周期性。在此规范下，偶极矩定义失效，自然的光学响应物理量是宏观电流密度$$J(t)$$，可以通过设置 `out_current` 参数进行输出：
 
 $$
-J(t) = -\frac{1}{\Omega N_k} \sum_{nk} f_{nk} \ \mathrm{Re} \Braket{\psi_{nk}(t) | -\mathrm{i}\nabla + A(t) + \mathrm{i}\left[\widetilde{V}_{\text{NL}}, r\right] | \psi_{nk}(t)}
+J(t) = -\frac{1}{\Omega N_k} \sum_{nk} f_{nk} \ \mathrm{Re} <\psi_{nk}(t) | -\mathrm{i}\nabla + A(t) + \mathrm{i}\left[\widetilde{V}_{\text{NL}}, r\right] | \psi_{nk}(t)>
 $$
 
 其中，电流支持两种不同的计算方式：
@@ -176,7 +176,7 @@ $$
 公式中的位移项$$r-\tau_\mu$$确保了积分在空间上的有界性和周期性。此时 Hamilton 量矩阵元相应地变换为
 
 $$
-H_{\mu\nu}^{\text{hyb}}(t) = \mathrm{e}^{-\mathrm{i}A(t)\cdot(\tau_\mu - \tau_\nu)} \Braket{\phi_\mu | H_0 + E(t) \cdot (r - \tau_\nu) | \phi_\nu}
+H_{\mu\nu}^{\text{hyb}}(t) = \mathrm{e}^{-\mathrm{i}A(t)\cdot(\tau_\mu - \tau_\nu)} <\phi_\mu | H_0 + E(t) \cdot (r - \tau_\nu) | \phi_\nu>
 $$
 
 这种处理不仅有效缓解了速度规范中吸收谱低频发散的数值问题，同时非局域赝势项的矩阵元重新恢复了高效的双中心积分形式，免除了实空间球面格点积分的计算开销，因此整体计算效率上和长度规范相当。具体细节详见文献 [3]。
