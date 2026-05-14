@@ -8,6 +8,7 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ----------------------------------------------- | ---------- | ---------- | ---------- |
+|【科研进展】AI 赋能材料研发｜中物院研究生院团队领衔开发磁性材料专用原子基座模型|[网页链接](https://mp.weixin.qq.com/s/_B_Pzp0jugqrtXBnXfMXKw)|2026/05/14|中国工程物理研究生院|
 |国际开放云平台Materials Cloud上线ABACUS软件精度验证结果|[网页链接](https://mp.weixin.qq.com/s/nFSVLDT5fZeSwl9y9k2bTw)|2026/03/13|原子算筹|
 |ABACUS 平面波 KSDFT 电子电导热导计算教程|[网页链接](https://mp.weixin.qq.com/s/DCnysYQu-VtBVFYeNV_BNQ)|2026/03/11|原子算筹|
 |ABACUS计算案例 : TiC-Ni半导体-金属异质结体系的SCF和电荷密度差|[网页链接](https://mp.weixin.qq.com/s/wa0apLn2VECvpXVD3lxGlg)|2026/03/09|原子算筹|
