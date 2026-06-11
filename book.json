@@ -1,6 +1,9 @@
 {
   "name": "abacus-user-guide",
   "description": "国产DFT开源软件ABACUS中文使用教程",
+  "styles": {
+      "website": "styles/website.css"
+  },
   "plugins": [
       "image-captions",
       "splitter",
@@ -30,7 +33,8 @@
 
       "github-buttons",
       "sharing-plus",
-      "-sharing"
+      "-sharing",
+      "auto-scroll-table"
   ],
 
   "pluginsConfig": {

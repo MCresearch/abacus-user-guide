@@ -1,0 +1,26 @@
+/* === overrides for gitbook-plugin-auto-scroll-table === */
+
+/* Make the wrapper actually scroll: table uses its natural width,
+   but is at least as wide as the wrapper so it looks the same on narrow tables. */
+.markdown-section .table-area {
+    overflow-x: auto;
+    max-width: 100%;
+}
+.markdown-section .table-area > table {
+    width: auto !important;
+    max-width: none !important;
+    min-width: 100%;
+    margin: 15px 0 !important;
+}
+
+/* Reset the plugin's harsh blue header and dark even-row stripes. */
+.markdown-section table th {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+}
+.markdown-section table tbody tr:nth-child(2n) {
+    background: #fafafa !important;
+}
+.markdown-section table tr:hover {
+    background: #efefef !important;
+}
