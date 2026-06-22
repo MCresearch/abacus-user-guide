@@ -47,6 +47,7 @@
         * [ABACUS 随机波函数 DFT 方法使用教程](abacus-sdft.md)
         * [ABACUS 随机波函数 DFT 计算电子电导热导教程](abacus-sdft_cond.md)
         * [ABACUS 实时含时密度泛函理论使用教程（适用 LCAO 基组，v3.9.0.26 及以后）](abacus-tddft-lcao.md)
+        * [ABACUS 还能干这个？基于数值原子轨道的 RT-TDDFT 高效异构计算](abacus-tddft-lcao-gpu.md)
         * [ABACUS 实时演化含时密度泛函理论使用教程](abacus-tddft.md)
         * [ABACUS 无轨道密度泛函理论方法使用教程](abacus-ofdft.md)
         * [ABACUS 隐式溶剂模型使用教程](abacus-sol.md)
