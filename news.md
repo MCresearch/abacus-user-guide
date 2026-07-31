@@ -9,7 +9,7 @@
 | 标题 | 链接 | 日期 | 公众号 |
 | ----------------------------------------------- | ---------- | ---------- | ---------- |
 |ABACUS v3.11.0-beta7 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/jzEbWBR2LNIE3raHcnhHlA)|2026/07/30|原子算筹|
-|发展 keV 极端高温输运系数计算第一性原理方法揭示铝热稠密等离子体输运性质|[网页链接]https://capt.pku.edu.cn/xwxx/xwxx1/b65e844facba42c58d82ee03e948c6ef.htm|2026/07/27|原子算筹|
+|发展 keV 极端高温输运系数计算第一性原理方法揭示铝热稠密等离子体输运性质|[网页链接](https://capt.pku.edu.cn/xwxx/xwxx1/b65e844facba42c58d82ee03e948c6ef.htm)|2026/07/27|原子算筹|
 |GeTe/SnSe 异质结中的增强体光伏效应|[网页链接](https://mp.weixin.qq.com/s/O-sHb6JdeZGbsNFC2wkGZQ)|2026/07/27|原子算筹|
 |ABACUS还能干这个？将第一性原理计算拓展至1000 eV极端高温，揭示铝在热稠密等离子体中的输运奥秘|[网页链接](https://mp.weixin.qq.com/s/92IFfT-X4wOJJtLZdXwltQ)|2026/07/21|原子算筹|
 |ABACUSLab Web 端首轮体验用户招募|[网页链接](https://mp.weixin.qq.com/s/Mfi6YWSV4x8yD57KG8IaZg)|2026/07/18|原子算筹|
