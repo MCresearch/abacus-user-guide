@@ -8,6 +8,24 @@
 
 | 标题 | 链接 | 日期 | 公众号 |
 | ----------------------------------------------- | ---------- | ---------- | ---------- |
+|GeTe/SnSe 异质结中的增强体光伏效应|[网页链接](https://mp.weixin.qq.com/s/O-sHb6JdeZGbsNFC2wkGZQ)|2026/07/27|原子算筹|
+|ABACUS还能干这个？将第一性原理计算拓展至1000 eV极端高温，揭示铝在热稠密等离子体中的输运奥秘|[网页链接](https://mp.weixin.qq.com/s/92IFfT-X4wOJJtLZdXwltQ)|2026/07/21|原子算筹|
+|ABACUSLab Web 端首轮体验用户招募|[网页链接](https://mp.weixin.qq.com/s/Mfi6YWSV4x8yD57KG8IaZg)|2026/07/18|原子算筹|
+|ABACUS v3.11.0-beta6 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/uCXmVw08mdpjWYmbwPzVTA)|2026/07/17|原子算筹|
+|第六届ABACUS开发者及用户会议（8.06-8.09合肥）（第二轮通知）|[网页链接](https://mp.weixin.qq.com/s/lQbDYV9TNs60vULFNDy4xA)|2026/07/16|原子算筹|
+|国产自主软件ABACUS培训报名开启\|2026中国材料大会专题培训|[网页链接](https://mp.weixin.qq.com/s/ImplTgUagOuKCfWFmJ52Qg)|2026/07/13|原子算筹|
+|ABACUS v3.11.0-beta.5 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/6rt-Hho5ZA5ZpSX9EYSm3w)|2026/07/04|原子算筹|
+|ABACUS 还能干这个？基于数值原子轨道的 RT-TDDFT 高效异构计算|[网页链接](https://mp.weixin.qq.com/s/UcTAuevjdjlvBW_Uf_qVgA)|2026/06/25|原子算筹|
+|第六届ABACUS开发者及用户会议（8.06-8.09合肥）（第一轮通知）|[网页链接](https://mp.weixin.qq.com/s/zrxU4UBbb4fua4G__AMX-A)|2026/06/22|原子算筹|
+|ABACUS v3.11.0-beta.4 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/LP434GqXd4-9y6xH06cCxw)|2026/06/15|原子算筹|
+|ABACUS还能干这个？基于DeePKS实现GaN高精度高效电子结构计算|[网页链接](https://mp.weixin.qq.com/s/PhhK8XuvA2tKgCWzkDA7aA)|2026/06/10|原子算筹|
+|ABACUS还能干这个？机器学习耦合DFT+U修正TiO2三相稳定性与带隙计算偏差|[网页链接](https://mp.weixin.qq.com/s/oAOCJK3HssarMxNUpgS7bQ)|2026/06/08|原子算筹|
+|国产自主软件ABACUS专题培训报名开启|[网页链接](https://mp.weixin.qq.com/s/deh719vBq4PcHe4dZQoRcg)|2026/06/04|原子算筹|
+|国产自主软件ABACUS专题讲座(三)|[网页链接](https://mp.weixin.qq.com/s/ZWRA8vHeXbNvSjrsN2O_dA)|2026/06/04|原子算筹|
+|ABACUS v3.11.0-beta.3 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/R4Sl-DXb1My6RxVP1MUNrw)|2026/06/03|原子算筹|
+|ABACUS v3.11.0-beta.2 主要更新列表|[网页链接](https://mp.weixin.qq.com/s/jPaw0xVKfYCsplUD6Jk-VQ)|2026/05/21|原子算筹|
+|ABACUS还能干这个？铝的气液临界点研究|[网页链接](https://mp.weixin.qq.com/s/5Mwq2SHCsUOrSLDke3nYCA)|2026/05/20|原子算筹|
+|ABACUS 实时含时密度泛函理论使用教程（适用 LCAO基组，v3.9.0.26 及以后）|[网页链接](https://mp.weixin.qq.com/s/CArOvYyTvDIg8VeqVBebRg)|2026/05/18|原子算筹|
 |【科研进展】AI 赋能材料研发｜中物院研究生院团队领衔开发磁性材料专用原子基座模型|[网页链接](https://mp.weixin.qq.com/s/_B_Pzp0jugqrtXBnXfMXKw)|2026/05/14|中国工程物理研究生院|
 |国际开放云平台Materials Cloud上线ABACUS软件精度验证结果|[网页链接](https://mp.weixin.qq.com/s/nFSVLDT5fZeSwl9y9k2bTw)|2026/03/13|原子算筹|
 |ABACUS 平面波 KSDFT 电子电导热导计算教程|[网页链接](https://mp.weixin.qq.com/s/DCnysYQu-VtBVFYeNV_BNQ)|2026/03/11|原子算筹|
